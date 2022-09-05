@@ -59,7 +59,9 @@ code.r{
 
 -   mixture of stats/modeling/code/math/science/ecology
 
-## Our Goals
+## Our Goals 
+
+::: incremental 
 
 -   Better understand statistical modeling
 
@@ -71,17 +73,17 @@ code.r{
 
 -   Science philosophy
 
--   Improve coding reproducibility
+-   Coding reproducibility and share-ability
 
 -   Knowledge to carry across projects
 
     -   not highly specialized statistical models
 
+:::
+
 ## Why is this class useful?
 
--   Understand what you are doing when modeling data
-
-    -   coding/statistics/modeling are related but not the same
+-   Understand what you are doing when using data and models; **coding/statistics/modeling are related but not the same**
 
 . . .
 
@@ -115,7 +117,7 @@ code.r{
 
 <li>What is your name?</li>
 
-<li>What is your favorite ice-cream flavor?</li>
+<li>What is your favorite dessert?</li>
 
 <li>If you weren't here, where would you be?</li>
 
@@ -132,13 +134,13 @@ code.r{
 ## [Teaching Philosophy ]{style="color:#078BCD"}
 
 ::: incremental
--   I can not make you learn. Learning requires an active choice
+-   I can not make you learn; learning is a choice (in every movement)
 
 -   An inclusive environment is paramount for learning
 
 -   Communication is key
 
--   There is lots that I and you do not know- everyone has something to teach and something to learn
+-   Everyone has something to teach and something to learn
 
 -   Struggle is good. Solving problems leads to learning
 
@@ -186,6 +188,8 @@ around a statistical / methodology topic relevant to ecology and resource mgmt.
 
 ## R Code Language
 
+. . .
+
 What is the name of the 
 
 -   object?
@@ -213,12 +217,12 @@ Importance of your computer's CPU and memory?
 
 -   If emailing, include a script file and RData file (workspace)
 
--   Understandable code organization
+-   Hierarchical code organization
 
     -   code structuring using indenting
     -   top --\> bottom execution
     -   remove all extraneous code
-    -   the code you send for me to look at might be different than what you are working on
+    -   the code you send will like be different than what you are working on
 :::
 
 . . .
