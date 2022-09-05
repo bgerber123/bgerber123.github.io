@@ -1,0 +1,142 @@
+---
+title: "Probability Assignment"
+author: "Brian D. Gerber"
+date: "2022-09-01"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To familiarize yourself with probability functions.
+
+### **Markdown**
+Create a markdown file that shows and discusses 2 probability functions. An example is provided below as a guide. Which probability function to choose? Lots of options from [wikipedia](https://en.wikipedia.org/wiki/List_of_probability_distributions).
+
+
+
+You should:
+
+-   Define a random variable $y$ that is $iid$ from your distribution
+-   Define the sample space and parameter space (for each)
+-   Include the equation of the probability function
+-   Define the expected value (mean) and variance of the distribution
+-   Visualize the pdf using 2 to 4 different sets of parameters 
+-   Demonstrate using code how to calculate the probability of data over certain ranges  (e.g. pnorm).
+-   Demonstrate how to find the values of data pertaining to a certain probability (e.g. qnorm).
+-   Plot a small and  large sample from the distribution. Comment on whether the samples looks like the PDF.
+-   Provide an example of what type of data this probability function could be useful for
+
+---
+
+---
+
+## Discrete Uniform 
+The discrete uniform distribution defines probabilities for a set of integer values ranging from a lower bound to an upper bound.
+
+$$
+y \sim \text{Uniform}(a,b)
+$$
+
+### **Support**
+The support of the random variable $y$ is
+$$
+y \in \{a, a+1,..., b-1, b\}
+$$
+
+The support of the parameters $a$ and $b$ are all integers, where $b \geq a$, and $n = b-a+1$.
+
+### **Probability Function**
+
+$$
+f(y|a,b) = \frac{1}{n}
+$$
+
+### **Mean/Variance**
+
+$$
+E[y] = \frac{a+b}{2}\\
+Var[Y] = \frac{n^2-1}{12}
+$$
+
+### **Plotting**
+Example 1
+```{r,echo = TRUE, eval=TRUE}
+#Parameters
+  a=1; b=5
+# Sample Space of RV
+  x=seq(a,b,by=1)
+  n=length(x)
+#plotting probability mass  
+  plot(x,rep(1/n,length(x)),col=2,pch=18,cex=3,
+     ylab="f(y)",xlab=c("a = 1, b = 5"))
+```
+
+Example 2
+```{r,echo = TRUE, eval=TRUE}
+#Parameters
+  a=10; b=100
+#Sample Space
+  x=seq(a,b,by=1)
+  n=length(x)
+#plotting probability mass    
+  plot(x,rep(1/n,length(x)),col=2,pch=18,cex=1,
+     ylab="f(y)",xlab=c("a = 1, b = 5"))
+```
+
+### **Probability**
+The probability of observing samples $\geq$ 60 when $a$ = 10 and $b$ =100 is,
+
+```{r,echo = TRUE, eval=TRUE}
+#Parameters
+  a=10; b=100
+#Sample space
+  x=seq(a,b,by=1)
+  n=length(x)
+#Probability of any one value
+  p=1/n
+  p
+#Add probabilities for all the integers >=60
+  length(which(x>=60))*p
+```
+
+### **Sampling**
+```{r,echo = TRUE, eval=TRUE}
+#Parameters
+  a=10; b=100
+
+#Sample at different sample sizes
+  sample.size=100
+  sample.size2=10000
+  
+  y=round(runif(sample.size,a,b),digits=0)
+  y2=round(runif(sample.size2,a,b),digits=0)
+
+#plotting samples with True probability
+  par(mfrow=c(1,2))
+  
+  hist(y,main="N = 100",freq = FALSE)
+  abline(h=p,col=3,lwd=3)
+  
+  hist(y2,main="N = 10000",freq = FALSE)
+  abline(h=p,col=3,lwd=3)
+
+  
+  
+```
+
+Even at a sample size of 10000, the probabilities are still a bit wonky from the truth, but close. Certainly a lot close to the sample size at 100. 
+
+### **Ecological Data**
+
+The discrete uniform is not a very useful probability distribution for data. However, it is commonly used as a prior on parameters that can only be integers within a given range.

@@ -1,0 +1,45 @@
+---
+title: "Study Design / Simulation Assignment"
+author: "Brian D. Gerber"
+date: "2022-08-29"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: Evaluate random sampling designs with 4 sample sizes when your population of interest has and does not have spatial structure/variation. Evaluate these combinations in terms of two criteria: mean total population estimate, and one additional criteria of your choosing.
+
+You will need to do a new simulation where the true deer population (by cell) varies by the percent of development in the cell (RI$Devel_area). Compare these findings from the original findings where the true deer population did not vary by development. How does spatial variation unaccounted for in the sampling process affect your criteria?
+
+### **Markdown**
+
+Prepare a report (code and findings), using markdown. You can create an HTML or PDF. You do not need to show all possible code. Just what you think is essential for someone to understand the study. Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).
+
+- **Suggestion 1**: For the markdown file, do not run the simulation every time you create
+the document. Do the simulation, save the results, and load the results in
+the markdown file. You can include your code in the outputted markdown file by 
+specifying eval=FALSE and echo=TRUE.
+  
+- **Suggestion 2**: Create a regression model (intercept, slope) on the log-scale to simulate the deer population that is influenced by the covariate 'RI$Devel_area'
+
+- **Suggestion 3**: Put your processing code in one script/file and your plotting code in another script/file.
+
+*Consider plotting*:
+
+- Your simulated deer population in map form. 
+- A histogram of the deer population values.
+- Sampling distribution of total population estimate for sample sizes (10,20,40,80) with deer population varying by development and not varying by development.
+- The other criteria you choose to evaluate.
+  
+*Equation*: 
+
+- Use latex to write your model of how the deer population was simulated
+  

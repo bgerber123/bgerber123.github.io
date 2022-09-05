@@ -1,0 +1,307 @@
+---
+title: "Study Design"
+title-slide-attributes:
+    data-background-image: /extra/background.png
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    multiplex: true
+    html:
+       page-layout: full
+---
+
+## Statistical Power
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+
+</style>
+```
+What is statistical power?
+
+::: incremental
+-   Null Hypothesis Testing (NHT) paradigm
+
+-   **Definition**: the probability that a test will  reject a false null hypothesis.
+
+    -   $H_0(\mu_1 = \mu_2)$ vs $H_1(\mu_1 \ne \mu_2)$
+
+-   The higher the statistical power for a given experiment, the lower the probability of making a Type II error (false negative)
+:::
+
+## Power Analysis
+
+Power = P(reject $H_0$ \| $H_1$ is true)
+
+. . .
+
+Power = 1 - Type II Error
+
+. . .
+
+Power = 1 - Pr(False Negative)
+
+. . .
+
+Power = 1 - $\beta$
+
+. . .
+
+![](extra/Statistical_test,_significance_level,_power.png){.absolute top=250 left=350 width="500"}
+
+## Power Figure
+
+![](extra/power.png){}
+
+## Power Analysis (Case Study)
+
+**Objective**: To test whether the average number of daily hummingbird visits to feeder 1 is different than feeder 2.
+
+![](extra/feeders.png){fig-align="center"}
+
+## Power Analysis (Case Study)
+
+First, we need to define TRUTH,
+```{r,echo = TRUE}
+  Group1.Mean <- 100
+  Group1.SD <- 20
+  
+  Group2.Mean <- 120
+  Group2.SD <- 20
+```
+
+. . .
+
+```{r,echo = FALSE, eval=TRUE,fig.align='center',fig.height=4}
+
+  par(cex.lab=1.5,cex.axis=1.5)
+  curve(dnorm(x,Group1.Mean,Group1.SD ),xlim=c(0,200),lwd=5,ylab="Density",xlab="Hummingbird visits per day")
+  curve(dnorm(x,Group2.Mean,Group2.SD ),xlim=c(0,200),lwd=5,add=TRUE,col=2)
+  legend("topleft",legend=c("Feeder 1","Feeder 2"),col=c("black","red"),lwd=3,cex=1.5)
+
+```
+
+## Power Analysis (R Code)
+
+```{r,echo = TRUE}
+#| echo: TRUE
+#| eval: TRUE
+#| code-line-numbers: 1|2,3|5,6|8,9|11,12,13
+
+library(pwr)
+# Wish to test a difference b/w groups 1 and 2
+# Want to know if there is a difference in means
+ 
+#Difference in Means
+  effect.size <- Group1.Mean-Group2.Mean
+
+#Group st. dev
+  group.sd <- sqrt(mean(Group1.SD^2,Group2.SD^2))
+
+#Mean difference divided by group stdev
+#How does the numerator and denominator influence this number?  
+  d <- effect.size/group.sd
+
+
+```
+
+
+## Power Analysis
+
+```{r,echo=TRUE}
+#| echo: TRUE
+#| eval: TRUE
+#| code-line-numbers: 1|3,4|6,7
+
+power = 0.8
+
+out = pwr.t.test(d=d,power=power,type="two.sample",
+                 alternative="two.sided")
+
+#Sample Size Needed for each Group
+out$n
+```
+
+
+## Tradeoff (Power vs N) {.scrollable}
+
+Let's consider multiple levels of power
+
+```{r,echo=TRUE}
+#| echo: TRUE
+#| eval: TRUE
+#| code-line-numbers: 1|3,4,5,6,7,8|10
+
+power = matrix(seq(0.8,0.99,by=0.01))
+
+my.func = function(x){                    
+                      pwr.t.test(d=d,power=x,
+                                 type="two.sample",
+                                 alternative="two.sided"
+                                )$n
+}
+
+out= apply(power,1, FUN=my.func)
+
+```
+
+. . .
+
+```{r,echo=FALSE,fig.align='center', fig.height=3.5}
+#Sample Sizes Needed for each Group for different power levels
+#Change to total sample size
+out=out*2
+par(cex.lab=1.5,cex.axis=1.5,mar=c(5,5,1,1))
+plot(power,out,type="b",ylab="Sample Size Per Group",
+     xlab="Power",lwd=5)
+```
+
+## Robust to Assumption about Truth {.scrollable}
+
+<span style="color:red">These results assume we are correct about... <span>
+```{r,echo=TRUE}
+  Group1.Mean <- 100
+  Group1.SD <- 20
+  
+  Group2.Mean <- 120
+  Group2.SD <- 20
+```
+
+. . . 
+
+<br>
+
+What if we are wrong? 
+
+<br>
+
+How do we evaluate this?
+
+. . .
+
+<br>
+
+Go to R.
+
+## Tradeoffs (Power, Type I Error, N) {.scrollable}
+
+
+Is there a tradeoff b/w Type I ($\alpha$) and Type II error ($\beta$)?
+
+. . .
+
+<br>
+
+How would we evaluate this?
+
+. . .
+
+
+```{r,echo=TRUE}
+#| echo: TRUE
+#| eval: TRUE
+
+#setup combinations of alpha and power
+  power = seq(0.8,0.99,by=0.01)
+  alpha= seq(0.01,0.2,by=0.01)
+  x=expand.grid(power,alpha)
+  dim(x)
+  colnames(x)=c("Power","alpha")
+  head(x)
+
+```  
+
+
+. . .
+
+```{r,echo=TRUE}
+#| echo: TRUE
+#| eval: TRUE
+  
+#make new function and use mapply
+  fun1=function(a,b){
+              pwr.t.test(d=d,power=a,type="two.sample",
+                         alternative="two.sided",sig.level=b)$n
+                    }
+  out= mapply(fun1,a=x$Power,b=x$alpha)
+  length(out)
+
+#Change per group sample size to total sample size  
+  out=cbind(x,out*2)
+  colnames(out)[3]="n"
+  head(out)
+
+```
+
+
+
+## Tradeoffs (Power, Type I Error, N)
+
+```{r,echo=FALSE, fig.height=8, fig.width=10}
+library(plotly)
+fig <- plot_ly(out, x = ~Power, y = ~alpha, z = ~n, marker = list(size = 5))
+fig <- fig %>% add_markers(color=~n)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Power'),
+                     yaxis = list(title = 'Alpha'),
+                     zaxis = list(title = 'Sample Size')))
+#fig <- fig %>%  layout( xaxis = list(nticks=10, tickmode = "auto"))
+fig
+
+```
+
+## Study Design
+
+Let's add some more *reality* in our work.
+
+. . .
+
+<br>
+
+**Objective**: Evaluate sample size trade-offs for estimating deer density throughout Rhode Island.
+
+. . .
+
+**Methodology**: Count deer in 1 sq. mile cells using FLIR technology attached to a fixed wing plane.
+
+![](extra/flir.png){fig-align="center" width="483"}
+
+## Study Design {.scrollable}
+
+**Steps to consider**:
+
+::: incremental 
+-   **Sampling Frame**
+
+    -   all of RI or some subset
+
+-   **The "Truth"**
+
+    -   how many deer per cell; how variable
+
+-   **Sampling Process**
+
+    -   how to pick each cell
+
+-   **Estimation Process**
+
+    -   estimate total deer population from the sample
+
+-   **Criteria to Evaluate**
+
+    -   sampling distribution of estimate, confidence interval bounds, precision of estimate, etc.
+:::
+
+## Go to code
