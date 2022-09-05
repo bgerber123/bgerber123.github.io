@@ -5,7 +5,7 @@ format:
     chalkboard: true
 ---
 
-## NRS520
+## NRS520 {.smaller}
 ```{=html}
 <style type="text/css">
 
@@ -17,12 +17,24 @@ body, td {
 ```
 
 <p><a href="https://bgerber123.github.io/Schedule/Schedule.html">Schedule/Syllabus</a></p>
-<br>
 
-#### Week 1
 
-Lecture material: <a href="https://bgerber123.github.io/Week 1/Introduction.html">Introduction</a>, <a href="https://bgerber123.github.io/Week 1/Information.html">Information</a>
+#### Week 1 
 
-Files to Download: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">.Rmd</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">.html</a>
+-   Lecture: <a href="https://bgerber123.github.io/Week 1/Introduction.html">1) Introduction</a>, <a href="https://bgerber123.github.io/Week 1/Information.html"> 2) Information</a>
 
-Readings:
+-   Download: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">.Rmd</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">.html</a>
+
+-   <a href="https://bgerber123.github.io/Week 1/Assignment.html">Assignment</a>
+
+-    <a href="https://bgerber123.github.io/Week 1/getting started with statistics.pdf">Assigned Reading</a>
+
+#### Week 2
+
+-   Lecture: <a href="https://bgerber123.github.io/Week 2/StudyDesign.html">1) Study Design</a>
+
+-   Download: <a href="https://bgerber123.github.io/Week 2/RI Deer Sampling.zip">.zip</a>
+
+-   <a href="https://bgerber123.github.io/Week 2/Assignment.design.html">Assignment</a>
+
+-   <a href="https://bgerber123.github.io/Week 2/Betts et al.pdf">Assigned Reading</a>
