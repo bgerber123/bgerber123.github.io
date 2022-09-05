@@ -1,0 +1,38 @@
+---
+title: ""
+format: html
+---
+
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+## Schedule {.smaller}
+
+| Week  | Topic                                  | Assigned |
+|-------|----------------------------------------|----------|
+| 1     | Class Org., Information, R/Markdown    | [Reading](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010033). Finish R code and Create Markdown, see "Markdown-and-R-Stuff.html" |
+| 2     | Study Design, Power Analysis, Sims.    | [Reading](https://onlinelibrary.wiley.com/doi/10.1002/ece3.7365). Finish simulation exercise and writeup a markdown report. See file: Assignment.design.html. |
+| 3     | Probability and Statistics             | [Reading ](https://medium.com/@srowen/common-probability-distributions-347e6b945ce4). Complete the assignment outlined in Assignment.pdf.html |
+| 4     | Regression                             | Book Chapter. Finish R code and Simulation Exercise Started. |
+| 5     | Oct. 10 No Class / Holiday             | Assigned |
+| 6     | Generalized Linear Models              | Assigned |
+| 7     | Bayesian Models                        | Assigned |
+| 8     | Bayesian Models                        | Assigned |
+| 9     | Mixed Models / Hierarchical Models     | Assigned |
+| 10    | Regularization, Prediction, Cross-val. | Assigned |
+| 11    | Decision Making under Uncertainty      | Assigned |
+| 12-14 | Student lecture/lab                    | Assigned |
+
+: {tbl-colwidths="\[10,50,40\]"}
+
+
+### Readings
+
+Come prepared to discuss the assigned reading. What was interesting and useful? What did not make sense to you? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list)</span>
