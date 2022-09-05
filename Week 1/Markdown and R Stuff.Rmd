@@ -1,0 +1,162 @@
+---
+title: "Some Markdown and R Stuff"
+author: "Brian Gerber"
+date: "8/24/2022"
+output: html_document
+---
+
+<style type="text/css">
+body, td {
+   font-size: 18px;
+}
+code.r{
+  font-size: 20px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+
+```{r setup, include=FALSE}
+#setwd("~/Markdown")
+setwd("C:/Users/bgerber/Google Drive/NRS520/Week 0")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+RStudio can help you use Markdown to create HTML/PDF/Word documents that can embed R code, HTML, CSS, latex (type setting language), and more. This is a good [website](https://www.markdownguide.org/) to checkout for markdown coding.
+
+We will use markdown as a way accomplish homework. I would suggest to not try and get too fancy at first. Keep it simple. Write-text in RStudio as you would in any word processor. Write R code in R chunks. Use "echo=FALSE" and "echo=TRUE" for a code chink to either not print the code or to print the code. 
+
+For example, let's create an R chunk and plot some data by simulating from a random variable `y`. Let's define this variable such that it can take on values of any real number from $-\infty$ to $\infty$. So, $y \in (-\infty, \infty)$ or $y \in \mathbb{R}$. 
+
+More specifically, let's define `y` as having a probability density function of a Normal/Gaussian distribution, 
+
+$$y \sim \text{Normal}(\mu, \sigma).$$
+
+And stated more generally as,
+
+$$f(y;\mu, \sigma) = [y|\mu, \theta].$$
+
+
+```{r, chunk1}
+#Simulate data from a standard normal distribution (mu = 0, sd = 1)
+  y=rnorm(100,0,1)
+
+#Create a histogram
+  hist(y)
+```
+
+Let's create a new plot and not output the code. This time we will see the true probability distribution, not simulated values.
+
+```{r, chunk2, echo=FALSE,fig.width=5,fig.align='center'}
+#Plot the normal distrbution
+  curve(dnorm(x,0,1),xlim=c(-5,5))
+```
+
+HTML code can be embedded, such as turning text a different <span style="color:red">color</span>.
+
+Simple text formatting can be done directly, such as *italics* or **bolding**.
+
+<hr style="border:2px solid gray">
+
+# Equations 
+
+Markdown uses latex to embed equation. For example, the expectation of random variable `y` is the integral from limits a to b of `y` multiplied by the probability density of `y`:
+
+$$E[y] = \int_a^b y\times f(y; \mu, \sigma) dy$$
+More so, you can use a lot of functionality of latex and make the expectation more clear as,
+$$
+\begin{align*} 
+E[y] =& \int_{-\infty}^{\infty}  y\times \frac{1}{\sigma\sqrt(2\pi)}e^{-1/2(\frac{y-\mu}{\sigma})^2} dx \\
+E[y] =& \mu.
+\end{align*}
+$$
+
+<hr style="border:2px solid gray">
+
+## Approximating an Integral
+
+Let's understand this math a bit more. What we are doing is for every value of `y` possible ($-\infty$ to $\infty$), we multiple it by its probability density. Then we take all these values and add them (i.e., the integral). 
+
+It's a bit easier to understand what the math is doing by making an approximation. 
+
+We can approximate the integral by breaking it into pieces to calculate `y` times the $f(y; \mu, \sigma)$ and then sum all these values.
+
+```{r, chunk3, echo=TRUE}
+#Create a histogram and save the values
+  set.seed(4341)
+  y.hist=hist(rnorm(1000,0,1),breaks=8, freq=FALSE,ylim=c(0,0.4))
+
+#Plot the true probabiltiy denisty.
+  curve(dnorm(x,0,1),add=TRUE,lwd=3,col=2)
+
+#Get the y-axis values (probability density) for each value of the mid-point of each bin. 
+  mid.point.x=y.hist$mids
+  mid.point.x
+
+  prob.y=y.hist$density
+  prob.y
+
+#multiple these value and sum them
+  sum(prob.y*mid.point.x)
+```
+
+### Does this answer make sense?
+
+What if you did the same approximation but with a lot more simulated values and bins.
+
+
+<hr style="border:2px solid gray">
+
+# An Assignment
+
+Please create a markdown document (HTML/PDF) that implements the R code outlined below along with text explanation of what the code is doing. 
+
+We will start this process as a group in R and you will document and explain the code by creating a markdown file. <span><u>Use Latex to create at least one equation of your choosing.</u></span>
+
+## <span style="color:blue">What to include</span>
+
+### <span style="color:red">Create Data</span>
+
+- Simulate values of random variable `y` from your favorite probability distribution (e.g., `rnorm`, `rgamma`,`rbeta`,`rexp``), creating a matrix that is 1000 rows by 200 columns.
+
+### <span style="color:red">apply function</span>
+
+- use the `apply` function to calculate the `range` (this is the function name) of values for each row.
+
+- next, use the `apply` function to calculate the standard deviation (`sd`) of all the rows of `y`.
+
+
+### <span style="color:red">Your own function</span>
+
+- create a new function `(myfunc=function(x){does stuff to x})` that when provided a vector (x), subtracts the max value from the min value of x. Use your new function in the `apply` function to calculate the difference b/w the max and min values for all the rows of `y`.
+
+- make a histogram of your new values.
+
+### <span style="color:red">For loops</span>
+
+- create a for loop, looping over `y` from row 1 to `nrow(y)`. Within the loop, for each ith row, calculate the mean and save this value in a new vector. Plot all the row means in a histogram.
+
+- next, find all the row means of `y` using the `apply` function. Plot these results with a histogram. Is it the same plot as the previous one?
+
+
+### <span style="color:red">Mean, SD, mapply, lapply</span>
+
+- Create a vector (called mu) that is a sequence of values representing different means. Use the seq function. Lower value should be zero, upper value should be 1000.
+
+- Create a vector (called sigma) that has two values, representing different standard deviations. Do not use zero as one of the numbers.
+
+- Use the `expand.grid` function to find all possible combinations of mu and sigma.
+
+- create a new function that has two inputs (`a` and `b`). The function should draw 1000 random values from the Normal distribution (`rnorm`) for a given mean, `a`, and stdev `b`. The function should return the values in a list.
+
+- Use the`mapply` function to input your combinations of mu/stdev and execute your new function. Your new object should contain many lists of 1000 random values for each combination of mu and sigma values.  
+
+- Use the `lapply` function to apply a new function you create that estimates the mean and stdev of each list of 1000 values from your object.
+
+- compare your estimated means and stdevs with your inputted ones (mu, sigma). Are you surprised by the difference or not?
+
+
+
