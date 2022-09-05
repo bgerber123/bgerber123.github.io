@@ -1,0 +1,43 @@
+---
+title: "Regression"
+title-slide-attributes:
+    data-background-image: /regression_files/chalkboard.png
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    multiplex: true
+    html:
+       page-layout: full
+       
+---
+
+## Objective
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+```
+
+-   learn regression modeling
+-   tackle a common question in study design
+
+. . .
+
+I want to learn about the effect of this.
+<br>
+How many samples do I need?
+
+

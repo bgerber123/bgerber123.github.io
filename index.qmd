@@ -16,30 +16,41 @@ body, td {
 
 ```
 
+::: {.panel-tabset}
+
+### Start 
 <p><a href="https://bgerber123.github.io/Schedule/Schedule.html">Schedule/Syllabus</a></p>
 
+Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
 
-#### Week 1 
+<a href="https://celsrs.uri.edu/">CELS RStudio Server</a>
+
+### Week 1 
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 1/Introduction.html">1) Introduction</a>, <a href="https://bgerber123.github.io/Week 1/Information.html"> 2) Information</a>
 
--   Download: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">.Rmd</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">.html</a>
+-   Download: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">1) Markdown Example File</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">2) Compiled HTML</a>
 
 -   <a href="https://bgerber123.github.io/Week 1/Assignment.html">Assignment</a>
 
 -    <a href="https://bgerber123.github.io/Week 1/getting started with statistics.pdf">Assigned Reading</a>
 
-#### Week 2
+### Week 2
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("ggplot2", "spsurvey", "foreach",
+                   "sf", "doParallel", "grDevices","tictoc"))
+```
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 2/StudyDesign.html">Study Design</a>
 
--   Download: <a href="https://bgerber123.github.io/Week 2/RI Deer Sampling.zip">.zip</a>
+-   Download: <a href="https://bgerber123.github.io/Week 2/RI Deer Sampling.zip">Zip</a>
 
 -   <a href="https://bgerber123.github.io/Week 2/Assignment.design.html">Assignment</a>
 
 -   <a href="https://bgerber123.github.io/Week 2/Betts et al.pdf">Assigned Reading</a>
 
-#### Week 3
+### Week 3
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 3/Probability.html">Probabilty</a>
 
@@ -51,7 +62,7 @@ body, td {
 
 -   <a href="https://bgerber123.github.io/Week 3/SuggestedReadings.zip">Suggested Readings</a>
 
-#### Week 4
+### Week 4
 
 -   Lecture: <a href="">Probabilty</a>
 
@@ -62,3 +73,6 @@ body, td {
 -   <a href="Chapter 2. From Research Hypothesis to Model Selection.pdf">Assigned Reading</a>
 
 -   <a href="Chapter 3. Linear Regression.pdf">Suggested Readings</a>
+
+
+:::
