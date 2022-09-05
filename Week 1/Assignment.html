@@ -380,9 +380,9 @@ pre {
   font-size: 20px
 }
 </style>
-<div id="an-assignment" class="section level1">
-<h1>An Assignment</h1>
-<p>Please create a markdown document (HTML/PDF) that implements the R
+<div id="r-code-and-markdown" class="section level1">
+<h1>R code and Markdown</h1>
+<p>Please create a markdown document (e.g., HTML) that implements the R
 code outlined below along with text explanation of what the code is
 doing.</p>
 <p>We will start this process as a group in R and you will document and
@@ -395,8 +395,8 @@ create at least one equation of your choosing.</u></span></p>
 <ul>
 <li>Simulate values of random variable <code>y</code> from your favorite
 probability distribution (e.g., <code>rnorm</code>,
-<code>rgamma</code>,<code>rbeta</code>,`rexp``), creating a matrix that
-is 1000 rows by 200 columns.</li>
+<code>rgamma</code>,<code>rbeta</code>,<code>rexp</code>), creating a
+matrix that is 1000 rows by 200 columns.</li>
 </ul>
 </div>
 <div id="apply-function" class="section level3">
@@ -426,9 +426,9 @@ difference b/w the max and min values for all the rows of
 <h3><span style="color:red">For loops</span></h3>
 <ul>
 <li><p>create a for loop, looping over <code>y</code> from row 1 to
-<code>nrow(y)</code>. Within the loop, for each ith row, calculate the
-mean and save this value in a new vector. Plot all the row means in a
-histogram.</p></li>
+<code>nrow(y)</code>. Within the loop, for each i^{th} row, calculate
+the <code>mean</code> and save this value in a new vector. Plot all the
+row means in a histogram.</p></li>
 <li><p>next, find all the row means of <code>y</code> using the
 <code>apply</code> function. Plot these results with a histogram. Is it
 the same plot as the previous one?</p></li>
@@ -437,14 +437,15 @@ the same plot as the previous one?</p></li>
 <div id="mean-sd-mapply-lapply" class="section level3">
 <h3><span style="color:red">Mean, SD, mapply, lapply</span></h3>
 <ul>
-<li><p>Create a vector (called mu) that is a sequence of values
-representing different means. Use the seq function. Lower value should
-be zero, upper value should be 1000.</p></li>
-<li><p>Create a vector (called sigma) that has two values, representing
-different standard deviations. Do not use zero as one of the
-numbers.</p></li>
+<li><p>Create a vector (called <code>mu</code>) that is a sequence of
+values representing different means. Use the <code>seq</code> function;
+the lower value should be zero and the upper value should be
+1000.</p></li>
+<li><p>Create a vector (called <code>sigma</code>) that has two values,
+representing different standard deviations. Do not use zero as one of
+the numbers.</p></li>
 <li><p>Use the <code>expand.grid</code> function to find all possible
-combinations of mu and sigma.</p></li>
+combinations of <code>mu</code> and <code>sigma</code>.</p></li>
 <li><p>create a new function that has two inputs (<code>a</code> and
 <code>b</code>). The function should draw 1000 random values from the
 Normal distribution (<code>rnorm</code>) for a given mean,
@@ -455,10 +456,11 @@ mu/stdev and execute your new function. Your new object should contain
 many lists of 1000 random values for each combination of mu and sigma
 values.</p></li>
 <li><p>Use the <code>lapply</code> function to apply a new function you
-create that estimates the mean and stdev of each list of 1000 values
-from your object.</p></li>
+create that estimates the <code>mean</code> and stdev (<code>sd</code>)
+of each list of 1000 values from your object.</p></li>
 <li><p>compare your estimated means and stdevs with your inputted ones
-(mu, sigma). Are you surprised by the difference or not?</p></li>
+(<code>mu</code>, <code>sigma</code>). Are you surprised by the
+difference or not?</p></li>
 </ul>
 </div>
 </div>

@@ -17,9 +17,9 @@ pre {
 }
 </style>
 
-# An Assignment
+# R code and Markdown
 
-Please create a markdown document (HTML/PDF) that implements the R code outlined below along with text explanation of what the code is doing. 
+Please create a markdown document (e.g., HTML) that implements the R code outlined below along with text explanation of what the code is doing. 
 
 We will start this process as a group in R and you will document and explain the code by creating a markdown file. <span><u>Use Latex to create at least one equation of your choosing.</u></span>
 
@@ -27,7 +27,7 @@ We will start this process as a group in R and you will document and explain the
 
 ### <span style="color:red">Create Data</span>
 
-- Simulate values of random variable `y` from your favorite probability distribution (e.g., `rnorm`, `rgamma`,`rbeta`,`rexp``), creating a matrix that is 1000 rows by 200 columns.
+- Simulate values of random variable `y` from your favorite probability distribution (e.g., `rnorm`, `rgamma`,`rbeta`,`rexp`), creating a matrix that is 1000 rows by 200 columns.
 
 ### <span style="color:red">apply function</span>
 
@@ -44,26 +44,26 @@ We will start this process as a group in R and you will document and explain the
 
 ### <span style="color:red">For loops</span>
 
-- create a for loop, looping over `y` from row 1 to `nrow(y)`. Within the loop, for each ith row, calculate the mean and save this value in a new vector. Plot all the row means in a histogram.
+- create a for loop, looping over `y` from row 1 to `nrow(y)`. Within the loop, for each i^{th} row, calculate the `mean` and save this value in a new vector. Plot all the row means in a histogram.
 
 - next, find all the row means of `y` using the `apply` function. Plot these results with a histogram. Is it the same plot as the previous one?
 
 
 ### <span style="color:red">Mean, SD, mapply, lapply</span>
 
-- Create a vector (called mu) that is a sequence of values representing different means. Use the seq function. Lower value should be zero, upper value should be 1000.
+- Create a vector (called `mu`) that is a sequence of values representing different means. Use the `seq` function; the lower value should be zero and the upper value should be 1000.
 
-- Create a vector (called sigma) that has two values, representing different standard deviations. Do not use zero as one of the numbers.
+- Create a vector (called `sigma`) that has two values, representing different standard deviations. Do not use zero as one of the numbers.
 
-- Use the `expand.grid` function to find all possible combinations of mu and sigma.
+- Use the `expand.grid` function to find all possible combinations of `mu` and `sigma`.
 
 - create a new function that has two inputs (`a` and `b`). The function should draw 1000 random values from the Normal distribution (`rnorm`) for a given mean, `a`, and stdev `b`. The function should return the values in a list.
 
 - Use the`mapply` function to input your combinations of mu/stdev and execute your new function. Your new object should contain many lists of 1000 random values for each combination of mu and sigma values.  
 
-- Use the `lapply` function to apply a new function you create that estimates the mean and stdev of each list of 1000 values from your object.
+- Use the `lapply` function to apply a new function you create that estimates the `mean` and stdev (`sd`) of each list of 1000 values from your object.
 
-- compare your estimated means and stdevs with your inputted ones (mu, sigma). Are you surprised by the difference or not?
+- compare your estimated means and stdevs with your inputted ones (`mu`, `sigma`). Are you surprised by the difference or not?
 
 
 

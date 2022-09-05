@@ -5,7 +5,7 @@ format:
     chalkboard: true
 ---
 
-## NRS520 {.smaller}
+## NRS520 {.smaller .scrollable}
 ```{=html}
 <style type="text/css">
 
@@ -50,3 +50,15 @@ body, td {
 -   <a href="https://medium.com/@srowen/common-probability-distributions-347e6b945ce4">Assigned Reading</a>
 
 -   <a href="https://bgerber123.github.io/Week 3/SuggestedReadings.zip">Suggested Readings</a>
+
+#### Week 4
+
+-   Lecture: <a href="">Probabilty</a>
+
+-   Download: <a href="">.Rmd</a>
+
+-   <a href="">Assignment</a>
+
+-   <a href="Chapter 2. From Research Hypothesis to Model Selection.pdf">Assigned Reading</a>
+
+-   <a href="Chapter 3. Linear Regression.pdf">Suggested Readings</a>
