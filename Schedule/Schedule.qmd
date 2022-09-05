@@ -17,22 +17,22 @@ code.r{
 
 ## Schedule {.smaller}
 
-| Week  | Topic                                  | Assigned |
-|-------|----------------------------------------|----------|
-| 1     | Class Org., Information, R/Markdown    | [Reading](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010033). Finish R code and Create Markdown, see "Markdown-and-R-Stuff.html" |
-| 2     | Study Design, Power Analysis, Sims.    | [Reading](https://onlinelibrary.wiley.com/doi/10.1002/ece3.7365). Finish simulation exercise and writeup a markdown report. See file: Assignment.design.html. |
-| 3     | Probability and Statistics             | [Reading ](https://medium.com/@srowen/common-probability-distributions-347e6b945ce4). Complete the assignment outlined in Assignment.pdf.html |
-| 4     | Regression                             | Book Chapter. Finish R code and Simulation Exercise Started. |
-| 5     | Oct. 10 No Class / Holiday             | Assigned |
-| 6     | Generalized Linear Models              | Assigned |
-| 7     | Bayesian Models                        | Assigned |
-| 8     | Bayesian Models                        | Assigned |
-| 9     | Mixed Models / Hierarchical Models     | Assigned |
-| 10    | Regularization, Prediction, Cross-val. | Assigned |
-| 11    | Decision Making under Uncertainty      | Assigned |
-| 12-14 | Student lecture/lab                    | Assigned |
+| Week  | Topic                                  |
+|-------|----------------------------------------|
+| 1     | Class Org., Information, R/Markdown    | 
+| 2     | Study Design, Power Analysis, Sims.    | 
+| 3     | Probability and Statistics             |
+| 4     | Regression                             |
+| 5     | Oct. 10 No Class / Holiday             |
+| 6     | Generalized Linear Models              |
+| 7     | Bayesian Models                        |
+| 8     | Bayesian Models                        |
+| 9     | Mixed Models / Hierarchical Models     |
+| 10    | Regularization, Prediction, Cross-val. |
+| 11    | Decision Making under Uncertainty      |
+| 12-14 | Student lecture/lab                    |
 
-: {tbl-colwidths="\[10,50,40\]"}
+: {tbl-colwidths="\[30,70\]"}
 
 
 ### Readings
