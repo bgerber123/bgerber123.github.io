@@ -1,5 +1,8 @@
 ---
-title: "Data and Information"
+title:  <span style="color:white">Data and Information</span>
+title-slide-attributes:
+  data-background-image: Information_files/background.png
+  background-opacity: "0.45"
 format: 
   revealjs:
     theme: simple
