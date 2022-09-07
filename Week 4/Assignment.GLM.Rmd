@@ -1,0 +1,27 @@
+---
+title: "GLM Assignment"
+author: "Brian D. Gerber"
+date: "2022-09-07"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To learn about genearlized linear models (GLM) by evaluating characteristics.
+
+### **Markdown**
+Together, we will outline two study design evaluations that use generalized linear models. 
+
+You will develop code that is implemented and explained within a markdown file.
+

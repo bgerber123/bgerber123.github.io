@@ -38,8 +38,8 @@ Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <
 ### Week 2
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
-install.packages(c("ggplot2", "spsurvey", "foreach",
-                   "sf", "doParallel", "grDevices","tictoc"))
+install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
+                   "sf", "doParallel", "grDevices","tictoc","plotly"))
 ```
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 2/StudyDesign.html">Study Design</a>
@@ -64,15 +64,13 @@ install.packages(c("ggplot2", "spsurvey", "foreach",
 
 ### Week 4
 
--   Lecture: <a href="">Probabilty</a>
+-   Lecture: <a href="https://bgerber123.github.io/Week 4/linear.model.html">GLM</a>
 
--   Download: <a href="">.Rmd</a>
+-   Download: <a href="">NEED?</a>
 
--   <a href="">Assignment</a>
+-   <a href="https://bgerber123.github.io/Week 4/Assignment.GLM.html">Assignment</a>
 
--   <a href="Chapter 2. From Research Hypothesis to Model Selection.pdf">Assigned Reading</a>
-
--   <a href="Chapter 3. Linear Regression.pdf">Suggested Readings</a>
+-   <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3336">Assigned Reading</a>
 
 
 :::

@@ -14,6 +14,10 @@ code.r{
 <a href="https://bgerber123.github.io/Schedule/NRS 520 Syllabus.pdf">Syllabus (PDF)</a></p>
 ```
 
+### Readings
+
+Come prepared to discuss the assigned reading. What was interesting and useful? What did not make sense to you? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list)</span>.
+
 
 ## Schedule {.smaller}
 
@@ -22,11 +26,11 @@ code.r{
 | 1     | Class Org., Information, R/Markdown    | 
 | 2     | Study Design, Power Analysis, Sims.    | 
 | 3     | Probability and Statistics             |
-| 4     | Regression                             |
+| 4     | Generalized Linear Models              |
 | 5     | Oct. 10 No Class / Holiday             |
-| 6     | Generalized Linear Models              |
+| 6     | Bayesian Models                        |
 | 7     | Bayesian Models                        |
-| 8     | Bayesian Models                        |
+| 8     | Mixed Models / Hierarchical Models     |
 | 9     | Mixed Models / Hierarchical Models     |
 | 10    | Regularization, Prediction, Cross-val. |
 | 11    | Decision Making under Uncertainty      |
@@ -35,6 +39,3 @@ code.r{
 : {tbl-colwidths="\[30,70\]"}
 
 
-### Readings
-
-Come prepared to discuss the assigned reading. What was interesting and useful? What did not make sense to you? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list)</span>

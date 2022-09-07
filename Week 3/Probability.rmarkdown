@@ -1,0 +1,1009 @@
+---
+title: "Probability"
+title-slide-attributes:
+    data-background-image: /Probability_files/chalkboard.png
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    multiplex: true
+    html:
+       page-layout: full
+       
+---
+
+
+## Probability/Statistics
+
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+```
+
+
+
+<br>
+
+<span style="color:red">Probability</span> and <span style="color:blue">statistics</span> are the opposite sides of the same coin.
+
+<br>
+
+. . .
+
+To understand <span style="color:blue">statistics</span>, means we need to understand <span style="color:red">probability</span>. 
+
+
+<br>
+
+. . .
+
+The key connection b/w them is the <span style="color:orange">random variable (RV)</span>.
+
+## Motivation {.fit-text}
+<p style="text-align:center">
+Why learn about RVs and probability math?
+</p>
+
+. . .
+
+
+<span style="color:red">Foundations of:</span> 
+
+-   linear regression
+-   generalized linear models
+-   mixed models
+
+. . .
+
+<span style="color:red">Our Goal:</span> 
+
+- conceptual framework to think about *data*, *probabilities*, and *parameters*
+- mathematical connections and notation
+
+## Not Random Variables
+
+
+$$
+\begin{align*} 
+a =& 10 \\
+b =& \text{log}(a) \times 12 \\
+c =& \frac{a}{b} \\
+y =& \beta_0 + \beta_1*c
+\end{align*}
+$$
+
+
+. . .
+
+All variables here are <span style="color:red">scalars</span>. They are what they are and that is it.  $\beta$ variables and $y$ are currently unknown, but still <span style="color:red">scalars</span>. 
+
+. . .
+
+<p style="text-align:center">
+<span style="color:red">Scalars</span> are quantities that are fully described by a magnitude (or numerical value) alone.
+</p>
+
+## Random Variables 
+
+$y$ is a random variable which may change values each observation; it changes based on a probability function, $f(y)$. Which value is observed is predictable.
+
+. . .
+
+<p style="text-align:center">
+<span style="color:blue">Toss of a coin</span> <br>
+<span style="color:blue">Roll of a die</span> <br>
+<span style="color:blue">Weight of a captured elk</span> <br>
+<span style="color:blue">Count of plants in a sampled plot</span> <br>
+</p>
+
+<br>
+
+. . .
+
+<p style="text-align:center"> The value observed is based on its frequency within the <span style="color:red">population</span>. These frequencies are described by probabilities. </p>
+
+## Random Variables {.scrollable}
+
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(452)
+y=rpois(1000,10)
+main="Distribution of counts of plants \nin all possible plots"
+```
+
+```{r, eval=TRUE,echo=TRUE}
+#| code-line-numbers: 1|2,3
+par(mfrow=c(1,2))
+hist(y, breaks=20,xlim=c(0,25),main=main)
+hist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)
+```
+
+
+. . . 
+
+We often only get to see **ONE** sample from this distribution.
+
+
+```{r, eval=TRUE,echo=FALSE}
+par(mfrow=c(1,2))
+set.seed(452)
+y=rpois(50,10)
+hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25))
+hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25),freq = FALSE)
+```
+
+
+
+## Random Variables 
+
+We are often interested in the characteristics of the whole population of frequencies,
+
+- <span style="color:blue">central tendency</span> (mean, mode, median)
+- <span style="color:blue">variability</span>  (var, sd)
+- <span style="color:blue">proportion of the population that is X</span> 
+
+. . .
+
+
+which we make based on our sample (i.e., statistical inference). 
+
+## Philosphical Caveat
+
+<span style="color:blue">Frequentist Paradigm:</span>  
+
+Data (e.g., $y$) are random variables and unknown parameters ($\theta$) are *fixed* (scalars). 
+
+<br>
+
+. . .
+
+<p style="text-align:center">
+Where does data randomness come from?
+</p>
+
+<br>
+
+. . .
+
+<span style="color:blue">Bayesian Paradigm:</span>  
+
+Data are *fixed* and parameters ($\theta$) are random variables that have probability functions that describe them.
+
+. . .
+
+<p style="text-align:center">
+Where does this randomness come from?
+</p>
+
+## Frequentist Random Variables 
+
+$$
+\begin{align*}
+y =& \text{ event/outcome} \\
+f(y|\boldsymbol{\theta}) =& \text{ process governing the value of } y \\
+\boldsymbol{\theta} =& \text{ parameters} \\
+\end{align*}
+$$
+
+
+. . .
+
+$f()$ is a function. 
+
+It is called a PDF when $y$ is continuous and a PMF when $y$ is discrete.
+
+-  PDF: **probability density function** 
+-  PMF: **probability mass function** 
+
+
+## Functions
+
+$$ 
+\hspace{-12pt}f \\
+y \Longrightarrow\fbox{DO STUFF
+} \Longrightarrow f(y)
+$$ 
+
+
+. . .
+
+
+$$ 
+\hspace{-14pt}f \\
+y \Longrightarrow\fbox{+7
+} \Longrightarrow f(y)
+$$ 
+
+
+. . .
+
+
+$$ 
+f(y) = y + 7
+$$ 
+
+
+. . .
+
+The letter $y$ is arbitrary, based on convention. Could have used any placeholder.
+
+
+
+$$ 
+f(z) = z + 7
+$$ 
+
+## Random Variables
+
+<span style="color:red">Probability</span>: Interested in $y$,
+
+$$
+\begin{align*}
+y \leftarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+. . .
+
+<span style="color:blue">Statistics</span>: Interested in population characteristics of $y$; i.e., the parameters,
+
+
+$$
+\begin{align*}
+y \rightarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+
+<br>
+
+. . .
+
+
+<p style="text-align:center">
+<span style="color:orange">
+We will come back to these with examples
+</span>
+</p>
+
+## Probability Functions {.scrollable}
+
+Special functions with rules to guarantee our logic of probabilities are maintained. [Assigned Reading. ](https://medium.com/@srowen/common-probability-distributions-347e6b945ce4)
+
+. . .
+
+### Discrete RVs {.numbered}
+
+$y$ can only be a certain <span style="color:red">set</span> of values. 
+
+::: incremental 
+
+1.   $y \in  \{0,1\}$
+      - 0 = alive, 1 = dead
+2.   $y \in  \{0,1, 2\}$ 
+      - 0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young
+3.   $y \in  \{0, 1, 2, ..., 15\}$ 
+      - count of pups in a litter; max could by physiological constraint
+
+:::
+
+. . .
+
+These sets are called the <span style="color:blue">sample space</span> ($\Omega$) or the <span style="color:blue">support</span> of the RV.
+
+
+## PMF {.scrollable}
+
+
+$$
+f(y) = P(Y=y)
+$$
+
+
+. . .
+
+For example 1, there are two probabilities
+
+-   $f(0) = P(Y=0)$
+-   $f(1) = P(Y=1)$
+
+. . .
+
+<span style="color:blue">Axiom 1:</span> The probability of an event is greater than or equal to zero and less than or equal to 1.
+
+
+
+$$
+0 \leq f(y) \leq 1
+$$
+
+Example 1,
+
+-   $f(0) = 0.1$
+-   $f(1) = 0.9$ 
+
+. . .
+
+<span style="color:blue">Axiom 2:</span> The sum of the probabilities of all possible values (sample space) is one. 
+
+
+$$
+\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
+$$
+
+Example 1, 
+
+-   $f(0) + f(1) = 0.1 + 0.9 = 1$
+
+
+## PMF Example 1
+
+Still need to define $f()$, our PMF!
+
+. . .
+
+The [Bernoulli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution)
+
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        \theta^{y}\times(1-\theta)^{1-y}
+  \end{align}
+$$
+
+. . .
+
+Sample space support ($\Omega$):
+
+-   $y \in  \{0,1\}$
+
+Parameter space support ($\Theta$):
+
+-   $\theta \in  (0,1)$
+-   General: $\theta \in \Theta$
+
+
+## Support 
+
+<br>
+
+The sample space and parameter support can be found on Wikipedia for many probability functions. 
+
+<br>
+
+For example, the [Normal/Gaussian distribution ](https://en.wikipedia.org/wiki/Normal_distribution) describes the sample space for all values on the real number line. 
+
+
+$$y \in (-\infty, \infty) \\ y \in \mathbb{R}$$
+
+
+What is the parameter space?
+
+## Normal Distribution {.scrollable}
+
+We collect data on adult alligator lengths (in). 
+
+```{r,eval=TRUE,echo=FALSE}
+shape=100
+rate=1
+scale=1/rate
+
+set.seed(4454)
+round(rgamma(10,shape,rate),digits=2)
+
+```
+
+
+<br>
+
+<p style="text-align:center">
+<span style="color:blue">
+Should we use the Normal Distribution <br>to estimate the mean? <br>
+</span>
+</p>
+
+. . .
+
+<p style="text-align:center">
+Does the support of our data match <br>the support of the PDF?
+</p>
+
+. . .
+
+<p style="text-align:center">
+What PDF does?
+</p>
+
+. . .
+
+
+```{r, echo=FALSE,eval=TRUE}
+mu=shape*scale
+var=shape*scale^2
+curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
+      ylab="dgamma(y,shape = 100, rate = 1",main="Equivalent means and variances")
+curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
+legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 100, var = 100"),lwd=3,col=c(1,2))
+```
+
+
+. . .
+
+The issue is when the data are near 0, we might estimate non-sensical values (e.g. negative).
+
+
+```{r, echo=FALSE,eval=TRUE}
+shape=1
+rate=1
+scale=1/rate
+
+mu=shape*scale
+var=shape*scale^2
+curve(dgamma(x, shape=shape,rate=rate),xlim=c(-5,5),lwd=4,xlab="y",
+      ylab="dgamma(y,shape = 1, rate = 1",main="Equivalent means and variances")
+curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
+legend("topright",legend = c("Gamma", "Normal"),lwd=3,col=c(1,2))
+```
+
+
+
+## PDF
+
+### Continuous RVs {.numbered}
+
+$y$ are an uncountable set of values.
+
+. . .
+
+<br>
+
+List of PDF for continous supported RVs. <br>
+
+Provide ecological data examples that match the support?
+
+::: incremental 
+
+1. <span style="color:blue">Gamma</span>:  $y \in  (0,\infty)$
+2. <span style="color:blue">Beta</span>:   $y \in  (0,1)$ 
+3. <span style="color:blue">Continuous Uniform</span>:   $y \in  [a,b]$
+4. <span style="color:blue">Poisson</span>:   $y \in  \mathbb{N}_{0}$ (All Integers, starting at 0) 
+
+:::
+
+
+## PDF {.scrollable}
+
+PDFs of continious RVs follow the same rules as PMFs.
+
+#### Confusing Differences
+
+. . .
+
+<span style="color:blue">Axiom 1:</span>
+
+-   $f(y) \geq 0$
+
+PDFs output <span style="color:orange">probability densities</span>, not probabilities.
+
+. . .
+
+<br>
+
+<span style="color:blue">Axiom 2:</span>
+
+-   Probs are the area b/w a lower and upper value of $y$; i.e, area under the curve
+
+. . .
+
+
+```{r,echo=TRUE,eval=TRUE}
+library(visualize)
+visualize.it(dist = 'norm', stat = c(100),
+             list(mu = 100 , sd = 10), section = "upper")
+```
+
+
+
+. . .
+
+
+```{r,echo=FALSE,eval=TRUE}
+library(visualize)
+visualize.it(dist = 'norm', stat = c(120),
+             list(mu = 100 , sd = 10), section = "upper")
+```
+
+
+. . .
+
+The math,
+
+
+$$
+\int_{120}^{\infty} f(y| \mu, \sigma)dy = P(120<Y<\infty)
+$$
+
+
+Read this as "the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)".
+
+<br>
+
+. . .
+
+What is the probability of $y$ = 80? 
+
+. . .
+
+
+$$
+\begin{align*}
+&\int_{80}^{80} f(y|\mu=100, \sigma=10) dy\\
+\end{align*}
+$$
+
+. . .
+
+A definite integral of a continuous function is the limit of a Riemann sum as the number of subdivisions (n) approaches infinity. 
+
+
+$$
+\begin{align*}
+&= \lim_{n \to \infty} \sum_{i=1}^{n} \Delta y_i \times f(y_{i}|\mu=100, \sigma=10) = 0\\
+&\text{where } \Delta y = \frac{80-80}{n}
+\end{align*}
+$$
+
+
+
+## PDF {.scrollable}
+
+<span style="color:blue">Axiom 3:</span>
+
+-   $\int_{-\infty}^{\infty}f(y)dy = 1$
+
+The sum of the probability of all possible outcomes is equal to 1.
+
+
+## One side of the coin {.scrollable}
+
+<span style="color:red">Probability</span>:
+Interested in the variation of y,
+
+$$
+\begin{align*}
+y \leftarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+. . .
+
+
+
+$$
+\begin{align*}
+\boldsymbol{\theta}  =& \begin{matrix} [\mu & \sigma] \end{matrix} \\
+f(y|\boldsymbol{\theta}) &= \text{Log Normal(}\mu, \sigma) \\
+\end{align*}
+$$
+
+
+. . .
+
+
+$$
+\begin{align*}
+f(y|\boldsymbol{\theta}) &= \frac{1}{\sqrt(2\pi\sigma y)}e^{-(\text{log}(y)-\mu)/2\sigma^2} \\
+\end{align*}
+$$
+
+
+. . .
+
+[Sample/parameter Support:](https://en.wikipedia.org/wiki/Log-normal_distribution)
+
+-   $y \in (0,\infty)$
+-   $\mu \in (-\infty,\infty)$
+-   $\sigma \in (0,\infty)$
+
+. . .
+
+What is the probability we would sample a value >600? <br>
+In this population, how common is a value >600?
+
+. . .
+
+
+$$
+\begin{align*}
+p(y>600) = \int_{600}^{\infty} f(y|\boldsymbol{\theta}) \,dy 
+\end{align*}
+$$
+
+```{r,eval=TRUE, echo=TRUE}
+plnorm(q=600,meanlog=5, sdlog=1,lower.tail=FALSE)
+```
+
+
+<br>
+
+. . .
+
+
+What is the probability of observing $y$ < 50
+
+
+```{r,eval=TRUE, echo=TRUE}
+plnorm(q=50,meanlog=5, sdlog=1,lower.tail=TRUE)
+```
+
+
+<br>
+
+. . .
+
+
+Reverse the question: What values of $y$ and lower have a probability of 0.025
+
+
+```{r,eval=TRUE, echo=TRUE}
+qlnorm(p=0.025,meanlog=5, sdlog=1,lower.tail=TRUE)
+```
+
+
+<br>
+
+. . .
+
+What values of $y$ and higher have a probability of 0.025
+
+
+```{r,eval=TRUE, echo=TRUE}
+qlnorm(p=0.025,meanlog=5, sdlog=1,lower.tail=FALSE)
+```
+
+
+. . .
+
+
+```{r,eval=TRUE, echo=TRUE}
+curve(dlnorm(x,meanlog=5, sdlog=1),xlim=c(0,1200),lwd=3,
+      xlab="y", ylab="dlnorm(y,meanlog = 5, sdlog = 1)")
+abline(v=c(20.9,1053.60),lwd=3,col=2)
+```
+
+
+
+. . .
+
+We can consider samples from this population,
+
+
+```{r,echo=TRUE, eval=TRUE}
+#| code-line-numbers: 2
+set.seed(154434)
+y <- rlnorm(100, meanlog = 5, sdlog = 1)
+```
+
+```{r,echo=FALSE, eval=TRUE}
+curve(dlnorm(x,meanlog=5, sdlog=1),xlim=c(0,800),lwd=3)
+hist(y,col=adjustcolor("red",alpha.f = 0.5),freq=FALSE,add=TRUE,breaks=100)
+```
+
+
+. . .
+
+<p style="text-align:center">
+What use is this to us?
+</p>
+
+
+## The others side of the coin {.scrollable}
+<span style="color:blue">Statistics</span>:
+Interested in estimating population-level characteristics; i.e., the parameters
+
+
+$$
+\begin{align*}
+y \rightarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+
+. . .
+
+<p style="text-align:center">
+<span style="color:red">
+**REMEMBER**
+</span>
+</p>
+$f(y|\boldsymbol{\theta})$ is a probability statement about $y$, <span style="color:red"> **NOT** </span> $\boldsymbol{\theta}$.
+
+<br>
+
+## The Likelihood Function {.scrollable}
+
+What we can say about our parameters using this function?
+
+
+$$
+\begin{align*}
+\mathcal{L}(\boldsymbol{\theta}|y) = P(y|\boldsymbol{\theta})  = f(y|\boldsymbol{\theta})
+\end{align*}
+$$
+
+
+. . .
+
+The likelihood ($\mathcal{L}$) of the unknown parameters, given our data, can be calculated using our probability function.
+
+. . .
+
+CODE:
+
+```{r,eval=TRUE,echo=TRUE}
+# A data point
+  y=c(10)
+
+#the likelihood the mean is 8, given our data
+  dnorm(y,mean=8)
+```  
+
+
+<br>
+
+. . .
+
+If we knew the mean is truly 8, it would also be the probability density of the observation y = 10.
+
+## Many Parameter Guesses {.scrollable}
+
+
+```{r,eval=TRUE,echo=TRUE}
+# Let's take many guesses of the mean
+  means=seq(0,20,by=0.1)
+
+# Use dnorm to get likelihood of each guess of the mean
+# Assumes sd = 1
+  likelihood=dnorm(y, mean=means)
+```
+
+
+. . .
+
+
+```{r,eval=TRUE,echo=FALSE, fig.align='center'}
+#Look at gueses and likelihood
+  plot(means,likelihood,xlab="Guesses for the Mean")
+  abline(v=10,lwd=3,col=3)
+  legend("topright",legend=c("Max Likelihood"),
+         lwd=3,col=3)
+```
+
+
+## Statistics and PDF Example {.scrollable}
+
+What is the mean height of King Penguins? 
+
+<br>
+
+We go and collect data,
+
+$\boldsymbol{y} = \begin{matrix} [4.34 & 3.53 & 3.75] \end{matrix}$
+
+<br>
+
+. . .
+
+Let's decide to use the Normal Distribution as our PDF. 
+
+
+$$
+\begin{align*}
+f(y_1 = 4.34|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{1}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+
+<span style="color:red">AND</span>
+
+
+$$
+\begin{align*}
+f(y_2 = 3.53|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{2}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+
+<span style="color:red">AND</span>
+
+
+$$
+\begin{align*}
+f(y_3 = 3.75|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{3}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+
+. . .
+
+Or simply, 
+
+
+$$
+y_{i} \stackrel{iid}{\sim} \text{Normal}(\mu, \sigma)
+$$
+
+. . .
+
+$iid$ = independent and identically distributed
+
+. . .
+
+## Continued {.scrollable}
+
+We want to find the joint probability of our data with shared parameters $\mu$ and $\sigma$,
+
+
+$$
+\begin{align*}
+& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \mu, \sigma) \\
+&= \mathcal{L}(\mu, \sigma|\textbf{y})
+\end{align*}
+$$
+
+
+. . .
+
+<span style="color:red">IF</span> each $y_{i}$ is **independent**, the *joint probability* of our data are simply the multiplication of all three probability densities,
+
+
+$$
+\begin{align*}
+=& f(y_{1}|\mu, \sigma)\times f(y_{2}|\mu, \sigma)\times f(y_{3}|\mu, \sigma) \end{align*}
+$$
+
+
+. . .
+
+
+$$
+\begin{align*}
+=& \prod_{i=1}^{3} f(y_{i}|\mu, \sigma) \\
+=& \mathcal{L}(\mu, \sigma|y_{1},y_{2},y_{3})
+\end{align*}
+$$
+
+
+
+## Code {.scrollable}
+
+Translate the math to code...
+
+
+```{r, echo=TRUE, eval=TRUE}
+# penguin height data
+  y=c(4.34, 3.53, 3.75)
+
+#Joint likelihood of mu=3, sigma =1, given our data
+  prod(dnorm(y,mean=3,sd=1))
+```
+
+
+<br>
+
+. . .
+
+Calcualte likelihood of many guesses of $\mu$ and $\sigma$ simultaneously,
+
+
+```{r, echo=TRUE, eval=TRUE}
+
+# The Guesses
+  try=expand.grid(seq(0,6,0.05),seq(0.01,2,0.05))
+  colnames(try)=c("mu","sigma")
+
+# function
+fun=function(a,b){
+  prod(dnorm(y,mean=a,sd=b))
+  }
+
+# mapply the function with the inputs
+  loglik=mapply(a=try$mu,b=try$sigma, FUN=fun)
+
+# maximum likelihood of parameters
+  try[which.max(loglik),]
+
+```
+
+
+<br>
+
+. . .
+
+Lets compare to,
+
+```{r, echo=TRUE, eval=TRUE}
+sum(y)/length(y)
+```
+
+
+## Likelihood plot (3D) {.scrollable}
+
+
+```{r,echo=FALSE,eval=TRUE, out.width="150%"}
+library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,loglik)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Mean'),
+                     yaxis = list(title = 'SD'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+#fig
+```
+
+
+## Sample Size  {.scrollable}
+What happens to the likelihood if we increase the sample size to N=100?
+
+. . .
+
+
+```{r,eval=TRUE,echo=FALSE}
+y=rnorm(100,3.8,1)
+  try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
+  colnames(try)=c("mu","sigma")
+
+# mapply the function with the inputs
+  loglik=mapply(try$mu,try$sigma, FUN=fun)
+
+  library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,loglik)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Mean'),
+                     yaxis = list(title = 'SD'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+  
+```
+
