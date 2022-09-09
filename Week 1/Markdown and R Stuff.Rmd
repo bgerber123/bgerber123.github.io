@@ -18,8 +18,6 @@ pre {
 </style>
 
 ```{r setup, include=FALSE}
-#setwd("~/Markdown")
-setwd("C:/Users/bgerber/Google Drive/NRS520/Week 0")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -112,19 +110,19 @@ What if you did the same approximation but with a lot more simulated values and 
 
 # An Assignment
 
-Please create a markdown document (HTML/PDF) that implements the R code outlined below along with text explanation of what the code is doing. 
+Please create a markdown document (.Rmd) that is output as an html (.html) that implements the R code outlined below along with text explanation of what the code is doing (i.e., annotation). Practice good code structure using indentation. 
 
-We will start this process as a group in R and you will document and explain the code by creating a markdown file. <span><u>Use Latex to create at least one equation of your choosing.</u></span>
+<span><u>Create at least one equation of your choosing.</u></span>
 
 ## <span style="color:blue">What to include</span>
 
 ### <span style="color:red">Create Data</span>
 
-- Simulate values of random variable `y` from your favorite probability distribution (e.g., `rnorm`, `rgamma`,`rbeta`,`rexp``), creating a matrix that is 1000 rows by 200 columns.
+- Simulate values of a random variable `y` from any probability distribution (e.g., `rnorm`, `rgamma`,`rbeta`,`rexp`,`runif`), creating a matrix (function name) that is 1000 rows by 200 columns.
 
 ### <span style="color:red">apply function</span>
 
-- use the `apply` function to calculate the `range` (this is the function name) of values for each row.
+- use the `apply` function to calculate the `range` (function name) of values for each row.
 
 - next, use the `apply` function to calculate the standard deviation (`sd`) of all the rows of `y`.
 
