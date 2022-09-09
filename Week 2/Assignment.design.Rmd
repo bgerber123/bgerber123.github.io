@@ -1,7 +1,7 @@
 ---
 title: "Study Design / Simulation Assignment"
 author: "Brian D. Gerber"
-date: "2022-08-29"
+date: "2022-09-09"
 output: html_document
 ---
 
@@ -15,31 +15,29 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: Evaluate random sampling designs with 4 sample sizes when your population of interest has and does not have spatial structure/variation. Evaluate these combinations in terms of two criteria: mean total population estimate, and one additional criteria of your choosing.
+### **Objective**: Evaluate random sampling designs with 3 sample sizes (of your choosing) when the mean density of deer per square kilometer is 1 and 20. Evaluate each scenario in terms of the mean total population estimate. Make a sample size recommendation for each deer density, given the agency is interested in being highly certain that the population estimate is within 10% of the true total population estimate. Lastly, make a comment about the characteristics/shape/symmetry of the sampling distribution for the true total populatione estimate. 
 
-You will need to do a new simulation where the true deer population (by cell) varies by the percent of development in the cell (RI$Devel_area). Compare these findings from the original findings where the true deer population did not vary by development. How does spatial variation unaccounted for in the sampling process affect your criteria?
+
+All Scenarios
+
+-   Deer density is 1, sample size 1
+-   Deer density is 1, sample size 2
+-   Deer density is 1, sample size 3
+-   Deer density is 20, sample size 1
+-   Deer density is 20, sample size 2
+-   Deer density is 20, sample size 3
+
 
 ### **Markdown**
 
-Prepare a report (code and findings), using markdown. You can create an HTML or PDF. You do not need to show all possible code. Just what you think is essential for someone to understand the study. Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).
+Prepare a report (code and findings), using markdown that presents your findings using text and figures. Further, make a recommendation on the sample size you would suggest to go with and why.
 
-- **Suggestion 1**: For the markdown file, do not run the simulation every time you create
-the document. Do the simulation, save the results, and load the results in
-the markdown file. You can include your code in the outputted markdown file by 
-specifying eval=FALSE and echo=TRUE.
-  
-- **Suggestion 2**: Create a regression model (intercept, slope) on the log-scale to simulate the deer population that is influenced by the covariate 'RI$Devel_area'
+You do not need to show all possible code. Show code that you think is essential for someone to understand your simulation study (e.g. no need to show plotting code). Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).
 
-- **Suggestion 3**: Put your processing code in one script/file and your plotting code in another script/file.
+- **Suggestion 1**: For the markdown file, do not run the simulation every time you create/knit the document. Do the simulation, save the results, and load the results in the markdown file. You can include your code in the outputted markdown file by specifying eval=FALSE and echo=TRUE.
 
-*Consider plotting*:
+- **Suggestion 2**: Consider making an analysis script that outputs all your results into 1 or multiple files. Then use a plotting script to develop the plots you are interested. Then, start writing the markdown file that loads you results and plots only the things you want to show.
 
-- Your simulated deer population in map form. 
-- A histogram of the deer population values.
-- Sampling distribution of total population estimate for sample sizes (10,20,40,80) with deer population varying by development and not varying by development.
-- The other criteria you choose to evaluate.
-  
-*Equation*: 
+<br>
+<br>
 
-- Use latex to write your model of how the deer population was simulated
-  

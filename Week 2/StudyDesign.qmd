@@ -60,7 +60,7 @@ Power = 1 - $\beta$
 
 . . .
 
-![](extra/Statistical_test,_significance_level,_power.png){.absolute top=250 left=350 width="500"}
+<!-- ![](extra/Statistical_test,_significance_level,_power.png){.absolute top=260 left=350 width="500"} -->
 
 ## Power Figure
 
@@ -190,11 +190,6 @@ What if we are wrong?
 
 How do we evaluate this?
 
-. . .
-
-<br>
-
-Go to R.
 
 ## Tradeoffs (Power, Type I Error, N) {.scrollable}
 

@@ -46,9 +46,12 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 2/StudyDesign.html">Study Design</a>
 
+-   Lecture Code: <a href="https://bgerber123.github.io/Week 2/StudyDesign.R">StudyDesign.R</a>
+
+
 -   Download: <a href="https://bgerber123.github.io/Week 2/RI Deer Sampling.zip">Zip</a>
 
--   <a href="https://bgerber123.github.io/Week 2/Assignment.design.html">Assignment</a>
+-   Assignment: <a href="https://bgerber123.github.io/Week 2/Assignment.design.Rmd">1) Markdown File</a> <a href="https://bgerber123.github.io/Week 2/Assignment.design.html">1) Compiled HTML</a>
 
 -   <a href="https://bgerber123.github.io/Week 2/Betts et al.pdf">Assigned Reading</a>
 

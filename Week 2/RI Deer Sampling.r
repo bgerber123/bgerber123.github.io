@@ -1,5 +1,6 @@
 # Author: Brian D. Gerber
 # Date Created: August, 29, 2022
+# Updated last: 9/9/2022
 # Objective: Evaluate sampling designs for counting 
 #            white-tailed deer in Rhode Island (RI)
 
@@ -13,16 +14,15 @@
   library(grDevices)
   library(tictoc)
   
-#Set working directory and workinspace
+# Set working directory and workinspace
   rm(list=ls())
-  setwd("C:/Users/bgerber/Google Drive/NRS520/Week 1/")
-  setwd("G:/My Drive/NRS520/Week 1")
+  setwd("C:/Users/bgerber/Google Drive/GITHUB/bgerber123.github.io/Week 2")
 
-#Load shapefiles  
+# Load shapefiles  
   RI=st_read("./extra/RI.Sq.Mile.shp")
   boundary=st_read("./extra/State_Boundary__1997_.shp")
 
-#Investigate the shapefile
+# Investigate the shapefile
   st_geometry(RI)
   class(RI)
 
@@ -31,63 +31,63 @@
 
 ###################################  
 ###################################
-#STEP TO CONSIDER: The Sampling Frame  
+# STEP TO CONSIDER: The Sampling Frame  
   
-#Plot the boundary of RI and 1 square mile cells  
+# Plot the boundary of RI and 1 square mile cells  
   ggplot() + 
     geom_sf(data = boundary, color = "purple",size=1) +
     geom_sf(data = RI,alpha = 0.5)
 
-#Plot individual attributes
+# Plot individual attributes
   plot(RI["Devel_area"])
   plot(RI["water_area"])
   plot(RI["Natur_area"])
   plot(RI["Consv_area"])
 
-#Consider the variation in developed area  
+# Consider the variation in developed area  
   hist(RI$Devel_area)
 
-#Ask yourself are deer going to be at all development levels?  
-#Should we further limit the sampling frame?
-#Why/why not? 
+# Ask yourself are deer going to be at all development levels?  
+# Should we further limit the sampling frame?
+# Why/why not? 
   
-#find values of high development  
+# find values of high development  
   index=which(RI$Devel_area>0.8)
 
-#drop values of high development and make a new spatial object
+# drop values of high development and make a new spatial object
   RI=RI[-index,]
 
-#plot updated map
+# plot updated map
   plot(RI["Devel_area"])
 
-#Update the id column
+# Update the id column
   RI$Id=1:nrow(RI)
 ###################################  
 ###################################
 #STEP TO CONSIDER: The TRUTH
 
-#Consider how deer vary on the landscape
+# Consider how deer vary on the landscape
   
-#Mean of 15 deer per square mile (1 cell)
+# Mean of 15 deer per square mile (1 cell)
   deer.dens=15
 
-#Total expected deer population
+# Total expected deer population
   deer.dens*nrow(RI)
 
-#Simulate deer densities
+# Simulate deer densities
   set.seed(434343)
   deer1=rpois(nrow(RI),deer.dens)
   hist(deer1)
   sum(deer1)
   
-#Include these values in RI  
+# Include these values in RI  
   RI$Deer=deer1
 
-#Plot deer population by cell.
-#This our TRUTH
+# Plot deer population by cell.
+# This our TRUTH
   plot(RI["Deer"])
 
-#True simulated total population
+# True simulated total population
   true.total=sum(RI$Deer)  
   true.total
   
@@ -97,93 +97,113 @@
   
 ###################################  
 ###################################
-#STEP TO CONSIDER: Sampling Process
+# STEP TO CONSIDER: Sampling Process
 
-#Create a single sample
+# Create a single sample
   eqprob <- grts(RI, n_base = 5)
   
-#Plot this one sample  
+# Plot this one sample  
   sp_plot(eqprob,RI,pch=18,cex=2)
 
 ###################################  
 ###################################
-#STEP TO CONSIDER: Estimation
+# STEP TO CONSIDER: Estimation
 
-#For the single survey, extract the deer population by cell
+# For the single survey, extract the deer population by cell
   y=eqprob$sites_base$Deer
   
-#Use this one sample to fit a model  
+# Use this one sample to fit a model  
   model1=glm(y~1,family=poisson(link="log"))
 
 ###################################  
 ###################################
-#STEP TO CONSIDER: Criteria to Evaluate
+# STEP TO CONSIDER: Criteria to Evaluate
   
-#Let's say we want the best estimate of total deer 
-#abundance in our sampling frame for RI.
+# Let's say we want the best estimate of total deer 
+# abundance in our sampling frame for RI.
   
-#Use our model to predict deer at all cells in our sampling frame
+# Use our model to predict deer at all cells in our sampling frame
+# Mean estiamte of total deer abundance
   predict(model1,type="response")[1]*nrow(RI)
 
+# Get confidence intervals from the standard error
+# of the linear terms- asked for by "link"
+  preds=predict(model1,type="link",se.fit = TRUE)
+  
+  #Lower CI
+  #mean + SE*lower.tail quantile
+  log.LCL=preds$fit[1]+preds$se.fit[1]*qnorm(0.025)
+
+  #Upper CI
+  #mean + SE*upper.tail quantile
+
+  log.UCL=preds$fit[1]+preds$se.fit[1]*qnorm(0.975)
+  
+  # Mean deer density by cell confidence intervals
+  LCL=exp(log.LCL)
+  UCL=exp(log.UCL)
+  
+  # Confidence intervals for total population
+  LCL*nrow(RI)
+  UCL*nrow(RI)
 ###################################  
 ###################################
-#SIMULATION: Put it all together to evaluate different sample sizes
+# SIMULATION: Put it all together to evaluate. 
 #            We want to find the sampling distribution of all possible 
-#            estimates of Total Abundance for sample sizes of 5 and 20.
+#            estimates of Total Deer Abundance for a sample sizes of 20.
 
-#What sample sizes do we wish to consider?  
-  sample.sizes=c(5, 20)
+# What sample sizes do we wish to consider?  
+  sample.sizes=c(20)
   
-#How many repeat simulations should we do?
-#More is usually better to apporximate the sampling disribution. 
-#Keep it small to run the code fast.
+# How many repeat simulations should we do?
+# More is usually better to apporximate the sampling disribution. 
+# Keep it small to run the code fast.
   n.sim=100
   
-#Setup the object we will save to: dimensions of sample.sizes by n.sim
+# Setup the object we will save to: dimensions of sample.sizes by n.sim
   deer.total.abundance=matrix(0,length(sample.sizes),n.sim)
 
-#Start timer  
+# Start code timer - highlight and execute code from here to "toc" 
   tic("simulation")  
-#Loop over sample size choices
-for(z in 1:length(sample.sizes)){
+
+  # Loop over sample size choices
+  for(z in 1:length(sample.sizes)){
   
-  #For each sample size, repeat the 
-  #sampling/estimation/prediction criteria n.sim times
-  for(i in 1:n.sim){  
+  # For each sample size, repeat the 
+  # sampling/estimation/prediction criteria n.sim times
+    for(i in 1:n.sim){  
+        eqprob <- grts(RI, n_base = sample.sizes[z])
+        y=eqprob$sites_base$Deer
+        model1=glm(y~1,family=poisson(link="log"))
+        deer.total.abundance[z,i]=predict(model1,type="response")[1]*nrow(RI)
     
-    eqprob <- grts(RI, n_base = sample.sizes[z])
-    y=eqprob$sites_base$Deer
-    model1=glm(y~1,family=poisson(link="log"))
-    deer.total.abundance[z,i]=predict(model1,type="response")[1]*nrow(RI)
-    
-    #monitor loops
-    if(i%%10==0) cat("\nz =",z, ", i =", i)
-  } #End i loop
-} #End z loop
-toc()  #End timer
+      #monitor loops
+      if(i%%10==0) cat("\nz =",z, ", i =", i)
+    } #End i loop
+  } #End z loop
+toc()  #End codetimer
   
-#First thing to do is save our results
+# First thing to do is save our results
   save(deer.total.abundance,file="deer.total.abundance")
 
-#If already run and saved, load the results.  
+# If already run and saved, load the results.  
   #load("deer.total.abundance")
   
-#Let's look at our results
-  hist(deer.total.abundance[2,],xlim=c(5000,20000),freq=FALSE,breaks=5,col = 1)
-  hist(deer.total.abundance[1,],col=adjustcolor("red", alpha.f = 0.5),
-                                                freq=FALSE,add=TRUE,breaks=8)
-  
-#Add vertical line for truth  
+# Let's look at our results
+  hist(deer.total.abundance[1,],xlim=c(5000,20000),
+       freq=FALSE,breaks=5)
+
+# Add vertical line for truth  
   abline(v=true.total,col=4,lwd=3)
 
-#Let's use our sampling distribution to see how likely our ONE sample will be  
-#We can ask questions about how likely it is to over estimate
-#total abundance by 1000
+# Let's use our sampling distribution to see how likely our ONE sample will be  
+# We can ask questions about how likely it is to over estimate
+# total abundance by 1000
   myfunc=function(total.est){length(which(total.est>true.total+1000))/length(total.est)}
   apply(deer.total.abundance,1,FUN=myfunc)
   
-#We can ask what proportion of our estimates of total population are within 
-#  an error (lower/upper) of 1000
+# We can ask what proportion of our estimates of total population are within 
+# an error (lower/upper) of 1000
   myfunc2=function(total.est){length(which(abs(total.est-true.total)<1000))/length(total.est)}
   apply(deer.total.abundance,1,FUN=myfunc2)
 
@@ -195,22 +215,22 @@ toc()  #End timer
 ################################################################
 ################################################################
 ################################################################
-#Doing simulations can take a while. We can be smarter about how
-#we ask the computer to process our code. If you have multiple
-#CPU's, we can split up each iteration of sample.sizes, sending 
-#all of its n.sim iterations to different processors 
+# Doing simulations can take a while. We can be smarter about how
+# we ask the computer to process our code. If you have multiple
+# CPU's, we can split up each iteration of sample.sizes, sending 
+# all of its n.sim iterations to different processors 
     
-#Evaluate 4 different sample sizes
-  sample.sizes=c(5, 10, 20, 40)
+# Evaluate 4 different sample sizes
+  sample.sizes=c(10, 20)
   n.sim=100
 
-#Register how many processors to use (backend setup)
+# Register how many processors to use (backend setup)
   cores=detectCores()
   cl <- makeCluster(cores[1]-1) #not to overload your computer
   registerDoParallel(cl)
 
-#Start timer and foreach parallel loop with "dopar"  
-tic("Simulation Parallel")
+# Start timer and foreach parallel loop with "dopar"  
+  tic("Simulation Parallel")
 #Define the ouput of the foreach loop
   out.parallel<-foreach(z=1:length(sample.sizes),
                       .packages = c("spsurvey"))%dopar% {
@@ -227,7 +247,7 @@ tic("Simulation Parallel")
       deer.total.abundance
 
   } #End foreach loop
-toc() #End timer
+toc() #End code timer
 
 #stop procesors
   stopCluster(cl)
@@ -236,15 +256,15 @@ toc() #End timer
   save(out.parallel,file="out.parallel.1")
   
 #If results are already run, load object  
-  load("out.parallel.1")
+#  load("out.parallel.1")
   
   
   is.list(out.parallel)
   length(out.parallel)
   
-  par(mfrow=c(2,2))
+  par(mfrow=c(1,2))
   lapply(out.parallel,hist,xlim=c(5000,20000))
 
 
 ########################################  
-# Go to Assignment
+# Assignment time!
