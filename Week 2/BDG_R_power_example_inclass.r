@@ -5,10 +5,9 @@ library(ggplot2)
 
 #THIS IS NEW
   Group1.Mean <- c(40,80,100)
-  
+  Group1.Mean <- seq(10,110,by=5)
 #THIS IS THE SAME
   Group1.SD <- 20
-  
   Group2.Mean <- 120
   Group2.SD <- 20
 
@@ -42,8 +41,20 @@ colnames(out2)=c("power","d","n")
 head(out2)
 
 #prepare for ggplot2
-out2$d=as.factor(out2$d)
-out2=data.frame(out2)
+out3=out2
+out3$d=as.factor(out3$d)
+out3=data.frame(out3)
 
-ggplot(data=out2, aes(x=n, y=power, group=d, color=d)) +
+ggplot(data=out3, aes(x=n, y=power, group=d, color=d)) +
     geom_line(size=2)
+
+
+library(plotly)
+fig <- plot_ly(out2, x = ~power, y = ~d, z = ~n, marker = list(size = 5))
+fig <- fig %>% add_markers(color=~n)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Power'),
+                     yaxis = list(title = 'Alpha'),
+                     zaxis = list(title = 'Sample Size')))
+#fig <- fig %>%  layout( xaxis = list(nticks=10, tickmode = "auto"))
+fig
+
