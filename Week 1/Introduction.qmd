@@ -35,9 +35,7 @@ code.r{
 
 -   **Computers**: Always bring a laptop to class
 
-    -   Software/R Packages should be installed prior to lab
-
-    -   I will send out an email prior to class
+    -   Software/R Packages should be installed prior to lab (posted on main website)
 
 ## What is this course?
 
@@ -53,11 +51,11 @@ code.r{
 ```
 . . .
 
--   Designing as we go to be adaptive
+-   Adaptive!
 
-    -   Scope/depth depends on current baseline knowledge
+-   Scope/depth depends on current baseline knowledge
 
--   mixture of stats/modeling/code/math/science/ecology
+-   mixture of <span style="color:blue"> stats/modeling/code/math/science philosophy/ecology</span>
 
 ## Our Goals 
 
@@ -81,7 +79,11 @@ code.r{
 
 :::
 
-## Why is this class useful?
+## Why is this class useful? {.scrollable}
+
+-   Able to read modern ecological literature
+
+. . .
 
 -   Understand what you are doing when using data and models; **coding/statistics/modeling are related but not the same**
 
@@ -91,15 +93,15 @@ code.r{
 
 . . .
 
--   Flexibility in evaluating modeling assumptions and study designs
+-   Taking control of evaluating assumptions
 
 . . .
 
--   Be able to collaborative with statisticians
+-   Collaborative with statisticians
 
 . . .
 
--   Approach data analysis with an appropriate mindset and set of tools
+-   Approach data and data analysis with an appropriate mindset and set of tools
 
 ## Who am I?
 
@@ -117,11 +119,11 @@ code.r{
 
 <li>What is your name?</li>
 
-<li>What is your favorite dessert?</li>
+<li>What is your program/project/field of study?</li>
 
-<li>If you weren't here, where would you be?</li>
+<li>Why do you want to learn more about 'quantitative techniques'?</li>
 
-<li>What is the first emotion you have when I say **statistics**, **math**, or **coding**?</li>
+<li>What is your first emotion when you hear **statistics**, **math**, or **coding**?</li>
 
 </ul>
 
@@ -190,11 +192,11 @@ around a statistical / methodology topic relevant to ecology and resource mgmt.
 
 . . .
 
-What is the name of the 
+Write down, what is the name of the 
 
 -   object?
 -   function?
--   argument?
+-   argument(s)?
 
 ```{r,eval=TRUE,echo=TRUE}
 
@@ -204,7 +206,11 @@ a = seq(0,1,by=0.1)
 
 . . . 
 
-Note: code can be copied to your clipboard (top-right).
+Note: code can be copied to your clipboard (top-right). 
+
+<br>
+
+Code scripts will also be on the website.
 
 ## RStudio
 
@@ -225,10 +231,10 @@ Importance of your computer's CPU and memory?
 
 -   Hierarchical code organization
 
-    -   code structuring using indenting
+    -   code structure using indenting
     -   top --\> bottom execution
-    -   remove all extraneous code
-    -   the code you send will like be different than what you are working on
+    -   remove all extraneous code (minimal working example)
+    -   the code you send is likely different than what you are working on
 :::
 
 . . .

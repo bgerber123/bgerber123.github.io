@@ -368,6 +368,10 @@ $$
   summary(model1)
 ```
 
+```{r,echo = FALSE}
+library(equatiomatic)
+extract_eq(model1)
+```
 ## Linear Regression Evaluation {.scrollable}
 
 ```{r, eval=TRUE, echo=TRUE}
