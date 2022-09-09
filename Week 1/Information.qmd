@@ -23,8 +23,9 @@ body, td {
 code.r{
   font-size: 30px;
 }
+
 pre {
-  font-size: 12px
+  font-size: 45px;
 }
 </style>
 <br>
@@ -64,25 +65,32 @@ pre {
 . . .
 
 ```{=html}
-<br><span style="color:#FF0000";><center><em>"they are creations of human design."</center></em></span>
+<span style="color:#FF0000";><center><em>"they are creations of human design."</center></em></span>
 ```
 ![](Information_files/thinking.png){fig-align="center" width="459"}
 
-## Big Data Problems
+## Big Data Problems {.scrollable}
 
 <br>
 
 [**The Annals of Applied Statistics (2018); Xiao Li Meng,**](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-2/Statistical-paradises-and-paradoxes-in-big-data-I--Law/10.1214/18-AOAS1161SF.full)
 
 ```{=html}
-<br><center><span style="color:#FF0000";><em>"The Big Data Paradox: the bigger the data, the surer we fool ourselves”</em></span>  when we fail to account for our sampling process. </center>
+<br><center><span><em>The Big Data Paradox: </em></span></center>
+```
+
+. . .
+
+```{=html}
+<center><span style="color:#FF0000";><em>
+"the bigger the data, the surer we fool ourselves”</em></span> ... when we fail to account for our sampling process. </center>
 ```
 
 . . .
 
 <br>
 <center>
-Sampling Process == Human Design
+Sampling Processes == Human Design
 </center>
 
 . . .
@@ -124,11 +132,11 @@ Using eBird data w/o accounting for sampling biases.
 
 . . .
 
-## The Questioning Scientist {.smaller}
+## The Questioning Scientist {.scrollable}
 
 <br>
 
-**My opinion:** In regard to *data* and *statistical models*, [21^st^ century scientists should be pragmatic, excited, and questioning.]{style="color:red"}
+In regard to *data* and *statistical models*, [21^st^ century scientists should be pragmatic, excited, and questioning.]{style="color:red"}
 
 ::: {.fragment .fade-in-then-semi-out}
 -   How and why did these data come to be?
@@ -192,14 +200,16 @@ Example?
 </span>
 ```
 
-![](Information_files/banding.png){fig-align="center"}
+. . .
+
+![](Information_files/banding.png){fig-align="center" width="494"}
 
 ## The goal of the question
 
 ::: incremental
--   learn about the data (*data summary*)
--   apply learning outside of the data (*inference*)
--   learn about conditions relevant to but not observed in the data (*prediction*)
+-   learn about the data (<span style="color:red">data summary</span>)
+-   apply learning outside of the data (<span style="color:red">inference</span>)
+-   learn about conditions relevant to but not observed in the data (<span style="color:red">prediction</span>)
 :::
 
 <br>
@@ -215,7 +225,7 @@ Example?
 are also <u>not mutually exclusive</u>.
 </center>
 ```
-## Infernence and Prediction
+## Inference and Prediction 
 
 ```{=html}
 <br>
@@ -227,7 +237,8 @@ are also <u>not mutually exclusive</u>.
 ```{=html}
 "It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000";><u>understanding</u></span>, <span style="color:#FF0000";><u>predicting</u></span>, and <span style="color:#FF0000";><u>modifying nature</u></span>. But this cannot be done."
 ```
-## Infernence and Prediction
+
+## Infernence and Prediction {.scrollable}
 
 ```{=html}
 <br>
@@ -266,18 +277,23 @@ the <span style="color:#FF0000";>"wrong" </span> statistical model can predict b
 
 ```{=html}
 <span style="color:#FF0000";><center>
-Example of this?
+Why?
 </center>
 </span>
 ```
 
 ## Statistical Information
 
+Let's turn to the field of statistics to understand *Information*
+
+
 <br>
 
 . . .
 
-**Fisher Information:** measures the information an observable random variable (**Y**) has about an unknown parameter $\mathbf{\theta}$ upon which the probability of Y (*f*(**Y**;$\mathbf{\theta}$)) depends.
+<span style="color:blue">Fisher Information</span>
+
+The information an observable random variable ($\textbf{y}$) has about an unknown parameter $\theta$ upon which the probability of $\textbf{y}$ $(f(\textbf{y};\theta)$ depends.
 
 . . .
 
@@ -286,22 +302,27 @@ Example of this?
 ```
 . . .
 
-To learn about $\mathbf{\theta}$ from **Y**, we need to link them together via *f*(**Y**;$\mathbf{\theta}$)
+To learn about $\theta$ from $\textbf{y}$, we need to link them together via a special function, $f(\textbf{y};\theta)$
 
 ## Statistical Information
 
 <br> The pieces:
 
 ::: incremental
--   The data, **Y**
+-   The data, $\textbf{y}$
 
--   A probability function for **Y**:
+-   A probability function for $\textbf{y}$:
 
-    -   *f*(**Y**;$\mathbf{\theta}$)
+    -   $f(\textbf{y};\theta)$
 
-    -   \[**Y**\|$\mathbf{\theta}$\]
+    -   $[\textbf{y}|\theta]$
 
--   The unknown parameter(s): $\mathbf{\theta}$, which are specified in the probability function
+
+
+-   The unknown parameter: $\theta$
+
+    -   specified in the probability function
+
 :::
 
 ## Statistical Information (an example)
@@ -319,8 +340,8 @@ Our data are
 #| echo: TRUE
 #| eval: TRUE
 #| code-line-numbers: "1|2,3"
-Y <- c(0,1,1,1,1,0,1,0,0,0)
-n <- length(Y)
+y <- c(0,1,1,1,1,0,1,0,0,0)
+n <- length(y)
 n
 ```
 
@@ -328,7 +349,7 @@ n
 
 <br>
 
-**Y** is a random variable as it depends on random events.
+$\textbf{y}$ is a random variable as it depends on random events.
 
 <br>
 
@@ -338,7 +359,9 @@ In this case, when we induced a random selection of sites.
 
 ## Probability Function
 
-Let's assign a probability function, f(Y;$\mathbf{\theta}$), which describes the probability for each i^th^ data (y~i~). This is not just for the data we observed, but for all possible data that could be observed.
+$f(\textbf{y};\theta)$ describes the probability for each $i^{th}$ data, $y_i$. 
+
+But, not just for the data we observed, for all possible data that could be observed.
 
 . . .
 
@@ -371,7 +394,7 @@ where the parantheses indicate all real numbers from 0 to 1, not including 0 and
 
 ## Probability Function {.scrollable}
 
-Now we know that we have to assign a probability to only two possible outcomes of the random variable Y.
+Two outcomes, 0 or 1, so we need two probabilities to describe our random variable.
 
 . . .
 
@@ -407,44 +430,75 @@ $$
 
 ```{=html}
 <center>
-This probability mass function (PMF) is called ________?
+This probability function is called ________?
 </center>
 ```
 ## Probability Function
 
-**Probabilities, such as our parameter, have rules:**
+Probabilities, such as our parameter, have rules:
 
 ::: incremental
 -   $0 \leq \theta \leq 1$
 
--   q = 1 - $\theta$; thus, $0 \leq q \leq 1$
+-   $0 \leq (1 - \theta) \leq 1$
 
--   p + q = $\theta + 1-\theta = 1$
+-   $\theta + (1-\theta) = 1$
 
-    -   law of total probability is satisfied
 :::
 
-## Probability Function
+## Probability Function {.scrollable}
 
 How do we find $\theta$ for our data?
 
 . . .
 
-Let's sum the successes of the plots with our plant and divide by the total number of plots. Intuitive?
+Let's find the joint probability of our data, or the likelihood of a parameter, given our data.
+
+. . .
 
 ```{r,echo=TRUE}
 #| echo: TRUE
 #| eval: TRUE
-#| code-line-numbers: 1|2|3
- theta.est <- sum(Y)/n
- theta.est
- q <- 1-theta.est
- q
+#| code-line-numbers: 2|5|8|11|14|17|20
+
+#Bernoulli probability function
+  prob.function=function(theta){prod(theta^y*(1-theta)^y)}
+
+#possible probabilities
+  theta.guess=matrix(seq(0.01,0.99,by=0.01))
+
+#implement function
+  likelihood=apply(theta.guess,1,prob.function)
+  
+#Find maximum likelood
+  max.index=which.max(likelihood)
+
+#Theta that maximizes our probability function
+  theta.est=theta.guess[max.index]
+
+#Define other probability
+  q.est <- 1-theta.est
+
+#Alternative estimation
+  theta.est2 <- sum(y)/n
+
+  
+```
+
+. . .
+
+```{r,echo=TRUE}
+#plot likelihood profile
+  plot(theta.guess,likelihood)
+  abline(v=theta.est,lwd=3,col=1,lty=1)
+  abline(v=theta.est2,lwd=3,col=4,lty=4)
+  legend("topright",lwd=3,col=c(1,4),
+         legend=c("theta.est","theta.est2"))
 ```
 
 ## Statistical Information (an example)
 
-Let's combine 1 observation of our random variable y, our PMF, and $\theta$ to quantify the Fisher information of **Y**:
+Let's combine 1 observation of our random variable, our probability function, and $\theta$ to quantify the Fisher information:
 
 . . .
 
@@ -471,19 +525,15 @@ I(\theta) &= \frac{n}{\theta(1-\theta)}\\
 Therefore, for our sample
 
 ```{r,echo=TRUE}
-I = n/(theta.est*q)
+I = n/(theta.est*q.est)
 I
 ```
 
 . . .
 
-How does this help?
+Consider how information varies by $\theta$ for a given sample size....
 
-. . .
-
-Let's consider how information varies by $\theta$ for a given sample size....
-
-## Statistical Information (an example)
+## Statistical Information (an example) {.scrollable}
 
 ```{r,echo=TRUE, fig.height=6,fig.width=12, fig.align='center'}
 #| echo: TRUE
@@ -500,7 +550,7 @@ plot(thetas,Information,type="b",lwd=8)
 abline(v=theta.est,col=2,lwd=8)
 ```
 
-## Statistical Information (an example)
+## Statistical Information (an example) {.scrollable}
 
 Funny enough, Fisher Information is the reciprocal of the variance of our estimate of $\theta$,$$Var[\hat{\theta}] = \frac{\hat{\theta}  (1-\hat{\theta})}{n}$$
 
@@ -532,14 +582,17 @@ A field dedicated to observing the real world to gain informational data.
 ```{=html}
 <span style="color:#FF0000";><center>BUT</center></span>
 ```
-Undergraduate statistics classes only focus on Power Analysis.
+Often statistics classes only focus on Power Analysis.
+
+. . .
+
 ```{=html}
 To obtain <span style="color:#FF0000";>informational data</span> , we need to think about
 ```
 ::: incremental
 -   how our data will be created
 -   our question of the data
--   what parameter we want to estimate and the PDF/PMF
+-   what parameter we want to estimate and the proability function
 -   the goal of the question
 :::
 
