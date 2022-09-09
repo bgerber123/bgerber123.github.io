@@ -458,7 +458,7 @@ code.r{
 </div>
 <div class="fragment">
 <ul>
-<li>Coding skills</li>
+<li>Coding skills (highly marketable)</li>
 </ul>
 </div>
 <div class="fragment">
@@ -625,20 +625,20 @@ reading/discussion - lecture - lab - HW
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#Load data (file provided)</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>cov.core<span class="fl">.20</span>k<span class="ot">=</span><span class="fu">load</span>(<span class="st">"./New Data Setup/habitat_radius_20k_core.RData"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  cov.core<span class="fl">.20</span>k<span class="ot">=</span><span class="fu">load</span>(<span class="st">"habitat_radius_20k_core.RData"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co">#Create a list</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>cor.sp.route.cor<span class="ot">=</span><span class="fu">vector</span>(<span class="st">"list"</span>,<span class="dv">12</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  cor.sp.route.cor<span class="ot">=</span><span class="fu">vector</span>(<span class="st">"list"</span>,<span class="dv">12</span>)</span>
 <span id="cb3-6"><a href="#cb3-6"></a></span>
 <span id="cb3-7"><a href="#cb3-7"></a><span class="co">#Double loop with if statement</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="cf">for</span>(s <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>cor.sp.route.cor){</span>
-<span id="cb3-9"><a href="#cb3-9"></a>  cor.sp[s]<span class="ot">=</span><span class="fu">cor</span>(cor.sp.route.cor[s,],cor.sp.route.cor[s,])</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(cor.sp.route.cor)){</span>
-<span id="cb3-11"><a href="#cb3-11"></a>        <span class="cf">if</span>(<span class="fu">length</span>(cor.sp.route.cor[i,])<span class="sc">&gt;</span><span class="dv">5</span>){</span>
-<span id="cb3-12"><a href="#cb3-12"></a>          blah blah blah</span>
-<span id="cb3-13"><a href="#cb3-13"></a>        } <span class="co">#End if statement</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>    } <span class="co">#End i loop</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a>} <span class="co">#End s loop</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="cf">for</span>(s <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>cor.sp.route.cor){</span>
+<span id="cb3-9"><a href="#cb3-9"></a>    cor.sp[s]<span class="ot">=</span><span class="fu">cor</span>(cor.sp.route.cor[s,],cor.sp.route.cor[s,])</span>
+<span id="cb3-10"><a href="#cb3-10"></a>      <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(cor.sp.route.cor)){</span>
+<span id="cb3-11"><a href="#cb3-11"></a>          <span class="cf">if</span>(<span class="fu">length</span>(cor.sp.route.cor[i,])<span class="sc">&gt;</span><span class="dv">5</span>){</span>
+<span id="cb3-12"><a href="#cb3-12"></a>            blah blah blah</span>
+<span id="cb3-13"><a href="#cb3-13"></a>          } <span class="co">#End if statement</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>      } <span class="co">#End i loop</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>  } <span class="co">#End s loop</span></span>
 <span id="cb3-16"><a href="#cb3-16"></a></span>
 <span id="cb3-17"><a href="#cb3-17"></a><span class="co">#ISSUE: The error occurs when s = 10. The error is "      ". </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

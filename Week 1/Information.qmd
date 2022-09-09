@@ -452,7 +452,13 @@ How do we find $\theta$ for our data?
 
 . . .
 
-Let's find the joint probability of our data, or the likelihood of a parameter, given our data.
+We can use our probability function to calculate the likelihood of a parameter, given our data.
+
+. . .
+
+$$
+\mathcal{L}(\theta|y) = \prod_{i=1}^{n} p(y_{i};\theta)
+$$
 
 . . .
 
@@ -498,7 +504,8 @@ Let's find the joint probability of our data, or the likelihood of a parameter, 
 
 ## Statistical Information (an example)
 
-Let's combine 1 observation of our random variable, our probability function, and $\theta$ to quantify the Fisher information:
+Let's combine 1 observation of our random variable, our probability function, and $\theta$ to quantify the Fisher information ([Link](https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment)
+):
 
 . . .
 
@@ -517,7 +524,6 @@ I(\theta) &= \frac{n}{\theta(1-\theta)}\\
 \end{align}
 ```
 
-[Link](https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment)
 
 
 ## Statistical Information (an example)
@@ -571,7 +577,7 @@ abline(v=theta.est,col=2,lwd=8)
 
 . . .
 
-If you were designing a study, what would you like $\theta$ to be and how would you control it?
+How does this knowledge about this probability function inform the design of a study?
 
 ## Statistics
 

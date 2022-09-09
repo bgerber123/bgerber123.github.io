@@ -752,7 +752,12 @@ This probability function is called ________?
 <h2>Probability Function</h2>
 <p>How do we find <span class="math inline">\(\theta\)</span> for our data?</p>
 <div class="fragment">
-<p>Let’s find the joint probability of our data, or the likelihood of a parameter, given our data.</p>
+<p>We can use our probability function to calculate the likelihood of a parameter, given our data.</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\mathcal{L}(\theta|y) = \prod_{i=1}^{n} p(y_{i};\theta)
+\]</span></p>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -794,7 +799,7 @@ This probability function is called ________?
 </section>
 <section id="statistical-information-an-example-1" class="slide level2">
 <h2>Statistical Information (an example)</h2>
-<p>Let’s combine 1 observation of our random variable, our probability function, and <span class="math inline">\(\theta\)</span> to quantify the Fisher information:</p>
+<p>Let’s combine 1 observation of our random variable, our probability function, and <span class="math inline">\(\theta\)</span> to quantify the Fisher information (<a href="https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment">Link</a> ):</p>
 <div class="fragment">
 <span class="math display">\[\begin{align}
 I(\theta) &amp;= -E\left[\frac{\partial^2}{\partial\theta^2}\text{log}(\theta^y(1-\theta)^{1-y}) \right]\\
@@ -805,7 +810,6 @@ I(\theta) &amp;= -E\left[\frac{\partial^2}{\partial\theta^2}\text{log}(\theta^y(
 <span class="math display">\[\begin{align}
 I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
 \end{align}\]</span>
-<p><a href="https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment">Link</a></p>
 </div>
 </section>
 <section id="statistical-information-an-example-2" class="slide level2">
@@ -852,7 +856,7 @@ I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
 
 </div>
 <img data-src="Information_files/figure-revealjs/unnamed-chunk-6-1.png" width="1152" class="r-stretch quarto-figure-center"><div class="fragment">
-<p>If you were designing a study, what would you like <span class="math inline">\(\theta\)</span> to be and how would you control it?</p>
+<p>How does this knowledge about this probability function inform the design of a study?</p>
 </div>
 </section>
 <section id="statistics" class="slide level2">

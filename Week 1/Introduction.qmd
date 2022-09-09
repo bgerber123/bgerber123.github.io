@@ -89,7 +89,7 @@ code.r{
 
 . . .
 
--   Coding skills
+-   Coding skills (highly marketable)
 
 . . .
 
@@ -269,20 +269,20 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 #| eval: FALSE
 
 #Load data (file provided)
-cov.core.20k=load("./New Data Setup/habitat_radius_20k_core.RData")
+  cov.core.20k=load("habitat_radius_20k_core.RData")
 
 #Create a list
-cor.sp.route.cor=vector("list",12)
+  cor.sp.route.cor=vector("list",12)
 
 #Double loop with if statement
-for(s in 1:cor.sp.route.cor){
-  cor.sp[s]=cor(cor.sp.route.cor[s,],cor.sp.route.cor[s,])
-    for(i in 1:length(cor.sp.route.cor)){
-        if(length(cor.sp.route.cor[i,])>5){
-          blah blah blah
-        } #End if statement
-    } #End i loop
-} #End s loop
+  for(s in 1:cor.sp.route.cor){
+    cor.sp[s]=cor(cor.sp.route.cor[s,],cor.sp.route.cor[s,])
+      for(i in 1:length(cor.sp.route.cor)){
+          if(length(cor.sp.route.cor[i,])>5){
+            blah blah blah
+          } #End if statement
+      } #End i loop
+  } #End s loop
 
 #ISSUE: The error occurs when s = 10. The error is "      ". 
 
