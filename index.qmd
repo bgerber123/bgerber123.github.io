@@ -67,9 +67,10 @@ install.packages(c("visualize","plotly"))
 
 -   Lecture Code: <a href="/Week 3/Probability.R">Probabilty.R</a>
 
--   Download: <a href="/Week 3/Assignment.pdf.Rmd">.Rmd</a>
+-   Download: 
 
--   <a href="Week 3/Assignment.pdf.html">Assignment</a>
+-   Assignment: <a href="/Week 3/Assignment.pdf.Rmd">1) Markdown File</a> <a href="/Week 3/Assignment.pdf.html">1) Compiled HTML</a>
+
 
 -   <a href="https://medium.com/@srowen/common-probability-distributions-347e6b945ce4">Assigned Reading</a>
 
@@ -81,12 +82,14 @@ install.packages(c("visualize","plotly"))
 
 -   Lecture Code: <a href="/Week 4/linear.model.R">linear.model.R</a>
 
-
 -   Download: <a href="">NEED?</a>
 
--   <a href="Week 4/Assignment.GLM.html">Assignment</a>
+-   <a href="/Week 4/Assignment.GLM.html">Assignment</a>
 
--   <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3336">Assigned Reading</a>
+-   <a href="/Week 4/Ecology - 2021 - Tredennick.pdf">Assigned Reading</a>
+
+-   <a href="/Week 4/Chapter 3. Linear Regression.pdf">Suggested Reading</a>
+
 
 ### Week 5
 ### Week 6
