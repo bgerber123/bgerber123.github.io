@@ -55,7 +55,7 @@ Generalized linear model framework
 $$
 \begin{align*}
 \textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma] \\
-g(\boldsymbol{\mu}) =& \textbf{X}\boldsymbol{\beta}
+\text{g}(\boldsymbol{\mu}) =& \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
 ![](linear.model_files/tada.png){fig-align="center" width="275"}
@@ -239,7 +239,7 @@ dim(second)
 
 ## Linear Algebra {.scrollable}
 
-$g(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
+$\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
 
 . . .
 
@@ -286,9 +286,9 @@ $$
 
 ## Link functions
 
-$g(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
+$\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
 
-- $g(\boldsymbol{\mu})$
+- $\text{g}(\boldsymbol{\mu})$
 
 . . .
 
@@ -309,7 +309,7 @@ To put a linear model on parameters of interest and ensure the parameter support
 ## Link functions {.scrollable}
 
 ### Identity 
-$g(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}$
+$\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}$
 
 . . .
 
@@ -319,7 +319,7 @@ $$
 \begin{align*}
 \textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma]\\
 [\textbf{y}|\boldsymbol{\mu},\sigma]=& \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =& g(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu} = \textbf{X}\boldsymbol{\beta}
+\boldsymbol{\mu} =& \text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu} = \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
 . . .
@@ -425,7 +425,7 @@ $$
 
 $$
 \begin{align*}
-g(\boldsymbol{p}) =& \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsymbol{p}}{1-\boldsymbol{p}})
+\text{g}(\boldsymbol{p}) =& \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsymbol{p}}{1-\boldsymbol{p}})
 \end{align*}
 $$
 . . .

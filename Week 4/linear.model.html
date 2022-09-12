@@ -423,7 +423,7 @@ pre {
 <p><span class="math display">\[
 \begin{align*}
 \textbf{y}\sim&amp; [\textbf{y}|\boldsymbol{\mu},\sigma] \\
-g(\boldsymbol{\mu}) =&amp; \textbf{X}\boldsymbol{\beta}
+\text{g}(\boldsymbol{\mu}) =&amp; \textbf{X}\boldsymbol{\beta}
 \end{align*}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -647,7 +647,7 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 </section>
 <section id="linear-algebra-2" class="slide level2 scrollable">
 <h2>Linear Algebra</h2>
-<p><span class="math inline">\(g(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}\)</span></p>
+<p><span class="math inline">\(\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}\)</span></p>
 <div class="fragment">
 <ul>
 <li><span class="math inline">\(\textbf{X}\boldsymbol{\beta}\)</span></li>
@@ -692,9 +692,9 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 </section>
 <section id="link-functions" class="slide level2">
 <h2>Link functions</h2>
-<p><span class="math inline">\(g(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}\)</span></p>
+<p><span class="math inline">\(\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}\)</span></p>
 <ul>
-<li><span class="math inline">\(g(\boldsymbol{\mu})\)</span></li>
+<li><span class="math inline">\(\text{g}(\boldsymbol{\mu})\)</span></li>
 </ul>
 <div class="fragment">
 <p>Link functions map parameters from one <span style="color:red">support</span> to another.</p>
@@ -711,14 +711,14 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 <section id="link-functions-1" class="slide level2 scrollable">
 <h2>Link functions</h2>
 <h3 id="identity">Identity</h3>
-<p><span class="math inline">\(g(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}\)</span></p>
+<p><span class="math inline">\(\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}\)</span></p>
 <div class="fragment">
 <h4 id="linear-regression">Linear Regression</h4>
 <p><span class="math display">\[
 \begin{align*}
 \textbf{y}\sim&amp; [\textbf{y}|\boldsymbol{\mu},\sigma]\\
 [\textbf{y}|\boldsymbol{\mu},\sigma]=&amp; \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =&amp; g(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu} = \textbf{X}\boldsymbol{\beta}
+\boldsymbol{\mu} =&amp; \text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu} = \textbf{X}\boldsymbol{\beta}
 \end{align*}
 \]</span></p>
 <div class="fragment">
@@ -805,6 +805,13 @@ AIC: 66.231
 Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<p><span class="math display">\[
+E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}}) + \beta_{2}(\operatorname{X}_{\operatorname{Var1}})
+\]</span></p>
+</div>
+</div>
 </section>
 <section id="linear-regression-evaluation" class="slide level2 scrollable">
 <h2>Linear Regression Evaluation</h2>
@@ -834,14 +841,14 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb31-3"><a href="#cb31-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb31-4"><a href="#cb31-4"></a>      <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">1</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>  <span class="fu">plot</span>(<span class="fu">density</span>(coef.est[<span class="dv">2</span>,],<span class="at">adjust=</span><span class="dv">2</span>),<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">2</span>,</span>
 <span id="cb32-2"><a href="#cb32-2"></a>       <span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution"</span><span class="sc">~</span>beta[<span class="dv">1</span>]),</span>
 <span id="cb32-3"><a href="#cb32-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">2</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-14-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-15-2.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -863,7 +870,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <div class="fragment">
 <p><span class="math display">\[
 \begin{align*}
-g(\boldsymbol{p}) =&amp; \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsymbol{p}}{1-\boldsymbol{p}})
+\text{g}(\boldsymbol{p}) =&amp; \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsymbol{p}}{1-\boldsymbol{p}})
 \end{align*}
 \]</span></p>
 </div>
@@ -897,7 +904,7 @@ g(\boldsymbol{p}) =&amp; \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsy
 <span id="cb33-4"><a href="#cb33-4"></a><span class="fu">plot</span>(p,logit.p,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">xlab=</span><span class="st">'p'</span>,<span class="at">ylab=</span><span class="st">"logit(p)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="linear.model_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="linear.model_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="logistic-regression-simulation" class="slide level2 scrollable">
 <h2>Logistic Regression Simulation</h2>
 <div class="fragment">
@@ -956,7 +963,7 @@ g(\boldsymbol{p}) =&amp; \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsy
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -965,7 +972,7 @@ g(\boldsymbol{p}) =&amp; \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsy
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-18-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-19-2.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1031,14 +1038,14 @@ Number of Fisher Scoring iterations: 9</code></pre>
 <span id="cb48-3"><a href="#cb48-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb48-4"><a href="#cb48-4"></a>      <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">1</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>  <span class="fu">plot</span>(<span class="fu">density</span>(coef.est[<span class="dv">2</span>,],<span class="at">adjust=</span><span class="dv">2</span>),<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">2</span>,</span>
 <span id="cb49-2"><a href="#cb49-2"></a>       <span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution"</span><span class="sc">~</span>beta[<span class="dv">1</span>]),</span>
 <span id="cb49-3"><a href="#cb49-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb49-4"><a href="#cb49-4"></a>  <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">2</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-21-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-22-2.png" width="960"></p>
 </div>
 </div>
 </div>
