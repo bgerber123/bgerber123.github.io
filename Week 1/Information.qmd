@@ -12,7 +12,7 @@ format:
     multiplex: true
 ---
 
-## Do we need to design study's anymore to do research?
+## Do we need study designs anymore to do research?
 
 ```{=html}
 <style type="text/css">
@@ -282,7 +282,7 @@ Why?
 </span>
 ```
 
-## Statistical Information
+## Statistical Information {.scrollable}
 
 Let's turn to the field of statistics to understand *Information*
 
@@ -291,9 +291,17 @@ Let's turn to the field of statistics to understand *Information*
 
 . . .
 
-<span style="color:blue">Fisher Information</span>
+[Likelihood principle](https://en.wikipedia.org/wiki/Likelihood_principle)
+
+Given a *statistical model*, all the evidence/information in a sample ($\textbf{y}$, i.e., data) relevant to model parameters ($\theta$) is contained in the *likelihood function*.
+
+. . .
+
+[Fisher Information](https://en.wikipedia.org/wiki/Fisher_information)
 
 The information an observable random variable ($\textbf{y}$) has about an unknown parameter $\theta$ upon which the probability of $\textbf{y}$ $(f(\textbf{y};\theta)$ depends.
+
+<br>
 
 . . .
 
@@ -309,7 +317,7 @@ To learn about $\theta$ from $\textbf{y}$, we need to link them together via a s
 <br> The pieces:
 
 ::: incremental
--   The data, $\textbf{y}$
+-   The sample data, $\textbf{y}$
 
 -   A probability function for $\textbf{y}$:
 
@@ -598,7 +606,7 @@ To obtain <span style="color:#FF0000";>informational data</span> , we need to th
 ::: incremental
 -   how our data will be created
 -   our question of the data
--   what parameter we want to estimate and the proability function
+-   a probability function to use and its parameters
 -   the goal of the question
 :::
 

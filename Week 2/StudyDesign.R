@@ -1,4 +1,4 @@
-## ----echo = TRUE---------------------------------------------------------------------------
+## ----echo = TRUE------------------------------------------------------------------------------
   Group1.Mean <- 100
   Group1.SD <- 20
   
@@ -6,7 +6,7 @@
   Group2.SD <- 20
 
 
-## ----echo = FALSE, eval=TRUE,fig.align='center',fig.height=4-------------------------------
+## ----echo = FALSE, eval=TRUE,fig.align='center',fig.height=4----------------------------------
 
   par(cex.lab=1.5,cex.axis=1.5)
   curve(dnorm(x,Group1.Mean,Group1.SD ),xlim=c(0,200),lwd=5,ylab="Density",xlab="Hummingbird visits per day")
@@ -15,7 +15,7 @@
 
 
 
-## ----echo = TRUE---------------------------------------------------------------------------
+## ----echo = TRUE------------------------------------------------------------------------------
 library(pwr)
 # Wish to test a difference b/w groups 1 and 2
 # Want to know if there is a difference in means
@@ -33,7 +33,7 @@ library(pwr)
 
 
 
-## ----echo=TRUE-----------------------------------------------------------------------------
+## ----echo=TRUE--------------------------------------------------------------------------------
 power = 0.8
 
 out = pwr.t.test(d=d,power=power,type="two.sample",
@@ -43,7 +43,7 @@ out = pwr.t.test(d=d,power=power,type="two.sample",
 out$n
 
 
-## ----echo=TRUE-----------------------------------------------------------------------------
+## ----echo=TRUE--------------------------------------------------------------------------------
 power = matrix(seq(0.8,0.99,by=0.01))
 
 my.func = function(x){                    
@@ -57,7 +57,7 @@ out= apply(power,1, FUN=my.func)
 
 
 
-## ----echo=FALSE,fig.align='center', fig.height=3.5-----------------------------------------
+## ----echo=FALSE,fig.align='center', fig.height=3.5--------------------------------------------
 #Sample Sizes Needed for each Group for different power levels
 #Change to total sample size
 out=out*2
@@ -66,7 +66,7 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
      xlab="Power",lwd=5)
 
 
-## ----echo=TRUE-----------------------------------------------------------------------------
+## ----echo=TRUE--------------------------------------------------------------------------------
   Group1.Mean <- 100
   Group1.SD <- 20
   
@@ -74,41 +74,56 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
   Group2.SD <- 20
 
 
-## ----echo=TRUE-----------------------------------------------------------------------------
-#setup combinations of alpha and power
+## ----echo=TRUE--------------------------------------------------------------------------------
+# Allow group 1 to vary
+  Group1.Mean <- seq(10,110,by=5)
+
+#THIS IS THE SAME
+  Group1.SD <- 20
+  Group2.Mean <- 120
+  Group2.SD <- 20
+  group.sd <- sqrt(mean(Group1.SD^2,Group2.SD^2))
+
+# Variable effect.size  
+  effect.size <- Group1.Mean-Group2.Mean
+  d <- effect.size/group.sd
+
+#setup combinations of d and power
   power = seq(0.8,0.99,by=0.01)
-  alpha= seq(0.01,0.2,by=0.01)
-  x=expand.grid(power,alpha)
-  dim(x)
-  colnames(x)=c("Power","alpha")
-  head(x)
+  power.d = expand.grid(power,d)
+  power.d$Var1 = as.numeric(power.d$Var1)
+  
 
 
-
-## ----echo=TRUE-----------------------------------------------------------------------------
+## ----echo=TRUE--------------------------------------------------------------------------------
 #make new function and use mapply
-  fun1=function(a,b){
-              pwr.t.test(d=d,power=a,type="two.sample",
-                         alternative="two.sided",sig.level=b)$n
-                    }
-  out= mapply(fun1,a=x$Power,b=x$alpha)
-  length(out)
+my.func = function(x,x2){                    
+                      pwr.t.test(d=x2,power=x,
+                                 type="two.sample",
+                                 alternative="two.sided"
+                                )$n
+}
 
-#Change per group sample size to total sample size  
-  out=cbind(x,out*2)
-  colnames(out)[3]="n"
-  head(out)
+# mapply function
+  out= mapply(power.d$Var1,power.d$Var2, FUN=my.func)
+
+# unstandardized the effect size back to difference of means
+  power.d$Var2=power.d$Var2*group.sd
+  
+  out2=cbind(power.d,out)
+  colnames(out2)=c("power","d","n")
 
 
 
-## ----echo=FALSE, fig.height=8, fig.width=10------------------------------------------------
+## ----echo=FALSE, fig.height=8, fig.width=10---------------------------------------------------
 library(plotly)
-fig <- plot_ly(out, x = ~Power, y = ~alpha, z = ~n, marker = list(size = 5))
+fig <- plot_ly(out2, x = ~power, y = ~d, z = ~n, marker = list(size = 5))
 fig <- fig %>% add_markers(color=~n)
 fig <- fig %>% layout(scene = list(xaxis = list(title = 'Power'),
-                     yaxis = list(title = 'Alpha'),
+                     yaxis = list(title = 'd'),
                      zaxis = list(title = 'Sample Size')))
 #fig <- fig %>%  layout( xaxis = list(nticks=10, tickmode = "auto"))
 fig
+
 
 
