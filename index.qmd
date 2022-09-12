@@ -47,43 +47,53 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
                    "sf", "doParallel", "grDevices","tictoc","plotly"))
 ```
 
--   Lecture: <a href="https://bgerber123.github.io/Week 2/StudyDesign.html">Study Design</a>
+-   Lecture: <a href="Week 2/StudyDesign.html">Study Design</a>
 
--   Lecture Code: <a href="https://bgerber123.github.io/Week 2/StudyDesign.R">StudyDesign.R</a>
+-   Lecture Code: <a href="Week 2/StudyDesign.R">StudyDesign.R</a>
 
 
--   Download: <a href="https://bgerber123.github.io/Week 2/RI Deer Sampling.zip">Zip</a>
+-   Download: <a href="Week 2/RI Deer Sampling.zip">Zip</a>
 
--   Assignment: <a href="https://bgerber123.github.io/Week 2/Assignment.design.Rmd">1) Markdown File</a> <a href="https://bgerber123.github.io/Week 2/Assignment.design.html">1) Compiled HTML</a>
+-   Assignment: <a href="Week 2/Assignment.design.Rmd">1) Markdown File</a> <a href="Week 2/Assignment.design.html">1) Compiled HTML</a>
 
--   <a href="https://bgerber123.github.io/Week 2/Betts et al.pdf">Assigned Reading</a>
+-   <a href="Week 2/Betts et al.pdf">Assigned Reading</a>
 
 ### Week 3
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("visualize","plotly"))
 ```
 
--   Lecture: <a href="https://bgerber123.github.io/Week 3/Probability.html">Probabilty</a>
+-   Lecture: <a href="Week 3/Probability.html">Probabilty</a>
 
--   Lecture Code: <a href="https://bgerber123.github.io/Week 3/Probability.R">Probabilty.R</a>
+-   Lecture Code: <a href="Week 3/Probability.R">Probabilty.R</a>
 
--   Download: <a href="https://bgerber123.github.io/Week 3/Assignment.pdf.Rmd">.Rmd</a>
+-   Download: <a href="Week 3/Assignment.pdf.Rmd">.Rmd</a>
 
--   <a href="https://bgerber123.github.io/Week 3/Assignment.pdf.html">Assignment</a>
+-   <a href="Week 3/Assignment.pdf.html">Assignment</a>
 
 -   <a href="https://medium.com/@srowen/common-probability-distributions-347e6b945ce4">Assigned Reading</a>
 
--   <a href="https://bgerber123.github.io/Week 3/SuggestedReadings.zip">Suggested Readings</a>
+-   <a href="Week 3/SuggestedReadings.zip">Suggested Readings</a>
 
 ### Week 4
 
--   Lecture: <a href="https://bgerber123.github.io/Week 4/linear.model.html">GLM</a>
+-   Lecture: <a href="Week 4/linear.model.html">GLM</a>
 
 -   Download: <a href="">NEED?</a>
 
--   <a href="https://bgerber123.github.io/Week 4/Assignment.GLM.html">Assignment</a>
+-   <a href="Week 4/Assignment.GLM.html">Assignment</a>
 
 -   <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3336">Assigned Reading</a>
 
+### Week 5
+### Week 6
+### Week 7
+### Week 8
+### Week 9
+### Week 10
+### Week 11
+### Week 12
+### Week 13
+### Week 14
 
 :::
