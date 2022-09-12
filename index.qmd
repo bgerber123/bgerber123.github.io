@@ -7,6 +7,8 @@ format:
 
 ## NRS 520 {.smaller .scrollable}
 ```{=html}
+
+<title> NRS520 </title>
 <style type="text/css">
 
 body, td {
@@ -33,7 +35,7 @@ Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <
 
 -   Markdown Example: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">1) Markdown Example File</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">2) Compiled HTML</a>
 
--   Assignment: <a href="https://bgerber123.github.io/Week 1/Assignment.Rmd">1) Markdown File</a> <a href="https://bgerber123.github.io/Week 1/Assignment.html">1) Compiled HTML</a>
+-   Assignment: <a href="https://bgerber123.github.io/Week 1/Assignment.Rmd">1) Markdown File</a> <a href="https://bgerber123.github.io/Week 1/Assignment.html">2) Compiled HTML</a>
 
 -    <a href="https://bgerber123.github.io/Week 1/getting started with statistics.pdf">Assigned Reading</a>
 

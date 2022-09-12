@@ -365,7 +365,7 @@ $\textbf{y}$ is a random variable as it depends on random events.
 
 In this case, when we induced a random selection of sites.
 
-## Probability Function
+## Probability/Likelihood Function
 
 $f(\textbf{y};\theta)$ describes the probability for each $i^{th}$ data, $y_i$. 
 
@@ -501,7 +501,7 @@ $$
 
 . . .
 
-```{r,echo=TRUE}
+```{r,echo=FALSE}
 #plot likelihood profile
   plot(theta.guess,likelihood)
   abline(v=theta.est,lwd=3,col=1,lty=1)

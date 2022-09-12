@@ -686,8 +686,8 @@ Our data are</p>
 <p>In this case, when we induced a random selection of sites.</p>
 </div>
 </section>
-<section id="probability-function" class="slide level2">
-<h2>Probability Function</h2>
+<section id="probabilitylikelihood-function" class="slide level2">
+<h2>Probability/Likelihood Function</h2>
 <p><span class="math inline">\(f(\textbf{y};\theta)\)</span> describes the probability for each <span class="math inline">\(i^{th}\)</span> data, <span class="math inline">\(y_i\)</span>.</p>
 <p>But, not just for the data we observed, for all possible data that could be observed.</p>
 <div class="fragment">
@@ -708,7 +708,7 @@ where the square brackets indicate all real numbers from 0 to 1, including 0 and
 where the parantheses indicate all real numbers from 0 to 1, not including 0 and 1.
 </p></div>
 </section>
-<section id="probability-function-1" class="slide level2 scrollable">
+<section id="probability-function" class="slide level2 scrollable">
 <h2>Probability Function</h2>
 <p>Two outcomes, 0 or 1, so we need two probabilities to describe our random variable.</p>
 <div class="fragment">
@@ -742,7 +742,7 @@ This probability function is called ________?
 </center>
 </div>
 </section>
-<section id="probability-function-2" class="slide level2">
+<section id="probability-function-1" class="slide level2">
 <h2>Probability Function</h2>
 <p>Probabilities, such as our parameter, have rules:</p>
 <div>
@@ -753,7 +753,7 @@ This probability function is called ________?
 </ul>
 </div>
 </section>
-<section id="probability-function-3" class="slide level2 scrollable">
+<section id="probability-function-2" class="slide level2 scrollable">
 <h2>Probability Function</h2>
 <p>How do we find <span class="math inline">\(\theta\)</span> for our data?</p>
 <div class="fragment">
@@ -790,12 +790,6 @@ This probability function is called ________?
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#plot likelihood profile</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">plot</span>(theta.guess,likelihood)</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">1</span>,<span class="at">lty=</span><span class="dv">1</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">abline</span>(<span class="at">v=</span>theta.est2,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">4</span>,<span class="at">lty=</span><span class="dv">4</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">legend</span>(<span class="st">"topright"</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>),</span>
-<span id="cb4-6"><a href="#cb4-6"></a>         <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"theta.est"</span>,<span class="st">"theta.est2"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="Information_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
@@ -821,8 +815,8 @@ I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
 <h2>Statistical Information (an example)</h2>
 <p>Therefore, for our sample</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>I <span class="ot">=</span> n<span class="sc">/</span>(theta.est<span class="sc">*</span>q.est)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>I <span class="ot">=</span> n<span class="sc">/</span>(theta.est<span class="sc">*</span>q.est)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 40</code></pre>
 </div>
@@ -834,14 +828,14 @@ I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
 <section id="statistical-information-an-example-3" class="slide level2 scrollable">
 <h2>Statistical Information (an example)</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1|3|5,6|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a>Information <span class="ot">&lt;-</span> n<span class="sc">/</span>(thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))</span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">plot</span>(thetas,Information,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1|3|5,6|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>Information <span class="ot">&lt;-</span> n<span class="sc">/</span>(thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="fu">plot</span>(thetas,Information,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="Information_files/figure-revealjs/unnamed-chunk-5-1.png" width="1152" class="r-stretch quarto-figure-center"></section>
@@ -852,12 +846,12 @@ I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
 <section id="statistical-information-an-example-5" class="slide level2">
 <h2>Statistical Information (an example)</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1|3|4,5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>Var.theta <span class="ot">&lt;-</span> (thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))<span class="sc">/</span>n</span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">par</span>(<span class="at">cex.main=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">plot</span>(thetas,Var.theta,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1|3|4,5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>Var.theta <span class="ot">&lt;-</span> (thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))<span class="sc">/</span>n</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">par</span>(<span class="at">cex.main=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">plot</span>(thetas,Var.theta,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="Information_files/figure-revealjs/unnamed-chunk-6-1.png" width="1152" class="r-stretch quarto-figure-center"><div class="fragment">
