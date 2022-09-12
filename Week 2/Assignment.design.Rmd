@@ -15,7 +15,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: Evaluate random sampling designs with 3 sample sizes (of your choosing) when the mean density of deer per square kilometer is 1 and 20. Evaluate each scenario in terms of the mean total population estimate. Make a sample size recommendation for each deer density, given the agency is interested in being highly certain that the population estimate is within 10% of the true total population estimate. Lastly, make a comment about the characteristics/shape/symmetry of the sampling distribution for the true total populatione estimate. 
+### **Objective**: To evaluate study design tradeoffs.Evaluate random sampling designs with 3 sample sizes (of your choosing) when the mean density of deer per square kilometer is 1 and 20. Evaluate each scenario in terms of the mean total population estimate. Make a sample size recommendation for each deer density, given the agency is interested in being highly certain that the population estimate is within 10% of the true total population estimate. Lastly, make a comment about the characteristics/shape/symmetry of the sampling distribution for the true total populatione estimate. 
 
 
 All Scenarios

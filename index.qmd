@@ -24,9 +24,12 @@ body, td {
 ### Start 
 <p><a href="/Schedule/Schedule.html">Schedule/Syllabus</a></p>
 
-Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
+Install the most versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
 
 <a href="https://rstudio.uri.edu/">CELS RStudio Server</a>
+
+<a href="https://github.com/">Github</a>
+
 
 ### Week 1 
 
@@ -49,7 +52,7 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 
 -   Lecture: <a href="/Week 2/StudyDesign.html">Study Design</a>
 
--   Lecture Code: <a href="Week 2/StudyDesign.R">StudyDesign.R</a>
+-   Lecture Code: <a href="/Week 2/StudyDesign.R">StudyDesign.R</a>
 
 
 -   Download: <a href="/Week 2/RI Deer Sampling.zip">Zip</a>
@@ -59,6 +62,8 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 -   <a href="/Week 2/Betts et al.pdf">Assigned Reading</a>
 
 ### Week 3
+
+-   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("visualize","plotly"))
 ```
