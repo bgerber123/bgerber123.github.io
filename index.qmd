@@ -22,7 +22,7 @@ body, td {
 ::: {.panel-tabset}
 
 ### Start 
-<p><a href="https://bgerber123.github.io/Schedule/Schedule.html">Schedule/Syllabus</a></p>
+<p><a href="/Schedule/Schedule.html">Schedule/Syllabus</a></p>
 
 Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
 
@@ -30,15 +30,15 @@ Install the most reversions of <a href="https://cran.r-project.org/">R</a> and <
 
 ### Week 1 
 
--   Lecture: <a href="https://bgerber123.github.io/Week 1/Introduction.html">1) Introduction</a>, <a href="https://bgerber123.github.io/Week 1/Information.html"> 2) Information</a>
+-   Lecture: <a href="/Week 1/Introduction.html">1) Introduction</a>, <a href="/Week 1/Information.html"> 2) Information</a>
 
--   Lecture Code: <a href="https://bgerber123.github.io/Week 1/Information.R">Information.R</a>
+-   Lecture Code: <a href="/Week 1/Information.R">Information.R</a>
 
--   Markdown Example: <a href="https://bgerber123.github.io/Week 1/Markdown and R Stuff.Rmd">1) Markdown Example File</a>, <a href="https://bgerber123.github.io/Week 1/Markdown-and-R-Stuff.html">2) Compiled HTML</a>
+-   Markdown Example: <a href="/Week 1/Markdown and R Stuff.Rmd">1) Markdown Example File</a>, <a href="/Week 1/Markdown-and-R-Stuff.html">2) Compiled HTML</a>
 
--   Assignment: <a href="https://bgerber123.github.io/Week 1/Assignment.Rmd">1) Markdown File</a> <a href="https://bgerber123.github.io/Week 1/Assignment.html">2) Compiled HTML</a>
+-   Assignment: <a href="/Week 1/Assignment.Rmd">1) Markdown File</a> <a href="/Week 1/Assignment.html">2) Compiled HTML</a>
 
--    <a href="https://bgerber123.github.io/Week 1/getting started with statistics.pdf">Assigned Reading</a>
+-    <a href="/Week 1/getting started with statistics.pdf">Assigned Reading</a>
 
 ### Week 2
 -   Install R packages:
@@ -59,6 +59,9 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 -   <a href="https://bgerber123.github.io/Week 2/Betts et al.pdf">Assigned Reading</a>
 
 ### Week 3
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("visualize","plotly"))
+```
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 3/Probability.html">Probabilty</a>
 
