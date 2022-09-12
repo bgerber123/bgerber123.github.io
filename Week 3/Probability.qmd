@@ -151,7 +151,7 @@ We are often interested in the characteristics of the whole population of freque
 
 which we make based on our sample (i.e., statistical inference). 
 
-## Philosphical Caveat
+## Philosophy
 
 <span style="color:blue">Frequentist Paradigm:</span>  
 
@@ -353,6 +353,8 @@ The sample space and parameter support can be found on Wikipedia for many probab
 
 <br>
 
+. . .
+
 For example, the [Normal/Gaussian distribution ](https://en.wikipedia.org/wiki/Normal_distribution) describes the sample space for all values on the real number line. 
 
 $$y \in (-\infty, \infty) \\ y \in \mathbb{R}$$
@@ -400,8 +402,13 @@ var=shape*scale^2
 curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
       ylab="dgamma(y,shape = 100, rate = 1",main="Equivalent means and variances")
 curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
-legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 100, var = 100"),lwd=3,col=c(1,2))
+legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
 ```
+
+### Are they exactly the same?
+. . .
+
+<br>
 
 . . .
 
@@ -907,5 +914,75 @@ fig <- fig %>% layout(scene = list(xaxis = list(title = 'Mean'),
 fig %>% layout(font = f, margin = m)
 
   
+```
+
+## Moments  {.scrollable}
+[Book Chapter (Section 3.4.4.)](/Week 3/HobbsHooten_Ch_3.pdf)
+
+Probability Functions have qualities called 'Moments'
+
+
+
+-    Moment 1: Expected Value (mean)
+ 
+-    Moment 2: Variance
+
+-    Moment 3: Skewness
+
+-    Moment 4: Kurtosis
+
+-    Moment k: ...
+
+. . .
+
+Parameters are <span style="color:red">not always</span> moments.
+
+## Moment Matching  {.scrollable}
+
+Colleague estimated daily rainfall as, $\hat{\mu} = 10$ and $\hat{\sigma} = 9$.
+
+Now, we want to consider future daily rainfall probabilities,
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+#Parameters of Normal Distribution
+  mu=10
+  sd=9
+
+#simualte and plot
+  y = rnorm(10000,mean=mu,sd=sd)
+  hist(y, main="Daily Rainfall")
+```
+
+. . .
+
+Take our parameters/moments and match them to parameters where the *support* makes more sense.
+
+### [Gamma Distribution](https://en.wikipedia.org/wiki/Gamma_distribution)
+
+Moments on left, parameters on the right.
+
+$$
+\mu = \frac{\alpha}{\beta} \\
+\sigma^2 = \frac{\alpha}{\beta^2} \\
+$$
+
+. . .
+
+$$
+\alpha = \frac{\mu^2}{\sigma^2} \\
+\beta = \frac{\mu}{\sigma^2} \\
+$$
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+#Parameters of Gamma Distribution
+  alpha = mu^2/sd^2 
+  beta = mu/sd^2
+
+#simualte and plot
+  y = rgamma(10000,shape=alpha, rate=beta)
+  hist(y, main="Daily Rainfall")
 ```
 

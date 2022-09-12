@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "NRS520"
 format:
   revealjs:
     chalkboard: true
@@ -8,7 +8,7 @@ format:
 ## NRS 520 {.smaller .scrollable}
 ```{=html}
 
-<title> NRS520 </title>
+
 <style type="text/css">
 
 body, td {
@@ -60,6 +60,8 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 ### Week 3
 
 -   Lecture: <a href="https://bgerber123.github.io/Week 3/Probability.html">Probabilty</a>
+
+-   Lecture Code: <a href="https://bgerber123.github.io/Week 3/Probability.R">Probabilty.R</a>
 
 -   Download: <a href="https://bgerber123.github.io/Week 3/Assignment.pdf.Rmd">.Rmd</a>
 
