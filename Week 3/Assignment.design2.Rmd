@@ -1,0 +1,38 @@
+---
+title: "Study Design / Simulation Assignment (Option 2)"
+author: "Brian D. Gerber"
+date: "2022-09-09"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To evaluate the relationship between Type I error ($\alpha$), Power (1-$\beta$), and sample size (n).
+
+The lecture example evaluated the sample size we needed for combinations of differences b/w our groups (d), and power. Please adapt this code to evaluate how sample size requirements vary with Type I error ($\alpha$) and Power (1-$\beta$).
+
+Steps
+
+-   get lecture code and run this code in R
+-   figure out what each piece of code is doing
+-   instead of varying `d`, vary Type I error; check out the function (`pwr.t.test`) how to enter this value
+-   you will need edit `my.func`
+-   you will still be using mapply
+-   once you have `out2`, you need to figure out how to plot it
+-   plotting can be done almost exactly how I did using `plotly` or you can plot it differently.
+
+
+### **Markdown**
+
+Please make a markdown file that shows your code (annotated) and your findings; Code annotation just needs to briefly desribe what the code is doing. Make sure to also write about your findings on the trade off between Type I and Type II error. 
+
+<br>
+

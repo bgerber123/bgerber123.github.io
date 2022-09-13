@@ -80,7 +80,10 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 
 -   Download: <a href="/Week 3/RI Deer Sampling.zip">Zip</a>
 
--   Assignment: <a href="/Week 3/Assignment.design.Rmd">1) Markdown File</a> <a href="/Week 3/Assignment.design.html">1) Compiled HTML</a>
+-   Assignment (option 1): <a href="/Week 3/Assignment.design.Rmd">1) Markdown File</a> <a href="/Week 3/Assignment.design.html">1) Compiled HTML</a>
+
+-   Assignment (option 2): <a href="/Week 3/Assignment.design2.Rmd">1) Markdown File</a> <a href="/Week 3/Assignment.design2.html">1) Compiled HTML</a>
+
 
 -   <a href="/Week 3/Betts et al.pdf">Assigned Reading</a>
 
