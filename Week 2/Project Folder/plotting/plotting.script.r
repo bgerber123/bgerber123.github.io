@@ -15,8 +15,14 @@
   rm(list=ls())
 
 #Load dependencies  
- 
+  library(plotly)
   
-# DO Analsyses and create object out
+# Load model results
 
-save(out,"./analysis/model.output")
+load("./analysis/model.output")
+
+# I plot stuff and save figures
+
+png(file="./plotting/histograms/plot.1.hist.png")
+hist(a)
+dev.off()
