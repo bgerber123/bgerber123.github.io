@@ -7,3 +7,7 @@ knitr::purl("./Week 3/StudyDesign.qmd",output="./Week 3/StudyDesign.R")
 knitr::purl("./Week 4/Probability.qmd",output="./Week 4/Probability.R")
 
 knitr::purl("./Week 5/linear.model.qmd",output="./Week 5/linear.model.R")
+
+# library(quarto)
+# library(tinytex)
+# quarto_render("./Week 1/Information.qmd", output_format = "pdf")

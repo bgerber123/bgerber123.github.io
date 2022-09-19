@@ -73,6 +73,8 @@ We will be working in R and Markdown. For class, we will be going through (at le
 
 - R project organization example: <a href="/Week 2/Project Structure.zip">Project Structure.zip</a>
 
+-    <a href="/Week 2/A comparison of design‐based and model‐based approaches for finite population spatial.pdf">Assigned Reading</a>
+
 ### Week 3
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
