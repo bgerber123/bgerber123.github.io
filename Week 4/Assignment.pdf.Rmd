@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### **Objective**: To familiarize yourself with probability functions.
 
 ### **Markdown**
-Create a markdown file that shows and discusses 2 probability functions. An example is provided below as a guide. Which probability function to choose? Lots of options from [wikipedia](https://en.wikipedia.org/wiki/List_of_probability_distributions).
+Create a markdown file that shows and discusses 3 probability functions. An example is provided below as a guide. Which probability function to choose? If you are unfamiliar with any of these, please choose these ones: Normal, Binomial, Poisson, or Beta. If you feel comfortable with these distributions then choose from a long list  of options from [wikipedia](https://en.wikipedia.org/wiki/List_of_probability_distributions).
 
 
 

@@ -241,18 +241,20 @@ dim(second)
 
 $\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
 
-. . .
+<br>
 
--   $\textbf{X}\boldsymbol{\beta}$
+$\textbf{X}$ is called the Design Matrix.
+
+$\boldsymbol{\beta}$ is a vector of marginal coefficients.
 
 . . .
 
 $$
 \textbf{X}=
 \begin{bmatrix}
-1 & x_{1,1} & x_{1,2} \\
-1 & x_{2,1} & x_{2,2} \\
-1 & x_{3,1} & x_{3,2}
+1 & x_{1,2} & x_{1,3} \\
+1 & x_{2,2} & x_{2,3} \\
+1 & x_{3,2} & x_{3,3}
 \end{bmatrix}
 \boldsymbol{\beta} =
 \begin{bmatrix}
@@ -337,7 +339,7 @@ $$
 ```{r, eval=TRUE,echo=TRUE}
 #Design matrix
   set.seed(6454)
-  Var1 = rnorm(20)
+  Var1 = seq(0,20,by=1)+rnorm(21,0,2)
   X = model.matrix(~Var1)
   head(X)
   
@@ -352,9 +354,16 @@ $$
 #linear terms
   lt = X%*%beta
 
-#mu
+#mu (no transformation needed)
   mu=lt
-  
+
+# Plot relationship b/w mean (mu) and variable of interest
+  plot(X[,2],mu,type="b",lwd=4)  
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
 #sample
   set.seed(5435)
   y = rnorm(length(mu),mu)
@@ -368,10 +377,13 @@ $$
   summary(model1)
 ```
 
-```{r,echo = FALSE}
+. . .
+
+```{r,echo = TRUE}
 library(equatiomatic)
 extract_eq(model1)
 ```
+
 ## Linear Regression Evaluation {.scrollable}
 
 ```{r, eval=TRUE, echo=TRUE}
@@ -399,7 +411,7 @@ extract_eq(model1)
       abline(v=beta[1],col=2,lwd=4)
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
-       xlab=bquote(beta[0]))
+       xlab=bquote(beta[1]))
   abline(v=beta[2],col=2,lwd=4)
 ```
 
@@ -486,7 +498,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 #linear terms
   lt = X%*%beta
 
-#probability
+#transformation via link function to probability scale
   p=plogis(lt)
   head(round(p,digits=2))
 

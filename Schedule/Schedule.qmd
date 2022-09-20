@@ -22,16 +22,16 @@ Come prepared to discuss the assigned reading. What was interesting and useful? 
 
 ## Schedule {.smaller}
 
-| Week       | Topic                                  |
-|------------|----------------------------------------|
-|~~1 (Sep)~~   |~~Class Org., Data vs. Information, R/Markdown~~| 
-| 2 (Sep)    | R coding and Markdown           | 
-| 3 (Sep)    | Power Analysis, Study Design             |
-| 4 (Oct)    | Probability and Statistics              |
-| 5 (Oct)    | Generalized Linear Models             |
-| 6 (Oct)    | Oct. 10 No Class / Holiday                        |
-| 7 (Oct)    | Bayesian Models                        |
-| 8 (Oct)    | Mixed Models / Hierarchical Models     |
+| Week       | Topic                                          |
+|------------|------------------------------------------------|
+|~~1 (Sep)~~ |~~Class Org., Data vs. Information, R/Markdown~~| 
+|~~2 (Sep)~~ | ~~R coding and Markdown~~                      | 
+| 3 (Sep)    | Power Analysis, Study Design                   |
+| 4 (Oct)    | Probability and Statistics                     |
+| 5 (Oct)    | GLM modeling in R                              |
+| 6 (Oct)    | Oct. 10 No Class / Holiday                     |
+| 7 (Oct)    | Generalized Linear Models                      |
+| 8 (Oct)    | Bayesian Models                                |
 | 9 (Nov)    | Mixed Models / Hierarchical Models     |
 | 10 (Nov)    | Regularization, Prediction, Cross-val.|
 | 11 (Nov)    | Decision Making under uncertainty     |
