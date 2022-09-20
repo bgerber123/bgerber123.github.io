@@ -21,13 +21,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ### **Objective**: To familiarize yourself with probability functions.
 
 ### **Markdown**
-Create a markdown file that shows and discusses 3 probability functions. An example is provided below as a guide. Which probability function to choose? If you are unfamiliar with any of these, please choose these ones: Normal, Binomial, Poisson, or Beta. If you feel comfortable with these distributions then choose from a long list  of options from [wikipedia](https://en.wikipedia.org/wiki/List_of_probability_distributions).
+Create a markdown file that shows and discusses 3 probability functions. An example is provided below as a guide. Which probability function to choose? If you are unfamiliar with any of these, please choose from here: Normal, Binomial, Poisson, Log-Normal, Beta. If you feel comfortable with these distributions then choose from a long list  of options from [wikipedia](https://en.wikipedia.org/wiki/List_of_probability_distributions).
 
 
 
 You should:
 
--   Define a random variable $y$ that is $iid$ from your distribution
+-   Define the random variable $y$ that is $iid$ from your distribution
 -   Define the sample space and parameter space (for each)
 -   Include the equation of the probability function
 -   Define the expected value (mean) and variance of the distribution
@@ -80,6 +80,9 @@ Example 1
 #plotting probability mass  
   plot(x,rep(1/n,length(x)),col=2,pch=18,cex=3,
      ylab="f(y)",xlab=c("a = 1, b = 5"))
+     abline(v=(a+b)/2,lwd=3,col=4)
+     legend("topright",lwd=3,col=4,legend=c("Mean"))
+
 ```
 
 Example 2
@@ -91,7 +94,10 @@ Example 2
   n=length(x)
 #plotting probability mass    
   plot(x,rep(1/n,length(x)),col=2,pch=18,cex=1,
-     ylab="f(y)",xlab=c("a = 1, b = 5"))
+     ylab="f(y)",xlab=c("a = 10, b = 100"))
+  abline(v=(a+b)/2,lwd=3,col=4)
+  legend("topright",lwd=3,col=4,legend=c("Mean"))
+  
 ```
 
 ### **Probability**
@@ -139,4 +145,4 @@ Even at a sample size of 10000, the probabilities are still a bit wonky from the
 
 ### **Ecological Data**
 
-The discrete uniform is not a very useful probability distribution for data. However, it is commonly used as a prior on parameters that can only be integers within a given range.
+The discrete uniform is not a very useful probability distribution for data. However, it is commonly used as a prior probability distribtion on parameters that can only be integers within a given range.
