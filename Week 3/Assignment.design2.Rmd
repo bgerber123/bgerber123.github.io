@@ -27,12 +27,12 @@ Steps
 -   you will need edit `my.func`
 -   you will still be using mapply
 -   once you have `out2`, you need to figure out how to plot it
--   plotting can be done almost exactly how I did using `plotly` or you can plot it differently.
+-   plotting can be done almost exactly how it was done using `plotly` or you can plot it differently.
 
 
 ### **Markdown**
 
-Please make a markdown file that shows your code (annotated) and your findings; Code annotation just needs to briefly desribe what the code is doing. Make sure to also write about your findings on the trade off between Type I and Type II error. 
+Please make a markdown file that shows your code (annotated) and your findings; Code annotation just needs to briefly describe what the code is doing. Make sure to also write about your findings on the trade off between Type I and Type II error. 
 
 <br>
 

@@ -15,7 +15,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: To evaluate study design tradeoffs.Evaluate random sampling designs with 3 sample sizes (of your choosing) when the mean density of deer per square kilometer is 1 and 20. Evaluate each scenario in terms of the mean total population estimate. Make a sample size recommendation for each deer density, given the agency is interested in being highly certain that the population estimate is within 10% of the true total population estimate. Lastly, make a comment about the characteristics/shape/symmetry of the sampling distribution for the true total populatione estimate. 
+### **Objective**: To evaluate study design tradeoffs between sample size and deer density. 
+
+Evaluate random sampling designs with **3** sample sizes (of your choosing) when the mean density of deer per square kilometer is 1 and 20. Make a sample size recommendation for each deer density, given the agency is interested in being highly certain that the total population estimate is within 10% of the true total population. Think about the total population estimate, but also the parameter precision. Lastly, make a comment about the characteristics/shape/symmetry of the sampling distribution for the true total population estimate. 
 
 
 All Scenarios
@@ -30,7 +32,7 @@ All Scenarios
 
 ### **Markdown**
 
-Prepare a report (code and findings), using markdown that presents your findings using text and figures. Further, make a recommendation on the sample size you would suggest to go with and why.
+Prepare a report (code and findings), using markdown that presents your findings using text and figures. Make a recommendation on the sample size you would suggest to go with and why.
 
 You do not need to show all possible code. Show code that you think is essential for someone to understand your simulation study (e.g. no need to show plotting code). Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).
 
