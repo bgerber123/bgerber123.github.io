@@ -13,6 +13,18 @@ format:
        page-layout: full
 ---
 
+## Null Hypothesis Testing Paradigm
+
+Often focused on Type I error ($\alpha$), rejecting the null hypothesis when it is actually true.
+
+. . .
+
+The Null hypothesis is commonly, $H_0(\mu_1 = \mu_2)$
+
+. . .
+
+![](StudyDesign_files/NHT.png){fig-align="center"}
+
 ## Statistical Power
 
 ```{=html}
@@ -35,7 +47,7 @@ What is statistical power?
 ::: incremental
 -   Null Hypothesis Testing (NHT) paradigm
 
--   **Definition**: the probability that a test will  reject a false null hypothesis.
+-   **Definition**: the probability that a test will reject a false null hypothesis.
 
     -   $H_0(\mu_1 = \mu_2)$ vs $H_1(\mu_1 \ne \mu_2)$
 
@@ -45,6 +57,10 @@ What is statistical power?
 ## Power Analysis
 
 <br>
+
+Type I Error = P(reject $H_0$ \| $H_0$ is true)
+
+<br>  
 
 Power = P(reject $H_0$ \| $H_1$ is true)
 
@@ -60,7 +76,6 @@ Power = 1 - Pr(False Negative)
 
 Power = 1 - $\beta$
 
-. . .
 
 <!-- ![](extra/Statistical_test,_significance_level,_power.png){.absolute top=260 left=350 width="500"} -->
 
@@ -111,7 +126,7 @@ library(pwr)
   effect.size <- Group1.Mean-Group2.Mean
 
 #Group st. dev
-  group.sd <- sqrt(mean(Group1.SD^2,Group2.SD^2))
+  group.sd <- sqrt(mean(c(Group1.SD^2,Group2.SD^2)))
 
 #Mean difference divided by group stdev
 #How does the numerator and denominator influence this number?  
@@ -280,22 +295,76 @@ Let's add some more *reality* in our work.
 
 ![](extra/flir.png){fig-align="center" width="483"}
 
-## Study Design {.scrollable}
+## Study Design 
 
-**Steps to consider**:
+<span style="color:blue">Steps to consider</span>
 
-::: incremental 
+:::: {.columns}
+
+::: {.column width="40%"}
+
 -   **Sampling Frame**
 
     -   all of RI or some subset
+
+:::
+
+::: {.column width="60%"}
+
+![](StudyDesign_files/RI.png){fig-align="center"}
+:::
+
+::::
+
+## Study Design 
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 -   **The "Truth"**
 
     -   how many deer per cell; how variable
 
+:::
+
+::: {.column width="60%"}
+
+![](StudyDesign_files/deermap.png){fig-align="center"}
+:::
+
+::::
+
+## Study Design 
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
 -   **Sampling Process**
 
     -   how to pick each cell
+
+:::
+
+::: {.column width="60%"}
+
+![](StudyDesign_files/deermap.png){fig-align="center"}
+:::
+
+::::
+
+## Study Design 
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 -   **Estimation Process**
 
@@ -303,7 +372,43 @@ Let's add some more *reality* in our work.
 
 -   **Criteria to Evaluate**
 
-    -   sampling distribution of estimate, confidence interval bounds, precision of estimate, etc.
+    -   sampling distribution, confidence interval bounds, precision of estimate, etc.
+
 :::
+
+::: {.column width="50%"}
+
+![](StudyDesign_files/samplingdistribution.png){fig-align="center"}
+:::
+
+::::
+
+
+
+<!-- ## Study Design {.scrollable} -->
+
+<!-- **Steps to consider**: -->
+
+<!-- ::: incremental  -->
+<!-- -   **Sampling Frame** -->
+
+<!--     -   all of RI or some subset -->
+
+<!-- -   **The "Truth"** -->
+
+<!--     -   how many deer per cell; how variable -->
+
+<!-- -   **Sampling Process** -->
+
+<!--     -   how to pick each cell -->
+
+<!-- -   **Estimation Process** -->
+
+<!--     -   estimate total deer population from the sample -->
+
+<!-- -   **Criteria to Evaluate** -->
+
+<!--     -   sampling distribution of estimate, confidence interval bounds, precision of estimate, etc. -->
+<!-- ::: -->
 
 ## Go to code

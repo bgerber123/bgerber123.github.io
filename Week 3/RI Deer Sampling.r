@@ -16,8 +16,7 @@
   
 # Set working directory and workinspace
   rm(list=ls())
-  setwd("C:/Users/bgerber/Google Drive/GITHUB/bgerber123.github.io/Week 2")
-
+  
 # Load shapefiles  
   RI=st_read("./extra/RI.Sq.Mile.shp")
   boundary=st_read("./extra/State_Boundary__1997_.shp")
@@ -153,25 +152,23 @@
 #            estimates of Total Deer Abundance for a sample sizes of 20.
 
 # What sample sizes do we wish to consider?  
-  sample.sizes=c(20)
+  sample.sizes=c(10,20)
   
 # How many repeat simulations should we do?
 # More is usually better to apporximate the sampling disribution. 
 # Keep it small to run the code fast.
-  n.sim=100
+  n.sim=200
   
 # Setup the object we will save to: dimensions of sample.sizes by n.sim
   deer.total.abundance=matrix(0,length(sample.sizes),n.sim)
 
-# Start code timer - highlight and execute code from here to "toc" 
-  tic("simulation")  
-
-  # Loop over sample size choices
-  for(z in 1:length(sample.sizes)){
+# Start code timer and Loop over sample size choices
+  tic("simulation"); for(z in 1:length(sample.sizes)){
   
   # For each sample size, repeat the 
   # sampling/estimation/prediction criteria n.sim times
     for(i in 1:n.sim){  
+        set.seed(434343+i) #defined random number generation
         eqprob <- grts(RI, n_base = sample.sizes[z])
         y=eqprob$sites_base$Deer
         model1=glm(y~1,family=poisson(link="log"))
@@ -180,8 +177,8 @@
       #monitor loops
       if(i%%10==0) cat("\nz =",z, ", i =", i)
     } #End i loop
-  } #End z loop
-toc()  #End codetimer
+  };toc() #End z loop and End codetimer
+  
   
 # First thing to do is save our results
   save(deer.total.abundance,file="deer.total.abundance")
@@ -189,25 +186,43 @@ toc()  #End codetimer
 # If already run and saved, load the results.  
   #load("deer.total.abundance")
   
-# Let's look at our results
-  hist(deer.total.abundance[1,],xlim=c(5000,20000),
-       freq=FALSE,breaks=5)
+# Let's look at our results for sample size n =20
+  hist(deer.total.abundance[2,],xlim=c(5000,20000), 
+       main="Sampling Distribution of Total Deer Population",
+       freq=FALSE,breaks=10)
 
+# add sample size n=20
+  hist(deer.total.abundance[1,],freq=FALSE,breaks=10,add=TRUE,
+       col=adjustcolor("red", alpha.f=0.5))
+  
 # Add vertical line for truth  
   abline(v=true.total,col=4,lwd=3)
 
+#Is our estimator/model/sampling process Statistically Biased?
+# Relative Bias = (E[theta]  - theta)/theta
+  (mean(deer.total.abundance[1,])-true.total)/true.total
+  (mean(deer.total.abundance[2,])-true.total)/true.total
+
+  
+###################################  
+#MONTE CARLO INTEGRATION
+  
 # Let's use our sampling distribution to see how likely our ONE sample will be  
 # We can ask questions about how likely it is to over estimate
 # total abundance by 1000
-  myfunc=function(total.est){length(which(total.est>true.total+1000))/length(total.est)}
+  myfunc=function(total.est){
+    length(which(total.est>true.total+1000))/length(total.est)
+    }
   apply(deer.total.abundance,1,FUN=myfunc)
   
 # We can ask what proportion of our estimates of total population are within 
 # an error (lower/upper) of 1000
-  myfunc2=function(total.est){length(which(abs(total.est-true.total)<1000))/length(total.est)}
+  myfunc2=function(total.est){
+    length(which(abs(total.est-true.total)<1000))/length(total.est)
+    }
   apply(deer.total.abundance,1,FUN=myfunc2)
 
-#We can ask what the worst estimates could be (min, max); as a proportion of Truth
+#What are the worst estimates we could get (min, max); as a proportion of Truth
   apply(deer.total.abundance,1,FUN=range)/true.total
     
 
@@ -220,9 +235,9 @@ toc()  #End codetimer
 # CPU's, we can split up each iteration of sample.sizes, sending 
 # all of its n.sim iterations to different processors 
     
-# Evaluate 4 different sample sizes
+# Evaluate 2 different sample sizes
   sample.sizes=c(10, 20)
-  n.sim=100
+  n.sim=200
 
 # Register how many processors to use (backend setup)
   cores=detectCores()
@@ -236,7 +251,8 @@ toc()  #End codetimer
                       .packages = c("spsurvey"))%dopar% {
 
         deer.total.abundance=rep(0,n.sim)
-          for(i in 1:n.sim){  
+          for(i in 1:n.sim){
+            set.seed(434343+i) #defined random number generation
             #Sample/model/predict deer
             eqprob <- grts(RI, n_base = sample.sizes[z])
             y=eqprob$sites_base$Deer

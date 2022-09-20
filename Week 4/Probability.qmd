@@ -144,7 +144,7 @@ We are often interested in the characteristics of the whole population of freque
 
 - <span style="color:blue">central tendency</span> (mean, mode, median)
 - <span style="color:blue">variability</span>  (var, sd)
-- <span style="color:blue">proportion of the population that is X</span> 
+- <span style="color:blue">proportion of the population that is </span>X 
 
 . . .
 
@@ -199,37 +199,33 @@ It is called a PDF when $y$ is continuous and a PMF when $y$ is discrete.
 
 
 ## Functions
+Most functions are *deterministic* (indicated by non-italic letter)
 $$ 
-\hspace{-12pt}f \\
-y \Longrightarrow\fbox{DO STUFF
-} \Longrightarrow f(y)
-$$ 
-
-. . .
-
-$$ 
-\hspace{-14pt}f \\
-y \Longrightarrow\fbox{+7
-} \Longrightarrow f(y)
+\hspace{-12pt}\text{g} \\
+x \Longrightarrow\fbox{DO STUFF
+} \Longrightarrow \text{g}(x)
 $$ 
 
 . . .
 
 $$ 
-f(y) = y + 7
+\hspace{-14pt}\text{g} \\
+x \Longrightarrow\fbox{+7
+} \Longrightarrow \text{g}(x)
 $$ 
 
 . . .
 
-The letter $y$ is arbitrary, based on convention. Could have used any placeholder.
+$$ 
+\text{g}(x) = x + 7
+$$ 
+
+. . .
 
 
-$$ 
-f(z) = z + 7
-$$ 
 ## Random Variables
 
-<span style="color:red">Probability</span>: Interested in $y$,
+<span style="color:red">Probability</span>: Interested in $y$,the data, and the probability function that "generates" the data.
 $$
 \begin{align*}
 y \leftarrow& f(y|\boldsymbol{\theta}) \\
