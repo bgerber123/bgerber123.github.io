@@ -118,6 +118,9 @@ install.packages(c("visualize","plotly"))
 
 ### Week 5
 
+
+### Week 6
+
 -   Lecture: <a href="Week 5/linear.model.html">GLM</a>
 
 -   Lecture Code: <a href="/Week 5/linear.model.R">linear.model.R</a>
@@ -131,8 +134,6 @@ install.packages(c("visualize","plotly"))
 -   <a href="/Week 5/Chapter 3. Linear Regression.pdf">Suggested Reading</a>
 
 
-### Week 5
-### Week 6
 ### Week 7
 ### Week 8
 ### Week 9
