@@ -33,4 +33,4 @@
 #lapply
   this= lapply(out,FUN=function(x){list(mean=mean(x),sd=sd(x))})
 
-  matrix(unlist(this),ncol=2,byrow=TRUE)
+  result=matrix(unlist(this),ncol=2,byrow=TRUE)
