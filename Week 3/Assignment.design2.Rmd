@@ -15,24 +15,29 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: To evaluate the relationship between Type I error ($\alpha$), Power (1-$\beta$), and sample size (n).
+### **Objective**: To evaluate study design tradeoffs between simple random sampling (SRS) and stratified random sampling (STRS) for a single deer density at two sample sizes. 
 
-The lecture example evaluated the sample size we needed for combinations of differences b/w our groups (d), and power. Please adapt this code to evaluate how sample size requirements vary with Type I error ($\alpha$) and Power (1-$\beta$).
+Simulate spatially structured deer densities that varies by percent of development. Setup sampling scenarios (SRS and STRS) to evaluate **2** sample sizes (your choice); the STRS should be stratified by percent development. You decide on how many strata, but keep the sample size equal among strata.  Compare and contrast the utility of STRS and SRS. 
 
-Steps
 
--   get lecture code and run this code in R
--   figure out what each piece of code is doing
--   instead of varying `d`, vary Type I error; check out the function (`pwr.t.test`) how to enter this value
--   you will need edit `my.func`
--   you will still be using mapply
--   once you have `out2`, you need to figure out how to plot it
--   plotting can be done almost exactly how it was done using `plotly` or you can plot it differently.
+All Scenarios: Deer density varies by percent development
+
+-   Simple Random Sampling, sample size of X
+-   Simple Random Sampling, sample size of Y
+-   Stratified Random Sampling, sample size of X
+-   Stratified Random Sampling, sample size of Y
 
 
 ### **Markdown**
 
-Please make a markdown file that shows your code (annotated) and your findings; Code annotation just needs to briefly describe what the code is doing. Make sure to also write about your findings on the trade off between Type I and Type II error. 
+Prepare a report (code and findings), using markdown that presents your findings using text and figures. Make a recommendation on the sample size you would suggest to go with and why.
 
+You do not need to show all possible code. Show code that you think is essential for someone to understand your simulation study (e.g. no need to show plotting code). Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).
+
+- **Suggestion 1**: For the markdown file, do not run the simulation every time you create/knit the document. Do the simulation, save the results, and load the results in the markdown file. You can include your code in the outputted markdown file by specifying eval=FALSE and echo=TRUE.
+
+- **Suggestion 2**: Consider making an analysis script that outputs all your results into 1 or multiple files. Then use a plotting script to develop the plots you are interested. Then, start writing the markdown file that loads you results and plots only the things you want to show.
+
+<br>
 <br>
 

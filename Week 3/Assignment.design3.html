@@ -376,47 +376,36 @@ pre code {
   font-size: 14pt;
 }
 </style>
-<div id="objective-to-evaluate-study-design-tradeoffs-between-simple-random-sampling-srs-and-stratified-random-sampling-strs-for-a-single-deer-density-at-two-sample-sizes." class="section level3">
-<h3><strong>Objective</strong>: To evaluate study design tradeoffs
-between simple random sampling (SRS) and stratified random sampling
-(STRS) for a single deer density at two sample sizes.</h3>
-<p>Simulate spatially structured deer densities that varies by percent
-of development. Setup sampling scenarios (SRS and STRS) to evaluate
-<strong>2</strong> sample sizes (your choice); the STRS should be
-stratified by percent development. You decide on how many strata, but
-keep the sample size equal among strata. Compare and contrast the
-utility of STRS and SRS.</p>
-<p>All Scenarios: Deer density varies by percent development</p>
+<div id="objective-to-evaluate-the-relationship-between-type-i-error-alpha-power-1-beta-and-sample-size-n." class="section level3">
+<h3><strong>Objective</strong>: To evaluate the relationship between
+Type I error (<span class="math inline">\(\alpha\)</span>), Power
+(1-<span class="math inline">\(\beta\)</span>), and sample size
+(n).</h3>
+<p>The lecture example evaluated the sample size we needed for
+combinations of differences b/w our groups (d), and power. Please adapt
+this code to evaluate how sample size requirements vary with Type I
+error (<span class="math inline">\(\alpha\)</span>) and Power (1-<span class="math inline">\(\beta\)</span>).</p>
+<p>Steps</p>
 <ul>
-<li>Simple Random Sampling, sample size of X</li>
-<li>Simple Random Sampling, sample size of Y</li>
-<li>Stratified Random Sampling, sample size of X</li>
-<li>Stratified Random Sampling, sample size of Y</li>
+<li>get lecture code and run this code in R</li>
+<li>figure out what each piece of code is doing</li>
+<li>instead of varying <code>d</code>, vary Type I error; check out the
+function (<code>pwr.t.test</code>) how to enter this value</li>
+<li>you will need edit <code>my.func</code></li>
+<li>you will still be using mapply</li>
+<li>once you have <code>out2</code>, you need to figure out how to plot
+it</li>
+<li>plotting can be done almost exactly how it was done using
+<code>plotly</code> or you can plot it differently.</li>
 </ul>
 </div>
 <div id="markdown" class="section level3">
 <h3><strong>Markdown</strong></h3>
-<p>Prepare a report (code and findings), using markdown that presents
-your findings using text and figures. Make a recommendation on the
-sample size you would suggest to go with and why.</p>
-<p>You do not need to show all possible code. Show code that you think
-is essential for someone to understand your simulation study (e.g. no
-need to show plotting code). Try to avoid showing the same code in
-different places to keep the document from getting out of hand (i.e.,
-long).</p>
-<ul>
-<li><p><strong>Suggestion 1</strong>: For the markdown file, do not run
-the simulation every time you create/knit the document. Do the
-simulation, save the results, and load the results in the markdown file.
-You can include your code in the outputted markdown file by specifying
-eval=FALSE and echo=TRUE.</p></li>
-<li><p><strong>Suggestion 2</strong>: Consider making an analysis script
-that outputs all your results into 1 or multiple files. Then use a
-plotting script to develop the plots you are interested. Then, start
-writing the markdown file that loads you results and plots only the
-things you want to show.</p></li>
-</ul>
-<p><br> <br></p>
+<p>Please make a markdown file that shows your code (annotated) and your
+findings; Code annotation just needs to briefly describe what the code
+is doing. Make sure to also write about your findings on the trade off
+between Type I and Type II error.</p>
+<p><br></p>
 </div>
 
 

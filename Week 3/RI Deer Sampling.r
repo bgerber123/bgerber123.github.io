@@ -187,12 +187,12 @@
   #load("deer.total.abundance")
   
 # Let's look at our results for sample size n =20
-  hist(deer.total.abundance[2,],xlim=c(5000,20000), 
+  hist(deer.total.abundance[1,],xlim=c(5000,20000), 
        main="Sampling Distribution of Total Deer Population",
        freq=FALSE,breaks=10)
 
 # add sample size n=20
-  hist(deer.total.abundance[1,],freq=FALSE,breaks=10,add=TRUE,
+  hist(deer.total.abundance[2,],freq=FALSE,breaks=10,add=TRUE,
        col=adjustcolor("red", alpha.f=0.5))
   
 # Add vertical line for truth  
