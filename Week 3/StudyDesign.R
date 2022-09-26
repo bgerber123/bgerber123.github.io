@@ -1,4 +1,4 @@
-## ----echo = TRUE------------------------------------------------------------------------------
+## ----echo = TRUE---------------------------------------------------------------
   Group1.Mean <- 100
   Group1.SD <- 20
   
@@ -6,7 +6,7 @@
   Group2.SD <- 20
 
 
-## ----echo = FALSE, eval=TRUE,fig.align='center',fig.height=4----------------------------------
+## ----echo = FALSE, eval=TRUE,fig.align='center',fig.height=4-------------------
 
   par(cex.lab=1.5,cex.axis=1.5)
   curve(dnorm(x,Group1.Mean,Group1.SD ),xlim=c(0,200),lwd=5,ylab="Density",xlab="Hummingbird visits per day")
@@ -15,7 +15,7 @@
 
 
 
-## ----echo = TRUE------------------------------------------------------------------------------
+## ----echo = TRUE---------------------------------------------------------------
 library(pwr)
 # Wish to test a difference b/w groups 1 and 2
 # Want to know if there is a difference in means
@@ -24,7 +24,7 @@ library(pwr)
   effect.size <- Group1.Mean-Group2.Mean
 
 #Group st. dev
-  group.sd <- sqrt(mean(Group1.SD^2,Group2.SD^2))
+  group.sd <- sqrt(mean(c(Group1.SD^2,Group2.SD^2)))
 
 #Mean difference divided by group stdev
 #How does the numerator and denominator influence this number?  
@@ -33,7 +33,7 @@ library(pwr)
 
 
 
-## ----echo=TRUE--------------------------------------------------------------------------------
+## ----echo=TRUE-----------------------------------------------------------------
 power = 0.8
 
 out = pwr.t.test(d=d,power=power,type="two.sample",
@@ -43,7 +43,7 @@ out = pwr.t.test(d=d,power=power,type="two.sample",
 out$n
 
 
-## ----echo=TRUE--------------------------------------------------------------------------------
+## ----echo=TRUE-----------------------------------------------------------------
 power = matrix(seq(0.8,0.99,by=0.01))
 
 my.func = function(x){                    
@@ -57,16 +57,17 @@ out= apply(power,1, FUN=my.func)
 
 
 
-## ----echo=FALSE,fig.align='center', fig.height=3.5--------------------------------------------
+## ----echo=FALSE,fig.align='center', fig.height=3.5-----------------------------
 #Sample Sizes Needed for each Group for different power levels
 #Change to total sample size
-out=out*2
+#out=out*2
 par(cex.lab=1.5,cex.axis=1.5,mar=c(5,5,1,1))
 plot(power,out,type="b",ylab="Sample Size Per Group",
      xlab="Power",lwd=5)
+abline(h=c(20,25,30,35),col="grey")
 
 
-## ----echo=TRUE--------------------------------------------------------------------------------
+## ----echo=TRUE-----------------------------------------------------------------
   Group1.Mean <- 100
   Group1.SD <- 20
   
@@ -74,7 +75,7 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
   Group2.SD <- 20
 
 
-## ----echo=TRUE--------------------------------------------------------------------------------
+## ----echo=TRUE-----------------------------------------------------------------
 # Allow group 1 to vary
   Group1.Mean <- seq(10,110,by=5)
 
@@ -95,7 +96,7 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
   
 
 
-## ----echo=TRUE--------------------------------------------------------------------------------
+## ----echo=TRUE-----------------------------------------------------------------
 #make new function and use mapply
 my.func = function(x,x2){                    
                       pwr.t.test(d=x2,power=x,
@@ -115,7 +116,7 @@ my.func = function(x,x2){
 
 
 
-## ----echo=FALSE, fig.height=8, fig.width=10---------------------------------------------------
+## ----echo=FALSE, fig.height=6, fig.width=10------------------------------------
 library(plotly)
 fig <- plot_ly(out2, x = ~power, y = ~d, z = ~n, marker = list(size = 5))
 fig <- fig %>% add_markers(color=~n)

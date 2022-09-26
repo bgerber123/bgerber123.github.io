@@ -95,8 +95,9 @@ install.packages(c("pwr","ggplot2", "spsurvey", "foreach",
 
 -   Assignment (option 3): <a href="/Week 3/Assignment.design3.Rmd">1) Markdown File</a> <a href="/Week 3/Assignment.design3.html">1) Compiled HTML</a>
 
+-   Assigned Readings <a href="https://medium.com/@srowen/common-probability-distributions-347e6b945ce4">1) Probability Distributions</a>, <a href="/Week 3/HobbsHooten_Ch_3.pdf"> 2) Probability First Principles</a>
 
--   <a href="/Week 3/Betts et al.pdf">Assigned Reading</a>
+-   <a href="/Week 3/SuggestedReadings.zip">Suggested Readings</a>
 
 ### Week 4
 
@@ -113,27 +114,26 @@ install.packages(c("visualize","plotly"))
 
 -   Assignment: <a href="/Week 4/Assignment.pdf.Rmd">1) Markdown File</a> <a href="/Week 4/Assignment.pdf.html">1) Compiled HTML</a>
 
+-   <a href="/Week 4/Betts et al.pdf">Assigned Reading</a>
 
--   Assigned Readings <a href="https://medium.com/@srowen/common-probability-distributions-347e6b945ce4">1) Probability Distributions</a>, <a href="/Week 4/HobbsHooten_Ch_3.pdf"> 2) Probability First Principles</a>
 
--   <a href="/Week 4/SuggestedReadings.zip">Suggested Readings</a>
+
 
 ### Week 5
+
+-   Assigned Readings: <a href="/Week 5/Ecology - 2021 - Tredennick.pdf">Assigned Reading</a> and <a href="/Week 5/Chapter 3. Linear Regression.pdf">Book Chapter</a>
+
 
 
 ### Week 6
 
--   Lecture: <a href="Week 5/linear.model.html">GLM</a>
+-   Lecture: <a href="Week 6/linear.model.html">GLM</a>
 
--   Lecture Code: <a href="/Week 5/linear.model.R">linear.model.R</a>
+-   Lecture Code: <a href="/Week 6/linear.model.R">linear.model.R</a>
 
 -   Download: <a href="">NEED?</a>
 
--   <a href="/Week 5/Assignment.GLM.html">Assignment</a>
-
--   <a href="/Week 5/Ecology - 2021 - Tredennick.pdf">Assigned Reading</a>
-
--   <a href="/Week 5/Chapter 3. Linear Regression.pdf">Suggested Reading</a>
+-   <a href="/Week 6/Assignment.GLM.html">Assignment</a>
 
 
 ### Week 7
@@ -142,7 +142,15 @@ install.packages(c("visualize","plotly"))
 ### Week 10
 ### Week 11
 ### Week 12
+
+Student Designed Class
+
 ### Week 13
+
+Student Designed Class
+
 ### Week 14
+
+Student Designed Class
 
 :::

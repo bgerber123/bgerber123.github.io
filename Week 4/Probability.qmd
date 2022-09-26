@@ -359,16 +359,12 @@ $$
 
 ```{r echo=TRUE}
 #Bernoulli Sampling with prob of 0.5
-  theta=0.5
-  N=1 #1 duck tagged and released
+  theta=0.5;  N=1 #1 duck tagged and released
   rbinom(n=1,size=N,theta)
 
 #Binomial Sampling with prob of 0.5
-  theta=0.5
-  N=1000 #1000 ducks tagged and released
-  set.seed(543531)
-  rbinom(n=1,size=N,theta)
-
+  theta=0.5;  N=1000 #1000 ducks tagged and released
+  set.seed(543531); rbinom(n=1,size=N,theta)
 ```
 ## Support 
 
@@ -586,7 +582,7 @@ qnorm(0.02275,100,10,lower.tail = FALSE)
 
 <span style="color:blue">Axiom 3:</span>
 
--   $\int_{\text{lower support}}^{\text{upper suppport}}f(y| \mu, \sigma)dy = 1$
+-   $\int_{\text{lower support}}^{\text{upper suppport}}f(y)dy = 1$
 
 The sum of the probability of all possible outcomes is equal to 1.
 
