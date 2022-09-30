@@ -93,9 +93,15 @@ All variables here are <span style="color:red">scalars</span>. They are what the
 
 ## Random Variables {.scrollable}
 
+$$
+y \sim f(y)
+$$
+
 $y$ is a random variable which may change values each observation; it changes based on a probability function, $f(y)$. 
 
 <br>
+
+. . .
 
 Which value is observed is predictable. Need to know *parameters* of $f(y)$.
 
@@ -123,7 +129,7 @@ main="Distribution of counts of plants \nin all possible plots"
 ```
 
 ```{r, eval=TRUE,echo=TRUE}
-#| code-line-numbers: 1|2,3
+#| code-line-numbers: 2,3
 par(mfrow=c(1,2))
 hist(y, breaks=20,xlim=c(0,25),main=main)
 hist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)
@@ -175,7 +181,7 @@ Where does data randomness come from?
 
 <span style="color:blue">Bayesian Paradigm:</span>  
 
-Data are *fixed* and parameters ($\theta$) are random variables that have probability functions that describe them.
+Data (e.g., $y$) are *fixed* and parameters ($\theta$) are random variables that have probability functions that describe them.
 
 . . .
 
@@ -311,6 +317,8 @@ Example 1,
 . . .
 
 <span style="color:blue">Axiom 2:</span> The sum of the probabilities of all possible values (sample space) is one. 
+
+. . .
 
 $$
 \sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
@@ -796,6 +804,8 @@ $\boldsymbol{y} = \begin{matrix} [4.34 & 3.53 & 3.75] \end{matrix}$
 
 Let's decide to use the Normal Distribution as our PDF. 
 
+. . .
+
 $$
 \begin{align*}
 f(y_1 = 4.34|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{1}-\mu}{\sigma})^2} \\
@@ -826,7 +836,7 @@ $$
 Or simply, 
 
 $$
-y_{i} \stackrel{iid}{\sim} \text{Normal}(\mu, \sigma)
+\textbf{y} \stackrel{iid}{\sim} \text{Normal}(\mu, \sigma)
 $$
 . . .
 
@@ -945,8 +955,10 @@ What happens to the likelihood if we increase the sample size to N=100?
 . . .
 
 ```{r,eval=TRUE,echo=FALSE}
+set.seed(154541)
 y=rnorm(100,3.8,1)
-  try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
+
+try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
   colnames(try)=c("mu","sigma")
 
 # mapply the function with the inputs
@@ -976,29 +988,45 @@ fig %>% layout(font = f, margin = m)
   
 ```
 
-## Proper Guessing
+## Proper Guessing {.scrollable}
 
 Let's let the computer do some smarter guessing, i.e., optimization.
 
 ```{r echo=TRUE}
+
 #Note: optim function uses minimization, not maximization. 
-#Note: log=TRUE, allows us to add rather than multiply
+#THUS, need to put negative in our function
+
+#Note: log=TRUE, allows us to add rather than multiply 
+#      (sum, instead of prod)
 
 neg.log.likelihood=function(par){
-  -sum(dnorm(y,mean=par[1],sd=par[2]),log=TRUE)
+  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))
   }
 
-#find the values that minimize the neg.likelihood function
+#find the values that minimizes the function
 #c(1,1) are the initial values for mu and sigma
 fit <- optim(par=c(1,1), fn=neg.log.likelihood,
              method="L-BFGS-B",
-             lower=c(0,0),upper=c(100,100))
+             lower=c(0,0),upper=c(10,1))
 
 #Maximum likihood estimates for mu and sigma
 fit$par
 
+#The variance/dispersion parmeter is
+(fit$par[2])^2
+
+
 ```
 
+## The Linear Regression way
+
+King Penguin Height Data (N=100)
+
+```{r echo=TRUE}
+out=glm(y~1,family=gaussian(link = "identity"))
+summary(out)
+```
 ## Moments  {.scrollable}
 [Book Chapter (Section 3.4.4.)](/Week 3/HobbsHooten_Ch_3.pdf)
 
@@ -1041,6 +1069,10 @@ Now, we want to consider future daily rainfall probabilities,
 . . .
 
 Take our parameters/moments and match them to parameters where the *support* makes more sense.
+
+<br>
+
+. . .
 
 ### [Gamma Distribution](https://en.wikipedia.org/wiki/Gamma_distribution)
 
