@@ -120,7 +120,7 @@ Which value is observed is predictable. Need to know *parameters* of $f(y)$.
 
 <p style="text-align:center"> The value observed is based on its frequency within the <span style="color:red">population</span>. These frequencies are described by probabilities. </p>
 
-## Random Variables {.scrollable}
+## Frequency / probabilitities {.scrollable}
 
 ```{r, eval=TRUE,echo=FALSE}
 set.seed(452)
@@ -352,7 +352,7 @@ Parameter space support ($\Theta$):
 -   $\theta \in  (0,1)$
 -   General: $\theta \in \Theta$
 
-## Binomial
+## Binomial {.scrollable}
 
 The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution). 
 
@@ -364,6 +364,14 @@ f(y|\theta) = [y|\theta]=
 $$
 . . .
 
+$N$ = total trials / tagged and released animals
+
+<br>
+
+
+$y$ = number of successes / number of alive animals at the of the study.
+
+. . .
 
 ```{r echo=TRUE}
 #Bernoulli Sampling with prob of 0.5
@@ -375,6 +383,8 @@ $$
   set.seed(543531); rbinom(n=1,size=N,theta)
 ```
 ## Support 
+
+Use a probability function that makes sense for your data/RV.
 
 <br>
 
@@ -431,7 +441,7 @@ var=shape*scale^2
 curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
       ylab="dgamma(y,shape = 100, rate = 1",main="Equivalent means and variances")
 curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
-legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
+legend("topright",legend = c("Gamma PDF (shape = 100, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
 ```
 
 <p style="text-align:center"> <span style="color:blue">Are they exactly the same?</span></p>
@@ -452,7 +462,7 @@ var=shape*scale^2
 curve(dgamma(x, shape=shape,rate=rate),xlim=c(-5,5),lwd=4,xlab="y",
       ylab="dgamma(y,shape = 1, rate = 1",main="Equivalent means and variances")
 curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
-legend("topright",legend = c("Gamma", "Normal"),lwd=3,col=c(1,2))
+legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 1, var = 1)"),lwd=3,col=c(1,2))
 ```
 
 
@@ -906,10 +916,10 @@ fun=function(a,b){
   }
 
 # mapply the function with the inputs
-  loglik=mapply(a=try$mu,b=try$sigma, FUN=fun)
+  likelihood=mapply(a=try$mu,b=try$sigma, FUN=fun)
 
 # maximum likelihood of parameters
-  try[which.max(loglik),]
+  try[which.max(likelihood),]
 
 ```
 
@@ -937,7 +947,7 @@ f <- list(
     t = 2,
     pad = 0
   )
-all=cbind(try,loglik)
+all=cbind(try,likelihood)
 colnames(all)=c("mu","sigma","likelihood")
 fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
 fig <- fig %>% add_markers(color=~likelihood)
@@ -962,7 +972,7 @@ try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
   colnames(try)=c("mu","sigma")
 
 # mapply the function with the inputs
-  loglik=mapply(try$mu,try$sigma, FUN=fun)
+  likelihood=mapply(try$mu,try$sigma, FUN=fun)
 
   library(plotly)
 f <- list(
@@ -976,7 +986,7 @@ f <- list(
     t = 2,
     pad = 0
   )
-all=cbind(try,loglik)
+all=cbind(try,likelihood)
 colnames(all)=c("mu","sigma","likelihood")
 fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
 fig <- fig %>% add_markers(color=~likelihood)
@@ -1012,10 +1022,6 @@ fit <- optim(par=c(1,1), fn=neg.log.likelihood,
 
 #Maximum likihood estimates for mu and sigma
 fit$par
-
-#The variance/dispersion parmeter is
-(fit$par[2])^2
-
 
 ```
 
