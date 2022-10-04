@@ -36,6 +36,23 @@ Install the most versions of <a href="https://cran.r-project.org/">R</a> and <a 
 
 -   To download lectures. Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
 
+### Project
+
+-   Create a group of 3
+
+-   The group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.
+
+-   Outline a plan: 
+    -   Identify a reading that will be assigned prior to class along with relevant topic questions
+    -   Identify the scope and depth of the lecture material (bullet points of what will be covered), 
+    -   Identify what the goal is to be accomplished in terms of coding (bullet points) 
+    - Decide on a general idea for a homework assignment. 
+
+-  Once outlined, email me the plan with all group members names. I will look over the general plan and provide comments. 
+
+-   From here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback.  
+
+
 ### Learning R
 
 <a href="http://preludeinr.com/r-basics/">Prelude In R</a>
@@ -120,6 +137,13 @@ install.packages(c("visualize","plotly"))
 
 
 ### Week 5
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("marginaleffects","DHARMa","equatiomatic"))
+```
+
+-   Download: <a href="/Week 5/elephant.study.csv">csv</a>
+
 
 -   Assigned Readings: <a href="/Week 5/Ecology - 2021 - Tredennick.pdf">Assigned Reading</a> 
 

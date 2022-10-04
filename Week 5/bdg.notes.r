@@ -1,6 +1,6 @@
 library(equatiomatic)
 library(marginaleffects)
-
+library(DHARMa)
 #Steps
 
 #fit models
@@ -29,9 +29,34 @@ out=glm(y~1,family=gaussian(link = "identity"),
         data=eleph)
 
 
+
 out=glm(y~sex,family=gaussian(link = "identity"),
         data=eleph)
 
+head(model.matrix(out))
+
+
+unique(eleph$site)
+
+out=glm(y~site,family=gaussian(link = "identity"),
+        data=eleph)
+
+out$coefficients
+
+out=glm(y~site,family=gaussian(link = "identity"),
+        data=eleph, contrasts = list(site = contr.sum))
+
+out$coefficients[1]-sum(out$coefficients[2:5])
+
+
+out=glm(y~age.years*sex,family=gaussian(link = "identity"),data=eleph)
+
+
+testDispersion(out)
+plotQQunif(out)
+plotResiduals(out)
+
+testOutliers(out)
 summary(out)
 
 par(mfrow=c(2, 2)) # create a 2 x 2 panel plot

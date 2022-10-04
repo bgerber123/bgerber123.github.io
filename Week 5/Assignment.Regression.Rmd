@@ -1,0 +1,53 @@
+---
+title: "Linear Regression Assignment"
+author: "Brian D. Gerber"
+date: "2022-10-03"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To become familiar with linear regression in R.
+
+### Some Useful Links
+
+<a href="https://stats.stackexchange.com/questions/52132/how-to-do-regression-with-effect-coding-instead-of-dummy-coding-in-r">Effect coding link </a>
+
+
+<a href="https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/#DEVIATION">Effect coding link 2</a>
+
+
+### **Markdown**
+Create a markdown file that analyses the provided elephant data, accomplishing the below requests:
+
+-   Visualize your data
+
+-   Use the `glm` function and estimate a single $\mu$ and $\sigma$. Interpret test statistics and p-values.
+
+-   Use the `glm` function to estimate the difference of elephant weight by sex. Interpret coefficient estimates and p-values. 
+
+-   Fit the same model with a sex variable, but change the meaning of the intercept to indicate Female Weight using the `relevel` function. 
+
+- Use both of these above models and predict the male and female weights with SE's and confidence intervals. 
+
+-   Fit a new model to estimate site-level variation in elephant weights. Estimate and interpret coefficients and p-values.
+
+- Fit the same model but use effect coding (see links above). Interpret the estimates and p-values. 
+
+-   Fit a new model that hypothesizes elephant weight to vary by age (in years) and sex as an additive combination (i.e., no interaction). Interpret coefficient estimates and p-values. Make a plot of the predictions of elephant weight by sex including confidence intervals.
+
+-   Evaluate the assumptions of the previously fit model. 
+
+-   Fit a new model that incorporates an interaction b/w age and sex. Interpret coefficient estimates, and p-values. Make a plot of the predictions of elephant weight by sex including confidence intervals and compare these results to the additive model.
+
