@@ -662,4 +662,13 @@ plot_model(model5, type = "pred", terms = c("x"))
 plot_model(model5, type = "pred", terms = c("x2","x"))
 ```
 
-## Exploring Assumptions
+## Exploring Assumptions {.scrollable}
+
+"plot(model.name)"
+
+a and b) Plotting y~X
+c and d) Fitted vs. Residuals
+
+![](regression_files/assumptions.png){fig-align="center" width="800"}
+
+From [here](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r)

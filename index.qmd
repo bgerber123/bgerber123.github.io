@@ -139,10 +139,13 @@ install.packages(c("visualize","plotly"))
 ### Week 5
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
-install.packages(c("sjPlot","ggplot2"))
+install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 ```
 
 -   Lecture: <a href="/Week 5/regression.html">Regression</a>
+
+-   Lecture Code: <a href="/Week 5/regression.R">regression.R</a>
+
 
 
 -   Download: <a href="/Week 5/elephant.study.csv">csv</a>
