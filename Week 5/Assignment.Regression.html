@@ -11,7 +11,7 @@
 
 <meta name="author" content="Brian D. Gerber" />
 
-<meta name="date" content="2022-10-03" />
+<meta name="date" content="2022-10-17" />
 
 <title>Linear Regression Assignment</title>
 
@@ -365,7 +365,7 @@ pre code {
 
 <h1 class="title toc-ignore">Linear Regression Assignment</h1>
 <h4 class="author">Brian D. Gerber</h4>
-<h4 class="date">2022-10-03</h4>
+<h4 class="date">2022-10-17</h4>
 
 </div>
 
@@ -391,24 +391,32 @@ coding link 2</a></p>
 </div>
 <div id="markdown" class="section level3">
 <h3><strong>Markdown</strong></h3>
-<p>Create a markdown file that analyses the provided elephant data,
-accomplishing the below requests:</p>
+<p>Write a report with clear headings and subheadings using markdown.
+The report will demonstrate code and interpretation of results related
+to the analysis of the provided elephant data, specifically
+accomplishing the below requests.</p>
 <ul>
-<li><p>Visualize your data</p></li>
-<li><p>Use the <code>glm</code> function and estimate a single <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>. Interpret test statistics and
+<li><p>Visualize your data (in at least two ways). Discuss why you
+choose to visualize it this way.</p></li>
+<li><p>Use the <code>glm</code> function and estimate a single <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>. Interpret estimates and
 p-values.</p></li>
-<li><p>Use the <code>glm</code> function to estimate the difference of
+<li><p>Use the <code>glm</code> function to estimate male and female
 elephant weight by sex. Interpret coefficient estimates and
 p-values.</p></li>
 <li><p>Fit the same model with a sex variable, but change the meaning of
-the intercept to indicate Female Weight using the <code>relevel</code>
+the intercept to indicate female weight using the <code>relevel</code>
 function.</p></li>
 <li><p>Use both of these above models and predict the male and female
 weights with SE’s and confidence intervals.</p></li>
 <li><p>Fit a new model to estimate site-level variation in elephant
-weights. Estimate and interpret coefficients and p-values.</p></li>
-<li><p>Fit the same model but use effect coding (see links above).
-Interpret the estimates and p-values.</p></li>
+weights. Estimate and interpret coefficients and p-values. Use the
+<code>predict</code> function to get the estimated weights of elephants
+for each site, the standard errors, and confidence intervals.</p></li>
+<li><p>Fit the same model (as previous) but use effect coding (see links
+above). Interpret the estimates and p-values. Use the
+<code>predict</code> function to get the estimated weights of elephants
+for each site, the standard errors, and confidence intervals. Compare
+these to the predictions from the previous model fit.</p></li>
 <li><p>Fit a new model that hypothesizes elephant weight to vary by age
 (in years) and sex as an additive combination (i.e., no interaction).
 Interpret coefficient estimates and p-values. Make a plot of the

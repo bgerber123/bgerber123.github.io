@@ -1,7 +1,7 @@
 ---
 title: "Linear Regression Assignment"
 author: "Brian D. Gerber"
-date: "2022-10-03"
+date: "2022-10-17"
 output: html_document
 ---
 
@@ -37,7 +37,7 @@ Write a report with clear headings and subheadings using markdown. The report wi
 
 -   Use the `glm` function to estimate male and female elephant weight by sex. Interpret coefficient estimates and p-values. 
 
--   Fit the same model with a sex variable, but change the meaning of the intercept to indicate Female Weight using the `relevel` function. 
+-   Fit the same model with a sex variable, but change the meaning of the intercept to indicate female weight using the `relevel` function. 
 
 - Use both of these above models and predict the male and female weights with SE's and confidence intervals. 
 
