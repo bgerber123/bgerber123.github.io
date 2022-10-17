@@ -389,16 +389,17 @@
 
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
+<div>
 <ul>
-<li>linear regression fundamentals</li>
-<li>glm function</li>
-<li>categorical and continuous variables</li>
-<li>additive and interaction models</li>
-<li>regression assumptions</li>
-<li>predicting</li>
-<li>confidence intervals</li>
-<li>bootstrapping for confidence intervals</li>
+<li class="fragment">linear regression fundamentals</li>
+<li class="fragment">glm function</li>
+<li class="fragment">confidence intervals</li>
+<li class="fragment">bootstrapping for confidence intervals</li>
+<li class="fragment">categorical and continuous variables</li>
+<li class="fragment">additive and interaction models</li>
+<li class="fragment">assumptions</li>
 </ul>
+</div>
 </section>
 <section id="linear-regression-motivation" class="slide level2">
 <h2>Linear Regression (motivation)</h2>
@@ -436,7 +437,7 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma)\\
 <h2>Assumptions</h2>
 <h4 id="independence-of-the-errors">Independence of the errors</h4>
 <p><br></p>
-<p>Correlation(<span class="math inline">\(\epsilon_{i}\)</span>,<span class="math inline">\(\epsilon_{j}\)</span>) = 0, for all pairs of <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span></p>
+<p>Correlation(<span class="math inline">\(\epsilon_{i}\)</span>,<span class="math inline">\(\epsilon_{j}\)</span>) = 0, <span class="math inline">\(\forall\)</span> pairs of <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span></p>
 <p><br></p>
 <p>This means that knowing how far observation <span class="math inline">\(i\)</span> will be from the true regression line tells us nothing about how far observation <span class="math inline">\(j\)</span> will be from the regression line.</p>
 </section>
@@ -453,10 +454,10 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma)\\
 <h4 id="linearity">Linearity</h4>
 <p><br></p>
 <p><span class="math display">\[
-E[y_i|x_i] = \mu_i = \beta_0 + \beta_1*x_i \\
+E[y_i|x_i] = \mu_i = \beta_0 + \beta_1 \times x_i \\
 \]</span></p>
 <p><br></p>
-<p>The hypothesis about the variables included in the model tell us about the mean.</p>
+<p>The hypothesis about the variables included in the model (e.g., <span class="math inline">\(x_i\)</span>) characterizes the mean well.</p>
 </section>
 <section id="assumptions-3" class="slide level2">
 <h2>Assumptions</h2>
@@ -466,18 +467,27 @@ E[y_i|x_i] = \mu_i = \beta_0 + \beta_1*x_i \\
 \epsilon_i \sim \text{Normal}(0,\sigma)
 \]</span></p>
 <p><br></p>
-<p>Each <span class="math inline">\(i^{th}\)</span> residual comes from a Normal distribution with a mean of zero, is symmetricly disributed around zero, and varies around zero by the standard deviation.</p>
+<p>Each <span class="math inline">\(i^{th}\)</span> residual</p>
+<div>
+<ul>
+<li class="fragment">comes from a Normal distribution with a mean of zero</li>
+<li class="fragment">is symmetrically disributed around zero</li>
+<li class="fragment">varies around zero by <span class="math inline">\(\sigma\)</span>, which is the same for each residual.</li>
+</ul>
+</div>
 </section>
 <section id="assumption-violations" class="slide level2">
 <h2>Assumption Violations</h2>
 <p><br></p>
 <h3 id="robustness">Robustness</h3>
+<div class="fragment">
 <p><br></p>
 <p>Linearity and constant variance are often more important than the assumption of normality (see e.g., <a href="https://link.springer.com/article/10.3758/s13428-021-01587-5">Knief &amp; Forstmeier, 2021</a> and references therein)</p>
 <p><br></p>
 <p style="text-align:center">
-<b>This especially true for large sample sizes</b>
+<b>Is especially true for large sample sizes</b>
 </p>
+</div>
 </section>
 <section id="intercept-only-model" class="slide level2">
 <h2>Intercept-Only Model</h2>
@@ -489,16 +499,14 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <section id="simulate-intercept-only-model" class="slide level2">
 <h2>Simulate Intercept-Only Model</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#Simulate Data for this model</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#Setup parameters</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>  n<span class="ot">=</span><span class="dv">100</span> <span class="co"># sample size</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  mu<span class="ot">=</span><span class="dv">10</span> <span class="co"># true mean</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  sigma<span class="ot">=</span><span class="dv">2</span> <span class="co"># true std.dev</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Simulate a data set of observations</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu, <span class="at">sd=</span>sigma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#Setup parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  n<span class="ot">=</span><span class="dv">100</span> <span class="co"># sample size</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  mu<span class="ot">=</span><span class="dv">10</span> <span class="co"># true mean</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  sigma<span class="ot">=</span><span class="dv">2</span> <span class="co"># true std.dev</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># Simulate a data set of observations</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu, <span class="at">sd=</span>sigma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="visualize-intercept-only-model" class="slide level2">
@@ -643,7 +651,15 @@ $residual.scale
 <section id="bootstrapping-idea" class="slide level2">
 <h2>Bootstrapping (idea)</h2>
 
-<img data-src="regression_files/fieberg.png" width="450" class="r-stretch quarto-figure-center"></section>
+<img data-src="regression_files/fieberg0.png" width="450" class="r-stretch quarto-figure-center"></section>
+<section id="bootstrapping-idea-1" class="slide level2">
+<h2>Bootstrapping (idea)</h2>
+
+<img data-src="regression_files/fieberg1.png" width="450" class="r-stretch quarto-figure-center"></section>
+<section id="bootstrapping-idea-2" class="slide level2">
+<h2>Bootstrapping (idea)</h2>
+
+<img data-src="regression_files/fieberg3.png" width="450" class="r-stretch quarto-figure-center"></section>
 <section id="bootstrapping-code" class="slide level2">
 <h2>Bootstrapping (code)</h2>
 <div class="cell">
@@ -692,6 +708,8 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+\beta_1\times x_i
 \]</span></p>
 <p>where <span class="math inline">\(x_i\)</span> is either a zero or one, indicating whether the <span class="math inline">\(i^{th}\)</span> row is from <span style="color:blue">site 1</span> (<em>0</em>) or <span style="color:blue">site 2</span> (<em>1</em>).</p>
+<p><br></p>
+<p>This is called <em>Dummy Coding</em>.</p>
 </section>
 <section id="categorical-variable-w-2-levels-1" class="slide level2 scrollable">
 <h2>Categorical Variable w/ 2 levels</h2>
@@ -702,6 +720,10 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Site 1" "Site 2"</code></pre>
 </div>
+</div>
+<p><br></p>
+<div class="fragment">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Turn the factor into 0 and 1's</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -715,6 +737,7 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
@@ -727,6 +750,7 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <span id="cb22-7"><a href="#cb22-7"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
 <span id="cb22-8"><a href="#cb22-8"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -744,10 +768,41 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 </div>
 </div>
 </section>
+<section id="side-bar-maximum-likelihood-optimization" class="slide level2 scrollable">
+<h2>Side-Bar: Maximum Likelihood Optimization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co">#Here is our negative log-likelihood function with three</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="co">#parameters - the mean (2) and stdev (1)</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>neg.log.like <span class="ot">=</span> <span class="cf">function</span>(par) {</span>
+<span id="cb25-4"><a href="#cb25-4"></a>  mu<span class="ot">=</span>par[<span class="dv">1</span>]<span class="sc">+</span>par[<span class="dv">2</span>]<span class="sc">*</span>x.var</span>
+<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">sum</span>(<span class="sc">-</span><span class="fu">dnorm</span>(y,<span class="at">mean =</span> mu,<span class="at">sd =</span> par[<span class="dv">3</span>],<span class="at">log =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb25-6"><a href="#cb25-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="fragment">
+<h3 id="use-our-function-in-an-optimization-function">Use our function in an optimization function</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co">#use optim with initial values and define the lower and upper limits of the possible values</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">optim</span>(</span>
+<span id="cb26-3"><a href="#cb26-3"></a>    <span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>,<span class="dv">1</span>),</span>
+<span id="cb26-4"><a href="#cb26-4"></a>    <span class="at">fn =</span> neg.log.like,</span>
+<span id="cb26-5"><a href="#cb26-5"></a>    <span class="at">method =</span> <span class="st">"L-BFGS-B"</span>,</span>
+<span id="cb26-6"><a href="#cb26-6"></a>    <span class="at">lower =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="sc">-</span><span class="dv">100</span>, <span class="fl">0.01</span>),</span>
+<span id="cb26-7"><a href="#cb26-7"></a>    <span class="at">upper =</span> <span class="fu">c</span>(<span class="dv">400</span>, <span class="dv">400</span>, <span class="dv">100</span>)</span>
+<span id="cb26-8"><a href="#cb26-8"></a>  )</span>
+<span id="cb26-9"><a href="#cb26-9"></a></span>
+<span id="cb26-10"><a href="#cb26-10"></a>fit1<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  50.511067 -21.366842   3.445873</code></pre>
+</div>
+</div>
+<p><br></p>
+</div>
+</section>
 <section id="categorical-variable-w-2-levels-2" class="slide level2 scrollable">
 <h2>Categorical Variable w/ 2 levels</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -776,13 +831,13 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </section>
 <section id="relevel" class="slide level2 scrollable">
 <h2>Relevel</h2>
-<p>We can manipulate the factor levels of <span class="math inline">\(x\)</span> to indicate that <span style="color:blue">site 1</span> is denoted by a <strong>1</strong> now and <span style="color:blue">site 2</span> is denoted by a <strong>0</strong> now.</p>
+<p>We can manipulate the factor levels of <span class="math inline">\(x\)</span> to indicate that <span style="color:blue">site 1</span> is denoted by a <strong>1</strong> now and <span style="color:blue">site 2</span> is denoted by a <strong>0</strong>.</p>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">#change intercept meaning</span></span>
-<span id="cb27-2"><a href="#cb27-2"></a>  x.relev<span class="ot">=</span><span class="fu">relevel</span>(x,<span class="at">ref=</span><span class="st">"Site 2"</span>)</span>
-<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">levels</span>(x.relev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">#change intercept meaning</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>  x.relev<span class="ot">=</span><span class="fu">relevel</span>(x,<span class="at">ref=</span><span class="st">"Site 2"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">levels</span>(x.relev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Site 2" "Site 1"</code></pre>
 </div>
@@ -791,56 +846,58 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="co">#fit the model again</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a>  model2<span class="fl">.2</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x.relev)</span>
-<span id="cb29-3"><a href="#cb29-3"></a></span>
-<span id="cb29-4"><a href="#cb29-4"></a><span class="co">#Look at coefs  </span></span>
-<span id="cb29-5"><a href="#cb29-5"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model2),<span class="fu">coef</span>(model2<span class="fl">.2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">#fit the model again</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>  model2<span class="fl">.2</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x.relev)</span>
+<span id="cb32-3"><a href="#cb32-3"></a></span>
+<span id="cb32-4"><a href="#cb32-4"></a><span class="co">#Look at coefs  </span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model2),<span class="fu">coef</span>(model2<span class="fl">.1</span>),<span class="fu">coef</span>(model2<span class="fl">.2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     (Intercept)  xSite 2
 [1,]    50.51109 -21.3669
-[2,]    29.14419  21.3669</code></pre>
+[2,]    50.51109 -21.3669
+[3,]    29.14419  21.3669</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co">#compare predictions  </span></span>
-<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">predict</span>(model2)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co">#compare predictions  </span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">rbind</span>(<span class="fu">predict</span>(model2)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],  </span>
+<span id="cb34-3"><a href="#cb34-3"></a>        <span class="fu">predict</span>(model2<span class="fl">.1</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
+<span id="cb34-4"><a href="#cb34-4"></a>        <span class="fu">predict</span>(model2<span class="fl">.2</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]  </span>
+<span id="cb34-5"><a href="#cb34-5"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       1        2 
-50.51109 29.14419 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>  <span class="fu">predict</span>(model2<span class="fl">.2</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       1        2 
-50.51109 29.14419 </code></pre>
+<pre><code>            1        2
+[1,] 50.51109 29.14419
+[2,] 50.51109 29.14419
+[3,] 50.51109 29.14419</code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="categorical-variable-w-4-levels-dummy-coding" class="slide level2">
-<h2>Categorical Variable w/ 4 levels (Dummy Coding)</h2>
+<section id="categorical-variable-w-4-levels" class="slide level2">
+<h2>Categorical Variable w/ 4 levels</h2>
+<h3 id="dummy-coding">Dummy Coding</h3>
 <p><span class="math display">\[
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3\times x_{3,i})
 \]</span></p>
-<p><span class="math inline">\(x_{1,i} =\)</span> indicator of site 2 (1) or not (0)</p>
-<p><span class="math inline">\(x_{2,i} =\)</span> indicator of site 3 (1) or not (0)</p>
-<p><span class="math inline">\(x_{3,i} =\)</span> indicator of site 4 (1) or not (0)</p>
+<p><span class="math inline">\(x_{1,i} =\)</span> indicator of <span style="color:blue">site 2</span> (1) or not (0)</p>
+<p><span class="math inline">\(x_{2,i} =\)</span> indicator of <span style="color:blue">site 3</span> (1) or not (0)</p>
+<p><span class="math inline">\(x_{3,i} =\)</span> indicator of <span style="color:blue">site 4</span> (1) or not (0)</p>
 </section>
-<section id="categorical-variable-w-4-levels-dummy-coding-1" class="slide level2 scrollable">
-<h2>Categorical Variable w/ 4 levels (Dummy Coding)</h2>
+<section id="categorical-variable-w-4-levels-1" class="slide level2 scrollable">
+<h2>Categorical Variable w/ 4 levels</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co">#Setup Data</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>,<span class="st">"Site 3"</span>, <span class="st">"Site 4"</span>),n<span class="sc">/</span><span class="dv">4</span>))</span>
-<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co">#Setup Data</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>,<span class="st">"Site 3"</span>, <span class="st">"Site 4"</span>),n<span class="sc">/</span><span class="dv">4</span>))</span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Site 1" "Site 2" "Site 3" "Site 4"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co">#Convert factors to 0 and 1's</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="co">#Convert factors to 0 and 1's</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept) xSite 2 xSite 3 xSite 4
 1           1       0       0       0
@@ -850,27 +907,27 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 5           1       0       0       0
 6           1       1       0       0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># Set Parameters  </span></span>
-<span id="cb40-2"><a href="#cb40-2"></a>  b0<span class="ot">=</span><span class="dv">50</span> <span class="co">#Site 1</span></span>
-<span id="cb40-3"><a href="#cb40-3"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">20</span> <span class="co">#Diff of site 2 to site 1</span></span>
-<span id="cb40-4"><a href="#cb40-4"></a>  b2<span class="ot">=</span><span class="sc">-</span><span class="dv">200</span> <span class="co">#Diff of site 3 to site 1</span></span>
-<span id="cb40-5"><a href="#cb40-5"></a>  b3<span class="ot">=</span><span class="dv">100</span> <span class="co">#Diff of site 4 to site 1</span></span>
-<span id="cb40-6"><a href="#cb40-6"></a>  </span>
-<span id="cb40-7"><a href="#cb40-7"></a><span class="co"># Mean  </span></span>
-<span id="cb40-8"><a href="#cb40-8"></a>  mu<span class="ot">=</span>b0<span class="sc">+</span>b1<span class="sc">*</span>x.var[,<span class="dv">1</span>]<span class="sc">+</span>b2<span class="sc">*</span>x.var[,<span class="dv">2</span>]<span class="sc">+</span>b3<span class="sc">*</span>x.var[,<span class="dv">3</span>]</span>
-<span id="cb40-9"><a href="#cb40-9"></a></span>
-<span id="cb40-10"><a href="#cb40-10"></a><span class="co">#True mean group-level values</span></span>
-<span id="cb40-11"><a href="#cb40-11"></a>  <span class="fu">unique</span>(mu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co"># Set Parameters  </span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>  b0<span class="ot">=</span><span class="dv">50</span> <span class="co">#Site 1</span></span>
+<span id="cb41-3"><a href="#cb41-3"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">20</span> <span class="co">#Diff of site 2 to site 1</span></span>
+<span id="cb41-4"><a href="#cb41-4"></a>  b2<span class="ot">=</span><span class="sc">-</span><span class="dv">200</span> <span class="co">#Diff of site 3 to site 1</span></span>
+<span id="cb41-5"><a href="#cb41-5"></a>  b3<span class="ot">=</span><span class="dv">100</span> <span class="co">#Diff of site 4 to site 1</span></span>
+<span id="cb41-6"><a href="#cb41-6"></a>  </span>
+<span id="cb41-7"><a href="#cb41-7"></a><span class="co"># Mean  </span></span>
+<span id="cb41-8"><a href="#cb41-8"></a>  mu <span class="ot">=</span> b0<span class="sc">+</span>b1<span class="sc">*</span>x.var[,<span class="dv">1</span>]<span class="sc">+</span>b2<span class="sc">*</span>x.var[,<span class="dv">2</span>]<span class="sc">+</span>b3<span class="sc">*</span>x.var[,<span class="dv">3</span>]</span>
+<span id="cb41-9"><a href="#cb41-9"></a></span>
+<span id="cb41-10"><a href="#cb41-10"></a><span class="co">#True mean group-level values</span></span>
+<span id="cb41-11"><a href="#cb41-11"></a>  <span class="fu">unique</span>(mu)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]   50   30 -150  150</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="co">#Grand Mean</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">mean</span>(<span class="fu">unique</span>(mu))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="co">#Grand Mean</span></span>
+<span id="cb43-2"><a href="#cb43-2"></a>  <span class="fu">mean</span>(<span class="fu">unique</span>(mu))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 20</code></pre>
 </div>
@@ -879,21 +936,20 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># Simulate Data  </span></span>
-<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
-<span id="cb44-3"><a href="#cb44-3"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="co"># Simulate Data  </span></span>
+<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
+<span id="cb45-3"><a href="#cb45-3"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="co">#fit the model- see how we did</span></span>
-<span id="cb45-2"><a href="#cb45-2"></a>  model3<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x)</span>
-<span id="cb45-3"><a href="#cb45-3"></a>  model3<span class="fl">.1</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x.var)</span>
-<span id="cb45-4"><a href="#cb45-4"></a></span>
-<span id="cb45-5"><a href="#cb45-5"></a><span class="co">#Compare coefs    </span></span>
-<span id="cb45-6"><a href="#cb45-6"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model3),</span>
-<span id="cb45-7"><a href="#cb45-7"></a>  <span class="fu">coef</span>(model3<span class="fl">.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># fit the model</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>  model3<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x)</span>
+<span id="cb46-3"><a href="#cb46-3"></a>  model3<span class="fl">.1</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x.var)</span>
+<span id="cb46-4"><a href="#cb46-4"></a></span>
+<span id="cb46-5"><a href="#cb46-5"></a><span class="co"># Compare coefs    </span></span>
+<span id="cb46-6"><a href="#cb46-6"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model3), <span class="fu">coef</span>(model3<span class="fl">.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     (Intercept)   xSite 2   xSite 3  xSite 4
 [1,]    50.59576 -21.91446 -200.1693 99.01133
@@ -906,16 +962,16 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <h2>Effect Coding w/ 4 levels</h2>
 <p><a href="https://stats.stackexchange.com/questions/52132/how-to-do-regression-with-effect-coding-instead-of-dummy-coding-in-r">Effect Coding Link</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="co">#Use effect coding to make the intercept the grand mean</span></span>
-<span id="cb47-2"><a href="#cb47-2"></a>  model3<span class="fl">.2</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x,<span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">x =</span> contr.sum))</span>
-<span id="cb47-3"><a href="#cb47-3"></a></span>
-<span id="cb47-4"><a href="#cb47-4"></a></span>
-<span id="cb47-5"><a href="#cb47-5"></a><span class="co"># Intercept = grand mean of group-means</span></span>
-<span id="cb47-6"><a href="#cb47-6"></a><span class="co"># Coef 1 = effect difference of Site 1 from Grand Mean</span></span>
-<span id="cb47-7"><a href="#cb47-7"></a><span class="co"># Coef 2 = effect difference of Site 2 from Grand Mean</span></span>
-<span id="cb47-8"><a href="#cb47-8"></a><span class="co"># Coef 3 = effect difference of Site 3 from Grand Mean</span></span>
-<span id="cb47-9"><a href="#cb47-9"></a></span>
-<span id="cb47-10"><a href="#cb47-10"></a>  <span class="fu">coef</span>(model3<span class="fl">.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="co">#Use effect coding to make the intercept the grand mean</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>  model3<span class="fl">.2</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x,<span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">x =</span> contr.sum))</span>
+<span id="cb48-3"><a href="#cb48-3"></a></span>
+<span id="cb48-4"><a href="#cb48-4"></a></span>
+<span id="cb48-5"><a href="#cb48-5"></a><span class="co"># Intercept = grand mean of group-means</span></span>
+<span id="cb48-6"><a href="#cb48-6"></a><span class="co"># Coef 1 = effect difference of Site 1 from Grand Mean</span></span>
+<span id="cb48-7"><a href="#cb48-7"></a><span class="co"># Coef 2 = effect difference of Site 2 from Grand Mean</span></span>
+<span id="cb48-8"><a href="#cb48-8"></a><span class="co"># Coef 3 = effect difference of Site 3 from Grand Mean</span></span>
+<span id="cb48-9"><a href="#cb48-9"></a></span>
+<span id="cb48-10"><a href="#cb48-10"></a>  <span class="fu">coef</span>(model3<span class="fl">.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)          x1          x2          x3 
   19.827643   30.768114    8.853654 -169.401216 </code></pre>
@@ -924,16 +980,21 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="co">#The coefficient for site-level 4 (difference from the grand mean)</span></span>
-<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="dv">1</span>]<span class="sc">+</span><span class="fu">sum</span>(<span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="sc">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co">#The coefficient for site-level 4 (difference from the grand mean)</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="dv">1</span>]<span class="sc">+</span><span class="fu">sum</span>(<span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="sc">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept) 
   -109.9518 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="co">#Predict the values and compare them to the true means for</span></span>
-<span id="cb51-2"><a href="#cb51-2"></a><span class="co">#each site</span></span>
-<span id="cb51-3"><a href="#cb51-3"></a>  <span class="fu">rbind</span>(<span class="fu">unique</span>(mu),</span>
-<span id="cb51-4"><a href="#cb51-4"></a>  <span class="fu">predict</span>(model3<span class="fl">.2</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co">#Predict the values and compare them to the true means for</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a><span class="co">#each site</span></span>
+<span id="cb52-3"><a href="#cb52-3"></a>  <span class="fu">rbind</span>(<span class="fu">unique</span>(mu),</span>
+<span id="cb52-4"><a href="#cb52-4"></a>  <span class="fu">predict</span>(model3<span class="fl">.2</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            1       2         3        4
 [1,] 50.00000 30.0000 -150.0000 150.0000
@@ -949,49 +1010,49 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i})
 \]</span></p>
-<p><span class="math inline">\(x_{1,i} =\)</span> indicator of site 2 (1) or not (0)</p>
-<p><span class="math inline">\(x_{2,i} =\)</span> is a numeric value</p>
+<p><span class="math inline">\(x_{1,i} =\)</span> indicator of <span style="color:blue">site 2</span> (1) or not (0)</p>
+<p><span class="math inline">\(x_{2,i} =\)</span> is a continuous numeric value</p>
 </section>
-<section id="additive-model-1" class="slide level2">
+<section id="additive-model-1" class="slide level2 scrollable">
 <h2>Additive Model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="co">#A continuous and categorical variable </span></span>
-<span id="cb53-2"><a href="#cb53-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>),n<span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb53-3"><a href="#cb53-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="co">#A continuous and categorical variable </span></span>
+<span id="cb54-2"><a href="#cb54-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>),n<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Site 1" "Site 2"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="co">#Simulate x2 variable</span></span>
-<span id="cb56-2"><a href="#cb56-2"></a>  <span class="fu">set.seed</span>(<span class="dv">54334</span>)</span>
-<span id="cb56-3"><a href="#cb56-3"></a>  x2<span class="ot">=</span><span class="fu">rpois</span>(n,<span class="dv">100</span>)</span>
-<span id="cb56-4"><a href="#cb56-4"></a></span>
-<span id="cb56-5"><a href="#cb56-5"></a><span class="co">#Parameters</span></span>
-<span id="cb56-6"><a href="#cb56-6"></a>  b0<span class="ot">=</span><span class="dv">50</span></span>
-<span id="cb56-7"><a href="#cb56-7"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">50</span></span>
-<span id="cb56-8"><a href="#cb56-8"></a>  b2<span class="ot">=</span><span class="dv">4</span></span>
-<span id="cb56-9"><a href="#cb56-9"></a></span>
-<span id="cb56-10"><a href="#cb56-10"></a><span class="co">#Mean  </span></span>
-<span id="cb56-11"><a href="#cb56-11"></a>  mu<span class="ot">=</span>b0<span class="sc">+</span>b1<span class="sc">*</span>x.var<span class="sc">+</span>b2<span class="sc">*</span>x2</span>
-<span id="cb56-12"><a href="#cb56-12"></a></span>
-<span id="cb56-13"><a href="#cb56-13"></a><span class="co">#Simualte Date  </span></span>
-<span id="cb56-14"><a href="#cb56-14"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
-<span id="cb56-15"><a href="#cb56-15"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">50</span>)</span>
-<span id="cb56-16"><a href="#cb56-16"></a></span>
-<span id="cb56-17"><a href="#cb56-17"></a><span class="co"># fit the model</span></span>
-<span id="cb56-18"><a href="#cb56-18"></a>  model4<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x<span class="sc">+</span>x2)</span>
-<span id="cb56-19"><a href="#cb56-19"></a></span>
-<span id="cb56-20"><a href="#cb56-20"></a>  <span class="fu">coef</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="co">#Simulate x2 variable</span></span>
+<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">set.seed</span>(<span class="dv">54334</span>)</span>
+<span id="cb57-3"><a href="#cb57-3"></a>  x2<span class="ot">=</span><span class="fu">rpois</span>(n,<span class="dv">100</span>)</span>
+<span id="cb57-4"><a href="#cb57-4"></a></span>
+<span id="cb57-5"><a href="#cb57-5"></a><span class="co">#Parameters</span></span>
+<span id="cb57-6"><a href="#cb57-6"></a>  b0<span class="ot">=</span><span class="dv">50</span></span>
+<span id="cb57-7"><a href="#cb57-7"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">50</span></span>
+<span id="cb57-8"><a href="#cb57-8"></a>  b2<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb57-9"><a href="#cb57-9"></a></span>
+<span id="cb57-10"><a href="#cb57-10"></a><span class="co">#Mean  </span></span>
+<span id="cb57-11"><a href="#cb57-11"></a>  mu<span class="ot">=</span>b0<span class="sc">+</span>b1<span class="sc">*</span>x.var<span class="sc">+</span>b2<span class="sc">*</span>x2</span>
+<span id="cb57-12"><a href="#cb57-12"></a></span>
+<span id="cb57-13"><a href="#cb57-13"></a><span class="co">#Simualte Date  </span></span>
+<span id="cb57-14"><a href="#cb57-14"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
+<span id="cb57-15"><a href="#cb57-15"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">50</span>)</span>
+<span id="cb57-16"><a href="#cb57-16"></a></span>
+<span id="cb57-17"><a href="#cb57-17"></a><span class="co"># fit the model</span></span>
+<span id="cb57-18"><a href="#cb57-18"></a>  model4<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x<span class="sc">+</span>x2)</span>
+<span id="cb57-19"><a href="#cb57-19"></a></span>
+<span id="cb57-20"><a href="#cb57-20"></a>  <span class="fu">coef</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)     xSite 2          x2 
   96.615158  -66.748462    3.597896 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="co">#Confidence intervals of coefs</span></span>
-<span id="cb58-2"><a href="#cb58-2"></a>  <span class="fu">confint</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co">#Confidence intervals of coefs</span></span>
+<span id="cb59-2"><a href="#cb59-2"></a>  <span class="fu">confint</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 2.5 %     97.5 %
 (Intercept)  14.604365 178.625952
@@ -1003,8 +1064,8 @@ x2            2.787034   4.408758</code></pre>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="co"># Summary  </span></span>
-<span id="cb60-2"><a href="#cb60-2"></a>  <span class="fu">summary</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># Summary  </span></span>
+<span id="cb61-2"><a href="#cb61-2"></a>  <span class="fu">summary</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1035,9 +1096,9 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="co"># Fitted Values</span></span>
-<span id="cb62-2"><a href="#cb62-2"></a>  newdata<span class="ot">=</span><span class="fu">expand.grid</span>(x,x2)</span>
-<span id="cb62-3"><a href="#cb62-3"></a>  <span class="fu">head</span>(newdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="co"># Fitted Values</span></span>
+<span id="cb63-2"><a href="#cb63-2"></a>  newdata<span class="ot">=</span><span class="fu">expand.grid</span>(x,x2)</span>
+<span id="cb63-3"><a href="#cb63-3"></a>  <span class="fu">head</span>(newdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Var1 Var2
 1 Site 1  112
@@ -1047,29 +1108,29 @@ Number of Fisher Scoring iterations: 2</code></pre>
 5 Site 1  112
 6 Site 2  112</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>  <span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"x"</span>,<span class="st">"x2"</span>)</span>
-<span id="cb64-2"><a href="#cb64-2"></a></span>
-<span id="cb64-3"><a href="#cb64-3"></a></span>
-<span id="cb64-4"><a href="#cb64-4"></a>  preds<span class="ot">=</span><span class="fu">predict</span>(model4,<span class="at">newdata=</span>newdata,<span class="at">type=</span><span class="st">"response"</span>,</span>
-<span id="cb64-5"><a href="#cb64-5"></a>              <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>  <span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"x"</span>,<span class="st">"x2"</span>)</span>
+<span id="cb65-2"><a href="#cb65-2"></a></span>
+<span id="cb65-3"><a href="#cb65-3"></a></span>
+<span id="cb65-4"><a href="#cb65-4"></a>  preds<span class="ot">=</span><span class="fu">predict</span>(model4,<span class="at">newdata=</span>newdata,<span class="at">type=</span><span class="st">"response"</span>,</span>
+<span id="cb65-5"><a href="#cb65-5"></a>              <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="additive-model-plot-1" class="slide level2">
 <h2>Additive Model Plot 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">library</span>(sjPlot)</span>
-<span id="cb65-2"><a href="#cb65-2"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb66-2"><a href="#cb66-2"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
 <section id="additive-model-plot-2" class="slide level2">
 <h2>Additive Model Plot 2</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
 <section id="interaction-model" class="slide level2">
 <h2>Interaction Model</h2>
 <h4 id="categorical-2-levels-and-continuous-variable-1">Categorical (2 levels) and Continuous Variable</h4>
@@ -1085,53 +1146,53 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <h2>Interaction Model</h2>
 <h3 id="categorical-2-levels-and-continuous-variable-2">Categorical (2 levels) and Continuous Variable</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="co"># Simulate Variables</span></span>
-<span id="cb67-2"><a href="#cb67-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>),n<span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb67-3"><a href="#cb67-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="co"># Simulate Variables</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a>  x<span class="ot">=</span><span class="fu">as.factor</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Site 1"</span>,<span class="st">"Site 2"</span>),n<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb68-3"><a href="#cb68-3"></a>  <span class="fu">levels</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Site 1" "Site 2"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span>]</span>
-<span id="cb69-2"><a href="#cb69-2"></a></span>
-<span id="cb69-3"><a href="#cb69-3"></a>  <span class="fu">set.seed</span>(<span class="dv">5453</span>)</span>
-<span id="cb69-4"><a href="#cb69-4"></a>  x2<span class="ot">=</span><span class="fu">rpois</span>(n,<span class="dv">100</span>)</span>
-<span id="cb69-5"><a href="#cb69-5"></a></span>
-<span id="cb69-6"><a href="#cb69-6"></a><span class="co"># Parameters </span></span>
-<span id="cb69-7"><a href="#cb69-7"></a>  b0<span class="ot">=</span><span class="dv">50</span></span>
-<span id="cb69-8"><a href="#cb69-8"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">50</span></span>
-<span id="cb69-9"><a href="#cb69-9"></a>  b2<span class="ot">=</span><span class="dv">4</span></span>
-<span id="cb69-10"><a href="#cb69-10"></a>  b3<span class="ot">=</span><span class="sc">-</span><span class="dv">20</span></span>
-<span id="cb69-11"><a href="#cb69-11"></a></span>
-<span id="cb69-12"><a href="#cb69-12"></a><span class="co"># Mean  </span></span>
-<span id="cb69-13"><a href="#cb69-13"></a>  mu <span class="ot">=</span> b0<span class="sc">+</span>b1<span class="sc">*</span>x.var<span class="sc">+</span>b2<span class="sc">*</span>x2<span class="sc">+</span>b3<span class="sc">*</span>(x.var<span class="sc">*</span>x2)</span>
-<span id="cb69-14"><a href="#cb69-14"></a></span>
-<span id="cb69-15"><a href="#cb69-15"></a><span class="co">#Simulate Data</span></span>
-<span id="cb69-16"><a href="#cb69-16"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
-<span id="cb69-17"><a href="#cb69-17"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">10</span>)</span>
-<span id="cb69-18"><a href="#cb69-18"></a></span>
-<span id="cb69-19"><a href="#cb69-19"></a><span class="co"># fit the model</span></span>
-<span id="cb69-20"><a href="#cb69-20"></a>  model5<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x<span class="sc">*</span>x2)</span>
-<span id="cb69-21"><a href="#cb69-21"></a>  model5<span class="fl">.1</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x<span class="sc">+</span>x2<span class="sc">+</span>x<span class="sc">:</span>x2)</span>
-<span id="cb69-22"><a href="#cb69-22"></a></span>
-<span id="cb69-23"><a href="#cb69-23"></a><span class="co">#comparison  </span></span>
-<span id="cb69-24"><a href="#cb69-24"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model5),<span class="fu">coef</span>(model5<span class="fl">.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>  x.var<span class="ot">=</span><span class="fu">model.matrix</span>(<span class="sc">~</span>x)[,<span class="dv">2</span>]</span>
+<span id="cb70-2"><a href="#cb70-2"></a></span>
+<span id="cb70-3"><a href="#cb70-3"></a>  <span class="fu">set.seed</span>(<span class="dv">5453</span>)</span>
+<span id="cb70-4"><a href="#cb70-4"></a>  x2<span class="ot">=</span><span class="fu">rpois</span>(n,<span class="dv">100</span>)</span>
+<span id="cb70-5"><a href="#cb70-5"></a></span>
+<span id="cb70-6"><a href="#cb70-6"></a><span class="co"># Parameters </span></span>
+<span id="cb70-7"><a href="#cb70-7"></a>  b0<span class="ot">=</span><span class="dv">50</span></span>
+<span id="cb70-8"><a href="#cb70-8"></a>  b1<span class="ot">=</span><span class="sc">-</span><span class="dv">50</span></span>
+<span id="cb70-9"><a href="#cb70-9"></a>  b2<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb70-10"><a href="#cb70-10"></a>  b3<span class="ot">=</span><span class="sc">-</span><span class="dv">20</span></span>
+<span id="cb70-11"><a href="#cb70-11"></a></span>
+<span id="cb70-12"><a href="#cb70-12"></a><span class="co"># Mean  </span></span>
+<span id="cb70-13"><a href="#cb70-13"></a>  mu <span class="ot">=</span> b0<span class="sc">+</span>b1<span class="sc">*</span>x.var<span class="sc">+</span>b2<span class="sc">*</span>x2<span class="sc">+</span>b3<span class="sc">*</span>(x.var<span class="sc">*</span>x2)</span>
+<span id="cb70-14"><a href="#cb70-14"></a></span>
+<span id="cb70-15"><a href="#cb70-15"></a><span class="co">#Simulate Data</span></span>
+<span id="cb70-16"><a href="#cb70-16"></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span>)</span>
+<span id="cb70-17"><a href="#cb70-17"></a>  y<span class="ot">=</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span>mu,<span class="at">sd=</span><span class="dv">10</span>)</span>
+<span id="cb70-18"><a href="#cb70-18"></a></span>
+<span id="cb70-19"><a href="#cb70-19"></a><span class="co"># fit the model</span></span>
+<span id="cb70-20"><a href="#cb70-20"></a>  model5<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x2<span class="sc">*</span>x)</span>
+<span id="cb70-21"><a href="#cb70-21"></a>  model5<span class="fl">.1</span><span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span>x<span class="sc">+</span>x2<span class="sc">+</span>x<span class="sc">:</span>x2)</span>
+<span id="cb70-22"><a href="#cb70-22"></a></span>
+<span id="cb70-23"><a href="#cb70-23"></a><span class="co">#comparison  </span></span>
+<span id="cb70-24"><a href="#cb70-24"></a>  <span class="fu">rbind</span>(<span class="fu">coef</span>(model5),<span class="fu">coef</span>(model5<span class="fl">.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     (Intercept)   xSite 2       x2 xSite 2:x2
-[1,]    47.51796 -60.86416 4.037598  -19.92472
-[2,]    47.51796 -60.86416 4.037598  -19.92472</code></pre>
+<pre><code>     (Intercept)         x2    xSite 2 x2:xSite 2
+[1,]    47.51796   4.037598 -60.864156  -19.92472
+[2,]    47.51796 -60.864156   4.037598  -19.92472</code></pre>
 </div>
 </div>
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="co">#Confidence intervals of coefs</span></span>
-<span id="cb71-2"><a href="#cb71-2"></a>  <span class="fu">confint</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="co">#Confidence intervals of coefs</span></span>
+<span id="cb72-2"><a href="#cb72-2"></a>  <span class="fu">confint</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 2.5 %     97.5 %
 (Intercept)  23.600505  71.435410
-xSite 2     -95.499112 -26.229199
 x2            3.799657   4.275539
-xSite 2:x2  -20.270675 -19.578762</code></pre>
+xSite 2     -95.499112 -26.229199
+x2:xSite 2  -20.270675 -19.578762</code></pre>
 </div>
 </div>
 </div>
@@ -1139,12 +1200,12 @@ xSite 2:x2  -20.270675 -19.578762</code></pre>
 <section id="interaction-model-2" class="slide level2">
 <h2>Interaction Model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="co">#Summary  </span></span>
-<span id="cb73-2"><a href="#cb73-2"></a>  <span class="fu">summary</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co">#Summary  </span></span>
+<span id="cb74-2"><a href="#cb74-2"></a>  <span class="fu">summary</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-glm(formula = y ~ x * x2)
+glm(formula = y ~ x2 * x)
 
 Deviance Residuals: 
      Min        1Q    Median        3Q       Max  
@@ -1153,9 +1214,9 @@ Deviance Residuals:
 Coefficients:
             Estimate Std. Error  t value Pr(&gt;|t|)    
 (Intercept)  47.5180    12.2030    3.894 0.000182 ***
-xSite 2     -60.8642    17.6712   -3.444 0.000850 ***
 x2            4.0376     0.1214   33.258  &lt; 2e-16 ***
-xSite 2:x2  -19.9247     0.1765 -112.881  &lt; 2e-16 ***
+xSite 2     -60.8642    17.6712   -3.444 0.000850 ***
+x2:xSite 2  -19.9247     0.1765 -112.881  &lt; 2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -1169,20 +1230,14 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 </div>
 </section>
-<section id="interaction-model-plot-1" class="slide level2">
-<h2>Interaction Model Plot 1</h2>
+<section id="interaction-model-plot" class="slide level2">
+<h2>Interaction Model Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="fu">plot_model</span>(model5, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_sjplot</span>())</span>
+<span id="cb76-2"><a href="#cb76-2"></a><span class="fu">plot_model</span>(model5, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
-<section id="interaction-model-plot-2" class="slide level2">
-<h2>Interaction Model Plot 2</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="fu">plot_model</span>(model5, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
 <section id="evaluating-assumptions" class="slide level2">
 <h2>Evaluating Assumptions</h2>
 <h3 id="largely-done-based-on-the-residuals">Largely done based on the residuals</h3>
@@ -1191,7 +1246,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="fu">hist</span>(model5<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="linearity-variance-assumption" class="slide level2">
 <h2><a href="https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r">Linearity &amp; Variance Assumption</a></h2>
 
@@ -1204,7 +1259,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb78-2"><a href="#cb78-2"></a><span class="fu">plot</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="notes" class="slide level2 scrollable">
 <h2>Notes</h2>
 <p>The scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.</p>
@@ -1218,7 +1273,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb79-2"><a href="#cb79-2"></a><span class="fu">resid_panel</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>

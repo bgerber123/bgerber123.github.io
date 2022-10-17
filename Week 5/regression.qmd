@@ -14,15 +14,15 @@ format:
 ---
 
 ## Objectives
+::: {.incremental}
 -   linear regression fundamentals
 -   glm function
--   categorical and continuous variables
--   additive and interaction models
--   regression assumptions
--   predicting
 -   confidence intervals
 -   bootstrapping for confidence intervals
-
+-   categorical and continuous variables
+-   additive and interaction models
+-   assumptions
+:::
 
 ## Linear Regression (motivation)
 ```{r, echo=FALSE,eval=TRUE}
@@ -33,7 +33,7 @@ x=rnorm(n,40,10)
 mu=b0+b1*x
 y=rnorm(n,mu,sd=30)
 
-plot(x,y)
+plot(x,y,xlim=c(0,70))
 ```
 
 ## Linear Regression (Equation)
@@ -52,7 +52,9 @@ $$
 ## Linear Regression Line 1 {.scrollable}
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main="Intercept (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
+#" (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
+
 lm.out=lm(y~x)
 abline(lm.out,lwd=3,col=3)
 
@@ -63,25 +65,27 @@ legend("topleft",col=c("green"),lty=2,legend=c("Mean"),lwd=4)
 ## Linear Regression Line 2 {.scrollable}
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main="Intercept (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
-abline(lm.out,lwd=3,col=3)
+
+lines(x,predict(lm.out),lwd=3,col=3)
 
 newx = seq(min(x),max(x),by = 0.05)
 conf_interval <- predict(lm.out, newdata=data.frame(x=newx), interval="confidence", level = 0.95)
 
 matlines(newx, conf_interval[,2:3], col = "blue", lty=2,lwd=4)
 
-legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","Confidence Interaval (mean)"),lwd=4)
+legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","95% Confidence Interaval (mean)"),lwd=4)
 
 ```
 
 ## Linear Regression Line 3 {.scrollable}
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main="Intercept (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
-abline(lm.out,lwd=3,col=3)
+
+lines(x,predict(lm.out),lwd=3,col=3)
 
 newx = seq(min(x),max(x),by = 0.05)
 conf_interval <- predict(lm.out, newdata=data.frame(x=newx), interval="confidence", level = 0.95)
@@ -93,7 +97,7 @@ matlines(newx, conf_interval[,2:3], col = "blue", lty=2,lwd=4)
 
 matlines(newx, pred_interval[,2:3], col = "purple", lty=2,lwd=4)
 
-legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","Confidence Interaval (mean)", "Prediction Interval (data)"),lwd=4)
+legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confidence Interaval (mean)", "95% Prediction Interval (data)"),lwd=4)
 
 ```
 
@@ -108,7 +112,7 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","Confidenc
 
 <br>
 
-Correlation($\epsilon_{i}$,$\epsilon_{j}$) = 0, for all pairs of $i$ and $j$
+Correlation($\epsilon_{i}$,$\epsilon_{j}$) = 0, $\forall$ pairs of $i$ and $j$
 
 <br>
 
@@ -131,11 +135,11 @@ Constancy in the scatter of observations above and below the line
 
 <br>
 $$
-E[y_i|x_i] = \mu_i = \beta_0 + \beta_1*x_i \\
+E[y_i|x_i] = \mu_i = \beta_0 + \beta_1 \times x_i \\
 $$
 <br>
 
-The hypothesis about the variables included in the model tell us about the mean. 
+The hypothesis about the variables included in the model (e.g., $x_i$) characterizes the mean well. 
 
 ## Assumptions
 #### Normality
@@ -146,13 +150,22 @@ $$
 $$
 <br>
 
-Each $i^{th}$ residual comes from a Normal distribution with a  mean of zero, is symmetricly disributed around zero, and varies around zero by the standard deviation. 
+Each $i^{th}$ residual 
+
+::: {.incremental}
+
+-   comes from a Normal distribution with a  mean of zero
+-   is symmetrically disributed around zero 
+-   varies around zero by $\sigma$, which is the same for each residual. 
+:::
 
 ## Assumption Violations
 
 <br>
 
 ### Robustness
+
+. . .
 
 <br>
 
@@ -161,7 +174,7 @@ Linearity and constant variance are often more important than the assumption of 
 <br>
 
 <p style="text-align:center">
-<b>This especially true for large sample sizes</b>
+<b>Is especially true for large sample sizes</b>
 </p>
 
 ## Intercept-Only Model
@@ -174,8 +187,6 @@ $$
 ## Simulate Intercept-Only Model
 
 ```{r,eval=TRUE,echo=TRUE,fig.align='center'}
-#Simulate Data for this model
-
 #Setup parameters
   n=100 # sample size
   mu=10 # true mean
@@ -242,7 +253,14 @@ Instead of relying on the 95% intervals from an assumed normal distribution, we 
 resampling our data.
 
 ## Bootstrapping (idea)
-![](regression_files/fieberg.png){fig-align="center" width="450"}
+![](regression_files/fieberg0.png){fig-align="center" width="450"}
+
+## Bootstrapping (idea)
+
+![](regression_files/fieberg1.png){fig-align="center" width="450"}
+
+## Bootstrapping (idea)
+![](regression_files/fieberg3.png){fig-align="center" width="450"}
 
 ## Bootstrapping (code)
 
@@ -306,6 +324,10 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 $$
 where $x_i$ is either a zero or one, indicating whether the $i^{th}$ row is from <span style="color:blue">site 1</span> (*0*) or <span style="color:blue">site 2</span> (*1*).
 
+<br>
+
+This is called *Dummy Coding*.
+
 
 ## Categorical Variable w/ 2 levels {.scrollable}
 
@@ -313,7 +335,13 @@ where $x_i$ is either a zero or one, indicating whether the $i^{th}$ row is from
 # Setup data
   x=as.factor(rep(c("Site 1","Site 2"),n/2))
   levels(x)
-  
+```
+
+<br>
+
+. . .
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
 # Turn the factor into 0 and 1's
   head(model.matrix(~x))
   
@@ -336,6 +364,8 @@ where $x_i$ is either a zero or one, indicating whether the $i^{th}$ row is from
 
 ```
 
+<br>
+
 . . .
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
@@ -347,6 +377,38 @@ where $x_i$ is either a zero or one, indicating whether the $i^{th}$ row is from
   rbind(coef(model2), coef(model2.1))
 ```
 
+## Side-Bar: Maximum Likelihood Optimization {.scrollable}
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
+
+#Here is our negative log-likelihood function with three
+#parameters - the mean (2) and stdev (1)
+neg.log.like = function(par) {
+  mu=par[1]+par[2]*x.var
+  sum(-dnorm(y,mean = mu,sd = par[3],log = TRUE))
+}
+```
+
+<br>
+
+. . .
+
+### Use our function in an optimization function
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
+#use optim with initial values and define the lower and upper limits of the possible values
+fit1 <- optim(
+    par = c(0, 0,1),
+    fn = neg.log.like,
+    method = "L-BFGS-B",
+    lower = c(-100, -100, 0.01),
+    upper = c(400, 400, 100)
+  )
+
+fit1$par
+```
+
+<br>
+
 ## Categorical Variable w/ 2 levels {.scrollable}
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 summary(model2)
@@ -354,7 +416,7 @@ summary(model2)
 
 ## Relevel {.scrollable}
 
-We can manipulate the factor levels of $x$ to indicate that <span style="color:blue">site 1</span> is denoted by a **1** now and <span style="color:blue">site 2</span> is denoted by a **0** now.
+We can manipulate the factor levels of $x$ to indicate that <span style="color:blue">site 1</span> is denoted by a **1** now and <span style="color:blue">site 2</span> is denoted by a **0**.
 
 . . .
 
@@ -375,7 +437,7 @@ We can manipulate the factor levels of $x$ to indicate that <span style="color:b
   model2.2=glm(y~x.relev)
 
 #Look at coefs  
-  rbind(coef(model2),coef(model2.2))
+  rbind(coef(model2),coef(model2.1),coef(model2.2))
 ```
 
 . . .
@@ -384,25 +446,27 @@ We can manipulate the factor levels of $x$ to indicate that <span style="color:b
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #compare predictions  
-  predict(model2)[1:2]  
-  predict(model2.2)[1:2]  
+  rbind(predict(model2)[1:2],  
+        predict(model2.1)[1:2],
+        predict(model2.2)[1:2]  
+  )
 ```
 
-## Categorical Variable w/ 4 levels (Dummy Coding)
-
+## Categorical Variable w/ 4 levels 
+### Dummy Coding
 $$
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3\times x_{3,i})
 $$
-$x_{1,i} =$ indicator of site 2 (1) or not (0)
+$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
 
-$x_{2,i} =$ indicator of site 3 (1) or not (0)
+$x_{2,i} =$ indicator of <span style="color:blue">site 3</span> (1) or not (0)
 
-$x_{3,i} =$ indicator of site 4 (1) or not (0)
+$x_{3,i} =$ indicator of <span style="color:blue">site 4</span> (1) or not (0)
 
 
 
-## Categorical Variable w/ 4 levels (Dummy Coding) {.scrollable}
+## Categorical Variable w/ 4 levels {.scrollable}
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #Setup Data
@@ -427,7 +491,7 @@ $x_{3,i} =$ indicator of site 4 (1) or not (0)
   b3=100 #Diff of site 4 to site 1
   
 # Mean  
-  mu=b0+b1*x.var[,1]+b2*x.var[,2]+b3*x.var[,3]
+  mu = b0+b1*x.var[,1]+b2*x.var[,2]+b3*x.var[,3]
 
 #True mean group-level values
   unique(mu)
@@ -451,13 +515,12 @@ $x_{3,i} =$ indicator of site 4 (1) or not (0)
 . . .
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#fit the model- see how we did
+# fit the model
   model3=glm(y~x)
   model3.1=glm(y~x.var)
 
-#Compare coefs    
-  rbind(coef(model3),
-  coef(model3.1))
+# Compare coefs    
+  rbind(coef(model3), coef(model3.1))
 ```
 
 ## Effect Coding w/ 4 levels {.scrollable}
@@ -486,7 +549,13 @@ $x_{3,i} =$ indicator of site 4 (1) or not (0)
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #The coefficient for site-level 4 (difference from the grand mean)
   coef(model3.2)[1]+sum(coef(model3.2)[-1])
+```
 
+<br>
+
+. . .
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #Predict the values and compare them to the true means for
 #each site
   rbind(unique(mu),
@@ -501,12 +570,12 @@ $$
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i})
 $$
-$x_{1,i} =$ indicator of site 2 (1) or not (0)
+$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
 
-$x_{2,i} =$ is a numeric value
+$x_{2,i} =$ is a continuous numeric value
 
 
-## Additive Model
+## Additive Model {.scrollable}
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #A continuous and categorical variable 
