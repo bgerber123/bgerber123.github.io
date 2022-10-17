@@ -1051,6 +1051,11 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <pre><code>(Intercept)     xSite 2          x2 
   96.615158  -66.748462    3.597896 </code></pre>
 </div>
+</div>
+<p><br></p>
+</div>
+<div class="fragment">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co">#Confidence intervals of coefs</span></span>
 <span id="cb59-2"><a href="#cb59-2"></a>  <span class="fu">confint</span>(model4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1123,14 +1128,14 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb66-2"><a href="#cb66-2"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
 <section id="additive-model-plot-2" class="slide level2">
 <h2>Additive Model Plot 2</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">plot_model</span>(model4, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
 <section id="interaction-model" class="slide level2">
 <h2>Interaction Model</h2>
 <h4 id="categorical-2-levels-and-continuous-variable-1">Categorical (2 levels) and Continuous Variable</h4>
@@ -1138,11 +1143,11 @@ Number of Fisher Scoring iterations: 2</code></pre>
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i}))
 \]</span></p>
-<p><span class="math inline">\(x_{1,i} =\)</span> indicator of site 2 (1) or not (0)</p>
+<p><span class="math inline">\(x_{1,i} =\)</span> indicator of <span style="color:blue">site 2</span> (1) or not (0)</p>
 <p><span class="math inline">\(x_{2,i} =\)</span> is a numeric value</p>
-<p><span class="math inline">\(x_{1,i} \times x_{2,i}=\)</span> is zero for site 1 values and the numeric value for site 2 values</p>
+<p><span class="math inline">\(x_{1,i} \times x_{2,i}=\)</span> is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values</p>
 </section>
-<section id="interaction-model-1" class="slide level2">
+<section id="interaction-model-1" class="slide level2 scrollable">
 <h2>Interaction Model</h2>
 <h3 id="categorical-2-levels-and-continuous-variable-2">Categorical (2 levels) and Continuous Variable</h3>
 <div class="cell">
@@ -1237,7 +1242,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb76-2"><a href="#cb76-2"></a><span class="fu">plot_model</span>(model5, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"x2"</span>,<span class="st">"x"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
 <section id="evaluating-assumptions" class="slide level2">
 <h2>Evaluating Assumptions</h2>
 <h3 id="largely-done-based-on-the-residuals">Largely done based on the residuals</h3>
@@ -1246,7 +1251,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="fu">hist</span>(model5<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="linearity-variance-assumption" class="slide level2">
 <h2><a href="https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r">Linearity &amp; Variance Assumption</a></h2>
 
@@ -1259,7 +1264,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb78-2"><a href="#cb78-2"></a><span class="fu">plot</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="notes" class="slide level2 scrollable">
 <h2>Notes</h2>
 <p>The scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.</p>
@@ -1273,7 +1278,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <span id="cb79-2"><a href="#cb79-2"></a><span class="fu">resid_panel</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>

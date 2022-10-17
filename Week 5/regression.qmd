@@ -610,6 +610,13 @@ $x_{2,i} =$ is a continuous numeric value
 
   coef(model4)
 
+```
+
+<br>
+
+. . .
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #Confidence intervals of coefs
   confint(model4)
 
@@ -661,15 +668,15 @@ $$
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i}))
 $$
-$x_{1,i} =$ indicator of site 2 (1) or not (0)
+$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
 
 $x_{2,i} =$ is a numeric value
 
-$x_{1,i} \times x_{2,i}=$ is zero for site 1 values and the numeric value for site 2 values
+$x_{1,i} \times x_{2,i}=$ is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values
 
 
 
-## Interaction Model
+## Interaction Model {.scrollable}
 
 ### Categorical (2 levels) and Continuous Variable
 
