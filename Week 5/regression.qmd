@@ -628,7 +628,7 @@ $x_{1,i} \times x_{2,i}=$ is zero for site 1 values and the numeric value for si
   y=rnorm(n,mean=mu,sd=10)
 
 # fit the model
-  model5=glm(y~x*x2)
+  model5=glm(y~x2*x)
   model5.1=glm(y~x+x2+x:x2)
 
 #comparison  
@@ -650,25 +650,47 @@ $x_{1,i} \times x_{2,i}=$ is zero for site 1 values and the numeric value for si
   summary(model5)
 ```
 
-## Interaction Model Plot 1
+## Interaction Model Plot
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-plot_model(model5, type = "pred", terms = c("x"))
-```
-
-## Interaction Model Plot 2
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+theme_set(theme_sjplot())
 plot_model(model5, type = "pred", terms = c("x2","x"))
 ```
 
+## Evaluating Assumptions
+### Largely done based on the residuals
+
+$y_{i} - \hat{y}_{i}$
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
+hist(model5$residuals)
+```
+
+
+## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r)
+
+![](regression_files/assumptions.png){fig-align="center" width="1000"}
+
+
+## Normality Assumption {.scrollable}
+
+Top-left: Normal Q-Q plot. Quantiles of the standardized residuals versus quantiles of a standard normal distribution. 
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
+par(mfrow=c(2,2))
+plot(model5)
+```
+
+## Notes {.scrollable }
+
+The scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.
+
+Leverage refers to the extent to which the coefficients in the regression model would change if a particular observation was removed from the dataset.
+
 ## Exploring Assumptions {.scrollable}
 
-"plot(model.name)"
-
-a and b) Plotting y~X
-c and d) Fitted vs. Residuals
-
-![](regression_files/assumptions.png){fig-align="center" width="800"}
-
-From [here](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r)
+Nicer looking Plots
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+library(ggResidpanel)
+resid_panel(model5)
+```

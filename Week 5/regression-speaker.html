@@ -1183,13 +1183,42 @@ Number of Fisher Scoring iterations: 2</code></pre>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
+<section id="evaluating-assumptions" class="slide level2">
+<h2>Evaluating Assumptions</h2>
+<h3 id="largely-done-based-on-the-residuals">Largely done based on the residuals</h3>
+<p><span class="math inline">\(y_{i} - \hat{y}_{i}\)</span></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="fu">hist</span>(model5<span class="sc">$</span>residuals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="linearity-variance-assumption" class="slide level2">
+<h2><a href="https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r">Linearity &amp; Variance Assumption</a></h2>
+
+<img data-src="regression_files/assumptions.png" width="1000" class="r-stretch quarto-figure-center"></section>
+<section id="normality-assumption" class="slide level2 scrollable">
+<h2>Normality Assumption</h2>
+<p>Top-left: Normal Q-Q plot. Quantiles of the standardized residuals versus quantiles of a standard normal distribution.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb78-2"><a href="#cb78-2"></a><span class="fu">plot</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<section id="notes" class="slide level2 scrollable">
+<h2>Notes</h2>
+<p>The scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.</p>
+<p>Leverage refers to the extent to which the coefficients in the regression model would change if a particular observation was removed from the dataset.</p>
+</section>
 <section id="exploring-assumptions" class="slide level2 scrollable">
 <h2>Exploring Assumptions</h2>
-<p>“plot(model.name)”</p>
-<p>a and b) Plotting y~X c and d) Fitted vs.&nbsp;Residuals</p>
+<p>Nicer looking Plots</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fu">library</span>(ggResidpanel)</span>
+<span id="cb79-2"><a href="#cb79-2"></a><span class="fu">resid_panel</span>(model5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="regression_files/assumptions.png" width="800" class="r-stretch quarto-figure-center"><p>From <a href="https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r">here</a></p>
-<div class="footer footer-default">
+</div>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>
