@@ -29,21 +29,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ### **Markdown**
-Create a markdown file that analyses the provided elephant data, accomplishing the below requests:
+Write a report with clear headings and subheadings using markdown. The report will demonstrate code and interpretation of results related to the analysis of the  provided elephant data, specifically accomplishing the below requests. 
 
--   Visualize your data
+-   Visualize your data (in at least two ways). Discuss why you choose to visualize it this way.
 
--   Use the `glm` function and estimate a single $\mu$ and $\sigma$. Interpret test statistics and p-values.
+-   Use the `glm` function and estimate a single $\mu$ and $\sigma$. Interpret estimates and p-values.
 
--   Use the `glm` function to estimate the difference of elephant weight by sex. Interpret coefficient estimates and p-values. 
+-   Use the `glm` function to estimate male and female elephant weight by sex. Interpret coefficient estimates and p-values. 
 
 -   Fit the same model with a sex variable, but change the meaning of the intercept to indicate Female Weight using the `relevel` function. 
 
 - Use both of these above models and predict the male and female weights with SE's and confidence intervals. 
 
--   Fit a new model to estimate site-level variation in elephant weights. Estimate and interpret coefficients and p-values.
+-   Fit a new model to estimate site-level variation in elephant weights. Estimate and interpret coefficients and p-values. Use the `predict` function to get the estimated weights of elephants for each site, the standard errors, and confidence intervals.
 
-- Fit the same model but use effect coding (see links above). Interpret the estimates and p-values. 
+- Fit the same model (as previous) but use effect coding (see links above). Interpret the estimates and p-values.  Use the `predict` function to get the estimated weights of elephants for each site, the standard errors, and confidence intervals. Compare these to the predictions from the previous model fit. 
 
 -   Fit a new model that hypothesizes elephant weight to vary by age (in years) and sex as an additive combination (i.e., no interaction). Interpret coefficient estimates and p-values. Make a plot of the predictions of elephant weight by sex including confidence intervals.
 
