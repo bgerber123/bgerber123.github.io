@@ -134,9 +134,11 @@ install.packages(c("visualize","plotly"))
 
 -   Assigned Reading <a href="/Week 4/Betts et al.pdf">Betts et al. 2021</a> and <a href="/Week 4/Chapter 3. Linear Regression.pdf">Linear Regression Book Chapter</a> or <a href="https://mlu-explain.github.io/linear-regression/">Online Linear Regression</a>
 
-
-
 ### Week 5
+
+No Class / Holiday
+
+### Week 6
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
@@ -157,7 +159,7 @@ install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 
 
 
-### Week 6
+### Week 7
 
 -   Lecture: <a href="Week 6/linear.model.html">GLM</a>
 
@@ -168,7 +170,6 @@ install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 -   <a href="/Week 6/Assignment.GLM.html">Assignment</a>
 
 
-### Week 7
 ### Week 8
 ### Week 9
 ### Week 10

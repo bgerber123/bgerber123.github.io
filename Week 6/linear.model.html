@@ -383,7 +383,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" data-background-image="linear.model_files/background2.png" class="center">
   <h1 class="title"><span style="color:black">The Linear Model</span></h1>
 </section>
 
@@ -405,6 +405,7 @@ pre {
 <p>In ecology, we use models to,</p>
 <ul>
 <li>describe relationships among outcomes and processes</li>
+<li>to estimate hidden (latent) processes</li>
 <li>predict future outcomes, such as responses to management</li>
 </ul>
 </div>
@@ -431,6 +432,26 @@ pre {
 <p><img data-src="linear.model_files/tada.png" width="275"></p>
 </figure>
 </div>
+</div>
+</section>
+<section id="glm-1" class="slide level2 scrollable">
+<h2>GLM</h2>
+<p>Generalized linear model framework</p>
+<p><span class="math display">\[
+\begin{align*}
+\textbf{y}\sim&amp; [\textbf{y}|\boldsymbol{\mu},\sigma] \\
+\text{g}(\boldsymbol{\mu}) =&amp; \textbf{X}\boldsymbol{\beta}
+\end{align*}
+\]</span></p>
+<h3 id="essential-elements">Essential Elements</h3>
+<div>
+<ul>
+<li class="fragment">probability function to define RV, <span class="math inline">\(y\)</span></li>
+<li class="fragment">parameters of the probability function (<span class="math inline">\(\boldsymbol{\mu},\sigma\)</span>)</li>
+<li class="fragment">link function (<span class="math inline">\(\text{g}(\boldsymbol{\mu})\)</span>); deterministic transformation of prob. function parameters</li>
+<li class="fragment">design matrix to define hypothesis (<span class="math inline">\(\textbf{X}\)</span>)</li>
+<li class="fragment">coefficient parameters (<span class="math inline">\(\boldsymbol{\beta}\)</span>); needs estimating</li>
+</ul>
 </div>
 </section>
 <section id="linear-regression-index-notation" class="slide level2">
@@ -468,11 +489,11 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># marginal coefficients (estimated if unknown)</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># marginal coefficients </span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>  beta0 <span class="ot">=</span> <span class="dv">0</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>  beta1 <span class="ot">=</span> <span class="fl">0.5</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#stdev of y, (estimated if unknown) </span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># sd of y</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a>  sigma <span class="ot">=</span> <span class="fl">0.5</span></span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
 <span id="cb3-8"><a href="#cb3-8"></a><span class="co"># Derive mu  </span></span>
@@ -481,15 +502,13 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 <span id="cb3-11"><a href="#cb3-11"></a><span class="co"># Single random realization of y, </span></span>
 <span id="cb3-12"><a href="#cb3-12"></a><span class="co">#  based on mu and sigma  </span></span>
 <span id="cb3-13"><a href="#cb3-13"></a>  <span class="fu">set.seed</span>(<span class="dv">43252</span>)</span>
-<span id="cb3-14"><a href="#cb3-14"></a>  y <span class="ot">=</span>  <span class="fu">rnorm</span>(<span class="fu">length</span>(mu),<span class="at">mean =</span> mu, <span class="at">sd =</span> sigma)</span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="co">#plot x and y  </span></span>
-<span id="cb3-17"><a href="#cb3-17"></a>  <span class="fu">par</span>(<span class="at">cex.axis=</span><span class="fl">1.3</span>,<span class="at">cex.lab=</span><span class="fl">1.3</span>)</span>
-<span id="cb3-18"><a href="#cb3-18"></a>  <span class="fu">plot</span>(x,y,<span class="at">type=</span><span class="st">"p"</span>,<span class="at">col=</span><span class="dv">4</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">3</span>),</span>
-<span id="cb3-19"><a href="#cb3-19"></a>       <span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="dv">2</span>)</span>
-<span id="cb3-20"><a href="#cb3-20"></a>  <span class="fu">lines</span>(x,mu,<span class="at">lwd=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-14"><a href="#cb3-14"></a>  y <span class="ot">=</span>  <span class="fu">rnorm</span>(<span class="fu">length</span>(mu),<span class="at">mean =</span> mu, <span class="at">sd =</span> sigma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -507,7 +526,7 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 <span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">points</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(x),y,<span class="at">type=</span><span class="st">"p"</span>,<span class="at">col=</span><span class="dv">4</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">3</span>),</span>
 <span id="cb4-10"><a href="#cb4-10"></a>       <span class="at">pch=</span><span class="dv">18</span>,<span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -762,7 +781,7 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 <span id="cb23-10"><a href="#cb23-10"></a><span class="co"># Plot relationship b/w mean (mu) and variable of interest</span></span>
 <span id="cb23-11"><a href="#cb23-11"></a>  <span class="fu">plot</span>(X[,<span class="dv">2</span>],mu,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">4</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -852,14 +871,14 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <span id="cb33-3"><a href="#cb33-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb33-4"><a href="#cb33-4"></a>      <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">1</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>  <span class="fu">plot</span>(<span class="fu">density</span>(coef.est[<span class="dv">2</span>,],<span class="at">adjust=</span><span class="dv">2</span>),<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">2</span>,</span>
 <span id="cb34-2"><a href="#cb34-2"></a>       <span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution"</span><span class="sc">~</span>beta[<span class="dv">1</span>]),</span>
 <span id="cb34-3"><a href="#cb34-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">1</span>]))</span>
 <span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">2</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-16-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-17-2.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -915,7 +934,7 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <span id="cb35-4"><a href="#cb35-4"></a><span class="fu">plot</span>(p,logit.p,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">xlab=</span><span class="st">'p'</span>,<span class="at">ylab=</span><span class="st">"logit(p)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="linear.model_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch quarto-figure-center"></section>
+<img data-src="linear.model_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="logistic-regression-simulation" class="slide level2 scrollable">
 <h2>Logistic Regression Simulation</h2>
 <div class="fragment">
@@ -974,7 +993,7 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -983,7 +1002,7 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-20-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-21-2.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1049,14 +1068,14 @@ Number of Fisher Scoring iterations: 9</code></pre>
 <span id="cb50-3"><a href="#cb50-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb50-4"><a href="#cb50-4"></a>      <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">1</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
 </div>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>  <span class="fu">plot</span>(<span class="fu">density</span>(coef.est[<span class="dv">2</span>,],<span class="at">adjust=</span><span class="dv">2</span>),<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">2</span>,</span>
 <span id="cb51-2"><a href="#cb51-2"></a>       <span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution"</span><span class="sc">~</span>beta[<span class="dv">1</span>]),</span>
 <span id="cb51-3"><a href="#cb51-3"></a>       <span class="at">xlab=</span><span class="fu">bquote</span>(beta[<span class="dv">0</span>]))</span>
 <span id="cb51-4"><a href="#cb51-4"></a>  <span class="fu">abline</span>(<span class="at">v=</span>beta[<span class="dv">2</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-23-2.png" width="960"></p>
+<p><img data-src="linear.model_files/figure-revealjs/unnamed-chunk-24-2.png" width="960"></p>
 </div>
 </div>
 </div>
