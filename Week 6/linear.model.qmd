@@ -73,18 +73,15 @@ $$
 ### Essential Elements
 ::: {.incremental}
 
--   probability function to define RV, $y$
--   parameters of the probability function ($\boldsymbol{\mu},\sigma$)
+-   prob. function to define the RV ($y$)
+-   parameters of the prob. function ($\boldsymbol{\mu},\sigma$)
 -   link function ($\text{g}(\boldsymbol{\mu})$); deterministic transformation of prob. function parameters
--   design matrix to define hypothesis ($\textbf{X}$)
+-   design matrix of the explanatory variables ($\textbf{X}$); these are known
 -   coefficient parameters ($\boldsymbol{\beta}$); needs estimating
 :::
 
 
-## Linear Regression Index Notation 
-![](linear.model_files/index.notation.png){fig-align="center" width="275"}
-
-## Linear Regression Figure
+## Linear Regression Index Notation
 $$
 y_{i} = \beta_0+\beta_1 x_i + \epsilon_i \\ \epsilon_i \sim \text{Normal}(0,\sigma)
 $$
@@ -102,7 +99,7 @@ y_{i} \sim& \text{Normal}(\mu_{i},\sigma) \\
 $$
 . . .
 
-$$\mu_{i} = 0 + 0.5 \times x_{i}$$
+$$\mu_{i} = 1 + 0.5 \times x_{i}$$
 
 . . .
 
@@ -116,7 +113,7 @@ $$\mu_{i} = 0 + 0.5 \times x_{i}$$
 
 ```{r, eval=TRUE, echo=TRUE}
 # marginal coefficients 
-  beta0 = 0
+  beta0 = 1
   beta1 = 0.5
 
 # sd of y
@@ -136,7 +133,7 @@ $$\mu_{i} = 0 + 0.5 \times x_{i}$$
 ```{r, eval=TRUE, echo=FALSE}
 #plot x and y  
   par(cex.axis=1.3,cex.lab=1.3)
-  plot(x,y,type="p",col=4,lwd=4,ylim=c(-2,3),
+  plot(x,y,type="p",col=4,lwd=4,ylim=c(-2,4),
        pch=18,cex=2)
   lines(x,mu,lwd=3)
 ```
@@ -148,10 +145,15 @@ $$\mu_{i} = 0 + 0.5 \times x_{i}$$
 ```{r, eval=TRUE, echo=TRUE}
 #sample many times  
   y.many = replicate(1000,rnorm(length(mu),mu, sigma))
+  dim(y.many)
+```
 
+. . .
+
+```{r, eval=TRUE, echo=FALSE}
 #plot all samples with true mu
   par(cex.axis=1.3,cex.lab=1.3)
-  matplot(y.many,type="p",pch=18,xaxt="n",col=2,cex=2,xlab="x",ylab="y")
+  matplot(y.many,type="p",pch=18,xaxt="n",col=2,cex=2,xlab="x",ylab="y",ylim=c(-2,4))
   axis(1,at=1:length(x),lab=x)
   lines(1:length(x),mu,lwd=3)
   points(1:length(x),y,type="p",col=4,lwd=4,ylim=c(-2,3),
@@ -204,8 +206,8 @@ beta
 . . .
 
 ```{r, eval=TRUE, echo=TRUE}
-p=2
-X <- matrix(c(1,2,3,4,5,6),nrow=3,ncol=p,byrow=FALSE)
+p=3
+X <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE)
 X
 ```
 
@@ -244,13 +246,23 @@ t(y)%*%y
 
 When can we do matrix multiplication?
 
+. . .
+
 ```{r, eval=TRUE, echo=TRUE}
 first=t(y)
 dim(first)
+```
 
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
 second=y
 dim(second)
+```
 
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
 #When this is true
   ncol(first)==nrow(second)
 ```
@@ -310,7 +322,78 @@ $$
 \end{bmatrix}\\
 $$
 
-## Link functions
+## Elephant Linear Regression Example {.scrollable}
+
+$x_{,2}$ is an indicator of sex, female (0) or not female (1)
+
+$x_{,3}$ elephant age 
+
+. . . 
+
+$$
+\textbf{X}\boldsymbol{\beta} = 
+\begin{bmatrix}
+\beta_0 + (\beta_1\times 1) + (\beta_1\times 7) \\
+\beta_0 + (\beta_1\times 0) + (\beta_1\times 29) \\
+\beta_0 + (\beta_1\times 0) + (\beta_1\times 19) \\
+\end{bmatrix}\\
+$$
+
+. . .
+
+$$
+\textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+3168 + (6769.9\times 1) + (114.8\times 7) \\
+3168 + (6769.9\times 0) + (114.8\times 29) \\
+3168 + (6769.9\times 0) + (114.8\times 19) \\
+\end{bmatrix}\\
+$$
+
+. . .
+
+$$
+\textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+3168 + (6769.9) + (803.6) \\
+3168 + (0) + (3329.2) \\
+3168 + (0) + (2181.2) \\
+\end{bmatrix}\\
+$$
+
+. . .
+$$
+\textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+10741.327     \\
+6496.481 \\
+5348.744 \\
+\end{bmatrix}\\
+$$
+## An Estimator with Linear Algebra
+$$
+\hat{\beta} = (\textbf{X}'\textbf{X})^{-1}\textbf{X}'\textbf{y}
+$$
+. . .
+
+
+```{r, eval=TRUE, echo=TRUE}
+# GLM coefs
+  coef(glm(y~x))
+```
+
+<br>
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+# Linear Algebra Coefs
+  X=model.matrix(~x)
+  c(solve(t(X)%*%X)%*%t(X)%*%y)
+```
+
+
+## Link functions {.scrollable}
 
 $\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
 
@@ -332,9 +415,35 @@ Link functions map parameters from one <span style="color:red">support</span> to
 
 To put a linear model on parameters of interest and ensure the parameter support is maintained.
 
+```{r, eval=TRUE, echo=FALSE}
+   n=100
+   set.seed(43243)
+  x=rnorm(n,1,0.6)
+  p=0.2+0.3*x+rnorm(n,0,0.05)
+  plot(x,p,xlab="Variable",ylab="Probability",
+       ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
+```
+
+. . . 
+
+```{r, eval=TRUE, echo=FALSE}
+  plot(x,p,xlab="Variable",ylab="Probability",
+       ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
+  abline(h=c(0,1),lwd=3,col='purple')
+
+  abline(glm(p~x),lwd=3,col=2)
+```
+
+
+. . .
+
+<br>
+
+Computers do not like boundaries (e.g., 0 or 1). It's easier to **guess** values to evaluate in a maximum liklihood optimization when there are no bounds. ($-\infty$, $\infty$)
+
 ## Link functions {.scrollable}
 
-### Identity 
+### <span style="color:blue">Identity </span>
 $\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}$
 
 . . .
@@ -378,11 +487,11 @@ $$
 #linear terms
   lt = X%*%beta
 
-#mu (no transformation needed)
-  mu=lt
+#mu (link function)
+  mu=lt*1
 
 # Plot relationship b/w mean (mu) and variable of interest
-  plot(X[,2],mu,type="b",lwd=4)  
+  plot(X[,2],mu,type="l",lwd=4)  
 ```
 
 . . .
@@ -390,16 +499,31 @@ $$
 ```{r, eval=TRUE,echo=TRUE}
 #sample
   set.seed(5435)
-  y = rnorm(length(mu),mu)
+  y = rnorm(length(mu),mu,sd=3)
   y
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+# Plot relationship b/w mean (mu) and variable of interest
+  plot(X[,2],mu,type="l",lwd=4)  
+  points(X[,2],y,pch=18,col=2,cex=2)
 ```
 
 ## Linear Regression Estimation {.scrollable}
 ```{r, eval=TRUE, echo=TRUE}
 # Fit model to sample
-  model1=glm(y~X+0,family = gaussian(link = "identity"))
+  model1=glm(y~0+X,family = gaussian(link = "identity"))
+```
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
   summary(model1)
 ```
+
+<br>
 
 . . .
 
@@ -417,7 +541,7 @@ extract_eq(model1)
   
  #Estimate coefs for all 100 samples
   coef.est=apply(y.many,2,FUN=function(y){
-              model1=glm(y~X+0,family = gaussian(link = "identity"))
+              model1=glm(y~0+X,family = gaussian(link = "identity"))
               model1$coefficients
   })
 
@@ -428,7 +552,7 @@ extract_eq(model1)
 
 . . .
 
-```{r, eval=TRUE, echo=TRUE}  
+```{r, eval=TRUE, echo=FALSE}  
   plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[0]),
        xlab=bquote(beta[0]))
@@ -495,10 +619,11 @@ $\textbf{X}\boldsymbol{\beta} \in (-\infty,\infty)$
 ## logit/p mapping {.scrollable}
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
-p=seq(0.01,0.99,by=0.01)
+p=seq(0.001,0.999,by=0.01)
 logit.p=qlogis(p)
 par(cex.lab=1.5,cex.axis=1.5)
 plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
+
 ```
 
 ## Logistic Regression Simulation {.scrollable}
@@ -508,7 +633,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
 #Design matrix
   set.seed(43534)
-  Var1 = rnorm(20)
+  Var1 = rnorm(100)
   X = model.matrix(~Var1)
   head(X)
 ```  
@@ -517,7 +642,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
 # marginal coefficients (on logit-scale)
-  beta=c(-4,8)
+  beta=c(-2,4)
 
 #linear terms
   lt = X%*%beta
@@ -547,20 +672,21 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ## Logistic Regression Estimation {.scrollable}
 ```{r, eval=TRUE, echo=TRUE}
 # Fit model to sample 
-  model1=glm(y~X+0, family = binomial(link = "logit"))
+  model1=glm(y~0+X, family = binomial(link = "logit"))
   summary(model1)
 ```
 
-## Lostici Regression Evaluation {.scrollable}
+## Logistic Regression Evaluation {.scrollable}
 
 ```{r, eval=TRUE, echo=TRUE}
  #sample many times  
-  y.many = replicate(1000,rbinom(n=length(p),size=1,p))
+  n.sim=1000
+  y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))
   dim(y.many)
   
  #Estimate coefs for all 100 samples
   coef.est=apply(y.many,2,FUN=function(y){
-          model1=glm(y~X+0, family = binomial(link = "logit"))
+          model1=glm(y~0+X, family = binomial(link = "logit"))
           
   model1$coefficients
   })
@@ -572,15 +698,53 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 . . .
 
-```{r, eval=TRUE, echo=TRUE}  
+## Plot Intercept
+```{r, eval=TRUE, echo=FALSE}  
   plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[0]),
        xlab=bquote(beta[0]))
       abline(v=beta[1],col=2,lwd=4)
+```
+
+## Plot Slope
+```{r, eval=TRUE, echo=FALSE}  
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
        xlab=bquote(beta[0]))
   abline(v=beta[2],col=2,lwd=4)
+```
+
+## Evaluate Sampling Distributions
+
+Is our model biased?
+
+```{r, eval=TRUE, echo=TRUE}  
+# Relative Bias
+  (median(coef.est[1,])-beta[1])/beta[1]
+  (median(coef.est[2,])-beta[2])/beta[2]
+```
+
+## Evaluate Sampling Distributions
+
+Are we going to estimate the sign of the coef correctly?
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating a coef of the wrong sign
+  length(which(coef.est[1,]>0))/n.sim
+  length(which(coef.est[2,]<0))/n.sim
+```
+
+## Evaluate Sampling Distributions
+
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating the slope 2x the truth
+    length(which(coef.est[2,]>2*beta[2]))/n.sim
+```
+
+## Evaluate Sampling Distributions
+
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating the slope within 1
+    length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim
 ```
 
 
@@ -604,11 +768,88 @@ td {
 | Log-linear Regression| Poisson       | log      |
 | Poisson Regression   | Poisson       | log      |
 | Survival Analysis    | Exponential   | log      | 
-| Linear Regression    | Normal        | Identity |
-| Inverse Polynomials  | Gamma         | Reciprocal|
+| Inverse Polynomial  | Gamma         | Reciprocal|
 
 : {tbl-colwidths="\[60,10,10\]"}
 
 [Nelder and Wedderburn (1972)](https://www.jstor.org/stable/2344614)
 
+## Multi-Collinearity
 
+![](linear.model_files/graham.png){fig-align="center" width="275"}
+
+. . .
+
+Correlation among explantory variables
+
+-   Can happen when $r \geq 0.28$ or $r^2 \geq 0.08$
+-   causes inaccurate estimation
+-   decreases statistical power
+-   leads to exclusion of important predictor variables
+
+
+## Multi-Collinearity (Code) {.scrollable}
+
+```{r,eval=TRUE, echo=TRUE}
+library(faux)
+n=100
+set.seed(543531)
+x.var <- rnorm_multi(n = n, 
+                  mu = c(10, 20),
+                  sd = c(1, 1),
+                  r = c(0), 
+                  varnames = c("A", "B"),
+                  empirical = FALSE)
+
+set.seed(54353)
+x.var.cor <- rnorm_multi(n = n, 
+                  mu = c(10, 20),
+                  sd = c(1, 1),
+                  r = c(0.8), 
+                  varnames = c("A", "B"),
+                  empirical = FALSE)
+
+#Correlation
+  cor(x.var)
+  cor(x.var.cor)
+
+```
+
+## Multi-Collinearity (Code)
+```{r,eval=TRUE, echo=TRUE, fig.align='center'}
+par(mfrow=c(1,2))
+  plot(x.var.cor$A,x.var.cor$B)
+  plot(x.var$A,x.var$B)
+```
+
+## Multi-Collinearity (Code)
+
+```{r,eval=TRUE, echo=TRUE}
+
+#Design matrices
+  X.cor=model.matrix(~x.var.cor$A+x.var.cor$B)
+  X=model.matrix(~x.var$A+x.var$B)
+
+#True coefs  
+  beta=c(1,2,3)
+
+#Derive mu  
+  mu=X%*%beta
+  mu.cor=X.cor%*%beta
+
+#simulate data  
+  set.seed(54353)
+  y=rnorm(n,mu,2)
+  y.cor=rnorm(n,mu.cor,2)
+```
+
+## Model Estimates
+```{r,eval=TRUE, echo=TRUE}
+summary(glm(y~0+X))
+```
+
+
+## Model Estimates
+```{r,eval=TRUE, echo=TRUE}
+summary(glm(y~0+X.cor))
+```
