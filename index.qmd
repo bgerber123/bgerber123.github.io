@@ -160,6 +160,10 @@ install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 
 
 ### Week 7
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("equatiomatic","faux"))
+```
 
 -   Lecture: <a href="Week 6/linear.model.html">GLM</a>
 
