@@ -1219,7 +1219,7 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <h2>Evaluate Sampling Distributions</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="co"># Probability of estimating the slope within 1</span></span>
-<span id="cb65-2"><a href="#cb65-2"></a>    <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;=</span>beta[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> coef.est[<span class="dv">2</span>,]<span class="sc">&lt;=</span>beta[<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb65-2"><a href="#cb65-2"></a><span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;=</span>beta[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> coef.est[<span class="dv">2</span>,]<span class="sc">&lt;=</span>beta[<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.741</code></pre>
 </div>

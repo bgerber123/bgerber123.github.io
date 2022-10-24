@@ -1,7 +1,7 @@
 ---
 title: "GLM Assignment"
 author: "Brian D. Gerber"
-date: "2022-09-07"
+date: "2022-10-24"
 output: html_document
 ---
 
@@ -18,10 +18,31 @@ pre{
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: To learn about genearlized linear models (GLM) by evaluating characteristics.
+### **Objective**: To apply genearlized linear model (GLM) thinking to consider study design considerations.
 
 ### **Markdown**
-Together, we will outline two study design evaluations that use generalized linear models. 
+A colleague is interested in doing a study on the variation in abundance of basswood (*Tilia americana*) throughout a New England forest. 
 
-You will develop code that is implemented and explained within a markdown file.
+<p align="center">
+<img src="basswood.png" alt="drawing" width="250"/>
+</p>
 
+They are able to sample between 100-200 100m x 100m plots and count the number of basswood trees perfectly within each plot. Their two main variables of interest are <span style="color:blue">soil acidity</span> and <span style="color:blue">slope. </span>
+
+They are worried that these variables are <span style="color:blue">negatively correlated</span> and might be difficult to estimate model parameters accurately. 
+
+Please design a simulation exercises that 
+
+- uses a generalized linear model framework to simulate at least 1000 data sets and estimates model parameters (per scenario)
+
+- considers <span style="color:blue">two</span> different levels of correlation among the variables of interest (e.g., low and high)
+
+- considers <span style="color:blue">two</span> combinations of magnitudes of effect sizes
+
+- plots the sampling distribution of estimated coefficients
+
+- determines the relative bias and precision of estimated coefficients 
+
+- makes a recommendation to the colleague on implications of study design (i.e., summarize your findings)
+
+Lastly, when putting the markdown file together, define the full generalized linear model with statistical notation, e.g., as we did for logistic regression in lecture.
