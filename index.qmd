@@ -165,9 +165,10 @@ install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 
 -   Lecture Code: <a href="/Week 6/linear.model.R">linear.model.R</a>
 
--   Download: <a href="">NEED?</a>
+-   Assignment: <a href="/Week 6/Assignment.GLM.Rmd">1) Markdown File</a> <a href="/Week 5/Assignment.GLM.html">1) Compiled HTML</a>
 
--   <a href="/Week 6/Assignment.GLM.html">Assignment</a>
+-   Assigned Readings: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
+
 
 
 ### Week 8
