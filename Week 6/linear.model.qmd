@@ -61,7 +61,8 @@ $$
 
 
 ## GLM {.scrollable}
-Generalized linear model framework
+<p style="color:purple">Generalized linear model framework</p>
+
 
 $$
 \begin{align*}
@@ -70,10 +71,10 @@ $$
 \end{align*}
 $$
 
-### Essential Elements
+### Elements
 ::: {.incremental}
 
--   prob. function to define the RV ($y$)
+-   prob. function to define the RV ($\textbf{y}$)
 -   parameters of the prob. function ($\boldsymbol{\mu},\sigma$)
 -   link function ($\text{g}(\boldsymbol{\mu})$); deterministic transformation of prob. function parameters
 -   design matrix of the explanatory variables ($\textbf{X}$); these are known
@@ -103,15 +104,10 @@ $$\mu_{i} = 1 + 0.5 \times x_{i}$$
 
 . . .
 
-```{r, eval=TRUE, echo=TRUE}
+```{r, eval=TRUE, echo=FALSE}
 # x variable (independent and known)
   x = seq(0,2,by=0.1)
-  x
-```  
 
-. . .
-
-```{r, eval=TRUE, echo=TRUE}
 # marginal coefficients 
   beta0 = 1
   beta1 = 0.5
@@ -128,8 +124,6 @@ $$\mu_{i} = 1 + 0.5 \times x_{i}$$
   y =  rnorm(length(mu),mean = mu, sd = sigma)
 ```
 
-. . .
-
 ```{r, eval=TRUE, echo=FALSE}
 #plot x and y  
   par(cex.axis=1.3,cex.lab=1.3)
@@ -142,7 +136,7 @@ $$\mu_{i} = 1 + 0.5 \times x_{i}$$
 
 #### Plot many replicates of y
 
-```{r, eval=TRUE, echo=TRUE}
+```{r, eval=TRUE, echo=FALSE}
 #sample many times  
   y.many = replicate(1000,rnorm(length(mu),mu, sigma))
   dim(y.many)
@@ -153,7 +147,7 @@ $$\mu_{i} = 1 + 0.5 \times x_{i}$$
 ```{r, eval=TRUE, echo=FALSE}
 #plot all samples with true mu
   par(cex.axis=1.3,cex.lab=1.3)
-  matplot(y.many,type="p",pch=18,xaxt="n",col=4,cex=2,xlab="x",ylab="y",ylim=c(-2,4))
+  matplot(y.many,type="p",pch=18,xaxt="n",col=2,cex=2,xlab="x",ylab="y",ylim=c(-2,4))
   axis(1,at=1:length(x),lab=x)
   lines(1:length(x),mu,lwd=3)
   points(1:length(x),y,type="p",col=4,lwd=4,ylim=c(-2,3),
@@ -161,11 +155,26 @@ $$\mu_{i} = 1 + 0.5 \times x_{i}$$
 ```
 
 
-## Vector Notation 
-Column vectors
+## Vector Notation {.scrollable}
+<p style="color:purple">Row vectors</p>
+
+-   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+y <- matrix(c(1,2,3),nrow=1,ncol=3)
+y
+```
+
+<br>
+
+. . .
+
+
+<p style="color:purple">Column vectors</p>
 
 -   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)'$
-<br>
 
 . . .
 
@@ -174,7 +183,9 @@ y <- matrix(c(1,2,3),nrow=3,ncol=1)
 y
 ```
 
+
 ## Vector Notation 
+<p style="color:purple">Column vectors</p>
 
 -   $\textbf{x} \equiv (x_1, x_2, . . ., x_n)'$ 
 
@@ -184,6 +195,7 @@ x
 ```
 
 ## Vector Notation 
+<p style="color:purple">Column vectors</p>
 
 -   $\boldsymbol{\beta} \equiv (\beta_1,\beta_2,...,\beta_p)'$ 
 
@@ -195,6 +207,7 @@ beta
 
 
 ## Vector Notation 
+<p style="color:purple">Column vectors</p>
 
 -   $\mathbf{1} \equiv (1,1,...,1)'$ 
 
@@ -211,9 +224,11 @@ X <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE)
 X
 ```
 
-## Linear Algebra 
+## Linear Algebra {.scrollable}
 
 -   $\textbf{y}'\textbf{y}$
+
+-   $\textbf{y}' \cdot \textbf{y}$
 
 . . .
 
@@ -270,6 +285,20 @@ dim(second)
 
 ```{=html}
 <span><center>(1 x 3) (3 x 1)</center></span>
+```
+
+## Linear Algebra
+
+Note that 
+
+$\textbf{y}'\textbf{y} \neq \textbf{y}\textbf{y}'$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+t(y)%*%y
+
+y%*%t(y)
 ```
 
 
@@ -344,9 +373,9 @@ $$
 $$
 \textbf{X}\hat{\boldsymbol{\beta}} = 
 \begin{bmatrix}
-3168 + (6769.9\times 1) + (114.8\times 7) \\
-3168 + (6769.9\times 0) + (114.8\times 29) \\
-3168 + (6769.9\times 0) + (114.8\times 19) \\
+2552.82 + (6828.96\times 1) + (145.74\times 7) \\
+2552.82 + (6828.96\times 0) + (145.74\times 29) \\
+2552.82 + (6828.96\times 0) + (145.74\times 19) \\
 \end{bmatrix}\\
 $$
 
@@ -355,9 +384,9 @@ $$
 $$
 \textbf{X}\hat{\boldsymbol{\beta}} = 
 \begin{bmatrix}
-3168 + (6769.9) + (803.6) \\
-3168 + (0) + (3329.2) \\
-3168 + (0) + (2181.2) \\
+2552.82 + 6828.96 + 1020.2 \\
+2552.82 + 0 + 4226.7 \\
+2552.82 + 0 + 2769.2 \\
 \end{bmatrix}\\
 $$
 
@@ -365,9 +394,9 @@ $$
 $$
 \textbf{X}\hat{\boldsymbol{\beta}} = 
 \begin{bmatrix}
-10741.327     \\
-6496.481 \\
-5348.744 \\
+10401.98     \\
+6779.52 \\
+5322.02 \\
 \end{bmatrix}\\
 $$
 ## An Estimator with Linear Algebra
@@ -379,7 +408,9 @@ $$
 
 ```{r, eval=TRUE, echo=TRUE}
 # GLM coefs
-  coef(glm(y~x))
+  eleph=read.csv("elephant.study.csv")
+  X=model.matrix(~sex+age.years,data=eleph)
+  coef(glm(weight~0+X,data=eleph))
 ```
 
 <br>
@@ -388,7 +419,7 @@ $$
 
 ```{r, eval=TRUE, echo=TRUE}
 # Linear Algebra Coefs
-  X=model.matrix(~x)
+  y=eleph$weight
   c(solve(t(X)%*%X)%*%t(X)%*%y)
 ```
 
@@ -422,6 +453,7 @@ To put a linear model on parameters of interest and ensure the parameter support
   p=0.2+0.3*x+rnorm(n,0,0.05)
   plot(x,p,xlab="Variable",ylab="Probability",
        ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
+    abline(h=c(0,1),lwd=3,col='purple')
 ```
 
 . . . 
@@ -431,7 +463,14 @@ To put a linear model on parameters of interest and ensure the parameter support
        ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
   abline(h=c(0,1),lwd=3,col='purple')
 
-  abline(glm(p~x),lwd=3,col=2)
+  #abline(glm(p~x),lwd=3,col=2)
+  newdata=data.frame(x=seq(-1,3,by=0.25))
+  a=predict(glm(p~x),newdata = newdata,se.fit = TRUE)
+  LCL=a$fit-a$se.fit*qnorm(0.025)
+  UCL=a$fit-a$se.fit*qnorm(0.975)
+  lines(newdata$x,a$fit,lwd=3,col=2)
+  lines(newdata$x,LCL,lwd=3,col=3)
+  lines(newdata$x,UCL,lwd=3,col=3)
 ```
 
 
@@ -557,10 +596,12 @@ extract_eq(model1)
        main=bquote("Sampling Distribution"~beta[0]),
        xlab=bquote(beta[0]))
       abline(v=beta[1],col=2,lwd=4)
+      legend("topright",lwd=3,col=2,legend="True Value")
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
        xlab=bquote(beta[1]))
   abline(v=beta[2],col=2,lwd=4)
+    legend("topright",lwd=3,col=2,legend="True Value")
 ```
 
 
@@ -660,7 +701,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 . . .
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
-#Plot the linear 'terms'  and probability
+#Plot the linear 'terms'  and explantory variable
   par(cex.lab=1.2,cex.axis=1.2)
   plot(Var1,lt,type="b",lwd=3,col=2,
        xlab="x",ylab="Linear Terms (logit-value)")  
@@ -704,6 +745,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
        main=bquote("Sampling Distribution"~beta[0]),
        xlab=bquote(beta[0]))
       abline(v=beta[1],col=2,lwd=4)
+            legend("topright",lwd=3,col=2,legend="True Value")
 ```
 
 ## Plot Slope
@@ -712,6 +754,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
        main=bquote("Sampling Distribution"~beta[1]),
        xlab=bquote(beta[0]))
   abline(v=beta[2],col=2,lwd=4)
+        legend("topright",lwd=3,col=2,legend="True Value")
 ```
 
 ## Evaluate Sampling Distributions

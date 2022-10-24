@@ -35,6 +35,8 @@ Please design a simulation exercises that
 
 - uses a generalized linear model framework to simulate at least 1000 data sets and estimates model parameters (per scenario)
 
+- implements matrix multiplication to link variables to coefficients 
+
 - considers <span style="color:blue">two</span> different levels of correlation among the variables of interest (e.g., low and high)
 
 - considers <span style="color:blue">two</span> combinations of magnitudes of effect sizes
@@ -46,3 +48,6 @@ Please design a simulation exercises that
 - makes a recommendation to the colleague on implications of study design (i.e., summarize your findings)
 
 Lastly, when putting the markdown file together, define the full generalized linear model with statistical notation, e.g., as we did for logistic regression in lecture.
+
+**Errors**: If you are getting lots of errors when fitting models for certain random datasets, don't use apply but use a for loop to diagnose the iteration that fails so you can deternine what is happening. You can also force to skip that iteration, but make sure to record it and present these issues as part of your results/summary. 
+

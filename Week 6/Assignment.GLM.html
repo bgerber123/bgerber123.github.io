@@ -400,6 +400,8 @@ to estimate model parameters accurately.</p>
 <ul>
 <li><p>uses a generalized linear model framework to simulate at least
 1000 data sets and estimates model parameters (per scenario)</p></li>
+<li><p>implements matrix multiplication to link variables to
+coefficients</p></li>
 <li><p>considers <span style="color:blue">two</span> different levels of
 correlation among the variables of interest (e.g., low and
 high)</p></li>
@@ -415,6 +417,12 @@ design (i.e., summarize your findings)</p></li>
 <p>Lastly, when putting the markdown file together, define the full
 generalized linear model with statistical notation, e.g., as we did for
 logistic regression in lecture.</p>
+<p><strong>Errors</strong>: If you are getting lots of errors when
+fitting models for certain random datasets, don’t use apply but use a
+for loop to diagnose the iteration that fails so you can deternine what
+is happening. You can also force to skip that iteration, but make sure
+to record it and present these issues as part of your
+results/summary.</p>
 </div>
 
 
