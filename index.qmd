@@ -139,6 +139,7 @@ install.packages(c("visualize","plotly"))
 No Class / Holiday
 
 ### Week 6
+
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
@@ -148,18 +149,16 @@ install.packages(c("sjPlot","ggplot2", "ggResidpanel"))
 
 -   Lecture Code: <a href="/Week 5/regression.R">regression.R</a>
 
-
-
 -   Download: <a href="/Week 5/elephant.study.csv">csv</a>
 
 -   Assignment: <a href="/Week 5/Assignment.Regression.Rmd">1) Markdown File</a> <a href="/Week 5/Assignment.Regression.html">1) Compiled HTML</a>
-
 
 -   Assigned Readings: <a href="/Week 5/Ecology - 2021 - Tredennick.pdf">Assigned Reading</a> 
 
 
 
 ### Week 7
+
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("equatiomatic","faux"))
