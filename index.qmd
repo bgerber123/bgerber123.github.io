@@ -172,9 +172,25 @@ install.packages(c("equatiomatic","faux"))
 
 -   Assigned Readings: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
 
-
-
 ### Week 8
+
+- Download/Install JAGS software [here](https://sourceforge.net/projects/mcmc-jags/). The version you pick will depend on your version of R. 
+
+
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("rjags","bayesplot"))
+```
+
+-   Lecture: <a href="/Week 7/Bayesian.html">Bayesian</a>
+
+-   Lecture Code: <a href="/Week 7/Bayesian.R">Bayesian.R</a>
+
+-   Assignment: <a href="/Week 7/Assignment.Bayesian.Rmd">1) Markdown File</a> <a href="/Week 7/Assignment.Bayesian.html">1) Compiled HTML</a>
+
+-   Assigned Readings: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
+
+
 ### Week 9
 ### Week 10
 ### Week 11

@@ -368,6 +368,36 @@ $$
 \end{equation}
 $$
 
+## The Prior
+
+All paramters in a Bayesian model require a prior specified.
+
+::: {.incremental}
+
+-   The prior describes what we know about the parameter before we collect any data
+
+-   Priors can contain a lot of information  (informative priors) or very little (relatively uninformative priors or diffuse priors)
+
+-   Well-constructed priors can also improve the behavior of our models
+
+:::
+
+
+## The Prior
+
+
+::: {.incremental}
+
+-   Use diffuse priors as a starting point
+
+-   Think hard
+
+-   Use your "domain knowledge"
+
+-   Dive into the literature
+:::
+
+
 
 ## Bayesian Model {.scrollable}
 
