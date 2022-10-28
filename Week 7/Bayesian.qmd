@@ -370,7 +370,7 @@ $$
 
 ## The Prior
 
-All paramters in a Bayesian model require a prior specified.
+All parameters in a Bayesian model require a prior specified.
 
 ::: {.incremental}
 
@@ -413,6 +413,8 @@ $$
 $$
 p \sim \text{Beta}( \alpha, \beta) \\
 $$
+
+. . .
 
 These are called Prior hyperparameters
 
@@ -511,20 +513,19 @@ p \sim& \text{Beta}(\alpha,\beta)
 \end{align*}
 $$
 
-. . .
 
 ### Prior 1
 
 ```{r eval=TRUE, echo=TRUE}
-  alpha1=1
-  beta1=1
+  alpha.prior1=1
+  beta.prior1=1
 ```
 
 . . .
 
 ```{r eval=TRUE, echo=FALSE}
 #Plot of prior 1
-curve(dbeta(x,shape1=alpha1,shape2=beta1),lwd=3,
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
       main="Prior Probability of Success",ylim=c(0,20))
 legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
@@ -535,37 +536,36 @@ legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
 ## Hippos- Bayesian Model (Prior 2) {.scrollable}
 
 ```{r eval=TRUE, echo=TRUE}
-  alpha2=10
-  beta2=2
+  alpha.prior2=10
+  beta.prior2=2
 ```
 
-. . .
 
 ```{r eval=TRUE, echo=FALSE}
-curve(dbeta(x,shape1=alpha1,shape2=beta1),lwd=3,
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
       main="Prior Probability of Success",ylim=c(0,20))
 legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
-curve(dbeta(x,shape1=alpha2,shape2=beta2),lwd=3,col=2,add=TRUE)
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),lwd=3,col=2,add=TRUE)
 legend("topleft",col=c(1,2),legend=c("Prior 1", "Prior 2"),lwd=3)
 ```
 
 ## Hippos- Bayesian Model (Prior 3) {.scrollable}
 
 ```{r eval=TRUE, echo=TRUE}
-  alpha3=150
-  beta3=15
+  alpha.prior3=150
+  beta.prior3=15
 ```
 
-. . .
+
 
 ```{r eval=TRUE, echo=FALSE}
-curve(dbeta(x,shape1=alpha1,shape2=beta1),lwd=3,
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
       main="Prior Probability of Success",ylim=c(0,20))
 legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
-curve(dbeta(x,shape1=alpha2,shape2=beta2),lwd=3,col=2,add=TRUE)
-curve(dbeta(x,shape1=alpha3,shape2=beta3),lwd=3,col=3,add=TRUE)
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),lwd=3,col=2,add=TRUE)
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),lwd=3,col=3,add=TRUE)
 legend("topleft",col=c(1,2,3),legend=c("Prior 1", "Prior 2","Prior 3"),lwd=3)
 
 ```
@@ -579,9 +579,9 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 $$
 ```{r eval=TRUE, echo=TRUE}
 # Note- the data are the same, but the prior is changing
-  post.1=rbeta(10000,alpha1+sum(y1),beta1+N1-sum(y1))
-  post.2=rbeta(10000,alpha2+sum(y1),beta2+N1-sum(y1))
-  post.3=rbeta(10000,alpha3+sum(y1),beta3+N1-sum(y1))
+  post.1=rbeta(10000,alpha.prior1+sum(y1),beta.prior1+N1-sum(y1))
+  post.2=rbeta(10000,alpha.prior2+sum(y1),beta.prior2+N1-sum(y1))
+  post.3=rbeta(10000,alpha.prior3+sum(y1),beta.prior3+N1-sum(y1))
 ```
 
 ## Hippos- Bayesian Model (Posteriors)
@@ -589,7 +589,7 @@ $$
 ```{r eval=TRUE, echo=FALSE}
 plot(density(post.1),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Prior 1",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha1,shape2=beta1),
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),
       add=TRUE,col=1,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
@@ -601,7 +601,7 @@ legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
 ```{r eval=TRUE, echo=FALSE}
 plot(density(post.2),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha2,shape2=beta2),
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
       add=TRUE,col=2,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topright",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
@@ -613,7 +613,7 @@ legend("topright",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
 ```{r eval=TRUE, echo=FALSE}
 plot(density(post.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha3,shape2=beta3),
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
       add=TRUE,col=3,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),
@@ -635,13 +635,13 @@ N2=length(y2)
 
 mle.p=mean(y2)
 
-post.4=rbeta(10000,alpha1+sum(y2),beta1+N2-sum(y2))
-post.5=rbeta(10000,alpha2+sum(y2),beta2+N2-sum(y2))
-post.6=rbeta(10000,alpha3+sum(y2),beta3+N2-sum(y2))
+post.4=rbeta(10000,alpha.prior1+sum(y2),beta.prior1+N2-sum(y2))
+post.5=rbeta(10000,alpha.prior2+sum(y2),beta.prior2+N2-sum(y2))
+post.6=rbeta(10000,alpha.prior3+sum(y2),beta.prior3+N2-sum(y2))
 
 plot(density(post.4),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Prior 1",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha1,shape2=beta1),
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),
       add=TRUE,col=1,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topleft",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
@@ -653,7 +653,7 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
 ```{r eval=TRUE, echo=FALSE}
 plot(density(post.5),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha2,shape2=beta2),
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
       add=TRUE,col=2,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topleft",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
@@ -665,7 +665,7 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
 ```{r eval=TRUE, echo=FALSE}
 plot(density(post.6),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
      xlab="Posterior Probability",ylab="Probability Density")
-curve(dbeta(x,shape1=alpha3,shape2=beta3),
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
       add=TRUE,col=3,lwd=3,lty=3)
 abline(v=mle.p,col="purple",lwd=3)
 legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),

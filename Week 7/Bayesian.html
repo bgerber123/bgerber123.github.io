@@ -761,7 +761,7 @@ Evidence or Marginal Likelihood
 </section>
 <section id="the-prior" class="slide level2">
 <h2>The Prior</h2>
-<p>All paramters in a Bayesian model require a prior specified.</p>
+<p>All parameters in a Bayesian model require a prior specified.</p>
 <div>
 <ul>
 <li class="fragment"><p>The prior describes what we know about the parameter before we collect any data</p></li>
@@ -796,6 +796,8 @@ Prior
 <p><span class="math display">\[
 p \sim \text{Beta}( \alpha, \beta) \\
 \]</span></p>
+</div>
+<div class="fragment">
 <p>These are called Prior hyperparameters</p>
 <p><span class="math display">\[
 \alpha = 1 \\
@@ -900,11 +902,10 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)
 p \sim&amp; \text{Beta}(\alpha,\beta)
 \end{align*}
 \]</span></p>
-<div class="fragment">
 <h3 id="prior-1">Prior 1</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>  alpha1<span class="ot">=</span><span class="dv">1</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>  beta1<span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>  alpha.prior1<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  beta.prior1<span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -913,36 +914,23 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="hippos--bayesian-model-prior-2" class="slide level2 scrollable">
 <h2>Hippos- Bayesian Model (Prior 2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>  alpha2<span class="ot">=</span><span class="dv">10</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>  beta2<span class="ot">=</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>  alpha.prior2<span class="ot">=</span><span class="dv">10</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  beta.prior2<span class="ot">=</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
+
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
 <section id="hippos--bayesian-model-prior-3" class="slide level2 scrollable">
 <h2>Hippos- Bayesian Model (Prior 3)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>  alpha3<span class="ot">=</span><span class="dv">150</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>  beta3<span class="ot">=</span><span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>  alpha.prior3<span class="ot">=</span><span class="dv">150</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  beta.prior3<span class="ot">=</span><span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
+
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
 <section id="hippos--bayesian-model-posteriors" class="slide level2 scrollable">
 <h2>Hippos- Bayesian Model (Posteriors)</h2>
 <p><span class="math display">\[
@@ -952,9 +940,9 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 \]</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Note- the data are the same, but the prior is changing</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  post<span class="fl">.1</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha1<span class="sc">+</span><span class="fu">sum</span>(y1),beta1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb19-3"><a href="#cb19-3"></a>  post<span class="fl">.2</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha2<span class="sc">+</span><span class="fu">sum</span>(y1),beta2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb19-4"><a href="#cb19-4"></a>  post<span class="fl">.3</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha3<span class="sc">+</span><span class="fu">sum</span>(y1),beta3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-2"><a href="#cb19-2"></a>  post<span class="fl">.1</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior1<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb19-3"><a href="#cb19-3"></a>  post<span class="fl">.2</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior2<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb19-4"><a href="#cb19-4"></a>  post<span class="fl">.3</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior3<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hippos--bayesian-model-posteriors-1" class="slide level2">
