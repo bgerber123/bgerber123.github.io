@@ -186,6 +186,13 @@ install.packages(c("rjags","bayesplot"))
 
 -   Lecture Code: <a href="/Week 7/Bayesian.R">Bayesian.R</a>
 
+-   Date Download: <a href="/Week 7/counts.trees1.csv">Data Set 1</a>, and <a href="/Week 7/counts.trees2.csv">Data Set 1</a>
+
+-   Jags Code Example: <a href="/Week 7/jags.model.script.r">Script</a>, and <a href="/Week 7/model.jags.r">Model</a>
+
+-   Extra Model Files: MCMC Algorithim Example: <a href="/Week 7/binom.logit.script.R">R Script</a>, and <a href="/Week 7/binom.logit.mcmc.R">MCMC Algorithim Function</a>
+
+
 -   Assignment: <a href="/Week 7/Assignment.Bayesian.Rmd">1) Markdown File</a> <a href="/Week 7/Assignment.Bayesian.html">1) Compiled HTML</a>
 
 -   Assigned Readings: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
