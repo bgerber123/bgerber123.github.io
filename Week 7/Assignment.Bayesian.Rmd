@@ -62,9 +62,11 @@ To decide on your two different prior probability distributions, you need to und
 
 ### **Part 2**
 
-Here, the goal is to replicate the above 4 analyses (2 data sets and 2 priors) using JAGS via the r pacakge 'rjags'.
+Here, the goal is to replicate the above 4 analyses (2 data sets and 2 priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'.
 
-To do this, you will need to setup a model.jags file that has the likelihood and prior. Note, that the probability density funcitons in JAGS for Gamma and Poisson are dgamma, and dpois, respectively.
+For JAGS, you will need to setup a model.jags file that has the likelihood and prior. Note, that the probability density funcitons in JAGS for Gamma and Poisson are dgamma, and dpois, respectively.
+
+For Stan, use the code provided and adapt it based on what you know from the GLM homework. 
 
 ### The markdown should include
 
