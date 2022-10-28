@@ -401,11 +401,15 @@ Gamma prior probability on <span class="math inline">\(\lambda\)</span>
 [\lambda|\textbf{y}] \sim&amp; \text{Gamma}(\kappa^*,\theta^*).
 \end{align*}
 \]</span></p>
+<p>I am providing two data sets of counts of Gingko biloba (tree) at
+different number of sample size. We know in the sampling area that this
+tree is rare. This <em>prior knowledge</em> should inform how we specify
+the prior probability distribution.</p>
 </div>
 <div id="part-1" class="section level3">
 <h3><strong>Part 1</strong></h3>
 <p>Fit a Bayesian model to the two datasets provided, each using two
-different prior distributions.</p>
+different prior distributions on <span class="math inline">\(\lambda\)</span>.</p>
 <p>Fit the model by sampling from the posterior distribution directly.
 You can do this by using the <a href="https://en.wikipedia.org/wiki/Conjugate_prior">Wikipedia Conjugate
 Page</a> to look up the posterior hyperparameters.</p>
@@ -413,9 +417,9 @@ Page</a> to look up the posterior hyperparameters.</p>
 need to understand the shape (<span class="math inline">\(\kappa\)</span>) and scale (<span class="math inline">\(\theta\)</span>) parameters of the Gamma
 distribution. I suggest looking at the <a href="https://en.wikipedia.org/wiki/Gamma_distribution">Gamma
 distribution wikipedia page</a>, choosing values, and then plotting the
-distributions. The two prior probability distribution you choice should
+distributions. The two prior probability distribution you choose should
 be a ‘highly informative’ and a ‘low/less informative’ prior
-distribution.</p>
+distribution. Do this prior to looking at the data.</p>
 </div>
 <div id="the-markdown-should-include" class="section level3">
 <h3>The markdown should include</h3>
@@ -434,10 +438,22 @@ data set? Why?</p></li>
 <div id="part-2" class="section level3">
 <h3><strong>Part 2</strong></h3>
 <p>Here, the goal is to replicate the above 4 analyses (2 data sets and
-2 priors) using JAGS via the r pacakge ‘rjags’.</p>
-<p>To do this, you will need to setup a model.jags file that has the
+2 priors) using JAGS via the r pacakge ‘rjags’ or Stan via the rpackage
+‘rstanarm’.</p>
+<p>For JAGS, you will need to setup a model.jags file that has the
 likelihood and prior. Note, that the probability density funcitons in
 JAGS for Gamma and Poisson are dgamma, and dpois, respectively.</p>
+<p>For Stan, use the code provided and adapt it based on what you know
+from the GLM homework.</p>
+</div>
+<div id="the-markdown-should-include-1" class="section level3">
+<h3>The markdown should include</h3>
+<ul>
+<li><p>Four plots of posterior distributions (2 for each data set using
+each of the two priors).</p></li>
+<li><p>A table or list of the posterior means or medians along with 95%
+credible intervals.</p></li>
+</ul>
 </div>
 
 
