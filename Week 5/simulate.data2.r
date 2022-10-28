@@ -60,4 +60,19 @@ colnames(dat)=c("weight","sex","age.years","site")
 write.csv(dat, file="elephant.study.csv",row.names = FALSE)
 
 
+dat=read.csv("elephant.study.csv")
+
+a=glm(weight~site,contrasts = list(site = contr.sum),data=dat)
+
+site=as.factor(dat$site)
+
+model.matrix(~site,contrasts = list(site = contr.sum))
+
+coef(a)[1]+sum(coef(a)[-1]*(-1))
+
+c(511.5 - -487.1    -   -821.2    -    498.4)
+
+rbind(unique(round(as.numeric(predict(a))),digits=0),
+unique(dat$site))
+
 glm(y~sex*age+site,data=dat)

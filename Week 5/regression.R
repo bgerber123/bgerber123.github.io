@@ -1,4 +1,4 @@
-## ---- echo=FALSE,eval=TRUE---------------------------------------
+## ---- echo=FALSE,eval=TRUE---------------------------------------------------
 n=1000
 b0=10
 b1=2
@@ -9,7 +9,7 @@ y=rnorm(n,mu,sd=30)
 plot(x,y,xlim=c(0,70))
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------------------
 #" (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
 
@@ -20,7 +20,7 @@ legend("topleft",col=c("green"),lty=2,legend=c("Mean"),lwd=4)
 
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------------------
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
@@ -35,7 +35,7 @@ legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","95% Confidence Int
 
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-------------------
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main=     expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
@@ -55,7 +55,7 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confi
 
 
 
-## ----eval=TRUE,echo=TRUE,fig.align='center'----------------------
+## ----eval=TRUE,echo=TRUE,fig.align='center'----------------------------------
 #Setup parameters
   n=100 # sample size
   mu=10 # true mean
@@ -66,11 +66,11 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confi
   y=rnorm(n,mean=mu, sd=sigma)
 
 
-## ----eval=TRUE,echo=TRUE,fig.align='center'----------------------
+## ----eval=TRUE,echo=TRUE,fig.align='center'----------------------------------
   hist(y)
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------
+## ----eval=TRUE,echo=TRUE-----------------------------------------------------
 # Fit model/hypothesis using maximum likelihood
   model1 = glm(y~1, family=gaussian(link = identity))
 
@@ -80,19 +80,19 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confi
   rbind(model1$coefficients,model1.1$coefficients)
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------
+## ----eval=TRUE,echo=TRUE-----------------------------------------------------
     
 # Summary of model results  
   summary(model1)
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------
+## ----eval=TRUE,echo=TRUE-----------------------------------------------------
 #Predict response for all data
   preds=predict(model1, se.fit = TRUE)
   preds
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------
+## ----eval=TRUE,echo=TRUE-----------------------------------------------------
 # Get 90% confidence intervals (Type I error = 0.1)
   (preds$fit+preds$se.fit*qnorm(0.05))[1]
   (preds$fit+preds$se.fit*qnorm(0.95))[1]
@@ -103,7 +103,7 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confi
   
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 
 # Setup
   nboot <- 1000 # number of bootstrap samples
@@ -120,12 +120,12 @@ for(i in 1:nboot){
 }
 
 
-## ----------------------------------------------------------------
+## ----------------------------------------------------------------------------
 par(mfrow = c(1, 1))
 hist(bootcoefs, main = expression(paste("Bootstrap distribution of ", hat(beta)[0])), xlab = "")
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Calculate bootstrap standard errors
   boot.se=sd(bootcoefs)
 
@@ -139,7 +139,7 @@ confdat.boot.pct <- quantile(bootcoefs, probs = c(0.05, 0.95))
 
 
 
-## ---- eval=TRUE, echo=FALSE--------------------------------------
+## ---- eval=TRUE, echo=FALSE--------------------------------------------------
 confdata <- data.frame(LCL=c(boot.normal[1],CI.Normal[1],confdat.boot.pct[1]),
            UCL=c(boot.normal[2],CI.Normal[2],confdat.boot.pct[2]),
            method=c("Normal Assumption", "Bootstrap-Normal", "Bootstrap-percentile")
@@ -153,20 +153,20 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Setup data
   x=as.factor(rep(c("Site 1","Site 2"),n/2))
   levels(x)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Turn the factor into 0 and 1's
   head(model.matrix(~x))
   
   x.var=model.matrix(~x)[,2]
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Parameters  
   b0=50
   b1=-20
@@ -178,7 +178,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #fit the model 
   model2=glm(y~x)
   model2.1=glm(y~x.var)
@@ -187,7 +187,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
   rbind(coef(model2), coef(model2.1))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 
 #Here is our negative log-likelihood function with three
 #parameters - the mean (2) and stdev (1)
@@ -197,7 +197,7 @@ neg.log.like = function(par) {
 }
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #use optim with initial values and define the lower and upper limits of the possible values
 fit1 <- optim(
     par = c(0, 0,1),
@@ -210,17 +210,17 @@ fit1 <- optim(
 fit1$par
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 summary(model2)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #change intercept meaning
   x.relev=relevel(x,ref="Site 2")
   levels(x.relev)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #fit the model again
   model2.2=glm(y~x.relev)
 
@@ -228,7 +228,7 @@ summary(model2)
   rbind(coef(model2),coef(model2.1),coef(model2.2))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #compare predictions  
   rbind(predict(model2)[1:2],  
         predict(model2.1)[1:2],
@@ -236,7 +236,7 @@ summary(model2)
   )
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Setup Data
   x=as.factor(rep(c("Site 1","Site 2","Site 3", "Site 4"),n/4))
   levels(x)
@@ -247,7 +247,7 @@ summary(model2)
   x.var=model.matrix(~x)[,2:4]
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Set Parameters  
   b0=50 #Site 1
   b1=-20 #Diff of site 2 to site 1
@@ -264,13 +264,13 @@ summary(model2)
   mean(unique(mu))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Simulate Data  
   set.seed(43243)
   y=rnorm(n,mean=mu,sd=4)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # fit the model
   model3=glm(y~x)
   model3.1=glm(y~x.var)
@@ -279,7 +279,7 @@ summary(model2)
   rbind(coef(model3), coef(model3.1))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 
 #Use effect coding to make the intercept the grand mean
   model3.2=glm(y~x,contrasts = list(x = contr.sum))
@@ -294,26 +294,26 @@ summary(model2)
 
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #The coefficient for site-level 4 (difference from the grand mean)
-  coef(model3.2)[1]+sum(coef(model3.2)[-1])
+  sum(coef(model3.2)[-1]*(-1))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Predict the values and compare them to the true means for
 #each site
   rbind(unique(mu),
   predict(model3.2)[1:4])
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #A continuous and categorical variable 
   x=as.factor(rep(c("Site 1","Site 2"),n/2))
   levels(x)
   x.var=model.matrix(~x)[,2]
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Simulate x2 variable
   set.seed(54334)
   x2=rpois(n,100)
@@ -337,18 +337,18 @@ summary(model2)
 
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Confidence intervals of coefs
   confint(model4)
 
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 # Summary  
   summary(model4)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 
 # Fitted Values
   newdata=expand.grid(x,x2)
@@ -360,16 +360,16 @@ summary(model2)
               se.fit = TRUE)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 library(sjPlot)
 plot_model(model4, type = "pred", terms = c("x"))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 plot_model(model4, type = "pred", terms = c("x2","x"))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 
 # Simulate Variables
   x=as.factor(rep(c("Site 1","Site 2"),n/2))
@@ -400,31 +400,31 @@ plot_model(model4, type = "pred", terms = c("x2","x"))
   rbind(coef(model5),coef(model5.1))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Confidence intervals of coefs
   confint(model5)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 #Summary  
   summary(model5)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 theme_set(theme_sjplot())
 plot_model(model5, type = "pred", terms = c("x2","x"))
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'------
+## ---- echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'------------------
 hist(model5$residuals)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'------
+## ---- echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'------------------
 par(mfrow=c(2,2))
 plot(model5)
 
 
-## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------
+## ---- echo=TRUE, include=TRUE, eval=TRUE-------------------------------------
 library(ggResidpanel)
 resid_panel(model5)
 

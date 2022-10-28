@@ -981,10 +981,9 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co">#The coefficient for site-level 4 (difference from the grand mean)</span></span>
-<span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="dv">1</span>]<span class="sc">+</span><span class="fu">sum</span>(<span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="sc">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">sum</span>(<span class="fu">coef</span>(model3<span class="fl">.2</span>)[<span class="sc">-</span><span class="dv">1</span>]<span class="sc">*</span>(<span class="sc">-</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(Intercept) 
-  -109.9518 </code></pre>
+<pre><code>[1] 129.7794</code></pre>
 </div>
 </div>
 <p><br></p>
