@@ -197,8 +197,9 @@ install.packages(c("rjags","bayesplot","rstanarm"))
 
 -   Assignment: <a href="/Week 7/Assignment.Bayesian.Rmd">1) Markdown File</a> <a href="/Week 7/Assignment.Bayesian.html">1) Compiled HTML</a>
 
--   Assigned Readings: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
+-   Re-read the previously assigned Reading: <a href="/Week 6/Bayesian statistics and modelling.pdf">Assigned Reading</a> 
 
+- Find a scientific paper that uses Bayesian modeling/inference in your subject area of interest. Be prepared to talk about what the study was about, how the authors used priors, what they made inference on, and how clear were the elements of modeling inference/modeling/computation. 
 
 ### Week 9
 ### Week 10
