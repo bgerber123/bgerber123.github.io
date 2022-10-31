@@ -383,7 +383,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" background-opacity="0.45" data-background-image="Bayesian_files/background.png" class="center">
+<section id="title-slide" background-opacity="0.45" data-background-image="Bayesian_files/background.png" data-background-size="contain" class="center">
   <h1 class="title"><span style="color:purple">Bayes the way</span></h1>
 </section>
 
@@ -423,12 +423,14 @@ Bayesian Computation
 <p style="color:orange">
 Do we want to make probability statements about our data?
 </p>
-</div>
-<div class="fragment">
-<p><strong>90% CI</strong>: the long-run proportion of corresponding CIs that will contain the true value 90% of the time.</p>
+<p><br></p>
 </div>
 <div class="fragment">
 <p><strong>Likelihood</strong> = P(data|parameters)</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><strong>90% CI</strong>: the long-run proportion of corresponding CIs that will contain the true value 90% of the time.</p>
 </div>
 </section>
 <section id="probability-data-and-parameters-1" class="slide level2">
@@ -437,11 +439,11 @@ Do we want to make probability statements about our data?
 <p style="color:orange">
 Do we want to make probability statements about our parameters?
 </p>
-<div class="fragment">
-<p><strong>Alt. Interval</strong>: 90% probability that the true value lies within the interval, given the evidence from the observed data.</p>
-</div>
+<p><br></p>
 <div class="fragment">
 <p><strong>Posterior</strong> = P(parameters|data)</p>
+<p><br> . . .</p>
+<p><strong>Alt. Interval</strong>: 90% probability that the true value lies within the interval, given the evidence from the observed data.</p>
 </div>
 </section>
 <section id="likelihood-inference" class="slide level2">
@@ -451,20 +453,34 @@ Do we want to make probability statements about our parameters?
 <img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section id="bayesian-inference" class="slide level2">
 <h2>Bayesian Inference</h2>
+<p><span style="color:orange">Posterior Samples</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219
+ [8]  83.99927  64.74208  26.93133</code></pre>
+</div>
+</div>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="bayesian-inference-1" class="slide level2">
 <h2>Bayesian Inference</h2>
+<p><span style="color:orange">Posterior Samples</span></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219
+ [8]  83.99927  64.74208  26.93133</code></pre>
+</div>
+</div>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch quarto-figure-center"></section>
 <section id="bayesian-inference-2" class="slide level2">
 <h2>Bayesian Inference</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch quarto-figure-center"><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>diff<span class="ot">=</span>post2<span class="sc">-</span>post1</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">length</span>(<span class="fu">which</span>(diff<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch quarto-figure-center"><div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>diff<span class="ot">=</span>post2<span class="sc">-</span>post1</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">length</span>(<span class="fu">which</span>(diff<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8375</code></pre>
+<pre><code>[1] 0.8362</code></pre>
 </div>
 </div>
 </section>
@@ -477,7 +493,7 @@ Do we want to make probability statements about our parameters?
 <p>x is elevation</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">summary</span>(<span class="fu">glm</span>(y<span class="sc">~</span>x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">summary</span>(<span class="fu">glm</span>(y<span class="sc">~</span>x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -508,12 +524,12 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <section id="bayesian-inference-coeficient" class="slide level2">
 <h2>Bayesian Inference (coeficient)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="bayesian-inference-coeficient-1" class="slide level2 scrollable">
 <h2>Bayesian Inference (coeficient)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#Posterior Mean</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">mean</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#Posterior Mean</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mean</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5185186</code></pre>
 </div>
@@ -521,8 +537,8 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#Credible/Probability Intervals </span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">quantile</span>(post,<span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#Credible/Probability Intervals </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">quantile</span>(post,<span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     2.5%     97.5% 
 -1.461887  2.403232 </code></pre>
@@ -532,8 +548,8 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># #Probabilty of a postive effect</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># #Probabilty of a postive effect</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.709</code></pre>
 </div>
@@ -542,8 +558,8 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># #Probabilty of a negative effect</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># #Probabilty of a negative effect</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.291</code></pre>
 </div>
@@ -660,14 +676,23 @@ Sampled N = 10 locations
 </span></div>
 </div>
 </section>
-<section id="noctice-that" class="slide level2 scrollable">
-<h2>Noctice that…</h2>
+<section id="notice-that" class="slide level2 scrollable">
+<h2>Notice that…</h2>
+<p><span class="math display">\[
+\begin{equation}
+P(A \cap B) = \\
+P(A|B)P(B) = \\
+P(B|A)P(A) = \\
+\end{equation}
+\]</span></p>
+<div class="fragment">
 <p><span class="math display">\[
 \begin{equation}
 P(A|B)P(B) = P(A \cap B) \\
 P(B|A)P(A) = P(A \cap B) \\
 \end{equation}
 \]</span></p>
+</div>
 <div class="fragment">
 <p><span class="math display">\[
 \begin{equation}
@@ -764,7 +789,7 @@ Evidence or Marginal Likelihood
 </section>
 <section id="the-prior" class="slide level2">
 <h2>The Prior</h2>
-<p>All parameters in a Bayesian model require a prior specified.</p>
+<p>All parameters in a Bayesian model require a prior specified</p>
 <div>
 <ul>
 <li class="fragment"><p>The prior describes what we know about the parameter before we collect any data</p></li>
@@ -782,33 +807,26 @@ Evidence or Marginal Likelihood
 </section>
 <section id="the-prior-2" class="slide level2">
 <h2>The Prior</h2>
-<p><span style="color:purple">Think hard</span></p>
-<div class="fragment">
-<p>Non-informative priors are easy to use because they are the default option. You can usually do better than non-informative priors but it requires thinking hard about the parameters in your model.</p>
-</div>
-</section>
-<section id="the-prior-3" class="slide level2">
-<h2>The Prior</h2>
 <p><span style="color:purple">Use your “domain knowledge”</span></p>
 <div class="fragment">
 <p>We can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters.</p>
 </div>
 </section>
-<section id="the-prior-4" class="slide level2">
+<section id="the-prior-3" class="slide level2">
 <h2>The Prior</h2>
 <p><span style="color:purple">Dive into the literature</span></p>
 <div class="fragment">
 <p>Find published estimates and use moment matching and other methods to convert published estimates into prior distributions</p>
 </div>
 </section>
-<section id="the-prior-5" class="slide level2">
+<section id="the-prior-4" class="slide level2">
 <h2>The Prior</h2>
 <p><span style="color:purple">Visualize your prior distribution</span></p>
 <div class="fragment">
 <p>Be sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)</p>
 </div>
 </section>
-<section id="the-prior-6" class="slide level2">
+<section id="the-prior-5" class="slide level2">
 <h2>The Prior</h2>
 <p><span style="color:purple">Do a sensitivity analysis</span></p>
 <div class="fragment">
@@ -840,10 +858,10 @@ p \sim \text{Beta}( \alpha, \beta) \\
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x,<span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"p"</span>,</span>
-<span id="cb13-2"><a href="#cb13-2"></a>      <span class="at">ylab =</span> <span class="st">"Prior Probability Density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x,<span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"p"</span>,</span>
+<span id="cb15-2"><a href="#cb15-2"></a>      <span class="at">ylab =</span> <span class="st">"Prior Probability Density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </div>
 </div>
 <!-- sum(dbinom(y,size=1,p,log=TRUE)) -->
@@ -912,16 +930,16 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)
 <h2>Hippos: Likelihood Model</h2>
 <p><span class="math display">\[
 \begin{align*}
-\textbf{y} \sim&amp; \text{Binomial}(N,\boldsymbol{p})\\
+\textbf{y} \sim&amp; \text{Binomial}(N,p)\\
 \end{align*}
 \]</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Survival outcomes of three adult hippos</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>  y1<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb14-3"><a href="#cb14-3"></a>  N1<span class="ot">=</span><span class="fu">length</span>(y1)</span>
-<span id="cb14-4"><a href="#cb14-4"></a>  mle.p<span class="ot">=</span><span class="fu">mean</span>(y1)</span>
-<span id="cb14-5"><a href="#cb14-5"></a>  mle.p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># Survival outcomes of three adult hippos</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  y1<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  N1<span class="ot">=</span><span class="fu">length</span>(y1)</span>
+<span id="cb16-4"><a href="#cb16-4"></a>  mle.p<span class="ot">=</span><span class="fu">mean</span>(y1)</span>
+<span id="cb16-5"><a href="#cb16-5"></a>  mle.p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2222222</code></pre>
 </div>
@@ -932,18 +950,18 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)
 <h2>Hippos: Bayesian Model (Prior 1)</h2>
 <p><span class="math display">\[
 \begin{align*}
-\textbf{y} \sim&amp; \text{Binomial}(N,\boldsymbol{p})\\
+\textbf{y} \sim&amp; \text{Binomial}(N,p)\\
 p \sim&amp; \text{Beta}(\alpha,\beta)
 \end{align*}
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>  alpha.prior1<span class="ot">=</span><span class="dv">1</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>  beta.prior1<span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>  alpha.prior1<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  beta.prior1<span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -951,19 +969,19 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 <section id="hippos-bayesian-model-prior-2" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Prior 2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>  alpha.prior2<span class="ot">=</span><span class="dv">10</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>  beta.prior2<span class="ot">=</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
-<section id="hippos-bayesian-model-prior-3" class="slide level2 scrollable">
-<h2>Hippos: Bayesian Model (Prior 3)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>  alpha.prior3<span class="ot">=</span><span class="dv">150</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>  beta.prior3<span class="ot">=</span><span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>  alpha.prior2<span class="ot">=</span><span class="dv">10</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>  beta.prior2<span class="ot">=</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="hippos-bayesian-model-prior-3" class="slide level2 scrollable">
+<h2>Hippos: Bayesian Model (Prior 3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>  alpha.prior3<span class="ot">=</span><span class="dv">150</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>  beta.prior3<span class="ot">=</span><span class="dv">15</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 <p><span class="math display">\[
@@ -972,30 +990,31 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 \beta^* = \beta + N - \sum_{i=1}^{N}y_i \\
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Note- the data are the same, but the prior is changing</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  post<span class="fl">.1</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior1<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb19-3"><a href="#cb19-3"></a>  post<span class="fl">.2</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior2<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb19-4"><a href="#cb19-4"></a>  post<span class="fl">.3</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior3<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Note- the data are the same, but the prior is changing.</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="co"># Gibbs sampler</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  post<span class="fl">.1</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior1<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  post<span class="fl">.2</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior2<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb21-5"><a href="#cb21-5"></a>  post<span class="fl">.3</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior3<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hippos-bayesian-model-posteriors-1" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-2" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-3" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-1" class="slide level2">
 <h2>Hippos: More data! (Prior 1)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>y2<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,</span>
-<span id="cb20-2"><a href="#cb20-2"></a>     <span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span>
-<span id="cb20-3"><a href="#cb20-3"></a><span class="fu">length</span>(y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>y2<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,</span>
+<span id="cb22-2"><a href="#cb22-2"></a>     <span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="fu">length</span>(y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 38</code></pre>
 </div>
@@ -1003,7 +1022,7 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
+<p><img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1011,15 +1030,15 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="hippos-more-data-prior-2" class="slide level2">
 <h2>Hippos: More data! (Prior 2)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-3" class="slide level2">
 <h2>Hippos: More data! (Prior 3)</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-dataprior-comparison" class="slide level2 scollable">
 <h2>Hippos: Data/prior Comparison</h2>
 
-<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="Bayesian_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
 <section id="markov-chain-monte-carlo" class="slide level2 scollable">
 <h2>Markov Chain Monte Carlo</h2>
 <p>Often don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.</p>

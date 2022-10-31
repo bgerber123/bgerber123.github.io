@@ -2,6 +2,7 @@
 title: <span style="color:purple">Bayes the way</span>
 title-slide-attributes:
   data-background-image: Bayesian_files/background.png
+  data-background-size: contain
   background-opacity: "0.45"
 format:
   revealjs:
@@ -42,14 +43,19 @@ code.r{
 
 <p style="color:orange">Do we want to make probability statements about our data?</p>
 
-. . .
-
-**90\% CI**: the long-run proportion of corresponding CIs that will contain the true value 90\% of the time.
+<br>
 
 . . .
 
 
 **Likelihood** = P(data|parameters)
+
+
+<br>
+
+. . .
+
+**90\% CI**: the long-run proportion of corresponding CIs that will contain the true value 90\% of the time.
 
 
 ## Probability, Data, and Parameters
@@ -58,13 +64,18 @@ code.r{
 
 <p style="color:orange">Do we want to make probability statements about our parameters?</p>
 
-. . .
-
-**Alt. Interval**: 90\% probability that the true value lies within the interval, given the evidence from the observed data.
+<br>
 
 . . .
 
 **Posterior** = P(parameters|data)
+
+<br>
+. . .
+
+**Alt. Interval**: 90\% probability that the true value lies within the interval, given the evidence from the observed data.
+
+
 
 ## Likelihood Inference
 
@@ -72,13 +83,13 @@ Estimate of the population size of hedgehogs at two sites.
 
 ```{r, eval=TRUE,echo=FALSE}
 set.seed(923874)                 # Create example data
-data <- data.frame(x = c("Site 1","Site 2"),
+data <- data.frame(Site = c("Site 1","Site 2"),
                          Pop.Size = c(75,100),
                          lower = c(40,80),
                          upper = c(90,120))
 
 library("ggplot2")
-ggplot(data, aes(x, Pop.Size)) +        # ggplot2 plot with confidence intervals
+ggplot(data, aes(Site, Pop.Size)) +        # ggplot2 plot with confidence intervals
   geom_point(cex=4) +
   geom_errorbar(aes(ymin = lower, ymax = upper),size = 1)
 
@@ -86,8 +97,16 @@ ggplot(data, aes(x, Pop.Size)) +        # ggplot2 plot with confidence intervals
 
 ## Bayesian Inference
 
+<span style="color:orange">Posterior Samples</span>
+
 ```{r, eval=TRUE,echo=FALSE}
+set.seed(5435)
+rnorm(10,75,20)
+```
+
+```{r, eval=TRUE,echo=FALSE,fig.align='center'}
 par(mfrow=c(1,2))
+set.seed(54354)
 post1=rnorm(10000,75,20)
 hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xlab="Population Size at Site 1")
 curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",ylab="Density",lwd=3,xlab="Population Size at Site 1")
@@ -95,13 +114,22 @@ curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",yla
 
 ## Bayesian Inference
 
+<span style="color:orange">Posterior Samples</span>
+
 ```{r, eval=TRUE,echo=FALSE}
+set.seed(5435)
+rnorm(10,75,20)
+```
+
+```{r, eval=TRUE,echo=FALSE,fig.align='center'}
 par(mfrow=c(1,2))
 hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xlab="Population Size at Site 1")
 abline(v=mean(post1),lwd=3,col=2)
-
+abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
 curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",ylab="Density",lwd=3,xlab="Population Size at Site 1")
 abline(v=mean(post1),lwd=3,col=2)
+abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
+
 ```
 
 ## Bayesian Inference
@@ -188,7 +216,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 # #Probabilty of a negative effect
  length(which(post<0))/length(post)
 ``` 
- 
+
 ## Bayes Theorem 
 
 ::: columns
@@ -265,7 +293,17 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 :::
 
 
-## Noctice that... {.scrollable}
+## Notice that... {.scrollable}
+
+$$
+\begin{equation}
+P(A \cap B) = \\
+P(A|B)P(B) = \\
+P(B|A)P(A) = \\
+\end{equation}
+$$
+
+. . .
 
 $$
 \begin{equation}
@@ -372,7 +410,7 @@ $$
 
 ## The Prior
 
-All parameters in a Bayesian model require a prior specified.
+All parameters in a Bayesian model require a prior specified
 
 ::: {.incremental}
 
@@ -393,13 +431,6 @@ All parameters in a Bayesian model require a prior specified.
 
 It's fine to use non-informative priors as you develop your model but you should always prefer to use "appropriate, well-contructed informative priors" (Hobbs \& Hooten, 2015)
 
-## The Prior
-
-<span style="color:purple">Think hard</span>
-
-. . .
-
-Non-informative priors are easy to use because they are the default option. You can usually do better than non-informative priors but it requires thinking hard about the parameters in your model.
 
 ## The Prior
 
@@ -525,7 +556,7 @@ We do a small study on hippo survival and get these data...
 
 $$
 \begin{align*}
-\textbf{y} \sim& \text{Binomial}(N,\boldsymbol{p})\\
+\textbf{y} \sim& \text{Binomial}(N,p)\\
 \end{align*}
 $$
 . . .
@@ -542,7 +573,7 @@ $$
 
 $$
 \begin{align*}
-\textbf{y} \sim& \text{Binomial}(N,\boldsymbol{p})\\
+\textbf{y} \sim& \text{Binomial}(N,p)\\
 p \sim& \text{Beta}(\alpha,\beta)
 \end{align*}
 $$
@@ -610,7 +641,8 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 \beta^* = \beta + N - \sum_{i=1}^{N}y_i \\
 $$
 ```{r eval=TRUE, echo=TRUE}
-# Note- the data are the same, but the prior is changing
+# Note- the data are the same, but the prior is changing.
+# Gibbs sampler
   post.1=rbeta(10000,alpha.prior1+sum(y1),beta.prior1+N1-sum(y1))
   post.2=rbeta(10000,alpha.prior2+sum(y1),beta.prior2+N1-sum(y1))
   post.3=rbeta(10000,alpha.prior3+sum(y1),beta.prior3+N1-sum(y1))
