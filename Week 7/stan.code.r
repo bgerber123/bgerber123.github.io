@@ -29,11 +29,11 @@
   mcmc_trace(post1)
   
   #Posterior mean and median
-  mean(as.matrix(post))
-  median(as.matrix(post))    
+  mean(as.matrix(post1))
+  median(as.matrix(post1))    
 
 #95% Credible Intervals
-  quantile(as.matrix(post),probs=c(0.025,0.975))
+  quantile(as.matrix(post1),probs=c(0.025,0.975))
 
 
     

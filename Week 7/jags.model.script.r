@@ -25,20 +25,20 @@
 
 
 # Setup the Model
-  jm=jags.model(file="model.jags.r", data=data,n.chains=n.chains)
+  jm=jags.model(file="model.jags.r", data=data)
 
 # Update the model with the burnin
   update(jm, n.iter=burn,n.adapt=n.adapt)
   
 #Fit the modedl  
-  post=coda.samples(jm, variable.names=parms, n.iter=n.iter, thin=thin)
+  post=coda.samples(jm, variable.names=parms, n.chains=n.chains,n.iter=n.iter, thin=thin)
 
 #Basic Plot of posterior
   hist(as.matrix(post))
 
 #Look at chains
   #Plot all chains MCMC iterations
-  color_scheme_set("mix-blue-red")
+  color_scheme_set("blue")
   mcmc_trace(post)
   
 #Fancy plot of posterior

@@ -71,6 +71,7 @@ code.r{
 **Posterior** = P(parameters|data)
 
 <br>
+
 . . .
 
 **Alt. Interval**: 90\% probability that the true value lies within the interval, given the evidence from the observed data.
