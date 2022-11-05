@@ -10,7 +10,7 @@ knitr::purl("./Week 5/regression.qmd",output="./Week 5/regression.R")
 
 knitr::purl("./Week 6/linear.model.qmd",output="./Week 6/linear.model.R")
 
-knitr::purl("./Week 7/Bayesian.qmd",output="./Week 7/Bayesian.R")
+knitr::purl("./Week 7/Bayesian.qmd",output="./Week 7/bayesian.R")
 
 
 # library(quarto)

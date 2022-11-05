@@ -184,7 +184,7 @@ install.packages(c("rjags","bayesplot","rstanarm"))
 
 -   Lecture: <a href="/Week 7/Bayesian.html">Bayesian</a>
 
--   Lecture Code: <a href="/Week 7/Bayesian.R">Bayesian.R</a>
+-   Lecture Code: <a href="/Week 7/bayesian.r">Bayesian.R</a>
 
 -   Data Download: <a href="/Week 7/counts.trees1.csv">Data Set 1</a>, and <a href="/Week 7/counts.trees2.csv">Data Set 2</a>
 
