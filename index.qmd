@@ -206,6 +206,19 @@ install.packages(c("rjags","bayesplot","rstanarm"))
 <span style="color:red">No Class or New Homework</span>
 
 ### Week 10
+
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("rjags","bayesplot","runjags","coda"))
+```
+
+-   Lecture: <a href="/Week 8/RandomEffect.html">Random Effect</a>
+
+-   Lecture Code: <a href="/Week 8/random.effect.R">random.effect.R</a>
+
+-   Assignment: <a href="/Week 8/Assignment.RandomEffect.Rmd">1) Markdown File</a> <a href="/Week 8/Assignment.RandomEffect.html">1) Compiled HTML</a>
+
+
 ### Week 11
 ### Week 12
 

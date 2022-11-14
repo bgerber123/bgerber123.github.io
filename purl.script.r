@@ -12,6 +12,8 @@ knitr::purl("./Week 6/linear.model.qmd",output="./Week 6/linear.model.R")
 
 knitr::purl("./Week 7/Bayesian.qmd",output="./Week 7/bayesian.R")
 
+knitr::purl("./Week 8/RandomEffect.qmd",output="./Week 8/random.effect.R")
+
 
 # library(quarto)
 # library(tinytex)

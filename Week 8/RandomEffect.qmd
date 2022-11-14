@@ -1,0 +1,126 @@
+---
+title: <span style="color:white">The Random Effect</span>
+title-slide-attributes:
+  data-background-image: RandomEffect_files/background.png
+  data-background-size: contain
+  background-opacity: "0.45"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    multiplex: true
+---
+
+
+
+## Random Effect
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+-   <p style="color:orange">Random Intercept Model</p>
+
+-   <p style="color:orange">Random Slope Model</p>
+
+-   <p style="color:orange">Variance Components</p>
+
+-   <p style="color:orange">Hierarchical Model</p>
+
+-   <p style="color:orange">Multi-level Model</p>
+
+-   <p style="color:orange">Nested Data Model</p>
+
+## Breeding Bird Survey (BBS)
+
+![](RandomEffect_files\bbs.png)
+
+## Overdispersed Trend Count Model
+We conduct a survey count of a species at $n.sites$ for $n.years$. 
+
+<br>
+
+. . .
+
+<p style="color:orange">Are the counts increasing??</p>
+
+
+i = site 
+<br>
+t = year
+
+. . .
+
+$$
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0 + \beta_1 \times year_{i,t} + \epsilon_{i,t}\\
+\epsilon_{i,t} \sim \text{Normal}(0,\sigma)
+$$
+
+## Bayesian Priors {.scrollable}
+
+### Variance Component Model 
+
+$$
+\begin{align*}
+\beta_{0} &\sim \text{Normal}(0, 3)\\
+\beta_{1} &\sim \text{Normal}(0, 3) \\
+\sigma &\sim \text{Gamma}(0.001,0.001)
+\end{align*}
+$$
+. . .
+
+### JAGS uses Precision, not Stdev
+
+Precision
+$$
+\tau = \frac{1}{\sigma^2}
+$$
+
+Example
+```{r}
+sigma=3
+
+tau=1/3^2
+tau
+```
+
+## Hierarchical Model
+
+We may want to allow our slope to vary across sites. 
+
+<br>
+
+. . .
+
+Perhaps all sites were considered to be low at beginning of the time-series but have changed differently across the years.
+
+<br>
+
+. . .
+
+
+$$
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0 + \beta_{1,i} \times year_{i,t} \\
+\beta_{1,i} \sim \text{Normal}(\mu_{\beta_{1}},\sigma_{\beta_{1}})
+$$
+
+
+## Bayesian Priors
+
+### Random Slope Model
+
+$$
+\begin{align*}
+\beta_{0} &\sim \text{Normal}(0, 3)\\
+\mu_{\beta_{1}} &\sim \text{Normal}(0, 3) \\
+\sigma_{\beta_{1}} &\sim \text{Gamma}(0.001,0.001)
+\end{align*}
+$$

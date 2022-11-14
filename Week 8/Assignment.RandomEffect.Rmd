@@ -1,0 +1,35 @@
+---
+title: "Random Effect Assignment"
+author: "Brian D. Gerber"
+date: "2022-11-14"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To understand two types of *random effects*
+
+### **Background**
+
+We are interested in developing two types of linear trend models that could be useful to evaluating population increases/decreases of animal counts (e.g., Breeding Bird Survey).
+
+In class, we will simulate count data 1) assuming a linear trend with extra-Poisson variation and 2) assuming site-level variation in the slope term.
+
+
+### Model Fitting
+
+You should fit the respective Bayesian model to each of these data. 
+
+Plot the count data and your Bayesian predictions.
+
