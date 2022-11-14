@@ -352,6 +352,20 @@ Nested Data Model
 </p></li>
 </ul>
 </section>
+<section id="random-effect-1" class="slide level2">
+<h2>Random Effect</h2>
+<p><a href="https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/">Andrew Gelman Blog Post</a></p>
+<p><a href="http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf">Paper Link</a></p>
+<p>“People are always asking me if I want to use a fixed or random effects model for this or that.”</p>
+<div class="fragment">
+<p><br></p>
+<p>“I always reply that these terms have no agreed-upon definition.”</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>“People with their own favorite definition of “fixed and random effects” don’t always realize that other definitions are out there. Worse, people conflate different definitions.”</p>
+</div>
+</section>
 <section id="breeding-bird-survey-bbs" class="slide level2">
 <h2>Breeding Bird Survey (BBS)</h2>
 
@@ -430,12 +444,14 @@ y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
 </section>
 <section id="pooling-option-1" class="slide level2">
 <h2>Pooling, Option 1</h2>
+<div class="fragment">
 <p>Complete Pooling, y~1, Fixed Effect</p>
 <p><span class="math display">\[
 y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
 \text{log}(\lambda_{i,t}) = \beta_0
 \]</span></p>
 <p><br></p>
+</div>
 </section>
 <section id="pooling-option-3" class="slide level2">
 <h2>Pooling, Option 3</h2>
@@ -454,8 +470,9 @@ y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
 \beta_{1,i} \sim \text{Normal}(\mu_{\beta_{1}},\sigma_{\beta_{1}})
 \]</span></p>
 </section>
-<section id="pooling" class="slide level2">
-<h2>Pooling</h2>
+<section id="pooling-shrinkage-regularization" class="slide level2">
+<h2>Pooling / Shrinkage / Regularization</h2>
+<p><a href="https://blog.conductrics.com/prediction-pooling-and-shrinkage/">Link</a></p>
 
 <img data-src="RandomEffect_files\pooling.png" class="r-stretch"><div class="footer footer-default">
 
