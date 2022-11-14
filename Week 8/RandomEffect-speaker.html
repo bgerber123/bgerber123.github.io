@@ -356,6 +356,11 @@ Nested Data Model
 <h2>Breeding Bird Survey (BBS)</h2>
 
 <img data-src="RandomEffect_files\bbs.png" class="r-stretch"></section>
+<section id="breeding-bird-survey-bbs-1" class="slide level2">
+<h2>Breeding Bird Survey (BBS)</h2>
+<p><a href="https://www.mbr-pwrc.usgs.gov/">https://www.mbr-pwrc.usgs.gov/</a></p>
+
+<img data-src="RandomEffect_files\bbs.results.png" class="r-stretch"></section>
 <section id="overdispersed-trend-count-model" class="slide level2">
 <h2>Overdispersed Trend Count Model</h2>
 <p>We conduct a survey count of a species at <span class="math inline">\(n.sites\)</span> for <span class="math inline">\(n.years\)</span>.</p>
@@ -422,7 +427,37 @@ y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
 \sigma_{\beta_{1}} &amp;\sim \text{Gamma}(0.001,0.001)
 \end{align*}
 \]</span></p>
-<div class="footer footer-default">
+</section>
+<section id="pooling-option-1" class="slide level2">
+<h2>Pooling, Option 1</h2>
+<p>Complete Pooling, y~1, Fixed Effect</p>
+<p><span class="math display">\[
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0
+\]</span></p>
+<p><br></p>
+</section>
+<section id="pooling-option-3" class="slide level2">
+<h2>Pooling, Option 3</h2>
+<p>No Pooling, y~site, Fixed Effect</p>
+<p><span class="math display">\[
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0+\beta_1 \times x_{site2} + \beta_2 \times x_{site3}+ \beta_4\times x_{site3}...
+\]</span></p>
+</section>
+<section id="pooling-option-2" class="slide level2">
+<h2>Pooling, Option 2</h2>
+<p>Partial Pooling</p>
+<p><span class="math display">\[
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0 + \beta_{1,i} \times year_{i,t} \\
+\beta_{1,i} \sim \text{Normal}(\mu_{\beta_{1}},\sigma_{\beta_{1}})
+\]</span></p>
+</section>
+<section id="pooling" class="slide level2">
+<h2>Pooling</h2>
+
+<img data-src="RandomEffect_files\pooling.png" class="r-stretch"><div class="footer footer-default">
 
 </div>
 </section>

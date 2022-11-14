@@ -41,6 +41,13 @@ code.r{
 
 ![](RandomEffect_files\bbs.png)
 
+## Breeding Bird Survey (BBS)
+
+[https://www.mbr-pwrc.usgs.gov/](https://www.mbr-pwrc.usgs.gov/)
+
+![](RandomEffect_files\bbs.results.png)
+
+
 ## Overdispersed Trend Count Model
 We conduct a survey count of a species at $n.sites$ for $n.years$. 
 
@@ -124,3 +131,38 @@ $$
 \sigma_{\beta_{1}} &\sim \text{Gamma}(0.001,0.001)
 \end{align*}
 $$
+
+## Pooling, Option 1
+
+Complete Pooling, y~1, Fixed Effect
+
+$$
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0 
+$$
+
+<br>
+
+. . .
+
+## Pooling, Option 3
+
+No Pooling, y~site, Fixed Effect
+
+$$
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0+\beta_1 \times x_{site2} + \beta_2 \times x_{site3}+ \beta_4\times x_{site3}...
+$$
+
+## Pooling, Option 2
+Partial Pooling
+
+$$
+y_{i,t} \sim \text{Poisson}(\lambda_{i,t})\\
+\text{log}(\lambda_{i,t}) = \beta_0 + \beta_{1,i} \times year_{i,t} \\
+\beta_{1,i} \sim \text{Normal}(\mu_{\beta_{1}},\sigma_{\beta_{1}})
+$$
+
+## Pooling
+
+![](RandomEffect_files\pooling.png)
