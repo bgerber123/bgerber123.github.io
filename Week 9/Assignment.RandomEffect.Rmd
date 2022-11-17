@@ -1,0 +1,55 @@
+---
+title: "Random Effect Assignment"
+author: "Brian D. Gerber"
+date: "2022-11-17"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To understand two types of *random effects* and Bayesian model fitting, inference, and prediction.
+
+### **Background**
+
+We are interested in developing two types of linear trend models that could be useful to evaluating population increases/decreases of animal counts (e.g., Breeding Bird Survey).
+
+In the previous class, we created code to simulate count data 1) assuming a linear trend with extra-Poisson variation and 2) assuming site-level variation in the slope term. These are two types of models that incorporate a "random effect". 
+
+
+### **Model Fitting**
+
+In class, we will walk through the model fitting of the two simulated data sets. 
+
+### **Markdown**
+
+Create a markdown that accomplishes the assignment tasks below. Make sure to use text to describe each of the things that are requested. 
+
+### **Assignment**
+
+*For the extra-Poisson variation model*, 
+
+-   Plot the posterior distributions of the parameters with their respective priors
+-   Make inference as to whether there is evidence that the population is increasing or decreasing across sites and years
+-   Compare the posterior distributions to your known true values used to simulate the data.
+-   Plot the predicted mean bird count trend along with 95\% credible intervals. Add the observed bird count data to these plots (i.e., y). Does the mean capture the observed data well?
+
+*For the random slope model*, 
+
+-   Plot the posterior distributions of the parameters with their respective priors
+-   Make inference as to whether there is evidence that population at the average site  is increasing or decreasing across years
+-   Make inference for each site whether there is evidence of increasing or decreasing populations across the years
+-   Compare the known slope coefficients to the estimated posterior distributions
+-   Plot the predicted mean bird count trend along with 90\% credible intervals. Add the observed bird count data to these plots (i.e., y).
+
+

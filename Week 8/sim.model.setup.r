@@ -33,10 +33,22 @@ year.cov=matrix(rep(years,n.sites),nrow=n.sites,byrow = TRUE)
 year.cov[1,]
 year.cov[2,]
   
- jags.data <- list(counts=counts.years,
+
+
+
+
+
+
+
+
+year=year.cov[1,]
+y=counts.years
+
+
+ jags.data <- list(y=y,
                    n.sites=n.sites,
                    n.years=n.years,
-                   year.cov=year.cov)
+                   year=year)
 
 
 # Initial values
@@ -54,7 +66,7 @@ year.cov[2,]
   n.chains <- 3
 
 # Setup the Model
-  jm=jags.model(file="model.JAGS.extra.noise.r", data=jags.data)
+  jm=jags.model(file="model.JAGS.extra.noise2.r", data=jags.data)
 
 # Update the model with the burnin
   update(jm, n.iter=n.burn,n.adapt=n.adapt)
@@ -62,6 +74,9 @@ year.cov[2,]
 #Fit the modedl  
   post=coda.samples(jm, variable.names=params, n.chains=n.chains,n.iter=n.iter, thin=n.thin)
 
+  plot(post)
+  head(post[[1]])
+  apply(post[[1]],2,mean)
 #Look at chains
   #Plot all chains MCMC iterations
   color_scheme_set("blue")

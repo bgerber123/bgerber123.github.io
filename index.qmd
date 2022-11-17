@@ -216,10 +216,23 @@ install.packages(c("rjags","bayesplot","runjags","coda"))
 
 -   Lecture Code: <a href="/Week 8/random.effect.R">random.effect.R</a>
 
--   Assignment: <a href="/Week 8/Assignment.RandomEffect.Rmd">1) Markdown File</a> <a href="/Week 8/Assignment.RandomEffect.html">1) Compiled HTML</a>
-
 
 ### Week 11
+
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("rjags","bayesplot","runjags","coda"))
+```
+
+
+-   Data Simulation Code (developed previous class): <a href="/Week 9/Inclass.data.simulation.r">Inclass.data.simulation.r</a>
+
+-   JAGS Models: <a href="/Week 9/model.JAGS.extra.noise.r">model.JAGS.extra.noise.r</a> and <a href="/Week 9/model.JAGS.random.slope.r">model.JAGS.random.slope.r</a>
+
+-   Model Scripts: <a href="/Week 9/Model.Script.Extra.Noise.r">Model.Script.Extra.Noise.r</a> and <a href="/Week 9/Model.Script.Random.Slope.r">Model.Script.Random.Slope.r</a>
+
+-   Assignment: <a href="/Week 9/Assignment.RandomEffect.Rmd">1) Markdown File</a> <a href="/Week 9/Assignment.RandomEffect.html">1) Compiled HTML</a>
+
 ### Week 12
 
 Student Designed Class 1
