@@ -236,6 +236,12 @@ install.packages(c("rjags","bayesplot","runjags","coda"))
 ### Week 12
 Laken, Maegan, Owen, and John lecture/lab 
 
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("rjags","unmarked"))
+```
+
+
 -   Assigned Readings: <a href="/Week 10/Efford 2012.pdf">Assigned Reading</a> and associated <a href="/Week 10/Questions.docx">questions</a>.
 
 
