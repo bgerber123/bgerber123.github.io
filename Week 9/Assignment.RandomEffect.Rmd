@@ -50,6 +50,6 @@ Create a markdown that accomplishes the assignment tasks below. Make sure to use
 -   Make inference as to whether there is evidence that population at the average site  is increasing or decreasing across years
 -   Make inference for each site whether there is evidence of increasing or decreasing populations across the years
 -   Compare the known slope coefficients to the estimated posterior distributions
--   Plot the predicted mean bird count trend along with 90\% credible intervals. Add the observed bird count data to these plots (i.e., y).
+-   Plot the predicted mean (across all sites) bird count trend along with 95\% credible intervals. On the same plot, plot the site-level mean bird count trend with 95\% credible intervals. Lastly, add the observed bird count data to these plots (i.e., y).
 
 
