@@ -238,7 +238,7 @@ Laken, Maegan, Owen, and John lecture/lab
 
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
-install.packages(c("rjags","unmarked"))
+install.packages(c("unmarked"))
 ```
 
 
@@ -251,6 +251,10 @@ install.packages(c("rjags","unmarked"))
 Tori, Liam, and Rebeca lecture/lab  
 
 ### Week 14
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("Hmisc","foreign","reshape2"))
+```
+
 
 Caroline, Corey, and Rea lecture/lab
 
