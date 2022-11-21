@@ -248,14 +248,17 @@ install.packages(c("unmarked"))
 
 ### Week 13
 
-Tori, Liam, and Rebeca lecture/lab  
-
-### Week 14
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("Hmisc","foreign","reshape2"))
 ```
 
-
 Caroline, Corey, and Rea lecture/lab
+
+
+
+### Week 14
+Tori, Liam, and Rebeca lecture/lab  
+
+
 
 :::
