@@ -123,4 +123,31 @@ lines(year,post.quants[2,],col=2,lty=2,lwd=3)
 
 matplot(t(y),add=TRUE,pch=1,col=1)
 
+############################################
+
+  head(post2)
+  dim(post2)
+  pred.mean=matrix(NA,nrow=n.years, ncol=nrow(post2))
+  for(t in 1:n.years){
+      pred.mean[t,] = exp(post2$beta0+post2$beta1*year[t])
+  }
+
+  dim(pred.mean)  
+  hist(pred.mean[1,],xlim=c(100,150))
+  
+    hist(pred.mean[2,],add=TRUE,col=2)
+  hist(pred.mean[3,],add=TRUE,col=3)
+  hist(pred.mean[4,],add=TRUE,col=4)
+  hist(pred.mean[5,],add=TRUE,col=5)
+  
+pred.mean.mean=  apply(pred.mean,1,mean)
+  
+pred.CI=apply(pred.mean,1,quantile, probs=c(0.025,0.975))
+dim(pred.CI)
+plot(year,pred.mean.mean,col=2,
+     pch=18,cex=2,ylim=c(50,400))
+lines(year,pred.CI[1,],col="green",cex=2,lwd=4)
+lines(year,pred.CI[2,],col="green",cex=2,lwd=4)
+
+matplot(t(y),pch=16,add=TRUE,col=1)
 

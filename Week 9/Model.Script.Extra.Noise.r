@@ -32,7 +32,7 @@ jags.data <- list(y=y,
   n.burn <- 2500
   n.chains <- 3
   
-  inits <- function() {list(beta0=rnorm(1,0,1),
+  inits <- function(){list(beta0=rnorm(1,0,1),
                             beta1=rnorm(1,0,0.1),
                             sigma.epsilon=runif(1,0.001,0.05))
                             }  
@@ -78,4 +78,5 @@ jags.data <- list(y=y,
   
 #Combine chains and do regular r plots    
   post2=data.frame(combine.mcmc(post))
+
 

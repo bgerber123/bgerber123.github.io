@@ -71,7 +71,7 @@ jags.data <- list(y=y,
   gelman.plot(post)
 
 #Basic traceplots  
-  plot(post)
+  X11();plot(post, ask=TRUE)
   
 #Fancy traceplots
   #Plot all chains MCMC iterations
