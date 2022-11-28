@@ -238,7 +238,7 @@ Lecture/Lab by **Laken, Maegan, Owen, and John**
 
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
-install.packages(c("rgeos, sf, raster"))
+install.packages(c("unmarked","rgeos", "sf", "raster"))
 ```
 
 -   Lecture: <a href="https://docs.google.com/presentation/d/1wQU52ISf-HEMWKFyKEgkxD1bSPdyOrCtpWMXInpyrrA/edit?usp=sharing
