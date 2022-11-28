@@ -260,21 +260,22 @@ install.packages(c("rgeos, sf, raster"))
 
 ### Week 13
 
+Lecture/Lab by **Caroline, Corey, and Rea**
+
 ```{r, eval=FALSE, echo=TRUE}
 install.packages(c("Hmisc","foreign","reshape2"))
 ```
 
-Caroline, Corey, and Rea lecture/lab
+
 
 
 
 ### Week 14
+Lecture/Lab by **Tori, Liam, and Rebeca**
+
 ```{r, eval=FALSE, echo=TRUE}
 install.packages("dplyr", "ggplot2", "lme4")
 ```
-
-Tori, Liam, and Rebeca lecture/lab  
-
 
 
 :::
