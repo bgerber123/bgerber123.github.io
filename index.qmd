@@ -257,6 +257,10 @@ Caroline, Corey, and Rea lecture/lab
 
 
 ### Week 14
+```{r, eval=FALSE, echo=TRUE}
+install.packages("dplyr", "ggplot2", "lme4")
+```
+
 Tori, Liam, and Rebeca lecture/lab  
 
 
