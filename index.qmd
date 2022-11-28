@@ -234,16 +234,28 @@ install.packages(c("rjags","bayesplot","runjags","coda"))
 -   Assignment: <a href="/Week 9/Assignment.RandomEffect.Rmd">1) Markdown File</a> <a href="/Week 9/Assignment.RandomEffect.html">1) Compiled HTML</a>
 
 ### Week 12
-Laken, Maegan, Owen, and John lecture/lab 
+Lecture/Lab by **Laken, Maegan, Owen, and John**
 
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
-install.packages(c("unmarked"))
+install.packages(c("rgeos, sf, raster"))
 ```
+
+-   Lecture: <a href="https://docs.google.com/presentation/d/1wQU52ISf-HEMWKFyKEgkxD1bSPdyOrCtpWMXInpyrrA/edit?usp=sharing
+">Occupancy</a>
 
 
 -   Assigned Readings: <a href="/Week 10/Efford 2012.pdf">Assigned Reading</a> and associated <a href="/Week 10/Questions.docx">questions</a>.
 
+-   Code : <a href="/Week 10/NRS520-Occupancy-ClassCode.R">NRS520-Occupancy-ClassCode.R</a>
+
+-   **HW**: Simulate your own occupancy study for a disease causing prion! Create a sampling grid like we did in class but:
+  
+    -   Consider it a common species (concentrated instead of dispersed)
+    -   Run both a large and small home range
+    -   Use small and large grid sizes
+    -   Compare these scenarios as well as what we’ve seen in class
+    -   What type of sampling should we use to most effectively understand this outbreak?
 
 
 ### Week 13
