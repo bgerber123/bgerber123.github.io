@@ -249,13 +249,9 @@ install.packages(c("unmarked","rgeos", "sf", "raster"))
 
 -   Code : <a href="/Week 10/NRS520-Occupancy-ClassCode.R">NRS520-Occupancy-ClassCode.R</a>
 
--   **HW**: Simulate your own occupancy study for a disease causing prion! Create a sampling grid like we did in class but:
+-   Assignment: <a href="/Week 10/NRS 520-Occupancy Assignment.docx">NRS 520-Occupancy Assignment.docx</a>
   
-    -   Consider it a common species (concentrated instead of dispersed)
-    -   Run both a large and small home range
-    -   Use small and large grid sizes
-    -   Compare these scenarios as well as what we’ve seen in class
-    -   What type of sampling should we use to most effectively understand this outbreak?
+
 
 
 ### Week 13

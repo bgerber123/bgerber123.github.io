@@ -1,12 +1,15 @@
 ##### Occupancy Module - NRS 520
 ### Creating grids of different sizes and sampling points within grid of different sizes
-
+rm(list=ls())
 library(rgeos)
 library(sf)
 library(raster)
+library(runjags)
 
 
-# how to make a generic grid
+##### Make the sampling grids
+
+## Grid 1 = small cells
 # this is 100x100m simulation grid where each point is at 5m intervals
 # corresponds to the centroid of each cell, or sampling location
 x<-seq(from=0, to=100, by=5) #generates numbers 0-100 in increments of 5
@@ -23,7 +26,7 @@ plot(dat)
 plot(grid1, add=T, col=NA)
 
 
-
+## Grid 2 = large cells
 # make a second group that is larger centroids, so maybe 10m apart
 # same code as above, we are just not increasing our nodes from 5 to 10m
 x2<-seq(from=0, to=100, by=10)
@@ -39,8 +42,8 @@ grid2$layer=seq(1:nrow(dat2))
 plot(dat2)
 plot(grid2, add=T, col=NA)
 
-
-# first set the extent of the landscape then check out our sampling grid
+## Visualization
+# first set the extent of the landscape then check out our sampling grids with centroids
 e1<-extent(1,99,1,99)
 e2<-extent(-1,101,-1,101)
 plot(e1,col=NA,bty="n", axes=F )
@@ -57,140 +60,125 @@ length(dat2) # and 121 in the larger grid
 
 
 ### Setting up the scenarios! 
-# These will be x2 because each will be with both grid sizes
-# We have 1) small HR, dispersed, 2) small HR, concentrated, 3) large HR, dispersed,
-# 4) large HR, concentrated
 
-# few points for small, dispersed and more points for large concentrated
-set.seed(543623)
-xcord<-runif(20, 0,100) #selects 20 numbers between 0 and 100
-set.seed(51594)
-ycord<-runif(20, 0,100)
-HRcentersA<-as.data.frame(cbind(xcord, ycord))
-colnames(HRcentersA)<-c("x","y")
-HRcentersA<-SpatialPointsDataFrame(HRcentersA, coords = HRcentersA)
+# We have A) small HR, low intensity outbreak, B) small HR, high intensity outbreak, C) large HR, low intensity outbreak,
+# D) large HR, high intensity outbreak
+# REMEMBER - Home Range (HR) is equivalent to Dispersal Distance here in this case study
+# Below are each of the 4 scenarios, just replace lines indicated in the for loop below to run the proper model
+# DONT FORGET - you'll need to run it twice for each scenario beacuse you will need to do both grids (grid1 and grid2)
 
+## Scenario A
+# few points for small HR = low intensity outbreak
 
-# many points for small, concentrated
-set.seed(543623)
-xcord<-runif(100, 0,100) #selects 20 numbers between 0 and 100
-set.seed(51594)
-ycord<-runif(100, 0,100)
-HRcentersB<-as.data.frame(cbind(xcord, ycord))
-colnames(HRcentersB)<-c("x","y")
-HRcentersB<-SpatialPointsDataFrame(HRcentersB, coords = HRcentersB)
+## Scenario B
+# many points for small HR = high intensity outbreak
 
-# few points for large, dispersed
-set.seed(543623)
-xcord<-runif(5, 0,100) #selects 20 numbers between 0 and 100
-set.seed(51594)
-ycord<-runif(5, 0,100)
-HRcentersC<-as.data.frame(cbind(xcord, ycord))
-colnames(HRcentersC)<-c("x","y")
-HRcentersC<-SpatialPointsDataFrame(HRcentersC, coords = HRcentersC)
+## Scenario C
+# few points for large HR = low intensity outbreak
 
+## Scenario D
+# many points for large HR = high intensity outbreak
 
-# We have the centroids for each home range, now we need to create the buffer
-# around those points that is going to serve as our circular HR. Small HR will
-# have a buffer of 2m, and large will have a buffer of 15m
-smallHRdisp<-gBuffer(HRcentersA, width = 2, byid = TRUE)
-smallHRconc<-gBuffer(HRcentersB, width = 2, byid =TRUE)
-largeHRdisp<-gBuffer(HRcentersC, width = 15, byid=TRUE)
-largeHRconc<-gBuffer(HRcentersA, width = 15, byid=TRUE)
-par(mfrow=c(2,2))
-plot(e1,col=NA,bty="n", axes=F )
-plot(smallHRdisp, add=T, col=3)
-plot(e1,col=NA,bty="n", axes=F )
-plot(smallHRconc, add=T, col=3)
-plot(e2,col=NA,bty="n", axes=F )
-plot(largeHRdisp, add=T, col=4)
-plot(e2,col=NA,bty="n", axes=F )
-plot(largeHRconc, add=T, col=4)
-
-
-
-# put all 8 maps together 
-par(mfrow=c(2,2), mar=c(1,1,2,1), cex=1)
-#small grids, small HR, dispersed
-plot(e1, xlab=NA, ylab=NA, main="small grids, small HR, dispersed", col=NA, bty="n", axes=F)
-plot(smallHRdisp, add=T, col=5, border="black")
-plot(dat, add=T, col=2, pch=16)
-plot(grid1, add=T, col=NA)
-# small grids, small HR, concentrated
-plot(e1,xlab=NA, ylab=NA, main="small grids, small HR, concentrated", col=NA, bty="n", axes=F)
-plot(smallHRconc, add=T, col=7, border="black")
-plot(dat, add=T, col=2, pch=16)
-plot(grid1, add=T, col=NA)
-#large grids, small HR, dispersed
-plot(e2,xlab=NA, ylab=NA, main="large grids, small HR, dispersed", col=NA, bty="n", axes=F)
-plot(smallHRdisp, add=T, col=5)
-plot(dat2, add=T, col=3, pch=15) 
-plot(grid2, add=T, col=NA)
-#large grids, small HR, concentrated
-plot(e2, xlab=NA, ylab=NA, main="large grids, small HR, concentrated", col=NA, bty="n", axes=F)
-plot(smallHRconc, add=T, col=7)
-plot(dat2, add=T, col=3, pch=15)  
-plot(grid2, add=T, col=NA)
-
-#small grids, large HR, dispersed
-plot(e1, xlab=NA, ylab=NA, main="small grids, large HR, dispersed", col=NA, bty="n", axes=F)
-plot(largeHRdisp, add=T, col=5, border="black")
-plot(dat, add=T, col=2, pch=16)
-plot(grid1, add=T, col=NA)
-# small grids, large HR, concentrated
-plot(e1,xlab=NA, ylab=NA, main="small grids, large HR, concentrated", col=NA, bty="n", axes=F)
-plot(largeHRconc, add=T, col=7, border="black")
-plot(dat, add=T, col=2, pch=16)
-plot(grid1, add=T, col=NA)
-#large grids, large HR, dispersed
-plot(e2,xlab=NA, ylab=NA, main="large grids, large HR, dispersed", col=NA, bty="n", axes=F)
-plot(largeHRdisp, add=T, col=5)
-plot(dat2, add=T, col=3, pch=15) 
-plot(grid2, add=T, col=NA)
-#large grids, large HR, concentrated
-plot(e2, xlab=NA, ylab=NA, main="large grids, large HR, concentrated", col=NA, bty="n", axes=F)
-plot(largeHRconc, add=T, col=7)
-plot(dat2, add=T, col=3, pch=15)  
-plot(grid2, add=T, col=NA)
-
-# Great! Now we understand the background and creation all of our scenarios, 
-# so let's run our occupancy model on the largeHR with the large grid 
+######################
+# Great! Now we understand the background of our scenarios, 
+# let's get some data and run the models
 
 # First, we need to generate the dataset we are going to use
-n.iter=1000
-zj=matrix(NA,nrow=121,ncol=n.iter)
-y=array(NA,dim=c(121,3,n.iter))
-for(j in 1:n.iter){
-  xcord<-runif(20, 0,100) #selects 20 numbers between 0 and 100 (concentrated for large HR, or dispersed for small HR)
-  ycord<-runif(20, 0,100)
-  HRcenters<-as.data.frame(cbind(xcord, ycord))
+n.grid=nrow(grid1) # need to swap in grid2 after running with grid1
+grid=grid1 # you'll need to swap in grid2 here after running with grid1
+n.homerange=20 #change to: 20 (Scenario A and D), 100 (Scenario B), and 5 (Scenario C)
+HRsize=2 # use 2 for small HR (Scenarios A and B) and 15 for large HR (Scenarios C and D)
+
+
+# DO NOT NEED TO CHANGE ANYTHING BELOW
+n.sim=5 # this is 5 different sets of home range locations that will represent 5
+        # different sets of locations of prion distribution on the landscape
+n.surveys=3 
+zj=matrix(NA,nrow=n.grid,ncol=n.sim) #makes empty matrix to store our z values (true occupancy at each cell)
+y=array(NA,dim=c(n.grid,n.surveys,n.sim)) #makes empty array to store our data for all cells, 3 survey occassions at each, and 1000 truths of each dataset 
+coefs.est=matrix(NA, nrow=n.sim,ncol=3)
+truth=vector(length=n.sim)
+
+for(j in 1:n.sim){
+  set.seed(1985+j)
+  xcord<-runif(n.homerange, 0,100) #make x coordinates for home range centers
+  set.seed(18915648+j)
+  ycord<-runif(n.homerange, 0,100) # make y coordinates for home range centers
+  HRcenters<-as.data.frame(cbind(xcord, ycord)) # combine coordinates
   colnames(HRcenters)<-c("x","y")
-  HRcenters<-SpatialPointsDataFrame(HRcenters, coords = HRcenters)
-  largeHR<-gBuffer(HRcenters, width = 15, byid=TRUE) # this creates our large circular HR around the point with width of 15m (5m for small HR)
-  largeHR.2=st_as_sf(largeHR) # turns that buffer into an sf object
-  largehr.list=st_intersects(largeHR.2,grid2) # intersection of the grid and HR
-  z=vector(length = length(grid2$layer))
-  zm=matrix(NA,length(grid2$layer),ncol=length(largehr.list))
-  for(i in 1:length(grid2$layer)){
-    for(m in 1:length(largehr.list)){
-      zm[i,m]=length(which(largehr.list[[m]]==i))
+  HRcenters<-SpatialPointsDataFrame(HRcenters, coords = HRcenters) # make the coords a spatial layer
+  HR<-gBuffer(HRcenters, width = HRsize, byid=TRUE) # creates the buffer around the HR center to serve as the circular home range 
+  HR.2=st_as_sf(HR) # turns it into an sf object so we can run the intersect below  
+  hr.list=st_intersects(HR.2,grid) 
+  z=vector(length = n.grid) 
+  zm=matrix(NA,n.grid,ncol=length(hr.list)) #sets up our z values
+  for(i in 1:n.grid){
+    for(m in 1:length(hr.list)){
+      zm[i,m]=length(which(hr.list[[m]]==i))
     }
     z[i]=max(zm[i,])
   }
   zj[,j]=z
-  alpha0=0.5
-  alpha1=-0.5
-  x1=rnorm(n = length(grid2$layer))
-  logit.p=alpha0+alpha1*x1
-  expit=function(x){exp(x)/(1+exp(x))}
-  p.uncond=expit(logit.p)
+  alpha0=0.5 # Setting the true detection probability
+  alpha1=-0.5 # setting the true coefficient for our covariate
+  x1=rnorm(n = n.grid) #this is our covariate (soil binding potential) on detection
+  logit.p=alpha0+alpha1*x1 # calcualting detection prob
+  p.uncond=plogis(logit.p) 
   p=p.uncond*zj[,j]
-  y1=rbinom(n=length(p),size=1,prob=p)
-  y2=rbinom(n=length(p),size=1,prob=p)
-  y3=rbinom(n=length(p),size=1,prob=p)
-  y[,,j]=cbind(y1,y2,y3)
+  y1=rbinom(n=length(p),size=1,prob=p) #survey 1
+  y2=rbinom(n=length(p),size=1,prob=p) #survey 2
+  y3=rbinom(n=length(p),size=1,prob=p) #survey 3
+  y[,,j]=cbind(y1,y2,y3) # combine all data for all 3 surveys
+  
+  model_text="model{
+  for(i in 1:n.grid){
+    for(j in 1:n.surveys){
+  y[i,j]~dbern(p[i]*z[i])
+  }
+  z[i]~dbern(psi[i])
+  logit(psi[i])=beta0
+  logit(p[i])=alpha0+alpha1*x1[i]
+  }
+  beta0~dlogis(0,1)
+  alpha0~dlogis(0,1)
+  alpha1~dlogis(0,1)
+  }"
+  inits=function(){list(z=apply(y,1,max,na.rm=T),
+                        alpha0=runif(1),
+                        alpha1=runif(1),
+                        beta0=runif(1))}
+  JM=run.jags(model=model_text,
+              monitor = c("alpha0","alpha1",
+                          "beta0"),
+              data=list(n.grid=n.grid,n.surveys=n.surveys,
+                        y=y[,,j],x1=x1),
+              burnin=1000,n.chains=3,sample=1000,
+              method = "rjags",inits=inits
+  )
+  summary(JM)
+  mean(z)
+  
+  coefs.est[j,]=summary(JM)[,4] #pull out the coefficients
+  truth[j]=mean(zj[,j]) # calculate the true occupancy for each of the 5 different simulations
 }
 
-head(y)
-dim(y)
+## Yay, let's check the estimates - you'll want to save these as 
+## different objects for each model scenario you run (code it yourself!)
+mean.est=apply(coefs.est,2,mean)
+names(mean.est)=c("Psi Int","p Int", "p x1")
+plogis(mean.est[1])
+# estimates from the model
+mean.est
+# true occupancy
+mean(truth)
+# calculating bias
+bias=plogis(mean.est[1])-mean(truth)
+bias
 
+### YOU'LL NEED TO CHANGE THESE EVERYTIME TO SAVE YOUR ESTIMATES
+### FOR EACH SCENARIO
+SAG1est<-mean.est #scenario A, grid 1 mean.estimates
+SAG1truth<-mean(truth) #scenario A, grid 1 mean true occupancy
+SAG1bias<-bias # scenario A, grid 1 bias
+
+# Make table that combines all the scenario results together below
