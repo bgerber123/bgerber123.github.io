@@ -1,0 +1,2378 @@
+"","Amnt_hunting_fac","Education_fac","Gender","Years_Hunted"
+"1","Stayed about the same","College_Degree","Male",1
+"2","Decreased","Advanced_Degree","Male",1
+"3","Stayed about the same","High_School","Male",6
+"4","Stayed about the same","College_Degree","Male",1
+"5","Decreased","College_Degree","Male",1
+"6","Stayed about the same","College_Degree","Female",1
+"7","Increased","Advanced_Degree","Female",6
+"8","Decreased","High_School","Male",6
+"9","Stayed about the same","High_School","Male",1
+"10","Stayed about the same","College_Degree","Male",15
+"11","Increased","College_Degree","Male",3
+"12","Decreased","High_School","Male",10
+"13","Stayed about the same","Advanced_Degree","Male",1
+"14","Increased","College_Degree","Male",4
+"15","Stayed about the same","College_Degree","Male",8
+"16","Decreased","High_School","Male",25
+"17","Increased","High_School","Male",1
+"18","Increased","College_Degree","Male",6
+"19","Stayed about the same","Advanced_Degree","Male",20
+"20","Stayed about the same","High_School","Male",10
+"21","Decreased","High_School","Male",8
+"22","Increased","College_Degree","Male",1
+"23","Decreased","Advanced_Degree","Male",25
+"24","Decreased","College_Degree","Male",2
+"25","Increased",NA,"Male",1
+"26","Stayed about the same","Advanced_Degree","Male",4
+"27","Stayed about the same","College_Degree","Male",3
+"28","Increased","Advanced_Degree","Male",20
+"29","Stayed about the same","College_Degree","Female",4
+"30","Stayed about the same","College_Degree","Male",5
+"31","Stayed about the same","College_Degree","Male",5
+"32",NA,"College_Degree","Male",1
+"33","Stayed about the same","College_Degree","Male",50
+"34","Increased","College_Degree","Male",8
+"35","Stayed about the same","College_Degree","Male",1
+"36","Increased","Advanced_Degree","Male",15
+"37","Stayed about the same","Advanced_Degree","Male",1
+"38",NA,"College_Degree","Male",1
+"39","Stayed about the same","College_Degree","Male",5
+"40","Stayed about the same","Advanced_Degree","Male",10
+"41","Stayed about the same","College_Degree","Male",21
+"42","Increased","Advanced_Degree","Male",7
+"43",NA,"College_Degree","Male",1
+"44","Decreased","Advanced_Degree","Male",5
+"45","Stayed about the same","College_Degree","Male",1
+"46","Decreased","Advanced_Degree","Male",1
+"47","Stayed about the same","High_School","Male",1
+"48",NA,"College_Degree","Male",1
+"49","Decreased","College_Degree","Male",3
+"50","Increased","College_Degree","Male",2
+"51","Stayed about the same","High_School","Male",1
+"52","Stayed about the same","High_School","Male",2
+"53","Decreased","Advanced_Degree","Male",10
+"54","Increased","College_Degree","Male",14
+"55","Increased","College_Degree","Male",5
+"56","Increased","College_Degree","Male",4
+"57","Increased","College_Degree","Male",2
+"58","Decreased","High_School","Male",2
+"59","Stayed about the same","High_School","Male",15
+"60","Increased","High_School","Male",1
+"61","Increased","High_School","Male",5
+"62","Increased","College_Degree","Male",21
+"63","Decreased","High_School","Male",1
+"64","Increased","High_School","Male",7
+"65","Stayed about the same","College_Degree","Male",4
+"66","Stayed about the same","High_School","Male",10
+"67","Decreased","College_Degree","Male",2
+"68","Increased","High_School","Male",3
+"69","Decreased","College_Degree","Male",30
+"70","Increased","High_School","Male",6
+"71","Stayed about the same","High_School","Male",2
+"72","Increased","College_Degree","Male",6
+"73","Increased","College_Degree","Male",10
+"74","Decreased","Advanced_Degree","Male",4
+"75","Decreased","College_Degree","Female",6
+"76","Stayed about the same","Advanced_Degree","Male",1
+"77","Stayed about the same","College_Degree","Male",6
+"78","Stayed about the same","College_Degree","Male",20
+"79","Increased","Advanced_Degree","Male",1
+"80","Decreased","High_School","Male",13
+"81","Decreased","High_School","Male",12
+"82","Stayed about the same","Advanced_Degree","Male",4
+"83","Increased","College_Degree","Male",2
+"84","Stayed about the same","High_School","Male",3
+"85","Increased","High_School","Male",16
+"86","Stayed about the same","Advanced_Degree","Male",6
+"87","Stayed about the same","High_School","Male",3
+"88","Stayed about the same","High_School","Male",3
+"89","Increased","College_Degree","Male",13
+"90","Increased","College_Degree","Male",6
+"91","Increased","High_School","Male",1
+"92","Decreased","High_School","Male",40
+"93","Increased","High_School","Male",6
+"94","Decreased","High_School","Male",20
+"95","Stayed about the same","College_Degree","Male",8
+"96","Decreased","College_Degree","Male",20
+"97","Stayed about the same","Advanced_Degree","Male",7
+"98","Stayed about the same","Advanced_Degree","Male",37
+"99","Stayed about the same","High_School","Male",22
+"100","Stayed about the same","High_School","Male",25
+"101","Decreased","High_School","Male",20
+"102","Decreased","College_Degree","Male",99
+"103","Decreased","College_Degree","Male",12
+"104","Increased","College_Degree","Male",3
+"105","Decreased","College_Degree","Male",20
+"106","Stayed about the same","College_Degree","Male",20
+"107","Stayed about the same","College_Degree","Male",5
+"108","Decreased","High_School","Male",37
+"109","Increased","College_Degree","Male",30
+"110","Increased","College_Degree","Male",7
+"111","Increased","College_Degree","Male",1
+"112","Decreased","High_School","Male",53
+"113","Stayed about the same","High_School","Male",43
+"114","Decreased","High_School","Male",4
+"115","Decreased","College_Degree","Male",30
+"116","Stayed about the same","Advanced_Degree","Male",5
+"117","Stayed about the same","High_School","Male",65
+"118","Decreased","High_School","Male",28
+"119","Stayed about the same","High_School","Male",13
+"120","Stayed about the same","High_School","Male",3
+"121","Increased","College_Degree","Male",4
+"122","Stayed about the same","College_Degree","Male",2
+"123","Decreased","College_Degree","Male",1
+"124","Stayed about the same","College_Degree","Male",2
+"125","Stayed about the same","College_Degree","Male",10
+"126","Stayed about the same","Advanced_Degree","Male",14
+"127","Stayed about the same","College_Degree","Male",11
+"128","Stayed about the same","Advanced_Degree","Male",6
+"129","Decreased","High_School","Male",25
+"130","Stayed about the same","College_Degree","Male",4
+"131","Stayed about the same","College_Degree","Male",7
+"132","Increased","High_School","Male",1
+"133","Increased","High_School","Male",1
+"134","Stayed about the same","College_Degree","Male",3
+"135","Increased","High_School","Male",1
+"136","Stayed about the same","High_School","Male",4
+"137","Increased","College_Degree","Male",10
+"138","Increased","High_School","Male",35
+"139","Stayed about the same","High_School","Male",17
+"140","Stayed about the same","High_School","Male",3
+"141","Decreased","College_Degree","Male",9
+"142","Increased","High_School","Male",21
+"143","Decreased","College_Degree","Female",20
+"144","Stayed about the same","College_Degree","Male",10
+"145","Increased","High_School","Male",5
+"146","Decreased","College_Degree","Male",8
+"147","Increased","College_Degree","Male",7
+"148","Decreased","College_Degree","Male",22
+"149","Decreased","Advanced_Degree","Male",35
+"150","Increased","College_Degree","Male",20
+"151","Increased","College_Degree","Male",36
+"152","Increased","College_Degree","Male",1
+"153","Stayed about the same","College_Degree","Male",2
+"154","Stayed about the same","High_School","Male",42
+"155","Decreased","High_School","Male",15
+"156","Stayed about the same","College_Degree","Male",4
+"157","Stayed about the same","High_School","Male",4
+"158","Decreased","Advanced_Degree","Male",15
+"159","Increased","Advanced_Degree","Male",2
+"160","Stayed about the same","High_School","Male",10
+"161","Stayed about the same","Advanced_Degree","Male",7
+"162","Increased","High_School","Male",4
+"163","Stayed about the same","Advanced_Degree","Male",2
+"164","Increased","Advanced_Degree","Male",2
+"165","Stayed about the same","College_Degree","Male",20
+"166","Increased","Advanced_Degree","Male",1
+"167","Stayed about the same","College_Degree","Male",1
+"168","Stayed about the same","College_Degree","Male",2
+"169","Decreased","High_School","Male",2
+"170","Stayed about the same","College_Degree","Male",3
+"171",NA,"High_School","Male",3
+"172","Increased","College_Degree","Male",1
+"173","Decreased","College_Degree","Male",6
+"174","Stayed about the same","High_School","Male",1
+"175","Increased","College_Degree","Male",2
+"176","Stayed about the same","Advanced_Degree","Male",2
+"177","Decreased","College_Degree","Male",5
+"178","Stayed about the same","College_Degree","Male",2
+"179","Stayed about the same","College_Degree","Male",4
+"180","Decreased","College_Degree","Male",1
+"181","Decreased","Advanced_Degree","Male",15
+"182","Stayed about the same","High_School","Male",1
+"183","Stayed about the same","College_Degree","Female",2
+"184","Stayed about the same","High_School","Male",13
+"185","Increased","College_Degree","Male",4
+"186","Increased","Advanced_Degree","Male",2
+"187","Increased","College_Degree","Male",3
+"188","Increased","High_School","Male",2
+"189","Increased","College_Degree","Male",1
+"190","Increased","College_Degree","Male",3
+"191","Increased","High_School","Male",4
+"192","Increased","High_School","Male",3
+"193","Decreased","College_Degree","Male",3
+"194","Increased","High_School","Male",12
+"195","Decreased","College_Degree","Male",10
+"196","Stayed about the same","College_Degree","Male",1
+"197","Decreased","High_School","Male",42
+"198","Decreased","College_Degree","Male",1
+"199","Stayed about the same","High_School","Male",1
+"200","Stayed about the same","College_Degree","Male",1
+"201","Increased","Advanced_Degree","Male",1
+"202","Increased","College_Degree","Male",2
+"203","Stayed about the same","College_Degree","Male",1
+"204","Stayed about the same","College_Degree","Male",20
+"205","Stayed about the same","College_Degree","Male",30
+"206","Increased","College_Degree","Male",6
+"207","Decreased","High_School","Male",3
+"208","Decreased","College_Degree","Male",30
+"209","Decreased","College_Degree","Male",30
+"210","Stayed about the same","Advanced_Degree","Male",3
+"211","Stayed about the same","College_Degree","Male",5
+"212","Stayed about the same","College_Degree","Male",15
+"213","Decreased","High_School","Male",5
+"214","Increased","College_Degree","Male",6
+"215","Decreased","College_Degree","Male",4
+"216","Decreased","College_Degree","Male",25
+"217","Decreased","College_Degree","Male",5
+"218","Stayed about the same","College_Degree","Male",36
+"219","Stayed about the same","High_School","Male",8
+"220","Increased","High_School","Male",99
+"221","Decreased","High_School","Male",8
+"222","Increased","High_School","Male",2
+"223","Decreased","High_School","Male",18
+"224","Stayed about the same","Advanced_Degree","Male",5
+"225","Increased","High_School","Male",5
+"226","Stayed about the same","High_School","Male",5
+"227","Decreased","College_Degree","Male",20
+"228","Stayed about the same","Advanced_Degree","Male",4
+"229","Increased","Advanced_Degree","Male",4
+"230","Decreased","High_School","Male",3
+"231","Increased","High_School","Male",5
+"232","Stayed about the same","High_School","Male",12
+"233","Stayed about the same","College_Degree","Male",20
+"234","Stayed about the same","High_School","Male",35
+"235","Stayed about the same","High_School","Male",2
+"236","Stayed about the same","High_School","Male",1
+"237","Decreased","High_School","Female",14
+"238","Decreased","College_Degree","Male",2
+"239","Stayed about the same","High_School","Male",25
+"240","Decreased","College_Degree","Male",1
+"241","Stayed about the same","College_Degree","Male",5
+"242","Decreased","High_School","Male",12
+"243","Decreased","High_School","Male",33
+"244","Decreased","College_Degree","Male",8
+"245","Increased","High_School","Male",14
+"246","Stayed about the same","College_Degree","Male",5
+"247","Stayed about the same","High_School","Male",3
+"248","Decreased","College_Degree","Male",9
+"249","Increased","High_School","Male",15
+"250","Decreased","College_Degree","Male",20
+"251","Stayed about the same","College_Degree","Male",3
+"252","Increased","College_Degree","Male",30
+"253","Stayed about the same","College_Degree","Male",5
+"254","Stayed about the same","High_School","Male",12
+"255","Stayed about the same","High_School","Male",5
+"256","Stayed about the same","College_Degree","Male",22
+"257","Decreased","High_School","Male",2
+"258","Stayed about the same","High_School","Male",10
+"259","Stayed about the same","High_School","Male",5
+"260","Decreased","College_Degree","Male",20
+"261","Increased","High_School","Male",3
+"262","Decreased","High_School","Male",3
+"263","Increased","High_School","Male",6
+"264",NA,"College_Degree","Male",3
+"265","Decreased","Advanced_Degree","Male",2
+"266","Stayed about the same","College_Degree","Male",4
+"267","Decreased","High_School","Male",5
+"268","Stayed about the same","Advanced_Degree","Male",15
+"269","Increased","High_School","Male",3
+"270","Decreased","Advanced_Degree","Male",10
+"271","Stayed about the same","College_Degree","Male",16
+"272","Stayed about the same","College_Degree","Male",5
+"273","Increased","High_School","Male",47
+"274","Decreased","College_Degree","Male",5
+"275","Decreased","High_School","Male",2
+"276","Increased","College_Degree","Male",1
+"277","Stayed about the same","Advanced_Degree","Male",36
+"278","Increased","College_Degree","Male",3
+"279","Stayed about the same","College_Degree","Male",25
+"280","Decreased","High_School","Male",65
+"281","Increased","High_School","Male",4
+"282","Increased","High_School","Male",15
+"283","Decreased","High_School","Male",15
+"284","Decreased","College_Degree","Male",10
+"285","Stayed about the same","High_School","Male",20
+"286","Stayed about the same","College_Degree","Male",43
+"287","Stayed about the same","Advanced_Degree","Male",3
+"288","Decreased","College_Degree","Male",1
+"289","Increased","High_School","Male",2
+"290","Stayed about the same","College_Degree","Male",1
+"291","Decreased","College_Degree","Female",2
+"292","Stayed about the same","High_School","Male",1
+"293","Decreased","College_Degree","Male",2
+"294","Decreased","College_Degree","Male",1
+"295","Decreased","Advanced_Degree","Male",2
+"296","Decreased","High_School","Male",1
+"297","Stayed about the same","College_Degree","Male",5
+"298","Decreased","Advanced_Degree","Male",1
+"299","Stayed about the same","Advanced_Degree","Male",4
+"300","Decreased","Advanced_Degree","Female",2
+"301",NA,"High_School","Male",1
+"302","Stayed about the same","Advanced_Degree","Male",2
+"303","Decreased","High_School","Male",3
+"304","Increased","Advanced_Degree","Male",5
+"305","Increased","Advanced_Degree","Male",2
+"306","Increased","High_School","Male",15
+"307","Decreased","High_School","Male",1
+"308","Stayed about the same","Advanced_Degree","Male",1
+"309","Stayed about the same","Advanced_Degree","Male",2
+"310","Increased","High_School","Male",2
+"311","Decreased","High_School","Male",1
+"312","Increased","Advanced_Degree","Male",1
+"313","Stayed about the same","High_School","Male",7
+"314","Stayed about the same","Advanced_Degree","Male",5
+"315","Increased","College_Degree","Male",1
+"316","Increased","College_Degree","Male",48
+"317","Stayed about the same","College_Degree","Male",1
+"318","Increased","College_Degree","Male",1
+"319","Increased","Advanced_Degree","Male",13
+"320","Stayed about the same","College_Degree","Male",1
+"321","Decreased","Advanced_Degree","Male",1
+"322","Decreased","Advanced_Degree","Female",4
+"323","Increased","High_School","Male",1
+"324","Stayed about the same","College_Degree","Male",8
+"325","Increased","College_Degree","Male",15
+"326","Increased","High_School","Male",1
+"327","Stayed about the same","College_Degree","Male",4
+"328","Stayed about the same","Advanced_Degree","Male",1
+"329","Decreased","High_School","Male",15
+"330","Decreased","College_Degree","Male",3
+"331","Stayed about the same","Advanced_Degree","Male",30
+"332","Stayed about the same","College_Degree","Male",20
+"333","Increased","High_School","Male",7
+"334","Stayed about the same","College_Degree","Male",3
+"335","Stayed about the same","College_Degree","Male",7
+"336","Stayed about the same","College_Degree","Female",7
+"337","Decreased","College_Degree","Male",24
+"338","Stayed about the same","High_School","Male",8
+"339","Stayed about the same","Advanced_Degree","Male",1
+"340","Stayed about the same","High_School","Male",7
+"341","Stayed about the same","College_Degree","Male",5
+"342","Stayed about the same","College_Degree","Male",10
+"343","Increased","College_Degree","Male",5
+"344",NA,"College_Degree","Male",1
+"345","Stayed about the same","College_Degree","Male",5
+"346","Stayed about the same","College_Degree","Male",4
+"347","Stayed about the same","High_School","Male",2
+"348","Stayed about the same","Advanced_Degree","Male",2
+"349","Stayed about the same","Advanced_Degree","Male",1
+"350","Increased","College_Degree","Male",3
+"351","Decreased","College_Degree","Male",8
+"352","Stayed about the same","College_Degree","Male",25
+"353","Increased","College_Degree","Male",3
+"354","Stayed about the same","Advanced_Degree","Male",2
+"355","Stayed about the same","College_Degree","Male",10
+"356","Increased","High_School","Male",50
+"357","Stayed about the same","College_Degree","Male",1
+"358","Increased","College_Degree","Male",32
+"359","Stayed about the same","College_Degree","Male",12
+"360","Stayed about the same","College_Degree","Male",2
+"361","Stayed about the same","High_School","Male",40
+"362","Increased","Advanced_Degree","Male",30
+"363","Increased","College_Degree","Male",1
+"364","Increased","College_Degree","Male",12
+"365","Decreased","High_School","Male",6
+"366","Decreased","College_Degree","Male",15
+"367","Stayed about the same","College_Degree","Male",3
+"368","Stayed about the same","College_Degree","Male",5
+"369","Decreased","College_Degree","Male",1
+"370","Increased","College_Degree","Male",30
+"371","Stayed about the same","College_Degree","Male",5
+"372","Increased","College_Degree","Female",5
+"373","Decreased","College_Degree","Male",2
+"374","Stayed about the same","College_Degree","Male",20
+"375","Stayed about the same","Advanced_Degree","Male",3
+"376","Stayed about the same","College_Degree","Male",1
+"377","Stayed about the same","College_Degree","Male",10
+"378","Stayed about the same","College_Degree","Male",1
+"379","Decreased","High_School","Male",4
+"380","Stayed about the same","College_Degree","Male",1
+"381","Stayed about the same","College_Degree","Female",5
+"382","Stayed about the same","High_School","Male",4
+"383","Decreased","High_School","Male",2
+"384","Decreased","High_School","Female",3
+"385","Increased","High_School","Male",1
+"386","Decreased","High_School","Male",1
+"387","Increased","High_School","Male",2
+"388","Increased","College_Degree","Male",6
+"389","Decreased","Advanced_Degree","Male",3
+"390","Increased","High_School","Male",1
+"391","Stayed about the same","High_School","Male",2
+"392","Stayed about the same","Advanced_Degree","Male",6
+"393","Decreased","College_Degree","Male",1
+"394","Stayed about the same","High_School","Male",2
+"395","Decreased","College_Degree","Male",7
+"396","Stayed about the same","High_School","Male",20
+"397","Stayed about the same","High_School","Male",1
+"398","Decreased","College_Degree","Male",8
+"399","Increased","College_Degree","Male",3
+"400","Increased","College_Degree","Male",4
+"401","Decreased","Advanced_Degree","Male",1
+"402","Decreased","High_School","Male",15
+"403","Decreased","College_Degree","Male",20
+"404","Decreased","High_School","Male",15
+"405","Increased","Advanced_Degree","Male",1
+"406","Decreased","High_School","Male",7
+"407","Decreased","Advanced_Degree","Male",2
+"408","Stayed about the same","College_Degree","Male",1
+"409","Increased","High_School","Male",7
+"410","Stayed about the same","High_School","Male",5
+"411","Stayed about the same","College_Degree","Male",4
+"412","Stayed about the same","High_School","Male",35
+"413","Decreased","College_Degree","Male",7
+"414","Decreased","High_School","Male",7
+"415","Increased","High_School","Male",1
+"416","Increased","Advanced_Degree","Male",5
+"417","Increased","College_Degree","Male",1
+"418","Stayed about the same","Advanced_Degree","Male",20
+"419","Increased","College_Degree","Male",1
+"420","Stayed about the same","High_School","Male",4
+"421","Stayed about the same","College_Degree","Male",40
+"422","Stayed about the same","High_School","Male",2
+"423","Stayed about the same","College_Degree","Male",45
+"424","Stayed about the same","High_School","Male",38
+"425","Stayed about the same","High_School","Male",37
+"426","Stayed about the same","Advanced_Degree","Male",19
+"427","Stayed about the same","High_School","Male",2
+"428","Stayed about the same","High_School","Male",30
+"429","Stayed about the same","College_Degree","Male",35
+"430","Stayed about the same","High_School","Male",2
+"431","Stayed about the same","Advanced_Degree","Female",40
+"432","Stayed about the same","Advanced_Degree","Male",40
+"433","Decreased","Advanced_Degree","Male",10
+"434","Stayed about the same","High_School","Male",20
+"435","Increased","Advanced_Degree","Male",12
+"436","Stayed about the same","High_School","Male",10
+"437","Increased","High_School","Male",15
+"438","Decreased","College_Degree","Male",44
+"439","Stayed about the same","College_Degree","Male",11
+"440","Increased","College_Degree","Male",5
+"441","Decreased","High_School","Male",20
+"442","Decreased","College_Degree","Male",3
+"443","Increased","High_School","Male",12
+"444","Decreased","College_Degree","Male",35
+"445","Decreased","College_Degree","Male",2
+"446","Stayed about the same","High_School","Male",7
+"447","Decreased","Advanced_Degree","Male",20
+"448","Stayed about the same","Advanced_Degree","Male",10
+"449","Stayed about the same","High_School","Male",10
+"450","Decreased","College_Degree","Male",10
+"451","Increased","Advanced_Degree","Male",40
+"452","Decreased","High_School","Male",2
+"453","Stayed about the same","High_School","Male",5
+"454","Decreased","College_Degree","Male",30
+"455","Stayed about the same","College_Degree","Male",4
+"456","Stayed about the same","College_Degree","Female",8
+"457","Decreased","College_Degree","Male",2
+"458","Increased","High_School","Male",12
+"459","Decreased","College_Degree","Male",15
+"460","Increased","High_School","Male",1
+"461","Increased","Advanced_Degree","Male",2
+"462","Stayed about the same","College_Degree","Male",18
+"463","Increased","College_Degree","Male",10
+"464","Stayed about the same","College_Degree","Male",1
+"465","Stayed about the same","High_School","Male",20
+"466","Stayed about the same","High_School","Male",25
+"467","Stayed about the same","High_School","Male",35
+"468","Decreased","College_Degree","Male",35
+"469","Stayed about the same","College_Degree","Male",8
+"470","Stayed about the same","High_School","Male",5
+"471","Stayed about the same","College_Degree","Male",2
+"472","Decreased","Advanced_Degree","Male",35
+"473","Stayed about the same","Advanced_Degree","Male",4
+"474","Decreased","College_Degree","Male",9
+"475","Decreased","High_School","Male",17
+"476","Increased","High_School","Male",11
+"477","Stayed about the same","High_School","Male",2
+"478","Stayed about the same",NA,"Male",30
+"479","Stayed about the same","High_School","Male",44
+"480","Decreased","College_Degree","Male",1
+"481","Increased","College_Degree","Male",4
+"482","Increased","College_Degree","Male",20
+"483","Decreased","High_School","Male",35
+"484","Decreased","High_School","Male",35
+"485","Increased","College_Degree","Male",25
+"486","Increased","High_School","Male",6
+"487","Decreased","High_School","Male",1
+"488","Increased","College_Degree","Male",5
+"489","Increased","College_Degree","Male",35
+"490","Stayed about the same","College_Degree","Male",1
+"491","Increased","High_School","Male",30
+"492","Decreased","High_School","Male",3
+"493","Increased","College_Degree","Male",2
+"494","Increased","College_Degree","Female",4
+"495","Stayed about the same","Advanced_Degree","Male",2
+"496","Stayed about the same","College_Degree","Male",10
+"497","Stayed about the same","High_School","Male",4
+"498","Stayed about the same","High_School","Male",1
+"499","Increased","College_Degree","Male",5
+"500","Stayed about the same","College_Degree","Male",22
+"501","Stayed about the same","Advanced_Degree","Male",3
+"502","Increased","College_Degree","Male",6
+"503","Stayed about the same","High_School","Female",3
+"504","Increased","College_Degree","Male",8
+"505","Stayed about the same","College_Degree","Male",38
+"506","Stayed about the same","High_School","Male",22
+"507","Increased","College_Degree","Male",7
+"508","Stayed about the same","High_School","Male",5
+"509","Stayed about the same","High_School","Male",3
+"510","Increased","High_School","Male",4
+"511","Increased","High_School","Male",32
+"512","Increased","Advanced_Degree","Male",4
+"513","Decreased","College_Degree","Male",14
+"514","Increased","High_School","Male",25
+"515","Decreased","High_School","Male",15
+"516","Stayed about the same","College_Degree","Male",6
+"517","Decreased","College_Degree","Male",20
+"518","Increased","College_Degree","Male",1
+"519","Decreased","College_Degree","Male",4
+"520","Increased","High_School","Male",20
+"521","Increased","High_School","Male",8
+"522","Decreased","College_Degree","Male",2
+"523","Increased","College_Degree","Male",18
+"524","Stayed about the same","High_School","Male",1
+"525","Increased","Advanced_Degree","Female",1
+"526","Stayed about the same","College_Degree","Male",2
+"527","Increased","Advanced_Degree","Male",1
+"528","Stayed about the same","High_School","Male",5
+"529","Stayed about the same","College_Degree","Male",15
+"530","Increased","Advanced_Degree","Male",1
+"531","Decreased","High_School","Male",8
+"532","Stayed about the same","College_Degree","Male",8
+"533","Stayed about the same","Advanced_Degree","Male",10
+"534","Increased","High_School","Male",2
+"535","Increased","High_School","Male",3
+"536","Increased","Advanced_Degree","Male",25
+"537","Decreased","College_Degree","Male",35
+"538","Stayed about the same","High_School","Male",10
+"539","Decreased","College_Degree","Male",5
+"540","Increased","College_Degree","Male",44
+"541","Increased","High_School","Male",20
+"542","Stayed about the same","High_School","Male",20
+"543","Stayed about the same","Advanced_Degree","Male",5
+"544","Stayed about the same","High_School","Male",2
+"545","Stayed about the same","High_School","Male",5
+"546","Stayed about the same","College_Degree","Male",1
+"547","Stayed about the same","High_School","Male",2
+"548","Decreased","Advanced_Degree","Male",44
+"549","Decreased","College_Degree","Male",2
+"550",NA,"College_Degree","Male",1
+"551","Increased","High_School","Male",1
+"552","Increased","College_Degree","Male",1
+"553","Increased","College_Degree","Male",12
+"554","Stayed about the same","College_Degree","Male",6
+"555","Decreased","High_School","Male",10
+"556","Stayed about the same","College_Degree","Male",2
+"557","Stayed about the same","High_School","Male",1
+"558","Stayed about the same","High_School","Male",3
+"559","Stayed about the same","College_Degree","Male",4
+"560","Increased","Advanced_Degree","Male",4
+"561","Decreased","College_Degree","Male",3
+"562","Stayed about the same","College_Degree","Male",2
+"563","Increased","College_Degree","Male",8
+"564","Stayed about the same","College_Degree","Male",15
+"565","Stayed about the same","High_School","Male",4
+"566","Decreased","High_School","Male",5
+"567","Stayed about the same","High_School","Male",2
+"568","Stayed about the same","College_Degree","Male",10
+"569","Decreased","College_Degree","Male",25
+"570","Stayed about the same","High_School","Male",3
+"571","Decreased","High_School","Male",7
+"572","Increased","College_Degree","Male",28
+"573","Decreased","Advanced_Degree","Male",15
+"574","Increased","College_Degree","Male",53
+"575","Stayed about the same","High_School","Male",36
+"576","Stayed about the same","High_School","Male",46
+"577","Stayed about the same",NA,"Male",34
+"578","Stayed about the same","College_Degree","Male",30
+"579","Increased","High_School","Male",3
+"580","Increased","College_Degree","Male",3
+"581","Stayed about the same","High_School","Male",30
+"582","Decreased","High_School","Female",15
+"583","Increased","College_Degree","Male",15
+"584","Decreased","High_School","Male",45
+"585","Decreased","High_School","Male",50
+"586","Decreased","High_School","Male",5
+"587","Decreased","College_Degree","Male",32
+"588","Increased","College_Degree","Male",3
+"589","Increased","College_Degree","Male",8
+"590","Decreased","College_Degree","Male",30
+"591","Decreased","College_Degree","Male",21
+"592","Decreased","College_Degree","Male",30
+"593","Increased","High_School","Male",4
+"594","Stayed about the same","College_Degree","Male",40
+"595","Increased","College_Degree","Male",10
+"596","Stayed about the same","High_School","Male",35
+"597","Decreased","Advanced_Degree","Male",50
+"598","Increased","College_Degree","Male",12
+"599","Increased","College_Degree","Male",30
+"600","Decreased","Advanced_Degree","Male",45
+"601","Stayed about the same","High_School","Male",30
+"602","Decreased","College_Degree","Male",44
+"603","Decreased","Advanced_Degree","Male",10
+"604","Stayed about the same","High_School","Male",30
+"605","Stayed about the same","High_School","Male",10
+"606","Increased","High_School","Male",7
+"607","Stayed about the same","College_Degree","Male",50
+"608","Stayed about the same","Advanced_Degree","Male",27
+"609","Decreased","Advanced_Degree","Male",65
+"610","Decreased","College_Degree","Male",45
+"611","Increased","College_Degree","Male",30
+"612","Increased","College_Degree","Male",8
+"613","Stayed about the same","College_Degree","Male",5
+"614","Decreased","High_School","Male",60
+"615","Decreased","College_Degree","Male",49
+"616","Increased","Advanced_Degree","Male",2
+"617","Stayed about the same","College_Degree","Male",55
+"618","Stayed about the same","Advanced_Degree","Male",52
+"619","Decreased","High_School","Male",40
+"620","Stayed about the same","High_School","Male",20
+"621","Stayed about the same","High_School","Male",45
+"622","Increased","Advanced_Degree","Male",51
+"623","Increased","High_School","Male",22
+"624","Increased","High_School","Male",44
+"625","Decreased","High_School","Male",45
+"626","Increased","College_Degree","Male",30
+"627","Decreased","Advanced_Degree","Male",36
+"628","Decreased","High_School","Male",35
+"629","Increased","High_School","Male",6
+"630","Stayed about the same","High_School","Male",30
+"631","Stayed about the same","High_School","Male",16
+"632","Stayed about the same","Advanced_Degree","Male",51
+"633","Decreased","College_Degree","Male",7
+"634","Increased","High_School","Male",10
+"635","Stayed about the same","College_Degree","Male",26
+"636","Stayed about the same","High_School","Male",3
+"637","Decreased","College_Degree","Male",7
+"638","Decreased","High_School","Male",41
+"639","Stayed about the same","College_Degree","Male",22
+"640","Stayed about the same","High_School","Male",30
+"641","Stayed about the same","High_School","Male",37
+"642","Stayed about the same","College_Degree","Male",3
+"643","Increased","College_Degree","Male",16
+"644","Increased","High_School","Male",8
+"645","Decreased","College_Degree","Male",20
+"646","Stayed about the same","High_School","Male",35
+"647","Decreased","College_Degree","Male",45
+"648","Increased","Advanced_Degree","Male",10
+"649","Increased","High_School","Male",8
+"650","Stayed about the same","College_Degree","Male",45
+"651","Increased","College_Degree","Male",22
+"652","Decreased","High_School","Male",36
+"653","Decreased","Advanced_Degree","Male",15
+"654","Stayed about the same","College_Degree","Male",20
+"655","Stayed about the same","College_Degree","Male",45
+"656","Increased","High_School","Male",4
+"657","Decreased","College_Degree","Male",4
+"658","Stayed about the same","High_School","Male",5
+"659","Decreased","College_Degree","Male",8
+"660","Stayed about the same","High_School","Female",20
+"661","Decreased","College_Degree","Male",7
+"662","Decreased","High_School","Male",13
+"663","Stayed about the same","College_Degree","Male",11
+"664","Stayed about the same","College_Degree","Male",3
+"665","Increased","College_Degree","Male",10
+"666","Stayed about the same","High_School","Male",7
+"667","Stayed about the same","High_School","Male",10
+"668","Decreased","Advanced_Degree","Male",20
+"669","Stayed about the same","High_School","Male",30
+"670","Increased","High_School","Male",3
+"671","Increased","High_School","Male",9
+"672","Decreased","High_School","Male",12
+"673","Decreased","High_School","Male",35
+"674","Stayed about the same","College_Degree","Male",25
+"675","Stayed about the same","College_Degree","Male",31
+"676","Decreased","College_Degree","Male",30
+"677","Increased","High_School","Male",3
+"678","Stayed about the same","High_School","Male",15
+"679","Increased","High_School","Male",10
+"680","Stayed about the same","High_School","Male",35
+"681","Decreased","Advanced_Degree","Male",45
+"682","Stayed about the same","Advanced_Degree","Male",5
+"683","Decreased","College_Degree","Male",23
+"684",NA,"College_Degree","Male",1
+"685","Stayed about the same","High_School","Male",50
+"686","Increased","High_School","Male",5
+"687","Stayed about the same","High_School","Male",30
+"688","Stayed about the same","High_School","Male",35
+"689","Decreased","High_School","Male",34
+"690","Stayed about the same","Advanced_Degree","Male",62
+"691","Increased","High_School","Male",2
+"692","Decreased","Advanced_Degree","Male",52
+"693","Decreased","College_Degree","Male",35
+"694","Stayed about the same","Advanced_Degree","Male",8
+"695","Increased","College_Degree","Female",14
+"696","Stayed about the same","High_School","Male",40
+"697","Increased","High_School","Male",4
+"698","Decreased","High_School","Male",35
+"699","Decreased","Advanced_Degree","Male",5
+"700","Decreased","Advanced_Degree","Male",40
+"701","Stayed about the same","High_School","Male",20
+"702","Decreased","Advanced_Degree","Male",10
+"703","Stayed about the same","High_School","Male",5
+"704","Decreased","College_Degree","Male",30
+"705","Stayed about the same","High_School","Male",30
+"706","Stayed about the same","College_Degree","Male",13
+"707","Increased","Advanced_Degree","Male",17
+"708","Decreased","College_Degree","Male",15
+"709","Stayed about the same","High_School","Male",25
+"710","Decreased","High_School","Male",50
+"711","Increased","Advanced_Degree","Male",15
+"712","Stayed about the same","College_Degree","Female",12
+"713","Decreased","College_Degree","Male",5
+"714","Stayed about the same","College_Degree","Male",99
+"715","Increased","High_School","Male",4
+"716","Decreased","College_Degree","Male",30
+"717","Increased","Advanced_Degree","Male",30
+"718","Decreased","High_School","Male",45
+"719","Increased","College_Degree","Male",1
+"720","Stayed about the same","Advanced_Degree","Male",10
+"721","Decreased","High_School","Female",40
+"722","Increased","High_School","Male",10
+"723","Stayed about the same","College_Degree","Male",10
+"724","Decreased","Advanced_Degree","Male",20
+"725","Stayed about the same","High_School","Male",36
+"726","Stayed about the same","College_Degree","Male",28
+"727","Increased","High_School","Male",6
+"728","Stayed about the same","High_School","Male",28
+"729","Increased","High_School","Male",6
+"730","Stayed about the same","College_Degree","Male",56
+"731","Increased","College_Degree","Male",46
+"732","Stayed about the same","College_Degree","Male",52
+"733","Stayed about the same","High_School","Male",10
+"734","Stayed about the same","College_Degree","Male",8
+"735","Stayed about the same","College_Degree","Male",30
+"736","Stayed about the same","High_School","Male",37
+"737","Decreased","College_Degree","Male",25
+"738","Increased","College_Degree","Male",12
+"739","Increased","High_School","Male",6
+"740","Increased","High_School","Male",12
+"741","Decreased","College_Degree","Male",50
+"742","Increased","Advanced_Degree","Male",17
+"743","Stayed about the same","High_School","Male",50
+"744","Increased","College_Degree","Male",4
+"745","Increased","College_Degree","Male",4
+"746","Increased","College_Degree","Male",4
+"747","Increased","College_Degree","Male",43
+"748","Increased","College_Degree","Male",50
+"749","Decreased","High_School","Male",22
+"750","Stayed about the same","High_School","Male",12
+"751","Stayed about the same","Advanced_Degree","Male",3
+"752","Increased","College_Degree","Male",20
+"753","Stayed about the same","High_School","Male",38
+"754","Decreased","High_School","Male",25
+"755","Increased","College_Degree","Male",18
+"756","Stayed about the same","College_Degree","Male",6
+"757","Decreased","High_School","Male",50
+"758","Stayed about the same","College_Degree","Male",25
+"759","Decreased","High_School","Male",25
+"760","Decreased","College_Degree","Male",46
+"761","Decreased","College_Degree","Male",51
+"762","Decreased","Advanced_Degree","Male",50
+"763","Increased","College_Degree","Male",10
+"764","Stayed about the same","Advanced_Degree","Male",21
+"765","Decreased","College_Degree","Male",5
+"766","Decreased","Advanced_Degree","Female",45
+"767","Stayed about the same","High_School","Male",6
+"768","Stayed about the same","College_Degree","Male",52
+"769","Increased","College_Degree","Male",45
+"770","Decreased","College_Degree","Male",12
+"771","Increased","College_Degree","Male",5
+"772","Increased","Advanced_Degree","Male",35
+"773","Decreased","High_School","Male",50
+"774","Stayed about the same","College_Degree","Male",20
+"775","Stayed about the same","College_Degree","Male",33
+"776","Increased","College_Degree","Male",37
+"777","Increased","College_Degree","Male",30
+"778","Stayed about the same","College_Degree","Male",2
+"779","Stayed about the same","College_Degree","Male",48
+"780","Decreased","High_School","Male",37
+"781","Increased","College_Degree","Male",35
+"782","Stayed about the same","High_School","Male",43
+"783","Decreased","High_School","Male",55
+"784","Increased","College_Degree","Male",10
+"785","Decreased","High_School","Female",3
+"786","Stayed about the same","College_Degree","Male",3
+"787","Decreased","High_School","Male",30
+"788","Increased","College_Degree","Male",25
+"789","Decreased","Advanced_Degree","Male",10
+"790","Stayed about the same","College_Degree","Male",38
+"791","Stayed about the same","Advanced_Degree","Male",16
+"792","Stayed about the same","High_School","Male",40
+"793","Stayed about the same","High_School","Male",18
+"794","Increased","High_School","Male",15
+"795","Stayed about the same","College_Degree","Male",10
+"796","Decreased","High_School","Male",43
+"797","Increased","High_School","Male",18
+"798","Stayed about the same","College_Degree","Male",20
+"799","Decreased","High_School","Male",55
+"800","Increased","College_Degree","Male",19
+"801","Stayed about the same","High_School","Male",32
+"802","Stayed about the same","College_Degree","Male",40
+"803","Increased","College_Degree","Male",50
+"804","Decreased","High_School","Male",40
+"805","Decreased","High_School","Male",32
+"806","Stayed about the same","High_School","Male",40
+"807","Decreased","High_School","Male",55
+"808","Stayed about the same","College_Degree","Male",28
+"809","Stayed about the same","College_Degree","Male",2
+"810","Increased","Advanced_Degree","Male",8
+"811","Increased","Advanced_Degree","Male",20
+"812","Increased","High_School","Male",45
+"813","Decreased","College_Degree","Male",9
+"814","Stayed about the same","College_Degree","Male",20
+"815","Stayed about the same","High_School","Male",44
+"816","Decreased","Advanced_Degree","Male",40
+"817","Decreased","High_School","Male",6
+"818","Stayed about the same","High_School","Male",5
+"819","Increased","High_School","Male",46
+"820","Stayed about the same","College_Degree","Male",10
+"821","Decreased","High_School","Male",50
+"822","Stayed about the same","High_School","Male",35
+"823","Stayed about the same","High_School","Male",3
+"824","Increased","High_School","Male",10
+"825","Stayed about the same","High_School","Male",20
+"826","Stayed about the same","High_School","Male",31
+"827","Decreased","College_Degree","Male",60
+"828","Stayed about the same","College_Degree","Male",6
+"829","Stayed about the same","High_School","Male",22
+"830","Stayed about the same","High_School","Male",41
+"831","Stayed about the same","College_Degree","Male",4
+"832","Decreased","High_School","Male",40
+"833","Increased","Advanced_Degree","Male",30
+"834","Stayed about the same","High_School","Male",20
+"835","Stayed about the same","High_School","Male",35
+"836","Stayed about the same","College_Degree","Male",5
+"837","Decreased","Advanced_Degree","Male",20
+"838","Decreased","High_School","Male",50
+"839","Stayed about the same","High_School","Male",10
+"840","Stayed about the same","College_Degree","Male",5
+"841","Stayed about the same","College_Degree","Male",1
+"842","Decreased","College_Degree","Male",37
+"843","Decreased","High_School","Male",1
+"844","Decreased","High_School","Male",27
+"845","Decreased","Advanced_Degree","Male",10
+"846","Increased","High_School","Male",40
+"847","Stayed about the same","High_School","Male",50
+"848","Decreased","College_Degree","Male",40
+"849","Decreased","Advanced_Degree","Male",7
+"850","Stayed about the same","College_Degree","Male",34
+"851","Stayed about the same","College_Degree","Male",6
+"852","Decreased","High_School","Male",20
+"853","Decreased","High_School","Male",47
+"854","Decreased","High_School","Male",13
+"855","Stayed about the same","High_School","Male",30
+"856","Stayed about the same","High_School","Male",1
+"857","Stayed about the same","High_School","Male",23
+"858","Stayed about the same","College_Degree","Male",8
+"859","Increased","High_School","Male",35
+"860","Stayed about the same","High_School","Male",99
+"861","Stayed about the same","High_School","Male",3
+"862","Increased","College_Degree","Male",10
+"863","Decreased","Advanced_Degree","Male",5
+"864","Increased","High_School","Male",4
+"865","Stayed about the same","High_School","Male",4
+"866","Increased","College_Degree","Male",2
+"867","Increased","Advanced_Degree","Male",16
+"868","Stayed about the same","High_School","Male",35
+"869","Stayed about the same","High_School","Male",60
+"870","Stayed about the same","High_School","Male",45
+"871","Stayed about the same","College_Degree","Male",30
+"872","Stayed about the same","High_School","Male",30
+"873","Stayed about the same","College_Degree","Male",33
+"874","Stayed about the same","Advanced_Degree","Male",28
+"875","Decreased","High_School","Male",30
+"876","Stayed about the same","College_Degree","Male",21
+"877","Decreased","College_Degree","Male",25
+"878","Stayed about the same","College_Degree","Male",10
+"879","Decreased","High_School","Male",45
+"880","Stayed about the same","Advanced_Degree","Male",50
+"881","Increased","High_School","Male",19
+"882","Stayed about the same","College_Degree","Male",43
+"883","Stayed about the same","High_School","Male",20
+"884","Stayed about the same","High_School","Male",35
+"885","Increased","College_Degree","Male",45
+"886","Stayed about the same","College_Degree","Female",18
+"887","Decreased","College_Degree","Male",35
+"888","Decreased","High_School","Male",34
+"889","Decreased",NA,"Male",50
+"890","Stayed about the same","College_Degree","Male",45
+"891","Stayed about the same","High_School","Male",51
+"892","Increased","College_Degree","Male",4
+"893","Decreased","High_School","Male",48
+"894","Decreased","High_School","Male",30
+"895","Decreased","High_School","Male",40
+"896","Decreased","College_Degree","Male",10
+"897","Decreased","High_School","Male",25
+"898","Decreased","High_School","Male",30
+"899","Stayed about the same","High_School","Male",45
+"900","Increased","High_School","Male",35
+"901","Decreased","High_School","Male",35
+"902","Increased","High_School","Male",4
+"903","Stayed about the same","High_School","Male",20
+"904","Stayed about the same","College_Degree","Male",44
+"905","Stayed about the same","High_School","Male",30
+"906","Increased","College_Degree","Male",15
+"907","Decreased","College_Degree","Male",50
+"908","Stayed about the same","High_School","Male",2
+"909","Stayed about the same","High_School","Male",28
+"910","Stayed about the same","High_School","Male",60
+"911","Stayed about the same","High_School","Male",40
+"912","Decreased","College_Degree","Male",43
+"913","Increased","Advanced_Degree","Male",2
+"914","Decreased","High_School","Male",30
+"915","Increased","High_School","Male",30
+"916","Decreased","High_School","Female",3
+"917","Decreased","College_Degree","Male",40
+"918","Decreased","College_Degree","Male",45
+"919","Decreased","College_Degree","Male",40
+"920","Increased","High_School","Male",30
+"921","Stayed about the same","College_Degree","Male",50
+"922","Increased","High_School","Male",5
+"923","Decreased","High_School","Male",50
+"924","Decreased","High_School","Male",40
+"925","Decreased","College_Degree","Male",25
+"926","Increased","College_Degree","Male",20
+"927","Stayed about the same","High_School","Male",1
+"928","Stayed about the same","High_School","Male",4
+"929","Stayed about the same","High_School","Male",4
+"930","Stayed about the same","High_School","Female",1
+"931","Decreased","Advanced_Degree","Male",16
+"932","Stayed about the same","High_School","Male",4
+"933","Decreased","College_Degree","Male",8
+"934","Increased","High_School","Male",8
+"935","Increased","College_Degree","Male",14
+"936","Decreased","College_Degree","Male",8
+"937","Stayed about the same","High_School","Male",30
+"938","Decreased","College_Degree","Male",10
+"939","Increased","College_Degree","Male",4
+"940","Increased","College_Degree","Male",35
+"941","Increased","Advanced_Degree","Male",25
+"942","Increased","College_Degree","Male",8
+"943","Increased","High_School","Male",5
+"944","Increased","College_Degree","Male",4
+"945","Stayed about the same","High_School","Male",22
+"946","Stayed about the same","College_Degree","Male",15
+"947","Stayed about the same","College_Degree","Male",35
+"948","Decreased","High_School","Male",50
+"949","Stayed about the same","College_Degree","Male",14
+"950","Increased","High_School","Male",30
+"951","Decreased","High_School","Male",50
+"952","Decreased","High_School","Male",10
+"953","Stayed about the same","High_School","Male",45
+"954","Increased","College_Degree","Male",10
+"955","Stayed about the same","Advanced_Degree","Male",30
+"956","Stayed about the same","High_School","Male",45
+"957","Decreased",NA,"Male",15
+"958","Stayed about the same","High_School","Male",30
+"959","Stayed about the same","College_Degree","Male",25
+"960","Decreased","High_School","Male",45
+"961","Stayed about the same","College_Degree","Female",10
+"962","Stayed about the same","High_School","Female",2
+"963","Decreased","High_School","Male",40
+"964","Stayed about the same","High_School","Male",23
+"965","Decreased","High_School","Male",50
+"966","Stayed about the same","College_Degree","Male",15
+"967","Stayed about the same","High_School","Male",8
+"968","Decreased","High_School","Male",4
+"969","Increased","College_Degree","Male",4
+"970","Decreased","High_School","Male",63
+"971","Stayed about the same","College_Degree","Male",40
+"972","Stayed about the same","College_Degree","Male",14
+"973","Decreased","College_Degree","Male",16
+"974","Increased","Advanced_Degree","Male",12
+"975","Increased","College_Degree","Male",30
+"976","Decreased","High_School","Male",30
+"977","Stayed about the same","College_Degree","Male",3
+"978","Stayed about the same","High_School","Female",8
+"979","Stayed about the same","College_Degree","Male",2
+"980","Decreased","College_Degree","Male",19
+"981","Stayed about the same","College_Degree","Male",20
+"982","Increased","College_Degree","Male",15
+"983","Increased","High_School","Male",5
+"984","Increased","College_Degree","Male",2
+"985","Stayed about the same","Advanced_Degree","Male",8
+"986","Decreased","High_School","Male",30
+"987","Increased","College_Degree","Male",2
+"988","Increased","High_School","Male",13
+"989","Increased","High_School","Male",2
+"990","Decreased",NA,"Male",30
+"991","Stayed about the same","High_School","Male",17
+"992","Increased","High_School","Male",30
+"993","Decreased","High_School","Male",35
+"994","Stayed about the same","College_Degree","Male",20
+"995","Decreased","High_School","Male",5
+"996","Decreased","Advanced_Degree","Male",20
+"997","Decreased","College_Degree","Male",20
+"998","Decreased","High_School","Male",46
+"999","Decreased","High_School","Male",40
+"1000","Increased","High_School","Male",23
+"1001","Decreased","College_Degree","Male",15
+"1002","Increased","College_Degree","Male",40
+"1003","Decreased","College_Degree","Male",40
+"1004","Stayed about the same","College_Degree","Male",3
+"1005","Stayed about the same","High_School","Male",23
+"1006","Decreased","High_School","Male",14
+"1007","Decreased",NA,"Male",10
+"1008","Stayed about the same","Advanced_Degree","Male",20
+"1009","Decreased","College_Degree","Male",5
+"1010","Decreased","College_Degree","Male",20
+"1011","Increased","High_School","Male",15
+"1012","Stayed about the same",NA,"Male",19
+"1013","Stayed about the same","High_School","Male",50
+"1014","Stayed about the same","College_Degree","Male",6
+"1015","Stayed about the same","High_School","Male",23
+"1016","Stayed about the same","High_School","Male",28
+"1017","Decreased","High_School","Male",40
+"1018","Decreased","College_Degree","Male",2
+"1019","Increased","High_School","Male",10
+"1020","Stayed about the same","College_Degree","Male",5
+"1021","Increased","High_School","Male",1
+"1022","Decreased","College_Degree","Male",10
+"1023","Stayed about the same","High_School","Male",10
+"1024","Decreased","College_Degree","Male",3
+"1025","Stayed about the same","College_Degree","Male",16
+"1026","Increased","High_School","Male",22
+"1027","Increased","College_Degree","Male",15
+"1028","Increased","College_Degree","Male",3
+"1029","Increased","College_Degree","Male",26
+"1030","Decreased","Advanced_Degree","Male",34
+"1031","Increased","High_School","Male",12
+"1032","Decreased","Advanced_Degree","Male",8
+"1033","Increased","Advanced_Degree","Male",35
+"1034","Decreased","High_School","Male",8
+"1035","Increased","High_School","Male",9
+"1036","Decreased","College_Degree","Male",10
+"1037","Increased","College_Degree","Male",25
+"1038","Stayed about the same","High_School","Male",38
+"1039","Decreased","College_Degree","Male",46
+"1040","Stayed about the same","College_Degree","Male",40
+"1041","Increased","College_Degree","Male",48
+"1042","Stayed about the same","High_School","Male",20
+"1043","Decreased","High_School","Male",30
+"1044","Decreased","Advanced_Degree","Male",20
+"1045","Increased","College_Degree","Male",20
+"1046","Increased","High_School","Male",43
+"1047","Decreased","College_Degree","Male",30
+"1048","Stayed about the same","High_School","Male",30
+"1049","Increased","High_School","Male",5
+"1050","Stayed about the same","High_School","Male",40
+"1051","Decreased","College_Degree","Male",45
+"1052","Decreased","High_School","Male",35
+"1053","Stayed about the same","High_School","Male",10
+"1054","Stayed about the same","College_Degree","Male",28
+"1055","Stayed about the same","High_School","Male",4
+"1056","Increased","Advanced_Degree","Male",30
+"1057","Decreased","High_School","Male",40
+"1058","Stayed about the same","High_School","Male",35
+"1059","Stayed about the same","High_School","Male",40
+"1060","Decreased","High_School","Male",30
+"1061","Decreased","Advanced_Degree","Male",25
+"1062","Stayed about the same","Advanced_Degree","Male",48
+"1063","Stayed about the same","High_School","Male",30
+"1064","Decreased",NA,"Male",6
+"1065","Decreased","High_School","Male",45
+"1066","Stayed about the same","College_Degree","Male",35
+"1067","Stayed about the same","College_Degree","Male",14
+"1068","Decreased","College_Degree","Male",6
+"1069","Increased","High_School","Male",43
+"1070","Stayed about the same","High_School","Male",40
+"1071","Decreased","Advanced_Degree","Male",5
+"1072","Increased","High_School","Male",40
+"1073","Increased","Advanced_Degree","Male",20
+"1074","Stayed about the same","High_School","Male",49
+"1075","Increased","High_School","Male",30
+"1076","Decreased","College_Degree","Male",50
+"1077","Stayed about the same","College_Degree","Male",40
+"1078","Decreased","College_Degree","Male",30
+"1079","Stayed about the same","High_School","Male",50
+"1080","Decreased","High_School","Male",30
+"1081","Stayed about the same","High_School","Male",25
+"1082","Stayed about the same","High_School","Male",33
+"1083","Stayed about the same","College_Degree","Male",40
+"1084","Increased","High_School","Male",57
+"1085","Stayed about the same","Advanced_Degree","Male",25
+"1086","Stayed about the same","College_Degree","Female",2
+"1087","Stayed about the same","High_School","Male",45
+"1088","Stayed about the same","High_School","Male",10
+"1089","Stayed about the same","College_Degree","Male",10
+"1090","Decreased","College_Degree","Male",45
+"1091","Increased","Advanced_Degree","Male",25
+"1092","Stayed about the same","Advanced_Degree","Male",10
+"1093","Stayed about the same","High_School","Male",25
+"1094","Stayed about the same","College_Degree","Male",4
+"1095","Decreased","High_School","Male",3
+"1096","Increased","High_School","Male",40
+"1097","Decreased","High_School","Male",43
+"1098","Increased","High_School","Male",25
+"1099","Stayed about the same","High_School","Male",15
+"1100","Increased","High_School","Male",5
+"1101","Decreased","Advanced_Degree","Male",25
+"1102","Stayed about the same","Advanced_Degree","Male",1
+"1103","Decreased","High_School","Male",20
+"1104","Stayed about the same","College_Degree","Male",30
+"1105","Stayed about the same","Advanced_Degree","Male",5
+"1106","Stayed about the same","College_Degree","Male",6
+"1107","Increased","College_Degree","Male",3
+"1108","Stayed about the same","Advanced_Degree","Male",19
+"1109","Stayed about the same","High_School","Male",15
+"1110","Increased","College_Degree","Male",6
+"1111","Stayed about the same","College_Degree","Male",12
+"1112","Increased","College_Degree","Male",5
+"1113","Decreased","High_School","Male",1
+"1114","Decreased","High_School","Male",40
+"1115","Increased","High_School","Female",8
+"1116","Increased","College_Degree","Male",1
+"1117","Increased","High_School","Female",2
+"1118","Stayed about the same","High_School","Male",45
+"1119","Stayed about the same","High_School","Male",14
+"1120","Increased","High_School","Male",15
+"1121","Stayed about the same","High_School","Male",44
+"1122","Increased","High_School","Male",50
+"1123","Decreased","Advanced_Degree","Male",50
+"1124","Stayed about the same","High_School","Male",21
+"1125","Increased","College_Degree","Male",35
+"1126","Increased","College_Degree","Male",4
+"1127","Stayed about the same","High_School","Male",50
+"1128","Stayed about the same","High_School","Male",39
+"1129","Increased","College_Degree","Male",36
+"1130","Stayed about the same","Advanced_Degree","Male",47
+"1131","Stayed about the same","Advanced_Degree","Male",32
+"1132","Decreased","High_School","Male",40
+"1133","Stayed about the same","High_School","Male",20
+"1134","Increased","College_Degree","Male",39
+"1135","Stayed about the same","High_School","Male",50
+"1136","Stayed about the same","Advanced_Degree","Male",40
+"1137","Decreased","College_Degree","Male",50
+"1138","Decreased","High_School","Male",27
+"1139","Increased","High_School","Male",55
+"1140","Increased","College_Degree","Male",25
+"1141","Stayed about the same","High_School","Male",25
+"1142","Increased","High_School","Male",26
+"1143","Stayed about the same","High_School","Male",16
+"1144","Increased","Advanced_Degree","Male",1
+"1145","Decreased","High_School","Male",41
+"1146","Decreased","College_Degree","Male",13
+"1147","Decreased","High_School","Male",3
+"1148","Decreased","High_School","Male",65
+"1149","Decreased","College_Degree","Male",23
+"1150","Decreased","Advanced_Degree","Male",10
+"1151","Stayed about the same","College_Degree","Male",39
+"1152","Decreased","College_Degree","Male",40
+"1153","Increased","High_School","Male",48
+"1154","Stayed about the same","High_School","Male",6
+"1155","Stayed about the same","High_School","Male",39
+"1156","Increased","High_School","Male",5
+"1157","Increased","College_Degree","Male",20
+"1158","Stayed about the same","Advanced_Degree","Male",35
+"1159","Stayed about the same","High_School","Male",5
+"1160","Decreased","High_School","Male",15
+"1161","Increased","College_Degree","Male",10
+"1162","Stayed about the same","High_School","Male",10
+"1163","Stayed about the same","College_Degree","Male",45
+"1164","Decreased","High_School","Male",7
+"1165","Decreased","High_School","Male",15
+"1166","Stayed about the same","High_School","Male",19
+"1167","Decreased","High_School","Male",17
+"1168","Increased","High_School","Male",9
+"1169","Stayed about the same","High_School","Male",50
+"1170","Stayed about the same","High_School","Male",26
+"1171","Stayed about the same","College_Degree","Male",4
+"1172","Increased","Advanced_Degree","Male",15
+"1173","Stayed about the same","College_Degree","Male",25
+"1174","Decreased","High_School","Male",3
+"1175","Increased","College_Degree","Male",30
+"1176","Increased","High_School","Male",24
+"1177","Decreased","College_Degree","Male",12
+"1178","Increased","College_Degree","Male",11
+"1179","Increased","College_Degree","Male",3
+"1180","Decreased","College_Degree","Male",8
+"1181","Stayed about the same","College_Degree","Male",53
+"1182","Decreased","High_School","Male",45
+"1183",NA,"College_Degree","Male",26
+"1184","Decreased","High_School","Male",40
+"1185","Increased","High_School","Male",20
+"1186","Decreased","College_Degree","Male",8
+"1187","Decreased","High_School","Male",12
+"1188","Stayed about the same","High_School","Male",25
+"1189","Stayed about the same","College_Degree","Male",37
+"1190","Stayed about the same","High_School","Male",30
+"1191","Stayed about the same","High_School","Male",25
+"1192","Increased","College_Degree","Male",15
+"1193","Stayed about the same","High_School","Male",40
+"1194","Decreased","High_School","Male",30
+"1195","Decreased","College_Degree","Male",25
+"1196","Increased","High_School","Male",40
+"1197","Decreased","College_Degree","Male",25
+"1198","Decreased","High_School","Male",6
+"1199","Increased","High_School","Male",2
+"1200","Increased","College_Degree","Male",6
+"1201","Stayed about the same","High_School","Male",4
+"1202","Decreased","College_Degree","Female",16
+"1203","Stayed about the same","College_Degree","Female",1
+"1204","Stayed about the same","High_School","Male",36
+"1205","Increased","Advanced_Degree","Male",12
+"1206","Decreased","College_Degree","Male",28
+"1207","Stayed about the same","High_School","Male",50
+"1208","Stayed about the same","College_Degree","Male",3
+"1209","Increased","College_Degree","Male",11
+"1210","Stayed about the same","College_Degree","Male",47
+"1211","Decreased","High_School","Male",3
+"1212","Decreased","College_Degree","Male",14
+"1213","Stayed about the same","College_Degree","Male",5
+"1214","Increased","High_School","Male",13
+"1215","Stayed about the same","College_Degree","Male",1
+"1216","Stayed about the same","High_School","Male",45
+"1217","Stayed about the same","College_Degree","Male",25
+"1218","Decreased","High_School","Male",40
+"1219","Decreased","College_Degree","Male",60
+"1220","Decreased","High_School","Male",30
+"1221","Decreased","College_Degree","Male",15
+"1222","Increased","High_School","Male",1
+"1223","Stayed about the same","College_Degree","Male",20
+"1224","Decreased","College_Degree","Male",4
+"1225","Increased","High_School","Male",6
+"1226","Decreased","College_Degree","Male",36
+"1227","Increased","Advanced_Degree","Male",20
+"1228","Increased","High_School","Male",10
+"1229","Stayed about the same","College_Degree","Male",40
+"1230","Stayed about the same","High_School","Male",25
+"1231","Decreased","High_School","Male",20
+"1232","Stayed about the same","College_Degree","Male",30
+"1233","Increased","College_Degree","Male",43
+"1234","Stayed about the same","Advanced_Degree","Male",10
+"1235","Stayed about the same","High_School","Male",40
+"1236","Increased","High_School","Male",2
+"1237","Stayed about the same","High_School","Male",35
+"1238","Decreased","College_Degree","Male",10
+"1239","Increased","College_Degree","Male",40
+"1240","Increased","High_School","Male",35
+"1241","Stayed about the same","College_Degree","Male",2
+"1242","Increased","College_Degree","Male",7
+"1243","Stayed about the same","High_School","Male",30
+"1244","Decreased","College_Degree","Male",40
+"1245","Stayed about the same","High_School","Male",46
+"1246","Decreased",NA,"Male",2
+"1247","Decreased","College_Degree","Male",48
+"1248","Decreased","College_Degree","Male",46
+"1249","Increased","College_Degree","Male",25
+"1250","Stayed about the same","College_Degree","Male",35
+"1251","Decreased","College_Degree","Male",18
+"1252","Stayed about the same","College_Degree","Male",45
+"1253","Increased","High_School","Male",2
+"1254","Decreased","High_School","Male",10
+"1255","Stayed about the same","College_Degree","Male",5
+"1256","Stayed about the same","College_Degree","Male",2
+"1257","Decreased","High_School","Male",10
+"1258","Decreased","High_School","Male",30
+"1259","Stayed about the same","High_School","Male",55
+"1260","Stayed about the same","Advanced_Degree","Male",25
+"1261","Increased","High_School","Male",4
+"1262","Decreased","College_Degree","Male",3
+"1263","Stayed about the same","High_School","Male",21
+"1264","Stayed about the same","Advanced_Degree","Male",60
+"1265","Increased","Advanced_Degree","Male",5
+"1266","Decreased","High_School","Male",10
+"1267","Stayed about the same","College_Degree","Male",10
+"1268","Stayed about the same","High_School","Male",50
+"1269","Decreased","High_School","Male",45
+"1270","Stayed about the same","High_School","Male",56
+"1271","Decreased","College_Degree","Male",30
+"1272","Stayed about the same","High_School","Male",50
+"1273","Decreased","College_Degree","Male",32
+"1274","Stayed about the same","High_School","Male",12
+"1275","Increased","College_Degree","Male",22
+"1276","Stayed about the same","Advanced_Degree","Male",10
+"1277","Stayed about the same","Advanced_Degree","Male",14
+"1278","Stayed about the same","College_Degree","Male",4
+"1279","Stayed about the same","High_School","Male",45
+"1280","Increased","High_School","Male",10
+"1281","Increased","College_Degree","Male",20
+"1282","Decreased","High_School","Male",45
+"1283","Decreased","High_School","Male",41
+"1284","Decreased","High_School","Female",5
+"1285","Increased","High_School","Male",18
+"1286","Stayed about the same","High_School","Male",20
+"1287","Increased","High_School","Male",25
+"1288","Decreased","College_Degree","Male",40
+"1289","Stayed about the same","High_School","Male",8
+"1290","Increased","College_Degree","Male",12
+"1291","Stayed about the same","High_School","Male",25
+"1292","Decreased","High_School","Male",25
+"1293","Stayed about the same","High_School","Male",25
+"1294","Increased","High_School","Male",15
+"1295","Decreased","College_Degree","Male",34
+"1296","Increased","High_School","Male",30
+"1297","Decreased","College_Degree","Male",34
+"1298","Stayed about the same","College_Degree","Male",50
+"1299","Stayed about the same","High_School","Male",45
+"1300","Decreased","College_Degree","Male",20
+"1301","Increased","College_Degree","Male",40
+"1302","Decreased","Advanced_Degree","Male",40
+"1303","Decreased","High_School","Male",45
+"1304","Increased","College_Degree","Male",1
+"1305","Decreased","College_Degree","Male",25
+"1306","Stayed about the same","High_School","Male",45
+"1307","Increased","High_School","Male",1
+"1308","Stayed about the same","High_School","Male",40
+"1309","Increased","High_School","Male",13
+"1310","Decreased","College_Degree","Male",15
+"1311","Increased","College_Degree","Male",51
+"1312","Increased","Advanced_Degree","Male",38
+"1313","Stayed about the same","High_School","Male",50
+"1314","Stayed about the same","College_Degree","Male",15
+"1315","Stayed about the same","High_School","Male",38
+"1316","Decreased","College_Degree","Male",25
+"1317","Decreased","High_School","Male",1
+"1318","Decreased","High_School","Male",25
+"1319","Increased","College_Degree","Male",30
+"1320","Stayed about the same","High_School","Male",20
+"1321","Decreased","High_School","Male",8
+"1322","Stayed about the same","High_School","Male",46
+"1323","Stayed about the same","College_Degree","Male",35
+"1324","Decreased","College_Degree","Male",33
+"1325","Stayed about the same","High_School","Male",28
+"1326","Decreased","High_School","Male",50
+"1327","Increased","High_School","Male",53
+"1328","Stayed about the same","College_Degree","Male",63
+"1329","Decreased","College_Degree","Male",35
+"1330","Stayed about the same","College_Degree","Male",38
+"1331","Decreased","Advanced_Degree","Female",20
+"1332","Increased","College_Degree","Male",20
+"1333","Decreased","College_Degree","Male",7
+"1334","Decreased","High_School","Male",25
+"1335",NA,"High_School","Male",1
+"1336","Decreased","High_School","Male",53
+"1337","Increased","High_School","Male",15
+"1338","Stayed about the same","High_School","Male",1
+"1339","Stayed about the same","High_School","Male",4
+"1340","Increased","High_School","Male",7
+"1341","Decreased","Advanced_Degree","Male",3
+"1342","Stayed about the same","High_School","Male",30
+"1343","Increased","High_School","Male",30
+"1344","Decreased","College_Degree","Male",40
+"1345","Stayed about the same","College_Degree","Male",40
+"1346","Stayed about the same","High_School","Male",4
+"1347","Stayed about the same","High_School","Male",20
+"1348","Decreased","College_Degree","Male",40
+"1349","Stayed about the same","College_Degree","Male",35
+"1350","Stayed about the same","College_Degree","Male",35
+"1351","Stayed about the same","High_School","Male",19
+"1352","Stayed about the same","Advanced_Degree","Male",40
+"1353","Increased","Advanced_Degree","Male",13
+"1354","Stayed about the same","High_School","Male",25
+"1355","Stayed about the same","High_School","Male",25
+"1356","Stayed about the same","College_Degree","Male",20
+"1357","Stayed about the same","College_Degree","Female",3
+"1358","Stayed about the same","College_Degree","Male",30
+"1359","Decreased","High_School","Male",50
+"1360","Increased","College_Degree","Male",6
+"1361","Stayed about the same","College_Degree","Male",25
+"1362","Decreased","Advanced_Degree","Male",50
+"1363","Increased","College_Degree","Male",42
+"1364","Decreased","High_School","Male",8
+"1365","Increased","College_Degree","Male",10
+"1366","Increased","College_Degree","Male",25
+"1367","Decreased","College_Degree","Male",10
+"1368","Stayed about the same","College_Degree","Male",9
+"1369","Stayed about the same","High_School","Male",30
+"1370","Increased","College_Degree","Male",45
+"1371","Stayed about the same","College_Degree","Male",20
+"1372","Decreased","College_Degree","Male",25
+"1373","Stayed about the same","High_School","Male",2
+"1374","Decreased","High_School","Male",3
+"1375","Stayed about the same",NA,"Male",6
+"1376","Stayed about the same","College_Degree","Female",2
+"1377","Decreased","College_Degree","Male",15
+"1378","Stayed about the same","High_School","Male",35
+"1379","Decreased","College_Degree","Male",12
+"1380","Decreased","College_Degree","Male",40
+"1381","Decreased",NA,"Male",5
+"1382","Increased","High_School","Male",40
+"1383","Decreased","Advanced_Degree","Male",35
+"1384","Stayed about the same","College_Degree","Male",45
+"1385","Increased","Advanced_Degree","Male",5
+"1386","Stayed about the same","College_Degree","Male",10
+"1387","Decreased","College_Degree","Male",15
+"1388","Stayed about the same","College_Degree","Male",16
+"1389","Decreased","High_School","Male",45
+"1390","Decreased","High_School","Male",13
+"1391","Stayed about the same","College_Degree","Male",10
+"1392","Decreased","Advanced_Degree","Male",64
+"1393","Increased","College_Degree","Male",1
+"1394","Increased","College_Degree","Male",13
+"1395","Increased","High_School","Male",8
+"1396","Decreased","College_Degree","Male",55
+"1397","Increased","High_School","Male",22
+"1398","Decreased","High_School","Male",43
+"1399","Stayed about the same","High_School","Male",20
+"1400","Decreased","High_School","Male",99
+"1401","Decreased","High_School","Male",30
+"1402","Increased","College_Degree","Male",2
+"1403","Decreased","High_School","Male",30
+"1404","Decreased","Advanced_Degree","Male",20
+"1405","Stayed about the same","High_School","Male",16
+"1406","Decreased","College_Degree","Male",35
+"1407","Stayed about the same","College_Degree","Male",3
+"1408","Decreased","High_School","Male",20
+"1409","Stayed about the same","High_School","Male",33
+"1410","Decreased","College_Degree","Male",2
+"1411","Decreased","College_Degree","Male",34
+"1412","Stayed about the same","High_School","Male",8
+"1413","Decreased","College_Degree","Male",10
+"1414","Stayed about the same","High_School","Male",3
+"1415","Decreased","Advanced_Degree","Male",4
+"1416","Increased","High_School","Male",30
+"1417","Increased","High_School","Male",15
+"1418","Decreased","Advanced_Degree","Male",6
+"1419","Stayed about the same","College_Degree","Male",16
+"1420","Decreased","College_Degree","Male",12
+"1421","Stayed about the same","High_School","Male",48
+"1422","Stayed about the same","High_School","Male",6
+"1423","Decreased","High_School","Male",30
+"1424","Stayed about the same","College_Degree","Male",45
+"1425","Increased","Advanced_Degree","Male",10
+"1426","Stayed about the same","High_School","Male",35
+"1427","Decreased","College_Degree","Male",30
+"1428","Stayed about the same","Advanced_Degree","Male",8
+"1429","Decreased","High_School","Male",18
+"1430","Decreased","College_Degree","Male",16
+"1431","Increased","College_Degree","Male",39
+"1432","Decreased","High_School","Male",35
+"1433","Stayed about the same","High_School","Male",28
+"1434","Stayed about the same","College_Degree","Male",4
+"1435","Decreased","College_Degree","Male",25
+"1436","Increased","College_Degree","Male",40
+"1437","Stayed about the same","High_School","Male",55
+"1438","Increased","High_School","Male",30
+"1439","Increased","College_Degree","Male",33
+"1440","Stayed about the same","High_School","Male",39
+"1441","Stayed about the same","College_Degree","Male",40
+"1442","Stayed about the same","High_School","Male",50
+"1443","Increased","College_Degree","Male",5
+"1444","Decreased","College_Degree","Male",34
+"1445","Stayed about the same","College_Degree","Male",30
+"1446","Stayed about the same","College_Degree","Male",15
+"1447","Increased","College_Degree","Male",1
+"1448","Stayed about the same","High_School","Male",10
+"1449","Stayed about the same","College_Degree","Male",10
+"1450","Increased","High_School","Male",15
+"1451","Decreased","High_School","Male",2
+"1452","Decreased","High_School","Male",30
+"1453","Stayed about the same","Advanced_Degree","Male",8
+"1454","Decreased","College_Degree","Male",20
+"1455","Decreased","High_School","Male",11
+"1456","Increased","College_Degree","Male",25
+"1457","Decreased","College_Degree","Male",15
+"1458","Stayed about the same","College_Degree","Male",4
+"1459","Increased","High_School","Male",5
+"1460","Stayed about the same","High_School","Male",18
+"1461","Stayed about the same","College_Degree","Male",30
+"1462","Stayed about the same","High_School","Male",3
+"1463","Increased","College_Degree","Female",12
+"1464","Increased","Advanced_Degree","Male",4
+"1465","Decreased","College_Degree","Male",30
+"1466","Increased","High_School","Male",20
+"1467","Decreased","High_School","Male",15
+"1468","Stayed about the same","Advanced_Degree","Female",13
+"1469","Stayed about the same","High_School","Male",35
+"1470","Increased","College_Degree","Female",3
+"1471",NA,"High_School","Male",48
+"1472","Stayed about the same","High_School","Male",3
+"1473","Increased","College_Degree","Male",6
+"1474","Stayed about the same","Advanced_Degree","Male",27
+"1475","Increased","High_School","Male",35
+"1476","Decreased","High_School","Male",25
+"1477","Stayed about the same","High_School","Male",8
+"1478","Stayed about the same","High_School","Male",40
+"1479","Stayed about the same","High_School","Male",60
+"1480","Increased","High_School","Male",15
+"1481","Stayed about the same","College_Degree","Male",6
+"1482","Stayed about the same","Advanced_Degree","Male",29
+"1483","Increased","High_School","Male",10
+"1484","Decreased","College_Degree","Male",20
+"1485","Decreased","Advanced_Degree","Male",15
+"1486","Increased","College_Degree","Male",2
+"1487","Decreased","High_School","Male",55
+"1488","Stayed about the same","Advanced_Degree","Male",15
+"1489","Decreased","High_School","Male",30
+"1490","Decreased","High_School","Male",50
+"1491","Stayed about the same","College_Degree","Male",40
+"1492","Increased","Advanced_Degree","Male",20
+"1493","Decreased","High_School","Male",44
+"1494","Decreased","High_School","Male",25
+"1495","Increased","College_Degree","Male",15
+"1496","Decreased","College_Degree","Male",20
+"1497","Increased","College_Degree","Male",35
+"1498","Stayed about the same","Advanced_Degree","Male",25
+"1499","Stayed about the same","High_School","Male",48
+"1500","Stayed about the same","High_School","Male",19
+"1501","Increased","High_School","Male",7
+"1502","Increased","High_School","Male",18
+"1503","Decreased","Advanced_Degree","Male",2
+"1504","Increased","College_Degree","Male",30
+"1505","Stayed about the same","High_School","Male",20
+"1506","Decreased","College_Degree","Male",38
+"1507","Stayed about the same","College_Degree","Male",26
+"1508","Stayed about the same","College_Degree","Male",3
+"1509","Increased","High_School","Male",30
+"1510","Stayed about the same","College_Degree","Male",36
+"1511","Decreased","High_School","Male",4
+"1512","Stayed about the same","College_Degree","Male",12
+"1513","Stayed about the same","High_School","Male",52
+"1514","Stayed about the same","College_Degree","Male",35
+"1515","Increased","High_School","Male",4
+"1516","Stayed about the same","High_School","Male",45
+"1517","Decreased","Advanced_Degree","Male",30
+"1518","Stayed about the same","High_School","Male",1
+"1519","Decreased","High_School","Male",30
+"1520","Stayed about the same","High_School","Male",20
+"1521","Increased","High_School","Male",22
+"1522","Decreased","High_School","Male",5
+"1523","Stayed about the same","College_Degree","Male",42
+"1524","Stayed about the same","Advanced_Degree","Male",42
+"1525","Stayed about the same","High_School","Male",12
+"1526","Stayed about the same","College_Degree","Male",52
+"1527","Stayed about the same","College_Degree","Male",5
+"1528","Stayed about the same","Advanced_Degree","Male",20
+"1529","Decreased","High_School","Male",30
+"1530","Decreased","High_School","Male",40
+"1531","Decreased","Advanced_Degree","Male",25
+"1532","Stayed about the same","High_School","Male",40
+"1533","Increased","High_School","Male",3
+"1534","Stayed about the same","College_Degree","Male",43
+"1535","Increased","High_School","Male",50
+"1536","Stayed about the same","College_Degree","Male",25
+"1537","Increased","High_School","Female",2
+"1538","Stayed about the same","High_School","Male",10
+"1539","Stayed about the same","High_School","Male",28
+"1540","Stayed about the same","Advanced_Degree","Male",7
+"1541","Stayed about the same","High_School","Male",20
+"1542","Increased","High_School","Male",25
+"1543","Increased","High_School","Male",15
+"1544","Increased","College_Degree","Male",4
+"1545","Stayed about the same","High_School","Male",46
+"1546","Increased","College_Degree","Male",20
+"1547","Increased","High_School","Male",30
+"1548","Decreased","High_School","Male",30
+"1549","Increased",NA,"Male",2.5
+"1550","Increased","College_Degree","Male",1
+"1551","Increased","College_Degree","Male",15
+"1552","Stayed about the same","College_Degree","Male",42
+"1553","Increased","College_Degree","Male",1
+"1554","Decreased","College_Degree","Male",30
+"1555","Increased","Advanced_Degree","Male",12
+"1556","Stayed about the same","College_Degree","Male",12
+"1557","Decreased","High_School","Male",40
+"1558","Stayed about the same","High_School","Male",14
+"1559","Decreased","High_School","Male",30
+"1560","Stayed about the same","High_School","Male",15
+"1561","Increased","College_Degree","Male",1
+"1562","Decreased","College_Degree","Male",25
+"1563","Increased",NA,"Male",35
+"1564","Stayed about the same","College_Degree","Male",25
+"1565","Stayed about the same","High_School","Male",16
+"1566","Stayed about the same","High_School","Male",15
+"1567","Increased","Advanced_Degree","Male",3
+"1568","Increased","College_Degree","Male",42
+"1569","Stayed about the same","Advanced_Degree","Male",50
+"1570","Decreased","High_School","Male",38
+"1571","Stayed about the same","High_School","Male",50
+"1572","Decreased",NA,"Male",55
+"1573","Decreased","College_Degree","Male",10
+"1574","Stayed about the same","Advanced_Degree","Male",45
+"1575","Stayed about the same","Advanced_Degree","Male",5
+"1576","Increased","College_Degree","Male",3
+"1577","Decreased","College_Degree","Male",10
+"1578","Increased","Advanced_Degree","Male",2
+"1579","Increased","High_School","Male",2
+"1580","Decreased","College_Degree","Male",25
+"1581","Stayed about the same","Advanced_Degree","Female",10
+"1582","Decreased","College_Degree","Male",35
+"1583","Decreased","Advanced_Degree","Male",40
+"1584","Decreased","High_School","Male",4
+"1585","Stayed about the same","High_School","Male",35
+"1586","Increased","College_Degree","Male",30
+"1587","Stayed about the same","High_School","Male",35
+"1588","Decreased","College_Degree","Male",45
+"1589","Decreased","College_Degree","Male",35
+"1590","Stayed about the same","High_School","Male",25
+"1591","Increased","College_Degree","Male",12
+"1592","Increased","College_Degree","Male",7
+"1593","Decreased","High_School","Male",37
+"1594","Decreased","Advanced_Degree","Male",20
+"1595","Stayed about the same","High_School","Male",40
+"1596","Stayed about the same","Advanced_Degree","Male",30
+"1597","Decreased","High_School","Male",48
+"1598","Decreased","High_School","Male",12
+"1599","Stayed about the same","College_Degree","Male",1
+"1600","Stayed about the same","High_School","Male",40
+"1601","Stayed about the same","College_Degree","Male",20
+"1602","Increased","College_Degree","Male",2
+"1603","Decreased","High_School","Male",5
+"1604","Stayed about the same","Advanced_Degree","Male",5
+"1605","Increased","High_School","Male",20
+"1606","Decreased","High_School","Male",50
+"1607","Increased","High_School","Male",40
+"1608","Stayed about the same","College_Degree","Male",30
+"1609","Stayed about the same","Advanced_Degree","Male",40
+"1610","Decreased","College_Degree","Male",3
+"1611","Increased","High_School","Male",40
+"1612","Stayed about the same","High_School","Male",30
+"1613","Decreased","High_School","Male",98
+"1614","Decreased","High_School","Male",7
+"1615","Decreased","Advanced_Degree","Male",4
+"1616","Increased","College_Degree","Male",4
+"1617","Increased","High_School","Male",3
+"1618","Stayed about the same","College_Degree","Male",28
+"1619","Stayed about the same","College_Degree","Male",6
+"1620","Stayed about the same","High_School","Male",3
+"1621","Stayed about the same","College_Degree","Male",2
+"1622","Stayed about the same","High_School","Male",5
+"1623","Increased","College_Degree","Female",9
+"1624","Decreased","High_School","Male",10
+"1625","Decreased","High_School","Male",35
+"1626","Stayed about the same","High_School","Male",44
+"1627","Decreased","College_Degree","Male",30
+"1628","Stayed about the same","High_School","Male",50
+"1629","Decreased","High_School","Male",35
+"1630","Decreased","College_Degree","Male",35
+"1631","Stayed about the same","High_School","Male",7
+"1632","Increased","High_School","Male",18
+"1633","Increased","Advanced_Degree","Male",41
+"1634","Increased","College_Degree","Male",7
+"1635","Stayed about the same","High_School","Male",40
+"1636","Stayed about the same","College_Degree","Male",30
+"1637","Increased","High_School","Male",40
+"1638","Stayed about the same","High_School","Male",43
+"1639","Increased","High_School","Male",52
+"1640","Stayed about the same","College_Degree","Male",3
+"1641","Increased","College_Degree","Male",21
+"1642","Stayed about the same","College_Degree","Male",45
+"1643","Decreased","High_School","Male",27
+"1644","Stayed about the same","College_Degree","Male",2
+"1645","Increased","College_Degree","Male",25
+"1646","Stayed about the same","College_Degree","Male",30
+"1647","Increased","College_Degree","Male",4
+"1648","Decreased","College_Degree","Male",15
+"1649","Decreased","High_School","Male",10
+"1650","Increased","College_Degree","Male",5
+"1651","Increased","Advanced_Degree","Male",1
+"1652","Decreased","High_School","Male",42
+"1653","Stayed about the same","High_School","Male",30
+"1654","Increased","College_Degree","Male",12
+"1655","Stayed about the same","College_Degree","Male",45
+"1656","Stayed about the same","College_Degree","Male",30
+"1657","Decreased","High_School","Male",32
+"1658","Increased","College_Degree","Male",6
+"1659","Increased","High_School","Male",4
+"1660","Decreased","Advanced_Degree","Male",35
+"1661","Stayed about the same","College_Degree","Male",10
+"1662","Stayed about the same","College_Degree","Male",49
+"1663","Increased","High_School","Male",6
+"1664","Stayed about the same","High_School","Male",20
+"1665","Stayed about the same","College_Degree","Male",10
+"1666","Decreased","High_School","Male",5
+"1667","Stayed about the same","College_Degree","Male",45
+"1668","Decreased","High_School","Male",48
+"1669","Stayed about the same","College_Degree","Male",20
+"1670","Decreased","College_Degree","Male",15
+"1671","Stayed about the same","College_Degree","Male",39
+"1672","Decreased","College_Degree","Male",55
+"1673","Decreased","High_School","Male",30
+"1674","Stayed about the same","College_Degree","Male",50
+"1675","Increased","Advanced_Degree","Male",6
+"1676","Stayed about the same","College_Degree","Male",27
+"1677","Stayed about the same","College_Degree","Male",36
+"1678","Decreased","High_School","Male",10
+"1679","Stayed about the same","High_School","Male",8
+"1680","Increased","High_School","Male",13
+"1681","Stayed about the same","College_Degree","Male",42
+"1682","Increased","High_School","Male",40
+"1683","Stayed about the same","Advanced_Degree","Male",20
+"1684","Stayed about the same","College_Degree","Male",10
+"1685","Increased","Advanced_Degree","Male",25
+"1686","Decreased","College_Degree","Male",48
+"1687","Stayed about the same","College_Degree","Male",18
+"1688","Stayed about the same","College_Degree","Male",20
+"1689","Decreased","High_School","Male",11
+"1690","Stayed about the same","High_School","Male",15
+"1691","Stayed about the same","College_Degree","Male",10
+"1692","Increased","High_School","Male",5
+"1693","Decreased","College_Degree","Male",30
+"1694","Decreased","High_School","Male",28
+"1695","Decreased","High_School","Male",28
+"1696","Stayed about the same","High_School","Male",20
+"1697","Increased","High_School","Male",48
+"1698","Stayed about the same","High_School","Male",31
+"1699","Increased","College_Degree","Male",20
+"1700","Stayed about the same","High_School","Male",25
+"1701","Decreased","High_School","Male",6
+"1702","Stayed about the same","High_School","Male",47
+"1703","Stayed about the same","High_School","Male",22
+"1704","Stayed about the same","College_Degree","Male",13
+"1705","Stayed about the same","High_School","Male",8
+"1706","Stayed about the same","College_Degree","Male",25
+"1707","Increased",NA,"Male",13
+"1708","Increased","College_Degree","Male",20
+"1709","Decreased","Advanced_Degree","Male",34
+"1710","Decreased","High_School","Male",36
+"1711","Stayed about the same","College_Degree","Male",35
+"1712","Stayed about the same","High_School","Male",40
+"1713","Decreased","College_Degree","Male",60
+"1714","Stayed about the same","College_Degree","Female",30
+"1715","Increased","High_School","Male",40
+"1716","Increased","College_Degree","Male",50
+"1717","Increased","College_Degree","Male",4
+"1718","Increased","Advanced_Degree","Male",40
+"1719","Decreased","College_Degree","Male",40
+"1720","Increased","High_School","Male",4
+"1721","Increased","Advanced_Degree","Male",22
+"1722","Decreased","High_School","Male",45
+"1723","Increased","College_Degree","Male",5
+"1724","Stayed about the same","High_School","Male",25
+"1725","Stayed about the same","College_Degree","Male",20
+"1726","Decreased","College_Degree","Male",23
+"1727","Decreased","College_Degree","Male",17
+"1728","Decreased","High_School","Male",25
+"1729","Decreased","College_Degree","Male",35
+"1730","Stayed about the same","High_School","Male",5
+"1731","Stayed about the same","College_Degree","Male",35
+"1732","Stayed about the same","High_School","Male",18
+"1733","Increased","High_School","Male",34
+"1734","Increased","Advanced_Degree","Male",2
+"1735","Stayed about the same","High_School","Male",20
+"1736","Increased","High_School","Male",27
+"1737","Stayed about the same","Advanced_Degree","Female",9
+"1738","Stayed about the same","High_School","Male",5
+"1739","Increased","College_Degree","Male",39
+"1740","Decreased","College_Degree","Male",32
+"1741","Decreased","Advanced_Degree","Male",20
+"1742","Decreased","College_Degree","Male",53
+"1743","Stayed about the same","College_Degree","Male",43
+"1744","Decreased","College_Degree","Male",55
+"1745","Decreased","High_School","Male",49
+"1746","Stayed about the same","Advanced_Degree","Male",36
+"1747","Increased","Advanced_Degree","Male",20
+"1748","Increased","High_School","Male",36
+"1749","Stayed about the same","College_Degree","Male",35
+"1750","Stayed about the same","College_Degree","Male",20
+"1751","Increased","College_Degree","Male",8
+"1752","Increased","Advanced_Degree","Male",15
+"1753","Increased","High_School","Male",11
+"1754","Stayed about the same","Advanced_Degree","Male",12
+"1755","Increased","High_School","Male",35
+"1756","Stayed about the same","College_Degree","Male",50
+"1757","Decreased","High_School","Male",30
+"1758","Increased","College_Degree","Male",1
+"1759","Stayed about the same","High_School","Male",30
+"1760","Stayed about the same","High_School","Male",45
+"1761","Stayed about the same","High_School","Male",10
+"1762","Increased","High_School","Male",42
+"1763","Stayed about the same","High_School","Male",30
+"1764","Increased","High_School","Male",20
+"1765","Stayed about the same","Advanced_Degree","Male",1
+"1766","Stayed about the same","College_Degree","Male",16
+"1767","Decreased","College_Degree","Male",25
+"1768","Decreased","College_Degree","Male",13
+"1769","Stayed about the same","High_School","Male",3
+"1770","Decreased","College_Degree","Male",10
+"1771","Decreased","High_School","Male",10
+"1772","Increased","Advanced_Degree","Male",8
+"1773","Decreased","College_Degree","Male",35
+"1774","Stayed about the same","High_School","Male",29
+"1775","Increased","High_School","Male",25
+"1776","Stayed about the same","College_Degree","Male",3
+"1777","Decreased","High_School","Male",15
+"1778","Stayed about the same","High_School","Male",40
+"1779","Decreased","Advanced_Degree","Male",32
+"1780","Decreased","College_Degree","Male",50
+"1781","Stayed about the same","College_Degree","Male",20
+"1782","Decreased","High_School","Male",50
+"1783","Stayed about the same","College_Degree","Male",45
+"1784","Increased","Advanced_Degree","Male",5
+"1785","Stayed about the same","College_Degree","Male",50
+"1786","Decreased","High_School","Male",30
+"1787","Decreased","High_School","Male",50
+"1788","Stayed about the same","High_School","Male",50
+"1789","Stayed about the same","College_Degree","Male",1
+"1790","Increased","College_Degree","Male",10
+"1791","Stayed about the same","Advanced_Degree","Male",43
+"1792","Stayed about the same","College_Degree","Male",44
+"1793","Decreased","High_School","Male",32
+"1794","Decreased","College_Degree","Male",3
+"1795","Stayed about the same","College_Degree","Male",10
+"1796","Decreased","High_School","Male",30
+"1797","Stayed about the same","High_School","Male",2
+"1798","Stayed about the same","High_School","Male",3
+"1799","Decreased","Advanced_Degree","Male",1
+"1800","Stayed about the same","High_School","Male",13
+"1801","Increased","High_School","Male",3
+"1802","Stayed about the same","Advanced_Degree","Male",19
+"1803","Decreased","High_School","Male",17
+"1804","Stayed about the same","Advanced_Degree","Female",7
+"1805","Decreased","College_Degree","Male",20
+"1806","Stayed about the same","High_School","Male",15
+"1807","Decreased","College_Degree","Male",10
+"1808","Decreased","High_School","Male",55
+"1809","Stayed about the same","High_School","Male",20
+"1810","Increased","College_Degree","Male",2
+"1811","Increased","High_School","Male",6
+"1812","Increased","College_Degree","Male",10
+"1813","Stayed about the same","High_School","Male",34
+"1814",NA,"College_Degree","Male",25
+"1815","Stayed about the same","High_School","Male",30
+"1816","Stayed about the same","High_School","Male",40
+"1817","Stayed about the same","High_School","Male",35
+"1818","Decreased","High_School","Male",8
+"1819","Stayed about the same","Advanced_Degree","Male",10
+"1820","Decreased","College_Degree","Male",35
+"1821","Stayed about the same","High_School","Male",52
+"1822","Increased","High_School","Male",10
+"1823","Stayed about the same","College_Degree","Male",4
+"1824","Stayed about the same","College_Degree","Male",48
+"1825","Decreased","High_School","Male",38
+"1826","Stayed about the same","Advanced_Degree","Male",50
+"1827","Stayed about the same","High_School","Male",30
+"1828","Increased","College_Degree","Male",37
+"1829","Increased","High_School","Male",35
+"1830","Decreased","High_School","Male",6
+"1831","Increased","College_Degree","Male",45
+"1832","Increased","College_Degree","Female",15
+"1833","Decreased","High_School","Male",36
+"1834","Stayed about the same","College_Degree","Male",12
+"1835","Stayed about the same","High_School","Male",6
+"1836","Decreased","High_School","Male",40
+"1837","Stayed about the same","College_Degree","Male",1
+"1838","Stayed about the same",NA,"Male",2
+"1839","Increased","High_School","Male",10
+"1840","Decreased","High_School","Male",14
+"1841","Decreased","High_School","Male",60
+"1842","Stayed about the same","Advanced_Degree","Male",27
+"1843","Stayed about the same","College_Degree","Male",13
+"1844","Stayed about the same","College_Degree","Male",16
+"1845","Stayed about the same","Advanced_Degree","Male",3
+"1846","Decreased","High_School","Male",3
+"1847","Stayed about the same","College_Degree","Male",2
+"1848","Stayed about the same","College_Degree","Female",5
+"1849","Decreased","College_Degree","Male",55
+"1850","Stayed about the same","College_Degree","Male",58
+"1851","Stayed about the same","College_Degree","Male",3
+"1852","Stayed about the same","High_School","Male",3
+"1853","Decreased","High_School","Male",70
+"1854","Stayed about the same","College_Degree","Male",38
+"1855","Increased","College_Degree","Male",9
+"1856","Stayed about the same","College_Degree","Male",30
+"1857","Stayed about the same","College_Degree","Male",53
+"1858","Decreased","High_School","Male",45
+"1859","Decreased","College_Degree","Female",2
+"1860","Stayed about the same","College_Degree","Male",45
+"1861","Increased","College_Degree","Male",25
+"1862","Decreased","High_School","Male",25
+"1863","Increased","College_Degree","Male",5
+"1864","Increased","High_School","Male",1
+"1865","Stayed about the same",NA,"Male",40
+"1866","Decreased","High_School","Male",45
+"1867","Decreased","High_School","Female",23
+"1868","Decreased","College_Degree","Male",30
+"1869","Increased","Advanced_Degree","Male",22
+"1870","Stayed about the same","College_Degree","Male",31
+"1871","Decreased","College_Degree","Male",13
+"1872","Stayed about the same","High_School","Male",35
+"1873","Increased","College_Degree","Male",2
+"1874","Increased","Advanced_Degree","Male",3
+"1875","Decreased","College_Degree","Female",12
+"1876","Increased","High_School","Male",20
+"1877","Decreased","Advanced_Degree","Male",30
+"1878","Decreased","College_Degree","Male",30
+"1879","Decreased","High_School","Male",56
+"1880","Stayed about the same","High_School","Male",20
+"1881","Stayed about the same","High_School","Female",9
+"1882","Increased","High_School","Male",30
+"1883","Decreased","College_Degree","Male",25
+"1884","Increased","College_Degree","Male",21
+"1885","Stayed about the same","Advanced_Degree","Male",50
+"1886","Decreased","Advanced_Degree","Male",10
+"1887","Stayed about the same","High_School","Male",40
+"1888","Stayed about the same","High_School","Male",30
+"1889","Decreased","High_School","Male",45
+"1890","Increased","High_School","Male",10
+"1891","Increased","High_School","Male",40
+"1892","Stayed about the same","High_School","Male",8
+"1893","Decreased","College_Degree","Male",25
+"1894","Decreased","College_Degree","Male",10
+"1895","Stayed about the same","High_School","Male",15
+"1896","Decreased","College_Degree","Male",40
+"1897","Decreased","High_School","Male",6
+"1898","Stayed about the same","College_Degree","Female",19
+"1899","Decreased","High_School","Male",2
+"1900","Stayed about the same","College_Degree","Male",3
+"1901","Increased","College_Degree","Male",3
+"1902","Decreased","High_School","Male",11
+"1903","Stayed about the same","High_School","Male",40
+"1904","Decreased","College_Degree","Male",15
+"1905","Stayed about the same","High_School","Male",5
+"1906","Stayed about the same","High_School","Male",10
+"1907","Decreased","College_Degree","Male",60
+"1908","Decreased","High_School","Male",63
+"1909","Stayed about the same","College_Degree","Male",29
+"1910","Increased","College_Degree","Male",16
+"1911","Stayed about the same","High_School","Male",44
+"1912","Decreased","High_School","Male",4
+"1913","Decreased","High_School","Male",48
+"1914","Decreased","College_Degree","Male",40
+"1915","Stayed about the same","High_School","Male",6
+"1916","Increased","High_School","Male",12
+"1917","Stayed about the same","High_School","Male",10
+"1918","Stayed about the same","College_Degree","Male",25
+"1919","Decreased","College_Degree","Male",12
+"1920","Stayed about the same","College_Degree","Male",10
+"1921","Increased","High_School","Male",4
+"1922","Increased","High_School","Male",50
+"1923","Decreased","High_School","Male",10
+"1924","Increased","College_Degree","Male",3
+"1925","Increased","College_Degree","Male",51
+"1926","Increased","College_Degree","Male",7
+"1927","Decreased","College_Degree","Male",40
+"1928","Increased","High_School","Male",3
+"1929","Decreased","College_Degree","Male",15
+"1930","Increased","College_Degree","Male",1
+"1931","Increased","High_School","Male",3
+"1932","Stayed about the same","College_Degree","Male",20
+"1933","Increased","High_School","Male",5
+"1934","Stayed about the same","High_School","Male",1
+"1935","Stayed about the same","High_School","Male",30
+"1936","Increased","High_School","Male",30
+"1937","Decreased","High_School","Male",45
+"1938","Increased","High_School","Male",30
+"1939","Decreased","College_Degree","Male",42
+"1940","Stayed about the same","Advanced_Degree","Male",40
+"1941","Stayed about the same","College_Degree","Male",20
+"1942","Increased","College_Degree","Male",60
+"1943","Increased","Advanced_Degree","Male",52
+"1944","Increased","High_School","Male",25
+"1945","Stayed about the same","High_School","Male",15
+"1946","Decreased","College_Degree","Male",20
+"1947","Stayed about the same","High_School","Male",30
+"1948","Stayed about the same","College_Degree","Female",5
+"1949","Decreased","High_School","Male",45
+"1950","Decreased","High_School","Male",28
+"1951","Stayed about the same","College_Degree","Male",42
+"1952","Increased","College_Degree","Male",10
+"1953","Stayed about the same","College_Degree","Male",20
+"1954","Decreased","High_School","Male",55
+"1955","Decreased","Advanced_Degree","Male",9
+"1956","Stayed about the same","College_Degree","Male",26
+"1957","Increased","College_Degree","Male",29
+"1958","Stayed about the same","High_School","Male",21
+"1959","Stayed about the same","High_School","Male",30
+"1960","Stayed about the same","High_School","Male",3
+"1961","Decreased","High_School","Male",3
+"1962","Decreased","Advanced_Degree","Male",4
+"1963","Decreased","College_Degree","Female",3
+"1964","Stayed about the same","High_School","Female",1
+"1965","Stayed about the same","High_School","Male",50
+"1966","Increased","High_School","Male",50
+"1967","Stayed about the same","High_School","Male",9
+"1968","Increased","College_Degree","Male",30
+"1969","Decreased","College_Degree","Male",3
+"1970","Stayed about the same",NA,"Male",30
+"1971","Decreased","High_School","Male",36
+"1972","Stayed about the same","College_Degree","Male",36
+"1973","Increased","Advanced_Degree","Male",35
+"1974","Decreased","High_School","Male",50
+"1975","Decreased","College_Degree","Male",38
+"1976","Increased","Advanced_Degree","Male",50
+"1977","Stayed about the same","High_School","Male",8
+"1978","Decreased","High_School","Male",40
+"1979","Decreased","College_Degree","Male",20
+"1980","Decreased","College_Degree","Male",7
+"1981","Decreased","High_School","Male",10
+"1982","Stayed about the same","College_Degree","Male",60
+"1983","Stayed about the same","High_School","Male",7
+"1984","Stayed about the same","College_Degree","Male",3
+"1985","Stayed about the same","High_School","Male",3
+"1986","Increased","College_Degree","Male",12
+"1987","Decreased","High_School","Male",27
+"1988","Increased","College_Degree","Male",8
+"1989","Stayed about the same","College_Degree","Male",50
+"1990","Stayed about the same","College_Degree","Male",30
+"1991","Stayed about the same","High_School","Male",40
+"1992","Increased","Advanced_Degree","Male",5
+"1993","Increased","College_Degree","Male",3
+"1994","Stayed about the same","High_School","Male",25
+"1995","Stayed about the same","High_School","Male",10
+"1996","Stayed about the same","College_Degree","Male",2
+"1997","Stayed about the same","High_School","Male",20
+"1998","Increased","College_Degree","Male",30
+"1999","Stayed about the same","High_School","Male",29
+"2000","Decreased","High_School","Male",53
+"2001","Stayed about the same","College_Degree","Male",43
+"2002","Stayed about the same","High_School","Male",20
+"2003","Increased","High_School","Male",35
+"2004","Increased","Advanced_Degree","Male",20
+"2005","Decreased","College_Degree","Male",15
+"2006","Stayed about the same","High_School","Male",45
+"2007","Decreased","High_School","Female",5
+"2008","Decreased","College_Degree","Male",3
+"2009","Increased","College_Degree","Female",6
+"2010","Stayed about the same","College_Degree","Male",8
+"2011","Increased","High_School","Male",37
+"2012","Increased","High_School","Male",30
+"2013","Decreased","Advanced_Degree","Male",45
+"2014","Stayed about the same","High_School","Male",20
+"2015","Increased","College_Degree","Male",15
+"2016","Stayed about the same","High_School","Male",40
+"2017","Stayed about the same","High_School","Male",13
+"2018","Increased","College_Degree","Male",7
+"2019","Decreased","College_Degree","Male",40
+"2020","Decreased","College_Degree","Male",45
+"2021","Decreased","Advanced_Degree","Male",4
+"2022","Stayed about the same","High_School","Male",32
+"2023","Stayed about the same","High_School","Male",20
+"2024","Decreased","College_Degree","Male",40
+"2025","Stayed about the same","College_Degree","Male",38
+"2026","Stayed about the same","Advanced_Degree","Male",10
+"2027","Decreased",NA,"Male",30
+"2028","Increased","College_Degree","Male",3
+"2029","Decreased","High_School","Male",10
+"2030","Increased","High_School","Male",44
+"2031","Decreased","High_School","Male",23
+"2032","Increased","College_Degree","Male",10
+"2033","Stayed about the same","High_School","Male",25
+"2034","Decreased","College_Degree","Male",36
+"2035","Decreased","High_School","Male",45
+"2036","Stayed about the same","Advanced_Degree","Male",40
+"2037","Stayed about the same","High_School","Male",4
+"2038","Decreased","High_School","Male",24
+"2039","Stayed about the same","Advanced_Degree","Male",1
+"2040","Decreased","High_School","Male",9
+"2041","Stayed about the same","College_Degree","Male",50
+"2042","Decreased","High_School","Male",8
+"2043","Stayed about the same","High_School","Male",30
+"2044","Stayed about the same","College_Degree","Male",1
+"2045","Decreased","College_Degree","Male",10
+"2046","Stayed about the same","College_Degree","Male",22
+"2047","Increased","College_Degree","Male",10
+"2048","Stayed about the same","College_Degree","Male",25
+"2049","Stayed about the same","Advanced_Degree","Male",20
+"2050","Increased","High_School","Male",27
+"2051","Increased","High_School","Male",35
+"2052","Decreased","College_Degree","Male",4
+"2053","Stayed about the same","College_Degree","Male",48
+"2054","Increased","High_School","Female",4
+"2055","Stayed about the same","College_Degree","Male",12
+"2056","Decreased","High_School","Male",15
+"2057","Stayed about the same","High_School","Male",40
+"2058","Decreased","College_Degree","Female",5
+"2059","Stayed about the same","High_School","Male",50
+"2060","Increased","High_School","Male",27
+"2061","Increased","Advanced_Degree","Male",55
+"2062","Stayed about the same","College_Degree","Male",9
+"2063","Increased","College_Degree","Male",3
+"2064","Stayed about the same","College_Degree","Male",10
+"2065","Increased","Advanced_Degree","Male",1
+"2066","Decreased","High_School","Male",20
+"2067","Decreased","High_School","Male",57
+"2068","Stayed about the same","High_School","Male",40
+"2069","Stayed about the same","High_School","Male",15
+"2070","Decreased","College_Degree","Male",10
+"2071","Stayed about the same","High_School","Male",40
+"2072","Stayed about the same","High_School","Male",3
+"2073","Stayed about the same","High_School","Male",47
+"2074","Stayed about the same","High_School","Male",40
+"2075","Stayed about the same","High_School","Male",56
+"2076","Stayed about the same","High_School","Male",20
+"2077","Stayed about the same","College_Degree","Male",30
+"2078","Stayed about the same","Advanced_Degree","Male",4
+"2079","Increased","High_School","Male",15
+"2080","Stayed about the same","College_Degree","Male",20
+"2081","Increased","High_School","Male",30
+"2082","Decreased",NA,"Male",26
+"2083","Increased","High_School","Male",15
+"2084","Stayed about the same","High_School","Male",30
+"2085","Increased","Advanced_Degree","Male",20
+"2086","Stayed about the same","High_School","Male",18
+"2087","Stayed about the same","College_Degree","Male",5
+"2088","Stayed about the same","High_School","Male",20
+"2089","Stayed about the same","Advanced_Degree","Male",30
+"2090","Decreased","College_Degree","Male",26
+"2091","Increased","Advanced_Degree","Male",22
+"2092","Stayed about the same","High_School","Male",10
+"2093","Increased","High_School","Male",7
+"2094","Decreased","College_Degree","Male",25
+"2095","Stayed about the same","High_School","Male",30
+"2096","Decreased","High_School","Male",10
+"2097","Stayed about the same","Advanced_Degree","Male",8
+"2098","Stayed about the same","College_Degree","Male",25
+"2099","Stayed about the same","College_Degree","Male",35
+"2100","Decreased","College_Degree","Male",5
+"2101","Increased","Advanced_Degree","Male",22
+"2102","Stayed about the same","Advanced_Degree","Male",12
+"2103","Decreased","High_School","Male",50
+"2104","Stayed about the same","High_School","Male",20
+"2105","Increased","High_School","Male",40
+"2106","Stayed about the same","College_Degree","Male",10
+"2107","Stayed about the same","High_School","Male",20
+"2108","Stayed about the same","High_School","Male",27
+"2109","Decreased","College_Degree","Male",31
+"2110","Increased","College_Degree","Male",4
+"2111","Stayed about the same","Advanced_Degree","Male",38
+"2112","Decreased","High_School","Male",40
+"2113","Stayed about the same","High_School","Male",35
+"2114","Stayed about the same","High_School","Male",45
+"2115","Stayed about the same","College_Degree","Male",10
+"2116","Decreased","High_School","Male",11
+"2117","Decreased","College_Degree","Male",40
+"2118","Decreased","High_School","Male",43
+"2119","Decreased","High_School","Male",30
+"2120","Stayed about the same","Advanced_Degree","Male",45
+"2121","Increased","Advanced_Degree","Male",15
+"2122","Increased","High_School","Male",30
+"2123","Stayed about the same","College_Degree","Female",8
+"2124","Decreased","College_Degree","Male",10
+"2125","Increased","High_School","Male",12
+"2126","Decreased","College_Degree","Male",8
+"2127","Decreased","High_School","Male",39
+"2128","Decreased","College_Degree","Male",37
+"2129","Stayed about the same","High_School","Male",41
+"2130","Increased","College_Degree","Male",30
+"2131","Increased","High_School","Male",1
+"2132","Decreased","High_School","Male",11
+"2133","Decreased","College_Degree","Male",15
+"2134","Decreased","Advanced_Degree","Male",3
+"2135","Stayed about the same","High_School","Male",10
+"2136","Decreased","High_School","Male",10
+"2137","Decreased","High_School","Male",30
+"2138","Stayed about the same","High_School","Male",4
+"2139","Increased","High_School","Male",3
+"2140","Stayed about the same","High_School","Male",2
+"2141","Stayed about the same","Advanced_Degree","Male",17
+"2142","Decreased","High_School","Male",32
+"2143","Increased","College_Degree","Male",13
+"2144","Increased","High_School","Male",25
+"2145","Stayed about the same","Advanced_Degree","Male",25
+"2146","Increased","High_School","Male",54
+"2147","Stayed about the same","College_Degree","Male",10
+"2148","Stayed about the same",NA,"Male",6
+"2149","Increased","High_School","Male",7
+"2150","Stayed about the same","College_Degree","Male",12
+"2151","Increased","High_School","Male",30
+"2152","Increased","High_School","Male",5
+"2153","Increased","High_School","Male",25
+"2154","Increased","High_School","Male",5
+"2155","Decreased","High_School","Male",17
+"2156","Stayed about the same","High_School","Male",44
+"2157","Increased","College_Degree","Male",7
+"2158","Increased","High_School","Male",20
+"2159","Increased","High_School","Male",10
+"2160","Stayed about the same","College_Degree","Male",5
+"2161",NA,"High_School","Male",23
+"2162","Decreased","College_Degree","Male",20
+"2163","Stayed about the same","College_Degree","Male",6
+"2164","Increased","College_Degree","Male",3
+"2165","Stayed about the same","College_Degree","Male",40
+"2166","Increased","High_School","Male",11
+"2167","Decreased","College_Degree","Male",13
+"2168","Increased","Advanced_Degree","Male",4
+"2169","Stayed about the same","College_Degree","Male",2
+"2170","Stayed about the same","High_School","Male",3
+"2171","Stayed about the same","College_Degree","Male",3
+"2172","Stayed about the same","High_School","Male",1
+"2173","Stayed about the same","College_Degree","Male",12
+"2174","Stayed about the same","High_School","Male",1
+"2175","Stayed about the same","College_Degree","Male",16
+"2176","Stayed about the same","Advanced_Degree","Male",2
+"2177","Increased","Advanced_Degree","Male",55
+"2178","Increased","College_Degree","Male",4
+"2179","Increased","High_School","Male",3
+"2180","Increased","College_Degree","Male",1
+"2181","Stayed about the same","College_Degree","Male",1
+"2182",NA,"College_Degree","Male",2
+"2183",NA,"College_Degree","Male",1
+"2184","Stayed about the same","High_School","Male",4
+"2185","Decreased",NA,"Female",1
+"2186","Stayed about the same","College_Degree","Male",1
+"2187","Decreased","High_School","Male",1
+"2188","Stayed about the same","Advanced_Degree","Male",3
+"2189","Stayed about the same","College_Degree","Male",1
+"2190","Decreased","Advanced_Degree","Female",1
+"2191","Decreased","College_Degree","Male",1
+"2192","Stayed about the same","College_Degree","Male",1
+"2193",NA,"High_School","Male",1
+"2194","Increased","College_Degree","Male",1
+"2195","Stayed about the same","College_Degree","Male",8
+"2196","Decreased","High_School","Male",6
+"2197",NA,"Advanced_Degree","Male",1
+"2198","Stayed about the same","College_Degree","Male",2
+"2199","Increased","Advanced_Degree","Male",2
+"2200","Stayed about the same","High_School","Male",3
+"2201","Stayed about the same","High_School","Male",1
+"2202","Stayed about the same","College_Degree","Male",1
+"2203","Stayed about the same","Advanced_Degree","Male",6
+"2204","Decreased","College_Degree","Male",1
+"2205","Stayed about the same","Advanced_Degree","Male",40
+"2206","Stayed about the same","College_Degree","Male",1
+"2207","Stayed about the same","College_Degree","Male",5
+"2208","Increased","High_School","Male",1
+"2209","Stayed about the same","Advanced_Degree","Male",10
+"2210","Stayed about the same","College_Degree","Male",15
+"2211","Decreased","College_Degree","Male",10
+"2212","Increased","High_School","Male",1
+"2213","Stayed about the same","College_Degree","Male",32
+"2214","Increased","High_School","Male",99
+"2215","Stayed about the same","Advanced_Degree","Male",10
+"2216","Increased","Advanced_Degree","Male",10
+"2217","Stayed about the same","College_Degree","Male",8
+"2218","Decreased","College_Degree","Male",25
+"2219","Decreased","High_School","Female",3
+"2220","Stayed about the same","College_Degree","Male",4
+"2221","Stayed about the same","College_Degree","Male",9
+"2222","Stayed about the same","Advanced_Degree","Male",15
+"2223","Decreased","Advanced_Degree","Male",3
+"2224","Stayed about the same","College_Degree","Male",2
+"2225","Stayed about the same","High_School","Male",30
+"2226","Stayed about the same","High_School","Male",30
+"2227","Stayed about the same","College_Degree","Male",30
+"2228","Increased","High_School","Male",3
+"2229","Decreased","College_Degree","Male",2
+"2230","Stayed about the same","High_School","Male",1
+"2231","Increased","Advanced_Degree","Male",3
+"2232","Stayed about the same","High_School","Male",6
+"2233","Decreased","Advanced_Degree","Male",7
+"2234","Stayed about the same","High_School","Male",2
+"2235","Stayed about the same","College_Degree","Male",10
+"2236","Stayed about the same","Advanced_Degree","Male",10
+"2237","Decreased","College_Degree","Male",3
+"2238","Increased","College_Degree","Male",8
+"2239","Decreased","Advanced_Degree","Male",19
+"2240","Decreased","College_Degree","Male",20
+"2241","Stayed about the same","Advanced_Degree","Male",2
+"2242","Increased","Advanced_Degree","Male",3
+"2243","Increased","College_Degree","Male",1
+"2244","Decreased","High_School","Male",2
+"2245","Stayed about the same","College_Degree","Male",3
+"2246","Increased","College_Degree","Male",2
+"2247","Stayed about the same","College_Degree","Male",30
+"2248","Decreased","College_Degree","Male",10
+"2249","Decreased","Advanced_Degree","Male",25
+"2250","Decreased","College_Degree","Male",10
+"2251","Stayed about the same","High_School","Male",1
+"2252","Decreased",NA,"Male",2
+"2253","Increased","High_School","Male",17
+"2254","Increased","High_School","Male",8
+"2255","Decreased","High_School","Male",40
+"2256","Increased","High_School","Male",30
+"2257","Stayed about the same","High_School","Male",30
+"2258","Increased","College_Degree","Male",45
+"2259","Stayed about the same","Advanced_Degree","Male",25
+"2260","Increased","High_School","Male",20
+"2261","Stayed about the same","High_School","Male",40
+"2262","Decreased","College_Degree","Male",38
+"2263","Increased","High_School","Male",19
+"2264","Decreased","High_School","Male",38
+"2265","Stayed about the same","High_School","Male",14
+"2266","Stayed about the same","College_Degree","Male",37
+"2267","Decreased","High_School","Female",12
+"2268","Decreased","High_School","Male",47
+"2269","Stayed about the same","High_School","Male",52
+"2270","Increased","High_School","Male",6
+"2271","Stayed about the same","College_Degree","Male",10
+"2272","Increased","High_School","Male",1
+"2273","Stayed about the same","High_School","Male",6
+"2274","Decreased","High_School","Male",31
+"2275","Stayed about the same","High_School","Male",35
+"2276","Increased","High_School","Male",99
+"2277","Increased","High_School","Male",10
+"2278","Decreased","High_School","Male",20
+"2279","Stayed about the same","High_School","Male",2
+"2280","Decreased","High_School","Male",5
+"2281","Stayed about the same","College_Degree","Male",6
+"2282","Stayed about the same","High_School","Male",2
+"2283","Decreased","High_School","Male",39
+"2284","Decreased","High_School","Male",6
+"2285","Stayed about the same","College_Degree","Male",20
+"2286","Decreased","Advanced_Degree","Male",30
+"2287","Increased","High_School","Male",38
+"2288","Stayed about the same","College_Degree","Male",4
+"2289","Decreased","High_School","Male",39
+"2290","Decreased","College_Degree","Male",23
+"2291","Stayed about the same","High_School","Male",10
+"2292","Stayed about the same","High_School","Male",3
+"2293","Stayed about the same","High_School","Male",7
+"2294","Increased","High_School","Male",20
+"2295","Stayed about the same","High_School","Male",1
+"2296","Stayed about the same","College_Degree","Male",2
+"2297","Decreased","High_School","Male",50
+"2298","Decreased","College_Degree","Male",99
+"2299","Increased","High_School","Male",60
+"2300","Decreased","College_Degree","Male",50
+"2301","Stayed about the same","High_School","Male",5
+"2302","Increased","High_School","Male",25
+"2303","Increased","College_Degree","Male",4
+"2304","Stayed about the same","High_School","Male",20
+"2305","Decreased","High_School","Male",48
+"2306","Decreased","College_Degree","Male",14
+"2307","Stayed about the same","High_School","Male",15
+"2308","Decreased","High_School","Male",25
+"2309","Decreased","High_School","Male",25
+"2310","Stayed about the same","High_School","Male",50
+"2311","Decreased",NA,"Male",50
+"2312","Stayed about the same","College_Degree","Male",35
+"2313","Stayed about the same",NA,"Male",4
+"2314","Decreased","High_School","Male",62
+"2315","Stayed about the same","High_School","Male",10
+"2316","Decreased","Advanced_Degree","Male",53
+"2317","Increased","High_School","Male",99
+"2318","Stayed about the same","High_School","Male",22
+"2319",NA,"High_School","Male",20
+"2320","Decreased","College_Degree","Male",15
+"2321","Decreased","High_School","Male",45
+"2322","Decreased","College_Degree","Female",10
+"2323","Increased","High_School","Male",25
+"2324","Decreased",NA,"Male",7
+"2325","Stayed about the same","High_School","Male",38
+"2326","Increased","High_School","Male",99
+"2327","Increased","High_School","Male",33
+"2328","Stayed about the same","High_School","Male",4
+"2329","Stayed about the same","High_School","Male",12
+"2330","Decreased","High_School","Male",32
+"2331","Stayed about the same","Advanced_Degree","Male",20
+"2332","Decreased","High_School","Male",20
+"2333","Increased","High_School","Male",10
+"2334","Stayed about the same","High_School","Male",35
+"2335","Stayed about the same","High_School","Male",5
+"2336","Stayed about the same","High_School","Male",18
+"2337","Stayed about the same","High_School","Male",60
+"2338","Decreased","High_School","Male",5
+"2339","Stayed about the same","High_School","Male",20
+"2340","Stayed about the same","Advanced_Degree","Male",10
+"2341","Stayed about the same","High_School","Male",30
+"2342","Decreased","High_School","Male",42
+"2343","Stayed about the same","High_School","Male",4
+"2344","Decreased","College_Degree","Male",7
+"2345","Decreased","High_School","Male",35
+"2346","Decreased","College_Degree","Male",50
+"2347","Increased","High_School","Male",50
+"2348","Decreased","High_School","Male",21
+"2349","Decreased","High_School","Male",30
+"2350","Stayed about the same","College_Degree","Male",32
+"2351","Decreased","High_School","Male",65
+"2352","Decreased","High_School","Male",10
+"2353","Stayed about the same","College_Degree","Male",20
+"2354","Decreased","High_School","Male",53
+"2355","Stayed about the same","Advanced_Degree","Male",30
+"2356","Decreased","High_School","Male",3
+"2357","Increased","High_School","Male",5
+"2358","Increased","College_Degree","Male",56
+"2359","Decreased","High_School","Female",4
+"2360","Decreased","High_School","Male",20
+"2361","Decreased","High_School","Male",50
+"2362","Increased","High_School","Male",40
+"2363","Increased","Advanced_Degree","Male",45
+"2364","Increased","High_School","Male",29
+"2365","Stayed about the same","High_School","Male",20
+"2366","Increased","College_Degree","Male",8
+"2367","Decreased","High_School","Male",32
+"2368","Stayed about the same","High_School","Male",40
+"2369","Decreased","High_School","Male",19
+"2370","Decreased",NA,"Male",4
+"2371","Increased","Advanced_Degree","Male",40
+"2372","Increased","Advanced_Degree","Male",2
+"2373","Stayed about the same","High_School","Male",12
+"2374","Decreased","High_School","Male",40
+"2375","Stayed about the same","High_School","Male",1
+"2376","Increased","High_School","Male",1
+"2377","Decreased","Advanced_Degree","Male",25
