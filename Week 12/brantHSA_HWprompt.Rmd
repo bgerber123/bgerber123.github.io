@@ -1,0 +1,23 @@
+---
+title: "HSA Homework"
+output: html_document
+date: '2022-12-12'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## In class we conducted a HSA assuming uniform availability. During class we also talked about how selection is dependent upon availability (and the ratio of available:used points). The purpose of this homework is for you to manipulate the available:used ratio and explore if/how selection coefficient estimates vary.
+
+### Step 1: Rerun the model we fit in class (10:1 ratio available:used points and available points weighted by 1000).
+
+### Step 2: Repeat the analysis we conducted in class (i.e., refit the model) using the same available:used ratio (10:1) but WITHOUT weighting the available points.
+
+### Step 3: Repeat the analysis we conducted in class (i.e., refit the model) using an available:used ratio of 5:1 and no weighting (i.e., take a random sample of half of the available points).
+
+### Step 4: Repeat the analysis we conducted in class (i.e., refit the model) using an available:used ratio of 2:1 and no weighting (i.e., take a random sample of 1/5th of the available points).
+
+### Step 5: Compare estimated selection coefficients from each model to see if/how reducing the ratio changes output (plot estimates and 95% CIs at each sample size together and say some words about them).
+
+

@@ -284,9 +284,12 @@ install.packages("dplyr", "ggplot2", "lme4")
 
 -   Lecture: <a href="https://docs.google.com/presentation/d/15Vlhzm9Md2JIdFqOdriPiTLUy3RBqQ72yz0lLISt8PI/edit?usp=sharing">Slides</a>
 
--   Data Download: <a href="/Week 12/brantHSA.zip">Data Download</a>
+-   Data Download: <a href="/Week 12/brant.csv">Data Download</a>
 
--   Assignment: 
+-   Code Download: <a href="/Week 12/brantHSA.R">Code Download</a>
 
+-   Assignment: <a href="/Week 12/brantHSA_HWprompt.Rmd"> Markdown</a> and <a href="/Week 12/brantHSA_HWprompt.html">HTML</a>
+
+-   Appendix A: <a href="/Week 12/jane13441-sup-0001-AppendixA.html">AppendixA.html</a>
 
 :::
