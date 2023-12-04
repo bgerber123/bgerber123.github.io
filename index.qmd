@@ -1,0 +1,57 @@
+---
+about:
+  template: jolla
+  id: about-block
+  image: "img/leaf2.png"
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/science_action
+    - icon: github
+      text: Github
+      href: https://github.com/bgerber123
+    - icon: envelope
+      text: Email
+      href: "mailto:brian.gerber@colostate.edu"  
+---
+
+::: {#about-block}
+:::
+
+# Who and What
+
+I am a research scientist with the United State Geological Survey (USGS) at the [Colorado Cooperative Fish and Wildlife Research Unit](https://www1.usgs.gov/coopunits/unit/Colorado) and a professor at Colorado State University in the [Department of Fish, Wildlife, and Conservation Biology](https://warnercnr.colostate.edu/fwcb/).
+
+
+The focus of our work is *collaborative science*:
+
+We work with people to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity. 
+
+#### *Our research focus includes*
+
+- Wildlife Population Demography and Distribution
+- Conservation Decision Making
+- Animal Behavior (especially on the diel niche)
+- Hierarchical Bayesian Modeling
+- Animal Movement and Habitat Selection
+- Optimal Prediction via Statistical Regularization
+
+
+
+# News
+
+#### November, 2023 
+
+- Brian heads to the annual Wildlife Society conference to talk about a recent paper in [Animal Conservation](https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1111/acv.12877) about the robustness of optimal decision making in the context of known-unknown meta-population dynamics. 
+
+- <span style="color:red;">New Publication:</span> [Diel activity structures the occurrence of a mammal community in a human-dominated landscape](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.10684) led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on [Zenodo](https://zenodo.org/records/8240192). The methods used to implement this modeling framework are outlined by [Rivera et al. 2022](https://doi.org/10.1086/720714) with code on  [Github](https://github.com/bgerber123/multi.state.diel.occupancy.model).
+
+#### September, 2023 
+
+- <span style="color:red;">New Publication:</span> [Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains](https://www.sciencedirect.com/science/article/pii/S037811272300381X) led by Jake Ivan from the Colorado Parks and Willdife. 
+
+#### August, 2023 
+- I started with the Colorado Cooperative Fish and Wildlife Research Unit with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science.
+
+
+
