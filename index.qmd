@@ -1,4 +1,5 @@
 ---
+format: html
 about:
   template: jolla
   id: about-block
