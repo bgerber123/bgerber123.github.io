@@ -1,5 +1,4 @@
 ---
-format: html
 about:
   template: jolla
   id: about-block
@@ -14,6 +13,7 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:brian.gerber@colostate.edu"  
+
 ---
 
 ::: {#about-block}

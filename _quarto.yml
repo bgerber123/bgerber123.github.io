@@ -2,8 +2,8 @@
 
 # website settings
 website:
-  title: "Brian D. Gerber"                                # Your name
-  description: "Animal Ecology and Conservation Research"   # A brief slogan (optional)
+  title: "Brian D. Gerber"                                
+  description: "Animal Ecology and Conservation Research" 
   image: img/leaf2.png
   
   favicon: img/favicon.png
@@ -32,8 +32,6 @@ website:
         href: "mailto:brian.gerber@colostate.edu"  
   
   
-
-# Don't touch unless you know what you are doing :) ------------
   search: 
     location: navbar
     type: textbox
