@@ -18,19 +18,25 @@ website:
         href: projects/index.qmd
       - text: "Lab"
         href: lab/index.qmd
+      - text: "Publications"
+        href: publications/publications.qmd
       - text: "CV"
         href: cv/index.qmd
 
     # your social media handles
     right:
-      - icon: folder-symlink
-        href: https://www.marvinschmitt.com/blog/website-tutorial-quarto/
-      - icon: twitter
-        href: https://twitter.com/science_action
+      - icon: google
+        text: Scholar
+        href: https://scholar.google.com/citations?user=ep25z9AAAAAJ&hl=en
+      - icon: r-square-fill
+        text: RG
+        href: https://www.researchgate.net/profile/Brian-Gerber-4
+      - icon: github
+        text: Github
+        href: https://github.com/bgerber123
       - icon: envelope
-        aria-label: email
+        text: Email
         href: "mailto:brian.gerber@colostate.edu"  
-  
   
   search: 
     location: navbar

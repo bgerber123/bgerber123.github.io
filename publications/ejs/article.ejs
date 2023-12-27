@@ -1,0 +1,37 @@
+
+```{=html}
+<ul class="pub-list list">
+<% for (const item of items) { %>
+  <li <%= metadataAttrs(item) %>>
+    <span class="listing-title lead" style="font-weight: bold;"><%= item.title %></span><br />
+    <span class="listing-author"><%= item.author %></span><br />
+    <span class="listing-publication fst-italic "><%= item.publication %></span>
+    <span class="listing-year">(<%= item.year %>)</span><br />
+    <a href="<%- item.path %>" style="padding: 2px" class="btn btn-primary mb1 bg-blue">
+      Details
+    </a>
+    <% if (item.doi) { %>
+    <a href="<%- item.doi %>" style="padding: 2px" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+      DOI
+    </a>
+    <% } %>
+    <% if (item.preprint) { %>
+    <a href="<%- item.preprint %>" style="padding: 2px" class="btn btn-light" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-file-earmark-text"></i> Preprint
+    </a>
+    <% } %>
+    <% if (item.materials) { %>
+    <a href="<%- item.materials %>" style="padding: 2px" class="btn btn-light" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-file-earmark-zip"></i> Materials
+    </a>
+    <% } %>
+     <% if (item.download) { %>
+    <a href="<%- item.download %>" style="padding: 2px" class="btn btn-light" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-file-earmark-text"></i> Download
+    </a>
+    <% } %>
+  </li>
+<% } %>
+</ul>
+
+```

@@ -1,0 +1,24 @@
+---
+title: "Estimating arboreality and the effects of forest structure on tropical tree‐dwelling mesomammals using arboreal camera traps"
+type: "article"
+author: "Juliana Masseloux, Que Tan Le, Jessica Burr, Brian D Gerber"
+year: "2023"
+publication: "Animal Conservation"
+doi: "https://doi.org/10.1111/acv.12822"
+materials: "https://github.com/jmasseloux/AnimalCon2021"
+download: "../publications/Masseloux et al. 2023.pdf"
+toc: false
+categories:
+  - camera trapping
+  - mammal
+  - occupancy
+  - journal article
+---
+
+## Citation 
+
+> Masseloux, J., Le, Q.T., Burr, J. and Gerber, B.D. (2023), Estimating arboreality and the effects of forest structure on tropical tree-dwelling mesomammals using arboreal camera traps. *Anim Conserv*, 26: 140-153. https://doi.org/10.1111/acv.12822
+
+## Abstract
+
+Tropical forests are the most species-rich biomes in the world but suffer high rates of logging and conversion. Tropical tree-dwelling (arboreal and semi-arboreal) mesomammals reliant on old-growth forest structures are especially vulnerable. The degree of behavioral arboreality of semi-arboreal mammals can be related to forest structure and perceived terrestrial threats. Paired arboreal and terrestrial camera traps are a promising new method for estimating the arboreality of cryptic and nocturnal species. Our study aimed to (1) model the effects of forest structure and anthropogenic disturbance on the detection and occurrence of arboreal and semi-arboreal mesomammals and (2) evaluate differences in occurrence and detection between paired arboreal and terrestrial camera trap sites for semi-arboreal mammals while estimating the degree of arboreality. We set 20 terrestrial and arboreal camera trap pairs in eastern Cat Tien National Park (Nam Cat Tien), Vietnam, from June 2019 to September 2020. We evaluated the effects of forest structure and proximity to roads on nine arboreal mesomammal species using single-season occupancy models. We used multi-scale occupancy modeling to estimate the degree of arboreality for four semi-arboreal mammals. All models were fit using hierarchical Bayesian modeling and compared using WAIC. We detected most arboreal and terrestrial mesomammal species currently known to inhabit Nam Cat Tien, including rare and cryptic species. Canopy connectivity and other mature forest characteristics were important for explaining the detection and occurrence of highly arboreal species, while the effect of a tree and focal limb characteristics on detection was species-specific. All semi-arboreal species had a greater probability of terrestrial station use than arboreal, suggesting a greater vulnerability to terrestrial threats, though the degree of arboreality varied by species. Using one sampling method underestimated occupancy for most semi-arboreal species. Multi-method sampling designs with multi-scale occupancy modeling can improve estimates of species distribution and habitat use for guiding management and conservation decisions.

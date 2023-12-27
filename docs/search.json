@@ -39,7 +39,7 @@
     "href": "index.html",
     "title": "Who and What",
     "section": "",
-    "text": "Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n\n\n\n\nWho and What\nI am a research scientist with the United State Geological Survey (USGS) at the Colorado Cooperative Fish and Wildlife Research Unit and a professor at Colorado State University in the Department of Fish, Wildlife, and Conservation Biology.\nMy focus is on collaborative science:\nWith my lab and colleagues - we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity.\n\nOur research focus includes\n\nWildlife Population Demography and Distribution\nConservation Decision Making\nAnimal Behavior (especially on the diel niche)\nHierarchical Bayesian Modeling\nAnimal Movement and Habitat Selection\nOptimal Prediction via Statistical Regularization\n\n\n\n\nNews\n\nDecember, 2023\n\nNew Publication: Forest carnivores living on the edge with invasive predators led by the ever persistent Erin Wampole. Download. We found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) to shape native carnivore species response differently than within interior forest.\n\n\n\nNovember, 2023\n\nBrian heads to the annual Wildlife Society conference to talk about a recent paper in Animal Conservation about the robustness of optimal decision making in the context of known-unknown meta-population dynamics.\nNew Publication: Diel activity structures the occurrence of a mammal community in a human-dominated landscape led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on Zenodo. The methods used to implement this modeling framework are outlined by Rivera et al. 2022 with code on Github.\n\n\n\nSeptember, 2023\n\nNew Publication: Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains led by Jake Ivan from the Colorado Parks and Wilddife. Download.\n\n\n\nAugust, 2023\n\nI started with the Colorado Cooperative Fish and Wildlife Research Unit with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science."
+    "text": "Scholar\n  \n  \n    \n     RG\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n\n\n\n\nWho and What\nI am a research scientist with the United State Geological Survey (USGS) at the Colorado Cooperative Fish and Wildlife Research Unit and a professor at Colorado State University in the Department of Fish, Wildlife, and Conservation Biology.\nMy focus is on collaborative science:\nWith my lab and colleagues - we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity.\n\nOur research focus includes\n\nWildlife Population Demography and Distribution\nConservation Decision Making\nAnimal Behavior (especially on the diel niche)\nHierarchical Bayesian Modeling\nAnimal Movement and Habitat Selection\nOptimal Prediction via Statistical Regularization\n\n\n\n\nNews\n\nDecember, 2023\n\nNew Publication: Forest carnivores living on the edge with invasive predators led by the ever persistent Erin Wampole. Download. We found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) to shape native carnivore species response differently than within interior forest.\n\n\n\nNovember, 2023\n\nBrian heads to the annual Wildlife Society conference to talk about a recent paper in Animal Conservation about the robustness of optimal decision making in the context of known-unknown meta-population dynamics.\nNew Publication: Diel activity structures the occurrence of a mammal community in a human-dominated landscape led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on Zenodo. The methods used to implement this modeling framework are outlined by Rivera et al. 2022 with code on Github.\n\n\n\nSeptember, 2023\n\nNew Publication: Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains led by Jake Ivan from the Colorado Parks and Wilddife. Download.\n\n\n\nAugust, 2023\n\nI started with the Colorado Cooperative Fish and Wildlife Research Unit with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science."
   },
   {
     "objectID": "index.html#november-2023",
@@ -117,5 +117,579 @@
     "title": "Publications",
     "section": "",
     "text": "Estimating White-tailed Deer Abundance\nObjectives 1) To develop a stochastic population reconstruction model to estimate deer abundance using harvest data, and 2) consider design implications of a forward-looking infraed aerial survey of deer.\nTeam: Edwige Bellier (Postdoctoral Researcher), Amy Mayer (Research Associate), Brian Gerber (PI), David Kalb, and Dylan Ferreira and the RI Department of Environmental Management, Fish and Wildlife Division.\n\n\n\nFisher Spatial and Population Ecology in Rhode Island\n\nObjective: To understand the factors that limit fishers population and movement in a highly developed and highly forested area.\nTeam: Laken Ganoe (PhD student), Amy Mayer (Research Associate), Brian Gerber (PI), and Charlie Brown and the RI Department of Environmental Management, Fish and Wildlife Division.\n\n\n\nSemi-Aquatic Mammal Distribution in Rhode Island\n\nObjective: To understand the limiting factors associated with the distribution of muskrats, beavers, and river otters in Rhode Island.\nTeam: John Crockett (PhD student), Amy Mayer (Research Associate), Brian Gerber (PI), and Charlie Brown and the RI Department of Environmental Management, Fish and Wildlife Division.\n\n\n\nAnimal Diel Ecology\n\nObjective: 1) To understand how wild animal’s change their activity and behavior across the 24-hour light-dark cycle to carryout their life history strategy and 2) to develop flexible and conceptually-based modeling approaches to make inference and predictions on animals diel activity use and selection."
+  },
+  {
+    "objectID": "publications/publications.html",
+    "href": "publications/publications.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Publications\n  \n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n         \n          Publication\n        \n         \n          Year\n        \n     \n  \n    \n      \n      \n    \n\n\n  \n    Diel activity structures the occurrence of a mammal community in a human‐dominated landscape\n    Amy E Mayer, Laken S Ganoe, Charles Brown, Brian D Gerber\n    Ecology and Evolution\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Materials\n    \n    \n       Download\n    \n  \n  \n    Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains\n    Jacob S Ivan, Eric S Newkirk, Brian D Gerber\n    Forest Ecology and Management\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Estimating arboreality and the effects of forest structure on tropical tree‐dwelling mesomammals using arboreal camera traps\n    Juliana Masseloux, Que Tan Le, Jessica Burr, Brian D Gerber\n    Animal Conservation\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Materials\n    \n    \n       Download\n    \n  \n  \n    High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail\n    Wales A Carter, Thomas J McGreevy Jr, Brian D Gerber, Amy E Mayer, Mary E Sullivan, Brian C Tefft, Thomas P Husband\n    Journal of Fish and Wildlife Management\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease\n    Brian D Gerber, Brittany A Mosher, Larissa L Bailey, Erin Muths, Harry J Crockett, Sarah J Converse\n    Animal Conservation\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Materials\n    \n    \n       Download\n    \n  \n  \n    Conceptual and methodological advances in habitat‐selection modeling: guidelines for ecology and evolution\n    Joseph M Northrup, Eric Vander Wal, Maegwin Bonar, John Fieberg, Michel P Laforge, Martin Leclerc, Christina M Prokopenko, Brian D Gerber\n    Ecological Applications\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Estimating road mortality hotspots while accounting for imperfect detection: A case study with amphibians and reptiles\n    Noah Hallisey, Scott W Buchanan, Brian D Gerber, Liam S Corcoran, Nancy E Karraker\n    Land\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Forest degradation drives widespread avian habitat and population declines\n    Matthew G Betts, Zhiqiang Yang, Adam S Hadley, Adam C Smith, Josée S Rousseau, Joseph M Northrup, Joseph J Nocera, Noel Gorelick, Brian D Gerber\n    Nature Ecology & Evolution\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Forest structure and seasonally inundated grassland shape tropical mammal communities under moderate disturbance\n    Juliana Masseloux, Quy Tan Le, Jessica Burr, Brian D Gerber\n    Ecosphere\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Madagascar Terrestrial Camera Survey Database 2021: A collation of protected forest camera surveys from 2007–2021\n    Erin M Wampole, Brian D Gerber, Zach J Farris et al.\n    Ecology\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Mammals adjust diel activity across gradients of urbanization\n    Travis Gallo, Mason Fidino, Brian Gerber, et al.\n    Elife\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Rapidly declining body size in an insectivorous bat is associated with increased precipitation and decreased survival\n    Christina M Davy, Valerie von Zuben, Piia M Kukka, Brian D Gerber, Brian G Slough, Thomas S Jung\n    Ecological Applications\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Rethinking habitat occupancy modeling and the role of diel activity in an anthropogenic world\n    Kimberly Rivera, Mason Fidino, Zach J Farris, Seth B Magle, Asia Murphy, Brian D Gerber\n    The American Naturalist\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic\n    Roland Kays et al.\n    Ecology\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Spatio‐temporal overlap between a native and an exotic carnivore in Madagascar: evidence of spatial exclusion\n    Zach J Farris, Brian D Gerber, Sarah Karpanty, Felix Ratelolahy, Vonjy Andrianjakarivelo, Marcella J Kelly\n    Small Carnivores: Evolution, Ecology, Behaviour, and Conservation\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Transient persistence of bobcat (Lynx rufus) occurrence throughout a human‐dominated landscape\n    Amy E Mayer, Thomas J McGreevy Jr, Charles Brown, Laken S Ganoe, Brian D Gerber\n    Population Ecology\n    (2022)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    A synthesis of life‐history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae\n    Erin M Wampole, Zach J Farris, Brian D Gerber\n    Mammal Review\n    (2021)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Behavioral and demographic responses of mule deer to energy development on winter range\n    Joseph M Northrup, Charles R Anderson Jr, Brian D Gerber, George Wittemyer\n    Wildlife Monographs\n    (2021)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England\n    Amy E Mayer, Thomas J McGreevy Jr, Mary E Sullivan, Charles Brown, Thomas P Husband, Brian D Gerber\n    Northeastern Naturalist\n    (2021)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States\n    Michael V Cove, Roland Kays, et al.\n    Ecology\n    (2021)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar\n    Patrick H Ross, Erik Patel, Barry Ferguson, Rojo Nandrianina Ravelijaona, Guy Irenel Raoloniana, Erin Wampole, Brian D Gerber, Zach J Farris\n    Endangered Species Research\n    (2020)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n  \n    The Mysterious case of the disappering Javan Rhino: Uing clues from Rhinos everyday habits and hobbies to figure out how to help them recover\n    Erin Rose Harrington, Brian Daniel Gerber\n    Frontier for Young Minds\n    (2020)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Download\n    \n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/articles/test.html",
+    "href": "publications/articles/test.html",
+    "title": "Reconsidering the Duchenne smile: Formalizing and testing hypotheses about eye constriction and positive emotion",
+    "section": "",
+    "text": "Girard, J. M., Cohn, J. F., Yin, L., & Morency, L.-P. (2021). Reconsidering the Duchenne smile: Formalizing and testing hypotheses about eye constriction and positive emotion. Affective Science, 2(1), 32–47."
+  },
+  {
+    "objectID": "publications/articles/test.html#citation-apa-7",
+    "href": "publications/articles/test.html#citation-apa-7",
+    "title": "Reconsidering the Duchenne smile: Formalizing and testing hypotheses about eye constriction and positive emotion",
+    "section": "",
+    "text": "Girard, J. M., Cohn, J. F., Yin, L., & Morency, L.-P. (2021). Reconsidering the Duchenne smile: Formalizing and testing hypotheses about eye constriction and positive emotion. Affective Science, 2(1), 32–47."
+  },
+  {
+    "objectID": "publications/articles/test.html#abstract",
+    "href": "publications/articles/test.html#abstract",
+    "title": "Reconsidering the Duchenne smile: Formalizing and testing hypotheses about eye constriction and positive emotion",
+    "section": "Abstract",
+    "text": "Abstract\nThe common view of emotional expressions is that certain configurations of facial-muscle movements reliably reveal certain categories of emotion. The principal exemplar of this view is the Duchenne smile, a configuration of facial-muscle movements (i.e., smiling with eye constriction) that has been argued to reliably reveal genuine positive emotion. In this paper, we formalized a list of hypotheses that have been proposed regarding the Duchenne smile, briefly reviewed the literature weighing on these hypotheses, identified limitations and unanswered questions, and conducted two empirical studies to begin addressing these limitations and answering these questions. Both studies analyzed a database of 751 smiles observed while 136 participants completed experimental tasks designed to elicit amusement, embarrassment, fear, and physical pain. Study 1 focused on participants’ self-reported positive emotion and Study 2 focused on how third-party observers would perceive videos of these smiles. Most of the hypotheses that have been proposed about the Duchenne smile were either contradicted by or only weakly supported by our data. Eye constriction did provide some information about experienced positive emotion, but this information was lacking in specificity, already provided by other smile characteristics, and highly dependent on context. Eye constriction provided more information about perceived positive emotion, including some unique information over other smile characteristics, but context was also important here as well. Overall, our results suggest that accurately inferring positive emotion from a smile requires more sophisticated methods than simply looking for the presence/absence (or even the intensity) of eye constriction."
+  },
+  {
+    "objectID": "publications/articles/bowdring2021.html",
+    "href": "publications/articles/bowdring2021.html",
+    "title": "In the eye of the beholder: A comprehensive analysis of stimulus type, perceiver, and target in physical attractiveness perceptions",
+    "section": "",
+    "text": "Bowdring, M. A., Sayette, M. A., Girard, J. M., & Woods, W. C. (2021). In the eye of the beholder: A comprehensive analysis of stimulus type, perceiver, and target in physical attractiveness perceptions. Journal of Nonverbal Behavior, 45(2), 241–259."
+  },
+  {
+    "objectID": "publications/articles/bowdring2021.html#citation-apa-7",
+    "href": "publications/articles/bowdring2021.html#citation-apa-7",
+    "title": "In the eye of the beholder: A comprehensive analysis of stimulus type, perceiver, and target in physical attractiveness perceptions",
+    "section": "",
+    "text": "Bowdring, M. A., Sayette, M. A., Girard, J. M., & Woods, W. C. (2021). In the eye of the beholder: A comprehensive analysis of stimulus type, perceiver, and target in physical attractiveness perceptions. Journal of Nonverbal Behavior, 45(2), 241–259."
+  },
+  {
+    "objectID": "publications/articles/bowdring2021.html#abstract",
+    "href": "publications/articles/bowdring2021.html#abstract",
+    "title": "In the eye of the beholder: A comprehensive analysis of stimulus type, perceiver, and target in physical attractiveness perceptions",
+    "section": "Abstract",
+    "text": "Abstract\nPhysical attractiveness plays a central role in psychosocial experiences. One of the top research priorities has been to identify factors affecting perceptions of physical attractiveness (PPA). Recent work suggests PPA derives from different sources (e.g., target, perceiver, stimulus type). Although smiles in particular are believed to enhance PPA, support has been surprisingly limited. This study comprehensively examines the effect of smiles on PPA and, more broadly, evaluates the roles of target, perceiver, and stimulus type in PPA variation. Perceivers (n=181) rated both static images and 5-s videos of targets displaying smiling and neutral-expressions. Smiling images were rated as more attractive than neutral-expression images (regardless of stimulus motion format). Interestingly, perceptions of physical attractiveness were based more on the perceiver than on either the target or format in which the target was presented. Results clarify the effect of smiles, and highlight the significant role of the perceiver, in PPA."
+  },
+  {
+    "objectID": "publications/articles/gerber2019.html",
+    "href": "publications/articles/gerber2019.html",
+    "title": "1Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., Ganoe, L. S., Brown, C., & Gerber, B. D. (2023). Diel activity structures the occurrence of a mammal community in a human-dominated landscape. Ecology and Evolution, 13, e10684. https://doi.org/10.1002/ece3.10684"
+  },
+  {
+    "objectID": "publications/articles/gerber2019.html#citation-apa-7",
+    "href": "publications/articles/gerber2019.html#citation-apa-7",
+    "title": "Alexithymia – not autism – is associated with frequency of social interactions in adults",
+    "section": "",
+    "text": "Gerber, A. H., Girard, J. M., Scott, S. B., & Lerner, M. D. (2019). Alexithymia – Not autism – is associated with frequency of social interactions in adults. Behaviour Research and Therapy, 123, 103477."
+  },
+  {
+    "objectID": "publications/articles/gerber2019.html#abstract",
+    "href": "publications/articles/gerber2019.html#abstract",
+    "title": "1Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "Abstract",
+    "text": "Abstract\nAnthropogenic developments alter the environment and resources available to wildlife communities. In response to these real or perceived threats from this development, species may adjust their spatial occurrence. Additionally, wildlife species may adjust when in diel time (24-h light–dark cycle) they occupy sites on the landscape to adapt to changing conditions. However, many wildlife studies only focus on where a species does and does not occur, ignoring how species may shift their diel activity at sites to mitigate threats. We used a multi-state diel occupancy modeling framework to investigate how a community of mammals (mesocarnivores, urban-adapted omnivores, and herbivore/small mammals) respond to differing levels of anthropogenic development and forest cover across two climatic seasons. We collected camera trap data at 240 survey locations across the summer and winter of 2021–2022. We modeled multi-state diel occupancy for 14 mammal species with extent of development/forest and season hypothesized to influence diel occupancy and season hypothesized to influence the probability of detection. We found that all species displayed heterogeneity in both diel occupancy and detection either by extent of development/forest and or season. Within the mesocarnivore species group, coyote and red fox were less sensitive to development and had higher occupancy probability at these sites in general but used them more during the night, while more sensitive mesocarnivores including fisher and bobcat occupied the day state only when there was increasing forest cover. Our results highlight the importance of incorporating diel activity in habitat modeling to better understand the relationship between a species and its landscape, particularly in a region that is vulnerable to increased anthropogenic pressure."
+  },
+  {
+    "objectID": "publications/articles/mayer2023.html",
+    "href": "publications/articles/mayer2023.html",
+    "title": "Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., Ganoe, L. S., Brown, C., & Gerber, B. D. (2023). Diel activity structures the occurrence of a mammal community in a human-dominated landscape. Ecology and Evolution, 13, e10684. https://doi.org/10.1002/ece3.10684"
+  },
+  {
+    "objectID": "publications/articles/mayer2023.html#citation",
+    "href": "publications/articles/mayer2023.html#citation",
+    "title": "Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., Ganoe, L. S., Brown, C., & Gerber, B. D. (2023). Diel activity structures the occurrence of a mammal community in a human-dominated landscape. Ecology and Evolution, 13, e10684. https://doi.org/10.1002/ece3.10684"
+  },
+  {
+    "objectID": "publications/articles/mayer2023.html#abstract",
+    "href": "publications/articles/mayer2023.html#abstract",
+    "title": "Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "Abstract",
+    "text": "Abstract\nAnthropogenic developments alter the environment and resources available to wildlife communities. In response to these real or perceived threats from this development, species may adjust their spatial occurrence. Additionally, wildlife species may adjust when in diel time (24-h light–dark cycle) they occupy sites on the landscape to adapt to changing conditions. However, many wildlife studies only focus on where a species does and does not occur, ignoring how species may shift their diel activity at sites to mitigate threats. We used a multi-state diel occupancy modeling framework to investigate how a community of mammals (mesocarnivores, urban-adapted omnivores, and herbivore/small mammals) respond to differing levels of anthropogenic development and forest cover across two climatic seasons. We collected camera trap data at 240 survey locations across the summer and winter of 2021–2022. We modeled multi-state diel occupancy for 14 mammal species with extent of development/forest and season hypothesized to influence diel occupancy and season hypothesized to influence the probability of detection. We found that all species displayed heterogeneity in both diel occupancy and detection either by extent of development/forest and or season. Within the mesocarnivore species group, coyote and red fox were less sensitive to development and had higher occupancy probability at these sites in general but used them more during the night, while more sensitive mesocarnivores including fisher and bobcat occupied the day state only when there was increasing forest cover. Our results highlight the importance of incorporating diel activity in habitat modeling to better understand the relationship between a species and its landscape, particularly in a region that is vulnerable to increased anthropogenic pressure."
+  },
+  {
+    "objectID": "publications/articles/gerber2019.html#citation",
+    "href": "publications/articles/gerber2019.html#citation",
+    "title": "1Diel activity structures the occurrence of a mammal community in a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., Ganoe, L. S., Brown, C., & Gerber, B. D. (2023). Diel activity structures the occurrence of a mammal community in a human-dominated landscape. Ecology and Evolution, 13, e10684. https://doi.org/10.1002/ece3.10684"
+  },
+  {
+    "objectID": "publications/articles/swartz2023.html",
+    "href": "publications/articles/swartz2023.html",
+    "title": "2Randomized trial of brief interpersonal psychotherapy and cognitive behavioral therapy for depression delivered both in-person and by telehealth",
+    "section": "",
+    "text": "Swartz, H. A., Bylsma, L. M., Fournier, J. C., Girard, J. M., Spotts, C., Cohn, J. F., & Morency, L.-P. (2023). Randomized trial of brief interpersonal psychotherapy and cognitive behavioral therapy for depression delivered both in-person and by telehealth. Journal of Affective Disorders, 333, 543–552."
+  },
+  {
+    "objectID": "publications/articles/swartz2023.html#citation-apa-7",
+    "href": "publications/articles/swartz2023.html#citation-apa-7",
+    "title": "2Randomized trial of brief interpersonal psychotherapy and cognitive behavioral therapy for depression delivered both in-person and by telehealth",
+    "section": "",
+    "text": "Swartz, H. A., Bylsma, L. M., Fournier, J. C., Girard, J. M., Spotts, C., Cohn, J. F., & Morency, L.-P. (2023). Randomized trial of brief interpersonal psychotherapy and cognitive behavioral therapy for depression delivered both in-person and by telehealth. Journal of Affective Disorders, 333, 543–552."
+  },
+  {
+    "objectID": "publications/articles/swartz2023.html#abstract",
+    "href": "publications/articles/swartz2023.html#abstract",
+    "title": "2Randomized trial of brief interpersonal psychotherapy and cognitive behavioral therapy for depression delivered both in-person and by telehealth",
+    "section": "Abstract",
+    "text": "Abstract\nBackground: Expert consensus guidelines recommend Cognitive Behavioral Therapy (CBT) and Interpersonal Psychotherapy (IPT), interventions that were historically delivered face-to-face, as first-line treatments for Major Depressive Disorder (MDD). Despite the ubiquity of telehealth following the COVID-19 pandemic, little is known about differential outcomes with CBT versus IPT delivered in-person (IP) or via telehealth (TH) or whether working alliance is affected.\nMethods: Adults meeting DSM-5 criteria for MDD were randomly assigned to either 8 sessions of IPT or CBT (group). Mid-trial, COVID-19 forced a change of therapy delivery from IP to TH (study phase). We compared changes in Hamilton Rating Scale for Depression (HRSD-17) and Working Alliance Inventory (WAI) scores for individuals by group and phase: CBT-IP (n = 24), CBT-TH (n = 11), IPT-IP (n = 25) and IPT-TH (n = 17).\nResults: HRSD-17 scores declined significantly from pre to post treatment (pre: M = 17.7, SD = 4.4 vs. post: M = 11.7, SD = 5.9; p &lt; .001; d = 1.45) without significant group or phase effects. WAI scores did not differ by group or phase. Number of completed therapy sessions was greater for TH (M = 7.8, SD = 1.2) relative to IP (M = 7.2, SD = 1.6) (Mann-Whitney U = 387.50, z = 2.24, p = .025).\nLimitations: Participants were not randomly assigned to IP versus TH. Sample size is small.\nConclusions: This study provides preliminary evidence supporting the efficacy of both brief IPT and CBT, delivered by either TH or IP, for depression. It showed that working alliance is preserved in TH, and delivery via TH may improve therapy adherence. Prospective, randomized controlled trials are needed to definitively test efficacy of brief IPT and CBT delivered via TH versus IP."
+  },
+  {
+    "objectID": "publications/articles/Ivan2023.html",
+    "href": "publications/articles/Ivan2023.html",
+    "title": "Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains",
+    "section": "",
+    "text": "Ivan, J. S., Newkirk, E. S., & Gerber, B. D. (2023). Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains. Forest Ecology and Management, 544, 121147."
+  },
+  {
+    "objectID": "publications/articles/Ivan2023.html#citation",
+    "href": "publications/articles/Ivan2023.html#citation",
+    "title": "Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains",
+    "section": "",
+    "text": "Ivan, J. S., Newkirk, E. S., & Gerber, B. D. (2023). Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains. Forest Ecology and Management, 544, 121147."
+  },
+  {
+    "objectID": "publications/articles/Ivan2023.html#abstract",
+    "href": "publications/articles/Ivan2023.html#abstract",
+    "title": "Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains",
+    "section": "Abstract",
+    "text": "Abstract\nSpruce beetles (Dendroctonus rufipennis) have impacted millions of acres of Engelmann spruce (Picea engelmannii) – subalpine fir (Abies lasiocarpa) forest in North America over the past decade, resulting in the most extensive outbreak in recorded history. This dramatic alteration of forest composition and structure has precipitated numerous changes to forest ecology and ecosystem services. Among the least studied of these changes are impacts to wild mammals, including snowshoe hares (Lepus americanus) and red squirrels (Tamiasciurus hudsonicus). We sampled a chronosequence of spruce-fir stands along a gradient of ‘years elapsed since spruce beetle outbreak’ (YSO) in order to estimate impacts to abundance of these two species in the southern Rocky Mountains. Snowshoe hare abundance was not related to YSO, at least in the first decade post-outbreak. Instead, hare abundance during this period was positively related to horizontal cover, especially that due to stem density of small diameter subalpine fir. Notably, snowshoe hare abundance was negatively related to stem density of small diameter Engelmann spruce, suggesting that elements of horizontal cover may not be uniformly beneficial to hares. Hare abundance was also negatively related to ground cover, which could help explain the lack of relationship to YSO, assuming reduction in overstory canopy would lead to increases in ground cover. Red squirrel abundance was negatively related to YSO and outbreak severity (i.e., basal area of large diameter dead trees). This was likely due to diminished cone crops in impacted areas, which red squirrels cache and rely on heavily to sustain them through the winter. Basal area of remaining large live fir trees was not related to squirrel abundance, suggesting that regeneration of spruce and associated cone crops may be necessary for recovery of red squirrels, which may take several decades."
+  },
+  {
+    "objectID": "publications/articles/Masseloux2023.html",
+    "href": "publications/articles/Masseloux2023.html",
+    "title": "Estimating arboreality and the effects of forest structure on tropical tree‐dwelling mesomammals using arboreal camera traps",
+    "section": "",
+    "text": "Masseloux, J., Le, Q.T., Burr, J. and Gerber, B.D. (2023), Estimating arboreality and the effects of forest structure on tropical tree-dwelling mesomammals using arboreal camera traps. Anim Conserv, 26: 140-153. https://doi.org/10.1111/acv.12822"
+  },
+  {
+    "objectID": "publications/articles/Masseloux2023.html#citation",
+    "href": "publications/articles/Masseloux2023.html#citation",
+    "title": "Estimating arboreality and the effects of forest structure on tropical tree‐dwelling mesomammals using arboreal camera traps",
+    "section": "",
+    "text": "Masseloux, J., Le, Q.T., Burr, J. and Gerber, B.D. (2023), Estimating arboreality and the effects of forest structure on tropical tree-dwelling mesomammals using arboreal camera traps. Anim Conserv, 26: 140-153. https://doi.org/10.1111/acv.12822"
+  },
+  {
+    "objectID": "publications/articles/Masseloux2023.html#abstract",
+    "href": "publications/articles/Masseloux2023.html#abstract",
+    "title": "Estimating arboreality and the effects of forest structure on tropical tree‐dwelling mesomammals using arboreal camera traps",
+    "section": "Abstract",
+    "text": "Abstract\nTropical forests are the most species-rich biomes in the world but suffer high rates of logging and conversion. Tropical tree-dwelling (arboreal and semi-arboreal) mesomammals reliant on old-growth forest structures are especially vulnerable. The degree of behavioral arboreality of semi-arboreal mammals can be related to forest structure and perceived terrestrial threats. Paired arboreal and terrestrial camera traps are a promising new method for estimating the arboreality of cryptic and nocturnal species. Our study aimed to (1) model the effects of forest structure and anthropogenic disturbance on the detection and occurrence of arboreal and semi-arboreal mesomammals and (2) evaluate differences in occurrence and detection between paired arboreal and terrestrial camera trap sites for semi-arboreal mammals while estimating the degree of arboreality. We set 20 terrestrial and arboreal camera trap pairs in eastern Cat Tien National Park (Nam Cat Tien), Vietnam, from June 2019 to September 2020. We evaluated the effects of forest structure and proximity to roads on nine arboreal mesomammal species using single-season occupancy models. We used multi-scale occupancy modeling to estimate the degree of arboreality for four semi-arboreal mammals. All models were fit using hierarchical Bayesian modeling and compared using WAIC. We detected most arboreal and terrestrial mesomammal species currently known to inhabit Nam Cat Tien, including rare and cryptic species. Canopy connectivity and other mature forest characteristics were important for explaining the detection and occurrence of highly arboreal species, while the effect of a tree and focal limb characteristics on detection was species-specific. All semi-arboreal species had a greater probability of terrestrial station use than arboreal, suggesting a greater vulnerability to terrestrial threats, though the degree of arboreality varied by species. Using one sampling method underestimated occupancy for most semi-arboreal species. Multi-method sampling designs with multi-scale occupancy modeling can improve estimates of species distribution and habitat use for guiding management and conservation decisions."
+  },
+  {
+    "objectID": "publications/articles/Snapshort2023.html",
+    "href": "publications/articles/Snapshort2023.html",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "",
+    "text": "Kays, Roland, Michael V. Cove, Jose Diaz, Kimberly Todd, Claire Bresnan, Matt Snider, Thomas E. Lee Jr, et al. 2022. “ SNAPSHOT USA 2020: A Second Coordinated National Camera Trap Survey of the United States during the COVID-19 Pandemic.” Ecology 103(10): e3775. https://doi.org/10.1002/ecy.3775"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2023.html#citation",
+    "href": "publications/articles/Snapshort2023.html#citation",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "",
+    "text": "Kays, Roland, Michael V. Cove, Jose Diaz, Kimberly Todd, Claire Bresnan, Matt Snider, Thomas E. Lee Jr, et al. 2022. “ SNAPSHOT USA 2020: A Second Coordinated National Camera Trap Survey of the United States during the COVID-19 Pandemic.” Ecology 103(10): e3775. https://doi.org/10.1002/ecy.3775"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2023.html#abstract",
+    "href": "publications/articles/Snapshort2023.html#abstract",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "Abstract",
+    "text": "Abstract\nManaging wildlife populations in the face of global change requires regular data on the abundance and distribution of wild animals, but acquiring these over appropriate spatial scales in a sustainable way has proven challenging. Here we present the data from Snapshot USA 2020, a second annual national mammal survey of the USA. This project involved 152 scientists setting camera traps in a standardized protocol at 1485 locations across 103 arrays in 43 states for a total of 52,710 trap-nights of survey effort. Most (58) of these arrays were also sampled during the same months (September and October) in 2019, providing a direct comparison of animal populations in 2 years that includes data from both during and before the COVID-19 pandemic. All data were managed by the eMammal system, with all species identifications checked by at least two reviewers. In total, we recorded 117,415 detections of 78 species of wild mammals, 9236 detections of at least 43 species of birds, 15,851 detections of six domestic animals and 23,825 detections of humans or their vehicles. Spatial differences across arrays explained more variation in the relative abundance than temporal variation across years for all 38 species modeled, although there are examples of significant site-level differences among years for many species. Temporal results show how species allocate their time and can be used to study species interactions, including between humans and wildlife. These data provide a snapshot of the mammal community of the USA for 2020 and will be useful for exploring the drivers of spatial and temporal changes in relative abundance and distribution, and the impacts of species interactions on daily activity patterns. There are no copyright restrictions, and please cite this paper when using these data, or a subset of these data, for publication."
+  },
+  {
+    "objectID": "publications/articles/Farris2022.html",
+    "href": "publications/articles/Farris2022.html",
+    "title": "Spatio‐temporal overlap between a native and an exotic carnivore in Madagascar: evidence of spatial exclusion",
+    "section": "",
+    "text": "Masseloux, J., Le, Q.T., Burr, J. and Gerber, B.D. (2023), Estimating arboreality and the effects of forest structure on tropical tree-dwelling mesomammals using arboreal camera traps. Anim Conserv, 26: 140-153. https://doi.org/10.1111/acv.12822"
+  },
+  {
+    "objectID": "publications/articles/Farris2022.html#citation",
+    "href": "publications/articles/Farris2022.html#citation",
+    "title": "Spatio‐temporal overlap between a native and an exotic carnivore in Madagascar: evidence of spatial exclusion",
+    "section": "",
+    "text": "Masseloux, J., Le, Q.T., Burr, J. and Gerber, B.D. (2023), Estimating arboreality and the effects of forest structure on tropical tree-dwelling mesomammals using arboreal camera traps. Anim Conserv, 26: 140-153. https://doi.org/10.1111/acv.12822"
+  },
+  {
+    "objectID": "publications/articles/Farris2022.html#abstract",
+    "href": "publications/articles/Farris2022.html#abstract",
+    "title": "Spatio‐temporal overlap between a native and an exotic carnivore in Madagascar: evidence of spatial exclusion",
+    "section": "Abstract",
+    "text": "Abstract\nTropical forests are the most species-rich biomes in the world but suffer high rates of logging and conversion. Tropical tree-dwelling (arboreal and semi-arboreal) mesomammals reliant on old-growth forest structures are especially vulnerable. The degree of behavioral arboreality of semi-arboreal mammals can be related to forest structure and perceived terrestrial threats. Paired arboreal and terrestrial camera traps are a promising new method for estimating the arboreality of cryptic and nocturnal species. Our study aimed to (1) model the effects of forest structure and anthropogenic disturbance on the detection and occurrence of arboreal and semi-arboreal mesomammals and (2) evaluate differences in occurrence and detection between paired arboreal and terrestrial camera trap sites for semi-arboreal mammals while estimating the degree of arboreality. We set 20 terrestrial and arboreal camera trap pairs in eastern Cat Tien National Park (Nam Cat Tien), Vietnam, from June 2019 to September 2020. We evaluated the effects of forest structure and proximity to roads on nine arboreal mesomammal species using single-season occupancy models. We used multi-scale occupancy modeling to estimate the degree of arboreality for four semi-arboreal mammals. All models were fit using hierarchical Bayesian modeling and compared using WAIC. We detected most arboreal and terrestrial mesomammal species currently known to inhabit Nam Cat Tien, including rare and cryptic species. Canopy connectivity and other mature forest characteristics were important for explaining the detection and occurrence of highly arboreal species, while the effect of a tree and focal limb characteristics on detection was species-specific. All semi-arboreal species had a greater probability of terrestrial station use than arboreal, suggesting a greater vulnerability to terrestrial threats, though the degree of arboreality varied by species. Using one sampling method underestimated occupancy for most semi-arboreal species. Multi-method sampling designs with multi-scale occupancy modeling can improve estimates of species distribution and habitat use for guiding management and conservation decisions."
+  },
+  {
+    "objectID": "publications/articles/Carter2023.html",
+    "href": "publications/articles/Carter2023.html",
+    "title": "High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail",
+    "section": "",
+    "text": "Carter, W. A., McGreevy Jr, T. J., Gerber, B. D., Mayer, A. E., Sullivan, M. E., Tefft, B. C., & Husband, T. P. (2023). High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail. Journal of Fish and Wildlife Management, 14(1), 62-74."
+  },
+  {
+    "objectID": "publications/articles/Carter2023.html#citation",
+    "href": "publications/articles/Carter2023.html#citation",
+    "title": "High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail",
+    "section": "",
+    "text": "Carter, W. A., McGreevy Jr, T. J., Gerber, B. D., Mayer, A. E., Sullivan, M. E., Tefft, B. C., & Husband, T. P. (2023). High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail. Journal of Fish and Wildlife Management, 14(1), 62-74."
+  },
+  {
+    "objectID": "publications/articles/Carter2023.html#abstract",
+    "href": "publications/articles/Carter2023.html#abstract",
+    "title": "High Similarity in Winter Diet between Imperiled New England Cottontail and Invasive Eastern Cottontail",
+    "section": "Abstract",
+    "text": "Abstract\nOngoing declines in the imperiled New England cottontail Sylvilagus transitionalis have coincided with the introduction and expansion of the closely related eastern cottontail Sylvilagus floridanus. These paired population trends have led to the inference of competition between the two species. Competition between native and introduced species has often involved overlapping use of food resources, but limited effort has been spent to analyze the diets of New England cottontail and eastern cottontail and to evaluate the potential for resource competition. We used microhistologic analysis of fecal pellets to assess the winter diets of both species and we compared diet composition with available plant communities to evaluate their preferences for dietary items across southern New England and southeastern New York. We found no differences in diets between New England cottontail and eastern cottontail, although diets did differ between regions within the study area. Diet preferences also were consistent between the species and largely excluded nonnative plant genera. Our results demonstrate that these species are generalist herbivores and that there is high potential for competition for food resources in the winter between them, although the present lack of diet partitioning may indicate the presence of other factors limiting competition. This study highlights the need for careful evaluation of interactions between native and nonnative species, a prerequisite for developing conservation plans that appropriately account for interspecific competition."
+  },
+  {
+    "objectID": "publications/articles/Davy2022.html",
+    "href": "publications/articles/Davy2022.html",
+    "title": "Rapidly declining body size in an insectivorous bat is associated with increased precipitation and decreased survival",
+    "section": "",
+    "text": "Davy, Christina M., Valerie von Zuben, Piia M. Kukka, Brian D. Gerber, Brian G. Slough, and Thomas S. Jung. 2022. “Rapidly Declining Body Size in an Insectivorous Bat is Associated with Increased Precipitation and Decreased Survival.” Ecological Applications 32(7): e2639. https://doi.org/10.1002/eap.2639"
+  },
+  {
+    "objectID": "publications/articles/Davy2022.html#citation",
+    "href": "publications/articles/Davy2022.html#citation",
+    "title": "Rapidly declining body size in an insectivorous bat is associated with increased precipitation and decreased survival",
+    "section": "",
+    "text": "Davy, Christina M., Valerie von Zuben, Piia M. Kukka, Brian D. Gerber, Brian G. Slough, and Thomas S. Jung. 2022. “Rapidly Declining Body Size in an Insectivorous Bat is Associated with Increased Precipitation and Decreased Survival.” Ecological Applications 32(7): e2639. https://doi.org/10.1002/eap.2639"
+  },
+  {
+    "objectID": "publications/articles/Davy2022.html#abstract",
+    "href": "publications/articles/Davy2022.html#abstract",
+    "title": "Rapidly declining body size in an insectivorous bat is associated with increased precipitation and decreased survival",
+    "section": "Abstract",
+    "text": "Abstract\nReduced food availability is implicated in declines in avian aerial insectivores, but the effect of nutritional stress on mammalian aerial insectivores is unclear. Unlike birds, insectivorous bats provision their young through lactation, which might protect nursing juveniles when prey availability is low but could increase the energetic burden on lactating females. We analyzed a 15-year capture–mark–recapture data set from 5312 individual little brown myotis (Myotis lucifugus) captured at 11 maternity colonies in northwestern Canada, to test the hypothesis that nutritional stress is impacting these mammalian aerial insectivores. We used long-bone (forearm [FA]) length as a proxy for relative access to nutrition during development, and body mass as a proxy for access to nutrition prior to capture. Average FA length and body mass both decreased significantly over the study period in adult females and juveniles, suggesting decreased access to nutrition. Effect sizes were very small, similar to those reported for declining body size in avian aerial insectivores. Declines in juvenile body mass were only observed in individuals captured in late summer when they were foraging independently, supporting our hypothesis that lactation provides some protection to nursing young during periods of nutritional stress. Potential drivers of the decline in bat size include one or both of (1) declining insect (prey) abundance, and (2) declining prey availability. Echolocating insectivorous bats cannot forage effectively during rainfall, which is increasing in our study area. The body mass of captured adult females and juveniles in our study was lower, on average, after periods of high rainfall, and higher after warmer-than-average periods. Finally, survival models revealed a positive association between FA length and survival, suggesting a fitness consequence to declines in body size. Our study area has not yet been impacted by bat white-nose syndrome (WNS), but research elsewhere has suggested that fatter bats are more likely to survive infection. We found evidence for WNS-independent shifts in the body size of little brown myotis, which can inform studies investigating population responses to WNS. More broadly, the cumulative effects of multiple stressors (e.g., disease, nutritional stress, climate change, and other pressures) on mammalian aerial insectivores require urgent attention."
+  },
+  {
+    "objectID": "publications/articles/Gerber2023.html",
+    "href": "publications/articles/Gerber2023.html",
+    "title": "Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease",
+    "section": "",
+    "text": "Gerber, B.D., Mosher, B.A., Bailey, L.L., Muths, E., Crockett, H.J. and Converse, S.J. (2023), Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease. Anim. Conserv. https://doi.org/10.1111/acv.12877"
+  },
+  {
+    "objectID": "publications/articles/Gerber2023.html#citation",
+    "href": "publications/articles/Gerber2023.html#citation",
+    "title": "Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease",
+    "section": "",
+    "text": "Gerber, B.D., Mosher, B.A., Bailey, L.L., Muths, E., Crockett, H.J. and Converse, S.J. (2023), Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease. Anim. Conserv. https://doi.org/10.1111/acv.12877"
+  },
+  {
+    "objectID": "publications/articles/Gerber2023.html#abstract",
+    "href": "publications/articles/Gerber2023.html#abstract",
+    "title": "Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease",
+    "section": "Abstract",
+    "text": "Abstract\nIdentifying conservation actions to recover threatened species can be challenging due to many ecological uncertainties. For example, major threats to a species’ conservation are commonly known or suspected, but the specific impacts on population or metapopulation dynamics can be uncertain. This is frequently the case with emerging infectious diseases, including chytridiomycosis, a global driver of amphibian population declines caused by the fungal pathogens Batrachochytrium dendrobatidis (Bd) and Batrachochytrium salamandrivorans. While these diseases are known to cause amphibian declines and extirpations, the mechanisms of their landscape-scale spread are still largely unknown. Such uncertainty can lead to inaction which may jeopardize timely recovery of a species. Decision analysis is a pragmatic approach to making transparent and defensible decisions while dealing with uncertainties. We investigated whether optimal actions aimed at recovering boreal toad (Anaxyrus boreas boreas) metapopulations in the southern Rocky Mountains are robust to the unknown dynamics of Bd spread using value of information and regret analyses. Value of information is a decision-analytic tool for calculating the value of new information in terms of performance on management objectives, while regret measures the cost of acting under incorrect information. We further conducted a stochastic sensitivity analysis to identify the relative effects of metapopulation parameters on system dynamics. We found optimal actions were robust to the unknown dynamics of Bd spread. While boreal toad breeding occurrence is highly sensitive to Bd distribution, the optimal decision is not. Resolving the unknown dynamics of Bd spread would lead to a minimal gain of less than one breeding toad subpopulation at the end of 50 years, given the currently available management actions. Applying a decision-analytic framework coupled with value of information and regret analyses can help frame how uncertainties affect decisions in a way that empowers decision makers."
+  },
+  {
+    "objectID": "publications/articles/Mayer2022.html",
+    "href": "publications/articles/Mayer2022.html",
+    "title": "Transient persistence of bobcat (Lynx rufus) occurrence throughout a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., McGreevy, T. J. Jr, Brown, C., Ganoe, L. S., & Gerber, B. D. (2022). Transient persistence of bobcat (Lynx rufus) occurrence throughout a human-dominated landscape. Population Ecology, 64(4), 323–335. https://doi.org/10.1002/1438-390X.12123"
+  },
+  {
+    "objectID": "publications/articles/Mayer2022.html#citation",
+    "href": "publications/articles/Mayer2022.html#citation",
+    "title": "Transient persistence of bobcat (Lynx rufus) occurrence throughout a human‐dominated landscape",
+    "section": "",
+    "text": "Mayer, A. E., McGreevy, T. J. Jr, Brown, C., Ganoe, L. S., & Gerber, B. D. (2022). Transient persistence of bobcat (Lynx rufus) occurrence throughout a human-dominated landscape. Population Ecology, 64(4), 323–335. https://doi.org/10.1002/1438-390X.12123"
+  },
+  {
+    "objectID": "publications/articles/Mayer2022.html#abstract",
+    "href": "publications/articles/Mayer2022.html#abstract",
+    "title": "Transient persistence of bobcat (Lynx rufus) occurrence throughout a human‐dominated landscape",
+    "section": "Abstract",
+    "text": "Abstract\nHuman developments have detrimental effects on wildlife populations globally with carnivores being particularly sensitive. The bobcat (Lynx rufus) is often considered an adaptable mesocarnivore that occurs throughout varied landcover types within its wide distribution and may be less susceptible to the negative effects of development. Our objectives were to investigate the landscape occupancy dynamics of bobcats in a highly developed and densely populated region of the northeastern United States to evaluate the sensitivity of bobcat occurrence to natural and anthropogenic landscape features. We established a large-scale camera trapping survey throughout Rhode Island, USA, sampling from 2018 to 2020. Using dynamic occupancy models, we found initial site occupancy was positively influenced by the amount of forested wetland habitat, while increasing road density and shrub cover negatively influenced the probability of site colonization. Surprisingly, we found no hypothesized variables to influence site-level extirpation probability, or any seasonal effects on dynamic parameters. Lastly, we found that forest cover and road density negatively influenced the probability of detection. The probability of occupancy was high, &gt;0.8, throughout much of the study area (49%), but we also found relatively high site transients, with the probability a site would change occurrence status from season to season at ≈0.27 in the majority of the study area (70%). Our results show that although bobcats can persist in human-dominated landscapes, they require contiguous natural areas to do so. Future expansion of road infrastructure may reduce habitat connectivity and increase road mortalities, thus jeopardizing the population."
+  },
+  {
+    "objectID": "publications/articles/Rivera2022.html",
+    "href": "publications/articles/Rivera2022.html",
+    "title": "Rethinking habitat occupancy modeling and the role of diel activity in an anthropogenic world",
+    "section": "",
+    "text": "Rethinking Habitat Occupancy Modeling and the Role of Diel Activity in an Anthropogenic World. Rivera, K, Fidino, M, Farris, zj, Magle, SB, Murohy, A, Gerber, BD. The American Naturalist 2022 200:4, 556-570"
+  },
+  {
+    "objectID": "publications/articles/Rivera2022.html#citation",
+    "href": "publications/articles/Rivera2022.html#citation",
+    "title": "Rethinking habitat occupancy modeling and the role of diel activity in an anthropogenic world",
+    "section": "",
+    "text": "Rethinking Habitat Occupancy Modeling and the Role of Diel Activity in an Anthropogenic World. Rivera, K, Fidino, M, Farris, zj, Magle, SB, Murohy, A, Gerber, BD. The American Naturalist 2022 200:4, 556-570"
+  },
+  {
+    "objectID": "publications/articles/Rivera2022.html#abstract",
+    "href": "publications/articles/Rivera2022.html#abstract",
+    "title": "Rethinking habitat occupancy modeling and the role of diel activity in an anthropogenic world",
+    "section": "Abstract",
+    "text": "Abstract\nCurrent methods to model species habitat use through space and diel time are limited. Development of such models is critical when considering rapidly changing habitats where species are forced to adapt to anthropogenic change, often by shifting their diel activity across space. We use an occupancy modeling framework to specify the multistate diel occupancy model (MSDOM), which can evaluate species diel activity against continuous response variables that may impact diel activity within and across seasons or years. We used two case studies, fosas in Madagascar and coyotes in Chicago, Illinois, to conceptualize the application of this model and to quantify the impacts of human activity on species spatial use in diel time. We found support that both species varied their habitat use by diel states—in and across years and by human disturbance. Our results exemplify the importance of understanding animal diel activity patterns and how human disturbance can lead to temporal habitat loss. The MSDOM will allow more focused attention in ecology and evolution studies on the importance of the short temporal scale of diel time in animal-habitat relationships and lead to improved habitat conservation and management."
+  },
+  {
+    "objectID": "publications/articles/Snapshort2022.html",
+    "href": "publications/articles/Snapshort2022.html",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "",
+    "text": "Kays, Roland, Michael V. Cove, Jose Diaz, Kimberly Todd, Claire Bresnan, Matt Snider, Thomas E. Lee Jr, et al. 2022. “ SNAPSHOT USA 2020: A Second Coordinated National Camera Trap Survey of the United States during the COVID-19 Pandemic.” Ecology 103(10): e3775. https://doi.org/10.1002/ecy.3775"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2022.html#citation",
+    "href": "publications/articles/Snapshort2022.html#citation",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "",
+    "text": "Kays, Roland, Michael V. Cove, Jose Diaz, Kimberly Todd, Claire Bresnan, Matt Snider, Thomas E. Lee Jr, et al. 2022. “ SNAPSHOT USA 2020: A Second Coordinated National Camera Trap Survey of the United States during the COVID-19 Pandemic.” Ecology 103(10): e3775. https://doi.org/10.1002/ecy.3775"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2022.html#abstract",
+    "href": "publications/articles/Snapshort2022.html#abstract",
+    "title": "SNAPSHOT USA 2020: A second coordinated national camera trap survey of the United States during the COVID‐19 pandemic",
+    "section": "Abstract",
+    "text": "Abstract\nManaging wildlife populations in the face of global change requires regular data on the abundance and distribution of wild animals, but acquiring these over appropriate spatial scales in a sustainable way has proven challenging. Here we present the data from Snapshot USA 2020, a second annual national mammal survey of the USA. This project involved 152 scientists setting camera traps in a standardized protocol at 1485 locations across 103 arrays in 43 states for a total of 52,710 trap-nights of survey effort. Most (58) of these arrays were also sampled during the same months (September and October) in 2019, providing a direct comparison of animal populations in 2 years that includes data from both during and before the COVID-19 pandemic. All data were managed by the eMammal system, with all species identifications checked by at least two reviewers. In total, we recorded 117,415 detections of 78 species of wild mammals, 9236 detections of at least 43 species of birds, 15,851 detections of six domestic animals and 23,825 detections of humans or their vehicles. Spatial differences across arrays explained more variation in the relative abundance than temporal variation across years for all 38 species modeled, although there are examples of significant site-level differences among years for many species. Temporal results show how species allocate their time and can be used to study species interactions, including between humans and wildlife. These data provide a snapshot of the mammal community of the USA for 2020 and will be useful for exploring the drivers of spatial and temporal changes in relative abundance and distribution, and the impacts of species interactions on daily activity patterns. There are no copyright restrictions, and please cite this paper when using these data, or a subset of these data, for publication."
+  },
+  {
+    "objectID": "publications/articles/Betts2022.html",
+    "href": "publications/articles/Betts2022.html",
+    "title": "Forest degradation drives widespread avian habitat and population declines",
+    "section": "",
+    "text": "Betts, M.G., Yang, Z., Hadley, A.S. et al. Forest degradation drives widespread avian habitat and population declines. Nat Ecol Evol 6, 709–719 (2022). https://doi.org/10.1038/s41559-022-01737-8"
+  },
+  {
+    "objectID": "publications/articles/Betts2022.html#citation",
+    "href": "publications/articles/Betts2022.html#citation",
+    "title": "Forest degradation drives widespread avian habitat and population declines",
+    "section": "",
+    "text": "Betts, M.G., Yang, Z., Hadley, A.S. et al. Forest degradation drives widespread avian habitat and population declines. Nat Ecol Evol 6, 709–719 (2022). https://doi.org/10.1038/s41559-022-01737-8"
+  },
+  {
+    "objectID": "publications/articles/Betts2022.html#abstract",
+    "href": "publications/articles/Betts2022.html#abstract",
+    "title": "Forest degradation drives widespread avian habitat and population declines",
+    "section": "Abstract",
+    "text": "Abstract\nIn many regions of the world, forest management has reduced old forest and simplified forest structure and composition. We hypothesized that such forest degradation has resulted in long-term habitat loss for forest-associated bird species of eastern Canada (130,017 km2) which, in turn, has caused bird-population declines. Despite little change in overall forest cover, we found substantial reductions in old forest as a result of frequent clear-cutting and a broad-scale transformation to intensified forestry. Back-cast species distribution models revealed that breeding habitat loss occurred for 66% of the 54 most common species from 1985 to 2020 and was strongly associated with reduction in old age classes. Using a long-term, independent dataset, we found that habitat amount predicted population size for 94% of species, and habitat loss was associated with population declines for old-forest species. Forest degradation may therefore be a primary cause of biodiversity decline in managed forest landscapes."
+  },
+  {
+    "objectID": "publications/articles/Wampole2022.html",
+    "href": "publications/articles/Wampole2022.html",
+    "title": "Madagascar Terrestrial Camera Survey Database 2021: A collation of protected forest camera surveys from 2007–2021",
+    "section": "",
+    "text": "Wampole, Erin M., Brian D. Gerber, Zach J. Farris, Jean Claude Razafimahaimodison, Mahandry Hugues Andrianarisoa, Claude Jacquot Ralazampirenena, Patricia C. Wright, et al. 2022. “ Madagascar Terrestrial Camera Survey Database 2021: A Collation of Protected Forest Camera Surveys from 2007–2021.” Ecology 103(6): e3687. https://doi.org/10.1002/ecy.3687"
+  },
+  {
+    "objectID": "publications/articles/Wampole2022.html#citation",
+    "href": "publications/articles/Wampole2022.html#citation",
+    "title": "Madagascar Terrestrial Camera Survey Database 2021: A collation of protected forest camera surveys from 2007–2021",
+    "section": "",
+    "text": "Wampole, Erin M., Brian D. Gerber, Zach J. Farris, Jean Claude Razafimahaimodison, Mahandry Hugues Andrianarisoa, Claude Jacquot Ralazampirenena, Patricia C. Wright, et al. 2022. “ Madagascar Terrestrial Camera Survey Database 2021: A Collation of Protected Forest Camera Surveys from 2007–2021.” Ecology 103(6): e3687. https://doi.org/10.1002/ecy.3687"
+  },
+  {
+    "objectID": "publications/articles/Wampole2022.html#abstract",
+    "href": "publications/articles/Wampole2022.html#abstract",
+    "title": "Madagascar Terrestrial Camera Survey Database 2021: A collation of protected forest camera surveys from 2007–2021",
+    "section": "Abstract",
+    "text": "Abstract\nMadagascar is a threatened global biodiversity hotspot and conservation priority, yet we lack broad-scale surveys to assess biodiversity across space and time. To fill this gap, we collated camera trap surveys, capturing species occurrences within Madagascar into a single standardized database. This data set includes nine distinct protected areas of Madagascar and encompasses 13 subprojects, 38 camera arrays, and 1156 sampling units (independent camera site per survey) within two important biodiversity eco-regions: western dry deciduous forest and eastern humid rainforest. Camera surveys were conducted from June 2007 to January 2021. The final data set includes 17 unique families of mammals (Bovidae, Canidae, Cheirogaleidae, Daubentoniidae, Equidae, Eupleridae, Felidae, Hominidae, Indriidae, Lemuridae, Lepilemuridae, Muridae, Nesomyidae, Pteropodidae, Soricidae, Suidae, Tenrecidae) comprising 45 species and 27 unique families of birds (Accipitridae, Acrocephalidae, Alcedinidae, Bernieridae, Brachypteraciidae, Caprimulgidae, Cisticolidae, Columbidae, Coraciidae, Corvidae, Cuculidae, Dicruridae, Mesitornithidae, Monarchidae, Motacillidae, Muscicapidae, Numididae, Phasianidae, Rallidae, Sarothruridae, Strigidae, Sturnidae, Sulidae, Threskiornithidae, Upupidae, Vangidae, Zosteropidae) comprising 58 species. Images were processed and verified by individual project data set creators and camera operation and species tables were then collated. The final product represents the first broad-scale freely available standardized formal faunal database for Madagascar. Data are available through this publication and at DOI: 10.5281/zenodo.5801806. These data will be useful for examining species-level and community-level trends in occurrence across space or time within Madagascar and globally, evaluating native and invasive species dynamics, and will aid in determining species conservation status and planning for at-risk species. There are no copyright restrictions; please cite this paper when using the data for publication."
+  },
+  {
+    "objectID": "publications/articles/Hallisey2022.html",
+    "href": "publications/articles/Hallisey2022.html",
+    "title": "Estimating road mortality hotspots while accounting for imperfect detection: A case study with amphibians and reptiles",
+    "section": "",
+    "text": "Hallisey N, Buchanan SW, Gerber BD, Corcoran LS, Karraker NE. Estimating Road Mortality Hotspots While Accounting for Imperfect Detection: A Case Study with Amphibians and Reptiles. Land. 2022; 11(5):739. https://doi.org/10.3390/land11050739"
+  },
+  {
+    "objectID": "publications/articles/Hallisey2022.html#citation",
+    "href": "publications/articles/Hallisey2022.html#citation",
+    "title": "Estimating road mortality hotspots while accounting for imperfect detection: A case study with amphibians and reptiles",
+    "section": "",
+    "text": "Hallisey N, Buchanan SW, Gerber BD, Corcoran LS, Karraker NE. Estimating Road Mortality Hotspots While Accounting for Imperfect Detection: A Case Study with Amphibians and Reptiles. Land. 2022; 11(5):739. https://doi.org/10.3390/land11050739"
+  },
+  {
+    "objectID": "publications/articles/Hallisey2022.html#abstract",
+    "href": "publications/articles/Hallisey2022.html#abstract",
+    "title": "Estimating road mortality hotspots while accounting for imperfect detection: A case study with amphibians and reptiles",
+    "section": "Abstract",
+    "text": "Abstract\nWildlife road mortality tends to aggregate spatially at locations commonly referred to as road mortality hotspots. Predictive models can be used to identify locations appropriate for mitigation measures that reduce road mortality. However, the influence of imperfect detection (e.g., false absences) during road mortality surveys can lead to inaccurate or imprecise spatial patterns of road mortality hotspots and suboptimal implementation of mitigation measures. In this research, we used amphibians and reptiles as a case study to address imperfect detection issues when estimating the probability of road mortality hotspots using occupancy detection modeling. In addition, we determined the survey effort needed to achieve a high probability of detecting large roadkill events. We also assessed whether vehicle travel reductions associated with the COVID-19 pandemic travel restrictions led to reductions in road mortality. We conducted surveys at 48 sites throughout Rhode Island, USA, from 2019–2021. In total, we observed 657 carcasses representing 19 of Rhode Island’s 37 native species. Of the 19 native species, eight species of frogs, four species of salamanders, four species of snakes, and three species of turtles were observed. We documented a reduction in roadkill density and the proportion of dead versus live amphibians and reptiles in pandemic years (2020 and 2021), but we were unable to link reductions in roadkill density to reductions in traffic volume. Our model results indicated that large roadkill events were more likely to occur on roads near wetlands and with low traffic volume and were more likely to be detected as daily precipitation increased. We determined that there was a low probability of detecting large roadkill events, suggesting that imperfect detection influences detection of large roadkill events, and many were likely missed during our surveys. Therefore, we recommend using occupancy modeling to account for the influence of imperfect detection when estimating road mortality hotspots. This approach will more effectively guide the implementation of mitigation measures."
+  },
+  {
+    "objectID": "publications/articles/Gallo2022.html",
+    "href": "publications/articles/Gallo2022.html",
+    "title": "Mammals adjust diel activity across gradients of urbanization",
+    "section": "",
+    "text": "Gallo, Travis, Mason Fidino, Brian Gerber, Adam A. Ahlers, Julia L. Angstmann, Max Amaya, David Drake et al. Mammals adjust diel activity across gradients of urbanization. Elife, 11 (2022), e74756.https://doi.org/10.7554/eLife.74756"
+  },
+  {
+    "objectID": "publications/articles/Gallo2022.html#citation",
+    "href": "publications/articles/Gallo2022.html#citation",
+    "title": "Mammals adjust diel activity across gradients of urbanization",
+    "section": "",
+    "text": "Gallo, Travis, Mason Fidino, Brian Gerber, Adam A. Ahlers, Julia L. Angstmann, Max Amaya, David Drake et al. Mammals adjust diel activity across gradients of urbanization. Elife, 11 (2022), e74756.https://doi.org/10.7554/eLife.74756"
+  },
+  {
+    "objectID": "publications/articles/Gallo2022.html#abstract",
+    "href": "publications/articles/Gallo2022.html#abstract",
+    "title": "Mammals adjust diel activity across gradients of urbanization",
+    "section": "Abstract",
+    "text": "Abstract\nTime is a fundamental component of ecological processes. How animal behavior changes over time has been explored through well-known ecological theories like niche partitioning and predator–prey dynamics. Yet, changes in animal behavior within the shorter 24-hr light–dark cycle have largely gone unstudied. Understanding if an animal can adjust their temporal activity to mitigate or adapt to environmental change has become a recent topic of discussion and is important for effective wildlife management and conservation. While spatial habitat is a fundamental consideration in wildlife management and conservation, temporal habitat is often ignored. We formulated a temporal resource selection model to quantify the diel behavior of 8 mammal species across 10 US cities. We found high variability in diel activity patterns within and among species and species-specific correlations between diel activity and human population density, impervious land cover, available greenspace, vegetation cover, and mean daily temperature. We also found that some species may modulate temporal behaviors to manage both natural and anthropogenic risks. Our results highlight the complexity with which temporal activity patterns interact with local environmental characteristics, and suggest that urban mammals may use time along the 24-hr cycle to reduce risk, adapt, and therefore persist, and in some cases thrive, in human-dominated ecosystems."
+  },
+  {
+    "objectID": "publications/articles/Masseloux2022.html",
+    "href": "publications/articles/Masseloux2022.html",
+    "title": "Forest structure and seasonally inundated grassland shape tropical mammal communities under moderate disturbance",
+    "section": "",
+    "text": "Masseloux, Juliana, Quy Tan Le, Jessica Burr, and Brian D. Gerber. 2022. “ Forest Structure and Seasonally Inundated Grassland Shape Tropical Mammal Communities under Moderate Disturbance.” Ecosphere 13(3): e3999. https://doi.org/10.1002/ecs2.3999"
+  },
+  {
+    "objectID": "publications/articles/Masseloux2022.html#citation",
+    "href": "publications/articles/Masseloux2022.html#citation",
+    "title": "Forest structure and seasonally inundated grassland shape tropical mammal communities under moderate disturbance",
+    "section": "",
+    "text": "Masseloux, Juliana, Quy Tan Le, Jessica Burr, and Brian D. Gerber. 2022. “ Forest Structure and Seasonally Inundated Grassland Shape Tropical Mammal Communities under Moderate Disturbance.” Ecosphere 13(3): e3999. https://doi.org/10.1002/ecs2.3999"
+  },
+  {
+    "objectID": "publications/articles/Masseloux2022.html#abstract",
+    "href": "publications/articles/Masseloux2022.html#abstract",
+    "title": "Forest structure and seasonally inundated grassland shape tropical mammal communities under moderate disturbance",
+    "section": "Abstract",
+    "text": "Abstract\nTropical biodiversity is threatened globally by anthropogenic disturbances, particularly forest degradation and overhunting. Where large mammals have been extirpated, smaller bodied “mesomammals” may play an important ecological role (e.g., as seed dispersers). However, these species are disproportionally affected by overhunting for wildlife trade markets and are routinely understudied as they tend to be rare, cryptic, and nocturnal. Few studies have examined spatiotemporal responses to anthropogenic disturbance by mesomammals at the community level, which may identify imbalances within an ecosystem that could threaten species persistence. We deployed camera traps throughout Cat Tien National Park (i.e., Nam Cat Tien area), southern Vietnam, to (1) identify long-term changes in terrestrial mesomammal richness and (2) evaluate the effects of forest structure and anthropogenic disturbance on an 18-species mesomammal community within a historically disturbed tropical forest using hierarchical Bayesian community occupancy models. We found that site occupancy was driven by the interaction between distance to seasonally inundated grassland and absolute forest cover (basal area per hectare). This may be due to the combination of intact forest benefits (refuge from predators and hunters, denning sites) and early successional grassland resources (forage quality), as well as high levels of tolerance for disturbed forest among the largely generalist mesomammal community of Nam Cat Tien. We found no negative effects of current anthropogenic factors at the community level. However, we did find that four disturbance-tolerant small carnivores have been extirpated since the 1990s and continued human presence in the park suggests that hunting and snaring remain an acute threat to native mesomammals. Without continued efforts to address the unsustainable harvest of wildlife, Southeast Asian’s remaining mesomammals are at risk of extirpation despite resilience to moderate levels of disturbance."
+  },
+  {
+    "objectID": "publications/articles/Northrup2022.html",
+    "href": "publications/articles/Northrup2022.html",
+    "title": "Conceptual and methodological advances in habitat‐selection modeling: guidelines for ecology and evolution",
+    "section": "",
+    "text": "Northrup, J. M., E. Vander Wal, M. Bonar, J. Fieberg, M. P. Laforge, M. Leclerc, C. M. Prokopenko, and B. D. Gerber. 2022. Conceptual and methodological advances in habitat-selection modeling: guidelines for ecology and evolution. Ecological Applications 32(1):e02470. 10.1002/eap.2470"
+  },
+  {
+    "objectID": "publications/articles/Northrup2022.html#citation",
+    "href": "publications/articles/Northrup2022.html#citation",
+    "title": "Conceptual and methodological advances in habitat‐selection modeling: guidelines for ecology and evolution",
+    "section": "",
+    "text": "Northrup, J. M., E. Vander Wal, M. Bonar, J. Fieberg, M. P. Laforge, M. Leclerc, C. M. Prokopenko, and B. D. Gerber. 2022. Conceptual and methodological advances in habitat-selection modeling: guidelines for ecology and evolution. Ecological Applications 32(1):e02470. 10.1002/eap.2470"
+  },
+  {
+    "objectID": "publications/articles/Northrup2022.html#abstract",
+    "href": "publications/articles/Northrup2022.html#abstract",
+    "title": "Conceptual and methodological advances in habitat‐selection modeling: guidelines for ecology and evolution",
+    "section": "Abstract",
+    "text": "Abstract\nHabitat selection is a fundamental animal behavior that shapes a wide range of ecological processes, including animal movement, nutrient transfer, trophic dynamics and population distribution. Although habitat selection has been a focus of ecological studies for decades, technological, conceptual and methodological advances over the last 20 yr have led to a surge in studies addressing this process. Despite the substantial literature focused on quantifying the habitat-selection patterns of animals, there is a marked lack of guidance on best analytical practices. The conceptual foundations of the most commonly applied modeling frameworks can be confusing even to those well versed in their application. Furthermore, there has yet to be a synthesis of the advances made over the last 20 yr. Therefore, there is a need for both synthesis of the current state of knowledge on habitat selection, and guidance for those seeking to study this process. Here, we provide an approachable overview and synthesis of the literature on habitat-selection analyses (HSAs) conducted using selection functions, which are by far the most applied modeling framework for understanding the habitat-selection process. This review is purposefully non-technical and focused on understanding without heavy mathematical and statistical notation, which can confuse many practitioners. We offer an overview and history of HSAs, describing the tortuous conceptual path to our current understanding. Through this overview, we also aim to address the areas of greatest confusion in the literature. We synthesize the literature outlining the most exciting conceptual advances in the field of habitat-selection modeling, discussing the substantial ecological and evolutionary inference that can be made using contemporary techniques. We aim for this paper to provide clarity for those navigating the complex literature on HSAs while acting as a reference and best practices guide for practitioners."
+  },
+  {
+    "objectID": "publications/articles/Mayer2021.html",
+    "href": "publications/articles/Mayer2021.html",
+    "title": "Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England",
+    "section": "",
+    "text": "Mayer, A. E., McGreevy Jr, T. J., Sullivan, M. E., Brown, C., Husband, T. P., & Gerber, B. D. (2021). Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England. Northeastern Naturalist, 28(4), 408-429."
+  },
+  {
+    "objectID": "publications/articles/Mayer2021.html#citation",
+    "href": "publications/articles/Mayer2021.html#citation",
+    "title": "Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England",
+    "section": "",
+    "text": "Mayer, A. E., McGreevy Jr, T. J., Sullivan, M. E., Brown, C., Husband, T. P., & Gerber, B. D. (2021). Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England. Northeastern Naturalist, 28(4), 408-429."
+  },
+  {
+    "objectID": "publications/articles/Mayer2021.html#abstract",
+    "href": "publications/articles/Mayer2021.html#abstract",
+    "title": "Population genetics and spatial ecology of bobcats (Lynx rufus) in a landscape with a high density of humans in New England",
+    "section": "Abstract",
+    "text": "Abstract\nHabitat selection is a fundamental animal behavior that shapes a wide range of ecological processes, including animal movement, nutrient transfer, trophic dynamics and population distribution. Although habitat selection has been a focus of ecological studies for decades, technological, conceptual and methodological advances over the last 20 yr have led to a surge in studies addressing this process. Despite the substantial literature focused on quantifying the habitat-selection patterns of animals, there is a marked lack of guidance on best analytical practices. The conceptual foundations of the most commonly applied modeling frameworks can be confusing even to those well versed in their application. Furthermore, there has yet to be a synthesis of the advances made over the last 20 yr. Therefore, there is a need for both synthesis of the current state of knowledge on habitat selection, and guidance for those seeking to study this process. Here, we provide an approachable overview and synthesis of the literature on habitat-selection analyses (HSAs) conducted using selection functions, which are by far the most applied modeling framework for understanding the habitat-selection process. This review is purposefully non-technical and focused on understanding without heavy mathematical and statistical notation, which can confuse many practitioners. We offer an overview and history of HSAs, describing the tortuous conceptual path to our current understanding. Through this overview, we also aim to address the areas of greatest confusion in the literature. We synthesize the literature outlining the most exciting conceptual advances in the field of habitat-selection modeling, discussing the substantial ecological and evolutionary inference that can be made using contemporary techniques. We aim for this paper to provide clarity for those navigating the complex literature on HSAs while acting as a reference and best practices guide for practitioners."
+  },
+  {
+    "objectID": "publications/articles/Wampole2021.html",
+    "href": "publications/articles/Wampole2021.html",
+    "title": "A synthesis of life‐history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J. and Gerber, B.D. (2021), A synthesis of life-history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae. Mam Rev, 51: 402-419. https://doi.org/10.1111/mam.12234"
+  },
+  {
+    "objectID": "publications/articles/Wampole2021.html#citation",
+    "href": "publications/articles/Wampole2021.html#citation",
+    "title": "A synthesis of life‐history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J. and Gerber, B.D. (2021), A synthesis of life-history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae. Mam Rev, 51: 402-419. https://doi.org/10.1111/mam.12234"
+  },
+  {
+    "objectID": "publications/articles/Wampole2021.html#abstract",
+    "href": "publications/articles/Wampole2021.html#abstract",
+    "title": "A synthesis of life‐history traits, functional traits, and consequences of anthropogenic pressures on Madagascar’s threatened carnivorans, Eupleridae",
+    "section": "Abstract",
+    "text": "Abstract\nMadagascar’s native carnivorans are an endemic monophyletic group of eight extant species belonging to the family Eupleridae. The International Union for Conservation of Nature (IUCN) currently classifies seven of the species as threatened (Vulnerable or Endangered), as their populations are in decline due to intensifying anthropogenic pressures. However, little is known about these species’ ecology and population trends, precluding forecasts of extinction risk. Life-history and functional traits govern species’ responses to environmental pressure and can be predictive of extinction risk. Incorporating relevant trait information can vastly improve risk assessments. Yet, information on the life-history and functional traits of the Eupleridae has never been compiled into a single framework. Our aims were to: 1) synthesise the current state of knowledge of the life-history and functional traits of euplerid species, 2) review empirical evidence of the effects of anthropogenic pressures on species, and 3) identify knowledge gaps and future research needs. We searched the published literature to compile life-history and functional trait information and known effects of anthropogenic pressures for Eupleridae. Our review indicates that Madagascar’s carnivorans have high-risk life-history and functional traits that increase their vulnerability to anthropogenic pressures. Publications reported negative effects on euplerids from habitat degradation and fragmentation, logging, non-native carnivorans, disease, and hunting and retaliatory killings. However, our synthesis revealed significant knowledge gaps, especially in species’ life-history traits and in the spatial variability in most traits. For most species, we currently do not have the robust data needed to assess trait-based risk dynamics. The culmination of reported traits, negative influence of ongoing anthropogenic pressures, and lack of robust metrics (e.g. population trends and trait variability) indicate that euplerids are at high risk, yet may reach the cusp of extinction without notice due to significant gaps in knowledge. Future research should prioritise filling gaps in knowledge of influential traits, evaluating anthropogenic pressures, and integrating trait information to improve risk assessments and extinction forecasts."
+  },
+  {
+    "objectID": "publications/articles/Snapshort2021.html",
+    "href": "publications/articles/Snapshort2021.html",
+    "title": "SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States",
+    "section": "",
+    "text": "Cove, M. V., et al. 2021. SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States. Ecology 102(6):e03353. 10.1002/ecy.3353"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2021.html#citation",
+    "href": "publications/articles/Snapshort2021.html#citation",
+    "title": "SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States",
+    "section": "",
+    "text": "Cove, M. V., et al. 2021. SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States. Ecology 102(6):e03353. 10.1002/ecy.3353"
+  },
+  {
+    "objectID": "publications/articles/Snapshort2021.html#abstract",
+    "href": "publications/articles/Snapshort2021.html#abstract",
+    "title": "SNAPSHOT USA 2019: a coordinated national camera trap survey of the United States",
+    "section": "Abstract",
+    "text": "Abstract\nWith the accelerating pace of global change, it is imperative that we obtain rapid inventories of the status and distribution of wildlife for ecological inferences and conservation planning. To address this challenge, we launched the SNAPSHOT USA project, a collaborative survey of terrestrial wildlife populations using camera traps across the United States. For our first annual survey, we compiled data across all 50 states during a 14-week period (17 August–24 November of 2019). We sampled wildlife at 1,509 camera trap sites from 110 camera trap arrays covering 12 different ecoregions across four development zones. This effort resulted in 166,036 unique detections of 83 species of mammals and 17 species of birds. All images were processed through the Smithsonian’s eMammal camera trap data repository and included an expert review phase to ensure taxonomic accuracy of data, resulting in each picture being reviewed at least twice. The results represent a timely and standardized camera trap survey of the United States. All of the 2019 survey data are made available herein. We are currently repeating surveys in fall 2020, opening up the opportunity to other institutions and cooperators to expand coverage of all the urban–wild gradients and ecophysiographic regions of the country. Future data will be available as the database is updated at eMammal.si.edu/snapshot-usa, as will future data paper submissions. These data will be useful for local and macroecological research including the examination of community assembly, effects of environmental and anthropogenic landscape variables, effects of fragmentation and extinction debt dynamics, as well as species-specific population dynamics and conservation action plans. There are no copyright restrictions; please cite this paper when using the data for publication."
+  },
+  {
+    "objectID": "publications/articles/Northrup2021.html",
+    "href": "publications/articles/Northrup2021.html",
+    "title": "Behavioral and demographic responses of mule deer to energy development on winter range",
+    "section": "",
+    "text": "Northrup, J.M., Anderson, C.R., Jr., Gerber, B.D. and Wittemyer, G. (2021), Behavioral and Demographic Responses of Mule Deer to Energy Development on Winter Range. Wild. Mon., 208: 1-37. https://doi.org/10.1002/wmon.1060"
+  },
+  {
+    "objectID": "publications/articles/Northrup2021.html#citation",
+    "href": "publications/articles/Northrup2021.html#citation",
+    "title": "Behavioral and demographic responses of mule deer to energy development on winter range",
+    "section": "",
+    "text": "Northrup, J.M., Anderson, C.R., Jr., Gerber, B.D. and Wittemyer, G. (2021), Behavioral and Demographic Responses of Mule Deer to Energy Development on Winter Range. Wild. Mon., 208: 1-37. https://doi.org/10.1002/wmon.1060"
+  },
+  {
+    "objectID": "publications/articles/Northrup2021.html#abstract",
+    "href": "publications/articles/Northrup2021.html#abstract",
+    "title": "Behavioral and demographic responses of mule deer to energy development on winter range",
+    "section": "Abstract",
+    "text": "Abstract\nAnthropogenic habitat modification is a major driver of global biodiversity loss. In North America, one of the primary sources of habitat modification over the last 2 decades has been exploration for and production of oil and natural gas (hydrocarbon development), which has led to demographic and behavioral impacts to numerous wildlife species. Developing effective measures to mitigate these impacts has become a critical task for wildlife managers and conservation practitioners. However, this task has been hindered by the difficulties involved in identifying and isolating factors driving population responses. Current research on responses of wildlife to development predominantly quantifies behavior, but it is not always clear how these responses scale to demography and population dynamics. Concomitant assessments of behavior and population-level processes are needed to gain the mechanistic understanding required to develop effective mitigation approaches. We simultaneously assessed the demographic and behavioral responses of a mule deer population to natural gas development on winter range in the Piceance Basin of Colorado, USA, from 2008 to 2015. Notably, this was the period when development declined from high levels of active drilling to only production phase activity (i.e., no drilling). We focused our data collection on 2 contiguous mule deer winter range study areas that experienced starkly different levels of hydrocarbon development within the Piceance Basin.\nWe assessed mule deer behavioral responses to a range of development features with varying levels of associated human activity by examining habitat selection patterns of nearly 400 individual adult female mule deer. Concurrently, we assessed the demographic and physiological effects of natural gas development by comparing annual adult female and overwinter fawn (6-month-old animals) survival, December fawn mass, adult female late and early winter body fat, age, pregnancy rates, fetal counts, and lactation rates in December between the 2 study areas. Strong differences in habitat selection between the 2 study areas were apparent. Deer in the less-developed study area avoided development during the day and night, and selected habitat presumed to be used for foraging. Deer in the heavily developed study area selected habitat presumed to be used for thermal and security cover to a greater degree. Deer faced with higher densities of development avoided areas with more well pads during the day and responded neutrally or selected for these areas at night. Deer in both study areas showed a strong reduction in use of areas around well pads that were being drilled, which is the phase of energy development associated with the greatest amount of human presence, vehicle traffic, noise, and artificial light. Despite divergent habitat selection patterns, we found no effects of development on individual condition or reproduction and found no differences in any of the physiological or vital rate parameters measured at the population level. However, deer density and annual increases in density were higher in the low-development area. Thus, the recorded behavioral alterations did not appear to be associated with demographic or physiological costs measured at the individual level, possibly because populations are below winter range carrying capacity. Differences in population density between the 2 areas may be a result of a population decline prior to our study (when development was initiated) or area-specific differences in habitat quality, juvenile dispersal, or neonatal or juvenile survival; however, we lack the required data to contrast evidence for these mechanisms.\nGiven our results, it appears that deer can adjust to relatively high densities of well pads in the production phase (the period with markedly lower human activity on the landscape), provided there is sufficient vegetative and topographic cover afforded to them and populations are below carrying capacity. The strong reaction to wells in the drilling phase of development suggests mitigation efforts should focus on this activity and stage of development. Many of the wells in this area were directionally drilled from multiple-well pads, leading to a reduced footprint of disturbance, but were still related to strong behavioral responses. Our results also indicate the likely value of mitigation efforts focusing on reducing human activity (i.e., vehicle traffic, light, and noise). In combination, these findings indicate that attention should be paid to the spatial configuration of the final development footprint to ensure adequate cover. In our study system, minimizing the road network through landscape-level development planning would be valuable (i.e., exploring a maximum road density criteria). Lastly, our study highlights the importance of concomitant assessments of behavior and demography to provide a comprehensive understanding of how wildlife respond to habitat modification."
+  },
+  {
+    "objectID": "publications/articles/HarringtonGerber.html",
+    "href": "publications/articles/HarringtonGerber.html",
+    "title": "The Mysterious case of the disappering Javan Rhino: Uing clues from Rhinos everyday habits and hobbies to figure out how to help them recover",
+    "section": "",
+    "text": "Harrington, E. R., & Gerber, B. D. (2020). THE MYSTERIOUS CASE OF THE DISAPPEARING JAVAN RHINO: USING CLUES FROM RHINOS’EVERYDAY HABITS AND HOBBIES TO FIGURE OUT HOW TO HELP THEM RECOVER. People and Wildlife, 47."
+  },
+  {
+    "objectID": "publications/articles/HarringtonGerber.html#citation",
+    "href": "publications/articles/HarringtonGerber.html#citation",
+    "title": "The Mysterious case of the disappering Javan Rhino: Uing clues from Rhinos everyday habits and hobbies to figure out how to help them recover",
+    "section": "",
+    "text": "Harrington, E. R., & Gerber, B. D. (2020). THE MYSTERIOUS CASE OF THE DISAPPEARING JAVAN RHINO: USING CLUES FROM RHINOS’EVERYDAY HABITS AND HOBBIES TO FIGURE OUT HOW TO HELP THEM RECOVER. People and Wildlife, 47."
+  },
+  {
+    "objectID": "publications/articles/Ross2020.html",
+    "href": "publications/articles/Ross2020.html",
+    "title": "Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar",
+    "section": "",
+    "text": "Ross PH, Patel E, Ferguson B, Ravelijaona RN and others (2020) Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar. Endang Species Res 43:89-98. https://doi.org/10.3354/esr01055"
+  },
+  {
+    "objectID": "publications/articles/Ross2020.html#citation",
+    "href": "publications/articles/Ross2020.html#citation",
+    "title": "Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar",
+    "section": "",
+    "text": "Ross PH, Patel E, Ferguson B, Ravelijaona RN and others (2020) Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar. Endang Species Res 43:89-98. https://doi.org/10.3354/esr01055"
+  },
+  {
+    "objectID": "publications/articles/Ross2020.html#abstract",
+    "href": "publications/articles/Ross2020.html#abstract",
+    "title": "Assessment of the threatened carnivore community in the recently expanded rainforest protected area Anjanaharibe-Sud Special Reserve, Madagascar",
+    "section": "Abstract",
+    "text": "Abstract\nMadagascar is an island nation renowned for its biodiversity and species endemism, yet it is still largely understudied despite intense anthropogenic threats including forest loss and edge effects. Anjanaharibe-Sud Special Reserve is a recently expanded rainforest protected area that is lacking detailed surveys and assessments of the native carnivore community of the endemic family Eupleridae. To identify which terrestrial carnivores occupy the reserve and what anthropogenic disturbances and factors best explain their occurrence patterns, we deployed 35 motion-activated cameras to detect native and introduced carnivores. From November 2018 to February 2019, we collected 2918 unique capture events (all species) and confirmed the presence of 5 euplerids: Galidia elegans, Galidictis fasciata, Eupleres goudotii, Fossa fossana, and Cryptoprocta ferox. These results extend the known range of E. goudotii and G. fasciata. In the reserve, F. fossana and G. elegans were the most common and widespread native carnivores, while E. goudotii was the rarest. We highlight the negative impact of edge effects on G. fasciata and F. fossana and the threat posed by the free-ranging non-native carnivore C. familiaris. This study represents the first detailed survey and occurrence estimates of the carnivore community of this protected area, allowing comparison with other protected areas in Madagascar. Our empirical findings show that anthropogenic disturbance negatively impacts carnivore existence within the Anjanaharibe-Sud Special Reserve and provide important management recommendations for protecting the carnivore community and the co-occurring wildlife living within this area."
   }
 ]

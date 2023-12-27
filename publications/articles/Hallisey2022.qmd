@@ -1,0 +1,22 @@
+---
+title: "Estimating road mortality hotspots while accounting for imperfect detection: A case study with amphibians and reptiles"
+type: "article"
+author: "Noah Hallisey, Scott W Buchanan, Brian D Gerber, Liam S Corcoran, Nancy E Karraker"
+year: "2022"
+publication: "Land"
+doi: "https://doi.org/10.3390/land11050739"
+download: "../publications/Hallisey et al. 2022.pdf"
+toc: false
+categories:
+  - amphibian
+  - occupancy
+  - journal article
+---
+
+## Citation 
+
+> Hallisey N, Buchanan SW, Gerber BD, Corcoran LS, Karraker NE. Estimating Road Mortality Hotspots While Accounting for Imperfect Detection: A Case Study with Amphibians and Reptiles. *Land*. 2022; 11(5):739. https://doi.org/10.3390/land11050739
+
+## Abstract
+
+Wildlife road mortality tends to aggregate spatially at locations commonly referred to as road mortality hotspots. Predictive models can be used to identify locations appropriate for mitigation measures that reduce road mortality. However, the influence of imperfect detection (e.g., false absences) during road mortality surveys can lead to inaccurate or imprecise spatial patterns of road mortality hotspots and suboptimal implementation of mitigation measures. In this research, we used amphibians and reptiles as a case study to address imperfect detection issues when estimating the probability of road mortality hotspots using occupancy detection modeling. In addition, we determined the survey effort needed to achieve a high probability of detecting large roadkill events. We also assessed whether vehicle travel reductions associated with the COVID-19 pandemic travel restrictions led to reductions in road mortality. We conducted surveys at 48 sites throughout Rhode Island, USA, from 2019–2021. In total, we observed 657 carcasses representing 19 of Rhode Island’s 37 native species. Of the 19 native species, eight species of frogs, four species of salamanders, four species of snakes, and three species of turtles were observed. We documented a reduction in roadkill density and the proportion of dead versus live amphibians and reptiles in pandemic years (2020 and 2021), but we were unable to link reductions in roadkill density to reductions in traffic volume. Our model results indicated that large roadkill events were more likely to occur on roads near wetlands and with low traffic volume and were more likely to be detected as daily precipitation increased. We determined that there was a low probability of detecting large roadkill events, suggesting that imperfect detection influences detection of large roadkill events, and many were likely missed during our surveys. Therefore, we recommend using occupancy modeling to account for the influence of imperfect detection when estimating road mortality hotspots. This approach will more effectively guide the implementation of mitigation measures.

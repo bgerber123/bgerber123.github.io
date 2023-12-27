@@ -1,0 +1,25 @@
+---
+title: "Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease"
+type: "article"
+author: "Brian D Gerber, Brittany A Mosher, Larissa L Bailey, Erin Muths, Harry J Crockett, Sarah J Converse"
+year: "2023"
+publication: "Animal Conservation"
+doi: "https://doi.org/10.1111/acv.12877"
+materials: "https://doi.org/10.5281/zenodo.8240191"
+download: "../publications/Gerber et al. 2023.pdf"
+toc: false
+categories:
+  - disease ecology
+  - decision making
+  - amphibian
+  - occupancy
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D., Mosher, B.A., Bailey, L.L., Muths, E., Crockett, H.J. and Converse, S.J. (2023), Optimal management decisions are robust to unknown dynamics in an amphibian metapopulation plagued by disease. *Anim. Conserv.* https://doi.org/10.1111/acv.12877
+
+## Abstract
+
+Identifying conservation actions to recover threatened species can be challenging due to many ecological uncertainties. For example, major threats to a species' conservation are commonly known or suspected, but the specific impacts on population or metapopulation dynamics can be uncertain. This is frequently the case with emerging infectious diseases, including chytridiomycosis, a global driver of amphibian population declines caused by the fungal pathogens Batrachochytrium dendrobatidis (Bd) and Batrachochytrium salamandrivorans. While these diseases are known to cause amphibian declines and extirpations, the mechanisms of their landscape-scale spread are still largely unknown. Such uncertainty can lead to inaction which may jeopardize timely recovery of a species. Decision analysis is a pragmatic approach to making transparent and defensible decisions while dealing with uncertainties. We investigated whether optimal actions aimed at recovering boreal toad (Anaxyrus boreas boreas) metapopulations in the southern Rocky Mountains are robust to the unknown dynamics of Bd spread using value of information and regret analyses. Value of information is a decision-analytic tool for calculating the value of new information in terms of performance on management objectives, while regret measures the cost of acting under incorrect information. We further conducted a stochastic sensitivity analysis to identify the relative effects of metapopulation parameters on system dynamics. We found optimal actions were robust to the unknown dynamics of Bd spread. While boreal toad breeding occurrence is highly sensitive to Bd distribution, the optimal decision is not. Resolving the unknown dynamics of Bd spread would lead to a minimal gain of less than one breeding toad subpopulation at the end of 50 years, given the currently available management actions. Applying a decision-analytic framework coupled with value of information and regret analyses can help frame how uncertainties affect decisions in a way that empowers decision makers.

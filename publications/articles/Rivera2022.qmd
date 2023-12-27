@@ -1,0 +1,24 @@
+---
+title: "Rethinking habitat occupancy modeling and the role of diel activity in an anthropogenic world"
+type: "article"
+author: "Kimberly Rivera, Mason Fidino, Zach J Farris, Seth B Magle, Asia Murphy, Brian D Gerber"
+year: "2022"
+publication: "The American Naturalist"
+doi: "https://doi.org/10.1086/720714"
+download: "../publications/Rivera et al. 2022.pdf"
+toc: false
+categories:
+  - mammal
+  - Bayesian
+  - occupancy
+  - diel ecology
+  - journal article
+---
+
+## Citation 
+
+> Rethinking Habitat Occupancy Modeling and the Role of Diel Activity in an Anthropogenic World. Rivera, K, Fidino, M, Farris, zj, Magle, SB, Murohy, A, Gerber, BD. The American Naturalist 2022 200:4, 556-570
+
+## Abstract
+
+Current methods to model species habitat use through space and diel time are limited. Development of such models is critical when considering rapidly changing habitats where species are forced to adapt to anthropogenic change, often by shifting their diel activity across space. We use an occupancy modeling framework to specify the multistate diel occupancy model (MSDOM), which can evaluate species diel activity against continuous response variables that may impact diel activity within and across seasons or years. We used two case studies, fosas in Madagascar and coyotes in Chicago, Illinois, to conceptualize the application of this model and to quantify the impacts of human activity on species spatial use in diel time. We found support that both species varied their habitat use by diel states—in and across years and by human disturbance. Our results exemplify the importance of understanding animal diel activity patterns and how human disturbance can lead to temporal habitat loss. The MSDOM will allow more focused attention in ecology and evolution studies on the importance of the short temporal scale of diel time in animal-habitat relationships and lead to improved habitat conservation and management.
