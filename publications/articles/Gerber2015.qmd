@@ -1,0 +1,30 @@
+---
+title: "Optimal population prediction of sandhill crane recruitment based on climate-mediated habitat limitations"
+type: "article"
+author: "Brian Gerber, William Kendall, Mevin Hooten, James Dubovsky, Roderick Drewien"
+year: "2015"
+publication: "Journal of Animal Ecology"
+doi: "https://doi.org/10.1111/1365-2656.12370"
+download: "../publications/Dwyer et al 2016.pdf"
+toc: false
+categories:
+  - avian
+  - prediction 
+  - climate
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D., Kendall, W.L., Hooten, M.B., Dubovsky, J.A. and Drewien, R.C. (2015), Optimal population prediction of sandhill crane recruitment based on climate-mediated habitat limitations. *J Anim Ecol*, 84: 1299-1310. https://doi.org/10.1111/1365-2656.12370
+
+## Abstract
+
+Prediction is fundamental to scientific enquiry and application; however, ecologists tend to favour explanatory modelling. We discuss a predictive modelling framework to evaluate ecological hypotheses and to explore novel/unobserved environmental scenarios to assist conservation and management decision-makers. We apply this framework to develop an optimal predictive model for juvenile (<1 year old) sandhill crane Grus canadensis recruitment of the Rocky Mountain Population (RMP). We consider spatial climate predictors motivated by hypotheses of how drought across multiple time-scales and spring/summer weather affects recruitment.
+
+Our predictive modelling framework focuses on developing a single model that includes all relevant predictor variables, regardless of collinearity. This model is then optimized for prediction by controlling model complexity using a data-driven approach that marginalizes or removes irrelevant predictors from the model. Specifically, we highlight two approaches of statistical regularization, Bayesian least absolute shrinkage and selection operator (LASSO) and ridge regression.
+
+Our optimal predictive Bayesian LASSO and ridge regression models were similar and on average 37% superior in predictive accuracy to an explanatory modelling approach. Our predictive models confirmed a priori hypotheses that drought and cold summers negatively affect juvenile recruitment in the RMP. The effects of long-term drought can be alleviated by short-term wet spring–summer months; however, the alleviation of long-term drought has a much greater positive effect on juvenile recruitment. The number of freezing days and snowpack during the summer months can also negatively affect recruitment, while spring snowpack has a positive effect.
+
+Breeding habitat, mediated through climate, is a limiting factor on population growth of sandhill cranes in the RMP, which could become more limiting with a changing climate (i.e. increased drought). These effects are likely not unique to cranes. The alteration of hydrological patterns and water levels by drought may impact many migratory, wetland nesting birds in the Rocky Mountains and beyond.
+Generalizable predictive models (trained by out-of-sample fit and based on ecological hypotheses) are needed by conservation and management decision-makers. Statistical regularization improves predictions and provides a general framework for fitting models with a large number of predictors, even those with collinearity, to simultaneously identify an optimal predictive model while conducting rigorous Bayesian model selection. Our framework is important for understanding population dynamics under a changing climate and has direct applications for making harvest and habitat management decisions.

@@ -1,0 +1,23 @@
+---
+title: "Primates and cameras: Noninvasive sampling to make population-level inferences while accounting for imperfect detection"
+type: "article"
+author: "Brian D Gerber, Perry J Williams, Larissa L Bailey"
+year: "2014"
+publication: "International Journal of Primatology"
+doi: "https://doi.org/10.1007/s10764-014-9761-9"
+download: "../publications/Gerber et al 2014.pdf"
+toc: false
+categories:
+  - mammal
+  - occupancy
+  - camera trapping
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D., Williams, P.J. & Bailey, L.L. Primates and Cameras. *Int J Primatol* 35, 841–858 (2014). https://doi.org/10.1007/s10764-014-9761-9
+
+## Abstract
+
+Field-based primate studies often make population inferences using count-based indices (e.g., individuals/plot) or distance sampling; the first does not account for the probability of detection and thus can be biased, while the second requires large sample sizes to obtain precise estimates, which is difficult for many primate studies. We discuss photographic sampling and occupancy modeling to correct for imperfect detection when estimating system states and dynamics at the landscape level, specifically in relation to primate ecology. We highlight the flexibility of the occupancy framework and its many applications to studying low-density primate populations or species that are difficult to detect. We discuss relevant sampling and estimation procedures with special attention to data collection via photographic sampling. To provide tangible meaning to terminology and clarify subtleties, we use illustrative examples. Photographic sampling can have many advantages over observer-based sampling, especially when studying rare or elusive species. Combining photographic sampling with an occupancy framework allows inference to larger scales than is common in primate studies, addresses uncertainty due to the observation process, and allows researchers to examine questions of how landscape-level anthropogenic changes affect primate distributions.

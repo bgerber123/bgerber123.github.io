@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kerry Brown, Zach Farris, Gabriel Yesuf, Brian Gerber, Fidisoa Rasambainarivo, Sarah Karpanty, Marcella Kelly, Jean Claude Razafimahaimodison, Eileen Larney, Patricia Wright, Steig Johnson">
+<meta name="author" content="Brian Gerber, William Kendall, Mevin Hooten, James Dubovsky, Roderick Drewien">
 
-<title>Brian D. Gerber - Modeling co-occurrence between toxic prey and naïve predators in an incipient invasion</title>
+<title>Brian D. Gerber - Optimal population prediction of sandhill crane recruitment based on climate-mediated habitat limitations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -136,10 +136,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modeling co-occurrence between toxic prey and naïve predators in an incipient invasion</h1>
+<h1 class="title">Optimal population prediction of sandhill crane recruitment based on climate-mediated habitat limitations</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">mammal</div>
+    <div class="quarto-category">avian</div>
     <div class="quarto-category">prediction</div>
+    <div class="quarto-category">climate</div>
     <div class="quarto-category">journal article</div>
   </div>
   </div>
@@ -151,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Kerry Brown, Zach Farris, Gabriel Yesuf, Brian Gerber, Fidisoa Rasambainarivo, Sarah Karpanty, Marcella Kelly, Jean Claude Razafimahaimodison, Eileen Larney, Patricia Wright, Steig Johnson </p>
+             <p>Brian Gerber, William Kendall, Mevin Hooten, James Dubovsky, Roderick Drewien </p>
           </div>
   </div>
     
@@ -161,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
       <p class="doi">
-        <a href="https://doi.org/https://doi.org/10.1007/s10531-016-1198-3">https://doi.org/10.1007/s10531-016-1198-3</a>
+        <a href="https://doi.org/https://doi.org/10.1111/1365-2656.12370">https://doi.org/10.1111/1365-2656.12370</a>
       </p>
     </div>
   </div>
@@ -173,12 +174,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="citation" class="level2">
 <h2 class="anchored" data-anchor-id="citation">Citation</h2>
 <blockquote class="blockquote">
-<p>Brown, K.A., Farris, Z.J., Yesuf, G. et al.&nbsp;Modeling co-occurrence between toxic prey and naïve predators in an incipient invasion. <em>Biodivers Conserv</em> 25, 2723–2741 (2016). https://doi.org/10.1007/s10531-016-1198-3</p>
+<p>Gerber, B.D., Kendall, W.L., Hooten, M.B., Dubovsky, J.A. and Drewien, R.C. (2015), Optimal population prediction of sandhill crane recruitment based on climate-mediated habitat limitations. <em>J Anim Ecol</em>, 84: 1299-1310. https://doi.org/10.1111/1365-2656.12370</p>
 </blockquote>
 </section>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Biological invasions can represent important threats to endemic species, including those within the invaders’ food webs. The Asian common toad (Duttaphrynus melanostictus) was introduced to Madagascar in 2011. This introduction presents a potentially dangerous prey item to a relatively naïve, highly diverse endemic carnivore fauna. Using a multivariate niche modeling approach (background test), we assessed the predicted niche overlap between D. melanostictus and six endemic carnivores in eastern Madagascar. The overlap between this potential prey and predators was assessed on four environmental niche axes: temperature, precipitation, vegetation cover and elevation. Our results showed a mixture of niche overlap and divergence between D. melanostictus and the six carnivores for environmental axes tested. There was significant overlap with five of the carnivores on temperature and NDVI axes. On the precipitation axis, there was significant overlap between D. melanostictus with two species. Our results suggested that wide-ranging, locally rare carnivores may overlap extensively with D. melanostictus. The six carnivores that inhabit the eastern rainforest of Madagascar will likely share multiple, niche axes with this novel potential prey item. Species that eat the non-native common toad and are susceptible to its toxins are at conservation risk because their populations may not be robust enough to adapt quickly to this threat. We advocate closely monitoring these emerging interactions and suggest a preemptive conservation strategy for carnivores potentially at risk.</p>
+<p>Prediction is fundamental to scientific enquiry and application; however, ecologists tend to favour explanatory modelling. We discuss a predictive modelling framework to evaluate ecological hypotheses and to explore novel/unobserved environmental scenarios to assist conservation and management decision-makers. We apply this framework to develop an optimal predictive model for juvenile (&lt;1 year old) sandhill crane Grus canadensis recruitment of the Rocky Mountain Population (RMP). We consider spatial climate predictors motivated by hypotheses of how drought across multiple time-scales and spring/summer weather affects recruitment.</p>
+<p>Our predictive modelling framework focuses on developing a single model that includes all relevant predictor variables, regardless of collinearity. This model is then optimized for prediction by controlling model complexity using a data-driven approach that marginalizes or removes irrelevant predictors from the model. Specifically, we highlight two approaches of statistical regularization, Bayesian least absolute shrinkage and selection operator (LASSO) and ridge regression.</p>
+<p>Our optimal predictive Bayesian LASSO and ridge regression models were similar and on average 37% superior in predictive accuracy to an explanatory modelling approach. Our predictive models confirmed a priori hypotheses that drought and cold summers negatively affect juvenile recruitment in the RMP. The effects of long-term drought can be alleviated by short-term wet spring–summer months; however, the alleviation of long-term drought has a much greater positive effect on juvenile recruitment. The number of freezing days and snowpack during the summer months can also negatively affect recruitment, while spring snowpack has a positive effect.</p>
+<p>Breeding habitat, mediated through climate, is a limiting factor on population growth of sandhill cranes in the RMP, which could become more limiting with a changing climate (i.e.&nbsp;increased drought). These effects are likely not unique to cranes. The alteration of hydrological patterns and water levels by drought may impact many migratory, wetland nesting birds in the Rocky Mountains and beyond. Generalizable predictive models (trained by out-of-sample fit and based on ecological hypotheses) are needed by conservation and management decision-makers. Statistical regularization improves predictions and provides a general framework for fitting models with a large number of predictors, even those with collinearity, to simultaneously identify an optimal predictive model while conducting rigorous Bayesian model selection. Our framework is important for understanding population dynamics under a changing climate and has direct applications for making harvest and habitat management decisions.</p>
 
 
 </section>

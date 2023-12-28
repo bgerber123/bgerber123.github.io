@@ -1,0 +1,23 @@
+---
+title: "Recommended survey designs for occupancy modelling using motion-activated cameras: insights from empirical wildlife data"
+type: "article"
+author: "Graeme Shannon, Jesse S Lewis, Brian D Gerber"
+year: "2014"
+publication: "PeerJ"
+doi: "https://doi.org/10.7717/peerj.532"
+download: "../publications/Shannon et al 2014.pdf"
+toc: false
+categories:
+  - mammal
+  - occupancy
+  - camera trapping
+  - journal article
+---
+
+## Citation 
+
+> Shannon G, Lewis JS, Gerber BD. 2014. Recommended survey designs for occupancy modelling using motion-activated cameras: insights from empirical wildlife data. *PeerJ* 2:e532 https://doi.org/10.7717/peerj.532
+
+## Abstract
+
+Motion-activated cameras are a versatile tool that wildlife biologists can use for sampling wild animal populations to estimate species occurrence. Occupancy modelling provides a flexible framework for the analysis of these data; explicitly recognizing that given a species occupies an area the probability of detecting it is often less than one. Despite the number of studies using camera data in an occupancy framework, there is only limited guidance from the scientific literature about survey design trade-offs when using motion-activated cameras. A fuller understanding of these trade-offs will allow researchers to maximise available resources and determine whether the objectives of a monitoring program or research study are achievable. We use an empirical dataset collected from 40 cameras deployed across 160 km2 of the Western Slope of Colorado, USA to explore how survey effort (number of cameras deployed and the length of sampling period) affects the accuracy and precision (i.e., error) of the occupancy estimate for ten mammal and three virtual species. We do this using a simulation approach where species occupancy and detection parameters were informed by empirical data from motion-activated cameras. A total of 54 survey designs were considered by varying combinations of sites (10–120 cameras) and occasions (20–120 survey days). Our findings demonstrate that increasing total sampling effort generally decreases error associated with the occupancy estimate, but changing the number of sites or sampling duration can have very different results, depending on whether a species is spatially common or rare (occupancy = ψ) and easy or hard to detect when available (detection probability = p). For rare species with a low probability of detection (i.e., raccoon and spotted skunk) the required survey effort includes maximizing the number of sites and the number of survey days, often to a level that may be logistically unrealistic for many studies. For common species with low detection (i.e., bobcat and coyote) the most efficient sampling approach was to increase the number of occasions (survey days). However, for common species that are moderately detectable (i.e., cottontail rabbit and mule deer), occupancy could reliably be estimated with comparatively low numbers of cameras over a short sampling period. We provide general guidelines for reliably estimating occupancy across a range of terrestrial species (rare to common: ψ = 0.175–0.970, and low to moderate detectability: p = 0.003–0.200) using motion-activated cameras. Wildlife researchers/managers with limited knowledge of the relative abundance and likelihood of detection of a particular species can apply these guidelines regardless of location. We emphasize the importance of prior biological knowledge, defined objectives and detailed planning (e.g., simulating different study-design scenarios) for designing effective monitoring programs and research studies.

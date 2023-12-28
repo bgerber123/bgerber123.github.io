@@ -1,0 +1,24 @@
+---
+title: "Estimating the abundance of rare and elusive carnivores from photographic-sampling data when the population size is very small"
+type: "article"
+author: "Brian D Gerber, Jacob S Ivan, Kenneth P Burnham"
+year: "2014"
+publication: "Population Ecology"
+doi: "https://doi.org/10.1007/s10144-014-0431-8"
+download: "../publications/Gerber et al 2014b.pdf"
+toc: false
+categories:
+  - mammal
+  - mark recapture
+  - abundance
+  - camera trapping
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D., Ivan, J.S. & Burnham, K.P. Estimating the abundance of rare and elusive carnivores from photographic-sampling data when the population size is very small. *Popul Ecol* 56, 463–470 (2014). https://doi.org/10.1007/s10144-014-0431-8
+
+## Abstract
+
+Conservation and management agencies require accurate and precise estimates of abundance when considering the status of a species and the need for directed actions. Due to the proliferation of remote sampling cameras, there has been an increase in capture–recapture studies that estimate the abundance of rare and/or elusive species using closed capture–recapture estimators (C–R). However, data from these studies often do not meet necessary statistical assumptions. Common attributes of these data are (1) infrequent detections, (2) a small number of individuals detected, (3) long survey durations, and (4) variability in detection among individuals. We believe there is a need for guidance when analyzing this type of sparse data. We highlight statistical limitations of closed C–R estimators when data are sparse and suggest an alternative approach over the conventional use of the Jackknife estimator. Our approach aims to maximize the probability individuals are detected at least once over the entire sampling period, thus making the modeling of variability in the detection process irrelevant, estimating abundance accurately and precisely. We use simulations to demonstrate when using the unconditional-likelihood M0 (constant detection probability) closed C–R estimator with profile-likelihood confidence intervals provides reliable results even when detection varies by individual. If each individual in the population is detected on average of at least 2.5 times, abundance estimates are accurate and precise. When studies sample the same species at multiple areas or at the same area over time, we suggest sharing detection information across datasets to increase precision when estimating abundance. The approach suggested here should be useful for monitoring small populations of species that are difficult to detect.

@@ -1,0 +1,23 @@
+---
+title: "Spatial capture-recapture model performance with known small-mammal densities"
+type: "article"
+author: "Brian Gerber, Robert Parmenter"
+year: "2014"
+publication: "Ecological Applications"
+doi: "https://doi.org/10.1890/14-0960.1"
+download: "../publications/GerberParmenter2014.pdf"
+toc: false
+categories:
+  - mammal
+  - mark recapture
+  - abundance
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D. and Parmenter, R.R. (2015), Spatial capture–recapture model performance with known small-mammal densities. *Ecological Applications*, 25: 695-705. https://doi.org/10.1890/14-0960.1
+
+## Abstract
+
+Abundance and density of wild animals are important ecological metrics. However, estimating either is fraught with challenges; spatial capture–recapture (SCR) models are a relatively new class of models that attempt to ameliorate common challenges, providing a statistically coherent framework to estimate abundance and density. SCR models are increasingly being used in ecological and conservation studies of mammals worldwide, but have received little testing with empirical field data. We use data collected via a web and grid sampling design to evaluate the basic SCR model where small-mammal abundance (N) and density (D) are known (via exhaustive sampling). We fit the basic SCR model with and without a behavioral effect to 11 small-mammal populations for each sampling design using a Bayesian and likelihood SCR modeling approach. We compare SCR and ad hoc density estimators using frequentist performance measures. We found Bayesian and likelihood SCR estimates of density (D̂) and abundance (N̂) to be similar. We also found SCR models to have moderately poor frequentist coverage of D and N (45–73%), high deviation from truth (i.e., accuracy; D̂, 17–29%; N̂, 16–29%), and consistent negative bias across inferential paradigms, sampling designs, and models. With the trapping grid data, the basic SCR model generally performed more poorly than the best ad hoc estimator (behavior CR super-population estimate divided by the full mean maximum distance moved estimate of the effective trapping area), whereas with the trapping web data, the best-performing SCR model (null) was comparable to the best distance model. Relatively poor frequentist SCR coverage resulted from higher precision (SCR coefficients of variation [CVs] < ad hoc CVs); however D̂ and D were fairly well correlated (r2 range of 0.77–0.96). SCR's negative relative bias (i.e., average underestimation of the true density) suggests additional heterogeneity in detection and/or that small mammals maintained asymmetric home ranges. We suggest caution in the use of the basic SCR model when trapping animals in a sampling grid and more generally when small sample sizes necessitate the spatial scale parameter (σ) apply to all individuals. When possible, researchers should consider variation in detection and incorporate individual biological and/or ecological variation at the trap level when modeling σ.
