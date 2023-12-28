@@ -1,0 +1,22 @@
+---
+title: "Evaluating and improving count-based population inference: A case study from 31 years of monitoring Sandhill Cranes"
+type: "article"
+author: "Brian Gerber, William Kendall"
+year: "2017"
+publication: "Condor: Ornithological Applications"
+doi: "https://doi.org/10.1650/CONDOR-16-137.1"
+download: "../publications/GerberKendall2017.pdf"
+toc: false
+categories:
+  - avian
+  - abundance
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D. and Kendall, W.L. Evaluating and improving count-based population inference: A case study from 31 years of monitoring Sandhill Cranes, *The Condor*, Volume 119, Issue 2,2017, 191–206, https://doi.org/10.1650/CONDOR-16-137.1
+
+## Abstract
+
+Monitoring animal populations can be difficult. Limited resources often force monitoring programs to rely on unadjusted or smoothed counts as an index of abundance. Smoothing counts is commonly done using a moving-average estimator to dampen sampling variation. These indices are commonly used to inform management decisions, although their reliability is often unknown. We outline a process to evaluate the biological plausibility of annual changes in population counts and indices from a typical monitoring scenario and compare results with a hierarchical Bayesian time series (HBTS) model. We evaluated spring and fall counts, fall indices, and model-based predictions for the Rocky Mountain population (RMP) of Sandhill Cranes (Antigone canadensis) by integrating juvenile recruitment, harvest, and survival into a stochastic stage-based population model. We used simulation to evaluate population indices from the HBTS model and the commonly used 3-yr moving average estimator. We found counts of the RMP to exhibit biologically unrealistic annual change, while the fall population index was largely biologically realistic. HBTS model predictions suggested that the RMP changed little over 31 yr of monitoring, but the pattern depended on assumptions about the observational process. The HBTS model fall population predictions were biologically plausible if observed crane harvest mortality was compensatory up to natural mortality, as empirical evidence suggests. Simulations indicated that the predicted mean of the HBTS model was generally a more reliable estimate of the true population than population indices derived using a moving 3-yr average estimator. Practitioners could gain considerable advantages from modeling population counts using a hierarchical Bayesian autoregressive approach. Advantages would include: (1) obtaining measures of uncertainty; (2) incorporating direct knowledge of the observational and population processes; (3) accommodating missing years of data; and (4) forecasting population size.
