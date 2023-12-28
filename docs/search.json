@@ -957,5 +957,110 @@
     "title": "Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards",
     "section": "Abstract",
     "text": "Abstract\nPolitical borders and natural boundaries of wildlife populations seldom coincide, often to the detriment of conservation objectives. Transnational monitoring of endangered carnivores is rare, but is necessary for accurate population monitoring and coordinated conservation policies. We investigate the benefits of collaboratively monitoring the abundance and survival of the critically endangered Amur leopard, which occurs as a single transboundary population across China and Russia. Country-specific results overestimated abundance and were generally less precise compared to integrated monitoring estimates; the global population was similar in both years: 84 (70–108, 95% confidence interval). Uncertainty in country-specific annual survival estimates were approximately twice the integrated estimates of 0.82 (0.69–0.91, 95% confidence limits). This collaborative effort provided a better understanding of Amur leopard population dynamics, represented a first step in building trust, and lead to cooperative agreements to coordinate conservation policies."
+  },
+  {
+    "objectID": "publications/articles/GerberKendall2018.html",
+    "href": "publications/articles/GerberKendall2018.html",
+    "title": "Adaptive management of animal populations with significant unknowns and uncertainties: a case study",
+    "section": "",
+    "text": "Gerber, B.D. and Kendall, W.L. (2018), Adaptive management of animal populations with significant unknowns and uncertainties: a case study. Ecol Appl, 28: 1325-1341. https://doi.org/10.1002/eap.1734"
+  },
+  {
+    "objectID": "publications/articles/GerberKendall2018.html#citation",
+    "href": "publications/articles/GerberKendall2018.html#citation",
+    "title": "Adaptive management of animal populations with significant unknowns and uncertainties: a case study",
+    "section": "",
+    "text": "Gerber, B.D. and Kendall, W.L. (2018), Adaptive management of animal populations with significant unknowns and uncertainties: a case study. Ecol Appl, 28: 1325-1341. https://doi.org/10.1002/eap.1734"
+  },
+  {
+    "objectID": "publications/articles/GerberKendall2018.html#abstract",
+    "href": "publications/articles/GerberKendall2018.html#abstract",
+    "title": "Adaptive management of animal populations with significant unknowns and uncertainties: a case study",
+    "section": "Abstract",
+    "text": "Abstract\nConservation and management decision making in natural resources is challenging due to numerous uncertainties and unknowns, especially relating to understanding system dynamics. Adaptive resource management (ARM) is a formal process to making logical and transparent recurrent decisions when there are uncertainties about system dynamics. Despite wide recognition and calls for implementing adaptive natural resource management, applications remain limited. More common is a reactive approach to decision making, which ignores future system dynamics. This contrasts with ARM, which anticipates future dynamics of ecological process and management actions using a model-based framework. Practitioners may be reluctant to adopt ARM because of the dearth of comparative evaluations between ARM and more common approaches to making decisions. We compared the probability of meeting management objectives when managing a population under both types of decision frameworks, specifically in relation to typical uncertainties and unknowns. We use a population of Sandhill Cranes as our case study. We evaluate each decision process under varying levels of monitoring and ecological uncertainty, where the true underlying population dynamics followed a stochastic age-structured population model with environmentally driven vital rate density dependence. We found that the ARM framework outperformed the currently employed reactive decision framework to manage Sandhill Cranes in meeting the population objective across an array of scenarios. This was even the case when the candidate set of population models contained only naïve representations of the true population process. Under the reactive decision framework, we found little improvement in meeting the population objective even if monitoring uncertainty was eliminated. In contrast, if the population was monitored without error within the ARM framework, the population objective was always maintained, regardless of the population models considered. Contrary to expectation, we found that age-specific optimal harvest decisions are not always necessary to meet a population objective when population dynamics are age structured. Population managers can decrease risks and gain transparency and flexibility in management by adopting an ARM framework. If population monitoring data has high sampling variation and/or limited empirical knowledge is available for constructing mechanistic population models, ARM model sets should consider a range of mechanistic, descriptive, and predictive model types."
+  },
+  {
+    "objectID": "publications/articles/GerberConsLetter2018.html",
+    "href": "publications/articles/GerberConsLetter2018.html",
+    "title": "Identifying species conservation strategies to reduce disease‐associated declines",
+    "section": "",
+    "text": "Gerber, B.D., Converse, S.J., Muths, E., Crockett, H.J., Mosher, B.A. and Bailey, L.L. (2018), Identifying Species Conservation Strategies to Reduce Disease-Associated Declines. Conservation Letters, 11: e12393. https://doi.org/10.1111/conl.12393"
+  },
+  {
+    "objectID": "publications/articles/GerberConsLetter2018.html#citation",
+    "href": "publications/articles/GerberConsLetter2018.html#citation",
+    "title": "Identifying species conservation strategies to reduce disease‐associated declines",
+    "section": "",
+    "text": "Gerber, B.D., Converse, S.J., Muths, E., Crockett, H.J., Mosher, B.A. and Bailey, L.L. (2018), Identifying Species Conservation Strategies to Reduce Disease-Associated Declines. Conservation Letters, 11: e12393. https://doi.org/10.1111/conl.12393"
+  },
+  {
+    "objectID": "publications/articles/GerberConsLetter2018.html#abstract",
+    "href": "publications/articles/GerberConsLetter2018.html#abstract",
+    "title": "Identifying species conservation strategies to reduce disease‐associated declines",
+    "section": "Abstract",
+    "text": "Abstract\nEmerging infectious diseases (EIDs) are a salient threat to many animal taxa, causing local and global extinctions, altering communities and ecosystem function. The EID chytridiomycosis is a prominent driver of amphibian declines, which is caused by the fungal pathogen Batrachochytrium dendrobatidis (Bd). To guide conservation policy, we developed a predictive decision-analytic model that combines empirical knowledge of host-pathogen metapopulation dynamics with expert judgment regarding effects of management actions, to select from potential conservation strategies. We apply our approach to a boreal toad (Anaxyrus boreas boreas) and Bd system, identifying optimal strategies that balance tradeoffs in maximizing toad population persistence and landscape-level distribution, while considering costs. The most robust strategy is expected to reduce the decline of toad breeding sites from 53% to 21% over 50 years. Our findings are incorporated into management policy to guide conservation planning. Our online modeling application provides a template for managers of other systems challenged by EIDs."
+  },
+  {
+    "objectID": "publications/articles/NorthrupGerber2018.html",
+    "href": "publications/articles/NorthrupGerber2018.html",
+    "title": "A comment on priors for Bayesian occupancy models",
+    "section": "",
+    "text": "Northrup, JM, Gerber, BD. (2018). A comment on priors for Bayesian occupancy models. PLoSOne. 13(2):e0192819. https://doi.org/10.1371/journal.pone.0192819"
+  },
+  {
+    "objectID": "publications/articles/NorthrupGerber2018.html#citation",
+    "href": "publications/articles/NorthrupGerber2018.html#citation",
+    "title": "A comment on priors for Bayesian occupancy models",
+    "section": "",
+    "text": "Northrup, JM, Gerber, BD. (2018). A comment on priors for Bayesian occupancy models. PLoSOne. 13(2):e0192819. https://doi.org/10.1371/journal.pone.0192819"
+  },
+  {
+    "objectID": "publications/articles/NorthrupGerber2018.html#abstract",
+    "href": "publications/articles/NorthrupGerber2018.html#abstract",
+    "title": "A comment on priors for Bayesian occupancy models",
+    "section": "Abstract",
+    "text": "Abstract\nUnderstanding patterns of species occurrence and the processes underlying these patterns is fundamental to the study of ecology. One of the more commonly used approaches to investigate species occurrence patterns is occupancy modeling, which can account for imperfect detection of a species during surveys. In recent years, there has been a proliferation of Bayesian modeling in ecology, which includes fitting Bayesian occupancy models. The Bayesian framework is appealing to ecologists for many reasons, including the ability to incorporate prior information through the specification of prior distributions on parameters. While ecologists almost exclusively intend to choose priors so that they are “uninformative” or “vague”, such priors can easily be unintentionally highly informative. Here we report on how the specification of a “vague” normally distributed (i.e., Gaussian) prior on coefficients in Bayesian occupancy models can unintentionally influence parameter estimation. Using both simulated data and empirical examples, we illustrate how this issue likely compromises inference about species-habitat relationships. While the extent to which these informative priors influence inference depends on the data set, researchers fitting Bayesian occupancy models should conduct sensitivity analyses to ensure intended inference, or employ less commonly used priors that are less informative (e.g., logistic or t prior distributions). We provide suggestions for addressing this issue in occupancy studies, and an online tool for exploring this issue under different contexts."
+  },
+  {
+    "objectID": "publications/articles/Setiawan2018.html",
+    "href": "publications/articles/Setiawan2018.html",
+    "title": "Preventing global extinction of the Javan rhino: tsunami risk and future conservation direction",
+    "section": "",
+    "text": "Setiawan, R., Gerber, B.D., Rahmat, U.M., Daryan, D., Firdaus, A.Y., Haryono, M., Khairani, K.O., Kurniawan, Y., Long, B., Lyet, A., Muhiban, M., Mahmud, R., Muhtarom, A., Purastuti, E., Ramono, W.S., Subrata, D. and Sunarto, S. (2018), Preventing Global Extinction of the Javan Rhino: Tsunami Risk and Future Conservation Direction. Conservation Letters, 11: e12366. https://doi.org/10.1111/conl.12366"
+  },
+  {
+    "objectID": "publications/articles/Setiawan2018.html#citation",
+    "href": "publications/articles/Setiawan2018.html#citation",
+    "title": "Preventing global extinction of the Javan rhino: tsunami risk and future conservation direction",
+    "section": "",
+    "text": "Setiawan, R., Gerber, B.D., Rahmat, U.M., Daryan, D., Firdaus, A.Y., Haryono, M., Khairani, K.O., Kurniawan, Y., Long, B., Lyet, A., Muhiban, M., Mahmud, R., Muhtarom, A., Purastuti, E., Ramono, W.S., Subrata, D. and Sunarto, S. (2018), Preventing Global Extinction of the Javan Rhino: Tsunami Risk and Future Conservation Direction. Conservation Letters, 11: e12366. https://doi.org/10.1111/conl.12366"
+  },
+  {
+    "objectID": "publications/articles/Setiawan2018.html#abstract",
+    "href": "publications/articles/Setiawan2018.html#abstract",
+    "title": "Preventing global extinction of the Javan rhino: tsunami risk and future conservation direction",
+    "section": "Abstract",
+    "text": "Abstract\nThe Javan rhino (Rhinoceros sondaicus) is one of the most threatened mammals on Earth. The only remaining individuals live as part of a small population isolated in a single protected area, Ujung Kulon National Park, Java, Indonesia. Despite almost a century of studies, little is known about the factors that affect Javan rhino demography and distribution. National park officials require such information to identify conservation strategies and track the success and failures of these efforts; translocating selected individuals to establish a second population has been considered, but the risks must be weighed. We show that the 2013 global population of Javan rhinos was 62 individuals, which is likely near the site’s carrying capacity. Our analysis of rhino distribution indicates that tsunamis are a significant risk to the species in Ujung Kulon, justifying the risks of establishing additional populations. Continued individual-based monitoring is needed to guide future translocation decisions."
+  },
+  {
+    "objectID": "publications/articles/Setash2017.html",
+    "href": "publications/articles/Setash2017.html",
+    "title": "A biogeographical perspective on the variation in mouse lemur density throughout Madagascar",
+    "section": "",
+    "text": "Setash, C.M., Zohdy, S., Gerber, B.D. and Karanewsky, C.J. (2017), A biogeographical perspective on the variation in mouse lemur density throughout Madagascar. Mam Rev, 47: 212-229. https://doi.org/10.1111/mam.12093"
+  },
+  {
+    "objectID": "publications/articles/Setash2017.html#citation",
+    "href": "publications/articles/Setash2017.html#citation",
+    "title": "A biogeographical perspective on the variation in mouse lemur density throughout Madagascar",
+    "section": "",
+    "text": "Setash, C.M., Zohdy, S., Gerber, B.D. and Karanewsky, C.J. (2017), A biogeographical perspective on the variation in mouse lemur density throughout Madagascar. Mam Rev, 47: 212-229. https://doi.org/10.1111/mam.12093"
+  },
+  {
+    "objectID": "publications/articles/Setash2017.html#abstract",
+    "href": "publications/articles/Setash2017.html#abstract",
+    "title": "A biogeographical perspective on the variation in mouse lemur density throughout Madagascar",
+    "section": "Abstract",
+    "text": "Abstract\nMadagascar is home to the smallest primates in the world, the mouse lemurs (Microcebus species). Twenty-four species of mouse lemur are currently recognised and are found in variable ecosystems, from dry forests and spiny deserts to humid forests. Due to their widespread distribution and the large number of sympatric species, mouse lemurs can be used as a model to understand the linkages among species richness, population density, and habitat. As all lemurs are threatened by habitat loss and fragmentation, this information can also be used to inform conservation management. We hypothesise that on an island-wide scale, we will find higher population densities in western dry forests than in eastern humid forests because the western dry forests exhibit lower species richness, more sympatric habitat use, and lower resource stability than the eastern humid forests. We conducted a literature review of population density estimates of known mouse lemur species, and used those data to conduct a meta-analysis and estimate overall average population density by geographic region.\nOur findings suggest that mouse lemur species living in western dry forest generally exhibit higher densities than those in eastern humid forests. This may be partly explained by higher habitat fragmentation in western dry forests, where species co-occur, but is likely to be a function of the magnitude and variability in seasonally available resources in each forest type. Higher seasonality results in less constant food availability and lower levels of environmental predictability, fostering species capable of coping with environmental change and maintaining high densities throughout periods of resource paucity.\nOur study highlights the importance of conducting Microcebus population density research that adheres to standardised methodological approaches. We point to the need for population density estimates for several species for which data are lacking. Such knowledge is important to assess the conservation status of these species, but also to enhance our ability to identify the macro-biogeographical and local ecological drivers of interspecific and intraspecific variability in population density."
   }
 ]

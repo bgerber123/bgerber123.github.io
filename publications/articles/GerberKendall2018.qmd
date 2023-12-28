@@ -1,0 +1,23 @@
+---
+title: "Adaptive management of animal populations with significant unknowns and uncertainties: a case study"
+type: "article"
+author: "Brian D Gerber, William L Kendall"
+year: "2018"
+publication: "Ecological Applications"
+doi: "https://doi.org/10.1002/eap.1734"
+download: "../publications/GerberKendall2018.pdf"
+toc: false
+categories:
+  - decision making
+  - avian
+  - population dynamics
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D. and Kendall, W.L. (2018), Adaptive management of animal populations with significant unknowns and uncertainties: a case study. *Ecol Appl*, 28: 1325-1341. https://doi.org/10.1002/eap.1734
+
+## Abstract
+
+Conservation and management decision making in natural resources is challenging due to numerous uncertainties and unknowns, especially relating to understanding system dynamics. Adaptive resource management (ARM) is a formal process to making logical and transparent recurrent decisions when there are uncertainties about system dynamics. Despite wide recognition and calls for implementing adaptive natural resource management, applications remain limited. More common is a reactive approach to decision making, which ignores future system dynamics. This contrasts with ARM, which anticipates future dynamics of ecological process and management actions using a model-based framework. Practitioners may be reluctant to adopt ARM because of the dearth of comparative evaluations between ARM and more common approaches to making decisions. We compared the probability of meeting management objectives when managing a population under both types of decision frameworks, specifically in relation to typical uncertainties and unknowns. We use a population of Sandhill Cranes as our case study. We evaluate each decision process under varying levels of monitoring and ecological uncertainty, where the true underlying population dynamics followed a stochastic age-structured population model with environmentally driven vital rate density dependence. We found that the ARM framework outperformed the currently employed reactive decision framework to manage Sandhill Cranes in meeting the population objective across an array of scenarios. This was even the case when the candidate set of population models contained only naïve representations of the true population process. Under the reactive decision framework, we found little improvement in meeting the population objective even if monitoring uncertainty was eliminated. In contrast, if the population was monitored without error within the ARM framework, the population objective was always maintained, regardless of the population models considered. Contrary to expectation, we found that age-specific optimal harvest decisions are not always necessary to meet a population objective when population dynamics are age structured. Population managers can decrease risks and gain transparency and flexibility in management by adopting an ARM framework. If population monitoring data has high sampling variation and/or limited empirical knowledge is available for constructing mechanistic population models, ARM model sets should consider a range of mechanistic, descriptive, and predictive model types.
