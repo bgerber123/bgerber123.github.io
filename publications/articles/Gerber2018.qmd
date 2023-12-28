@@ -1,0 +1,23 @@
+---
+title: "Accounting for location uncertainty in azimuthal telemetry data improves ecological inference"
+type: "article"
+author: "Brian D Gerber, Mevin B Hooten, Christopher P Peck, Mindy B Rice, James H Gammonley, Anthony D Apa, Amy J Davis"
+year: "2018"
+publication: "Movement Ecology"
+doi: "https://doi.org/10.1111/acv.12420"
+download: "../publications/Gerber et al. 2018.pdf"
+toc: false
+categories:
+  - mammal
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B.D., Hooten, M.B., Peck, C.P. et al. Accounting for location uncertainty in azimuthal telemetry data improves ecological inference. *Mov Ecol* 6, 14 (2018). https://doi.org/10.1186/s40462-018-0129-1
+
+## Abstract
+
+Characterizing animal space use is critical for understanding ecological relationships. Animal telemetry technology has revolutionized the fields of ecology and conservation biology by providing high quality spatial data on animal movement. Radio-telemetry with very high frequency (VHF) radio signals continues to be a useful technology because of its low cost, miniaturization, and low battery requirements. Despite a number of statistical developments synthetically integrating animal location estimation and uncertainty with spatial process models using satellite telemetry data, we are unaware of similar developments for azimuthal telemetry data. As such, there are few statistical options to handle these unique data and no synthetic framework for modeling animal location uncertainty and accounting for it in ecological models.
+
+We developed a hierarchical modeling framework to provide robust animal location estimates from one or more intersecting or non-intersecting azimuths. We used our azimuthal telemetry model (ATM) to account for azimuthal uncertainty with covariates and propagate location uncertainty into spatial ecological models. We evaluate the ATM with commonly used estimators (Lenth (1981) maximum likelihood and M-Estimators) using simulation. We also provide illustrative empirical examples, demonstrating the impact of ignoring location uncertainty within home range and resource selection analyses. We further use simulation to better understand the relationship among location uncertainty, spatial covariate autocorrelation, and resource selection inference.

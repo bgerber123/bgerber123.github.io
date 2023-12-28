@@ -775,5 +775,124 @@
     "title": "Exploring and interpreting spatiotemporal interactions between native and invasive carnivores across a gradient of rainforest degradation",
     "section": "Abstract",
     "text": "Abstract\nStudies of elusive carnivores often rely on passive sampling when investigating either spatial or temporal interactions. However, inference on behavioral mechanisms are usually lacking. We present an analysis that combines previously published spatial co-occurrence estimates and temporal kernel density estimates to explore spatiotemporal interspecific interactions. We do so by deriving a spatiotemporal value (STV) that is a relative measure of potential interaction in both niche dimensions, across a gradient of degradation, for rainforest carnivore pairs in Madagascar. We also use a conceptual framework to provide insight into the potential behavioral mechanisms of habitat selection. Of the six native and three invasive carnivores, we estimate the spatiotemporal interactions for twelve pairings, which range from no spatial/temporal relationship (n = 5) to spatiotemporal aggregation or segregation (n = 7). We visualized these spatiotemporal interactions along a fragmentation gradient and demonstrate that these interactions are not static, as STV overlap increases with increasing anthropogenic disturbance. Of the three invasive carnivores (free-ranging dogs Canis familiaris, cats Felis species, and small Indian civets Viverricula indica) the latter had the highest number of spatial occurrence (n = 4) and spatiotemporal overlap (n = 4) relationships with native carnivores. Our results highlight the potential for increasing direct and indirect interactions between native and invasive species as forest degradation and invasive predators increase. Our approach allows us to better understand adaptive behaviors, plasticity in temporal activity, community assemblage, and to develop targeted conservation strategies to manage ecological communities in rapidly changing ecosystems."
+  },
+  {
+    "objectID": "publications/articles/GerberWilliams2020.html",
+    "href": "publications/articles/GerberWilliams2020.html",
+    "title": "Decision-Making and Monitoring Strategies in Natural Resource Management and Conservation",
+    "section": "",
+    "text": "Gerber, B. D., & Williams, P. J. (2020). Decision-Making and Monitoring Strategies in Natural Resource Management and Conservation. In Terrestrial Ecosystems and Biodiversity (pp. 81-86). CRC Press."
+  },
+  {
+    "objectID": "publications/articles/GerberWilliams2020.html#citation",
+    "href": "publications/articles/GerberWilliams2020.html#citation",
+    "title": "Decision-Making and Monitoring Strategies in Natural Resource Management and Conservation",
+    "section": "",
+    "text": "Gerber, B. D., & Williams, P. J. (2020). Decision-Making and Monitoring Strategies in Natural Resource Management and Conservation. In Terrestrial Ecosystems and Biodiversity (pp. 81-86). CRC Press."
+  },
+  {
+    "objectID": "publications/articles/GerberNorthrup2020.html",
+    "href": "publications/articles/GerberNorthrup2020.html",
+    "title": "Improving spatial predictions of animal resource selection to guide conservation decision making",
+    "section": "",
+    "text": "Gerber, B. D., and J. M. Northrup. 2020. Improving spatial predictions of animal resource selection to guide conservation decision making. Ecology 101(3):e02953. 10.1002/ecy.2953"
+  },
+  {
+    "objectID": "publications/articles/GerberNorthrup2020.html#citation",
+    "href": "publications/articles/GerberNorthrup2020.html#citation",
+    "title": "Improving spatial predictions of animal resource selection to guide conservation decision making",
+    "section": "",
+    "text": "Gerber, B. D., and J. M. Northrup. 2020. Improving spatial predictions of animal resource selection to guide conservation decision making. Ecology 101(3):e02953. 10.1002/ecy.2953"
+  },
+  {
+    "objectID": "publications/articles/GerberNorthrup2020.html#abstract",
+    "href": "publications/articles/GerberNorthrup2020.html#abstract",
+    "title": "Improving spatial predictions of animal resource selection to guide conservation decision making",
+    "section": "Abstract",
+    "text": "Abstract\nResource selection is often studied by ecologists interested in the environmental drivers of animal space use and movement. These studies commonly produce spatial predictions, which are of considerable utility to resource managers making habitat and population management decisions. It is thus paramount that predictions from resource selection studies are accurate. We evaluated model building and fitting strategies for optimizing resource selection function predictions in a use-availability framework. We did so by simulating low- and high-intensity spatial sampling data that respectively predicted study area and movement-based resource selection. We compared one of the most commonly used forms of statistical regularization, Akaike’s Information Criterion (AIC), with the lesser used least absolute shrinkage and selection operator (LASSO). LASSO predictions were less variable and more accurate than AIC and were often best when considering additive and interacting variables. We explicitly demonstrate the predictive equivalence using the logistic and Poisson likelihoods and how it is lost when the available sample is too small. Regardless of modeling approach, interpreting the sign of coefficients as a measure of selection can be misleading when optimizing for prediction."
+  },
+  {
+    "objectID": "publications/articles/Baden2020.html",
+    "href": "publications/articles/Baden2020.html",
+    "title": "Sex-segregated range use by black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park, Madagascar",
+    "section": "",
+    "text": "Baden, A. L., Oliveras, J., & Gerber, B. D. (2020). Sex-segregated range use by black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park, Madagascar. Folia Primatologica, 92(1), 12-34."
+  },
+  {
+    "objectID": "publications/articles/Baden2020.html#citation",
+    "href": "publications/articles/Baden2020.html#citation",
+    "title": "Sex-segregated range use by black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park, Madagascar",
+    "section": "",
+    "text": "Baden, A. L., Oliveras, J., & Gerber, B. D. (2020). Sex-segregated range use by black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park, Madagascar. Folia Primatologica, 92(1), 12-34."
+  },
+  {
+    "objectID": "publications/articles/Baden2020.html#abstract",
+    "href": "publications/articles/Baden2020.html#abstract",
+    "title": "Sex-segregated range use by black-and-white ruffed lemurs (Varecia variegata) in Ranomafana National Park, Madagascar",
+    "section": "Abstract",
+    "text": "Abstract\nRanging behavior is one important strategy by which nonhuman primates obtain access to resources critical to their biological maintenance and reproductive success. As most primates live in permanent social groups, their members must balance the benefits of group living with the costs of intragroup competition for resources. However, some taxa live in more spatiotemporally flexible social groups, whose members modify patterns of association and range use as a method to mitigate these costs. Here, we describe the range use of one such taxon, the black-and-white ruffed lemur (Varecia variegata), at an undisturbed primary rain forest site in Ranomafana National Park, Madagascar, and characterize sex differences in annual home range area, overlap, and daily distances traveled. Moreover, we characterize seasonal variability in range use and ask whether ranging behaviors can be explained by either climatic or reproductive seasonality. We found that females used significantly larger home ranges than males, though sexes shared equal and moderate levels of home range overlap. Overall, range use did not vary across seasons, although within sexes, male range use varied significantly with climate. Moreover, daily path length was best predicted by day length, female reproductive state, and sex, but was unrelated to climate variables. While the patterns of range use and spatial association presented here share some similarities with “bisexually bonded” community models described for chimpanzees, we argue that ruffed lemurs best conform to a “nuclear neighborhood” community model wherein nuclear (core) groups share the highest levels of home range overlap, and where these groups cluster spatially into adjacent “neighborhoods” within the larger, communally defended territory."
+  },
+  {
+    "objectID": "publications/articles/Gerber2019.html",
+    "href": "publications/articles/Gerber2019.html",
+    "title": "Extreme site fidelity as an optimal strategy in an unpredictable and homogeneous environment",
+    "section": "",
+    "text": "Gerber BD, Hooten MB, Peck CP, et al. Extreme site fidelity as an optimal strategy in an unpredictable and homogeneous environment. Funct Ecol. 2019; 33: 1695–1707. https://doi.org/10.1111/1365-2435.13390"
+  },
+  {
+    "objectID": "publications/articles/Gerber2019.html#citation",
+    "href": "publications/articles/Gerber2019.html#citation",
+    "title": "Extreme site fidelity as an optimal strategy in an unpredictable and homogeneous environment",
+    "section": "",
+    "text": "Gerber BD, Hooten MB, Peck CP, et al. Extreme site fidelity as an optimal strategy in an unpredictable and homogeneous environment. Funct Ecol. 2019; 33: 1695–1707. https://doi.org/10.1111/1365-2435.13390"
+  },
+  {
+    "objectID": "publications/articles/Gerber2019.html#abstract",
+    "href": "publications/articles/Gerber2019.html#abstract",
+    "title": "Extreme site fidelity as an optimal strategy in an unpredictable and homogeneous environment",
+    "section": "Abstract",
+    "text": "Abstract\nAnimal site fidelity structures space use, population demography and ultimately gene flow. Understanding the adaptive selection for site fidelity patterns provides a mechanistic understanding to both spatial and population processes. This can be achieved by linking space use with environmental variability (spatial and temporal) and demographic parameters. However, rarely is the environmental context that drives the selection for site fidelity behaviour fully considered. We use ecological theory to understand whether the spatial and temporal variability in breeding site quality can explain the site fidelity behaviour and demographic patterns of Gunnison sage-grouse (Centrocercus minimus). We examined female site fidelity patterns across multiple spatial scales: proximity of consecutive year nest locations, space-use overlap within and across the breeding and brooding seasons, and fidelity to a breeding patch. We also examined the spatial and temporal variability in nest, chick, juvenile and adult survival.\nWe found Gunnison sage-grouse to be site faithful to their breeding patch, area of use within the patch and generally where they nest, suggesting an “Always Stay” site fidelity strategy. This is an optimal evolutionary strategy when site quality is unpredictable. Further, we found limited spatial variability in survival within age groups, suggesting little demographic benefit to moving among patches. We suggest Gunnison sage-grouse site fidelity is driven by the unpredictability of predation in a relatively homogeneous environment, the lack of benefits and likely costs to moving across landscape patches and leaving known lek and breeding/brooding areas.\nSpace use and demography are commonly studied separately. More so, site fidelity patterns are rarely framed in the context of ecological theory, beyond questions related to the win-stay:lose-switch rule. To move beyond describing patterns and understand the adaptive selection driving species movements and their demographic consequences require integrating movement, demography and environmental variability in a synthetic framework. Site fidelity theory provides a coherent framework to simultaneously investigate the spatial and population ecology of animal populations. Using it to frame ecological questions will lead to a more mechanistic understanding of animal movement, spatial population structuring and meta-population dynamics."
+  },
+  {
+    "objectID": "publications/articles/Murphy2019.html",
+    "href": "publications/articles/Murphy2019.html",
+    "title": "Making the most of sparse data to estimate density of a rare and threatened species: a case study with the fosa, a little‐studied Malagasy carnivore",
+    "section": "",
+    "text": "Murphy, A., Gerber, B.D., Farris, Z.J., Karpanty, S., Ratelolahy, F. and Kelly, M.J. (2018), Making the most of sparse data to estimate density of a rare and threatened species: a case study with the fosa, a little-studied Malagasy carnivore. Anim Conserv, 21: 496-504. https://doi.org/10.1111/acv.12420"
+  },
+  {
+    "objectID": "publications/articles/Murphy2019.html#citation",
+    "href": "publications/articles/Murphy2019.html#citation",
+    "title": "Making the most of sparse data to estimate density of a rare and threatened species: a case study with the fosa, a little‐studied Malagasy carnivore",
+    "section": "",
+    "text": "Murphy, A., Gerber, B.D., Farris, Z.J., Karpanty, S., Ratelolahy, F. and Kelly, M.J. (2018), Making the most of sparse data to estimate density of a rare and threatened species: a case study with the fosa, a little-studied Malagasy carnivore. Anim Conserv, 21: 496-504. https://doi.org/10.1111/acv.12420"
+  },
+  {
+    "objectID": "publications/articles/Murphy2019.html#abstract",
+    "href": "publications/articles/Murphy2019.html#abstract",
+    "title": "Making the most of sparse data to estimate density of a rare and threatened species: a case study with the fosa, a little‐studied Malagasy carnivore",
+    "section": "Abstract",
+    "text": "Abstract\nSparse detections in camera trap surveys commonly hinder density estimation for threatened species. By combining detections across multiple surveys, or using informative priors in Bayesian model fitting, researchers can improve parameter estimation from sparse capture–recapture data. Using a spatial mark–resight model that incorporates site-level heterogeneity in the spatial scale parameter via a hierarchical process and prior information, we estimated the density of a threatened carnivore (fosa, Cryptoprocta ferox) from multiple sparse datasets collected during extensive camera trapping surveys in northeastern Madagascar (2008–2015). Our objectives were to estimate density for six sites, examine the response of fosa density and movement to habitat degradation, monitor annual density trends across 7 years at two sites, and estimate fosa abundance in the Makira–Masoala protected area complex. We obtained a mean of 16.1 (se = 0.52; range = 2–49) fosa detections and three observers identified a mean of 3.62 (se = 0.09; range = 1–8) marked individuals per survey. Fosa daily baseline encounter rate was very low (λ0 = 0.004; 0.003–0.006) and density/movement estimates were similar across forest types. Density estimates at resurveyed sites suggested annual variability in density, with estimates trending lower during the final surveys [e.g. D = 0.39 (0.14–1.11) versus 0.08 (0.05–0.31) individuals per km2]. We estimated fosa abundance across the Makira–Masoala region to be 1061 (95% HPDI: 596–1780) adult individuals. On the basis of our estimate and the size of the region, we believe Makira–Masoala harbors a significant portion of the global fosa population. The conservation and management of rare species is commonly limited due to lack of population estimates. By combining detections across surveys, we overcame estimation issues and obtained valuable information on a threatened carnivore, allowing us to better assess its status and prioritize conservation actions. We advocate for practical use of sparse datasets for such data-deficient species."
+  },
+  {
+    "objectID": "publications/articles/Gerber2018.html",
+    "href": "publications/articles/Gerber2018.html",
+    "title": "Accounting for location uncertainty in azimuthal telemetry data improves ecological inference",
+    "section": "",
+    "text": "Gerber, B.D., Hooten, M.B., Peck, C.P. et al. Accounting for location uncertainty in azimuthal telemetry data improves ecological inference. Mov Ecol 6, 14 (2018). https://doi.org/10.1186/s40462-018-0129-1"
+  },
+  {
+    "objectID": "publications/articles/Gerber2018.html#citation",
+    "href": "publications/articles/Gerber2018.html#citation",
+    "title": "Accounting for location uncertainty in azimuthal telemetry data improves ecological inference",
+    "section": "",
+    "text": "Gerber, B.D., Hooten, M.B., Peck, C.P. et al. Accounting for location uncertainty in azimuthal telemetry data improves ecological inference. Mov Ecol 6, 14 (2018). https://doi.org/10.1186/s40462-018-0129-1"
+  },
+  {
+    "objectID": "publications/articles/Gerber2018.html#abstract",
+    "href": "publications/articles/Gerber2018.html#abstract",
+    "title": "Accounting for location uncertainty in azimuthal telemetry data improves ecological inference",
+    "section": "Abstract",
+    "text": "Abstract\nCharacterizing animal space use is critical for understanding ecological relationships. Animal telemetry technology has revolutionized the fields of ecology and conservation biology by providing high quality spatial data on animal movement. Radio-telemetry with very high frequency (VHF) radio signals continues to be a useful technology because of its low cost, miniaturization, and low battery requirements. Despite a number of statistical developments synthetically integrating animal location estimation and uncertainty with spatial process models using satellite telemetry data, we are unaware of similar developments for azimuthal telemetry data. As such, there are few statistical options to handle these unique data and no synthetic framework for modeling animal location uncertainty and accounting for it in ecological models.\nWe developed a hierarchical modeling framework to provide robust animal location estimates from one or more intersecting or non-intersecting azimuths. We used our azimuthal telemetry model (ATM) to account for azimuthal uncertainty with covariates and propagate location uncertainty into spatial ecological models. We evaluate the ATM with commonly used estimators (Lenth (1981) maximum likelihood and M-Estimators) using simulation. We also provide illustrative empirical examples, demonstrating the impact of ignoring location uncertainty within home range and resource selection analyses. We further use simulation to better understand the relationship among location uncertainty, spatial covariate autocorrelation, and resource selection inference."
   }
 ]
