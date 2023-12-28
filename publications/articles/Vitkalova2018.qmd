@@ -8,8 +8,10 @@ doi: "https://doi.org/10.1111/conl.12574"
 download: "../publications/Vitkalova et al. 2018.pdf"
 toc: false
 categories:
-  - mark-recapture
+  - mark recapture
   - survival
+  - camera trapping
+  - population
   - mammal
   - journal article
 ---
