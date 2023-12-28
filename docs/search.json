@@ -894,5 +894,68 @@
     "title": "Accounting for location uncertainty in azimuthal telemetry data improves ecological inference",
     "section": "Abstract",
     "text": "Abstract\nCharacterizing animal space use is critical for understanding ecological relationships. Animal telemetry technology has revolutionized the fields of ecology and conservation biology by providing high quality spatial data on animal movement. Radio-telemetry with very high frequency (VHF) radio signals continues to be a useful technology because of its low cost, miniaturization, and low battery requirements. Despite a number of statistical developments synthetically integrating animal location estimation and uncertainty with spatial process models using satellite telemetry data, we are unaware of similar developments for azimuthal telemetry data. As such, there are few statistical options to handle these unique data and no synthetic framework for modeling animal location uncertainty and accounting for it in ecological models.\nWe developed a hierarchical modeling framework to provide robust animal location estimates from one or more intersecting or non-intersecting azimuths. We used our azimuthal telemetry model (ATM) to account for azimuthal uncertainty with covariates and propagate location uncertainty into spatial ecological models. We evaluate the ATM with commonly used estimators (Lenth (1981) maximum likelihood and M-Estimators) using simulation. We also provide illustrative empirical examples, demonstrating the impact of ignoring location uncertainty within home range and resource selection analyses. We further use simulation to better understand the relationship among location uncertainty, spatial covariate autocorrelation, and resource selection inference."
+  },
+  {
+    "objectID": "publications/articles/Wampole2023.html",
+    "href": "publications/articles/Wampole2023.html",
+    "title": "Forest carnivores living on the edge with invasive predators",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J., Razafy, P. and Gerber, B.D. (2023), Forest carnivores living on the edge with invasive predators. Anim. Conserv. https://doi.org/10.1111/acv.12926"
+  },
+  {
+    "objectID": "publications/articles/Wampole2023.html#citation",
+    "href": "publications/articles/Wampole2023.html#citation",
+    "title": "Forest carnivores living on the edge with invasive predators",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J., Razafy, P. and Gerber, B.D. (2023), Forest carnivores living on the edge with invasive predators. Anim. Conserv. https://doi.org/10.1111/acv.12926"
+  },
+  {
+    "objectID": "publications/articles/Wampole2023.html#abstract",
+    "href": "publications/articles/Wampole2023.html#abstract",
+    "title": "Forest carnivores living on the edge with invasive predators",
+    "section": "Abstract",
+    "text": "Abstract\nThe proliferation of forest edges and invasive predators have been identified as two primary threats to carnivore populations globally. These threats often occur in unison, facilitated by anthropogenic activities (e.g., fragmentation), and together may pose a greater influence than when they occur separately. Targeted conservation actions for forest carnivores, including Madagascar carnivores, have been hindered by a failure to understand the relative contributions of these factors in driving species declines. To fill this gap, we conducted an extensive camera survey along the edge of intact, continuous protected rainforests in eastern Madagascar to evaluate the extent invasive predators and forest edge separately and in combination affect native carnivore space use. We hypothesized that structural vegetation changes at the forest edge interact with invasive predator trap success and occurrence to reduce native carnivore space use near the forest edge and separately have less influence than when combined. In contrast to findings in fragmented and degraded forests of Madagascar, we found hard forest edge and invasive predators alone do not indiscriminately reduce native carnivore space use in continuous intact forest. Instead, we found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) in unique ways that shape species response differently than within interior forest. At the forest edge, vegetational changes of increasing shrub cover and the occurrence of dogs reduce space use of three of four native carnivores. However, we found greater effects of proximity to villages, especially with high invasive predator activity (free-roaming cats). Ultimately, native carnivores showed variable sensitivities to pressures we examined, providing support for species-specific management actions to maximize conservation outcomes. We encourage future studies to consider evaluating the magnitude of separate and combined threats to carnivores. In doing so, conservationists can better identify when threats can be managed in isolation and when they require simultaneous mitigation."
+  },
+  {
+    "objectID": "publications/articles/Chanchani2018.html",
+    "href": "publications/articles/Chanchani2018.html",
+    "title": "Elevated potential for intraspecific competition in territorial carnivores occupying fragmented landscapes",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J., Razafy, P. and Gerber, B.D. (2023), Forest carnivores living on the edge with invasive predators. Anim. Conserv. https://doi.org/10.1111/acv.12926"
+  },
+  {
+    "objectID": "publications/articles/Chanchani2018.html#citation",
+    "href": "publications/articles/Chanchani2018.html#citation",
+    "title": "Elevated potential for intraspecific competition in territorial carnivores occupying fragmented landscapes",
+    "section": "",
+    "text": "Wampole, E.M., Farris, Z.J., Razafy, P. and Gerber, B.D. (2023), Forest carnivores living on the edge with invasive predators. Anim. Conserv. https://doi.org/10.1111/acv.12926"
+  },
+  {
+    "objectID": "publications/articles/Chanchani2018.html#abstract",
+    "href": "publications/articles/Chanchani2018.html#abstract",
+    "title": "Elevated potential for intraspecific competition in territorial carnivores occupying fragmented landscapes",
+    "section": "Abstract",
+    "text": "Abstract\nThe distribution of mammals is determined by a suite of endogenous and exogenous factors. In territorial, polygynous species like tigers (Panthera tigris), males often center their space-use around female territories, repelling competitors from these areas. Competition among males for females leads to increased mortality of both sexes and infanticide of unrelated cubs, which can lead to population declines. We hypothesized that increased territorial overlap among adult male tigers and elevated levels of inter and intra-sex competition would be manifest in populations with male-biased adult sex ratios (ASR). We also assessed whether inter-sex variation in adult survival or degree of habitat connectivity resulted in skewed ASR. We evaluated these hypotheses using camera trap data from three tiger populations occupying habitat patches with varying levels of connectivity and ASRs. Data were analyzed using multi-state occupancy models, where states were defined as habitat use by one or more male tigers in sites with and without female use. As predicted, in populations with male-biased or even ASR we found evidence for increased spatial overlap between male tigers, particularly pronounced in areas adjacent to female territories. Given parity in adult survival, habitat fragmentation likely caused male-biased ASR. Our results suggest that the persistence of small tiger populations in habitat patches with male-biased ASR may be significantly compromised by behavior-mediated endogenous demographic processes that are often overlooked. In habitat fragments with pronounced male biased ASR, population recovery of territorial carnivores may require timely supplementation of individuals to compensate for population losses from intraspecific competition."
+  },
+  {
+    "objectID": "publications/articles/Vitkalova2018.html",
+    "href": "publications/articles/Vitkalova2018.html",
+    "title": "Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards",
+    "section": "",
+    "text": "Vitkalova AV, Feng L, Rybin AN, et al. Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards. Conservation Letters. 2018; 11: e12574. https://doi.org/10.1111/conl.12574"
+  },
+  {
+    "objectID": "publications/articles/Vitkalova2018.html#citation",
+    "href": "publications/articles/Vitkalova2018.html#citation",
+    "title": "Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards",
+    "section": "",
+    "text": "Vitkalova AV, Feng L, Rybin AN, et al. Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards. Conservation Letters. 2018; 11: e12574. https://doi.org/10.1111/conl.12574"
+  },
+  {
+    "objectID": "publications/articles/Vitkalova2018.html#abstract",
+    "href": "publications/articles/Vitkalova2018.html#abstract",
+    "title": "Transboundary cooperation improves endangered species monitoring and conservation actions: A case study of the global population of Amur leopards",
+    "section": "Abstract",
+    "text": "Abstract\nPolitical borders and natural boundaries of wildlife populations seldom coincide, often to the detriment of conservation objectives. Transnational monitoring of endangered carnivores is rare, but is necessary for accurate population monitoring and coordinated conservation policies. We investigate the benefits of collaboratively monitoring the abundance and survival of the critically endangered Amur leopard, which occurs as a single transboundary population across China and Russia. Country-specific results overestimated abundance and were generally less precise compared to integrated monitoring estimates; the global population was similar in both years: 84 (70–108, 95% confidence interval). Uncertainty in country-specific annual survival estimates were approximately twice the integrated estimates of 0.82 (0.69–0.91, 95% confidence limits). This collaborative effort provided a better understanding of Amur leopard population dynamics, represented a first step in building trust, and lead to cooperative agreements to coordinate conservation policies."
   }
 ]
