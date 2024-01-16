@@ -1,0 +1,32 @@
+---
+title: "A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package"
+type: "article"
+author: "Brian D Gerber, Kadambari Devarajan, Zach J. Farris, Mason Fidino"
+year: "2024"
+publication: "Journal of Animal Ecology"
+doi: "Kadambari Devarajan, Zach J. Farris, Mason Fidino"
+materials: "https://github.com/diel-project/Diel-Niche-Modeling"
+download: "../publications/Gerber et al 2024 JAE.pdf"
+toc: false
+categories:
+  - diel ecology
+  - mammal
+  - Bayesian
+  - journal article
+---
+
+## Citation 
+
+> Gerber, B. D., Devarajan, K., Farris, Z. J., & Fidino, M. (2024). A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package. *Journal of Animal Ecology*, 00, 1–15. https://doi.org/10.1111/1365-2656.14035
+
+## Abstract
+
+1. How animals use the diel period (24-h light–dark cycle) is of fundamental importance to understand their niche. While ecological and evolutionary literature abound with discussion of diel phenotypes (e.g. diurnal, nocturnal, crepuscular, cathemeral), they lack clear and explicit quantitative definitions. As such, inference can be confounded when evaluating hypotheses of animal diel niche switching or plasticity across studies because researchers may be operating under different definitions of diel phenotypes.
+
+2. We propose quantitative definitions of diel phenotypes using four alternative hypothesis sets (maximizing, traditional, general and selection) aimed at achieving different objectives. Each hypothesis set is composed of mutually exclusive hypotheses defined based on the activity probabilities in the three fundamental periods of light availability (twilight, daytime and night-time).
+
+3. We develop a Bayesian modelling framework that compares diel phenotype hypotheses using Bayes factors and estimates model parameters using a multinomial model with linear inequality constraints. Model comparison, parameter estimation and visualizing results can be done in the Diel.Niche R package. A simplified R Shiny web application is also available.
+
+4. We provide extensive simulation results to guide researchers on the power to discriminate among hypotheses for a range of sample sizes (10–1280). We also work through several examples of using data to make inferences on diel activity, and include online vignettes on how to use the Diel.Niche package. We demonstrate how our modelling framework complements other analyses, such as circular kernel density estimators and animal movement modelling.
+
+5. Our aim is to encourage standardization of the language of diel activity and bridge conceptual frameworks and hypotheses in diel research with data and models. Lastly, we hope more research focuses on the ecological and conservation importance of understanding how animals use diel time.
