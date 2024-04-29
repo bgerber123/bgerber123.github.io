@@ -9,6 +9,7 @@ format:
     slide-number: true
     show-slide-number: all
     chalkboard: true
+    multiplex: true
 ---
 
 ## [Introductions]{style="color:green;"}
