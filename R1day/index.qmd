@@ -222,7 +222,7 @@ is.numeric(x=y)
 ```{r}
 #| echo: TRUE
 #| eval: FALSE
-#How to find out the arguments are of a function?
+#How to find out the arguments of a function?
 ?is.numeric
 ```
 

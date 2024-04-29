@@ -1859,6 +1859,6 @@
     "href": "R1day/index.html#the-language-of-r-5",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n\n#How to find out the arguments are of a function?\n?is.numeric"
+    "text": "The language of R\nFunctions\n\n#How to find out the arguments of a function?\n?is.numeric"
   }
 ]
