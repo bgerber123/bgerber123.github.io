@@ -121,6 +121,12 @@ A storage place for information
 [**object** ]{style="color:orange;"} = [function]{style="color:blue;"}([attribute1]{style="color:purple;"} = input1, 
                                                                        [attribute2]{style="color:purple;"} = input2)
 
+<br>
+
+. . .
+
+[**object** ]{style="color:orange;"} = [function]{style="color:blue;"}(input1, input2)
+
 
 ## [The language of R]{style="color:green;"}
 

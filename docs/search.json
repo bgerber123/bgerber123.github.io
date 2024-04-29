@@ -1747,7 +1747,7 @@
     "href": "R1day/index.html#the-language-of-r-1",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-2",
