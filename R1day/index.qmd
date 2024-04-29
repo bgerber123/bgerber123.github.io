@@ -1,7 +1,7 @@
 ---
 title:  <span style="color:white">Introduction to R </span>
 title-slide-attributes:
-  data-background-image: ./index_files/background.png
+  data-background-image: index_files/background.png
   background-opacity: "0.45"
 format: 
   revealjs:
@@ -27,7 +27,7 @@ code {
 
 ```
 
-![](index_files/logos.png)
+![](index_files\logos.png)
 
 
 ## [Why learn to code?]{style="color:green;"}
