@@ -1,7 +1,7 @@
 ---
 title:  <span style="color:white">Introduction to R </span>
 title-slide-attributes:
-  data-background-image: index_files/background.png
+  data-background-image: ./index_files/background.png
   background-opacity: "0.45"
 format: 
   revealjs:
@@ -214,7 +214,7 @@ is.numeric(x=y)
 ?is.numeric
 ```
 
-![](index_files/is.numeric.png)
+![](./index_files/is.numeric.png)
 
 ## Wrapping functions
 ```{r}
