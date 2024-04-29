@@ -1747,28 +1747,28 @@
     "href": "R1day/index.html#the-language-of-r-1",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny &lt;- 3\ny\n\n[1] 3\n\n\n\n\n\n# Same operation '=' '&lt;-'\ny &lt;- 3"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-2",
     "href": "R1day/index.html#the-language-of-r-2",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nObjects\n\n#We can create new objects from objects\ny2 = y-2\ny2\n\n[1] 1\n\n\n\n\n\n# We can do math with our objects\n# Mind your parantheses (order of operation)\ny*2 / y*4\n\n[1] 8\n\ny*2 / (y*4)\n\n[1] 0.5"
+    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny &lt;- 3\ny\n\n[1] 3\n\n\n\n\n\n# Same operation '=' '&lt;-'\ny &lt;- 3"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-3",
     "href": "R1day/index.html#the-language-of-r-3",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n\n# functions\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\nis.numeric(y)\n\n[1] TRUE\n\n\n\n\n\n\n# The function 'class' has the argment 'x'\nis.numeric(x=y)\n\n[1] TRUE"
+    "text": "The language of R\nObjects\n\n#We can create new objects from objects\ny2 = y-2\ny2\n\n[1] 1\n\n\n\n\n\n# We can do math with our objects\n# Mind your parantheses (order of operation)\ny*2 / y*4\n\n[1] 8\n\ny*2 / (y*4)\n\n[1] 0.5"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-4",
     "href": "R1day/index.html#the-language-of-r-4",
     "title": "Introduction to R ",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n\n#How to find out the arguments are of a function?\n?is.numeric"
+    "text": "The language of R\nFunctions\n\n# functions\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\nis.numeric(y)\n\n[1] TRUE\n\n\n\n\n\n\n# The function 'class' has the argment 'x'\nis.numeric(x=y)\n\n[1] TRUE"
   },
   {
     "objectID": "R1day/index.html#wrapping-functions",
@@ -1853,5 +1853,12 @@
     "title": "Introduction to R ",
     "section": "Introductions",
     "text": "Introductions"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-5",
+    "href": "R1day/index.html#the-language-of-r-5",
+    "title": "Introduction to R ",
+    "section": "The language of R",
+    "text": "The language of R\nFunctions\n\n#How to find out the arguments are of a function?\n?is.numeric"
   }
 ]

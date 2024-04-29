@@ -118,6 +118,12 @@ A storage place for information
 
 ## [The language of R]{style="color:green;"}
 
+[**object** ]{style="color:orange;"} = [function]{style="color:blue;"}([attribute1]{style="color:purple;"} = input1, 
+                                                                       [attribute2]{style="color:purple;"} = input2)
+
+
+## [The language of R]{style="color:green;"}
+
 #### [**Objects** ]{style="color:blue;"}
 ```{r}
 #| echo: TRUE
