@@ -1,0 +1,537 @@
+---
+title:  <span style="color:white">Introduction to R </span>
+title-slide-attributes:
+  data-background-image: index_files/background.png
+  background-opacity: "0.45"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    chalkboard: true
+    multiplex: true
+---
+
+## [Introductions]{style="color:green;"}
+
+```{css echo=FALSE}
+<!-- .big-code{ -->
+<!--   font-size: 140%   -->
+<!-- } -->
+
+
+code {
+  font-size: 1.5em;
+  /* or try font-size: xx-large; */
+}
+
+```
+
+![](index_files\logos.png)
+
+
+## [Why learn to code?]{style="color:green;"}
+
+::: {.fragment}
+- efficiency
+- transparency
+- flexibility in application
+- shareable
+- marketable skill
+:::
+
+## [Why learn R?]{style="color:green;"}
+
+::: {.fragment}
+- open-source and free
+- small total user base / large in ecology and statistics
+- find help online
+- data mgmt (tidyverse)
+- statistics
+- plotting / graphing
+:::
+
+
+## [Why use RStudio?]{style="color:green;"}
+
+- Posit - Certified B corp
+- Brings tools together
+- [Projects (file mgmt)](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+- [R Shiny](https://www.rstudio.com/products/shiny/)
+- [R Markdown](https://rmarkdown.rstudio.com/)
+- [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html): interactive articles, websites, blog, ...
+
+
+
+## [How to learn R?]{style="color:green;"}
+
+- [Intro to R for Biologists](https://melbournebioinformatics.github.io/r-intro-biologists/intro_r_biologists.html#R_for_Biologists_course)
+
+- [Introduction to R - tidyverse](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/)
+
+- [R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+- [Advanced R](https://adv-r.hadley.nz/index.html)
+
+- [Introduction to the R Language](https://bookdown.org/mcwimberly/gdswr-book/introduction-to-the-r-language.html#matrices-and-lists)
+
+- [Introduction to R](https://bookdown.org/palmjulia/r_intro_script/introduction.html)
+
+- [An Introduction to R for Research](https://bookdown.org/rwnahhas/IntroToR/)
+
+- [Introduction to Data Exploration ana Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/)
+
+- [Working with Data in R](https://bookdown.org/ejvanholm/WorkingWithData/)
+
+
+## [Objectives]{style="color:green;"}
+
+- R basics
+- RStudio basics
+
+- item 1
+- item 2
+- item 3
+- item 4
+
+
+## [The language of R]{style="color:green;"}
+
+. . .
+
+### [**Objects** ]{style="color:blue;"}
+
+A storage place for information
+
+::: {.fragment}
+*'Attributes'* describes the structure or information of the object
+:::
+
+::: {.fragment}
+### [**Functions** ]{style="color:blue;"}
+'does stuff'; creates or manipulates objects
+:::
+
+::: {.fragment}
+*'Arguments'* are the types of things a function is asking for; the inputs
+:::
+
+## [The language of R]{style="color:green;"}
+
+#### [**Objects** ]{style="color:blue;"}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# y is an 'object' that is assigned the value 3
+y <- 3
+y
+```
+
+<br>
+
+::: {.fragment}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# Same operation '=' '<-'
+y <- 3
+```
+:::
+
+## [The language of R]{style="color:green;"}
+
+#### [**Objects** ]{style="color:blue;"}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#We can create new objects from objects
+y2 = y-2
+y2
+```
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+# We can do math with our objects
+# Mind your parantheses (order of operation)
+y*2 / y*4
+
+y*2 / (y*4)
+
+```
+:::
+
+
+## [The language of R]{style="color:green;"}{.scrollable}
+
+#### [**Functions** ]{style="color:blue;"}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# functions
+class(y)
+```
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+is.numeric(y)
+```
+::: 
+
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+# The function 'class' has the argment 'x'
+is.numeric(x=y)
+```
+::: 
+
+## [The language of R]{style="color:green;"}
+
+[**Functions** ]{style="color:blue;"}
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#How to find out the arguments are of a function?
+?is.numeric
+```
+
+![](index_files/is.numeric.png)
+
+## Wrapping functions
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+#Functions can be wrapped around each other
+#Functions commonly have multiple arguments
+
+x <- matrix( 
+            data = c(1,2,3,4,5,6),
+            nrow = 2,
+            ncol = 3
+            )
+x
+
+```
+
+
+## Types of Objects {.scrollable}
+
+#### Numeric
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+y <- 3
+```
+:::
+
+<br>
+
+::: {.fragment}
+#### Character
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+y = "habitat"
+class(y)
+```
+:::
+
+
+<br>
+
+::: {.fragment}
+#### Vector
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+#An ordered collection indexed 1,2,...n
+#Using the function 'c' to concetanate
+z1 = c(4,5,6)
+z1
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+# A vector of characters
+z2 = c("dog","cat","horse")
+z2
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+z3 = c("dog","1")
+z3
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+z3 = c("dog",1)
+z3
+```
+:::
+
+
+## Types of Objects {.scrollable}
+
+#### Subsetting a vector
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+z3 = c("dog","1")
+z3[1]
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+z3[2]
+```
+:::
+
+## Types of Objects {.scrollable}
+
+#### Factor, a special kind of character string
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+z4 = factor(
+            c("dog", "dog", "cat","horse","horse")
+           )
+z4
+```
+:::
+  
+<br>  
+  
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+levels(z4)
+```
+:::
+
+
+
+## Types of Objects {.scrollable}
+
+#### Matrix
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+x <- matrix(
+            c(1,2,3,4,5,6),
+            nrow = 2, 
+            ncol = 3
+           )
+x
+dim(x)
+```
+
+
+::: {.fragment}
+#### Subsetting a matrix
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+#get element of row 1 and column 2
+x[1,2]
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+#get element of row 2 and column 6
+x[2,3]
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+#get element all elements of row 2
+x[2,]
+```
+:::
+
+
+
+## Types of Objects {.scrollable}
+
+#### Array
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+# ARRAY - more than just two dimensions
+z5 <- array(
+            c("a","b","c","d","e","f"), 
+            dim=c(2,2,2)
+           )
+z5
+
+dim(z5)
+```
+
+
+## Types of Objects 
+
+#### List
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+# LIST - a bucket - will take anything
+my.list = list(z1,z2,z3,z4,z5)
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#Subset a list
+my.list[[1]]
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+my.list[[4]]
+```
+:::
+
+
+## Types of Objects 
+
+#### Data frame
+
+A row for each observation and a column for each variable (can be different types).
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+x <- data.frame(outcome = c(1,0,1,1),
+                exposure = c("yes", "yes", "no", "no"),
+                age = c(24, 55, 39, 18))
+x
+```
+:::
+
+
+## Types of Objects 
+
+#### Subset data.frame
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x$outcome
+```
+:::
+
+<br>
+
+::: {.fragment}
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x['exposure']
+```
+:::
+
+
+## [Challenge]{style="color:green;"}{.scrollable}
+
+Compute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)...
+
+$$d = \frac{c}{\pi}$$
+
+::: {style="font-size: 75%;"}
+- c = 24,901.55 miles
+- 1 km = 0.621 miles
+- **Hint** type in "pi" to see what you get
+:::
+
+
+::: {style="font-size: 75%;"}
+1. Convert the circumference from miles to km.
+2. Write the formula in R and plug in the value for circumference
+:::
+
+
+## [Challenge]{style="color:green;"}
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+c.km = 24901.55/0.621
+
+d = c.km/(pi)
+
+d
+```
