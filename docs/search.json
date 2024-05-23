@@ -1860,5 +1860,47 @@
     "title": "Introduction to R ",
     "section": "The language of R",
     "text": "The language of R\nFunctions\n\n#How to find out the arguments of a function?\n?is.numeric"
+  },
+  {
+    "objectID": "publications/articles/Shamon2024.html",
+    "href": "publications/articles/Shamon2024.html",
+    "title": "SNAPSHOT USA 2021: A third coordinated national cameratrap survey of the United States",
+    "section": "",
+    "text": "Shamon et al. (2024). SNAPSHOT USA 2021: A third coordinated national cameratrap survey of the United States. Ecology, e4318,https://doi.org/10.1002/ecy.4318. ."
+  },
+  {
+    "objectID": "publications/articles/Shamon2024.html#citation",
+    "href": "publications/articles/Shamon2024.html#citation",
+    "title": "SNAPSHOT USA 2021: A third coordinated national cameratrap survey of the United States",
+    "section": "",
+    "text": "Shamon et al. (2024). SNAPSHOT USA 2021: A third coordinated national cameratrap survey of the United States. Ecology, e4318,https://doi.org/10.1002/ecy.4318. ."
+  },
+  {
+    "objectID": "publications/articles/Shamon2024.html#abstract",
+    "href": "publications/articles/Shamon2024.html#abstract",
+    "title": "SNAPSHOT USA 2021: A third coordinated national cameratrap survey of the United States",
+    "section": "Abstract",
+    "text": "Abstract\nSNAPSHOT USA is a multicontributor, long-term camera trap survey designed tosurvey mammals across the United States. Participants are recruited through com-munity networks and directly through a website application (https://www.snapshot-usa.org/). The growing Snapshot dataset is useful, for example, for track-ing wildlife population responses to land use, land cover, and climate changesacross spatial and temporal scales. Here we present the SNAPSHOT USA 2021dataset, the third national camera trap survey across the US. Data were collectedacross 109 camera trap arrays and included 1711 camera sites. The total effortequaled 71,519 camera trap nights and resulted in 172,507 sequences of animalobservations. Sampling effort varied among camera trap arrays, with a minimumof 126 camera trap nights, a maximum of 3355 nights, a median 546 nights, and amean 656 ± 431 nights. This third dataset comprises 51 camera trap arrays thatwere surveyed during 2019, 2020, and 2021, along with 71 camera trap arrays thatwere surveyed in 2020 and 2021. All raw data and accompanying metadata arestored on Wildlife Insights (https://www.wildlifeinsights.org/), and are publicly avail-able upon acceptance of the data papers. SNAPSHOT USA aims to sample multipleecoregions in the United States with adequate representation of each ecoregionaccording to its relative size. Currently, the relative density of camera trap arraysvaries by an order of magnitude for the various ecoregions (0.22–5.9 arrays per100,000 km2), emphasizing the need to increase sampling effort by further recruitingand retaining contributors. There are no copyright restrictions on these data. We2 of 6 SHAMON ET AL .request that authors cite this paper when using these data, or a subset of these data,for publication. Any use of trade, firm, or product names is for descriptive purposesonly and does not imply endorsement by the US Government."
+  },
+  {
+    "objectID": "publications/articles/Burton2024.html",
+    "href": "publications/articles/Burton2024.html",
+    "title": "Mammal responses to global changes in human activity vary by trophic group and landscape",
+    "section": "",
+    "text": "Burton et al. (2024). SNAPSHOT USA 2021: Mammal responses to global changes in human activity vary by trophic group and landscape. Nature Ecology and Evolution, 8, 924–935, https://doi.org/10.1038/s41559-024-02363-2. ."
+  },
+  {
+    "objectID": "publications/articles/Burton2024.html#citation",
+    "href": "publications/articles/Burton2024.html#citation",
+    "title": "Mammal responses to global changes in human activity vary by trophic group and landscape",
+    "section": "",
+    "text": "Burton et al. (2024). SNAPSHOT USA 2021: Mammal responses to global changes in human activity vary by trophic group and landscape. Nature Ecology and Evolution, 8, 924–935, https://doi.org/10.1038/s41559-024-02363-2. ."
+  },
+  {
+    "objectID": "publications/articles/Burton2024.html#abstract",
+    "href": "publications/articles/Burton2024.html#abstract",
+    "title": "Mammal responses to global changes in human activity vary by trophic group and landscape",
+    "section": "Abstract",
+    "text": "Abstract\nWildlife must adapt to human presence to survive in the Anthropocene, so it is critical to understand species responses to humans in different contexts. We used camera trapping as a lens to view mammal responses to changes in human activity during the COVID-19 pandemic. Across 163 species sampled in 102 projects around the world, changes in the amount and timing of animal activity varied widely. Under higher human activity, mammals were less active in undeveloped areas but unexpectedly more active in developed areas while exhibiting greater nocturnality. Carnivores were most sensitive, showing the strongest decreases in activity and greatest increases in nocturnality. Wildlife managers must consider how habituation and uneven sensitivity across species may cause fundamental differences in human–wildlife interactions along gradients of human influence."
   }
 ]
