@@ -4,7 +4,7 @@ type: "article"
 author: "Brian D Gerber, Kadambari Devarajan, Zach J. Farris, Mason Fidino"
 year: "2024"
 publication: "Journal of Animal Ecology"
-doi: "Kadambari Devarajan, Zach J. Farris, Mason Fidino"
+doi: "https://doi.org/10.1111/1365-2656.14035"
 materials: "https://github.com/diel-project/Diel-Niche-Modeling"
 download: "../publications/Gerber et al 2024 JAE.pdf"
 toc: false
