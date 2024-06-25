@@ -1,0 +1,24 @@
+---
+title: "A statistical population reconstruction model for wildlife populations: A case study with white-tailed deer and fisher"
+type: "article"
+author: "Edwige Bellier, Dylan C. Ferreira, David M. Kalb, Laken S. Ganoe, Amy E. Mayer, and Brian D. Gerber"
+year: "2024"
+publication: "Ecosphere"
+doi: "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.4878"
+download: "../publications/Bellier et al. 2024.pdf"
+toc: false
+categories:
+  - mammal
+  - population
+  - Bayesian
+  - journal article
+  - survival
+---
+
+## Citation 
+
+> Bellier, Edwige, Dylan C. Ferreira, David M. Kalb, Laken S. Ganoe, Amy E. Mayer, and Brian D. Gerber. 2024. “ A Statistical Population Reconstruction Model for Wildlife Populations: A Case Study with White-Tailed Deer and Fisher.” Ecosphere 15(6): e4878. https://doi.org/10.1002/ecs2.4878
+
+## Abstract
+
+Harvested wildlife populations should ideally be monitored to inform harvest policies and decision-making to help achieve management objectives. When the age of harvested individuals can be obtained, these data (i.e., age-at-harvest data) can be used to estimate trends of abundances, demographic rates, and harvest probabilities by the statistical reconstruction of the living population. This approach was developed primarily within the frequentist framework and requires the inclusion of auxiliary data (e.g., radiotelemetry data). We developed a novel Bayesian hierarchical approach allowing the population reconstruction from the definition of the species' life cycle without auxiliary data. The hierarchical model assumes that individuals are harvested from an open population whose fluctuations result from demographic processes, and the definition of a superpopulation composed of pseudo-individuals from which the harvested population is drawn. We evaluated the ability of our model to estimate abundances, survival, recruitment, and harvest probabilities based on simulations guided by the demographic processes of a long-lived mammal population. We considered model performance across scenarios, including varying age and temporal structures, superpopulation size, and prior information. We showed how prior information selected based on life history characteristics affects the accuracy of estimated parameters. We found that the model estimates accurate demographic parameters and abundances when the age-at-harvest matrix comprises more than two age classes. Furthermore, an increase in demographic information (number of age groups and years) increased the precision of the estimated parameters. We apply our model to a population of harvested (2012–2021) white-tailed deer (Odocoileus virginianus) and a mammalian carnivore, the fisher (Pekania pennanti), from Rhode Island, USA. Our model estimated biologically realistic population size and demographic rates for both species. Our approach provides robustness to track the population abundance of harvested species through time and estimate fundamental demographic parameters. Such results can be used to monitor whether population objectives are being met and whether harvest policy changes are required. Furthermore, this information can be critical for evaluating the effect of harvest on population growth and projecting trajectories of age-structured populations under different harvest scenarios. Therefore, our framework can help to guide management decisions and species conservation.
