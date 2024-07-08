@@ -1703,23 +1703,23 @@
   {
     "objectID": "R1day/index.html#why-learn-to-code",
     "href": "R1day/index.html#why-learn-to-code",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Why learn to code?",
-    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nmarketable skill"
+    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nmarketable skill\nneeded for publications"
   },
   {
     "objectID": "R1day/index.html#why-learn-r",
     "href": "R1day/index.html#why-learn-r",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Why learn R?",
-    "text": "Why learn R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online\ndata mgmt (tidyverse)\nstatistics\nplotting / graphing"
+    "text": "Why learn R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow and unmarked group\ndata management\nstatistics\nplotting / graphics"
   },
   {
     "objectID": "R1day/index.html#why-use-rstudio",
     "href": "R1day/index.html#why-use-rstudio",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Why use RStudio?",
-    "text": "Why use RStudio?\n\nPosit - Certified B corp\nBrings tools together\nProjects (file mgmt)\nR Shiny\nR Markdown\nQuarto: interactive articles, websites, blog, …"
+    "text": "Why use RStudio?\n\nPosit - Certified B corp\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …"
   },
   {
     "objectID": "R1day/index.html#how-to-learn-r",
@@ -1738,128 +1738,128 @@
   {
     "objectID": "R1day/index.html#the-language-of-r",
     "href": "R1day/index.html#the-language-of-r",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\n\nObjects\nA storage place for information\n\n‘Attributes’ describes the structure or information of the object\n\n\n\nFunctions\n‘does stuff’; creates or manipulates objects\n\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-1",
     "href": "R1day/index.html#the-language-of-r-1",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)"
+    "text": "The language of R\nObjects"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-2",
     "href": "R1day/index.html#the-language-of-r-2",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny &lt;- 3\ny\n\n[1] 3\n\n\n\n\n\n# Same operation '=' '&lt;-'\ny &lt;- 3"
+    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3\n\n\n\n\n\n# Same operation '=' '&lt;-'\ny &lt;- 3"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-3",
     "href": "R1day/index.html#the-language-of-r-3",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nObjects\n\n#We can create new objects from objects\ny2 = y-2\ny2\n\n[1] 1\n\n\n\n\n\n# We can do math with our objects\n# Mind your parantheses (order of operation)\ny*2 / y*4\n\n[1] 8\n\ny*2 / (y*4)\n\n[1] 0.5"
+    "text": "The language of R\nObjects\n\n# We can create new objects from objects\ny2 = y-2\ny2\n\n[1] 1\n\n\n\n\n\n# We can do math with our objects\n# Mind your parentheses (order of operation)\ny*2 / y*4\n\n[1] 8\n\ny*2 / (y*4)\n\n[1] 0.5"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-4",
     "href": "R1day/index.html#the-language-of-r-4",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n\n# functions\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\nis.numeric(y)\n\n[1] TRUE\n\n\n\n\n\n\n# The function 'class' has the argment 'x'\nis.numeric(x=y)\n\n[1] TRUE"
+    "text": "The language of R\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
   },
   {
     "objectID": "R1day/index.html#wrapping-functions",
     "href": "R1day/index.html#wrapping-functions",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Wrapping functions",
-    "text": "Wrapping functions\n\n#Functions can be wrapped around each other\n#Functions commonly have multiple arguments\n\nx &lt;- matrix( \n            data = c(1,2,3,4,5,6),\n            nrow = 2,\n            ncol = 3\n            )\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6"
+    "text": "Wrapping functions\n\n# Functions can be wrapped around each other\n# Functions commonly have multiple arguments\n\nx &lt;- matrix( \n            data = c(1,2,3,4,5,6),\n            nrow = 2,\n            ncol = 3\n            )\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6"
   },
   {
     "objectID": "R1day/index.html#types-of-objects",
     "href": "R1day/index.html#types-of-objects",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nNumeric\n\n\ny &lt;- 3\n\n\n\n\n\nCharacter\n\ny = \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nVector\n\n#An ordered collection indexed 1,2,...n\n#Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\")\nz3\n\n[1] \"dog\" \"1\"  \n\n\n\n\n\n\nz3 = c(\"dog\",1)\nz3\n\n[1] \"dog\" \"1\""
+    "text": "Types of Objects\nVector\n\n# An ordered collection indexed 1,2,...n\n# Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n# 4 is in element/index/position 1 of the vector\n# 6 is in element/index/position 3 of the vector\n\n\n\n\n# the dimension of a vector\nlength(z1)\n\n[1] 3\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",1,\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-1",
     "href": "R1day/index.html#types-of-objects-1",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\"1\")\nz3[1]\n\n[1] \"dog\"\n\n\n\n\n\n\nz3[2]\n\n[1] \"1\""
+    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3[1]\n\n[1] \"dog\"\n\n\n\n\n\n\nz3[2]\n\n[1] \"1\"\n\n\n\n\n\n\nz3[2:3]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[c(2,3)]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[c(-1)]\n\n[1] \"1\"     \"horse\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-2",
     "href": "R1day/index.html#types-of-objects-2",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nFactor, a special kind of character string\n\n\nz4 = factor(\n            c(\"dog\", \"dog\", \"cat\",\"horse\",\"horse\")\n           )\nz4\n\n[1] dog   dog   cat   horse horse\nLevels: cat dog horse\n\n\n\n\n\n\nlevels(z4)\n\n[1] \"cat\"   \"dog\"   \"horse\""
+    "text": "Types of Objects\nVector of factors, a special kind of character string\n\n\nz4 = factor(\n            c(\"dog\", \"dog\", \"cat\",\"horse\")\n           )\n\n\n\n\n\nz4\n\n[1] dog   dog   cat   horse\nLevels: cat dog horse\n\n\n\n\n\n\nlevels(z4)\n\n[1] \"cat\"   \"dog\"   \"horse\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-3",
     "href": "R1day/index.html#types-of-objects-3",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nMatrix\n\nx &lt;- matrix(\n            c(1,2,3,4,5,6),\n            nrow = 2, \n            ncol = 3\n           )\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\ndim(x)\n\n[1] 2 3\n\n\n\n\nSubsetting a matrix\n\n#get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n#get element of row 2 and column 6\nx[2,3]\n\n[1] 6\n\n\n\n\n\n#get element all elements of row 2\nx[2,]\n\n[1] 2 4 6"
+    "text": "Types of Objects\nMatrix\n\n\nx &lt;- matrix(\n            c(1,2,3,4,5,6),\n            nrow = 2, \n            ncol = 3\n           )\n\n\n\n\n\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\n\n\n\n\n\ndim(x)\n\n[1] 2 3\n\n\n\n\n\n\nSubsetting a matrix\n\n# get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n\n# get element of row 2 and column 6\nx[2,3]\n\n[1] 6\n\n\n\n\n\n\n# get element all elements of row 2\nx[2,]\n\n[1] 2 4 6"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-4",
     "href": "R1day/index.html#types-of-objects-4",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nArray\n\n# ARRAY - more than just two dimensions\nz5 &lt;- array(\n            c(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"), \n            dim=c(2,2,2)\n           )\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"e\"  \"a\" \n[2,] \"f\"  \"b\" \n\ndim(z5)\n\n[1] 2 2 2"
+    "text": "Types of Objects\nArray\n\n# ARRAY - more than just two dimensions\nz5 &lt;- array(\n            c(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"), \n            dim=c(2,2,2)\n           )\n\n\n\n\ndim(z5)\n\n[1] 2 2 2\n\n\n\n\n\n\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"e\"  \"a\" \n[2,] \"f\"  \"b\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-5",
     "href": "R1day/index.html#types-of-objects-5",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nList\n\n\n# LIST - a bucket - will take anything\nmy.list = list(z1,z2,z3,z4,z5)\n\n\n\n\n\n#Subset a list\nmy.list[[1]]\n\n[1] 4 5 6\n\n\n\n\n\n\nmy.list[[4]]\n\n[1] dog   dog   cat   horse horse\nLevels: cat dog horse"
+    "text": "Types of Objects\nList\n\n\n# LIST - a bucket - will take anything\nmy.list = list(z1,z2,z3,z4,z5)\n\n\n\n\n\n#Subset a list\nmy.list[[1]]\n\n[1] 4 5 6\n\n\n\n\n\n\nmy.list[[4]]\n\n[1] dog   dog   cat   horse\nLevels: cat dog horse"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-6",
     "href": "R1day/index.html#types-of-objects-6",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
     "text": "Types of Objects\nData frame\nA row for each observation and a column for each variable (can be different types).\n\n\nx &lt;- data.frame(outcome = c(1,0,1,1),\n                exposure = c(\"yes\", \"yes\", \"no\", \"no\"),\n                age = c(24, 55, 39, 18))\nx\n\n  outcome exposure age\n1       1      yes  24\n2       0      yes  55\n3       1       no  39\n4       1       no  18"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-7",
     "href": "R1day/index.html#types-of-objects-7",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubset data.frame\n\n\nx$outcome\n\n[1] 1 0 1 1\n\n\n\n\n\n\nx['exposure']\n\n  exposure\n1      yes\n2      yes\n3       no\n4       no"
+    "text": "Types of Objects\nSubset data.frame\n\n\nx$exposure\n\n[1] \"yes\" \"yes\" \"no\"  \"no\" \n\n\n\n\n\n\nx['exposure']\n\n  exposure\n1      yes\n2      yes\n3       no\n4       no\n\n\n\n\n\n\nx[,2]\n\n[1] \"yes\" \"yes\" \"no\"  \"no\""
   },
   {
     "objectID": "R1day/index.html#challenge",
     "href": "R1day/index.html#challenge",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Challenge",
-    "text": "Challenge\nCompute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)…\n\\[d = \\frac{c}{\\pi}\\]\n\n\nc = 24,901.55 miles\n1 km = 0.621 miles\nHint type in “pi” to see what you get\n\n\n\n\nConvert the circumference from miles to km.\nWrite the formula in R and plug in the value for circumference"
+    "text": "Challenge\n\n\nexpand for full code\nc.km = 24901.55/0.621\n\nd = c.km/(pi)\n\nd\n\n\n[1] 12763.94"
   },
   {
     "objectID": "R1day/index.html#challenge-1",
     "href": "R1day/index.html#challenge-1",
-    "title": "Introduction to R ",
-    "section": "Challenge",
-    "text": "Challenge\n\nc.km = 24901.55/0.621\n\nd = c.km/(pi)\n\nd\n\n[1] 12763.94"
+    "title": "Introduction to R",
+    "section": "Challenge 1",
+    "text": "Challenge 1\nCompute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)…\n\\[d = \\frac{c}{\\pi}\\]\n\n\nc = 24,901.55 miles\n1 km = 0.621 miles\nHint type in ‘pi’ to see what you get\n\n\n\n\nConvert the circumference from miles to km.\nWrite the formula in R and plug in the value for circumference\n\n\n\n\nClick for Answer\nc.km = 24901.55/0.621\n\nd = c.km/pi"
   },
   {
     "objectID": "R1day/index.html#introductions",
     "href": "R1day/index.html#introductions",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "Introductions",
-    "text": "Introductions"
+    "text": "Introductions\n\n\n\n\n\nInstructors:\n\nKyle Horton\nGeorgia Titcomb\nBrian Gerber"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-5",
     "href": "R1day/index.html#the-language-of-r-5",
-    "title": "Introduction to R ",
+    "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n\n#How to find out the arguments of a function?\n?is.numeric"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
   },
   {
     "objectID": "publications/articles/Shamon2024.html",
@@ -1944,5 +1944,208 @@
     "title": "Climate, food and humans predict communities of mammals inthe United States",
     "section": "Abstract",
     "text": "Abstract\nAim The assembly of species into communities and ecoregions is the result of interacting factors that affect plant and animal distribution and abundance at biogeographic scales. Here, we empirically derive ecoregions for mammals to test whether human disturbance has become more important than climate and habitat resources in structuring communities.\nLocation Conterminous United States.\nTime Period 2010–2021.\nMajor Taxa Studied Twenty-five species of mammals.\nMethods We analysed data from 25 mammal species recorded by camera traps at 6645 locations across the conterminous United States in a joint modelling framework to estimate relative abundance of each species. We then used a clustering analysis to describe 8 broad and 16 narrow mammal communities.\nResults Climate was the most important predictor of mammal abundance overall, while human population density and agriculture were less important, with mixed effects across species. Seed production by forests also predicted mammal abundance, especially hard-mast tree species. The mammal community maps are similar to those of plants, with an east–west split driven by different dominant species of deer and squirrels. Communities vary along gradients of temperature in the east and precipitation in the west. Most fine-scale mammal community boundaries aligned with established plant ecoregions and were distinguished by the presence of regional specialists or shifts in relative abundance of widespread species. Maps of potential ecosystem services provided by these communities suggest high herbivory in the Rocky Mountains and eastern forests, high invertebrate predation in the subtropical south and greater predation pressure on large vertebrates in the west.\nMain Conclusions Our results highlight the importance of climate to modern mammals and suggest that climate change will have strong impacts on these communities. Our new empirical approach to recognizing ecoregions has potential to be applied to expanded communities of mammals or other taxa."
+  },
+  {
+    "objectID": "R1day/index.html#online-resources-to-learn-r",
+    "href": "R1day/index.html#online-resources-to-learn-r",
+    "title": "Introduction to R",
+    "section": "Online resources to learn R",
+    "text": "Online resources to learn R\n\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R"
+  },
+  {
+    "objectID": "R1day/index.html#learning-objectives",
+    "href": "R1day/index.html#learning-objectives",
+    "title": "Introduction to R ",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nGOALS\n‘Become familiar with the language and fundamental operations of R’\n‘To help start you off on learning to use R’\n\n\n900 - 930: Intro to RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Challenge"
+  },
+  {
+    "objectID": "R1day/index.html#instructor-showcases",
+    "href": "R1day/index.html#instructor-showcases",
+    "title": "Introduction to R",
+    "section": "Instructor Showcases",
+    "text": "Instructor Showcases\nBrian - R Shiny application that allows users to subset data and visualize 14,586 results\n\nKyle - example here\n\nGeorgia - example here"
+  },
+  {
+    "objectID": "R1day/index.html#goal",
+    "href": "R1day/index.html#goal",
+    "title": "Introduction to R ",
+    "section": "Goal",
+    "text": "Goal\n‘To get over the initial hump or shock or fear to start using R for data management, graphics, statistics, etc.’\n\n\n900 - 930: Introductions and setup\n930 - 1000:Intro to RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Challenge"
+  },
+  {
+    "objectID": "R1day/index.html#accomplishments",
+    "href": "R1day/index.html#accomplishments",
+    "title": "Introduction to R ",
+    "section": "Accomplishments",
+    "text": "Accomplishments\nGoal\n‘To get over the initial hump or shock or fear to start using R’\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nFind help\nRead/write data\nManipulate data efficiently\nPlot data or results\n\nExecution\n\nPresentation or code walk through\nChallenge (independent or in teams of 2-3)"
+  },
+  {
+    "objectID": "R1day/index.html#schedule",
+    "href": "R1day/index.html#schedule",
+    "title": "Introduction to R",
+    "section": "Schedule",
+    "text": "Schedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Challenge"
+  },
+  {
+    "objectID": "R1day/index.html#today",
+    "href": "R1day/index.html#today",
+    "title": "Introduction to R",
+    "section": "Today",
+    "text": "Today\nGoal\n‘Get familiar with fundamentals of R useful for data’\n\n‘To get beyond the initial shock or fear of programming and start using R’"
+  },
+  {
+    "objectID": "R1day/index.html#today-1",
+    "href": "R1day/index.html#today-1",
+    "title": "Introduction to R",
+    "section": "Today",
+    "text": "Today\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nFind help\nRead/write data\nManipulate data efficiently\nPlot data or results\n\n\nExecution\n\nPresentation or code walk through\nChallenge (independent or in teams of 2-3)"
+  },
+  {
+    "objectID": "R1day/index.html#what-is-r",
+    "href": "R1day/index.html#what-is-r",
+    "title": "Introduction to R",
+    "section": "What is R?",
+    "text": "What is R?\nR is a “suite of software facilities for data manipulation, calculation and graphical display.”\n\n\nR uses packages that are collections of functions, data, and compiled code in a “well-defined format”.\n\n\n\nPackages are downloaded from The Comprehensive R Archive Network (CRAN), R’s central software repository. Also, on GitHub, GitLab, BitBucket or other code sharing platforms."
+  },
+  {
+    "objectID": "R1day/index.html#software",
+    "href": "R1day/index.html#software",
+    "title": "Introduction to R",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "R1day/index.html#what-is-rstudio",
+    "href": "R1day/index.html#what-is-rstudio",
+    "title": "Introduction to R",
+    "section": "What is RStudio?",
+    "text": "What is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”. It bring tools/languages together. We use R within RStudio."
+  },
+  {
+    "objectID": "R1day/index.html#why-use-r",
+    "href": "R1day/index.html#why-use-r",
+    "title": "Introduction to R",
+    "section": "Why use R?",
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow and unmarked group\ndata management\nstatistics\nplotting / graphics"
+  },
+  {
+    "objectID": "R1day/index.html#rstudio",
+    "href": "R1day/index.html#rstudio",
+    "title": "Introduction to R",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "R1day/index.html#rstudio-1",
+    "href": "R1day/index.html#rstudio-1",
+    "title": "Introduction to R",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-6",
+    "href": "R1day/index.html#the-language-of-r-6",
+    "title": "Introduction to R",
+    "section": "The language of R",
+    "text": "The language of R\nFunctions\n\n# function - 'c' - concatenate\ny = c(1,2,3,4,5,6)\n\n\n\n\nis.numeric(y)\n\n[1] TRUE\n\n\n\n\n\n\n# The function 'class' has the argument 'x'\nis.numeric(x = y)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "R1day/index.html#objects-1",
+    "href": "R1day/index.html#objects-1",
+    "title": "Introduction to R",
+    "section": "Objects",
+    "text": "Objects"
+  },
+  {
+    "objectID": "R1day/index.html#types",
+    "href": "R1day/index.html#types",
+    "title": "Introduction to R",
+    "section": "Types",
+    "text": "Types\n\n\nValues\n\nnumeric\ncharacter\nfactor\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-7",
+    "href": "R1day/index.html#the-language-of-r-7",
+    "title": "Introduction to R",
+    "section": "The language of R",
+    "text": "The language of R\nFunctions\n\n# How to find out the arguments of a function?\n?is.numeric"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-8",
+    "href": "R1day/index.html#the-language-of-r-8",
+    "title": "Introduction to R",
+    "section": "The language of R",
+    "text": "The language of R\nWrapping functions\n\n# Functions can be wrapped around each other\n# Functions commonly have multiple arguments\n\nx = matrix( \n            data = c(1,2,3,4,5,6),\n            nrow = 2,\n            ncol = 3\n            )\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6"
+  },
+  {
+    "objectID": "R1day/index.html#types-of-values",
+    "href": "R1day/index.html#types-of-values",
+    "title": "Introduction to R",
+    "section": "Types of Values",
+    "text": "Types of Values\nNumeric\n\n\ny &lt;- 3.3\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\n\nInteger\n\ny &lt;- as.integer(3)\nclass(y)\n\n[1] \"integer\"\n\n\n\n\n\n\nCharacter\n\ny &lt;- \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nFactor\n\ny &lt;- factor(\"habitat\")\nclass(y)\n\n[1] \"factor\""
+  },
+  {
+    "objectID": "R1day/index.html#challenge-1-1",
+    "href": "R1day/index.html#challenge-1-1",
+    "title": "Introduction to R",
+    "section": "Challenge 1",
+    "text": "Challenge 1\n\n\nExpand for code\nc.km = 24901.55/0.621\n\nd = c.km/(pi)"
+  },
+  {
+    "objectID": "R1day/index.html#software-1",
+    "href": "R1day/index.html#software-1",
+    "title": "Introduction to R",
+    "section": "Software",
+    "text": "Software\nWhat is R?\nR is a “suite of software facilities for data manipulation, calculation and graphical display.”\n\n\nR uses packages that are collections of functions, data, and compiled code in a “well-defined format”.\n\n\n\nPackages are downloaded from The Comprehensive R Archive Network (CRAN), R’s central software repository. Also, on GitHub, GitLab, BitBucket or other code sharing platforms."
+  },
+  {
+    "objectID": "R1day/index.html#installing-packages",
+    "href": "R1day/index.html#installing-packages",
+    "title": "Introduction to R",
+    "section": "Installing Packages",
+    "text": "Installing Packages"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-9",
+    "href": "R1day/index.html#the-language-of-r-9",
+    "title": "Introduction to R",
+    "section": "The language of R",
+    "text": "The language of R\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe"
+  },
+  {
+    "objectID": "R1day/index.html#the-language-of-r-10",
+    "href": "R1day/index.html#the-language-of-r-10",
+    "title": "Introduction to R",
+    "section": "The language of R",
+    "text": "The language of R\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe"
+  },
+  {
+    "objectID": "R1day/index.html#challenge-2",
+    "href": "R1day/index.html#challenge-2",
+    "title": "Introduction to R",
+    "section": "Challenge 2",
+    "text": "Challenge 2\n\nCreate a vector of numbers that has length 12; call this object ‘vec1’\nUse the function ‘mean’ to find the mean of the values of this vector\nSubset your vector to elements 4 through 6. Call this new object ’vec1a\nCreate a new vector (length 3) of characters called “hab1”, “hab2”, and “hab3”. Call this object ‘vec2’.\nPut vec1a and vec 2 together into a data frame and call this object ‘dat’\n\n\n\nClick for Answer\nvec1 = 1:12\nmean(vec1)\n\n\n[1] 6.5\n\n\nClick for Answer\nvec1a=vec1[4:6]\nvec2=c(\"hab1\",\"hab2\",\"hab3\")\ndat=data.frame(vec1a,vec2)"
+  },
+  {
+    "objectID": "R1day/index.html#software-2",
+    "href": "R1day/index.html#software-2",
+    "title": "Introduction to R",
+    "section": "Software",
+    "text": "Software\nWhat is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”. It bring tools/languages together. We use R within RStudio."
+  },
+  {
+    "objectID": "R1day/index.html#r-code-for-presentation",
+    "href": "R1day/index.html#r-code-for-presentation",
+    "title": "Introduction to R",
+    "section": "R Code for Presentation",
+    "text": "R Code for Presentation\nR Code Script for the remaining code is here\n\nLeft-Click ‘here’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘here’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
+  },
+  {
+    "objectID": "R1day/index.html#code-for-presentation",
+    "href": "R1day/index.html#code-for-presentation",
+    "title": "Introduction to R",
+    "section": "Code for Presentation",
+    "text": "Code for Presentation\nR Code Script for the remaining code is here\n\nLeft-Click ‘here’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘here’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
   }
 ]
