@@ -1719,7 +1719,7 @@
     "href": "R1day/index.html#why-use-rstudio",
     "title": "Introduction to R",
     "section": "Why use RStudio?",
-    "text": "Why use RStudio?\n\nPosit - Certified B corp\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …"
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
   },
   {
     "objectID": "R1day/index.html#how-to-learn-r",
@@ -1782,14 +1782,14 @@
     "href": "R1day/index.html#types-of-objects",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nVector\n\n# An ordered collection indexed 1,2,...n\n# Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n# 4 is in element/index/position 1 of the vector\n# 6 is in element/index/position 3 of the vector\n\n\n\n\n# the dimension of a vector\nlength(z1)\n\n[1] 3\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",1,\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\""
+    "text": "Types of Objects\nVector\n\n# An ordered collection indexed 1,2,...n\n# Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n\n4 is in element/index/position 1 of the vector\n6 is in element/index/position 3 of the vector\n\n\n\n# the dimension of a vector\nlength(z1)\n\n[1] 3\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",1,\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-1",
     "href": "R1day/index.html#types-of-objects-1",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3[1]\n\n[1] \"dog\"\n\n\n\n\n\n\nz3[2]\n\n[1] \"1\"\n\n\n\n\n\n\nz3[2:3]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[c(2,3)]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[-1]\n\n[1] \"1\"     \"horse\""
+    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\"1\",\"horse\",\"chicken\")\nz3[1]\n\n[1] \"dog\"\n\n\n\n\n\n\nz3[2]\n\n[1] \"1\"\n\n\n\n\n\n\nz3[2:4]\n\n[1] \"1\"       \"horse\"   \"chicken\"\n\n\n\n\n\n\nz3[c(2,3)]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[-1]\n\n[1] \"1\"       \"horse\"   \"chicken\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-2",
@@ -1810,14 +1810,14 @@
     "href": "R1day/index.html#types-of-objects-4",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubsetting a matrix\n\n# get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n# get element of row 2 and column 6\nx[2,3]\n\n[1] 6\n\n\n\n\n\n\n# get element all elements of row 2\nx[2,]\n\n[1] 2 4 6\n\n\n\n\n::: fragment\n\n# same as\nx[2,1:3]\n\n[1] 2 4 6"
+    "text": "Types of Objects\nSubsetting a matrix\n\n# get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n# get element of row 2 and column 6\nx[2,3]\n\n[1] 6\n\n\n\n\n\n\n# get element all elements of row 2\nx[2,]\n\n[1] 2 4 6\n\n\n\n\n\n\n# same as\nx[2,1:3]\n\n[1] 2 4 6"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-5",
     "href": "R1day/index.html#types-of-objects-5",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nArray\n\n# ARRAY - more than just two dimensions\nz5 = array(\n            c(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"), \n            dim=c(2,2,2)\n           )\n\n\n\n\ndim(z5)\n\n[1] 2 2 2\n\n\n\n\n\n\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"e\"  \"a\" \n[2,] \"f\"  \"b\""
+    "text": "Types of Objects\nArray\n\n# ARRAY - more than just two dimensions\nz5 = array(\n            c(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"), \n            dim= c(2,2,2)\n           )\n\n\n\n\ndim(z5)\n\n[1] 2 2 2\n\n\n\n\n\n\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"e\"  \"a\" \n[2,] \"f\"  \"b\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-6",
@@ -1852,7 +1852,7 @@
     "href": "R1day/index.html#introductions",
     "title": "Introduction to R",
     "section": "Introductions",
-    "text": "Introductions\n\n\n\n\n\nInstructors:\n\nKyle Horton\nGeorgia Titcomb\nBrian Gerber"
+    "text": "Introductions\n\n\n\n\n\nInstructors:\n\nKyle Horton\nGeorgia Titcomb\nBrian Gerber\n\n\n\n\nDownload presentation as pdf"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-5",
@@ -1985,7 +1985,7 @@
     "href": "R1day/index.html#schedule",
     "title": "Introduction to R",
     "section": "Schedule",
-    "text": "Schedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Challenge"
+    "text": "Schedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Final Challenge"
   },
   {
     "objectID": "R1day/index.html#today",
@@ -1999,7 +1999,7 @@
     "href": "R1day/index.html#today-1",
     "title": "Introduction to R",
     "section": "Today",
-    "text": "Today\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nFind help\nRead/write data\nManipulate data efficiently\nPlot data or results\n\n\nExecution\n\nPresentation or code walk through\nChallenge (independent or in teams of 2-3)"
+    "text": "Today\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nFind help\nRead/write data\nManipulate data efficiently\nPlot data or results"
   },
   {
     "objectID": "R1day/index.html#what-is-r",
@@ -2020,14 +2020,14 @@
     "href": "R1day/index.html#what-is-rstudio",
     "title": "Introduction to R",
     "section": "What is RStudio?",
-    "text": "What is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”. It bring tools/languages together. We use R within RStudio."
+    "text": "What is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”. It brings tools/languages together. We use R within RStudio."
   },
   {
     "objectID": "R1day/index.html#why-use-r",
     "href": "R1day/index.html#why-use-r",
     "title": "Introduction to R",
     "section": "Why use R?",
-    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow and unmarked group\ndata management\nstatistics\nplotting / graphics"
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
   },
   {
     "objectID": "R1day/index.html#rstudio",
@@ -2076,14 +2076,14 @@
     "href": "R1day/index.html#the-language-of-r-8",
     "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nWrapping functions\n\n# Functions can be wrapped around each other\n# Functions commonly have multiple arguments\n\nx = matrix( \n            data = c(1,2,3,4,5,6),\n            nrow = 2,\n            ncol = 3\n            )\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6"
+    "text": "The language of R\nWrapping functions\n\n# Functions commonly 1) wrapped, 2) have multiple arguments\nx = matrix( \n            data = c(1,2,3,4,5,6),\n            nrow = 2,\n            ncol = 3\n            )\n\n\n\nx\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6"
   },
   {
     "objectID": "R1day/index.html#types-of-values",
     "href": "R1day/index.html#types-of-values",
     "title": "Introduction to R",
     "section": "Types of Values",
-    "text": "Types of Values\nNumeric\n\n\ny = 3.3\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\n\nInteger\n\ny = as.integer(3)\nclass(y)\n\n[1] \"integer\"\n\n\n\n\n\n\nCharacter\n\ny = \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nFactor\n\ny = factor(\"habitat\")\nclass(y)\n\n[1] \"factor\""
+    "text": "Types of Values\nNumeric\n\n\ny = 3.3\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\n\nInteger\n\ny = integer(3)\nclass(y)\n\n[1] \"integer\"\n\n\n\n\n\n\nCharacter\n\ny = \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nFactor\n\ny = factor(\"habitat\")\nclass(y)\n\n[1] \"factor\""
   },
   {
     "objectID": "R1day/index.html#challenge-1-1",
@@ -2146,7 +2146,7 @@
     "href": "R1day/index.html#code-for-presentation",
     "title": "Introduction to R",
     "section": "Code for Presentation",
-    "text": "Code for Presentation\nR Code Script for the remaining code is here\n\nLeft-Click ‘here’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘here’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
+    "text": "Code for Presentation\nR Code Script for the remaining code is HERE\n\nLeft-Click ‘HERE’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘HERE’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
   },
   {
     "objectID": "R1day/index.html#subsetting-a-matrix",
@@ -2161,5 +2161,26 @@
     "title": "Introduction to R",
     "section": "Types of Objects",
     "text": "Types of Objects\nSubset data.frame\n\n\nx$exposure\n\n[1] \"yes\" \"yes\" \"no\"  \"no\" \n\n\n\n\n\n\nx['exposure']\n\n  exposure\n1      yes\n2      yes\n3       no\n4       no\n\n\n\n\n\n\nx[,2]\n\n[1] \"yes\" \"yes\" \"no\"  \"no\""
+  },
+  {
+    "objectID": "R1day/index.html#today-2",
+    "href": "R1day/index.html#today-2",
+    "title": "Introduction to R",
+    "section": "Today",
+    "text": "Today\nExecution\n\nPresentation / code walk through\nChallenges (independent or in teams of 2-3)"
+  },
+  {
+    "objectID": "R1day/index.html#today-3",
+    "href": "R1day/index.html#today-3",
+    "title": "Introduction to R",
+    "section": "Today",
+    "text": "Today\nSchedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Final Challenge"
+  },
+  {
+    "objectID": "R1day/index.html#showcases",
+    "href": "R1day/index.html#showcases",
+    "title": "Introduction to R",
+    "section": "Showcases",
+    "text": "Showcases\nBrian - R Shiny application that allows users to subset data and visualize 14,586 results\n\nKyle - example here\n\nGeorgia - example here"
   }
 ]

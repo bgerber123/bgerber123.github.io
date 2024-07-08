@@ -12,6 +12,11 @@ format:
     show-slide-number: all
     chalkboard: true
     multiplex: true
+    width: 1200
+    height: 750
+    #width: 1920
+    #height: 1080
+    margin: 0.05
 ---
 
 ## [Introductions]{style="color:green;"}
@@ -38,7 +43,17 @@ Instructors:
 -   [Kyle Horton](https://aeroecolab.com/)
 -   [Georgia Titcomb](https://georgiatitcomb.weebly.com/)
 -   [Brian Gerber](https://bgerber123.github.io/)
+
+<br>
+
+<br>
+
+::: {style="font-size: 75%;"}
+[Download presentation as pdf](Introduction.R.lecture1..pdf)
 :::
+:::
+
+
 
 ::: {.column width="50%"}
 ![](index_files\logos.png)
@@ -81,7 +96,7 @@ R uses **packages** that are collections of functions, data, and compiled code i
 ::: fragment
 -   open-source and free
 -   small total user base / large in ecology and statistics
--   find help online, e.g., [stack**overflow**](https://stackoverflow.com/) and [unmarked group](https://groups.google.com/g/unmarked)
+-   find help online, e.g., [stack**overflow**](https://stackoverflow.com/)
 -   data management
 -   statistics
 -   plotting / graphics
@@ -90,16 +105,17 @@ R uses **packages** that are collections of functions, data, and compiled code i
 ## [What is RStudio?]{style="color:green;"}
 
 
-[RStudio](https://posit.co/download/rstudio-desktop/) is an "Integrated Development Environment (IDE)". It bring tools/languages together. We use R within RStudio.
+[RStudio](https://posit.co/download/rstudio-desktop/) is an "Integrated Development Environment (IDE)". It brings tools/languages together. We use R within RStudio.
 
 
 ## [Why use RStudio?]{style="color:green;"}
 
--   [Posit](https://posit.co/) - Certified B corp
+-   Makes using R easier
 -   [Projects (file mgmt)](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
 -   [R Shiny](https://www.rstudio.com/products/shiny/): Interactive online apps
 -   [R Markdown](https://rmarkdown.rstudio.com/): Interactive documents
 -   [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html): interactive articles, websites, blog, ...
+-   [Posit](https://posit.co/) - Certified B corp
 
 ## [Online resources to learn R]{style="color:green;"}
 
@@ -142,14 +158,16 @@ R uses **packages** that are collections of functions, data, and compiled code i
 -   Manipulate data efficiently
 -   Plot data or results
 
-. . .
+## [Today]{style="color:green;"}
 
 **Execution**
 
--   Presentation or code walk through
--   Challenge (independent or in teams of 2-3)
+-   Presentation / code walk through
+-   Challenges (independent or in teams of 2-3)
 
-## [Schedule]{style="color:green;"}
+## [Today]{style="color:green;"}
+
+**Schedule**
 
 -   [900 - 930]{style="color:blue;"}: Introductions and setup
 -   [930 - 1000]{style="color:blue;"}: RStudio and R (objects and functions)
@@ -158,9 +176,9 @@ R uses **packages** that are collections of functions, data, and compiled code i
 -   [1200 - 1300]{style="color:blue;"}: Lunch
 -   [1300 - 1400]{style="color:blue;"}: Data mgmt
 -   [1400 - 1500]{style="color:blue;"}: Plotting
--   [1500 - 1600]{style="color:blue;"}: Challenge
+-   [1500 - 1600]{style="color:blue;"}: Final Challenge
 
-## [Instructor Showcases]{style="color:green;"}
+## [Showcases]{style="color:green;"}
 
 Brian - [R Shiny application](https://shiny.uri.edu/bgerber/GlobalDiel/) that allows users to subset data and visualize 14,586 results
 
@@ -206,11 +224,11 @@ A storage place for information; stored in the "Environment"
 
 ## [Code for Presentation]{style="color:green;"}
 
-R Code Script for the remaining code is [here](lecturescript.R)
+R Code Script for the remaining code is [HERE](lecturescript.R)
 
 <br>
 
-Left-Click 'here' --> Ctrl A --> Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V
+Left-Click 'HERE' --> Ctrl A --> Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V
 
 <br>
 
@@ -218,7 +236,7 @@ Left-Click 'here' --> Ctrl A --> Ctrl C. Go to RStudio, left-click on an empty s
 
 <br>
 
-Right-click 'here' --> 'Save link as...'. Save file to location. Go to RStudio. File --> Open File... find your file.
+Right-click 'HERE' --> 'Save link as...'. Save file to location. Go to RStudio. File --> Open File... find your file.
 
 ## [The language of R]{style="color:green;"}
 
@@ -395,18 +413,23 @@ is.numeric(x = y)
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-
-# Functions can be wrapped around each other
-# Functions commonly have multiple arguments
-
+# Functions commonly 1) wrapped, 2) have multiple arguments
 x = matrix( 
             data = c(1,2,3,4,5,6),
             nrow = 2,
             ncol = 3
             )
-x
-
 ```
+
+::: fragment
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x
+```
+
+:::
 
 ## [The language of R]{style="color:green;"}
 
@@ -452,7 +475,7 @@ class(y)
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-y = as.integer(3)
+y = integer(3)
 class(y)
 ```
 :::
@@ -495,9 +518,12 @@ class(y)
 z1 = c(4,5,6)
 z1
 
-# 4 is in element/index/position 1 of the vector
-# 6 is in element/index/position 3 of the vector
 ```
+
+4 is in element/index/position 1 of the vector
+
+6 is in element/index/position 3 of the vector
+
 
 <br>
 
@@ -554,7 +580,7 @@ z3
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3 = c("dog","1","horse")
+z3 = c("dog","1","horse","chicken")
 z3[1]
 ```
 :::
@@ -575,7 +601,7 @@ z3[2]
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3[2:3]
+z3[2:4]
 ```
 :::
 
@@ -742,6 +768,7 @@ x[2,]
 # same as
 x[2,1:3]
 ```
+:::
 
 ## [Types of Objects]{style="color:green;"}{.scrollable}
 
@@ -754,7 +781,7 @@ x[2,1:3]
 # ARRAY - more than just two dimensions
 z5 = array(
             c("a","b","c","d","e","f"), 
-            dim=c(2,2,2)
+            dim= c(2,2,2)
            )
 ```
 

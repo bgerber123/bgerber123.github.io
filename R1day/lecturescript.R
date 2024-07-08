@@ -48,21 +48,19 @@ is.numeric(x = y)
 ## # How to find out the arguments of a function?
 ## ?is.numeric
 
-# Functions can be wrapped around each other
-# Functions commonly have multiple arguments
-
+# Functions commonly 1) wrapped, 2) have multiple arguments
 x = matrix( 
             data = c(1,2,3,4,5,6),
             nrow = 2,
             ncol = 3
             )
-x
 
+x
 
 y = 3.3
 class(y)
 
-y = as.integer(3)
+y = integer(3)
 class(y)
 
 y = "habitat"
@@ -76,8 +74,6 @@ class(y)
 z1 = c(4,5,6)
 z1
 
-# 4 is in element/index/position 1 of the vector
-# 6 is in element/index/position 3 of the vector
 
 # the dimension of a vector
 length(z1)
@@ -92,12 +88,12 @@ z3
 z3 = c("dog",1,"horse")
 z3
 
-z3 = c("dog","1","horse")
+z3 = c("dog","1","horse","chicken")
 z3[1]
 
 z3[2]
 
-z3[2:3]
+z3[2:4]
 
 z3[c(2,3)]
 
@@ -141,7 +137,7 @@ x[2,1:3]
 # ARRAY - more than just two dimensions
 z5 = array(
             c("a","b","c","d","e","f"), 
-            dim=c(2,2,2)
+            dim= c(2,2,2)
            )
 
 dim(z5)
