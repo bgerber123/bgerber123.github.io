@@ -595,7 +595,7 @@ z3[c(2,3)]
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3[c(-1)]
+z3[-1]
 ```
 :::
 
@@ -637,6 +637,17 @@ levels(z4)
 ```
 :::
 
+<br>
+
+::: fragment
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+summary(z4)
+
+```
+:::
 
 ## [Types of Objects]{style="color:green;"}{.scrollable}
 
@@ -684,7 +695,9 @@ dim(x)
 
 <br>
 
-::: fragment
+
+## [Types of Objects]{style="color:green;"}{.scrollable}
+
 ### Subsetting a matrix
 
 ```{r}
@@ -694,7 +707,6 @@ dim(x)
 # get element of row 1 and column 2
 x[1,2]
 ```
-:::
 
 <br>
 
@@ -719,6 +731,17 @@ x[2,3]
 x[2,]
 ```
 :::
+
+<br>
+
+::: fragment
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# same as
+x[2,1:3]
+```
 
 ## [Types of Objects]{style="color:green;"}{.scrollable}
 
@@ -809,8 +832,9 @@ A row for each observation and a column for each variable (can be different type
 #| eval: TRUE
 
 x = data.frame(outcome = c(1,0,1,1),
-                exposure = c("yes", "yes", "no", "no"),
-                age = c(24, 55, 39, 18))
+               exposure = c("yes", "yes", "no", "no"),
+               age = c(24, 55, 39, 18)
+               )
 x
 ```
 :::
@@ -851,23 +875,23 @@ x[,2]
 
 ## [Challenge 2]{style="color:green;"} {.scrollable}
 
-1. Create a vector of numbers that has length 12; call this object 'vec1'
-2. Use the function 'mean' to find the mean of the values of this vector
-3. Subset your vector to elements 4 through 6. Call this new object 'vec1a
+1. Create a vector of numbers that has length 6; call this object 'vec1'.
+2. Use the function 'mean' to find the mean of the values of vec1.
+3. Subset vec1 to only elements 4 through 6. Call this new object 'vec1a'.
 4. Create a new vector (length 3) of characters called "hab1", "hab2", and "hab3". Call this object 'vec2'.
-5. Put vec1a and vec 2 together into a data frame and call this object 'dat'
+5. Put vec1a and vec2 together into a data frame and call this object 'dat'
 
 ```{r}
 #| echo: TRUE
-#| eval: TRUE
+#| eval: FALSE
 #| code-fold: true
 #| code-summary: "Click for Answer"
 
-vec1 = 1:12
+vec1 = 1:6
 mean(vec1)
-vec1a=vec1[4:6]
-vec2=c("hab1","hab2","hab3")
-dat=data.frame(vec1a,vec2)
+vec1a = vec1[4:6]
+vec2 = c("hab1","hab2","hab3")
+dat = data.frame(vec1a,vec2)
 ```
 
 
