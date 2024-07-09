@@ -653,7 +653,7 @@ code {
 <div style="font-size: 75%;">
 <ol type="1">
 <li>Convert the circumference from miles to km.</li>
-<li>Write the formula in R and plug in the value for circumference</li>
+<li>Write the formula in R by defining objects and the values given to computer d in km.</li>
 </ol>
 </div>
 <div class="cell">
@@ -682,7 +682,7 @@ code {
 <p><br></p>
 </div>
 <div class="fragment">
-<p><span style="color:orange;"><strong>this</strong></span> = <span style="color:blue;">sign</span>(x = -5)</p>
+<p><span style="color:orange;"><strong>this</strong></span> = <span style="color:blue;">sign</span>(<span style="color:purple;">x</span> = -5)</p>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
@@ -738,7 +738,7 @@ code {
 <h2><span style="color:green;">The language of R</span></h2>
 <h3 id="wrapping-functions">Wrapping functions</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Functions commonly 1) wrapped, 2) have multiple arguments</span></span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Functions are commonly 1) wrapped, 2) have multiple arguments</span></span>
 <span id="cb21-2"><a></a>x <span class="ot">=</span> <span class="fu">matrix</span>( </span>
 <span id="cb21-3"><a></a>            <span class="at">data =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),</span>
 <span id="cb21-4"><a></a>            <span class="at">nrow =</span> <span class="dv">2</span>,</span>
@@ -775,6 +775,7 @@ code {
 <li>array</li>
 <li>list</li>
 <li>dataframe</li>
+<li><span style="color:purple;">S3, S4, S5, and beyond</span></li>
 </ul>
 </div>
 </div>
@@ -784,7 +785,7 @@ code {
 <h3 id="numeric">Numeric</h3>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>y <span class="ot">=</span> <span class="fl">3.3</span></span>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>y <span class="ot">=</span> <span class="dv">3</span></span>
 <span id="cb24-2"><a></a><span class="fu">class</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
@@ -840,8 +841,8 @@ code {
 <pre><code>[1] 4 5 6</code></pre>
 </div>
 </div>
-<p>4 is in element/index/position 1 of the vector</p>
-<p>6 is in element/index/position 3 of the vector</p>
+<p>The value 4 is in element/index/position 1 of the vector</p>
+<p>The value 6 is in element/index/position 3 of the vector</p>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
@@ -890,18 +891,18 @@ code {
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>z3 <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"dog"</span>,<span class="st">"1"</span>,<span class="st">"horse"</span>,<span class="st">"chicken"</span>)</span>
-<span id="cb42-2"><a></a>z3[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-2"><a></a>z3[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "dog"</code></pre>
+<pre><code>[1] "1"</code></pre>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>z3[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "1"</code></pre>
+<pre><code>[1] 2 3 4</code></pre>
 </div>
 </div>
 </div>
@@ -999,7 +1000,8 @@ Levels: cat dog horse</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">dim</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="co">#rows and columns</span></span>
+<span id="cb62-2"><a></a><span class="fu">dim</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2 3</code></pre>
 </div>
@@ -1020,7 +1022,7 @@ Levels: cat dog horse</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="co"># get element of row 2 and column 6</span></span>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="co"># get element of row 2 and column 3</span></span>
 <span id="cb66-2"><a></a>x[<span class="dv">2</span>,<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
@@ -1030,7 +1032,7 @@ Levels: cat dog horse</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="co"># get element all elements of row 2</span></span>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="co"># get all elements of row 2</span></span>
 <span id="cb68-2"><a></a>x[<span class="dv">2</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2 4 6</code></pre>
@@ -1052,10 +1054,10 @@ Levels: cat dog horse</code></pre>
 <h2><span style="color:green;">Types of Objects</span></h2>
 <h3 id="array">Array</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="co"># ARRAY - more than just two dimensions</span></span>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="co"># ARRAY - more than two dimensions</span></span>
 <span id="cb72-2"><a></a>z5 <span class="ot">=</span> <span class="fu">array</span>(</span>
 <span id="cb72-3"><a></a>            <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>,<span class="st">"d"</span>,<span class="st">"e"</span>,<span class="st">"f"</span>), </span>
-<span id="cb72-4"><a></a>            <span class="at">dim=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb72-4"><a></a>            <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>)</span>
 <span id="cb72-5"><a></a>           )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
@@ -1093,7 +1095,7 @@ Levels: cat dog horse</code></pre>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="co"># LIST - a bucket - will take anything</span></span>
-<span id="cb77-2"><a></a>my.list <span class="ot">=</span> <span class="fu">list</span>(z1,z2,z3,z4,z5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb77-2"><a></a>my.list <span class="ot">=</span> <span class="fu">list</span>(z1, z2, z3, z4, z5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p><br></p>
@@ -1120,7 +1122,7 @@ Levels: cat dog horse</code></pre>
 <section id="types-of-objects-7" class="slide level2 scrollable">
 <h2><span style="color:green;">Types of Objects</span></h2>
 <h3 id="data-frame">Data frame</h3>
-<p>A row for each observation and a column for each variable (can be different types).</p>
+<p>E.g., a row for each observation and a column for each variable (can be different types).</p>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a>x <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">outcome =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>),</span>
@@ -1177,18 +1179,19 @@ Levels: cat dog horse</code></pre>
 <ol type="1">
 <li>Create a vector of numbers that has length 6; call this object ‘vec1’.</li>
 <li>Use the function ‘mean’ to find the mean of the values of vec1.</li>
-<li>Subset vec1 to only elements 4 through 6. Call this new object ‘vec1a’.</li>
+<li>Subset vec1 to only elements 4 through 6. Call this new object ‘vec1’, thereby overwriting the original vec1.</li>
 <li>Create a new vector (length 3) of characters called “hab1”, “hab2”, and “hab3”. Call this object ‘vec2’.</li>
-<li>Put vec1a and vec2 together into a data frame and call this object ‘dat’</li>
+<li>Put vec1 and vec2 together into a data frame and call this object ‘dat’</li>
 </ol>
 <div class="cell">
 <details class="code-fold">
 <summary>Click for Answer</summary>
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a></a>vec1 <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
 <span id="cb90-2"><a></a><span class="fu">mean</span>(vec1)</span>
-<span id="cb90-3"><a></a>vec1a <span class="ot">=</span> vec1[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>]</span>
+<span id="cb90-3"><a></a>vec1 <span class="ot">=</span> vec1[<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>]</span>
 <span id="cb90-4"><a></a>vec2 <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"hab1"</span>,<span class="st">"hab2"</span>,<span class="st">"hab3"</span>)</span>
-<span id="cb90-5"><a></a>dat <span class="ot">=</span> <span class="fu">data.frame</span>(vec1a,vec2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb90-5"><a></a>dat <span class="ot">=</span> <span class="fu">data.frame</span>(vec1,vec2)</span>
+<span id="cb90-6"><a></a>dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 

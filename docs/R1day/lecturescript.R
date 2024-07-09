@@ -1,4 +1,15 @@
-
+## <!-- .big-code{ -->
+## <!--   font-size: 140%   -->
+## <!-- } -->
+## 
+## 
+## code {
+##   font-size: 1.5em;
+##   /* or try font-size: xx-large; */
+## }
+## 
+## #knitr::purl("index.qmd", output = "lecturescript.R", documentation = 00L)
+## 
 
 # y is an 'object' that is assigned the value 3
 y = 3
@@ -18,6 +29,10 @@ y*2 / y*4
 y*2 / (y*4)
 
 
+c.km = 24901.55/0.621
+
+d = c.km/pi
+
 
 sign(-5)
 sign(54)
@@ -33,21 +48,19 @@ is.numeric(x = y)
 ## # How to find out the arguments of a function?
 ## ?is.numeric
 
-# Functions can be wrapped around each other
-# Functions commonly have multiple arguments
-
+# Functions commonly 1) wrapped, 2) have multiple arguments
 x = matrix( 
             data = c(1,2,3,4,5,6),
             nrow = 2,
             ncol = 3
             )
-x
 
+x
 
 y = 3.3
 class(y)
 
-y = as.integer(3)
+y = integer(3)
 class(y)
 
 y = "habitat"
@@ -61,8 +74,6 @@ class(y)
 z1 = c(4,5,6)
 z1
 
-# 4 is in element/index/position 1 of the vector
-# 6 is in element/index/position 3 of the vector
 
 # the dimension of a vector
 length(z1)
@@ -77,12 +88,12 @@ z3
 z3 = c("dog",1,"horse")
 z3
 
-z3 = c("dog","1","horse")
+z3 = c("dog","1","horse","chicken")
 z3[1]
 
 z3[2]
 
-z3[2:3]
+z3[2:4]
 
 z3[c(2,3)]
 
@@ -126,7 +137,7 @@ x[2,1:3]
 # ARRAY - more than just two dimensions
 z5 = array(
             c("a","b","c","d","e","f"), 
-            dim=c(2,2,2)
+            dim= c(2,2,2)
            )
 
 dim(z5)
@@ -157,3 +168,8 @@ x['exposure']
 
 x[,2]
 
+## vec1 = 1:6
+## mean(vec1)
+## vec1a = vec1[4:6]
+## vec2 = c("hab1","hab2","hab3")
+## dat = data.frame(vec1a,vec2)

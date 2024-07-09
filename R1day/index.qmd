@@ -304,7 +304,7 @@ $$d = \frac{c}{\pi}$$
 
 ::: {style="font-size: 75%;"}
 1.  Convert the circumference from miles to km.
-2.  Write the formula in R and plug in the value for circumference
+2.  Write the formula in R by defining objects and the values given to computer d in km.
 :::
 
 ```{r}
@@ -346,7 +346,7 @@ d = c.km/pi
 
 . . .
 
-[**this**]{style="color:orange;"} = [sign]{style="color:blue;"}(x = -5)
+[**this**]{style="color:orange;"} = [sign]{style="color:blue;"}([x]{style="color:purple;"} = -5)
 
 <br>
 
@@ -413,7 +413,7 @@ is.numeric(x = y)
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-# Functions commonly 1) wrapped, 2) have multiple arguments
+# Functions are commonly 1) wrapped, 2) have multiple arguments
 x = matrix( 
             data = c(1,2,3,4,5,6),
             nrow = 2,
@@ -452,6 +452,7 @@ x
 - array
 - list
 - dataframe
+- [S3, S4, S5, and beyond ]{style="color:purple;"}
 :::
 :::
 
@@ -463,7 +464,7 @@ x
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-y = 3.3
+y = 3
 class(y)
 ```
 :::
@@ -520,9 +521,9 @@ z1
 
 ```
 
-4 is in element/index/position 1 of the vector
+The value 4 is in element/index/position 1 of the vector
 
-6 is in element/index/position 3 of the vector
+The value 6 is in element/index/position 3 of the vector
 
 
 <br>
@@ -581,7 +582,7 @@ z3
 #| echo: TRUE
 #| eval: TRUE
 z3 = c("dog","1","horse","chicken")
-z3[1]
+z3[2]
 ```
 :::
 
@@ -591,7 +592,7 @@ z3[1]
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3[2]
+2:4
 ```
 :::
 
@@ -657,9 +658,7 @@ z4
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-
 levels(z4)
-
 ```
 :::
 
@@ -669,9 +668,7 @@ levels(z4)
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-
 summary(z4)
-
 ```
 :::
 
@@ -714,6 +711,7 @@ x
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
+#rows and columns
 dim(x)
 ```
 
@@ -741,7 +739,7 @@ x[1,2]
 #| echo: TRUE
 #| eval: TRUE
 
-# get element of row 2 and column 6
+# get element of row 2 and column 3
 x[2,3]
 ```
 :::
@@ -753,7 +751,7 @@ x[2,3]
 #| echo: TRUE
 #| eval: TRUE
 
-# get element all elements of row 2
+# get all elements of row 2
 x[2,]
 ```
 :::
@@ -778,10 +776,10 @@ x[2,1:3]
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-# ARRAY - more than just two dimensions
+# ARRAY - more than two dimensions
 z5 = array(
             c("a","b","c","d","e","f"), 
-            dim= c(2,2,2)
+            dim = c(2,2,2)
            )
 ```
 
@@ -821,7 +819,7 @@ z5
 #| echo: TRUE
 #| eval: TRUE
 # LIST - a bucket - will take anything
-my.list = list(z1,z2,z3,z4,z5)
+my.list = list(z1, z2, z3, z4, z5)
 ```
 :::
 
@@ -851,7 +849,7 @@ my.list[[4]]
 
 ### Data frame
 
-A row for each observation and a column for each variable (can be different types).
+E.g., a row for each observation and a column for each variable (can be different types).
 
 ::: fragment
 ```{r}
@@ -904,9 +902,9 @@ x[,2]
 
 1. Create a vector of numbers that has length 6; call this object 'vec1'.
 2. Use the function 'mean' to find the mean of the values of vec1.
-3. Subset vec1 to only elements 4 through 6. Call this new object 'vec1a'.
+3. Subset vec1 to only elements 4 through 6. Call this new object 'vec1', thereby overwriting the original vec1.
 4. Create a new vector (length 3) of characters called "hab1", "hab2", and "hab3". Call this object 'vec2'.
-5. Put vec1a and vec2 together into a data frame and call this object 'dat'
+5. Put vec1 and vec2 together into a data frame and call this object 'dat'
 
 ```{r}
 #| echo: TRUE
@@ -916,9 +914,10 @@ x[,2]
 
 vec1 = 1:6
 mean(vec1)
-vec1a = vec1[4:6]
+vec1 = vec1[4:6]
 vec2 = c("hab1","hab2","hab3")
-dat = data.frame(vec1a,vec2)
+dat = data.frame(vec1,vec2)
+dat
 ```
 
 
