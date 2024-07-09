@@ -19,6 +19,27 @@ format:
     margin: 0.05
 ---
 
+## [Download Files]{style="color:green;"}
+
+[Download this presentation as pdf](Introduction.R.lecture1..pdf)
+
+[Download code displayed in presentation](lecturescript.R)
+
+<br>
+
+**To save either file**.... Right-click --> 'Save link as...'. Save file to location. Go to RStudio or Acrobat. File --> Open File... find your file.
+
+<br>
+
+**To copy/paste code directly:**
+
+Left-Click --> Ctrl A --> Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V.
+
+
+
+
+
+
 ## [Introductions]{style="color:green;"}
 
 ```{css echo=FALSE}
@@ -44,15 +65,7 @@ Instructors:
 -   [Georgia Titcomb](https://georgiatitcomb.weebly.com/)
 -   [Brian Gerber](https://bgerber123.github.io/)
 
-<br>
-
-<br>
-
-::: {style="font-size: 75%;"}
-[Download presentation as pdf](Introduction.R.lecture1..pdf)
 :::
-:::
-
 
 
 ::: {.column width="50%"}
@@ -221,22 +234,6 @@ A storage place for information; stored in the "Environment"
 ### [**Objects**]{style="color:blue;"}
 
 ![](RStudio3.png)
-
-## [Code for Presentation]{style="color:green;"}
-
-R Code Script for the remaining code is [HERE](lecturescript.R)
-
-<br>
-
-Left-Click 'HERE' --> Ctrl A --> Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V
-
-<br>
-
-**OR**
-
-<br>
-
-Right-click 'HERE' --> 'Save link as...'. Save file to location. Go to RStudio. File --> Open File... find your file.
 
 ## [The language of R]{style="color:green;"}
 

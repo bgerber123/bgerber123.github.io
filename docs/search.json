@@ -1852,7 +1852,7 @@
     "href": "R1day/index.html#introductions",
     "title": "Introduction to R",
     "section": "Introductions",
-    "text": "Introductions\n\n\n\n\n\nInstructors:\n\nKyle Horton\nGeorgia Titcomb\nBrian Gerber\n\n\n\n\nDownload presentation as pdf"
+    "text": "Introductions\n\n\n\n\n\nInstructors:\n\nKyle Horton\nGeorgia Titcomb\nBrian Gerber"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-5",
@@ -2146,7 +2146,7 @@
     "href": "R1day/index.html#code-for-presentation",
     "title": "Introduction to R",
     "section": "Code for Presentation",
-    "text": "Code for Presentation\nR Code Script for the remaining code is HERE\n\nLeft-Click ‘HERE’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘HERE’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
+    "text": "Code for Presentation\n\nLeft-Click ‘HERE’ –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V\n\nOR\n\nRight-click ‘HERE’ –&gt; ‘Save link as…’. Save file to location. Go to RStudio. File –&gt; Open File… find your file."
   },
   {
     "objectID": "R1day/index.html#subsetting-a-matrix",
@@ -2182,5 +2182,19 @@
     "title": "Introduction to R",
     "section": "Showcases",
     "text": "Showcases\nBrian - R Shiny application that allows users to subset data and visualize 14,586 results\n\nKyle - example here\n\nGeorgia - example here"
+  },
+  {
+    "objectID": "R1day/index.html#files",
+    "href": "R1day/index.html#files",
+    "title": "Introduction to R",
+    "section": "Files",
+    "text": "Files\nDownload this presentation as pdf\nDownload code displayed in presentation\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file.\n\nTo copy/paste code directly:\nLeft-Click –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V."
+  },
+  {
+    "objectID": "R1day/index.html#download-files",
+    "href": "R1day/index.html#download-files",
+    "title": "Introduction to R",
+    "section": "Download Files",
+    "text": "Download Files\nDownload this presentation as pdf\nDownload code displayed in presentation\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file.\n\nTo copy/paste code directly:\nLeft-Click –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V."
   }
 ]
