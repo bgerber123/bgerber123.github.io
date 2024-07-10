@@ -1,0 +1,80 @@
+---
+title: ""
+format:
+  revealjs:
+    chalkboard: true
+---
+
+## Wildlife Ecology Modeling (FW680A4) {.smaller .scrollable}
+```{=html}
+
+<title> NRS FW680A4 Course Page</title>
+
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+</style>
+
+```
+
+::: {.panel-tabset}
+
+### Start 
+<p><a href="CourseOverview.html">Course Overview</a></p>
+
+
+### Software
+
+Install the most versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
+
+<a href="https://github.com/">Github</a>
+
+<br>
+
+### Notes
+
+-   To download lectures. Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
+
+
+
+### Learning R
+
+<a href="http://preludeinr.com/r-basics/">Prelude In R</a>
+
+<a href="https://datacarpentry.org/R-ecology-lesson/">Data Carpentry</a>
+
+<a href="https://intro2r.com/">Intro to R</a>
+
+<a href="https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/">Many Resources</a>
+
+<a href="https://ourcodingclub.github.io/tutorials/intro-to-r/">Our Coding Club</a>
+
+<a href="http://swcarpentry.github.io/r-novice-inflammation/">SW Carpentry</a>
+
+<a href="https://www.jeffdoser.com/files/for875/_book/">Jeff Doser Book</a>
+
+
+
+### Project
+
+-   Create a group of 3
+
+-   The group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.
+
+-   Outline a plan: 
+    -   Identify a reading that will be assigned prior to class along with relevant topic questions
+    -   Identify the scope and depth of the lecture material (bullet points of what will be covered), 
+    -   Identify what the goal is to be accomplished in terms of coding (bullet points) 
+    - Decide on a general idea for a homework assignment. 
+
+-  Once outlined, email me the plan with all group members names. I will look over the general plan and provide comments. 
+
+-   From here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback.  
+
+:::
+
+
+
+
