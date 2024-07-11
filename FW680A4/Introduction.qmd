@@ -1,0 +1,492 @@
+---
+title: <span style="color:white">Wildlife Ecology Modeling</span>
+title-slide-attributes:
+  data-background-image: /img/background1.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+
+
+## [Class Stuff]{style="color:blue;"}
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+-   **Me:** Brian Gerber
+
+-   **Classroom**: here, TuThu???
+
+    -   Lecture/Lab/Discussion
+
+. . .
+
+-   **My Office**: 202A Wagar, Colorado Cooperative Research Unit
+
+    -   Office hours: XXXXX
+
+    -   brian.gerber@colostate.edu
+
+. . .
+
+
+-   **Computers**: Bring laptop to class
+
+    -   Software/R Packages should be installed prior to lab (posted on website)
+
+## [What is this course?]{style="color:blue;"}
+
+A mix of...
+
+- statistics
+- modeling
+- coding
+- math
+- science philosophy
+- wildlife ecology and conservation
+
+. . .
+
+
+```{=html}
+Also, a work in progress <span style="color:#FF0000";>¯\\\_(ツ)\_/¯</span>
+```
+
+
+## [Course Learning Objectives]{style="color:blue;"}
+
+Upon successful completion of this course students will be able to:
+
+::: incremental 
+
+- think 'statistically'</span>
+
+- communicate statistical approaches and results
+
+-  read quantitative ecology literature.
+
+- write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation.
+
+:::
+
+## Learning
+
+![](/img/learning.graph.png){fig-align="center" width=50%}
+
+. . .
+
+:::: {style="text-align: center;"}
+
+*I do not know where you are starting*
+
+::::
+
+
+## Learning
+
+
+
+## Why is this class useful? {.scrollable}
+
+-   Able to read modern ecological literature
+
+. . .
+
+-   Understand what you are doing when using data and models; **coding/statistics/modeling are related but not the same**
+
+. . .
+
+-   Statistical modeling and coding skills are highly marketable
+
+. . .
+
+-   Taking control of modeling
+
+. . .
+
+-   Collaborate with statisticians
+
+. . .
+
+-   Approach data and data analysis with an appropriate mindset and set of tools
+
+## Statisical Modeling
+
+- parametric
+
+- probabilistic
+
+- generative
+
+- inferential
+
+- predictive
+
+## Statistics in Modern Age
+
+"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good
+statistical thinking have not changed, but their implementation has." 
+
+- Cox and Efron, Sci. Adv. 2017;3: e1700768
+
+## Coding in the Modern Age
+
+- Software changes all the time
+
+- Code will become obsolete  
+
+- Base R functions change slower
+
+- Document code
+
+- Publish code
+
+## [A Graduate Students Dilemna]{style="color:#078BCD"}{.smaller}
+
+**You need to know....**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- field techniques
+- logistics
+- people/advisor management
+- institutional bureaucracy
+- ecological theory
+- wildlife mgmt principles
+- conservation biology principles
+- study design
+- data management
+:::
+
+::: {.column width="50%"}
+- public speaking
+- independent and team work
+- graphic/visual arts
+- 'the literature'
+- the job market
+- how to write a manuscript/thesis
+- writing/sharing coding
+- statistical modeling
+- ...
+:::
+
+::::
+
+## [Science Philosophy]{style="color:#078BCD"}
+
+:::: {style="text-align: center;"}
+**I am a pragmatist**
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are many ways to do ***great*** science.
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are more ways to do ***meh*** science.
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+Disciplines have conventions
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are foundations of scientific and statistical learning
+::::
+
+. . .
+
+
+:::: {style="text-align: center;"}
+Know the *why* of your decisions
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+**Ask lots of questions to everybody all the time**
+::::
+
+
+
+
+## [Why is statistics so difficult?]{style="color:#078BCD"}
+
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me.png)
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me2.png){width=75%}
+
+## [My Background]{style="color:#078BCD"}
+![](/img/me2.png)
+
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/climbing.png){width=50%}
+
+
+<!-- ## And you... -->
+
+<!-- <span style="color:#078BCD"> -->
+
+<!-- <ul> -->
+
+<!-- <li>What is your name?</li> -->
+
+<!-- <li>What is your program/project/field of study?</li> -->
+
+<!-- <li>Why do you want to learn more about 'quantitative techniques'?</li> -->
+
+<!-- <li>What is your first emotion when you hear **statistics**, **math**, or **coding**?</li> -->
+
+<!-- </ul> -->
+
+<!-- </span> -->
+
+
+
+
+
+
+
+
+
+## [Teaching Philosophy ]{style="color:#078BCD"}
+
+::: incremental
+-   I can not make you learn; learning is a choice (in every movement)
+
+-   An inclusive environment is paramount for learning
+
+-   Communication is key
+
+-   Everyone has something to teach and something to learn
+
+-   Struggle is good. Solving problems leads to learning
+
+-   BUT....
+:::
+
+## Tentative Schedule {.smaller}
+
+<a href="https://bgerber123.github.io/Schedule/Schedule.html">https://bgerber123.github.io/Schedule/Schedule.html</a>
+
+## Grades
+
+-   Attendance and Participation (10%)
+
+    -   let me know prior to class if you can not make it
+
+-   Weekly Assignments (60%)
+
+    -   Due the following class
+
+-   Project (30%)
+
+## Project
+
+::: columns
+::: {.column width="70%"}
+Groups (2-3) will design a
+
+```{=html}
+<span style="color:#FF0000";>
+reading/discussion - lecture - lab - HW
+</span>
+```
+around a statistical / methodology topic relevant to ecology and resource mgmt.
+
+-   work with me
+-   the topic needs to be general(ish)
+-   lead one class period
+:::
+
+::: {.column width="30%"}
+![](Introduction_files/teaching.png){fig-align="center" width="300"}
+:::
+:::
+
+## [The language of R]{style="color:green;"}
+
+. . .
+
+### [**Objects**]{style="color:blue;"}
+
+A storage place for information; stored in the "Environment"
+
+<br>
+
+::: fragment
+*'Attributes'* describes the structure or information of the object
+:::
+
+
+## [The language of R]{style="color:green;"}
+
+### [**Objects**]{style="color:blue;"}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# y is an 'object' that is assigned the value 3
+y = 3
+y
+```
+
+
+
+## [The language of R]{style="color:green;"}
+
+### [**Functions**]{style="color:blue;"}
+
+'does stuff'; creates or manipulates objects
+
+::: fragment
+*'Arguments'* are the types of things a function is asking for; the inputs
+:::
+
+## [The language of R]{style="color:green;"}
+
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([attribute1]{style="color:purple;"} = input1, [attribute2]{style="color:purple;"} = input2)
+
+<br>
+
+. . .
+
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}(input1, input2)
+
+
+<br>
+
+. . .
+
+[**this**]{style="color:orange;"} = [sign]{style="color:blue;"}([x]{style="color:purple;"} = -5)
+
+<br>
+
+::: fragment
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+sign(-5)
+sign(54)
+```
+:::
+
+## Some useful functions
+for loops
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+save.this=c()
+for(i in 1:10){
+  save.this[i] =  1-i
+}
+```
+
+
+## Some useful functions
+apply/sapply/lapply
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+
+
+```
+
+## Some useful functions
+Create your own function
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+my.mean.func = function(x){sum(x)/length(x)}
+
+my.mean.func(c(5,4,7,2,7,1))
+
+```
+
+
+## RStudio
+
+What does each panel do?
+
+![](Introduction_files/rstudio.png){width="95%" fig-align="center"}
+
+. . .
+
+Importance of your computer's CPU and memory?
+
+## Getting help with Code {.scrollable}
+
+::: incremental
+-   Share via RStudio Server (ideally)
+
+-   If emailing, include a script file and RData file (workspace)
+
+-   Hierarchical code organization
+
+    -   code structure using indenting
+    -   top --\> bottom execution
+    -   remove all extraneous code (minimal working example)
+    -   the code you send is likely different than what you are working on
+:::
+
+. . .
+
+**Help! My for loop doesn't work**...
+
+```{r, echo = TRUE}
+#| echo: TRUE
+#| eval: FALSE
+                cor.sp.route.cor=vector("list",n.species)
+cor.sp=rep(NA,n.species)
+            for(s in 1:n.species){
+route=new.cov.species.long.scaled[[s]]$routeID
+cor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])
+    for(i in 1:nroutes){
+temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
+  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]
+  if(length(temp1)>5){
+  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
+  }}}
+
+```
+
+. . .
+
+**Minimal/Annotated working example**
+
+
+## Code
+
+![](Introduction_files/tweet.png){width="50%"}
+
+## 
+
+![](Introduction_files/question.png){fig-align="center" width="300"}

@@ -2208,8 +2208,8 @@
     "objectID": "FW680A4/index.html#wildlife-ecology-modeling-fw680a4",
     "href": "FW680A4/index.html#wildlife-ecology-modeling-fw680a4",
     "title": "Brian D. Gerber",
-    "section": "Wildlife Ecology Modeling (FW680A4)",
-    "text": "Wildlife Ecology Modeling (FW680A4)\n\n NRS FW680A4 Course Page\n\n\n\n\nStartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\n\nInstall the most versions of R and RStudio.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nJeff Doser Book\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
+    "section": "",
+    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28): No Classes\n\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
   },
   {
     "objectID": "FW680A4/overview/CourseOverview.html",
@@ -2286,6 +2286,258 @@
     "href": "FW680A4/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "NRS FW680A4 Course Page\n\n\n\n\nStartLearning RWeek 1Week 2Week 3Week 4Week 5Week 6Week 7Week 8Week 9Week 10Week 11Week 12Week 13Week 14Project\n\n\n\nSchedule/Syllabus\n\nInstall the most versions of R and RStudio.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nJeff Doser Book\n\n\n\nLecture: 1) Introduction,  2) Information\nLecture Code: Information.R\nMarkdown Example: 1) Markdown Example File, 2) Compiled HTML\nAssignment: 1) Markdown File 2) Compiled HTML\nAssigned Reading\n\n\n\nWe will be working in R and Markdown. For class, we will be going through (at least) modules 1 and 2. We will also do a bit on Markdown.\n\nR Lecture Modules: R Class.zip\nR project organization example: Project Structure.zip\nAssigned Reading\n\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"pwr\",\"ggplot2\", \"spsurvey\", \"foreach\",\n                   \"sf\", \"doParallel\", \"grDevices\",\"tictoc\",\"plotly\"))\n\n\nLecture: Study Design\nLecture Code: StudyDesign.R\nDownload: Zip\nAssignment (option 1): 1) Markdown File 1) Compiled HTML\nAssignment (option 2): 1) Markdown File 1) Compiled HTML\nAssignment (option 3): 1) Markdown File 1) Compiled HTML\nAssigned Readings 1) Probability Distributions,  2) Probability First Principles\nSuggested Readings\n\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"visualize\",\"plotly\"))\n\n\nLecture: Probabilty\nLecture Code: Probabilty.R\nDownload:\nAssignment: 1) Markdown File 1) Compiled HTML\nAssigned Reading Betts et al. 2021 and Linear Regression Book Chapter or Online Linear Regression\n\n\n\nNo Class / Holiday\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"sjPlot\",\"ggplot2\", \"ggResidpanel\"))\n\n\nLecture: Regression\nLecture Code: regression.R\nDownload: csv\nAssignment: 1) Markdown File 1) Compiled HTML\nAssigned Readings: Assigned Reading\n\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"equatiomatic\",\"faux\"))\n\n\nLecture: GLM\nLecture Code: linear.model.R\nAssignment: 1) Markdown File 1) Compiled HTML\nAssigned Readings: Assigned Reading\n\n\n\n\nDownload/Install JAGS software here. The version you pick will depend on your version of R.\nInstall R packages:\n\n\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nLecture: Bayesian\nLecture Code: Bayesian.R\nData Download: Data Set 1, and Data Set 2\nJags Code Example: Script, and Model\nStan Code Example: Script\nExtra Model Files: MCMC Algorithim Example: R Script, and MCMC Algorithim Function\nAssignment: 1) Markdown File 1) Compiled HTML\nRe-read the previously assigned Reading: Assigned Reading\nFind a scientific paper that uses Bayesian modeling/inference in your subject area of interest. Be prepared to talk about what the study was about, how the authors used priors, what they made inference on, and how clear were the elements of modeling inference/modeling/computation.\n\n\n\nNo Class or New Homework\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"rjags\",\"bayesplot\",\"runjags\",\"coda\"))\n\n\nLecture: Random Effect\nLecture Code: random.effect.R\n\n\n\n\nInstall R packages:\n\n\ninstall.packages(c(\"rjags\",\"bayesplot\",\"runjags\",\"coda\"))\n\n\nData Simulation Code (developed previous class): Inclass.data.simulation.r\nJAGS Models: model.JAGS.extra.noise.r and model.JAGS.random.slope.r\nModel Scripts: Model.Script.Extra.Noise.r and Model.Script.Random.Slope.r\nAssignment: 1) Markdown File 1) Compiled HTML\n\n\n\nLecture/Lab by Laken, Maegan, Owen, and John\n\nInstall R packages:\n\n\ninstall.packages(c(\"unmarked\",\"rgeos\", \"sf\", \"raster\"))\n\n\nLecture: Occupancy\nAssigned Readings: Assigned Reading and associated questions.\nCode : NRS520-Occupancy-ClassCode.R\nAssignment: NRS 520-Occupancy Assignment.docx\n\n\n\nLecture/Lab by Caroline, Corey, and Rea\n\ninstall.packages(c(\"Hmisc\",\"foreign\",\"reshape2\"))\n\n\nAssigned Reading: Assigned Reading and Discussion Questions.\nLecture: Ordinal Regression\nLecture Code: UCLA_Code.R\nData Download: Data Set\nAssignment: OLR HW Questions.docx\n\n\n\nLecture/Lab by Tori, Liam, and Rebeca\n\ninstall.packages(\"dplyr\", \"ggplot2\", \"lme4\")\n\n\nAssigned Reading: Assigned Reading and RSF Paper Discussion Questions.docx.\nLecture: Slides\nData Download: Data Download\nCode Download: Code Download\nAssignment:  Markdown and HTML\nAppendix A: AppendixA.html\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
+    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28): No Classes\n\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html",
+    "href": "FW680A4/CourseOverview.html",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Name: Brian D. Gerber\nPosition/Affiliation Research Scientist and Assistant Unit Leader at U.S. Geological Survey, Colorado Cooperative Research Unit and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University.\nOffice: 202A Wagar, Colorado Cooperative Research Unit\nEmail: brian.gerber@colostate.edu\nOffice Hours: TU X-X, and by appointment\n\n\n\nCourse Number: FW 680A4 (Experimental Course)\nCredits: 3\nWebsites: Canvas and XXXX.\nPrerequisites: A basic statistics course is required. Being comfortable coding in the R programming language (see R resources under ‘Learning R’ tab).\nText and Readings: All lecture and course materials will be provided.\nComputing: A laptop will be necessary to work on coding during class periods.\n\n\n\nStudents will gain knowledge and skills focused on 1) modeling data to make inference/predictions on wildlife and their habitat, 2) understanding and communicating results, 3) evaluating modeling frameworks based on data and study goals, and 4) implementing models and report writing through the R programming language. The format will include lectures, discussions, in-class labs, out of class assigned labs, and readings. Students are strongly encouraged to have base-level knowledge of coding in R.\n\n\n\nUpon successful completion of this course students will:\n\ndevelop a foundation of statistical thinking that includes principles of study design and modeling relevant to wildlife ecology and conservation\nbe able to communicate statistical approaches and results through transparent and reproducible reporting\nbe able to read and understand quantitative wildlife ecology literature\nbe able to write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation.\n\n\n\n\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nGroup Project\n30%\n\n\n\nTable 1: Grade breakdown by graded components\n\n\n\n\n\nLetter Grade\nPercentage Range\n\n\n\n\nA+\n100.00 to 96.67\n\n\nA\n96.67 to 93.33\n\n\nA-\n93.33 to 90.00\n\n\nB+\n90.00 to 86.67\n\n\nB\n86.67 to 83.33\n\n\nB-\n83.33 to 80.00\n\n\nC+\n80.00 to 76.67\n\n\nC\n76.67 to 70.00\n\n\nD\n70.00 to 60.00\n\n\nF\n60.00 to 00.00\n\n\n\nTable 1: Grade scheme from CSU\n\n\n\nIn-class lectures: Most class periods will include a lecture that will take 1/4 to 1/2 of the course period. Lectures will often incorporate brief instructor-led questions and short discussions.\nIn-class student-led discussions: Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others.\nIn-class labs: Every other class will include a lab. Students will be challenged in class to work individually or in groups to understand, develop and implement code to fit models.\nOut-of-class lab assignments: Students will be encouraged to work together to finish the remainder of the labs that were started in-class.\nOut-of-class reading: Every other class will have an assigned reading.\nOut-of-class discussion board: Students will communicate on an online discussion board posted to Canvas about specific course prompts related to readings and lecture.\nOut-of-class quizzes: Short quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation.\nGroup project: A group project will be used as a final assessment of the student’s integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#instructor",
+    "href": "FW680A4/CourseOverview.html#instructor",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Name: Brian D. Gerber\nPosition/Affiliation Research Scientist and Assistant Unit Leader at U.S. Geological Survey, Colorado Cooperative Research Unit and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University.\nOffice: 202A Wagar, Colorado Cooperative Research Unit\nEmail: brian.gerber@colostate.edu\nOffice Hours: TU X-X, and by appointment"
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#course-information",
+    "href": "FW680A4/CourseOverview.html#course-information",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Course Number: FW 680A4 (Experimental Course)\nCredits: 3\nWebsites: Canvas and XXXX.\nPrerequisites: A basic statistics course is required. Being comfortable coding in the R programming language (see R resources under ‘Learning R’ tab).\nText and Readings: All lecture and course materials will be provided.\nComputing: A laptop will be necessary to work on coding during class periods."
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#course-description",
+    "href": "FW680A4/CourseOverview.html#course-description",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Students will gain knowledge and skills focused on 1) modeling data to make inference/predictions on wildlife and their habitat, 2) understanding and communicating results, 3) evaluating modeling frameworks based on data and study goals, and 4) implementing models and report writing through the R programming language. The format will include lectures, discussions, in-class labs, out of class assigned labs, and readings. Students are strongly encouraged to have base-level knowledge of coding in R."
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#course-learning-objectives",
+    "href": "FW680A4/CourseOverview.html#course-learning-objectives",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Upon successful completion of this course students will:\n\ndevelop a foundation of statistical thinking that includes principles of study design and modeling relevant to wildlife ecology and conservation\nbe able to communicate statistical approaches and results through transparent and reproducible reporting\nbe able to read and understand quantitative wildlife ecology literature\nbe able to write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#assessment",
+    "href": "FW680A4/CourseOverview.html#assessment",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "Assessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nGroup Project\n30%\n\n\n\nTable 1: Grade breakdown by graded components\n\n\n\n\n\nLetter Grade\nPercentage Range\n\n\n\n\nA+\n100.00 to 96.67\n\n\nA\n96.67 to 93.33\n\n\nA-\n93.33 to 90.00\n\n\nB+\n90.00 to 86.67\n\n\nB\n86.67 to 83.33\n\n\nB-\n83.33 to 80.00\n\n\nC+\n80.00 to 76.67\n\n\nC\n76.67 to 70.00\n\n\nD\n70.00 to 60.00\n\n\nF\n60.00 to 00.00\n\n\n\nTable 1: Grade scheme from CSU"
+  },
+  {
+    "objectID": "FW680A4/CourseOverview.html#student-experiences-and-pedagogical-techniques",
+    "href": "FW680A4/CourseOverview.html#student-experiences-and-pedagogical-techniques",
+    "title": "\nCourse Overview  (Fall 2024)\n",
+    "section": "",
+    "text": "In-class lectures: Most class periods will include a lecture that will take 1/4 to 1/2 of the course period. Lectures will often incorporate brief instructor-led questions and short discussions.\nIn-class student-led discussions: Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others.\nIn-class labs: Every other class will include a lab. Students will be challenged in class to work individually or in groups to understand, develop and implement code to fit models.\nOut-of-class lab assignments: Students will be encouraged to work together to finish the remainder of the labs that were started in-class.\nOut-of-class reading: Every other class will have an assigned reading.\nOut-of-class discussion board: Students will communicate on an online discussion board posted to Canvas about specific course prompts related to readings and lecture.\nOut-of-class quizzes: Short quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation.\nGroup project: A group project will be used as a final assessment of the student’s integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW680A4/week1.html",
+    "href": "FW680A4/week1.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: 1) Introduction,  2) Information\nLecture Code: Information.R\nMarkdown Example: 1) Markdown Example File, 2) Compiled HTML\nAssignment: 1) Markdown File 2) Compiled HTML\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter"
+  },
+  {
+    "objectID": "FW680A4/week1.html#week-1",
+    "href": "FW680A4/week1.html#week-1",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: 1) Introduction,  2) Information\nLecture Code: Information.R\nMarkdown Example: 1) Markdown Example File, 2) Compiled HTML\nAssignment: 1) Markdown File 2) Compiled HTML\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#class-stuff",
+    "href": "FW680A4/Introduction.html#class-stuff",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Class Stuff",
+    "text": "Class Stuff\n\n\nMe: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#what-is-this-course",
+    "href": "FW680A4/Introduction.html#what-is-this-course",
+    "title": "Wildlife Ecology Modeling",
+    "section": "What is this course?",
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#our-goals",
+    "href": "FW680A4/Introduction.html#our-goals",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Our Goals",
+    "text": "Our Goals"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-is-this-class-useful",
+    "href": "FW680A4/Introduction.html#why-is-this-class-useful",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why is this class useful?",
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of modeling\n\n\n\n\nCollaborate with statisticians\n\n\n\n\nApproach data and data analysis with an appropriate mindset and set of tools"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#who-am-i",
+    "href": "FW680A4/Introduction.html#who-am-i",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Who am I?",
+    "text": "Who am I?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#and-you",
+    "href": "FW680A4/Introduction.html#and-you",
+    "title": "Wildlife Ecology Modeling",
+    "section": "And you…",
+    "text": "And you…\n\n\n\nWhat is your name?\n\n\nWhat is your program/project/field of study?\n\n\nWhy do you want to learn more about ‘quantitative techniques’?\n\n\nWhat is your first emotion when you hear statistics, math, or coding?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#science-philosophy",
+    "href": "FW680A4/Introduction.html#science-philosophy",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Science Philosophy",
+    "text": "Science Philosophy\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science.\n\n\n\n\nThere are more ways to do meh science.\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#teaching-philosophy",
+    "href": "FW680A4/Introduction.html#teaching-philosophy",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Teaching Philosophy",
+    "text": "Teaching Philosophy\n\n\nI can not make you learn; learning is a choice (in every movement)\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#tentative-schedule",
+    "href": "FW680A4/Introduction.html#tentative-schedule",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Tentative Schedule",
+    "text": "Tentative Schedule\nhttps://bgerber123.github.io/Schedule/Schedule.html"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#grades",
+    "href": "FW680A4/Introduction.html#grades",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Grades",
+    "text": "Grades\n\nAttendance and Participation (10%)\n\nlet me know prior to class if you can not make it\n\nWeekly Assignments (60%)\n\nDue the following class\n\nProject (30%)"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#project",
+    "href": "FW680A4/Introduction.html#project",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Project",
+    "text": "Project\n\n\nGroups (2-3) will design a\n\nreading/discussion - lecture - lab - HW\n\naround a statistical / methodology topic relevant to ecology and resource mgmt.\n\nwork with me\nthe topic needs to be general(ish)\nlead one class period"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#r-code-language",
+    "href": "FW680A4/Introduction.html#r-code-language",
+    "title": "Wildlife Ecology Modeling",
+    "section": "R Code Language",
+    "text": "R Code Language\n\nWrite down, what is the name of the\n\nobject?\nfunction?\nargument(s)?\n\n\na = seq(0,1,by=0.1)\n\n\n\nNote: code can be copied to your clipboard (top-right).\n\nCode scripts will also be on the website."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#rstudio",
+    "href": "FW680A4/Introduction.html#rstudio",
+    "title": "Wildlife Ecology Modeling",
+    "section": "RStudio",
+    "text": "RStudio\nWhat does each panel do?\n\n\nImportance of your computer’s CPU and memory?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#getting-help-with-code",
+    "href": "FW680A4/Introduction.html#getting-help-with-code",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Getting help with Code",
+    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n\nHelp! My for loop doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n\n\nMinimal/Annotated working example\n\n\n\n#Load data (file provided)\n  cov.core.20k=load(\"habitat_radius_20k_core.RData\")\n\n#Create a list\n  cor.sp.route.cor=vector(\"list\",12)\n\n#Double loop with if statement\n  for(s in 1:cor.sp.route.cor){\n    cor.sp[s]=cor(cor.sp.route.cor[s,],cor.sp.route.cor[s,])\n      for(i in 1:length(cor.sp.route.cor)){\n          if(length(cor.sp.route.cor[i,])&gt;5){\n            blah blah blah\n          } #End if statement\n      } #End i loop\n  } #End s loop\n\n#ISSUE: The error occurs when s = 10. The error is \"      \"."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#code",
+    "href": "FW680A4/Introduction.html#code",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#course-learning-objectives",
+    "href": "FW680A4/Introduction.html#course-learning-objectives",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Course Learning Objectives",
+    "text": "Course Learning Objectives\nUpon successful completion of this course students will be able to:\n\n\nthink ‘statistically’\ncommunicate statistical approaches and results\nread quantitative ecology literature.\nwrite code to fit and interpret complex statistical models relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#learning",
+    "href": "FW680A4/Introduction.html#learning",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Learning",
+    "text": "Learning\n\n\n\nI do not know where you are starting"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#statistics-and-coding",
+    "href": "FW680A4/Introduction.html#statistics-and-coding",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Statistics and Coding",
+    "text": "Statistics and Coding\nStatistics:\n“The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good statistical thinking have not changed, but their implementation has.” Cox and Efron, Sci. Adv. 2017;3: e1700768\nSoftware changes all the time. Code will become obsolete."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#statistics-in-modern-age",
+    "href": "FW680A4/Introduction.html#statistics-in-modern-age",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Statistics in Modern Age",
+    "text": "Statistics in Modern Age\n“The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good statistical thinking have not changed, but their implementation has.”\n\nCox and Efron, Sci. Adv. 2017;3: e1700768"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#coding-in-the-modern-age",
+    "href": "FW680A4/Introduction.html#coding-in-the-modern-age",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Coding in the Modern Age",
+    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower\nDocument code\nPublish code"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#statisical-modeling",
+    "href": "FW680A4/Introduction.html#statisical-modeling",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Statisical Modeling",
+    "text": "Statisical Modeling\n\nparametric\nprobabilistic\ngenerative\ninferential\npredictive"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#my-background",
+    "href": "FW680A4/Introduction.html#my-background",
+    "title": "Wildlife Ecology Modeling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#my-background-1",
+    "href": "FW680A4/Introduction.html#my-background-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#my-background-2",
+    "href": "FW680A4/Introduction.html#my-background-2",
+    "title": "Wildlife Ecology Modeling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#my-background-3",
+    "href": "FW680A4/Introduction.html#my-background-3",
+    "title": "Wildlife Ecology Modeling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#learning-1",
+    "href": "FW680A4/Introduction.html#learning-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Learning",
+    "text": "Learning"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#a-graduate-students-dilemna",
+    "href": "FW680A4/Introduction.html#a-graduate-students-dilemna",
+    "title": "Wildlife Ecology Modeling",
+    "section": "A Graduate Students Dilemna",
+    "text": "A Graduate Students Dilemna\nYou need to know….\n\n\n\nfield techniques\nlogistics\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
   }
 ]

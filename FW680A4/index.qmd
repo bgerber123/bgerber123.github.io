@@ -1,33 +1,51 @@
 ---
 title: ""
-format:
-  revealjs:
-    chalkboard: true
 ---
 
-## Wildlife Ecology Modeling (FW680A4) {.smaller .scrollable}
-```{=html}
-
-<title> NRS FW680A4 Course Page</title>
-
-<style type="text/css">
-
-body, td {
-   font-size: 14px;
-}
-</style>
-
-```
+## Wildlife Ecology Modeling (FW680A4)
 
 ::: {.panel-tabset}
 
 ### Start 
-<p><a href="CourseOverview.html">Course Overview</a></p>
+<p><a href="CourseOverview.qmd">Course Overview</a></p>
 
+
+<p><a href="week1.qmd">Week 1 (Aug 20, 22)</a></p>
+
+
+<p><a href="week2.qmd" >Week 2 (Aug 27, 29)</a></p>
+
+<p><a href="week3.qmd">Week 3 (Sep 3, 5)</a></p>
+
+<p><a href="week4.qmd">Week 4 (Sep 10, 12)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week5.qmd">Week 5 (Sep 10, 12)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week6.qmd">Week 6 (Sep 17, 19)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week7.qmd">Week 7 (Sep 24, 26)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week8.qmd">Week 8 (Oct 1, 3)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week9.qmd">Week 9 (Oct 8, 10)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week10.qmd">Week 10 (Oct 15, 17)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week11.qmd">Week 11 (Oct 22, 24)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week12.qmd">Week 12 (Nov 5, 7)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week13.qmd">Week 13 (Nov 12, 14)</a></p>
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week14.qmd">Week 14 (Nov 19, 21)</a></p>
+
+<p style="color:#606060">Week 15 (Nov 26, 28):</p> **No Classes**
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week16.qmd">Week 16 (Dec 3, 5)</a></p>
 
 ### Software
 
-Install the most versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.
+Install the most recent versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>.
 
 <a href="https://github.com/">Github</a>
 
@@ -41,19 +59,40 @@ Install the most versions of <a href="https://cran.r-project.org/">R</a> and <a 
 
 ### Learning R
 
-<a href="http://preludeinr.com/r-basics/">Prelude In R</a>
 
-<a href="https://datacarpentry.org/R-ecology-lesson/">Data Carpentry</a>
+- [Language of R](https://bgerber123.github.io/R1day/#/the-language-of-r)
 
-<a href="https://intro2r.com/">Intro to R</a>
+- [Prelude In R](http://preludeinr.com/r-basics/)
 
-<a href="https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/">Many Resources</a>
+- [Data Carpentry](https://datacarpentry.org/R-ecology-lesson/)
 
-<a href="https://ourcodingclub.github.io/tutorials/intro-to-r/">Our Coding Club</a>
+- [Intro to R](https://intro2r.com/)
 
-<a href="http://swcarpentry.github.io/r-novice-inflammation/">SW Carpentry</a>
+- [Many Resources](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books)
 
-<a href="https://www.jeffdoser.com/files/for875/_book/">Jeff Doser Book</a>
+- [Our Coding Club](https://ourcodingclub.github.io/tutorials/intro-to-r/)
+
+- [SW Carpentry](http://swcarpentry.github.io/r-novice-inflammation/)
+
+- [Doser et al. Book](https://www.jeffdoser.com/files/for875/_book/)
+
+- [Intro to R for Biologists](https://melbournebioinformatics.github.io/r-intro-biologists/intro_r_biologists.html#R_for_Biologists_course)
+
+- [Introduction to R - tidyverse](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/)
+
+- [R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+- [Advanced R](https://adv-r.hadley.nz/index.html)
+
+- [Introduction to the R Language](https://bookdown.org/mcwimberly/gdswr-book/introduction-to-the-r-language.html#matrices-and-lists)
+
+- [Introduction to R](https://bookdown.org/palmjulia/r_intro_script/introduction.html)
+
+- [An Introduction to R for Research](https://bookdown.org/rwnahhas/IntroToR/)
+
+- [Introduction to Data Exploration ana Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/)
+
+- [Working with Data in R](https://bookdown.org/ejvanholm/WorkingWithData/)
 
 
 
