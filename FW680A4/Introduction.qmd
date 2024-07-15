@@ -11,7 +11,7 @@ format:
 
 
 
-## [Class Stuff]{style="color:blue;"}
+## [Class Stuff]{style="color:#078BCD;"}
 ```{=html}
 <style type="text/css">
 
@@ -42,14 +42,14 @@ code.r{
 
     -   Software/R Packages should be installed prior to lab (posted on website)
 
-## [What is this course?]{style="color:blue;"}
+## [What is this course?]{style="color:#078BCD;"}
 
 A mix of...
 
 - statistics
 - modeling
 - coding
-- math
+- math / notation
 - science philosophy
 - wildlife ecology and conservation
 
@@ -57,11 +57,28 @@ A mix of...
 
 
 ```{=html}
-Also, a work in progress <span style="color:#FF0000";>¯\\\_(ツ)\_/¯</span>
+<center>Also, a work in progress <span style="color:#FF0000";>¯\\\_(ツ)\_/¯</center>
 ```
 
+##  [Assessment]{style="color:#078BCD;"}
 
-## [Course Learning Objectives]{style="color:blue;"}
+Assessment Components  | Percentage of Grade
+--------------------   | -------------------
+Course Engagement      | 10%
+Lab Assignments        | 40%
+Online Discussion      | 10%
+Quizzes                | 10%
+Group Project          | 30%
+
+## [Project]{style="color:#078BCD;"}
+
+1) develop an independent research project (ideally connected to their graduate research topic)
+
+2) develop a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation.
+
+
+
+## [Course Learning Objectives]{style="color:#078BCD;"}
 
 Upon successful completion of this course students will be able to:
 
@@ -69,32 +86,16 @@ Upon successful completion of this course students will be able to:
 
 - think 'statistically'</span>
 
+- read quantitative ecology literature
+
+- write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation
+
 - communicate statistical approaches and results
-
--  read quantitative ecology literature.
-
-- write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation.
 
 :::
 
-## Learning
 
-![](/img/learning.graph.png){fig-align="center" width=50%}
-
-. . .
-
-:::: {style="text-align: center;"}
-
-*I do not know where you are starting*
-
-::::
-
-
-## Learning
-
-
-
-## Why is this class useful? {.scrollable}
+## [Why is this class useful?]{style="color:#078BCD;"} {.scrollable}
 
 -   Able to read modern ecological literature
 
@@ -114,11 +115,8 @@ Upon successful completion of this course students will be able to:
 
 -   Collaborate with statisticians
 
-. . .
 
--   Approach data and data analysis with an appropriate mindset and set of tools
-
-## Statisical Modeling
+## [Type of Modeling]{style="color:#078BCD;"}
 
 - parametric
 
@@ -126,18 +124,36 @@ Upon successful completion of this course students will be able to:
 
 - generative
 
-- inferential
+- inferential and/or predictive
 
-- predictive
+## [Statistics in the Modern Age]{style="color:#078BCD;"}
 
-## Statistics in Modern Age
 
+```{=html}
+<center><span style="color:#FF0000";><em>
 "The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good
-statistical thinking have not changed, but their implementation has." 
+statistical thinking have not changed, but their implementation has."</em></span> <br><span>- Cox and Efron, Sci. Adv. 2017;3: e1700768.</span></center>
+```
+ 
 
-- Cox and Efron, Sci. Adv. 2017;3: e1700768
+<br>
 
-## Coding in the Modern Age
+. . .
+
+
+```{=html}
+<br><center><span><em><b>The Big Data Paradox:</b> </em></span></center>
+```
+
+```{=html}
+<center><span style="color:#FF0000";><em>
+"the bigger the data, the surer we fool ourselves”</em></span> <br><span>- Meng, X. L. (2018). The Annals of Applied Statistics.</span></center>
+```
+
+
+
+
+## [Coding in the Modern Age]{style="color:#078BCD;"}
 
 - Software changes all the time
 
@@ -145,11 +161,9 @@ statistical thinking have not changed, but their implementation has."
 
 - Base R functions change slower
 
-- Document code
+- Document and publish code
 
-- Publish code
-
-## [A Graduate Students Dilemna]{style="color:#078BCD"}{.smaller}
+## [A Graduate Students Dilemma ]{style="color:#078BCD"}{.smaller}
 
 **You need to know....**
 
@@ -157,7 +171,7 @@ statistical thinking have not changed, but their implementation has."
 
 ::: {.column width="50%"}
 - field techniques
-- logistics
+- logistics / planning
 - people/advisor management
 - institutional bureaucracy
 - ecological theory
@@ -181,6 +195,68 @@ statistical thinking have not changed, but their implementation has."
 
 ::::
 
+## Learning
+
+![](/img/learning.graph.png){fig-align="center" width=50%}
+
+. . .
+
+:::: {style="text-align: center;"}
+
+*I do not know where you are starting*
+
+::::
+
+
+## [Our Aim]{style="color:#078BCD"}
+
+### What model did you fit? Why? How?
+
+::: fragment
+
+![](/img/modeling.knowledge.png){width=80%}
+
+:::
+
+## [Think Statistically]{style="color:#078BCD"}
+
+### Know...
+
+::: {.incremental}
+
+- your objective in fitting a model
+
+- the model and its properties (not just the name)
+
+- how to interpret ALL the parameters
+
+- how the parameters are being optimized
+
+- and have justification for modeling decisions
+
+:::
+
+## [Why is statistics and ecological modeling so difficult?]{style="color:#078BCD"}
+
+
+. . .
+
+- Statistical Theory / Calculus / Optimization / Ecological Complexity
+
+VS.
+
+- Plug-N-Chug
+
+
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me.png)
+
+## [My Background]{style="color:#078BCD"}
+![](/img/me2.png)
+
+
 ## [Science Philosophy]{style="color:#078BCD"}
 
 :::: {style="text-align: center;"}
@@ -190,13 +266,13 @@ statistical thinking have not changed, but their implementation has."
 . . .
 
 :::: {style="text-align: center;"}
-There are many ways to do ***great*** science.
+There are many ways to do ***great*** science
 ::::
 
 . . .
 
 :::: {style="text-align: center;"}
-There are more ways to do ***meh*** science.
+There are more ways to do ***meh*** science
 ::::
 
 . . .
@@ -225,26 +301,21 @@ Know the *why* of your decisions
 ::::
 
 
+## [Teaching Philosophy]{style="color:#078BCD"}
 
+::: incremental
+-   I can not make you learn; learning is a choice (in every movement)
 
-## [Why is statistics so difficult?]{style="color:#078BCD"}
+-   An inclusive environment is paramount for learning
 
+-   Communication is key
 
-## [My Background]{style="color:#078BCD"}
+-   Everyone has something to teach and something to learn
 
-![](/img/me.png)
+-   Struggle is good. Solving problems leads to learning
 
-## [My Background]{style="color:#078BCD"}
-
-![](/img/me2.png){width=75%}
-
-## [My Background]{style="color:#078BCD"}
-![](/img/me2.png)
-
-
-## [My Background]{style="color:#078BCD"}
-
-![](/img/climbing.png){width=50%}
+-   BUT....
+:::
 
 
 <!-- ## And you... -->
@@ -266,67 +337,10 @@ Know the *why* of your decisions
 <!-- </span> -->
 
 
-
-
-
-
-
-
-
-## [Teaching Philosophy ]{style="color:#078BCD"}
-
-::: incremental
--   I can not make you learn; learning is a choice (in every movement)
-
--   An inclusive environment is paramount for learning
-
--   Communication is key
-
--   Everyone has something to teach and something to learn
-
--   Struggle is good. Solving problems leads to learning
-
--   BUT....
-:::
-
 ## Tentative Schedule {.smaller}
 
 <a href="https://bgerber123.github.io/Schedule/Schedule.html">https://bgerber123.github.io/Schedule/Schedule.html</a>
 
-## Grades
-
--   Attendance and Participation (10%)
-
-    -   let me know prior to class if you can not make it
-
--   Weekly Assignments (60%)
-
-    -   Due the following class
-
--   Project (30%)
-
-## Project
-
-::: columns
-::: {.column width="70%"}
-Groups (2-3) will design a
-
-```{=html}
-<span style="color:#FF0000";>
-reading/discussion - lecture - lab - HW
-</span>
-```
-around a statistical / methodology topic relevant to ecology and resource mgmt.
-
--   work with me
--   the topic needs to be general(ish)
--   lead one class period
-:::
-
-::: {.column width="30%"}
-![](Introduction_files/teaching.png){fig-align="center" width="300"}
-:::
-:::
 
 ## [The language of R]{style="color:green;"}
 
@@ -396,7 +410,7 @@ sign(54)
 ```
 :::
 
-## Some useful functions
+## [Some useful functions]{style="color:green;"}
 for loops
 
 ```{r}
@@ -409,7 +423,7 @@ for(i in 1:10){
 ```
 
 
-## Some useful functions
+## [Some useful functions]{style="color:green;"}
 apply/sapply/lapply
 ```{r}
 #| echo: TRUE
@@ -419,7 +433,7 @@ apply/sapply/lapply
 
 ```
 
-## Some useful functions
+## [Some useful functions]{style="color:green;"}
 Create your own function
 ```{r}
 #| echo: TRUE
@@ -432,15 +446,12 @@ my.mean.func(c(5,4,7,2,7,1))
 ```
 
 
-## RStudio
+## [RStudio]{style="color:green;"}
 
 What does each panel do?
 
-![](Introduction_files/rstudio.png){width="95%" fig-align="center"}
+![](/img/rstudio.png){width="95%" fig-align="center"}
 
-. . .
-
-Importance of your computer's CPU and memory?
 
 ## Getting help with Code {.scrollable}
 
@@ -459,7 +470,7 @@ Importance of your computer's CPU and memory?
 
 . . .
 
-**Help! My for loop doesn't work**...
+**Help! My code doesn't work**...
 
 ```{r, echo = TRUE}
 #| echo: TRUE
@@ -485,8 +496,8 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 ## Code
 
-![](Introduction_files/tweet.png){width="50%"}
+![](/img/tweet.png){width="50%"}
 
 ## 
 
-![](Introduction_files/question.png){fig-align="center" width="300"}
+![](/img/question.png){fig-align="center" width="300"}

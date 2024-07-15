@@ -2363,7 +2363,7 @@
     "href": "FW680A4/Introduction.html#what-is-this-course",
     "title": "Wildlife Ecology Modeling",
     "section": "What is this course?",
-    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-goals",
@@ -2377,7 +2377,7 @@
     "href": "FW680A4/Introduction.html#why-is-this-class-useful",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is this class useful?",
-    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of modeling\n\n\n\n\nCollaborate with statisticians\n\n\n\n\nApproach data and data analysis with an appropriate mindset and set of tools"
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of modeling\n\n\n\n\nCollaborate with statisticians"
   },
   {
     "objectID": "FW680A4/Introduction.html#who-am-i",
@@ -2398,7 +2398,7 @@
     "href": "FW680A4/Introduction.html#science-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Philosophy",
-    "text": "Science Philosophy\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science.\n\n\n\n\nThere are more ways to do meh science.\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Philosophy\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW680A4/Introduction.html#teaching-philosophy",
@@ -2426,7 +2426,7 @@
     "href": "FW680A4/Introduction.html#project",
     "title": "Wildlife Ecology Modeling",
     "section": "Project",
-    "text": "Project\n\n\nGroups (2-3) will design a\n\nreading/discussion - lecture - lab - HW\n\naround a statistical / methodology topic relevant to ecology and resource mgmt.\n\nwork with me\nthe topic needs to be general(ish)\nlead one class period"
+    "text": "Project\n\ndevelop an independent research project (ideally connected to their graduate research topic)\ndevelop a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
   },
   {
     "objectID": "FW680A4/Introduction.html#r-code-language",
@@ -2440,14 +2440,14 @@
     "href": "FW680A4/Introduction.html#rstudio",
     "title": "Wildlife Ecology Modeling",
     "section": "RStudio",
-    "text": "RStudio\nWhat does each panel do?\n\n\nImportance of your computer’s CPU and memory?"
+    "text": "RStudio\nWhat does each panel do?"
   },
   {
     "objectID": "FW680A4/Introduction.html#getting-help-with-code",
     "href": "FW680A4/Introduction.html#getting-help-with-code",
     "title": "Wildlife Ecology Modeling",
     "section": "Getting help with Code",
-    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n\nHelp! My for loop doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n\n\nMinimal/Annotated working example\n\n\n\n#Load data (file provided)\n  cov.core.20k=load(\"habitat_radius_20k_core.RData\")\n\n#Create a list\n  cor.sp.route.cor=vector(\"list\",12)\n\n#Double loop with if statement\n  for(s in 1:cor.sp.route.cor){\n    cor.sp[s]=cor(cor.sp.route.cor[s,],cor.sp.route.cor[s,])\n      for(i in 1:length(cor.sp.route.cor)){\n          if(length(cor.sp.route.cor[i,])&gt;5){\n            blah blah blah\n          } #End if statement\n      } #End i loop\n  } #End s loop\n\n#ISSUE: The error occurs when s = 10. The error is \"      \"."
+    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n\n\nMinimal/Annotated working example"
   },
   {
     "objectID": "FW680A4/Introduction.html#code",
@@ -2461,7 +2461,7 @@
     "href": "FW680A4/Introduction.html#course-learning-objectives",
     "title": "Wildlife Ecology Modeling",
     "section": "Course Learning Objectives",
-    "text": "Course Learning Objectives\nUpon successful completion of this course students will be able to:\n\n\nthink ‘statistically’\ncommunicate statistical approaches and results\nread quantitative ecology literature.\nwrite code to fit and interpret complex statistical models relevant to wildlife ecology and conservation."
+    "text": "Course Learning Objectives\nUpon successful completion of this course students will be able to:\n\n\nthink ‘statistically’\nread quantitative ecology literature\nwrite code to fit and interpret complex statistical models relevant to wildlife ecology and conservation\ncommunicate statistical approaches and results"
   },
   {
     "objectID": "FW680A4/Introduction.html#learning",
@@ -2482,14 +2482,14 @@
     "href": "FW680A4/Introduction.html#statistics-in-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in Modern Age",
-    "text": "Statistics in Modern Age\n“The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good statistical thinking have not changed, but their implementation has.”\n\nCox and Efron, Sci. Adv. 2017;3: e1700768"
+    "text": "Statistics in Modern Age\n“The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good statistical thinking have not changed, but their implementation has.” - Cox and Efron, Sci. Adv. 2017;3: e1700768"
   },
   {
     "objectID": "FW680A4/Introduction.html#coding-in-the-modern-age",
     "href": "FW680A4/Introduction.html#coding-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Coding in the Modern Age",
-    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower\nDocument code\nPublish code"
+    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower\nDocument and publish code"
   },
   {
     "objectID": "FW680A4/Introduction.html#statisical-modeling",
@@ -2539,5 +2539,124 @@
     "title": "Wildlife Ecology Modeling",
     "section": "A Graduate Students Dilemna",
     "text": "A Graduate Students Dilemna\nYou need to know….\n\n\n\nfield techniques\nlogistics\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#our-aim",
+    "href": "FW680A4/Introduction.html#our-aim",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Our Aim",
+    "text": "Our Aim\nWhat model did you fit? Why? How?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-is-statistics-so-difficult",
+    "href": "FW680A4/Introduction.html#why-is-statistics-so-difficult",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why is statistics so difficult?",
+    "text": "Why is statistics so difficult?\n\n\nTheory / Calculus / Optimization &lt;—–&gt; Plug-N-Chug"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#the-language-of-r",
+    "href": "FW680A4/Introduction.html#the-language-of-r",
+    "title": "Wildlife Ecology Modeling",
+    "section": "The language of R",
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#the-language-of-r-1",
+    "href": "FW680A4/Introduction.html#the-language-of-r-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "The language of R",
+    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#the-language-of-r-2",
+    "href": "FW680A4/Introduction.html#the-language-of-r-2",
+    "title": "Wildlife Ecology Modeling",
+    "section": "The language of R",
+    "text": "The language of R\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#the-language-of-r-3",
+    "href": "FW680A4/Introduction.html#the-language-of-r-3",
+    "title": "Wildlife Ecology Modeling",
+    "section": "The language of R",
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#some-useful-functions",
+    "href": "FW680A4/Introduction.html#some-useful-functions",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\nfor loops\n\nsave.this=c()\nfor(i in 1:10){\n  save.this[i] =  1-i\n}"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#some-useful-functions-1",
+    "href": "FW680A4/Introduction.html#some-useful-functions-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\napply/sapply/lapply"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#some-useful-functions-2",
+    "href": "FW680A4/Introduction.html#some-useful-functions-2",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\nCreate your own function\n\nmy.mean.func = function(x){sum(x)/length(x)}\n\nmy.mean.func(c(5,4,7,2,7,1))\n\n[1] 4.333333"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
+    "href": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why is statistics and modeling so difficult?",
+    "text": "Why is statistics and modeling so difficult?\n\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n…\nPlug-N-Chug"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#think-statistically",
+    "href": "FW680A4/Introduction.html#think-statistically",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Think Statistically",
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#type-of-modeling",
+    "href": "FW680A4/Introduction.html#type-of-modeling",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Type of Modeling",
+    "text": "Type of Modeling\n\nparametric\nprobabilistic\ngenerative\ninferential and/or predictive"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#a-graduate-students-dilemma",
+    "href": "FW680A4/Introduction.html#a-graduate-students-dilemma",
+    "title": "Wildlife Ecology Modeling",
+    "section": "A Graduate Students Dilemma",
+    "text": "A Graduate Students Dilemma\nYou need to know….\n\n\n\nfield techniques\nlogistics / planning\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#assessment",
+    "href": "FW680A4/Introduction.html#assessment",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nGroup Project\n30%"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#project-1",
+    "href": "FW680A4/Introduction.html#project-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Project",
+    "text": "Project\n\n\nGroups (2-3) will design a\n\nreading/discussion - lecture - lab - HW\n\naround a statistical / methodology topic relevant to ecology and resource mgmt.\n\nwork with me\nthe topic needs to be general(ish)\nlead one class period"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
+    "href": "FW680A4/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why is statistics and ecological modeling so difficult?",
+    "text": "Why is statistics and ecological modeling so difficult?\n\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#statistics-in-the-modern-age",
+    "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Statistics in the Modern Age",
+    "text": "Statistics in the Modern Age\n\n\"\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
   }
 ]
