@@ -68,13 +68,13 @@ Course Engagement      | 10%
 Lab Assignments        | 40%
 Online Discussion      | 10%
 Quizzes                | 10%
-Group Project          | 30%
+Project                | 30%
 
 ## [Project]{style="color:#078BCD;"}
 
-1) develop an independent research project (ideally connected to their graduate research topic)
+1) independent or group research project - highlighting a modeling application, data/code transparency, and communication of results
 
-2) develop a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation.
+2) group development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation
 
 
 
@@ -109,11 +109,49 @@ Upon successful completion of this course students will be able to:
 
 . . .
 
--   Taking control of modeling
+-   Taking control of your analyses
 
 . . .
 
 -   Collaborate with statisticians
+
+## [Software]{style="color:#078BCD;"}
+
+![](/img/logosR.png)
+
+
+## [Why learn to code?]{style="color:#078BCD;"}
+
+::: fragment
+-   efficiency
+-   transparency
+-   flexibility in application
+-   shareable
+-   marketable skill
+-   needed for publications
+:::
+
+
+## [Why use R?]{style="color:#078BCD;"}
+
+::: fragment
+-   open-source and free
+-   small total user base / large in ecology and statistics
+-   find help online, e.g., [stack**overflow**](https://stackoverflow.com/)
+-   data management
+-   statistics
+-   plotting / graphics
+:::
+
+## [Why use RStudio?]{style="color:#078BCD;"}
+
+-   Makes using R easier
+-   [Projects (file mgmt)](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+-   [R Shiny](https://www.rstudio.com/products/shiny/): Interactive online apps
+-   [R Markdown](https://rmarkdown.rstudio.com/): Interactive documents
+-   [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html): interactive articles, websites, blog, ...
+-   [Posit](https://posit.co/) - Certified B corp
+
 
 
 ## [Type of Modeling]{style="color:#078BCD;"}
@@ -163,7 +201,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 - Document and publish code
 
-## [A Graduate Students Dilemma ]{style="color:#078BCD"}{.smaller}
+## [A Graduate Student's Dilemma ]{style="color:#078BCD"}{.smaller}
 
 **You need to know....**
 
@@ -199,7 +237,6 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 ![](/img/learning.graph.png){fig-align="center" width=50%}
 
-. . .
 
 :::: {style="text-align: center;"}
 
@@ -210,13 +247,15 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 ## [Our Aim]{style="color:#078BCD"}
 
-### What model did you fit? Why? How?
+#### What model did you fit? Why? How?
 
-::: fragment
+::: {.r-stack}
+![](/img/modeling.knowledge0.png){.fragment height="580"}
 
-![](/img/modeling.knowledge.png){width=80%}
-
+![](/img/modeling.knowledge.png){.fragment height="580"}
 :::
+
+
 
 ## [Think Statistically]{style="color:#078BCD"}
 
@@ -337,9 +376,16 @@ Know the *why* of your decisions
 <!-- </span> -->
 
 
-## Tentative Schedule {.smaller}
+## [Tentative Schedule]{style="color:#078BCD"}
 
 <a href="https://bgerber123.github.io/Schedule/Schedule.html">https://bgerber123.github.io/Schedule/Schedule.html</a>
+
+
+## [RStudio]{style="color:green;"}
+
+What does each panel do?
+
+![](/img/rstudio.png){width="95%" fig-align="center"}
 
 
 ## [The language of R]{style="color:green;"}
@@ -356,7 +402,6 @@ A storage place for information; stored in the "Environment"
 *'Attributes'* describes the structure or information of the object
 :::
 
-
 ## [The language of R]{style="color:green;"}
 
 ### [**Objects**]{style="color:blue;"}
@@ -370,6 +415,31 @@ y = 3
 y
 ```
 
+
+## [The language of R]{style="color:green;"}
+
+::: columns
+::: {.column width="50%"}
+
+### [**Values**]{style="color:blue;"}
+
+- numeric
+- integer
+- character
+- factor
+:::
+
+::: {.column width="50%"}
+###  [**Objects**]{style="color:blue;"}
+
+- vector
+- matrix
+- array
+- list
+- dataframe
+- S3, S4, S5, and beyond 
+:::
+:::
 
 
 ## [The language of R]{style="color:green;"}
@@ -446,11 +516,6 @@ my.mean.func(c(5,4,7,2,7,1))
 ```
 
 
-## [RStudio]{style="color:green;"}
-
-What does each panel do?
-
-![](/img/rstudio.png){width="95%" fig-align="center"}
 
 
 ## Getting help with Code {.scrollable}
@@ -493,10 +558,6 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 **Minimal/Annotated working example**
 
-
-## Code
-
-![](/img/tweet.png){width="50%"}
 
 ## 
 

@@ -4,12 +4,30 @@ title: ""
 
 ## Week 1
 
--   Lecture: <a href="/FW680A4/Introduction.qmd">1) Introduction</a>, <a href="/Week 1/Information.html"> 2) Information</a>
+-   Lecture: <a href="/FW680A4/Introduction.qmd">Introduction</a>
 
--   Lecture Code: <a href="/Week 1/Information.R">Information.R</a>
+- Assigned Readings: 1) <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>, 2) <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
 
--   Markdown Example: <a href="/Week 1/Markdown and R Stuff.Rmd">1) Markdown Example File</a>, <a href="/Week 1/Markdown-and-R-Stuff.html">2) Compiled HTML</a>
+#### In Class Discussion Questions for Zitomer et al. 2022
 
--   Assignment: <a href="/Week 1/Assignment.Rmd">1) Markdown File</a> <a href="/Week 1/Assignment.html">2) Compiled HTML</a>
+ - Rule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?
 
-- Assigned Readings: 1) <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>, 2) <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>
+-  Rule #4 - Do you agree?
+
+- Rule 7 - What determines a p-value? What does it mean?
+
+-  Rule 10 - How to do this?
+
+- What was a good takewaway from this? What was confusing?
+
+#### In Class Discussion Questions for Wolcott et al. 2019
+
+- What is the connection between general linear models and t-test/ANOVA?
+
+- What is a fixed and random effect? 
+
+- Can you describe elements of a Bayesian or frequentist framework?
+
+- What is model selection?
+
+- What was a good takewaway from this? What was confusing?

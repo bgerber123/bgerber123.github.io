@@ -2209,7 +2209,7 @@
     "href": "FW680A4/index.html#wildlife-ecology-modeling-fw680a4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28): No Classes\n\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
+    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28):\n\nNo Classes\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
   },
   {
     "objectID": "FW680A4/overview/CourseOverview.html",
@@ -2286,7 +2286,7 @@
     "href": "FW680A4/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28): No Classes\n\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
+    "text": "StartSoftwareNotesLearning RProject\n\n\n\nCourse Overview\n\n\nWeek 1 (Aug 20, 22)\n\n\nWeek 2 (Aug 27, 29)\n\n\nWeek 3 (Sep 3, 5)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 10, 12)\n\n\nWeek 6 (Sep 17, 19)\n\n\nWeek 7 (Sep 24, 26)\n\n\nWeek 8 (Oct 1, 3)\n\n\nWeek 9 (Oct 8, 10)\n\n\nWeek 10 (Oct 15, 17)\n\n\nWeek 11 (Oct 22, 24)\n\n\nWeek 12 (Nov 5, 7)\n\n\nWeek 13 (Nov 12, 14)\n\n\nWeek 14 (Nov 19, 21)\n\n\nWeek 15 (Nov 26, 28):\n\nNo Classes\n\nWeek 16 (Dec 3, 5)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\nGithub\n\n\n\n\nTo download lectures. Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nCreate a group of 3\nThe group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.\nOutline a plan:\n\nIdentify a reading that will be assigned prior to class along with relevant topic questions\nIdentify the scope and depth of the lecture material (bullet points of what will be covered),\nIdentify what the goal is to be accomplished in terms of coding (bullet points)\nDecide on a general idea for a homework assignment.\n\nOnce outlined, email me the plan with all group members names. I will look over the general plan and provide comments.\nFrom here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback."
   },
   {
     "objectID": "FW680A4/CourseOverview.html",
@@ -2342,28 +2342,28 @@
     "href": "FW680A4/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: 1) Introduction,  2) Information\nLecture Code: Information.R\nMarkdown Example: 1) Markdown Example File, 2) Compiled HTML\nAssignment: 1) Markdown File 2) Compiled HTML\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter"
+    "text": "Lecture: Introduction\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter.\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule 7 - What determines a p-value? What does it mean?\nRule 10 - How to do this?\nWhat was a good takewaway from this? What was confusing?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takewaway from this? What was confusing?"
   },
   {
     "objectID": "FW680A4/week1.html#week-1",
     "href": "FW680A4/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: 1) Introduction,  2) Information\nLecture Code: Information.R\nMarkdown Example: 1) Markdown Example File, 2) Compiled HTML\nAssignment: 1) Markdown File 2) Compiled HTML\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter"
+    "text": "Lecture: Introduction\nAssigned Readings: 1) Zitomer et al. 2022 PLOS Computation Biology, 2) Wolcott et al. 2019 Book Chapter.\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule 7 - What determines a p-value? What does it mean?\nRule 10 - How to do this?\nWhat was a good takewaway from this? What was confusing?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takewaway from this? What was confusing?"
   },
   {
     "objectID": "FW680A4/Introduction.html#class-stuff",
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
-    "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nMe: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+    "section": "",
+    "text": "Me: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n. . .\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n. . .\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
     "href": "FW680A4/Introduction.html#what-is-this-course",
     "title": "Wildlife Ecology Modeling",
     "section": "What is this course?",
-    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n. . .\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-goals",
@@ -2377,7 +2377,7 @@
     "href": "FW680A4/Introduction.html#why-is-this-class-useful",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is this class useful?",
-    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of modeling\n\n\n\n\nCollaborate with statisticians"
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n. . .\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n. . .\n\nStatistical modeling and coding skills are highly marketable\n\n. . .\n\nTaking control of your analyses\n\n. . .\n\nCollaborate with statisticians"
   },
   {
     "objectID": "FW680A4/Introduction.html#who-am-i",
@@ -2398,7 +2398,7 @@
     "href": "FW680A4/Introduction.html#science-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Philosophy",
-    "text": "Science Philosophy\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Philosophy\n\nI am a pragmatist\n\n. . .\n\nThere are many ways to do great science\n\n. . .\n\nThere are more ways to do meh science\n\n. . .\n\nDisciplines have conventions\n\n. . .\n\nThere are foundations of scientific and statistical learning\n\n. . .\n\nKnow the why of your decisions\n\n. . .\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW680A4/Introduction.html#teaching-philosophy",
@@ -2426,7 +2426,7 @@
     "href": "FW680A4/Introduction.html#project",
     "title": "Wildlife Ecology Modeling",
     "section": "Project",
-    "text": "Project\n\ndevelop an independent research project (ideally connected to their graduate research topic)\ndevelop a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
+    "text": "Project\n\nindependent or group research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development if a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation"
   },
   {
     "objectID": "FW680A4/Introduction.html#r-code-language",
@@ -2447,7 +2447,7 @@
     "href": "FW680A4/Introduction.html#getting-help-with-code",
     "title": "Wildlife Ecology Modeling",
     "section": "Getting help with Code",
-    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n\n\nMinimal/Annotated working example"
+    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n. . .\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n. . .\nMinimal/Annotated working example"
   },
   {
     "objectID": "FW680A4/Introduction.html#code",
@@ -2468,7 +2468,7 @@
     "href": "FW680A4/Introduction.html#learning",
     "title": "Wildlife Ecology Modeling",
     "section": "Learning",
-    "text": "Learning\n\n\n\nI do not know where you are starting"
+    "text": "Learning\n\n\n\n\n\n\nI do not know where you are starting"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-and-coding",
@@ -2545,7 +2545,7 @@
     "href": "FW680A4/Introduction.html#our-aim",
     "title": "Wildlife Ecology Modeling",
     "section": "Our Aim",
-    "text": "Our Aim\nWhat model did you fit? Why? How?"
+    "text": "Our Aim\n\nWhat model did you fit? Why? How?"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-so-difficult",
@@ -2559,28 +2559,28 @@
     "href": "FW680A4/Introduction.html#the-language-of-r",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+    "text": "The language of R\n. . .\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-1",
     "href": "FW680A4/Introduction.html#the-language-of-r-1",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
+    "text": "The language of R\n\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-2",
     "href": "FW680A4/Introduction.html#the-language-of-r-2",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
+    "text": "The language of R\n\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe\nS3, S4, S5, and beyond"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-3",
     "href": "FW680A4/Introduction.html#the-language-of-r-3",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+    "text": "The language of R\n\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
   },
   {
     "objectID": "FW680A4/Introduction.html#some-useful-functions",
@@ -2615,7 +2615,7 @@
     "href": "FW680A4/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
+    "text": "Think Statistically\n\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
   },
   {
     "objectID": "FW680A4/Introduction.html#type-of-modeling",
@@ -2628,15 +2628,15 @@
     "objectID": "FW680A4/Introduction.html#a-graduate-students-dilemma",
     "href": "FW680A4/Introduction.html#a-graduate-students-dilemma",
     "title": "Wildlife Ecology Modeling",
-    "section": "A Graduate Students Dilemma",
-    "text": "A Graduate Students Dilemma\nYou need to know….\n\n\n\nfield techniques\nlogistics / planning\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
+    "section": "A Graduate Student’s Dilemma",
+    "text": "A Graduate Student’s Dilemma\nYou need to know….\n\n\n\nfield techniques\nlogistics / planning\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
   },
   {
     "objectID": "FW680A4/Introduction.html#assessment",
     "href": "FW680A4/Introduction.html#assessment",
     "title": "Wildlife Ecology Modeling",
     "section": "Assessment",
-    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nGroup Project\n30%"
+    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
   },
   {
     "objectID": "FW680A4/Introduction.html#project-1",
@@ -2650,13 +2650,328 @@
     "href": "FW680A4/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is statistics and ecological modeling so difficult?",
-    "text": "Why is statistics and ecological modeling so difficult?\n\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
+    "text": "Why is statistics and ecological modeling so difficult?\n. . .\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in the Modern Age",
-    "text": "Statistics in the Modern Age\n\n\"\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
+    "text": "Statistics in the Modern Age\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n. . .\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#software",
+    "href": "FW680A4/Introduction.html#software",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-learn-to-code",
+    "href": "FW680A4/Introduction.html#why-learn-to-code",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why learn to code?",
+    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nmarketable skill\nneeded for publications"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-use-r",
+    "href": "FW680A4/Introduction.html#why-use-r",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why use R?",
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#why-use-rstudio",
+    "href": "FW680A4/Introduction.html#why-use-rstudio",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Why use RStudio?",
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#our-aim-1",
+    "href": "FW680A4/Introduction.html#our-aim-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Our Aim",
+    "text": "Our Aim\nWhat model did you fit? Why? How?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#the-language-of-r-4",
+    "href": "FW680A4/Introduction.html#the-language-of-r-4",
+    "title": "Wildlife Ecology Modeling",
+    "section": "The language of R",
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n. . .\nobject = function(input1, input2)\n\n. . .\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW680A4/week2.html",
+    "href": "FW680A4/week2.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Big Picture Stuff\nAssigned Readings: 1) Betts et al. 2022.pdf, 2) Dumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3) Williams and Brown 2019.pdf. Only sections 1 and 2.\nBackground Reading: 1) Shmueli 2010.pdf"
+  },
+  {
+    "objectID": "FW680A4/week2.html#week-2",
+    "href": "FW680A4/week2.html#week-2",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Big Picture Stuff\nAssigned Readings: 1) Betts et al. 2022.pdf, 2) Dumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3) Williams and Brown 2019.pdf. Only sections 1 and 2.\nBackground Reading: 1) Shmueli 2010.pdf"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
+    "href": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
+    "title": "Big Picture  and Probability",
+    "section": "Do we need study designs anymore to do research?",
+    "text": "Do we need study designs anymore to do research?\n\n\nData is everywhere; it is the era of  BIG DATA"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#big-data-problems",
+    "href": "FW680A4/BigPicture.html#big-data-problems",
+    "title": "Big Picture  and Probability",
+    "section": "Big Data Problems",
+    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n\n\"Can numbers actually speak for themselves?\""
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#big-data-problems-1",
+    "href": "FW680A4/BigPicture.html#big-data-problems-1",
+    "title": "Big Picture  and Probability",
+    "section": "Big Data Problems",
+    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n\"Data and data sets are not objective;\"\n\n\"they are creations of human design.\""
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#big-data-problems-2",
+    "href": "FW680A4/BigPicture.html#big-data-problems-2",
+    "title": "Big Picture  and Probability",
+    "section": "Big Data Problems",
+    "text": "Big Data Problems\n\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n\n\n\n\nSampling Processes == Human Design\n\n\n\n\nWhat is worse?\n\na very precise inaccurate result \nan accurate imprecise result"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#big-data-problems-3",
+    "href": "FW680A4/BigPicture.html#big-data-problems-3",
+    "title": "Big Picture  and Probability",
+    "section": "Big Data Problems",
+    "text": "Big Data Problems\n\n\nlink\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#big-data-problems-4",
+    "href": "FW680A4/BigPicture.html#big-data-problems-4",
+    "title": "Big Picture  and Probability",
+    "section": "Big Data Problems",
+    "text": "Big Data Problems\nUsing eBird data w/o accounting for sampling biases.\n\n\n\n\n\n\nLink1. Link2.\n\n\n\"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat.\""
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#the-questioning-scientist",
+    "href": "FW680A4/BigPicture.html#the-questioning-scientist",
+    "title": "Big Picture  and Probability",
+    "section": "The Questioning Scientist",
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\n\nHow and why did these data come to be?\n\nunderstand the study design\nask this even when you design the study, after data collection\n\n\n\n\n\nWhat do these data look like?\n\nvisualize the data in many dimensions\nkeep in mind - not all outcomes are visible in data – example?\n\n\n\n\n\nHow does this statistical model work?\n\nstatistical notation, explicit and implicit assumptions, optimization\n\n\n\n\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#data-vs.-information",
+    "href": "FW680A4/BigPicture.html#data-vs.-information",
+    "title": "Big Picture  and Probability",
+    "section": "Data vs. Information",
+    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#information",
+    "href": "FW680A4/BigPicture.html#information",
+    "title": "Big Picture  and Probability",
+    "section": "Information",
+    "text": "Information\nData contains information, depending on ...\n\n\nthe question being asked of the data\nhow the data came to be\nthe goal of the question"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#the-question-and-the-data",
+    "href": "FW680A4/BigPicture.html#the-question-and-the-data",
+    "title": "Big Picture  and Probability",
+    "section": "The question and the data",
+    "text": "The question and the data\n\nEcological surveillance monitoring will often have low quality information regarding post-hoc hypotheses.\n\n\nExample?"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#the-goal-of-the-question",
+    "href": "FW680A4/BigPicture.html#the-goal-of-the-question",
+    "title": "Big Picture  and Probability",
+    "section": "The goal of the question",
+    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n\n\n\ninference and prediction are different goals, optimally requiring different data and statistical models, but  \n\n\nare also not mutually exclusive."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#inference-and-prediction",
+    "href": "FW680A4/BigPicture.html#inference-and-prediction",
+    "title": "Big Picture  and Probability",
+    "section": "Inference and Prediction",
+    "text": "Inference and Prediction\n\n\nFrom \"The strategy of model building in population biology\" by Richard Levins (American Scientists, 1966) :\n\n\n\"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of understanding, predicting, and modifying nature. But this cannot be done.\""
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#infernence-and-prediction",
+    "href": "FW680A4/BigPicture.html#infernence-and-prediction",
+    "title": "Big Picture  and Probability",
+    "section": "Infernence and Prediction",
+    "text": "Infernence and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing bias to obtain the most accurate representation of the underlying theory.\n\n\nPredictive modeling focuses on minimizing both bias and estimation variance;\n\n\n\nthis may sacrifice theoretical accuracy for improved empirical precision."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#infernence-and-prediction-1",
+    "href": "FW680A4/BigPicture.html#infernence-and-prediction-1",
+    "title": "Big Picture  and Probability",
+    "section": "Infernence and Prediction",
+    "text": "Infernence and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n\n\nWhy?"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information",
+    "href": "FW680A4/BigPicture.html#statistical-information",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information",
+    "text": "Statistical Information\nLet’s turn to the field of statistics to understand Information\n\n\nLikelihood principle\nGiven a statistical model, all the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to model parameters (\\(\\theta\\)) is contained in the likelihood function.\n\n\nFisher Information\nThe information an observable random variable (\\(\\textbf{y}\\)) has about an unknown parameter \\(\\theta\\) upon which the probability of \\(\\textbf{y}\\) \\((f(\\textbf{y};\\theta)\\) depends.\n\n\n\nInformation is conditional \n\n\nTo learn about \\(\\theta\\) from \\(\\textbf{y}\\), we need to link them together via a special function, \\(f(\\textbf{y};\\theta)\\)"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-1",
+    "href": "FW680A4/BigPicture.html#statistical-information-1",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information",
+    "text": "Statistical Information\n The pieces:\n\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\)\n\\([\\textbf{y}|\\theta]\\)\n\nThe unknown parameter: \\(\\theta\\)\n\nspecified in the probability function"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\nWe want to know the proportion of a wetlands that contain a rare plant species. We can not sample the whole area."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#rare-plant-data",
+    "href": "FW680A4/BigPicture.html#rare-plant-data",
+    "title": "Big Picture  and Probability",
+    "section": "Rare Plant Data",
+    "text": "Rare Plant Data\nWe randomly select plots and look for our plant.\nOur data are\n\ny &lt;- c(0,1,1,1,1,0,1,0,0,0)\nn &lt;- length(y)\nn\n\n[1] 10\n\n\n\n\n\\(\\textbf{y}\\) is a random variable as it depends on random events.\n\n\n\nIn this case, when we induced a random selection of sites."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#probabilitylikelihood-function",
+    "href": "FW680A4/BigPicture.html#probabilitylikelihood-function",
+    "title": "Big Picture  and Probability",
+    "section": "Probability/Likelihood Function",
+    "text": "Probability/Likelihood Function\n\\(f(\\textbf{y};\\theta)\\) describes the probability for each \\(i^{th}\\) data, \\(y_i\\).\nBut, not just for the data we observed, for all possible data that could be observed.\n\nRules about our data:  \\(y \\in \\{0,1\\}\\),\n\n\n\nwhere the curly brackets imply discrete values in our \"set\".\n\n\nNot this: \\(y \\in [0,1]\\),\n\nwhere the square brackets indicate all real numbers from 0 to 1, including 0 and 1.\n\n\nNot this: \\(y \\in (0,1)\\),\n\nwhere the parantheses indicate all real numbers from 0 to 1, not including 0 and 1."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#probability-function",
+    "href": "FW680A4/BigPicture.html#probability-function",
+    "title": "Big Picture  and Probability",
+    "section": "Probability Function",
+    "text": "Probability Function\nTwo outcomes, 0 or 1, so we need two probabilities to describe our random variable.\n\n\\[\n  f(y;\\theta) = [y|\\theta]=\n  \\begin{cases}\n    \\theta     & \\text{if $y = 1$}, \\\\\n    1 - \\theta & \\text{if $y = 0$}.\n  \\end{cases}\n\\]\n\n\nAlso,\n\\[\nf(y;\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\nAlso,\n\\[\n  \\begin{align}\n        P(Y=1) &= \\theta \\\\\n        P(Y=0) &= 1-\\theta  \n  \\end{align}\n\\]\n\nThis probability function is called ________?"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#probability-function-1",
+    "href": "FW680A4/BigPicture.html#probability-function-1",
+    "title": "Big Picture  and Probability",
+    "section": "Probability Function",
+    "text": "Probability Function\nProbabilities, such as our parameter, have rules:\n\n\n\\(0 \\leq \\theta \\leq 1\\)\n\\(0 \\leq (1 - \\theta) \\leq 1\\)\n\\(\\theta + (1-\\theta) = 1\\)"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#probability-function-2",
+    "href": "FW680A4/BigPicture.html#probability-function-2",
+    "title": "Big Picture  and Probability",
+    "section": "Probability Function",
+    "text": "Probability Function\nHow do we find \\(\\theta\\) for our data?\n\nWe can use our probability function to calculate the likelihood of a parameter, given our data.\n\n\n\\[\n\\mathcal{L}(\\theta|y) = \\prod_{i=1}^{n} p(y_{i};\\theta)\n\\]\n\n\n\n#Bernoulli probability function\n  prob.function=function(theta){prod(theta^y*(1-theta)^y)}\n\n#possible probabilities\n  theta.guess=matrix(seq(0.01,0.99,by=0.01))\n\n#implement function\n  likelihood=apply(theta.guess,1,prob.function)\n  \n#Find maximum likelood\n  max.index=which.max(likelihood)\n\n#Theta that maximizes our probability function\n  theta.est=theta.guess[max.index]\n\n#Define other probability\n  q.est &lt;- 1-theta.est\n\n#Alternative estimation\n  theta.est2 &lt;- sum(y)/n"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-1",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example-1",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\nLet’s combine 1 observation of our random variable, our probability function, and \\(\\theta\\) to quantify the Fisher information (Link ):\n\n\\[\\begin{align}\nI(\\theta) &= -E\\left[\\frac{\\partial^2}{\\partial\\theta^2}\\text{log}(\\theta^y(1-\\theta)^{1-y}) \\right]\\\\\n\\end{align}\\]\n\n\nFor all samples (n), this is reduced to\n\\[\\begin{align}\nI(\\theta) &= \\frac{n}{\\theta(1-\\theta)}\\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-2",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example-2",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\nTherefore, for our sample\n\nI = n/(theta.est*q.est)\nI\n\n[1] 40\n\n\n\nConsider how information varies by \\(\\theta\\) for a given sample size…."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-3",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example-3",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\n\nthetas=seq(0.05,0.95,0.1)\n\nInformation &lt;- n/(thetas*(1-thetas))\n\npar(cex.lab=2.5,cex.axis=2.5,mar=c(5,5,2,2))\nplot(thetas,Information,type=\"b\",lwd=8)\n\nabline(v=theta.est,col=2,lwd=8)"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-4",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example-4",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\nFunny enough, Fisher Information is the reciprocal of the variance of our estimate of \\(\\theta\\),\\[Var[\\hat{\\theta}] = \\frac{\\hat{\\theta}  (1-\\hat{\\theta})}{n}\\]"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-5",
+    "href": "FW680A4/BigPicture.html#statistical-information-an-example-5",
+    "title": "Big Picture  and Probability",
+    "section": "Statistical Information (an example)",
+    "text": "Statistical Information (an example)\n\nthetas=seq(0.05,0.95,0.1)\n\nVar.theta &lt;- (thetas*(1-thetas))/n\npar(cex.main=2.5,cex.axis=2.5,cex.lab=2.5,mar=c(5,5,2,2))\nplot(thetas,Var.theta,type=\"b\",lwd=8)\nabline(v=theta.est,col=2,lwd=8)\n\n\n\nHow does this knowledge about this probability function inform the design of a study?"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#statistics",
+    "href": "FW680A4/BigPicture.html#statistics",
+    "title": "Big Picture  and Probability",
+    "section": "Statistics",
+    "text": "Statistics\nA field dedicated to observing the real world to gain informational data.\n\nBUT\nOften statistics classes only focus on Power Analysis.\n\n\nTo obtain informational data , we need to think about\n\n\nhow our data will be created\nour question of the data\na probability function to use and its parameters\nthe goal of the question"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#reading",
+    "href": "FW680A4/BigPicture.html#reading",
+    "title": "Big Picture  and Probability",
+    "section": "Reading",
+    "text": "Reading\n\n\nLink"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#sections",
+    "href": "FW680A4/BigPicture.html#sections",
+    "title": "Big Picture  and Probability",
+    "section": "Sections",
+    "text": "Sections\n\nHypotheses and Predictions\nTwo frameworks of Sampling\nInference and Prediction\nProbability and Markdown"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#hypothesespredictions",
+    "href": "FW680A4/BigPicture.html#hypothesespredictions",
+    "title": "Big Picture  and Probability",
+    "section": "Hypotheses/Predictions",
+    "text": "Hypotheses/Predictions\nStudy Objective\nHypothesis\nPrediction"
+  },
+  {
+    "objectID": "FW680A4/schedule.html",
+    "href": "FW680A4/schedule.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions."
+  },
+  {
+    "objectID": "FW680A4/schedule.html#course-stuff",
+    "href": "FW680A4/schedule.html#course-stuff",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions."
+  },
+  {
+    "objectID": "FW680A4/schedule.html#schedule",
+    "href": "FW680A4/schedule.html#schedule",
+    "title": "Brian D. Gerber",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLab Exercises\nAssigned Reading\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nThu\n22-Aug\nHypotheses, Sampling, Inference/Prediction\nR and Markdown\nBetts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2)\n\n\n\n 2 \nTu\n27-Aug\nProbability\n\n\n\n\n\n \nThu\n29-Aug\nSimulation / Power Analysis\n\n\n\n\n\n 3 \nTu\n3-Sep\nLikelihood / Regression I\n\n\n\n\n\n \nThu\n5-Sep\nRegression II\n\n\n\n\n\n 4 \nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nThu\n12-Sep\nGeneralized Linear Models I\n\n\n\n\n\n 5 \nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nThu\n19-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n 6 \nTu\n24-Sep\nBayesian Modes and Inference\n\n\n\n\n\n \nThu\n26-Sep\nBayesian Modes and Computation\n\n\n\n\n\n 7 \nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nThu\n3-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n 8 \nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nThu\n10-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n 9 \nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nThu\n17-Oct\nSpatial Capture Recapture\n\n\n\n\n\n 10 \nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nThu\n24-Oct\nAnimal Movement I\n\n\n\n\n\n 11 \nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nThu\n31-Oct\nHabitat Selection I\n\n\n\n\n\n 12 \nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nThu\n7-Nov\nPredictive Modeling\n\n\n\n\n\n 13 \nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nThu\n14-Nov\nCommunity Modeling\n\n\n\n\n\n 14 \nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nThu\n21-Nov\nGroup Project work\n\n\n\n\n\n 15 \nTu\n26-Oct\nNo Class\n\n\n\n\n\n \nThu\n28-Oct\nNo Class\n\n\n\n\n\n 16 \nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nThu\n5-Dec\nPresent Group Project"
+  },
+  {
+    "objectID": "FW680A4/Markdown and R Stuff.html",
+    "href": "FW680A4/Markdown and R Stuff.html",
+    "title": "Markdown, Equations, and the Normal Distribution",
+    "section": "",
+    "text": "RStudio can help you use Markdown to create HTML/PDF/Word documents that can embed R code, HTML, CSS, latex (type setting language), and more. This is a good website to checkout for markdown coding.\nWe will use markdown as a way accomplish homework. This way you can provide code and document it simultaneously. I would suggest to not try and get too fancy at first. Keep it simple. Write-text in RStudio as you would in any word processor. Write R code in R chunks. Use “echo=FALSE” and “echo=TRUE” for a code chink to either not print the code or to print the code.\n\n\nThis probability function is the most widely used and heard of. It has amazing utility. Let’s get to know it a bit more intimately.\nLet’s create an R chunk and plot some data by simulating from a random variable y. Let’s define this variable such that it can take on values of any real number from \\(-\\infty\\) to \\(\\infty\\). So, \\(y \\in (-\\infty, \\infty)\\) or \\(y \\in \\mathbb{R}\\).\nMore specifically, let’s define y as having a probability density function of a Normal/Gaussian distribution,\n\\[y \\sim \\text{Normal}(\\mu, \\sigma).\\]\nAnd stated more generally as,\n\\[f(y;\\mu, \\sigma) = [y|\\mu, \\theta].\\]\n\n# Simulate data from a standard normal distribution (mu = 0, sd = 1)\n  set.seed(54235)\n  y=rnorm(100,0,1)\n\n# Create a histogram\n  hist(y)\n\n\n\n\n\n\n\n\nLet’s create a new plot and not output the code. This time we will see the true probability distribution, not simulated values.\n\n\n\n\n\n\n\n\n\nHTML code can be embedded, such as turning text a different color.\nSimple text formatting can be done directly, such as italics or bolding."
+  },
+  {
+    "objectID": "FW680A4/Markdown and R Stuff.html#approximating-an-integral",
+    "href": "FW680A4/Markdown and R Stuff.html#approximating-an-integral",
+    "title": "Markdown, Equations, and the Normal Distribution",
+    "section": "Approximating an Integral",
+    "text": "Approximating an Integral\nLet’s understand this math a bit more. What we are doing is for every value of y possible (\\(-\\infty\\) to \\(\\infty\\)), we multiple it by its probability density. Then we take all these values and add them (i.e., the integral).\nIt’s a bit easier to understand what the math is doing by making an approximation.\nWe can approximate the integral by breaking it into pieces to calculate y times the \\(f(y; \\mu, \\sigma)\\) and then sum all these values.\n\n# Create a histogram and save the values\n  set.seed(14341)\n  y.hist=hist(rnorm(1000,0,1),breaks=8, freq=FALSE,ylim=c(0,0.4),\n              main=\"Random Normal Samples\")\n  \n# Plot the true probabiltiy denisty.\n  curve(dnorm(x,0,1),add=TRUE,lwd=3,col=2)\n  legend(\"topright\",lwd=3,col=c(2),legend=\"True Distribution\")\n\n\n\n\n\n\n\n# Get the x-axis mid-points of each bin\n  mid.point.x=y.hist$mids\n  mid.point.x\n\n[1] -3.5 -2.5 -1.5 -0.5  0.5  1.5  2.5  3.5\n\n# Get the y-axis values (probability density) for each value of the . \n  prob.y=y.hist$density\n  prob.y\n\n[1] 0.003 0.021 0.134 0.348 0.343 0.133 0.017 0.001\n\n#multiple these value and sum them\n  sum(prob.y*mid.point.x)\n\n[1] -0.021\n\n\nDoes this answer make sense?\nWhat if you did the same approximation with more simulated values and bins?"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html",
+    "href": "FW680A4/Introduction.html",
+    "title": "Wildlife Ecology Modeling",
+    "section": "",
+    "text": "Me: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n. . .\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n. . .\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
   }
 ]
