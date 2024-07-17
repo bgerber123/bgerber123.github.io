@@ -1,9 +1,10 @@
 ---
 title:  " "
 format:
-  revealjs:
-    chalkboard: true
-    multiplex: true
+  html: 
+    theme: cosmo
+    fontsize: 1.5em
+    linestretch: 1.15
 ---
 
 
@@ -27,7 +28,7 @@ I am not expecting advanced knowledge of highly specialized and efficient progra
 More so, I don't want learning base R to be an impediment of understanding what we are trying to accomplish.
 
 
-## R Knowledge {.scrollable}
+## Objects {.scrollable}
 
 **Some things I expect students to know**
 
@@ -69,7 +70,7 @@ my.list[[2]]
 
 :::
 
-## R Knowledge {.scrollable}
+## Access {.scrollable}
 
 Accessing a dataframe
 
@@ -83,7 +84,7 @@ Accessing a dataframe
 head(mtcars)
 ```
 
-## R Knowledge {.scrollable}
+## Access {.scrollable}
 
 Accessing a dataframe
 
@@ -102,9 +103,9 @@ mtcars['mpg']
 ```
 
 
-## R Knowledge {.scrollable}
+## Indexing {.scrollable}
 
-Accessing a dataframe
+Indexing a dataframe
 
 #### E.g.....
 
@@ -124,7 +125,7 @@ mtcars$mpg
 
 ```
 
-## R Knowledge {.scrollable}
+## function {.scrollable}
 
 What a **function ** is
 
@@ -149,12 +150,7 @@ mean(mtcars$mpg,
 
 :::
 
-## R Knowledge {.scrollable}
-
-What a **function ** is
-
-  - how to specify attributes of a function
-  - how to wrap functions
+## function {.scrollable}
 
 #### E.g.....
 
@@ -174,7 +170,7 @@ sim
 ```
 
 
-## R Knowledge
+## Last
 
 Everyone codes differently.
 
