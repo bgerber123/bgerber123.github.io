@@ -569,18 +569,17 @@ Volvo 142E          21.4</code></pre>
 </ul>
 <h4 id="e.g..-5">E.g…..</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Specifying attributes of a function</span></span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Wrapping functions</span></span>
 <span id="cb21-2"><a></a></span>
-<span id="cb21-3"><a></a><span class="co"># Wrapping functions</span></span>
-<span id="cb21-4"><a></a>sim <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, </span>
-<span id="cb21-5"><a></a>            <span class="at">mean =</span> <span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg,<span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
-<span id="cb21-6"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(mtcars<span class="sc">$</span>mpg,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb21-7"><a></a>)</span>
-<span id="cb21-8"><a></a> </span>
-<span id="cb21-9"><a></a>sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-3"><a></a>sim <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, </span>
+<span id="cb21-4"><a></a>            <span class="at">mean =</span> <span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg,<span class="at">na.rm=</span><span class="cn">TRUE</span>),</span>
+<span id="cb21-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(mtcars<span class="sc">$</span>mpg,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb21-6"><a></a>)</span>
+<span id="cb21-7"><a></a> </span>
+<span id="cb21-8"><a></a>sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 19.15655 20.76382 12.48391 17.50938 15.78719 11.69483 18.39723 14.80989
- [9] 17.34404 17.19724</code></pre>
+<pre><code> [1] 17.83829 16.17543 11.34377 15.23579 16.54614 15.91979 17.00913 22.80857
+ [9] 18.80364 16.45424</code></pre>
 </div>
 </div>
 </section>

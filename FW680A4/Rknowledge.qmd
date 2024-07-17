@@ -163,9 +163,8 @@ What a **function ** is
 #| eval: TRUE
 #| tidy: true
 
-# Specifying attributes of a function
-
 # Wrapping functions
+
 sim = rnorm(10, 
             mean = mean(mtcars$mpg,na.rm=TRUE),
             sd = sd(mtcars$mpg,na.rm=TRUE)
