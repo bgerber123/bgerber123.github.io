@@ -2355,15 +2355,15 @@
     "objectID": "FW680A4/Introduction.html#class-stuff",
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
-    "section": "",
-    "text": "Me: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n. . .\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n. . .\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+    "section": "Class Stuff",
+    "text": "Class Stuff\n\n\nMe: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
     "href": "FW680A4/Introduction.html#what-is-this-course",
     "title": "Wildlife Ecology Modeling",
     "section": "What is this course?",
-    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n. . .\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-goals",
@@ -2377,7 +2377,7 @@
     "href": "FW680A4/Introduction.html#why-is-this-class-useful",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is this class useful?",
-    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n. . .\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n. . .\n\nStatistical modeling and coding skills are highly marketable\n\n. . .\n\nTaking control of your analyses\n\n. . .\n\nCollaborate with statisticians"
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of your analyses\n\n\n\n\nCollaborate with statisticians"
   },
   {
     "objectID": "FW680A4/Introduction.html#who-am-i",
@@ -2398,7 +2398,7 @@
     "href": "FW680A4/Introduction.html#science-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Philosophy",
-    "text": "Science Philosophy\n\nI am a pragmatist\n\n. . .\n\nThere are many ways to do great science\n\n. . .\n\nThere are more ways to do meh science\n\n. . .\n\nDisciplines have conventions\n\n. . .\n\nThere are foundations of scientific and statistical learning\n\n. . .\n\nKnow the why of your decisions\n\n. . .\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Philosophy\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW680A4/Introduction.html#teaching-philosophy",
@@ -2426,7 +2426,7 @@
     "href": "FW680A4/Introduction.html#project",
     "title": "Wildlife Ecology Modeling",
     "section": "Project",
-    "text": "Project\n\nindependent or group research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development if a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation"
+    "text": "Project\n\nindependent or group research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation"
   },
   {
     "objectID": "FW680A4/Introduction.html#r-code-language",
@@ -2447,7 +2447,7 @@
     "href": "FW680A4/Introduction.html#getting-help-with-code",
     "title": "Wildlife Ecology Modeling",
     "section": "Getting help with Code",
-    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n. . .\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n. . .\nMinimal/Annotated working example"
+    "text": "Getting help with Code\n\n\nShare via RStudio Server (ideally)\nIf emailing, include a script file and RData file (workspace)\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\nremove all extraneous code (minimal working example)\nthe code you send is likely different than what you are working on\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}\n\n\n\nMinimal/Annotated working example"
   },
   {
     "objectID": "FW680A4/Introduction.html#code",
@@ -2468,7 +2468,7 @@
     "href": "FW680A4/Introduction.html#learning",
     "title": "Wildlife Ecology Modeling",
     "section": "Learning",
-    "text": "Learning\n\n\n\n\n\n\nI do not know where you are starting"
+    "text": "Learning\n\n\nI do not know where you are starting"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-and-coding",
@@ -2545,7 +2545,7 @@
     "href": "FW680A4/Introduction.html#our-aim",
     "title": "Wildlife Ecology Modeling",
     "section": "Our Aim",
-    "text": "Our Aim\n\nWhat model did you fit? Why? How?"
+    "text": "Our Aim\nWhat model did you fit? Why? How?"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-so-difficult",
@@ -2559,28 +2559,28 @@
     "href": "FW680A4/Introduction.html#the-language-of-r",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n. . .\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-1",
     "href": "FW680A4/Introduction.html#the-language-of-r-1",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
+    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-2",
     "href": "FW680A4/Introduction.html#the-language-of-r-2",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe\nS3, S4, S5, and beyond"
+    "text": "The language of R\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe\nS3, S4, S5, and beyond"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-3",
     "href": "FW680A4/Introduction.html#the-language-of-r-3",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
+    "text": "The language of R\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
   },
   {
     "objectID": "FW680A4/Introduction.html#some-useful-functions",
@@ -2615,7 +2615,7 @@
     "href": "FW680A4/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\n\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
   },
   {
     "objectID": "FW680A4/Introduction.html#type-of-modeling",
@@ -2650,14 +2650,14 @@
     "href": "FW680A4/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is statistics and ecological modeling so difficult?",
-    "text": "Why is statistics and ecological modeling so difficult?\n. . .\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
+    "text": "Why is statistics and ecological modeling so difficult?\n\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in the Modern Age",
-    "text": "Statistics in the Modern Age\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n. . .\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
+    "text": "Statistics in the Modern Age\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
   },
   {
     "objectID": "FW680A4/Introduction.html#software",
@@ -2699,7 +2699,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r-4",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n. . .\nobject = function(input1, input2)\n\n. . .\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
   },
   {
     "objectID": "FW680A4/week2.html",
