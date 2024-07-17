@@ -15,12 +15,15 @@ code.r{
 <a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
 ```
 
-**Readings**: Students should be prepared to discuss the assigned reading on the date they are listed under. Come prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
+**Readings**: Students should be prepared to discuss the assigned reading on the date they are listed under. 
 
+- What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
+
+**Labs**: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated.
 
 ## Schedule 
 
-Week                                  |	Day  |	Date     | 	Lecture Topic                             | Lab Exercises     |	   Readings                   |	Background Materials|
+Week                                  |	Day  |	Date     | 	Lecture Topic                             | Labs              |	   Readings                   |	Background Materials|
 --                                    | -----| ----------|----------------------------                | ----------------  |-----------------------------  |------------       |   
 <a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   |                               |      	            |
 &nbsp;                                |	Fr   | 23-Aug	 | Hypotheses, Sampling, Inference/Prediction   |  R and Markdown   | Zitomer et al. 2022; Wolcott et al. 2019;  |

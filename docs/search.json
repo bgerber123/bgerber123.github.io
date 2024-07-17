@@ -2727,35 +2727,35 @@
     "href": "FW680A4/BigPicture.html#big-data-problems",
     "title": "Big Picture  and Probability",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n\n\"Can numbers actually speak for themselves?\""
+    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n. . .\n\"Can numbers actually speak for themselves?\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-1",
     "href": "FW680A4/BigPicture.html#big-data-problems-1",
     "title": "Big Picture  and Probability",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n\"Data and data sets are not objective;\"\n\n\"they are creations of human design.\""
+    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford\nHarvard Business Review (2013)\n\"Data and data sets are not objective;\"\n. . .\n\"they are creations of human design.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-2",
     "href": "FW680A4/BigPicture.html#big-data-problems-2",
     "title": "Big Picture  and Probability",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n\n\n\n\nSampling Processes == Human Design\n\n\n\n\nWhat is worse?\n\na very precise inaccurate result \nan accurate imprecise result"
+    "text": "Big Data Problems\n\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n. . .\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n. . .\n\n\nSampling Processes == Human Design\n\n. . .\n\nWhat is worse?\n\na very precise inaccurate result \nan accurate imprecise result"
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-3",
     "href": "FW680A4/BigPicture.html#big-data-problems-3",
     "title": "Big Picture  and Probability",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n\nlink\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
+    "text": "Big Data Problems\n\n\n\n\nlink\n\n\n. . .\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-4",
     "href": "FW680A4/BigPicture.html#big-data-problems-4",
     "title": "Big Picture  and Probability",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\nUsing eBird data w/o accounting for sampling biases.\n\n\n\n\n\n\nLink1. Link2.\n\n\n\"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat.\""
+    "text": "Big Data Problems\nUsing eBird data w/o accounting for sampling biases.\n. . .\n\n\n\n\n\nLink1. Link2.\n. . .\n\"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat.\"   \n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#the-questioning-scientist",
@@ -2769,7 +2769,7 @@
     "href": "FW680A4/BigPicture.html#data-vs.-information",
     "title": "Big Picture  and Probability",
     "section": "Data vs. Information",
-    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information"
+    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#information",
@@ -2783,14 +2783,14 @@
     "href": "FW680A4/BigPicture.html#the-question-and-the-data",
     "title": "Big Picture  and Probability",
     "section": "The question and the data",
-    "text": "The question and the data\n\nEcological surveillance monitoring will often have low quality information regarding post-hoc hypotheses.\n\n\nExample?"
+    "text": "The question and the data\n\nEcological surveillance monitoring will often have low quality information regarding post-hoc hypotheses.\n\n\nExample?\n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#the-goal-of-the-question",
     "href": "FW680A4/BigPicture.html#the-goal-of-the-question",
     "title": "Big Picture  and Probability",
     "section": "The goal of the question",
-    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n\n\n\ninference and prediction are different goals, optimally requiring different data and statistical models, but  \n\n\nare also not mutually exclusive."
+    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n. . .\n\n\ninference and prediction are different goals, optimally requiring different data and statistical models, but  \n\n\nare also not mutually exclusive."
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction",
@@ -2804,21 +2804,21 @@
     "href": "FW680A4/BigPicture.html#infernence-and-prediction",
     "title": "Big Picture  and Probability",
     "section": "Infernence and Prediction",
-    "text": "Infernence and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing bias to obtain the most accurate representation of the underlying theory.\n\n\nPredictive modeling focuses on minimizing both bias and estimation variance;\n\n\n\nthis may sacrifice theoretical accuracy for improved empirical precision."
+    "text": "Infernence and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing bias to obtain the most accurate representation of the underlying theory.\n\n. . .\nPredictive modeling focuses on minimizing both bias and estimation variance;\n\n. . .\nthis may sacrifice theoretical accuracy for improved empirical precision."
   },
   {
     "objectID": "FW680A4/BigPicture.html#infernence-and-prediction-1",
     "href": "FW680A4/BigPicture.html#infernence-and-prediction-1",
     "title": "Big Picture  and Probability",
     "section": "Infernence and Prediction",
-    "text": "Infernence and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n\n\nWhy?"
+    "text": "Infernence and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n. . .\n\n\nWhy?"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-information",
     "href": "FW680A4/BigPicture.html#statistical-information",
     "title": "Big Picture  and Probability",
     "section": "Statistical Information",
-    "text": "Statistical Information\nLet’s turn to the field of statistics to understand Information\n\n\nLikelihood principle\nGiven a statistical model, all the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to model parameters (\\(\\theta\\)) is contained in the likelihood function.\n\n\nFisher Information\nThe information an observable random variable (\\(\\textbf{y}\\)) has about an unknown parameter \\(\\theta\\) upon which the probability of \\(\\textbf{y}\\) \\((f(\\textbf{y};\\theta)\\) depends.\n\n\n\nInformation is conditional \n\n\nTo learn about \\(\\theta\\) from \\(\\textbf{y}\\), we need to link them together via a special function, \\(f(\\textbf{y};\\theta)\\)"
+    "text": "Statistical Information\nLet’s turn to the field of statistics to understand Information\n\n. . .\nLikelihood principle\nGiven a statistical model, all the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to model parameters (\\(\\theta\\)) is contained in the likelihood function.\n. . .\nFisher Information\nThe information an observable random variable (\\(\\textbf{y}\\)) has about an unknown parameter \\(\\theta\\) upon which the probability of \\(\\textbf{y}\\) \\((f(\\textbf{y};\\theta)\\) depends.\n\n. . .\nInformation is conditional \n. . .\nTo learn about \\(\\theta\\) from \\(\\textbf{y}\\), we need to link them together via a special function, \\(f(\\textbf{y};\\theta)\\)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-information-1",
@@ -2839,21 +2839,21 @@
     "href": "FW680A4/BigPicture.html#rare-plant-data",
     "title": "Big Picture  and Probability",
     "section": "Rare Plant Data",
-    "text": "Rare Plant Data\nWe randomly select plots and look for our plant.\nOur data are\n\ny &lt;- c(0,1,1,1,1,0,1,0,0,0)\nn &lt;- length(y)\nn\n\n[1] 10\n\n\n\n\n\\(\\textbf{y}\\) is a random variable as it depends on random events.\n\n\n\nIn this case, when we induced a random selection of sites."
+    "text": "Rare Plant Data\nWe randomly select plots and look for our plant.\nOur data are\n\ny &lt;- c(0,1,1,1,1,0,1,0,0,0)\nn &lt;- length(y)\nn\n\n[1] 10\n\n\n. . .\n\n\\(\\textbf{y}\\) is a random variable as it depends on random events.\n\n. . .\nIn this case, when we induced a random selection of sites."
   },
   {
     "objectID": "FW680A4/BigPicture.html#probabilitylikelihood-function",
     "href": "FW680A4/BigPicture.html#probabilitylikelihood-function",
     "title": "Big Picture  and Probability",
     "section": "Probability/Likelihood Function",
-    "text": "Probability/Likelihood Function\n\\(f(\\textbf{y};\\theta)\\) describes the probability for each \\(i^{th}\\) data, \\(y_i\\).\nBut, not just for the data we observed, for all possible data that could be observed.\n\nRules about our data:  \\(y \\in \\{0,1\\}\\),\n\n\n\nwhere the curly brackets imply discrete values in our \"set\".\n\n\nNot this: \\(y \\in [0,1]\\),\n\nwhere the square brackets indicate all real numbers from 0 to 1, including 0 and 1.\n\n\nNot this: \\(y \\in (0,1)\\),\n\nwhere the parantheses indicate all real numbers from 0 to 1, not including 0 and 1."
+    "text": "Probability/Likelihood Function\n\\(f(\\textbf{y};\\theta)\\) describes the probability for each \\(i^{th}\\) data, \\(y_i\\).\nBut, not just for the data we observed, for all possible data that could be observed.\n. . .\nRules about our data:  \\(y \\in \\{0,1\\}\\),\n. . .\n\nwhere the curly brackets imply discrete values in our \"set\".\n. . .\nNot this: \\(y \\in [0,1]\\),\n\nwhere the square brackets indicate all real numbers from 0 to 1, including 0 and 1.\n. . .\nNot this: \\(y \\in (0,1)\\),\n\nwhere the parantheses indicate all real numbers from 0 to 1, not including 0 and 1."
   },
   {
     "objectID": "FW680A4/BigPicture.html#probability-function",
     "href": "FW680A4/BigPicture.html#probability-function",
     "title": "Big Picture  and Probability",
     "section": "Probability Function",
-    "text": "Probability Function\nTwo outcomes, 0 or 1, so we need two probabilities to describe our random variable.\n\n\\[\n  f(y;\\theta) = [y|\\theta]=\n  \\begin{cases}\n    \\theta     & \\text{if $y = 1$}, \\\\\n    1 - \\theta & \\text{if $y = 0$}.\n  \\end{cases}\n\\]\n\n\nAlso,\n\\[\nf(y;\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\nAlso,\n\\[\n  \\begin{align}\n        P(Y=1) &= \\theta \\\\\n        P(Y=0) &= 1-\\theta  \n  \\end{align}\n\\]\n\nThis probability function is called ________?"
+    "text": "Probability Function\nTwo outcomes, 0 or 1, so we need two probabilities to describe our random variable.\n. . .\n\\[\n  f(y;\\theta) = [y|\\theta]=\n  \\begin{cases}\n    \\theta     & \\text{if $y = 1$}, \\\\\n    1 - \\theta & \\text{if $y = 0$}.\n  \\end{cases}\n\\]\n. . .\nAlso,\n\\[\nf(y;\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n. . .\nAlso,\n\\[\n  \\begin{align}\n        P(Y=1) &= \\theta \\\\\n        P(Y=0) &= 1-\\theta  \n  \\end{align}\n\\]\n\nThis probability function is called ________?"
   },
   {
     "objectID": "FW680A4/BigPicture.html#probability-function-1",
@@ -2867,21 +2867,21 @@
     "href": "FW680A4/BigPicture.html#probability-function-2",
     "title": "Big Picture  and Probability",
     "section": "Probability Function",
-    "text": "Probability Function\nHow do we find \\(\\theta\\) for our data?\n\nWe can use our probability function to calculate the likelihood of a parameter, given our data.\n\n\n\\[\n\\mathcal{L}(\\theta|y) = \\prod_{i=1}^{n} p(y_{i};\\theta)\n\\]\n\n\n\n#Bernoulli probability function\n  prob.function=function(theta){prod(theta^y*(1-theta)^y)}\n\n#possible probabilities\n  theta.guess=matrix(seq(0.01,0.99,by=0.01))\n\n#implement function\n  likelihood=apply(theta.guess,1,prob.function)\n  \n#Find maximum likelood\n  max.index=which.max(likelihood)\n\n#Theta that maximizes our probability function\n  theta.est=theta.guess[max.index]\n\n#Define other probability\n  q.est &lt;- 1-theta.est\n\n#Alternative estimation\n  theta.est2 &lt;- sum(y)/n"
+    "text": "Probability Function\nHow do we find \\(\\theta\\) for our data?\n. . .\nWe can use our probability function to calculate the likelihood of a parameter, given our data.\n. . .\n\\[\n\\mathcal{L}(\\theta|y) = \\prod_{i=1}^{n} p(y_{i};\\theta)\n\\]\n. . .\n\n#Bernoulli probability function\n  prob.function=function(theta){prod(theta^y*(1-theta)^y)}\n\n#possible probabilities\n  theta.guess=matrix(seq(0.01,0.99,by=0.01))\n\n#implement function\n  likelihood=apply(theta.guess,1,prob.function)\n  \n#Find maximum likelood\n  max.index=which.max(likelihood)\n\n#Theta that maximizes our probability function\n  theta.est=theta.guess[max.index]\n\n#Define other probability\n  q.est &lt;- 1-theta.est\n\n#Alternative estimation\n  theta.est2 &lt;- sum(y)/n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-1",
     "href": "FW680A4/BigPicture.html#statistical-information-an-example-1",
     "title": "Big Picture  and Probability",
     "section": "Statistical Information (an example)",
-    "text": "Statistical Information (an example)\nLet’s combine 1 observation of our random variable, our probability function, and \\(\\theta\\) to quantify the Fisher information (Link ):\n\n\\[\\begin{align}\nI(\\theta) &= -E\\left[\\frac{\\partial^2}{\\partial\\theta^2}\\text{log}(\\theta^y(1-\\theta)^{1-y}) \\right]\\\\\n\\end{align}\\]\n\n\nFor all samples (n), this is reduced to\n\\[\\begin{align}\nI(\\theta) &= \\frac{n}{\\theta(1-\\theta)}\\\\\n\\end{align}\\]"
+    "text": "Statistical Information (an example)\nLet’s combine 1 observation of our random variable, our probability function, and \\(\\theta\\) to quantify the Fisher information (Link ):\n. . .\n\\[\\begin{align}\nI(\\theta) &= -E\\left[\\frac{\\partial^2}{\\partial\\theta^2}\\text{log}(\\theta^y(1-\\theta)^{1-y}) \\right]\\\\\n\\end{align}\\]\n. . .\nFor all samples (n), this is reduced to\n\\[\\begin{align}\nI(\\theta) &= \\frac{n}{\\theta(1-\\theta)}\\\\\n\\end{align}\\]"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-2",
     "href": "FW680A4/BigPicture.html#statistical-information-an-example-2",
     "title": "Big Picture  and Probability",
     "section": "Statistical Information (an example)",
-    "text": "Statistical Information (an example)\nTherefore, for our sample\n\nI = n/(theta.est*q.est)\nI\n\n[1] 40\n\n\n\nConsider how information varies by \\(\\theta\\) for a given sample size…."
+    "text": "Statistical Information (an example)\nTherefore, for our sample\n\nI = n/(theta.est*q.est)\nI\n\n[1] 40\n\n\n. . .\nConsider how information varies by \\(\\theta\\) for a given sample size…."
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-information-an-example-3",
@@ -2902,56 +2902,56 @@
     "href": "FW680A4/BigPicture.html#statistical-information-an-example-5",
     "title": "Big Picture  and Probability",
     "section": "Statistical Information (an example)",
-    "text": "Statistical Information (an example)\n\nthetas=seq(0.05,0.95,0.1)\n\nVar.theta &lt;- (thetas*(1-thetas))/n\npar(cex.main=2.5,cex.axis=2.5,cex.lab=2.5,mar=c(5,5,2,2))\nplot(thetas,Var.theta,type=\"b\",lwd=8)\nabline(v=theta.est,col=2,lwd=8)\n\n\n\nHow does this knowledge about this probability function inform the design of a study?"
+    "text": "Statistical Information (an example)\n\nthetas=seq(0.05,0.95,0.1)\n\nVar.theta &lt;- (thetas*(1-thetas))/n\npar(cex.main=2.5,cex.axis=2.5,cex.lab=2.5,mar=c(5,5,2,2))\nplot(thetas,Var.theta,type=\"b\",lwd=8)\nabline(v=theta.est,col=2,lwd=8)\n\n\n\n\n\n\n\n\n. . .\nHow does this knowledge about this probability function inform the design of a study?"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistics",
     "href": "FW680A4/BigPicture.html#statistics",
     "title": "Big Picture  and Probability",
     "section": "Statistics",
-    "text": "Statistics\nA field dedicated to observing the real world to gain informational data.\n\nBUT\nOften statistics classes only focus on Power Analysis.\n\n\nTo obtain informational data , we need to think about\n\n\nhow our data will be created\nour question of the data\na probability function to use and its parameters\nthe goal of the question"
+    "text": "Statistics\nA field dedicated to observing the real world to gain informational data.\n. . .\nBUT\nOften statistics classes only focus on Power Analysis.\n. . .\nTo obtain informational data , we need to think about\n\n\nhow our data will be created\nour question of the data\na probability function to use and its parameters\nthe goal of the question"
   },
   {
     "objectID": "FW680A4/BigPicture.html#reading",
     "href": "FW680A4/BigPicture.html#reading",
     "title": "Big Picture  and Probability",
     "section": "Reading",
-    "text": "Reading\n\n\nLink"
+    "text": "Reading\n\n\n\n\n\n\nLink"
   },
   {
     "objectID": "FW680A4/BigPicture.html#sections",
     "href": "FW680A4/BigPicture.html#sections",
     "title": "Big Picture  and Probability",
-    "section": "Sections",
-    "text": "Sections\n\nHypotheses and Predictions\nTwo frameworks of Sampling\nInference and Prediction\nProbability and Markdown"
+    "section": "",
+    "text": "Hypotheses and Predictions\nTwo frameworks of Sampling\nInference and Prediction\nProbability and Markdown"
   },
   {
     "objectID": "FW680A4/BigPicture.html#hypothesespredictions",
     "href": "FW680A4/BigPicture.html#hypothesespredictions",
     "title": "Big Picture  and Probability",
     "section": "Hypotheses/Predictions",
-    "text": "Hypotheses/Predictions\nStudy Objective\nHypothesis\nPrediction"
+    "text": "Hypotheses/Predictions\n\nStudy Objective\n\n\nHypothesis\n\n\nPrediction"
   },
   {
     "objectID": "FW680A4/schedule.html",
     "href": "FW680A4/schedule.html",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "",
-    "text": "Schedule\n\n\nCourse Overview\nReadings: Readings are assigned on a given dayCome prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions."
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Students should be prepared to discuss the assigned reading on the date they are listed under.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
   },
   {
     "objectID": "FW680A4/schedule.html#course-stuff",
     "href": "FW680A4/schedule.html#course-stuff",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "",
-    "text": "Schedule\n\n\nCourse Overview\nReadings: Readings are assigned on a given dayCome prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions."
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Students should be prepared to discuss the assigned reading on the date they are listed under.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
   },
   {
     "objectID": "FW680A4/schedule.html#schedule",
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLab Exercises\nAssigned Reading\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\n\n\n\n\n \nFr\n23-Aug\nHypotheses, Sampling, Inference/Prediction\nR and Markdown\nZitomer et al. 2022; Wolcott et al. 2019;\n\n\n\n2\nTu\n27-Aug\nProbability\n\nBetts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2)\n\n\n\n \nFr\n30-Aug\nSimulation / Power Analysis\n\n\n\n\n\n3\nTu\n3-Sep\nLikelihood / Regression I\n\n\n\n\n\n \nFr\n6-Sep\nRegression II\n\n\n\n\n\n4\nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nFr\n13-Sep\nGeneralized Linear Models I\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Oct\nNo Class\n\n\n\n\n\n \nFr\n29-Oct\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLabs\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\n\n\n\n\n \nFr\n23-Aug\nHypotheses, Sampling, Inference/Prediction\nR and Markdown\nZitomer et al. 2022; Wolcott et al. 2019;\n\n\n\n2\nTu\n27-Aug\nProbability\n\nBetts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2)\n\n\n\n \nFr\n30-Aug\nSimulation / Power Analysis\n\n\n\n\n\n3\nTu\n3-Sep\nLikelihood / Regression I\n\n\n\n\n\n \nFr\n6-Sep\nRegression II\n\n\n\n\n\n4\nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nFr\n13-Sep\nGeneralized Linear Models I\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Oct\nNo Class\n\n\n\n\n\n \nFr\n29-Oct\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -2980,5 +2980,12 @@
     "title": "Brian D. Gerber",
     "section": "",
     "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html",
+    "href": "FW680A4/BigPicture.html",
+    "title": "Big Picture  and Probability",
+    "section": "",
+    "text": "Hypotheses and Predictions\nTwo frameworks of Sampling\nInference and Prediction\nProbability and Markdown"
   }
 ]
