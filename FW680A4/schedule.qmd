@@ -23,37 +23,37 @@ code.r{
 Week                                  |	Day  |	Date     | 	Lecture Topic                             | Lab Exercises     |	Assigned Reading           |	Background Materials|
 --                                    | -----| ----------|-------------------------                   | ----------------  |--------------------------  |------------   |   
 <a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   | Zitomer et al. 2022; Wolcott et al. 2019   |      	
-&nbsp;                                |	Fr  | 22-Aug	 | Hypotheses, Sampling, Inference/Prediction   |  R and Markdown   | Betts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2) |
+&nbsp;                                |	Fr   | 23-Aug	 | Hypotheses, Sampling, Inference/Prediction   |  R and Markdown   | Betts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2) |
 2                                     |	Tu	 | 27-Aug	 | Probability                                  |                   |                             |              |
-&nbsp;                                | Fr	 | 29-Aug	 | Simulation / Power Analysis                  |                   |                             | 		         |		            
+&nbsp;                                | Fr	 | 30-Aug	 | Simulation / Power Analysis                  |                   |                             | 		         |		            
 3                                     |	Tu	 | 3-Sep	 | Likelihood / Regression I                    |                   |                             |              |  
-&nbsp;                                |	Fr	 | 5-Sep	 | Regression II                                |                   |                             |              |
+&nbsp;                                |	Fr	 | 6-Sep	 | Regression II                                |                   |                             |              |
 4                                     |	Tu	 | 10-Sep	 | Generalized Linear Models I                  |                   |                             |              |
-&nbsp;                                |	Fr	 | 12-Sep	 | Generalized Linear Models I                  |                   |                             |              |
+&nbsp;                                |	Fr	 | 13-Sep	 | Generalized Linear Models I                  |                   |                             |              |
 5                                     |	Tu	 | 17-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
-&nbsp;                                |	Fr	 | 19-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
+&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
 6                                     |	Tu	 | 24-Sep	 | Bayesian Modes and Inference                 |                   |                             |              |
-&nbsp;                                |	Fr	 | 26-Sep	 | Bayesian Modes and Computation               |                   |                             |              |
+&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Modes and Computation               |                   |                             |              |
 7                                     |	Tu	 | 1-Oct	 | Hierarchical Bayesian Occupancy Models I     |                   |                             |              |
-&nbsp;                                |	Fr	 | 3-Oct	 | Hierarchical Bayesian Occupancy Models II    |                   |                             |              |
+&nbsp;                                |	Fr	 | 4-Oct	 | Hierarchical Bayesian Occupancy Models II    |                   |                             |              |
 8                                     |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   |                             |              | 			
-&nbsp;                                |	Fr	 | 10-Oct	 | N-Mixture and Integrated Data Models         |                   |                             |              | 			
+&nbsp;                                |	Fr	 | 11-Oct	 | N-Mixture and Integrated Data Models         |                   |                             |              | 			
 9                                     |	Tu	 | 15-Oct	 | Mark Recapture                               |                   |                             |              |
-&nbsp;                                |	Fr	 | 17-Oct	 | Spatial Capture Recapture                    |                   |                             |              |
+&nbsp;                                |	Fr	 | 18-Oct	 | Spatial Capture Recapture                    |                   |                             |              |
 10                                    | TU	 | 22-Oct	 | Distance Sampling                            |                   |                             |              |
-&nbsp;                                | Fr	 | 24-Oct	 | Animal Movement I                            |                   |                             |              | 	
+&nbsp;                                | Fr	 | 25-Oct	 | Animal Movement I                            |                   |                             |              | 	
 11                                    | Tu	 | 29-Oct	 | Animal Movement II                           |                   |                             |              |
-&nbsp;                                | Fr	 | 31-Oct	 | Habitat Selection I                          |                   |                             |              |
+&nbsp;                                | Fr	 | 1-Nov	 | Habitat Selection I                          |                   |                             |              |
 12                                    | Tu	 | 5-Nov	 | Habitat Selection II                         |                   |                             |              |
-&nbsp;                                | Fr	 | 7-Nov	 | Predictive Modeling                          |                   |                             |              |
+&nbsp;                                | Fr	 | 8-Nov	 | Predictive Modeling                          |                   |                             |              |
 13                                    | Tu	 | 12-Nov	 | Community Modeling                           |                   |                             |              |
-&nbsp;                                | Fr	 | 14-Nov	 | Community Modeling                           |                   |                             |              |
+&nbsp;                                | Fr	 | 15-Nov	 | Community Modeling                           |                   |                             |              |
 14                                    | Tu	 | 19-Nov	 | Group Project work                           |                   |                             |              |
-&nbsp;                                | Fr	 | 21-Nov	 | Group Project work                           |                   |                             |              |
+&nbsp;                                | Fr	 | 22-Nov	 | Group Project work                           |                   |                             |              |
 15                                    | Tu	 | 26-Oct	 | <span style="color:red">No Class</span>      |                   |                             |              |
-&nbsp;                                | Fr	 | 28-Oct	 | <span style="color:red">No Class</span>      |                   |                             |              |
+&nbsp;                                | Fr	 | 29-Oct	 | <span style="color:red">No Class</span>      |                   |                             |              |
 16                                    | Tu	 | 3-Dec	 | Present Group Project                        |                   |                             |              |
-&nbsp;                                | Fr  | 5-Dec	 | Present Group Project                        |                   |                             |              |
+&nbsp;                                | Fr   | 6-Dec	 | Present Group Project                        |                   |                             |              |
                                          
                                 
                                 

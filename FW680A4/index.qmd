@@ -4,50 +4,55 @@ title: ""
 
 ## Wildlife Ecology Modeling (FW680A4)
 
-::: {.panel-tabset}
-
-### Start 
 <p><a href="CourseOverview.qmd">Course Overview</a></p>
 
+<p><a href="schedule.qmd">Schedule (Subject to Change)</a></p>
 
-<p><a href="week1.qmd">Week 1 (Aug 20, 22)</a></p>
+<br>
+
+::: {.panel-tabset}
+
+### Weeks 
 
 
-<p><a href="week2.qmd" >Week 2 (Aug 27, 29)</a></p>
 
-<p><a href="week3.qmd">Week 3 (Sep 3, 5)</a></p>
+<p><a href="week1.qmd">Week 1 (Aug 20, 23)</a></p>
 
-<p><a href="week4.qmd">Week 4 (Sep 10, 12)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week3.qmd">Week 2 (Aug 27, 30)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week5.qmd">Week 5 (Sep 10, 12)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week3.qmd">Week 3 (Sep 3, 6)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week6.qmd">Week 6 (Sep 17, 19)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week5.qmd">Week 4 (Sep 10, 12)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week7.qmd">Week 7 (Sep 24, 26)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week6.qmd">Week 5 (Sep 17, 20)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week8.qmd">Week 8 (Oct 1, 3)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week7.qmd">Week 6 (Sep 24, 27)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week9.qmd">Week 9 (Oct 8, 10)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week8.qmd">Week 7 (Oct 1, 4)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week10.qmd">Week 10 (Oct 15, 17)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week9.qmd">Week 8 (Oct 8, 11)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week11.qmd">Week 11 (Oct 22, 24)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week10.qmd">Week 9 (Oct 15, 18)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week12.qmd">Week 12 (Nov 5, 7)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week11.qmd">Week 10 (Oct 22, 25)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week13.qmd">Week 13 (Nov 12, 14)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week12.qmd">Week 11 (Oct 29, Nov 1)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week14.qmd">Week 14 (Nov 19, 21)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week13.qmd">Week 12 (Nov 5, 8)</a></p>
 
-<p style="color:#606060">Week 15 (Nov 26, 28):</p> **No Classes**
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week14.qmd">Week 13 (Nov 12, 15)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week16.qmd">Week 16 (Dec 3, 5)</a></p>
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week14.qmd">Week 14 (Nov 19, 22)</a></p>
+
+<p style="color:#606060">Week 15 (Nov 26, 29):</p> **No Classes**
+
+<p><a style="pointer-events: none; cursor: default; color:#606060"href="week16.qmd">Week 16 (Dec 3, 6)</a></p>
 
 ### Software
 
 Install the most recent versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>.
 
-<a href="https://github.com/">Github</a>
+<a href="https://github.com/">Github</a> ... still thinking about whether we will use
 
 <br>
 
@@ -98,19 +103,9 @@ Install the most recent versions of <a href="https://cran.r-project.org/">R</a> 
 
 ### Project
 
--   Create a group of 3
+-   Work individually or in a group of 2-3
 
--   The group should discuss ideas in quantitative ecology that you would all like to develop a class dedicated to. If you need help, schedule a time to talk with me.
-
--   Outline a plan: 
-    -   Identify a reading that will be assigned prior to class along with relevant topic questions
-    -   Identify the scope and depth of the lecture material (bullet points of what will be covered), 
-    -   Identify what the goal is to be accomplished in terms of coding (bullet points) 
-    - Decide on a general idea for a homework assignment. 
-
--  Once outlined, email me the plan with all group members names. I will look over the general plan and provide comments. 
-
--   From here, I expect you to move forward with your plan and reach out when you have questions. Arrange at least one time to walk me through the lesson plan prior to the class, such that there is enough time to implement any feedback.  
+-   Decide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.
 
 :::
 
