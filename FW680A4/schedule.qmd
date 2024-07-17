@@ -12,7 +12,7 @@ code.r{
 }
 </style>
 
-<a href="./FW680A4/CourseOverview.qmd">Course Overview</a></p>
+<a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
 ```
 
 **Readings**: Come prepared to discuss the assigned reading on the next class. What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
@@ -21,7 +21,7 @@ code.r{
 ## Schedule 
 
 Week                                  |	Day  |	Date     | 	Lecture Topic                             | Lab Exercises     |	Assigned Reading           |	Background Materials|
---                                    | -----| ----------|-------------------------                   | ----------------  |--------------------------  |------------   |   
+--                                    | -----| ----------|----------------------------                   | ----------------  |-----------------------------  |------------   |   
 <a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   | Zitomer et al. 2022; Wolcott et al. 2019   |      	
 &nbsp;                                |	Fr   | 23-Aug	 | Hypotheses, Sampling, Inference/Prediction   |  R and Markdown   | Betts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2) |
 2                                     |	Tu	 | 27-Aug	 | Probability                                  |                   |                             |              |
@@ -32,8 +32,8 @@ Week                                  |	Day  |	Date     | 	Lecture Topic        
 &nbsp;                                |	Fr	 | 13-Sep	 | Generalized Linear Models I                  |                   |                             |              |
 5                                     |	Tu	 | 17-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
 &nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
-6                                     |	Tu	 | 24-Sep	 | Bayesian Modes and Inference                 |                   |                             |              |
-&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Modes and Computation               |                   |                             |              |
+6                                     |	Tu	 | 24-Sep	 | Bayesian Models and Inference                |                   |                             |              |
+&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Models and Computation              |                   |                             |              |
 7                                     |	Tu	 | 1-Oct	 | Hierarchical Bayesian Occupancy Models I     |                   |                             |              |
 &nbsp;                                |	Fr	 | 4-Oct	 | Hierarchical Bayesian Occupancy Models II    |                   |                             |              |
 8                                     |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   |                             |              | 			
