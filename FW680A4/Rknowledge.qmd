@@ -1,0 +1,192 @@
+---
+title:  " "
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+
+## FW 680A4 (Wildlife Ecology Modeling)
+
+We will regularly use the [R programming language](https://www.r-project.org/about.html) to manipulate data and objects, create figures, and use functions.
+
+
+<br>
+
+I expect students to know some fundamentals of base R.
+
+
+<br>
+
+I am not expecting advanced knowledge of highly specialized and efficient programming.
+
+
+<br>
+
+More so, I don't want learning base R to be an impediment of understanding what we are trying to accomplish.
+
+
+## R Knowledge {.scrollable}
+
+**Some things I expect students to know**
+
+- what an **object ** is
+
+- how to subset and manipulate different types of objects
+
+  - vectors, lists, matrices, dataframes, etc.
+
+#### E.g.....
+
+::: {.fragment}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+# A vector of integers stored as an object...
+
+vec = seq(1,10)
+
+vec
+
+
+# A Matrix...
+
+mat = matrix(vec,nrow=2,ncol=5)
+
+mat[2,]
+
+# A list
+
+my.list = list(vec, mat)
+
+my.list[[2]]
+
+```
+
+:::
+
+## R Knowledge {.scrollable}
+
+Accessing a dataframe
+
+#### E.g.....
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+head(mtcars)
+```
+
+## R Knowledge {.scrollable}
+
+Accessing a dataframe
+
+#### E.g.....
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+mtcars$mpg
+
+mtcars[,1]
+
+mtcars['mpg']
+```
+
+
+## R Knowledge {.scrollable}
+
+Accessing a dataframe
+
+#### E.g.....
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+# find the location of certain values
+
+which(mtcars$mpg>20)
+
+# manipulating those elements
+
+mtcars$mpg[which(mtcars$mpg>20)] = NA
+mtcars$mpg
+
+```
+
+## R Knowledge {.scrollable}
+
+What a **function ** is
+
+  - how to specify attributes of a function
+  - how to wrap functions
+
+#### E.g.....
+
+::: {.fragment}
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+# Specifying attributes of a function
+
+mean(mtcars$mpg,
+     na.rm=TRUE
+     )
+```
+
+:::
+
+## R Knowledge {.scrollable}
+
+What a **function ** is
+
+  - how to specify attributes of a function
+  - how to wrap functions
+
+#### E.g.....
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+#| tidy: true
+
+# Specifying attributes of a function
+
+# Wrapping functions
+sim = rnorm(10, 
+            mean = mean(mtcars$mpg,na.rm=TRUE),
+            sd = sd(mtcars$mpg,na.rm=TRUE)
+)
+ 
+sim
+```
+
+
+## R Knowledge
+
+Everyone codes differently.
+
+<br>
+
+You may use **tidy** over base R. That is fine. 
+
+<br>
+
+If you are concerned about coding, talk to Brian (202A Wagar)
+
+<br>
+
+If you need resources for learning R, please go [here](/FW680A4/) and click on the tab *Learning R*. 
