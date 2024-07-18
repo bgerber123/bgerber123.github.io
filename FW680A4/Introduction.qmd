@@ -11,7 +11,7 @@ format:
 
 
 
-## [Class Stuff]{style="color:#078BCD;"}
+## [Class Stuff]{style="color:#078BCD;"}{.smaller}
 ```{=html}
 <style type="text/css">
 
@@ -21,7 +21,7 @@ code.r{
 </style>
 ```
 
--   **Me:** Brian Gerber
+-   **Instructor:** Brian Gerber
 
 -   **Classroom**: NR 243
 
@@ -33,7 +33,7 @@ code.r{
 
 -   **My Office**: 202A Wagar, Colorado Cooperative Research Unit
 
-    -   Office hours: XXXXX
+    -   Office hours: TU 1:30pm - 2:30pm and by appointment
 
     -   brian.gerber@colostate.edu
 
