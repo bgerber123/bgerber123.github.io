@@ -1705,7 +1705,7 @@
     "href": "R1day/index.html#why-learn-to-code",
     "title": "Introduction to R",
     "section": "Why learn to code?",
-    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nmarketable skill\nneeded for publications"
+    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nautomated processes/report writing\nmarketable skill\nneeded for publications"
   },
   {
     "objectID": "R1day/index.html#why-learn-r",
@@ -2195,7 +2195,7 @@
     "href": "R1day/index.html#download-files",
     "title": "Introduction to R",
     "section": "Download Files",
-    "text": "Download Files\nDownload this presentation as pdf\nDownload code displayed in presentation\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file.\n\nTo copy/paste code directly:\nLeft-Click –&gt; Ctrl A –&gt; Ctrl C. Go to RStudio, left-click on an empty script. Ctrl V."
+    "text": "Download Files\nDownload this presentation as pdf\nDownload Files for today\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file."
   },
   {
     "objectID": "FW680A4/index.html#fw680a4",
@@ -3113,5 +3113,12 @@
     "title": "Brian D. Gerber",
     "section": "Indexing",
     "text": "Indexing\nIndexing a dataframe\n\nE.g…..\n\n# find the location of certain values\n\nwhich(mtcars$mpg&gt;20)\n\n [1]  1  2  3  4  8  9 18 19 20 21 26 27 28 32\n\n# manipulating those elements\n\nmtcars$mpg[which(mtcars$mpg&gt;20)] = NA\nmtcars$mpg\n\n [1]   NA   NA   NA   NA 18.7 18.1 14.3   NA   NA 19.2 17.8 16.4 17.3 15.2 10.4\n[16] 10.4 14.7   NA   NA   NA   NA 15.5 15.2 13.3 19.2   NA   NA   NA 15.8 19.7\n[31] 15.0   NA"
+  },
+  {
+    "objectID": "R1day/index.html#packages-for-workshop",
+    "href": "R1day/index.html#packages-for-workshop",
+    "title": "Introduction to R",
+    "section": "Packages for Workshop",
+    "text": "Packages for Workshop\nPlease install\n\ntidyverse\nreadxl"
   }
 ]
