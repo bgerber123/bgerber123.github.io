@@ -39,7 +39,7 @@
     "href": "index.html",
     "title": "Who and What",
     "section": "",
-    "text": "Scholar\n  \n  \n    \n     RG\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n\n\n\n\nWho and What\nI am a research scientist with the United States Geological Survey (USGS), Assistant Unit Leader at the Colorado Cooperative Fish and Wildlife Research Unit, and an Associate Professor at Colorado State University in the Department of Fish, Wildlife, and Conservation Biology.\nMy focus is on collaborative science:\nWith my lab and colleagues - we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity.\n\nOur research focus includes\n\nWildlife Population Demography and Distribution\nConservation Decision Making\nAnimal Behavior (especially on the diel niche)\nHierarchical Bayesian Modeling\nAnimal Movement and Habitat Selection\nOptimal Prediction via Statistical Regularization\n\n\n\n\nNews\n\nJuly, 2024\n\nNew OA Publication: Mesocarnivore sensitivity to natural and anthropogenic disturbance leads to declines in occurrence and concern for species persistence from Dr. Laken Ganoe on mesocarnivore response to disturabcen in Rhode Island, USA.\n\n\n\nJune, 2024\n\nNew OA Publication: A statistical population reconstruction model for wildlife populations: A case study with white-tailed deer and fisher from Dr. Edwige Bellier on a novel hierarchical Bayesian model to recover population variables from age-at-harvest data.\nBrian presents at the 103rd American Society of Mammalogists meeting in Boulder, CO.\nTitle: A framework to define and estimate animal diel activity.\nBrian co-instructs a 10-day short course ‘Bayesian Model for Ecologists’ at Colorado State University along with Drs. Tom Hobbs, Mevin Hooten, Becky Tang, and Alison Ketz. This is an NSF funded course (Award 2042028).\n\n\n\nApril, 2024\n\nLaken Ganoe passes her dissertation defense! and Nicole Defelice passes her thesis defense!\n\n\n\nMarch, 2024\n\nNew OA Publication: Influence of resource gradients and habitat edges on density variation in tiger populations in a multi-use landscape from Dr. Pranav Chanchani examining drivers of Bengal Tiger populations.\n\n\n\nFebruary, 2024\n\nBrian travels to Norway to be an external PhD examiner at the Norwegian Univeristy of Life Sciences and visits the Norwegian Institute for Nature Research.\n\n\n\nJanuary, 2024\n\nNew OA Publication: A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package from the Global Animal Diel Activity Project. Download. We propose a conceptual and modeling framework to connect data and hypotheses to make inference about animal diel phenotypes (e.g., diurnal, nocturnal). The Diel.Niche R package can be found on Github and a shiny version can be found here. We also wrote a blog about our paper that is intended for a more general audience.\n\n\n\nDecember, 2023\n\nNew Publication: Forest carnivores living on the edge with invasive predators from the Gloled by the ever persistent Erin Wampole. Download. We found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) to shape native carnivore species response differently than within interior forest.\n\n\n\nNovember, 2023\n\nBrian heads to the annual Wildlife Society conference to talk about a recent paper in Animal Conservation about the robustness of optimal decision making in the context of known-unknown meta-population dynamics.\nNew OA Publication: Diel activity structures the occurrence of a mammal community in a human-dominated landscape led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on Zenodo. The methods used to implement this modeling framework are outlined by Rivera et al. 2022 with code on Github.\n\n\n\nSeptember, 2023\n\nNew Publication: Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains led by Jake Ivan from the Colorado Parks and Wilddife. Download.\n\n\n\nAugust, 2023\n\nBrian starts with the Colorado Cooperative Fish and Wildlife Research Unit with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science."
+    "text": "Scholar\n  \n  \n    \n     RG\n  \n  \n    \n     Twitter\n  \n  \n    \n     Github\n  \n  \n    \n     Email\n  \n\n\n\n\nWho and What\nI am a research scientist with the United States Geological Survey (USGS), Assistant Unit Leader at the Colorado Cooperative Fish and Wildlife Research Unit, and an Associate Professor at Colorado State University in the Department of Fish, Wildlife, and Conservation Biology.\nMy focus is on collaborative science:\nWith my lab and colleagues - we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity.\n\nOur research focus includes\n\nWildlife Population Demography and Distribution\nConservation Decision Making\nAnimal Behavior (especially on the diel niche)\nHierarchical Bayesian Modeling\nAnimal Movement and Habitat Selection\nOptimal Prediction via Statistical Regularization\n\n\n\n\nNews\n\nJuly, 2024\n\nNew OA Publication: Mesocarnivore sensitivity to natural and anthropogenic disturbance leads to declines in occurrence and concern for species persistence from Dr. Laken Ganoe on mesocarnivore response to disturbance in Rhode Island, USA.\n\n\n\nJune, 2024\n\nNew OA Publication: A statistical population reconstruction model for wildlife populations: A case study with white-tailed deer and fisher from Dr. Edwige Bellier on a novel hierarchical Bayesian model to recover population variables from age-at-harvest data.\nBrian presents at the 103rd American Society of Mammalogists meeting in Boulder, CO.\nTitle: A framework to define and estimate animal diel activity.\nBrian co-instructs a 10-day short course ‘Bayesian Model for Ecologists’ at Colorado State University along with Drs. Tom Hobbs, Mevin Hooten, Becky Tang, and Alison Ketz. This is an NSF funded course (Award 2042028).\n\n\n\nApril, 2024\n\nLaken Ganoe passes her dissertation defense! and Nicole Defelice passes her thesis defense!\n\n\n\nMarch, 2024\n\nNew OA Publication: Influence of resource gradients and habitat edges on density variation in tiger populations in a multi-use landscape from Dr. Pranav Chanchani examining drivers of Bengal Tiger populations.\n\n\n\nFebruary, 2024\n\nBrian travels to Norway to be an external PhD examiner at the Norwegian Univeristy of Life Sciences and visits the Norwegian Institute for Nature Research.\n\n\n\nJanuary, 2024\n\nNew OA Publication: A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package from the Global Animal Diel Activity Project. Download. We propose a conceptual and modeling framework to connect data and hypotheses to make inference about animal diel phenotypes (e.g., diurnal, nocturnal). The Diel.Niche R package can be found on Github and a shiny version can be found here. We also wrote a blog about our paper that is intended for a more general audience.\n\n\n\nDecember, 2023\n\nNew Publication: Forest carnivores living on the edge with invasive predators from the ever persistent Erin Wampole. Download. We found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) to shape native carnivore species response differently than within interior forest.\n\n\n\nNovember, 2023\n\nBrian heads to the annual Wildlife Society conference to talk about a recent paper in Animal Conservation about the robustness of optimal decision making in the context of known-unknown meta-population dynamics.\nNew OA Publication: Diel activity structures the occurrence of a mammal community in a human-dominated landscape led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on Zenodo. The methods used to implement this modeling framework are outlined by Rivera et al. 2022 with code on Github.\n\n\n\nSeptember, 2023\n\nNew Publication: Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains led by Jake Ivan from the Colorado Parks and Wilddife. Download.\n\n\n\nAugust, 2023\n\nBrian starts with the Colorado Cooperative Fish and Wildlife Research Unit with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science."
   },
   {
     "objectID": "index.html#november-2023",
@@ -2356,7 +2356,7 @@
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
     "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr (10am - 1pm)\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
@@ -2377,7 +2377,7 @@
     "href": "FW680A4/Introduction.html#why-is-this-class-useful",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is this class useful?",
-    "text": "Why is this class useful?\n\nAble to read modern ecological literature\n\n\n\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\n\n\n\n\nStatistical modeling and coding skills are highly marketable\n\n\n\n\nTaking control of your analyses\n\n\n\n\nCollaborate with statisticians"
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\nStatistical modeling and coding skills are highly marketable\nTaking control of your analyses\nCollaborate with statisticians"
   },
   {
     "objectID": "FW680A4/Introduction.html#who-am-i",
@@ -2412,7 +2412,7 @@
     "href": "FW680A4/Introduction.html#tentative-schedule",
     "title": "Wildlife Ecology Modeling",
     "section": "Tentative Schedule",
-    "text": "Tentative Schedule\nhttps://bgerber123.github.io/Schedule/Schedule.html"
+    "text": "Tentative Schedule\nhttps://bgerber123.github.io/FW680A4/schedule.html"
   },
   {
     "objectID": "FW680A4/Introduction.html#grades",
@@ -2489,7 +2489,7 @@
     "href": "FW680A4/Introduction.html#coding-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Coding in the Modern Age",
-    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower\nDocument and publish code"
+    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower than packages\nDocument/Annotate code and publish it online\nFile management is important; use sub-folders"
   },
   {
     "objectID": "FW680A4/Introduction.html#statisical-modeling",
@@ -2594,7 +2594,7 @@
     "href": "FW680A4/Introduction.html#some-useful-functions-1",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply"
+    "text": "Some useful functions\napply/sapply/lapply/vapply"
   },
   {
     "objectID": "FW680A4/Introduction.html#some-useful-functions-2",
@@ -2615,7 +2615,7 @@
     "href": "FW680A4/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions"
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
   },
   {
     "objectID": "FW680A4/Introduction.html#type-of-modeling",
@@ -2650,14 +2650,14 @@
     "href": "FW680A4/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is statistics and ecological modeling so difficult?",
-    "text": "Why is statistics and ecological modeling so difficult?\n\n\nStatistical Theory / Calculus / Optimization / Ecological Complexity\n\nVS.\n\nPlug-N-Chug"
+    "text": "Why is statistics and ecological modeling so difficult?"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in the Modern Age",
-    "text": "Statistics in the Modern Age\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768.\n\n\nThe Big Data Paradox: \n\n\"the bigger the data, the surer we fool ourselves” - Meng, X. L. (2018). The Annals of Applied Statistics."
+    "text": "Statistics in the Modern Age\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
   },
   {
     "objectID": "FW680A4/Introduction.html#software",
@@ -3141,5 +3141,54 @@
     "title": "Mesocarnivore sensitivity to natural and anthropogenic disturbance leads to declines in occurrence and concern for species persistence",
     "section": "Abstract",
     "text": "Abstract\nProtected areas (PA) aim to eliminate many of the threats that species face on the greater landscape. In the last three decades, PA’s have expanded considerably; however, quantitative assessments of how well they have mitigated threats to habitat and biodiversity are very limited. Habitat bordering PA’s and the wildlife that use it are threatened by a wide-range of anthropogenic pressures (e.g., edge effects, fragmentation, and introduced predators) and this situation is particularly acute for low-density, poorly studied carnivore communities. From 2010 to 2015, we photographically sampled within (contiguous forest) and bordering (degraded, fragmented forest) a UNESCO World Heritage rainforest PA in Madagascar - Ranomafana National Park (RNP). We investigated the effects of invasive predators, local people presence, and habitat quality on the endemic rainforest carnivore community using static, dynamic, and co-occurrence models. We found native carnivores to be absent or have a low probability of occurrence in degraded forest bordering the PA, while local people and dogs (Canis familiaris) had high occurrence. Madagascar’s largest endemic carnivore, the fosa (Cryptoprocta ferox) and the much smaller ring-tailed vontsira (Galidia elegans), occurrence in RNP declined rapidly over six years; their strong co-occurrence with dogs suggests interspecific competition, direct aggression/mortality, or disease as the cause. We highlight the dangers posed to biodiversity, particularly carnivores, from anthropogenic pressures bordering PA’s and present recommendations to address increased human and dog activity, including programs to control dogs and their impact on biodiversity."
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#file-managements",
+    "href": "FW680A4/Introduction.html#file-managements",
+    "title": "Wildlife Ecology Modeling",
+    "section": "File managements",
+    "text": "File managements\nProject Folder\nSubfolders:\n\ndata\noutputs\nplots\nR"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#file-management",
+    "href": "FW680A4/Introduction.html#file-management",
+    "title": "Wildlife Ecology Modeling",
+    "section": "File management",
+    "text": "File management\nProject Folder\nSubfolders:\n\ndata\noutputs\nplots\nR"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#science-practice",
+    "href": "FW680A4/Introduction.html#science-practice",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Science Practice",
+    "text": "Science Practice\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#section",
+    "href": "FW680A4/Introduction.html#section",
+    "title": "Wildlife Ecology Modeling",
+    "section": "",
+    "text": "Class Questions"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#some-useful-functions-3",
+    "href": "FW680A4/Introduction.html#some-useful-functions-3",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\nCreate your own function - Better\n\nmy.mean.func = function(x){\n                           sum(x)/length(x)\n                          }"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#code-organization",
+    "href": "FW680A4/Introduction.html#code-organization",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Code Organization",
+    "text": "Code Organization\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
+  },
+  {
+    "objectID": "FW680A4/Introduction.html#better",
+    "href": "FW680A4/Introduction.html#better",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Better…",
+    "text": "Better…\n\n# Create Storage objects\n  cor.sp.route.cor=vector(\"list\",n.species)\n  cor.sp=rep(NA,n.species)\n\n#loop over species    \n  for(s in 1:n.species)\n    {\n      route=new.cov.species.long.scaled[[s]]$routeID\n                        \n      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],\n                      patch.count20.species.scaled.mat.center.route[s,]\n                      )\n        # loop over species and routes                    \n        for(i in 1:nroutes)\n          {\n            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n            if(length(temp1)&gt;5){\n                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n                                } #End if statement\n          } #End routes loop\n                       \n    } #End species loop"
   }
 ]

@@ -27,7 +27,7 @@ code.r{
 
     -   Lecture/Lab/Discussion
 
-- **When**: Tu 11am - 12:15pm and Fr (10am - 1pm)
+- **When**: Tu 11am - 12:15pm and Fr 10am - 1pm
 
 . . .
 
@@ -101,19 +101,15 @@ Upon successful completion of this course students will be able to:
 
 -   Able to read modern ecological literature
 
-. . .
 
 -   Understand what you are doing when using data and models; **coding/statistics/modeling are related but not the same**
 
-. . .
 
 -   Statistical modeling and coding skills are highly marketable
 
-. . .
 
 -   Taking control of your analyses
 
-. . .
 
 -   Collaborate with statisticians
 
@@ -168,6 +164,7 @@ Upon successful completion of this course students will be able to:
 
 ## [Statistics in the Modern Age]{style="color:#078BCD;"}
 
+. . .
 
 ```{=html}
 <center><span style="color:#FF0000";><em>
@@ -175,21 +172,6 @@ Upon successful completion of this course students will be able to:
 statistical thinking have not changed, but their implementation has."</em></span> <br><span>- Cox and Efron, Sci. Adv. 2017;3: e1700768.</span></center>
 ```
  
-
-<br>
-
-. . .
-
-
-```{=html}
-<br><center><span><em><b>The Big Data Paradox:</b> </em></span></center>
-```
-
-```{=html}
-<center><span style="color:#FF0000";><em>
-"the bigger the data, the surer we fool ourselves”</em></span> <br><span>- Meng, X. L. (2018). The Annals of Applied Statistics.</span></center>
-```
-
 
 
 
@@ -199,9 +181,22 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 - Code will become obsolete  
 
-- Base R functions change slower
+- Base R functions change slower than packages
 
-- Document and publish code
+- Document/Annotate code and publish it online
+
+- File management is important; use sub-folders
+
+## [File management]{style="color:#078BCD;"}
+
+**Project Folder**
+
+*Subfolders:*
+
+  - data
+  - outputs
+  - plots
+  - R
 
 ## [A Graduate Student's Dilemma ]{style="color:#078BCD"}{.smaller}
 
@@ -274,31 +269,24 @@ statistical thinking have not changed, but their implementation has."</em></span
 - how the parameters are being optimized
 
 - and have justification for modeling decisions
-
+  - requires reading literature
+  - requires evaluating assumptions yourself
 :::
 
 ## [Why is statistics and ecological modeling so difficult?]{style="color:#078BCD"}
 
 
-. . .
 
-- Statistical Theory / Calculus / Optimization / Ecological Complexity
+## [My Background]{style="color:#078BCD"}
 
-VS.
-
-- Plug-N-Chug
-
-
+![](/img/me2.png)
 
 ## [My Background]{style="color:#078BCD"}
 
 ![](/img/me.png)
 
-## [My Background]{style="color:#078BCD"}
-![](/img/me2.png)
 
-
-## [Science Philosophy]{style="color:#078BCD"}
+## [Science Practice]{style="color:#078BCD"}
 
 :::: {style="text-align: center;"}
 **I am a pragmatist**
@@ -380,7 +368,14 @@ Know the *why* of your decisions
 
 ## [Tentative Schedule]{style="color:#078BCD"}
 
-<a href="https://bgerber123.github.io/Schedule/Schedule.html">https://bgerber123.github.io/Schedule/Schedule.html</a>
+<a href="https://bgerber123.github.io/FW680A4/schedule.html">https://bgerber123.github.io/FW680A4/schedule.html</a>
+
+
+## 
+
+###  Class Questions
+
+![](/img/question.png){fig-align="center" width="200"}
 
 
 ## [RStudio]{style="color:green;"}
@@ -496,7 +491,8 @@ for(i in 1:10){
 
 
 ## [Some useful functions]{style="color:green;"}
-apply/sapply/lapply
+
+apply/sapply/lapply/vapply
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
@@ -506,6 +502,7 @@ apply/sapply/lapply
 ```
 
 ## [Some useful functions]{style="color:green;"}
+
 Create your own function
 ```{r}
 #| echo: TRUE
@@ -518,21 +515,13 @@ my.mean.func(c(5,4,7,2,7,1))
 ```
 
 
-
-
-## Getting help with Code {.scrollable}
+## [Code Organization]{style="color:green;"}
 
 ::: incremental
--   Share via RStudio Server (ideally)
-
--   If emailing, include a script file and RData file (workspace)
-
 -   Hierarchical code organization
 
     -   code structure using indenting
     -   top --\> bottom execution
-    -   remove all extraneous code (minimal working example)
-    -   the code you send is likely different than what you are working on
 :::
 
 . . .
@@ -556,10 +545,37 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 ```
 
-. . .
+## [Better...]{style="color:green;"}
 
-**Minimal/Annotated working example**
+```{r, echo = TRUE}
+#| echo: TRUE
+#| eval: FALSE
 
+# Create Storage objects
+  cor.sp.route.cor=vector("list",n.species)
+  cor.sp=rep(NA,n.species)
+
+#loop over species    
+  for(s in 1:n.species)
+    {
+      route=new.cov.species.long.scaled[[s]]$routeID
+                        
+      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],
+                      patch.count20.species.scaled.mat.center.route[s,]
+                      )
+        # loop over species and routes                    
+        for(i in 1:nroutes)
+          {
+            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
+            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]
+            if(length(temp1)>5){
+                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
+                                } #End if statement
+          } #End routes loop
+                       
+    } #End species loop
+
+```
 
 ## 
 
