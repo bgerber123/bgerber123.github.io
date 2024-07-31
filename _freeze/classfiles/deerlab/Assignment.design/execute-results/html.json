@@ -1,0 +1,15 @@
+{
+  "hash": "c8405670c2e5dd90b861cf05933cb141",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Study Design / Simulation Assignment (Option 1)\"\nauthor: \"Brian D. Gerber\"\ndate: \"2023-07-30\"\noutput: html_document\n---\n\n\n<style type=\"text/css\">\n  body{\n  font-size: 14pt;\n}\n</style>\n\n\n\n\n\n### **Objective**: To evaluate study design tradeoffs between sample size and deer density. \n\nEvaluate random sampling designs with **3** sample sizes (10, 20, and 40) when the mean density of deer per square kilometer is 1 and 20. Make a sample size recommendation for each deer density, given the state wildlife agency is interested in minimizing costs while being highly certain (90%) that the total population estimate is within 10% of the true total population. Assume that each additional sample costs the same additional cost.\n\n\nAll Scenarios\n\n-   Deer density is 1, sample size 1\n-   Deer density is 1, sample size 2\n-   Deer density is 1, sample size 3\n-   Deer density is 20, sample size 1\n-   Deer density is 20, sample size 2\n-   Deer density is 20, sample size 3\n\n### **Markdown**\n\nPrepare a report (code and findings), using markdown that presents your findings using text and figures. \n\n#### Include\n\n- A recommendation on the sample size you would suggest to go with and why. Provide evidence.\n\n- Evaluate bias or relative bias of the mean estimator under all scenaiors. Explain your findings. Is it expected? Is it a concern?\n\n\n#### Notes\n\nYou do not need to show all possible code. Show code that you think is essential for someone to understand your simulation study (e.g. no need to show plotting code). Try to avoid showing the same code in different places to keep the document from getting out of hand (i.e., long).\n\n- **Suggestion 1**: For the markdown file, do not run the simulation every time you create/knit the document. Do the simulation, save the results, and load the results in the markdown file. You can include your code in the outputted markdown file by specifying eval=FALSE and echo=TRUE.\n\n- **Suggestion 2**: Consider making an analysis script that outputs all your results into 1 or multiple files. Then use a plotting script to develop the plots you are interested. Then, start writing the markdown file that loads you results and plots only the things you want to show.\n\n<br>\n<br>\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
