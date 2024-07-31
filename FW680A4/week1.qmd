@@ -17,7 +17,7 @@ title: ""
 
 -   Lecture: <a href="/FW680A4/BigPicture.qmd">Big Picture</a>
 
--   Downloads: <a href="/FW680A4/classfiles/deerlab/week1files.zip">Files</a>
+-   Downloads: <a href="/classfiles/deerlab/week1files.zip">Files</a>
 
 -   Install R packages:
 ```{r, eval=FALSE, echo=TRUE}
