@@ -4,11 +4,24 @@ title: ""
 
 ## Week 1
 
+### Day 1
+
 -   Lecture: <a href="/FW680A4/Introduction.qmd">Introduction</a>
 
-- Assigned Readings: 1) <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>, 2) <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
 
-#### In Class Discussion Questions for Zitomer et al. 2022
+### Day 2
+
+-   Readings for this day: 
+    - <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>
+  - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
+
+-   Lecture: <a href="/FW680A4/BigPicture.qmd">Big Picture</a>
+
+-   Downloads: <a href="/FW680A4/BigPicture.qmd">Files</a>
+
+
+
+##### **In Class Discussion Questions for Zitomer et al. 2022**
 
  - Rule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?
 
@@ -20,7 +33,7 @@ title: ""
 
 - What was a good takewaway from this? What was confusing?
 
-#### In Class Discussion Questions for Wolcott et al. 2019
+##### **In Class Discussion Questions for Wolcott et al. 2019**
 
 - What is the connection between general linear models and t-test/ANOVA?
 

@@ -1,0 +1,174 @@
+---
+title: "Report of White-tailed Deer Study Design"
+author: "Brian D. Gerber"
+date: "2023-07-30"
+output: html_document
+---
+
+## Context
+
+In this report, I evaluate sampling design trade-offs in estimating total white-tailed deer abundance in the state of Rhode Island, USA. I consider two extremes of deer density - 1 deer/mi$^2$ and 20 deer/mi$^2$. For each deer density, I use a random sampling process to choose blocks of 1 mi$^2$ to conduct a forward-looking infrared-red (FLIR) count of deer. The count is done by helicopter with the FLIR attachment. Flights occur in the winter and at night to increase the heat signature of deer. Detection probability within a block is assumed to be one (this should be evaluated). I evaluate three sample sizes of blocks: 10, 20, and 40. The objective is to find the sample size that minimizing costs while being highly certain (90%) that the total population estimate is within 10% of the true value.
+
+## Setup
+```{r setup, echo=FALSE, eval=TRUE}
+# Set working directory and workinspace
+  rm(list=ls())
+
+# Load Packages
+  library(sf)
+  library(ggplot2)
+  library(spsurvey)
+  library(foreach)
+  library(doParallel)
+  library(grDevices)
+  library(tictoc)
+
+# Load shapefiles  
+  RI = st_read("./extra/RI.Sq.Mile.shp")
+  boundary = st_read("./extra/State_Boundary__1997_.shp")
+```
+
+The sampling frame includes all blocks of Rhode Island that have lesss than 80% 'development'.
+
+```{r plot.sampling.frame,echo=TRUE, eval=TRUE}  
+# find values of high development  
+  index=which(RI$Devel_area>0.8)
+
+# drop values of high development and make a new spatial object
+  RI=RI[-index,]
+
+  # Update the id column
+  RI$Id=1:nrow(RI)
+
+# plot updated map
+  plot(RI["Devel_area"])
+
+```
+There are no current studies to suggest the true mean deer density or the spatial strucutre of the Rhode Island deer population. As such, we will simulate two scenarios using two different deer densities 
+
+```{r truth, echo = TRUE, eval = TRUE}
+# Mean of 15 deer per square mile (1 cell)
+  deer.dens=c(1,20)
+
+# Total expected deer population
+  deer.dens*nrow(RI)
+
+# Simulate deer densities
+  set.seed(434343)
+  deer1=rpois(nrow(RI),deer.dens[1])
+  deer2=rpois(nrow(RI),deer.dens[2])
+  
+  par(mfrow=c(1,2))
+  hist(deer1,freq=FALSE, main="True distribution - mean 1 mi^2")
+  hist(deer2,freq=FALSE, main="True distribution - mean 20 mi^2")
+  
+```
+
+The assumed true total population size for both scenarios are `r sum(deer1)` and `r sum(deer2)`, respectively.
+
+  
+  
+```{r truth2, echo = FALSE, eval = TRUE}
+
+# Include these values in RI  
+  RI$Deer1=deer1
+  RI$Deer2=deer2
+  
+# True simulated total population
+  true.total1=sum(RI$Deer1)  
+  true.total2=sum(RI$Deer2)  
+  
+```
+
+The assumed true populations have spatial variaition.
+
+```{r truth2, echo = FALSE, eval = TRUE}
+  plot(RI["Deer1"])
+  plot(RI["Deer2"])
+```
+
+  
+## Simulation
+
+
+```{r sample sizes, eval = TRUE}
+  sample.sizes=c(10, 20, 40)
+  n.sim=400
+  
+  # Setup the object we will save to: dimensions of sample.sizes by n.sim
+  deer.total.abundance1=matrix(0,length(sample.sizes),n.sim)
+  deer.total.abundance2=matrix(0,length(sample.sizes),n.sim)
+  
+```  
+
+
+
+# Start code timer and Loop over sample size choices
+  tic("simulation")
+  for(z in 1:length(sample.sizes)){
+  
+  # For each sample size, repeat the 
+  # sampling/estimation criteria n.sim times
+    for(i in 1:n.sim){  
+        set.seed(434343+i) #defined random number generation
+        eqprob <- grts(RI, n_base = sample.sizes[z])
+        y1=eqprob$sites_base$Deer1
+        y2=eqprob$sites_base$Deer2
+        est1=mean(y1)
+        est2=mean(y2)
+        deer.total.abundance1[z,i]=est1*nrow(RI)
+        deer.total.abundance2[z,i]=est2*nrow(RI)
+    
+      #monitor loops
+      if(i%%10==0) cat("\nz =",z, ", i =", i)
+    } #End i loop
+  };toc() #End z loop and End codetimer
+  
+  
+# First thing to do is save our results
+  save(deer.total.abundance,file="deer.total.abundance.BDG")
+
+# If already run and saved, load the results.  
+  #load("deer.total.abundance.BDG")
+  
+# Let's look at our results for density 1 - 3 sample sizes
+  hist(deer.total.abundance1[1,],
+       #xlim=c(5000,25000), ylim=c(0,0.0005),
+       main="Sampling Distribution of Total Deer Population",
+       freq=FALSE,
+       breaks=10,
+       ylim=c(0,0.004)
+       
+       )
+  hist(deer.total.abundance1[2,],add=TRUE,col=adjustcolor("red", alpha.f=0.5),freq=FALSE,breaks=10)
+  hist(deer.total.abundance1[3,],add=TRUE,col=adjustcolor("purple", alpha.f=0.5),freq=FALSE,breaks=10)
+  
+  
+
+# Relative Bias = (E[theta]  - theta)/theta
+  (mean(deer.total.abundance1[1,])-true.total1)/true.total1
+  (mean(deer.total.abundance1[2,])-true.total1)/true.total1
+  (mean(deer.total.abundance1[3,])-true.total1)/true.total1
+
+  
+###################################  
+#MONTE CARLO INTEGRATION
+  
+# Let's use our sampling distribution to see how good our ONE sample will be  
+# We can ask questions about how likely it is to over estimate
+# total abundance by 1000
+  myfunc=function(total.est){
+    length(which(total.est>true.total+1000))/length(total.est)
+    }
+  apply(deer.total.abundance,1,FUN=myfunc)
+  
+# We can ask what proportion of our estimates of total population are within 
+# an error (lower/upper) of 1000
+  myfunc2=function(total.est){
+    length(which(abs(total.est-true.total)<1000))/length(total.est)
+    }
+  apply(deer.total.abundance,1,FUN=myfunc2)
+
+#What are the worst estimates we could get (min, max); as a proportion of Truth
+  apply(deer.total.abundance,1,FUN=range)/true.total
+    

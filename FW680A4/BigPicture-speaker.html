@@ -11,7 +11,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.555">
 
-  <title>Brian D. Gerber - Big Picture  and Probability</title>
+  <title>Brian D. Gerber - Big Picture  Science and Modeling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,65 +393,161 @@
     <div class="slides">
 
 <section id="title-slide" background-opacity="0.45" data-background-image="../img/thinking.png" class="quarto-title-block center">
-  <h1 class="title"><span style="color:black">Big Picture <br> and Probability</span></h1>
+  <h1 class="title"><span style="color:black">Big Picture <br> Science and Modeling</span></h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="sections" class="slide level2">
-<h2>Sections</h2>
+<section id="whats-the-point-of-statistics" class="slide level2">
+<h2>What’s the point of statistics?</h2>
 <ul>
-<li><p>Hypotheses and Predictions</p></li>
-<li><p>Two frameworks of Sampling</p></li>
-<li><p>Inference and Prediction</p></li>
-<li><p>Probability and Markdown</p></li>
+<li>a process of learning through empirical observations</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>together, science philosophy and statistical modeling is the backbone to empirical learning</li>
+</ul>
+</div>
+</section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
+<p><strong>2.</strong> Big Data and Sampling</p>
+<p><strong>3.</strong> Inference and Prediction</p>
+<p><strong>4.</strong> Model-Based vs Design-Based Inference</p>
+<p><br></p>
+<div class="fragment">
+<h3 id="section"></h3>
+<p><em>Lab</em>: Simulation and Markdown</p>
+</div>
+</section>
+<section id="study-objective" class="slide level2 scrollable">
+<h2>Study Objective</h2>
+<details>
+<summary>Definition</summary>
+<p>What you want to accomplish; can have multiple related objectives in a single manuscript.</p>
+</details>
+<details>
+<summary>Example</summary>
+<p>To understand the space-use of coyotes.</p>
+<p><img data-src="..\img/coyote.png" width="300"></p>
+<div class="fragment">
+<p>Framing the importance of the objective(s) provides the <em>justification</em> and depends on the audience.</p>
+</div>
+</details>
+</section>
+<section id="hypothesis" class="slide level2">
+<h2>Hypothesis</h2>
+<details>
+<summary>Definition</summary>
+<ol type="1">
+<li><p>A story that explains how the world works</p></li>
+<li><p>An explanation for an observed phenomenon</p></li>
+</ol>
+</details>
+<details>
+<summary>Example (weak)</summary>
+<p>Coyotes have small home ranges in urban areas</p>
+</details>
+</section>
+<section id="researchscientific-hypothesis" class="slide level2">
+<h2>Research/Scientific Hypothesis</h2>
+<details>
+<summary>Definition</summary>
+<p>“A statement about a phenomenon that also includes the potential mechanism or cause of that phenomenon”. <a href="https://doi.org/10.1002/ece3.7365">(Betts et al.&nbsp;2021)</a></p>
+</details>
+<details>
+<summary>Example</summary>
+<p>Coyotes have small home ranges in urban areas because food resource density is high</p>
+</details>
+<div class="fragment">
+<span style="color:#FF0000" ;=""><b>Non-hypothesis hypothesis:</b></span>  We hypothesize variation in coyote home range size.
+</div>
+</section>
+<section id="statistical-modelhypothesis" class="slide level2">
+<h2>Statistical Model/Hypothesis</h2>
+<details>
+<summary>Definition</summary>
+<ul>
+<li>An explicit mathematical and stochastic representation of the observational &amp; mechanistic process of the empirical observations.</li>
+</ul>
+</details>
+</section>
+<section id="statistical-modelhypothesis-1" class="slide level2">
+<h2>Statistical Model/Hypothesis</h2>
+<p>Example:</p>
+<p><span class="math display">\[\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}\]</span> <span class="math display">\[\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)\]</span></p>
+<div class="fragment">
+<p>where…</p>
+<p><span class="math inline">\(\textbf{y}\)</span> = vector of home range sizes of coyotes <br> <span class="math inline">\(\beta_0\)</span> = intercept <br> <span class="math inline">\(\beta_1\)</span> = effect diff. of HR size for urban coyotes <br> <span class="math inline">\(\textbf{x}\)</span> = indicator of HR in urban (1) or not in urban (0) <br> <span class="math inline">\(\sigma^2\)</span> = uncertainty / unknown variability</p>
+</div>
+</section>
+<section id="statistical-modelhypothesis-2" class="slide level2">
+<h2>Statistical Model/Hypothesis</h2>
+<p>Example:</p>
+<p><span class="math display">\[\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}\]</span> <span class="math display">\[\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)\]</span></p>
+<h4 id="evidence-of-hypothesis-support"><span style="color:red">Evidence of hypothesis support</span></h4>
+<p><span class="math inline">\(\beta_1\)</span> is negative and <strong>statistically clearly different</strong><sup><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13159">1</a></sup> than zero</p>
+</section>
+<section id="prediction" class="slide level2 scrollable">
+<h2>Prediction</h2>
+<details>
+<summary>Definition</summary>
+<p>The expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.</p>
+</details>
+<details>
+<summary>Example 1</summary>
+<ol type="1">
+<li><span style="color:red">Okay</span>: Coyote home ranges are smaller in urban areas compared to non-urban areas</li>
+</ol>
+</details>
+<details>
+<summary>Example 2</summary>
+<ol start="2" type="1">
+<li><span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas</li>
+</ol>
+</details>
+</section>
+<section id="types-of-studies" class="slide level2">
+<h2>Types of Studies</h2>
+<ul>
+<li><p>Descriptive/Naturalist (not hypothetico-deductive)</p></li>
+<li><p>Hypothetico-Deductive Observational</p></li>
+<li><p>Hypothetico-Deductive Experimental</p></li>
 </ul>
 </section>
-<section id="hypothesespredictions" class="slide level2">
-<h2>Hypotheses/Predictions</h2>
-<h4 id="study-objective">Study Objective</h4>
-<h4 id="hypothesis">Hypothesis</h4>
-<h4 id="prediction">Prediction</h4>
+<section id="manuscript-writing" class="slide level2">
+<h2>Manuscript Writing</h2>
+<p><span style="color:red">Where do you put these?</span></p>
+<ul>
+<li>objectives</li>
+<li>justification of objectives</li>
+<li>hypotheses</li>
+<li>predictions</li>
+</ul>
 </section>
-<section id="do-we-need-study-designs-anymore-to-do-research" class="slide level2">
-<h2>Do we need study designs anymore to do research?</h2>
-<style type="text/css">
+<section id="section-1" class="slide level2" data-background-image="../img/BigData.png">
+<h2></h2>
 
-body, td {
-   font-size: 14px;
-}
-code.r{
-  font-size: 30px;
-}
-
-pre {
-  font-size: 45px;
-}
-</style>
 <br>
-<center>Data is everywhere; it is the era of <span style="color:#FF0000" ;=""> BIG DATA </span></center>
-
-<img data-src="..\img/BigData.png" class="quarto-figure quarto-figure-center r-stretch" width="469"></section>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FF0000; font-size: 65px;" ;=""><b>Data is everywhere <br> It is the era of  BIG DATA </b></span></center>
+</section>
 <section id="big-data-problems" class="slide level2">
 <h2>Big Data Problems</h2>
 <p><br></p>
-<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford</a></p>
-<p><strong>Harvard Business Review (2013)</strong></p>
-<div class="fragment">
-<br><span style="color:#FF0000" ;=""><center><em>"Can numbers actually speak for themselves?"</em></center></span>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="..\img/spreadsheet.png" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</section>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
+<p>“with enough data, the numbers speak for themselves”- Wired Magazine Editor</p>
+
+<img data-src="..\img/spreadsheet.png" class="quarto-figure quarto-figure-center r-stretch" width="500"></section>
 <section id="big-data-problems-1" class="slide level2">
 <h2>Big Data Problems</h2>
 <p><br></p>
-<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford</a></p>
-<p><strong>Harvard Business Review (2013)</strong></p>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
 <br><span style="color:#FF0000" ;=""><center><em>"Data and data sets are not objective;"</em></center></span>
 <div class="fragment">
 <span style="color:#FF0000" ;=""><center><em>"they are creations of human design."</em></center></span>
@@ -477,22 +573,12 @@ pre {
 Sampling Processes == Human Design
 </center>
 </div>
-<div class="fragment">
-<p><br></p>
-<p><strong>What is worse?</strong></p>
-<ul>
-<li>a very precise inaccurate result <br></li>
-<li>an accurate imprecise result</li>
-</ul>
-</div>
 </section>
 <section id="big-data-problems-3" class="slide level2">
 <h2>Big Data Problems</h2>
 <p><br></p>
 
-<img data-src="Information_files/survey.data.png" width="1000" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.nature.com/articles/s41586-021-04198-4">link</a></p><div class="fragment">
-<br><center><span style="color:#FF0000" ;=""><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
-</div>
+<img data-src="Information_files/survey.data.png" width="1000" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.nature.com/articles/s41586-021-04198-4">Bradley et al.&nbsp;2021 (Nature)</a></p><br><center><span style="color:#FF0000" ;=""><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
 </section>
 <section id="big-data-problems-4" class="slide level2 scrollable">
 <h2>Big Data Problems</h2>
@@ -500,13 +586,13 @@ Sampling Processes == Human Design
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Information_files/ebird.png" class="quarto-figure quarto-figure-center" data-fig-width="500"></p>
+<p><img data-src="..\img/ebird.png" class="quarto-figure quarto-figure-center" data-fig-width="500"></p>
 </figure>
 </div>
 <p><a href="https://www.pnas.org/doi/10.1073/pnas.2023170118">Link1</a>. <a href="https://www.pnas.org/doi/10.1073/pnas.2113862119">Link2</a>.</p>
-</div>
-<div class="fragment">
-<br><center><span style="color:#FF0000" ;=""><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center>
+<!-- ```{=html} -->
+<!-- <br><center><span style="color:#FF0000";><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center> -->
+<!-- ``` -->
 </div>
 </section>
 <section id="the-questioning-scientist" class="slide level2 scrollable">
@@ -517,7 +603,7 @@ Sampling Processes == Human Design
 <ul>
 <li>How and why did these data come to be?
 <ul>
-<li><em>understand the study design</em></li>
+<li><em>understand how the data came to be</em></li>
 <li><em>ask this even when you design the study, after data collection</em></li>
 </ul></li>
 </ul>
@@ -557,7 +643,7 @@ Data ≠ Information
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Information_files/info_diagram.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="..\img/info_diagram.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -565,13 +651,11 @@ Data ≠ Information
 <section id="information" class="slide level2">
 <h2>Information</h2>
 Data contains <span><u>information</u></span>, depending on ...
-<div>
 <ul>
-<li class="fragment">the question being asked of the data</li>
-<li class="fragment">how the data came to be</li>
-<li class="fragment">the goal of the question</li>
+<li><p>the question being asked of the data</p></li>
+<li><p>how the data came to be</p></li>
+<li><p>the goal of the question</p></li>
 </ul>
-</div>
 </section>
 <section id="the-question-and-the-data" class="slide level2">
 <h2>The question and the data</h2>
@@ -585,7 +669,7 @@ Example?
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Information_files/banding.png" class="quarto-figure quarto-figure-center" width="494"></p>
+<p><img data-src="..\img/banding.png" class="quarto-figure quarto-figure-center" width="494"></p>
 </figure>
 </div>
 </div>
@@ -603,14 +687,36 @@ Example?
 <div class="fragment">
 <center>
 <span style="color:#FF0000" ;="">
-<em>inference</em></span> and <span style="color:#FF0000" ;=""><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data and statistical models, but  <br>
+<em>inference</em></span> and <span style="color:#FF0000" ;=""><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures, but  <br>
 
 <br>
 are also <u>not mutually exclusive</u>.
 </center>
 </div>
 </section>
+<section id="section-2" class="slide level2" data-background-image="../img/wetlands.png">
+<h2></h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Inference and Prediction </b></span></center>
+</section>
 <section id="inference-and-prediction" class="slide level2">
+<h2>Inference and Prediction</h2>
+<span style="color:#FF0000" ;="">
+<p style="font-size:60px">
+What is worse?
+</p>
+</span>
+<ul>
+<li>unbiased imprecise result</li>
+<li>precise biased result s <img data-src="..\img/tragets.png" class="quarto-figure quarto-figure-center" width="500"></li>
+</ul>
+</section>
+<section id="inference-and-prediction-1" class="slide level2">
 <h2>Inference and Prediction</h2>
 <br>
 <p style="font-size:45px; font-family:Garamond;">
@@ -619,199 +725,395 @@ are also <u>not mutually exclusive</u>.
 <br>
 "It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000" ;=""><u>understanding</u></span>, <span style="color:#FF0000" ;=""><u>predicting</u></span>, and <span style="color:#FF0000" ;=""><u>modifying nature</u></span>. But this cannot be done."
 </section>
-<section id="infernence-and-prediction" class="slide level2 scrollable">
-<h2>Infernence and Prediction</h2>
+<section id="inference-and-prediction-2" class="slide level2 scrollable">
+<h2>Inference and Prediction</h2>
 <br>
 <p style="font-size:45px; font-family:Garamond;">
 <a href="https://projecteuclid.org/journals/statistical-science/volume-25/issue-3/To-Explain-or-to-Predict/10.1214/10-STS330.full">From "To Explain or to Predict" by Galit Shmueli (Statistical Science, 2010)</a>:
 </p>
-<p>Explanatory modeling focuses on minimizing bias to obtain the most accurate representation of the underlying theory.</p>
+<p>Explanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.</p>
 <p><br></p>
 <div class="fragment">
-<p>Predictive modeling focuses on minimizing both bias and estimation variance;</p>
-<p><br></p>
-</div>
-<div class="fragment">
-<p>this may sacrifice theoretical accuracy for improved empirical precision.</p>
+<p>Predictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision.</p>
 </div>
 </section>
-<section id="infernence-and-prediction-1" class="slide level2">
-<h2>Infernence and Prediction</h2>
+<section id="inference-and-prediction-3" class="slide level2">
+<h2>Inference and Prediction</h2>
 <span style="color:#0000FF" ;="">This leads to a strange result: </span>
 <p><br></p>
 the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predict better than the correct one.
-<div class="fragment">
-<p><br></p>
-<span style="color:#FF0000" ;=""><center>
-Why?
-</center>
-</span>
-</div>
-</section>
-<section id="statistical-information" class="slide level2 scrollable">
-<h2>Statistical Information</h2>
-<p>Let’s turn to the field of statistics to understand <em>Information</em></p>
 <p><br></p>
 <div class="fragment">
-<p><a href="https://en.wikipedia.org/wiki/Likelihood_principle">Likelihood principle</a></p>
-<p>Given a <em>statistical model</em>, all the evidence/information in a sample (<span class="math inline">\(\textbf{y}\)</span>, i.e., data) relevant to model parameters (<span class="math inline">\(\theta\)</span>) is contained in the <em>likelihood function</em>.</p>
-</div>
-<div class="fragment">
-<p><a href="https://en.wikipedia.org/wiki/Fisher_information">Fisher Information</a></p>
-<p>The information an observable random variable (<span class="math inline">\(\textbf{y}\)</span>) has about an unknown parameter <span class="math inline">\(\theta\)</span> upon which the probability of <span class="math inline">\(\textbf{y}\)</span> <span class="math inline">\((f(\textbf{y};\theta)\)</span> depends.</p>
-<p><br></p>
-</div>
-<div class="fragment">
-<br><span style="color:#FF0000" ;=""><center><em>Information is conditional</em></center></span><br> 
-</div>
-<div class="fragment">
-<p>To learn about <span class="math inline">\(\theta\)</span> from <span class="math inline">\(\textbf{y}\)</span>, we need to link them together via a special function, <span class="math inline">\(f(\textbf{y};\theta)\)</span></p>
+<p>BUT …</p>
+<span style="color:#0000FF" ;="">Explanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes</span>
 </div>
 </section>
-<section id="statistical-information-1" class="slide level2">
-<h2>Statistical Information</h2>
-<p><br> The pieces:</p>
-<div>
-<ul>
-<li class="fragment"><p>The sample data, <span class="math inline">\(\textbf{y}\)</span></p></li>
-<li class="fragment"><p>A probability function for <span class="math inline">\(\textbf{y}\)</span>:</p>
-<ul>
-<li class="fragment"><p><span class="math inline">\(f(\textbf{y};\theta)\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\([\textbf{y}|\theta]\)</span></p></li>
-</ul></li>
-<li class="fragment"><p>The unknown parameter: <span class="math inline">\(\theta\)</span></p>
-<ul>
-<li class="fragment">specified in the probability function</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="statistical-information-an-example" class="slide level2">
-<h2>Statistical Information (an example)</h2>
-<p>We want to know the proportion of a wetlands that contain a rare plant species. We can not sample the whole area.</p>
+<section id="inference-and-prediction-4" class="slide level2">
+<h2>Inference and Prediction</h2>
 
-<img data-src="Information_files/wetlands.png" class="quarto-figure quarto-figure-center r-stretch" width="494"></section>
-<section id="rare-plant-data" class="slide level2">
-<h2>Rare Plant Data</h2>
-<p>We randomly select plots and look for our plant.<br>
-Our data are</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1|2,3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>)</span>
-<span id="cb1-2"><a></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
-<span id="cb1-3"><a></a>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10</code></pre>
-</div>
-</div>
-<div class="fragment">
-<p><br></p>
-<p><span class="math inline">\(\textbf{y}\)</span> is a random variable as it depends on random events.</p>
-<p><br></p>
-</div>
-<div class="fragment">
-<p>In this case, when we induced a random selection of sites.</p>
-</div>
+<p style="font-size:30px; ">Trade-Off between prediction accuracy and model interpretability; from <a href="../readings/ISLRv2_website.pdf">James et al. 2013. An Introduction to Statistical Learning</a></p>
+
+
+<img data-src="..\img/interpretability.png" class="r-stretch"></section>
+<section id="section-3" class="slide level2" data-background-image="../img/wetlands.png">
+<h2></h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Design- and Model-Based Inference</b></span></center>
+<!-- A question of the *sampling frame* -->
 </section>
-<section id="probabilitylikelihood-function" class="slide level2">
-<h2>Probability/Likelihood Function</h2>
-<p><span class="math inline">\(f(\textbf{y};\theta)\)</span> describes the probability for each <span class="math inline">\(i^{th}\)</span> data, <span class="math inline">\(y_i\)</span>.</p>
-<p>But, not just for the data we observed, for all possible data that could be observed.</p>
-<div class="fragment">
-<p><strong>Rules about our data:</strong> <br> <span class="math inline">\(y \in \{0,1\}\)</span>,</p>
-</div>
-<div class="fragment">
-<p style="font-size:25px">
-where the curly brackets imply discrete values in our "set".
-</p></div>
-<div class="fragment">
-<p><strong>Not this:</strong> <span class="math inline">\(y \in [0,1]\)</span>,</p>
-<p style="font-size:25px">
-where the square brackets indicate all real numbers from 0 to 1, including 0 and 1.
-</p></div>
-<div class="fragment">
-<p><strong>Not this:</strong> <span class="math inline">\(y \in (0,1)\)</span>,</p>
-<p style="font-size:25px">
-where the parantheses indicate all real numbers from 0 to 1, not including 0 and 1.
-</p></div>
-</section>
-<section id="probability-function" class="slide level2 scrollable">
-<h2>Probability Function</h2>
-<p>Two outcomes, 0 or 1, so we need two probabilities to describe our random variable.</p>
-<div class="fragment">
-<p><span class="math display">\[
-  f(y;\theta) = [y|\theta]=
-  \begin{cases}
-    \theta     &amp; \text{if $y = 1$}, \\
-    1 - \theta &amp; \text{if $y = 0$}.
-  \end{cases}
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Also,</p>
-<p><span class="math display">\[
-f(y;\theta) = [y|\theta]=
-  \begin{align}
-        \theta^{y}\times(1-\theta)^{1-y}
-  \end{align}
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Also,</p>
-<p><span class="math display">\[
-  \begin{align}
-        P(Y=1) &amp;= \theta \\
-        P(Y=0) &amp;= 1-\theta  
-  \end{align}
-\]</span></p>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<br>
+<br>
+<br>
 <center>
-This probability function is called ________?
+<span style="color:#FF0000" ;="">
+<p style="font-size:60px">
+When do we need statistics?
+</p>
+</span>
 </center>
-</div>
 </section>
-<section id="probability-function-1" class="slide level2">
-<h2>Probability Function</h2>
-<p>Probabilities, such as our parameter, have rules:</p>
-<div>
+<section id="design-based" class="slide level2">
+<h2>Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/srs.png" class="quarto-figure quarto-figure-center" height="450"></p>
+</figure>
+</div>
+<p><a href="https://students.aiu.edu/submissions/profiles/resources/onlineBook/Q2T8G7_Sampling-_3rd.pdf">Thompson, 2012. Sampling.</a></p>
+<p>The sample and population are what??</p>
+</section>
+<section id="design-based-1" class="slide level2">
+<h2>Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/srs.png" class="quarto-figure quarto-figure-center" height="450"></p>
+</figure>
+</div>
 <ul>
-<li class="fragment"><p><span class="math inline">\(0 \leq \theta \leq 1\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(0 \leq (1 - \theta) \leq 1\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\theta + (1-\theta) = 1\)</span></p></li>
+<li>inference relies on randomly assigning some units to be in the sample (e.g., random sampling).</li>
+</ul>
+</section>
+<section id="design-based-2" class="slide level2">
+<h2>Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/srs.png" class="quarto-figure quarto-figure-center" height="450"></p>
+</figure>
+</div>
+<ul>
+<li>the values themselves are held to be fixed, whereas the sampling process is random.</li>
+</ul>
+</section>
+<section id="design-based-3" class="slide level2 scrollable">
+<h2>Design-Based</h2>
+<ul>
+<li><span style="color:red">Key Strengths</span>: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span style="color:red">Key Weaknesses</span>: limited in application; still requires models to accommodate observational processes, such as detection probability</li>
 </ul>
 </div>
 </section>
-<section id="probability-function-2" class="slide level2 scrollable">
-<h2>Probability Function</h2>
-<p>How do we find <span class="math inline">\(\theta\)</span> for our data?</p>
+<section id="design-based-4" class="slide level2">
+<h2>Design-Based</h2>
+<ul>
+<li><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</li>
+</ul>
 <div class="fragment">
-<p>We can use our probability function to calculate the likelihood of a parameter, given our data.</p>
+<p><span style="color:red">This means something different</span>:</p>
+<ul>
+<li><span class="math inline">\(\textbf{y}\)</span> = (<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>)</li>
+</ul>
 </div>
 <div class="fragment">
-<p><span class="math display">\[
-\mathcal{L}(\theta|y) = \prod_{i=1}^{n} p(y_{i};\theta)
-\]</span></p>
+<ul>
+<li><p>(stuff) is exclusive of end points</p></li>
+<li><p>[stuff] is inclusive of end points</p></li>
+</ul>
+</div>
+</section>
+<section id="design-based-5" class="slide level2">
+<h2>Design-Based</h2>
+<ul>
+<li><p><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</p></li>
+<li><p>The mean is <span class="math inline">\(\bar{Y} = \sum_{i=1}^N Y_i / N\)</span> and the sample mean is <span class="math inline">\(\hat{\bar{y}} = \sum_{i=1}^n y_i / n\)</span></p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>The population mean is a measure of….?</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><span class="math inline">\(\textbf{y}\)</span> is a random vector that has <span class="math inline">\(n\)</span> random variables</li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\boldsymbol{y} = \begin{matrix} [y_{1} &amp; y_{2} &amp; y_{3} &amp; y_{4 }]\end{matrix}\)</span></p>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\boldsymbol{y}' = \boldsymbol{y}^{T}  = \begin{bmatrix} y_{1} &amp; \\y_{2} &amp;\\  y_{3}  &amp; \\y_{4 }\end{bmatrix}\)</span></p>
+</div>
+</section>
+<section id="random-variable" class="slide level2">
+<h2>Random Variable</h2>
+<p><a href="https://en.wikipedia.org/wiki/Random_variable">Wikipedia:</a> A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.</p>
+<p><br></p>
+<div class="fragment">
+<p>We observe samples from the domain or population, which the random variable takes on, called ‘realizations’.</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><strong>Samples</strong> are observed with some probability.</p>
+</div>
+</section>
+<section id="statistic" class="slide level2">
+<h2>Statistic</h2>
+<ul>
+<li><span class="math inline">\(\hat{\bar{y}}\)</span> is a ‘statistic’ (# computed from a sample) and is also a random variable</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>statistics have a sampling distribution, describing the probability associated to observing different realizations of the statistic</li>
+</ul>
+</div>
+</section>
+<section id="design-based-code" class="slide level2">
+<h2>Design-Based Code</h2>
+<h3 id="truth">TRUTH</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co">#random discrete uniform sampler</span></span>
+<span id="cb1-2"><a></a>rdu<span class="ot">&lt;-</span><span class="cf">function</span>(n,lower,upper){<span class="fu">sample</span>(lower<span class="sc">:</span>upper,n,<span class="at">replace=</span>T)}</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rdu</span>(<span class="dv">25</span>, </span>
+<span id="cb1-5"><a></a>                 <span class="at">lower =</span> <span class="dv">0</span>, </span>
+<span id="cb1-6"><a></a>                 <span class="at">upper =</span> <span class="dv">400</span></span>
+<span id="cb1-7"><a></a>                 ),</span>
+<span id="cb1-8"><a></a>             <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
+<span id="cb1-9"><a></a>             )</span>
+<span id="cb1-10"><a></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]  249  216    7   46  291
+[2,]  300   46  333  131  196
+[3,]  270  386  225  384  175
+[4,]  166  190  121  358  226
+[5,]  232   87  106  241   61</code></pre>
+</div>
+</div>
+</section>
+<section id="design-based-code-1" class="slide level2">
+<h2>Design-Based Code</h2>
+<h3 id="random-sampling">Random Sampling</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Option 1- sample values directly</span></span>
+<span id="cb3-2"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb3-3"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(mat),<span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-4"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  46 106 216 384 131  87 333 333 216 386</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Option 2 - Sample the coordinates and get values</span></span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>  coords <span class="ot">=</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb5-4"><a></a>  index.samples <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(coords),<span class="dv">10</span>)</span>
+<span id="cb5-5"><a></a>  y2 <span class="ot">=</span> mat[<span class="fu">as.matrix</span>(coords[index.samples,])]</span>
+<span id="cb5-6"><a></a>  y2 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 291  46 241 232 333 190 106 225 300  61</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="design-based-code-2" class="slide level2">
+<h2>Design-Based Code</h2>
+<h3 id="estimate-population-mean">Estimate population mean</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Sample mean</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 223.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>  <span class="fu">mean</span>(y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 202.5</code></pre>
+</div>
+</div>
+</section>
+<section id="model-based" class="slide level2 scrollable">
+<h2>Model-Based</h2>
+<p><strong>Inference relies on …</strong></p>
+<p><span style="color:red"> “a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;”</span> <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279">Williams and Brown, 2019</a></p>
+<p><br></p>
+<div class="fragment">
+<p><span style="color:red">“The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random.”</span> <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279">Williams and Brown, 2019</a></p>
+</div>
+</section>
+<section id="model-based-1" class="slide level2">
+<h2>Model-Based</h2>
+<p><span style="color:red">BUT</span>….</p>
+<p>when linking ‘unit values’ in a model, we need to account for their dependence.</p>
+<p><br></p>
+<div class="fragment">
+<p>Randomization allows us to make conditional independence claims among data in our sample, thus the model is simpler.</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><span class="math inline">\(P(y_{2}|y_{1}) = P(y_{2})\)</span></p>
+</div>
+</section>
+<section id="model-based-2" class="slide level2">
+<h2>Model-Based</h2>
+<ul>
+<li><span style="color:red">Key Strengths</span>: Very flexible. Modeling is <em>magic</em>.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span style="color:red">Key Weaknesses</span>: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear</li>
+</ul>
+</div>
+</section>
+<section id="model-based-3" class="slide level2">
+<h2>Model-Based</h2>
+<ul>
+<li><p><span class="math inline">\(\textbf{y} \sim\)</span> Poisson(<span class="math inline">\(\lambda\)</span>) <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Wikipedia link</a></p></li>
+<li><p><span class="math inline">\(y_{i} \sim\)</span> Poisson(<span class="math inline">\(\lambda\)</span>)</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><span class="math inline">\(\lambda\)</span> is the population mean and variance</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Sample mean Estimator <span class="math inline">\(\hat{\lambda} = \sum_{i=1}^n y_{i}/n\)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Maximum-Likelihood Estimate (MLE)</li>
+</ul>
+</div>
+</section>
+<section id="model-based-code" class="slide level2">
+<h2>Model-Based Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># This is only one realization</span></span>
+<span id="cb11-2"><a></a>  lambda<span class="ot">=</span><span class="dv">200</span></span>
+<span id="cb11-3"><a></a>  mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rpois</span>(<span class="dv">25</span>, <span class="at">lambda=</span>lambda),</span>
+<span id="cb11-4"><a></a>               <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">55</span></span>
+<span id="cb11-5"><a></a>               )</span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a><span class="co">#Create a function </span></span>
+<span id="cb11-8"><a></a>  n.sim<span class="ot">=</span><span class="dv">500</span></span>
+<span id="cb11-9"><a></a>  mat.fn <span class="ot">=</span> <span class="cf">function</span>(mu){<span class="fu">matrix</span>(<span class="fu">rpois</span>(<span class="dv">25</span>, <span class="at">lambda=</span>lambda),</span>
+<span id="cb11-10"><a></a>                               <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
+<span id="cb11-11"><a></a>                               )</span>
+<span id="cb11-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="model-based-code-1" class="slide level2">
+<h2>Model-Based Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># repeat the function n.sim times</span></span>
+<span id="cb12-2"><a></a>  list.mat <span class="ot">=</span> <span class="fu">replicate</span>(n.sim, <span class="fu">mat.fn</span>(mu), <span class="at">simplify=</span><span class="cn">FALSE</span>)</span>
+<span id="cb12-3"><a></a>  <span class="fu">length</span>(list.mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 500</code></pre>
+</div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2|5|8|11|14|17|20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co">#Bernoulli probability function</span></span>
-<span id="cb3-2"><a></a>  prob.function<span class="ot">=</span><span class="cf">function</span>(theta){<span class="fu">prod</span>(theta<span class="sc">^</span>y<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>theta)<span class="sc">^</span>y)}</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="co">#possible probabilities</span></span>
-<span id="cb3-5"><a></a>  theta.guess<span class="ot">=</span><span class="fu">matrix</span>(<span class="fu">seq</span>(<span class="fl">0.01</span>,<span class="fl">0.99</span>,<span class="at">by=</span><span class="fl">0.01</span>))</span>
-<span id="cb3-6"><a></a></span>
-<span id="cb3-7"><a></a><span class="co">#implement function</span></span>
-<span id="cb3-8"><a></a>  likelihood<span class="ot">=</span><span class="fu">apply</span>(theta.guess,<span class="dv">1</span>,prob.function)</span>
-<span id="cb3-9"><a></a>  </span>
-<span id="cb3-10"><a></a><span class="co">#Find maximum likelood</span></span>
-<span id="cb3-11"><a></a>  max.index<span class="ot">=</span><span class="fu">which.max</span>(likelihood)</span>
-<span id="cb3-12"><a></a></span>
-<span id="cb3-13"><a></a><span class="co">#Theta that maximizes our probability function</span></span>
-<span id="cb3-14"><a></a>  theta.est<span class="ot">=</span>theta.guess[max.index]</span>
-<span id="cb3-15"><a></a></span>
-<span id="cb3-16"><a></a><span class="co">#Define other probability</span></span>
-<span id="cb3-17"><a></a>  q.est <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">-</span>theta.est</span>
-<span id="cb3-18"><a></a></span>
-<span id="cb3-19"><a></a><span class="co">#Alternative estimation</span></span>
-<span id="cb3-20"><a></a>  theta.est2 <span class="ot">&lt;-</span> <span class="fu">sum</span>(y)<span class="sc">/</span>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#One realization</span></span>
+<span id="cb14-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]  207  197  195  191  198
+[2,]  202  191  207  218  215
+[3,]  191  207  227  226  168
+[4,]  225  208  225  207  193
+[5,]  177  211  203  178  188</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Sample mean for the first realization</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 202.2</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="take-aways" class="slide level2">
+<h2>Take-Aways?</h2>
+<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
+<div class="fragment">
+<p><strong>2.</strong> Big Data and Sampling</p>
+</div>
+<div class="fragment">
+<p><strong>3.</strong> Inference and Prediction</p>
+</div>
+<div class="fragment">
+<p><strong>4.</strong> Model-Based vs Design-Based Inference</p>
+</div>
+</section>
+<section id="lab" class="slide level2">
+<h2>Lab</h2>
+<p><strong>Objectives</strong></p>
+<ul>
+<li><p>Introduce R Markdown</p></li>
+<li><p>Use simulation and design-based sampling to investigate bias and precision</p></li>
+</ul>
+<!-- ## Statistical Bias -->
+<!-- -   $y \sim \text{Poisson}(\lambda)$ -->
+<!-- . . . -->
+<!-- -   $\text{Bias}(\lambda) = E_{y|\lambda}[\hat{\lambda}] - \lambda$ -->
+<!-- . . . -->
+<!-- -   $E_{y|\lambda}[\hat{\lambda}]$ is the expected over the distribution P($y|\lambda$) (i.e., averaging over all possible observations y). [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+<!-- . . . -->
+<!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+</section>
+<section id="lab-setup" class="slide level2">
+<h2>Lab Setup</h2>
+<p>Statistical Bias - the difference b/w the true value and the mean of the sampling distribution of all possible values.</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  lambda.hat <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(list.mat,<span class="at">FUN=</span>mean))</span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a>  <span class="fu">hist</span>(lambda.hat,<span class="at">xlab=</span><span class="fu">bquote</span>(lambda<span class="sc">-</span>hat),<span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution of"</span><span class="sc">~</span>lambda<span class="sc">-</span>hat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="BigPicture_files/figure-revealjs/bias1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-setup---bias-code" class="slide level2">
+<h2>Lab Setup - Bias (Code)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>  <span class="co"># Bias</span></span>
+<span id="cb19-2"><a></a>  bias.lambda <span class="ot">=</span> <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span>
+<span id="cb19-3"><a></a>  bias.lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.26256</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>  <span class="co"># relative bias</span></span>
+<span id="cb21-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.0013128</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -819,99 +1121,140 @@ This probability function is called ________?
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="BigPicture_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<p><img data-src="BigPicture_files/figure-revealjs/bias3-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="statistical-information-an-example-1" class="slide level2">
-<h2>Statistical Information (an example)</h2>
-<p>Let’s combine 1 observation of our random variable, our probability function, and <span class="math inline">\(\theta\)</span> to quantify the Fisher information (<a href="https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment">Link</a> ):</p>
+<section id="lab-setup---precision-code" class="slide level2">
+<h2>Lab Setup - Precision (Code)</h2>
+<p>For a given sample size, what is the probability that we will observe a mean within 5% of the truth?</p>
+<p>We can do this doing <em>Monte Carlo integration</em></p>
 <div class="fragment">
-<span class="math display">\[\begin{align}
-I(\theta) &amp;= -E\left[\frac{\partial^2}{\partial\theta^2}\text{log}(\theta^y(1-\theta)^{1-y}) \right]\\
-\end{align}\]</span>
-</div>
-<div class="fragment">
-<p>For all samples (n), this is reduced to</p>
-<span class="math display">\[\begin{align}
-I(\theta) &amp;= \frac{n}{\theta(1-\theta)}\\
-\end{align}\]</span>
-</div>
-</section>
-<section id="statistical-information-an-example-2" class="slide level2">
-<h2>Statistical Information (an example)</h2>
-<p>Therefore, for our sample</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>I <span class="ot">=</span> n<span class="sc">/</span>(theta.est<span class="sc">*</span>q.est)</span>
-<span id="cb4-2"><a></a>I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  diff <span class="ot">=</span> <span class="fl">0.025</span><span class="sc">*</span>lambda</span>
+<span id="cb23-2"><a></a>  diff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 40</code></pre>
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  lower <span class="ot">=</span> lambda<span class="sc">-</span>diff</span>
+<span id="cb25-2"><a></a>  upper <span class="ot">=</span> lambda<span class="sc">+</span>diff</span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a>index <span class="ot">=</span> <span class="fu">which</span>(lambda.hat<span class="sc">&gt;=</span>lower <span class="sc">&amp;</span> lambda.hat <span class="sc">&lt;=</span> upper)</span>
+<span id="cb25-5"><a></a></span>
+<span id="cb25-6"><a></a><span class="co">#Probability of getting a mean within 5% of the truth</span></span>
+<span id="cb25-7"><a></a><span class="fu">length</span>(index)<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.918</code></pre>
 </div>
 </div>
-<div class="fragment">
-<p>Consider how information varies by <span class="math inline">\(\theta\)</span> for a given sample size….</p>
-</div>
-</section>
-<section id="statistical-information-an-example-3" class="slide level2 scrollable">
-<h2>Statistical Information (an example)</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1|3|5,6|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>Information <span class="ot">&lt;-</span> n<span class="sc">/</span>(thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a><span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb6-6"><a></a><span class="fu">plot</span>(thetas,Information,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
-<span id="cb6-7"><a></a></span>
-<span id="cb6-8"><a></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="BigPicture_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1152"></section>
-<section id="statistical-information-an-example-4" class="slide level2 scrollable">
-<h2>Statistical Information (an example)</h2>
-<p>Funny enough, Fisher Information is the reciprocal of the variance of our estimate of <span class="math inline">\(\theta\)</span>,<span class="math display">\[Var[\hat{\theta}] = \frac{\hat{\theta}  (1-\hat{\theta})}{n}\]</span></p>
-</section>
-<section id="statistical-information-an-example-5" class="slide level2">
-<h2>Statistical Information (an example)</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1|3|4,5|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>thetas<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.05</span>,<span class="fl">0.95</span>,<span class="fl">0.1</span>)</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a>Var.theta <span class="ot">&lt;-</span> (thetas<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>thetas))<span class="sc">/</span>n</span>
-<span id="cb7-4"><a></a><span class="fu">par</span>(<span class="at">cex.main=</span><span class="fl">2.5</span>,<span class="at">cex.axis=</span><span class="fl">2.5</span>,<span class="at">cex.lab=</span><span class="fl">2.5</span>,<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb7-5"><a></a><span class="fu">plot</span>(thetas,Var.theta,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span>
-<span id="cb7-6"><a></a><span class="fu">abline</span>(<span class="at">v=</span>theta.est,<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="BigPicture_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1152"><div class="fragment">
-<p>How does this knowledge about this probability function inform the design of a study?</p>
 </div>
 </section>
-<section id="statistics" class="slide level2">
-<h2>Statistics</h2>
-<p>A field dedicated to observing the real world to gain informational data.</p>
+<section id="lab-setup-1" class="slide level2">
+<h2>Lab Setup</h2>
+<p>Let’s add some more <em>reality</em> in our work while using design-based sampling in R.</p>
 <div class="fragment">
-<span style="color:#FF0000" ;=""><center>BUT</center></span>
-<p>Often statistics classes only focus on Power Analysis.</p>
+<p><br></p>
+<p><strong>Objective</strong>: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.</p>
 </div>
 <div class="fragment">
-To obtain <span style="color:#FF0000" ;="">informational data</span> , we need to think about
-<div>
+<p><strong>Methodology</strong>: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/flir.png" class="quarto-figure quarto-figure-center" width="483"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="lab-setup-2" class="slide level2">
+<h2>Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
 <ul>
-<li class="fragment">how our data will be created</li>
-<li class="fragment">our question of the data</li>
-<li class="fragment">a probability function to use and its parameters</li>
-<li class="fragment">the goal of the question</li>
+<li><p><strong>Sampling Frame</strong></p>
+<ul>
+<li>all of RI or some subset</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/RI.png" class="quarto-figure quarto-figure-center" width="483"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
-
-<img data-src="Information_files/reading0.png" class="quarto-figure quarto-figure-left r-stretch" width="1000"><p><br></p>
-<p><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010033">Link</a></p>
+<section id="lab-setup-3" class="slide level2">
+<h2>Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p><strong>“Truth”</strong></p>
+<ul>
+<li>how many deer per cell; how variable</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/deermap.png" class="quarto-figure quarto-figure-center" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-setup-4" class="slide level2">
+<h2>Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p><strong>Sampling Process</strong></p>
+<ul>
+<li>how to pick each cell</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/deermap.png" class="quarto-figure quarto-figure-center" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-setup-5" class="slide level2">
+<h2>Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Estimation Process</strong></p>
+<ul>
+<li>estimate total deer population from the sample</li>
+</ul></li>
+<li><p><strong>Criteria to Evaluate</strong></p>
+<ul>
+<li>use sampling distribution of deer abundance estimate or some other statistic<br>
+</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/samplingdistribution.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="go-to-code" class="slide level2">
+<h2>Go to code</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -975,7 +1318,7 @@ To obtain <span style="color:#FF0000" ;="">informational data</span> , we need t
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

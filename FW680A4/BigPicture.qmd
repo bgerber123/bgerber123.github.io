@@ -1,95 +1,267 @@
 ---
-title:  <span style="color:black">Big Picture <br> and Probability</span>
+title:  <span style="color:black">Big Picture <br> Science and Modeling</span>
 title-slide-attributes:
   data-background-image: /img/thinking.png
   background-opacity: "0.45"
-format: 
+format:
   revealjs:
-    theme: simple
-    slide-number: true
-    show-slide-number: all
     chalkboard: true
     multiplex: true
 ---
 
-## Sections
+<!-- knitr::purl("./FW680A4/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") -->
 
-- Hypotheses and Predictions
+## What's the point of statistics?
 
-- Big Data and Sampling
-
-- Inference and Prediction
-
-- Probability and Markdown
-
-## Hypotheses/Predictions
-
-#### Study Objective
-
-#### Hypothesis
-
-#### Prediction
+ - a process of learning through empirical observations
+ 
+. . .
+ 
+  - together, science philosophy and statistical modeling is the backbone to empirical learning
 
 
+## Today
 
-## Placeholder
+**1.**    Study Objectives, Hypotheses, and Predictions
 
-**Objective** to understand space-use of coyotes in urban areas.
+**2.**    Big Data and Sampling
 
-**Justification** to provide guidance on managing urban coyotes 
+**3.**    Inference and Prediction
 
-**Hypothesis 1** urban coyotes have access to abundant food resources and thus require less space than non-urban coyotes 
+**4.**    Model-Based vs Design-Based Inference
 
-**Prediction 1a** home range will be smaller for urban coyotes compared to non-urban coyotes
-**Prediction 1b** territory (50% home range) will be smaller for urban coyotes compared to non-urban coyotes
 
-**Hypothesis 2** urban coyotes are limited by habitat availability, not just food. Urban coyote space use is a function of available habitat.
+<br>
 
-**Prediction 2** coyote territory size will increase with increasing connected areas that have 'natural cover'
+. . .
+
+###
+
+*Lab*: Simulation and Markdown
+
+## Study Objective{.scrollable}
+
 
 ```{=html}
-<style type="text/css">
-
-body, td {
-   font-size: 14px;
-}
-code.r{
-  font-size: 30px;
-}
-
-pre {
-  font-size: 45px;
-}
-</style>
-<br>
-<center>Data is everywhere; it is the era of <span style="color:#FF0000";> BIG DATA </span></center>
+<details>
+<summary>Definition</summary>
 ```
-![](/img/BigData.png){fig-align="center" width="469"}
+
+What you want to accomplish; can have multiple related objectives in a single manuscript.
+
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example</summary>
+```
+
+To understand the space-use of coyotes.
+
+![](/img/coyote.png){width=300}
+
+
+::: {.fragment}
+Framing the importance of the objective(s) provides the *justification* and depends on the audience.
+:::
+
+```{=html}
+</details>
+```
+
+
+## Hypothesis
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+
+1. A story that explains how the world works
+
+2. An explanation for an observed phenomenon
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details>
+<summary>Example (weak)</summary>
+```
+
+Coyotes have small home ranges in urban areas
+
+```{=html}
+</details>
+```
+
+
+## Research/Scientific Hypothesis
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+"A statement about a phenomenon that also includes the potential mechanism or cause of that
+phenomenon". [(Betts et al. 2021)](https://doi.org/10.1002/ece3.7365)
+
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example</summary>
+```
+
+Coyotes have small home ranges in urban areas because food resource density is high
+
+```{=html}
+</details>
+```
+
+::: {.fragment}
+```{=html}
+<span style="color:#FF0000";><b>Non-hypothesis hypothesis:</b></span>  We hypothesize variation in coyote home range size.
+```
+:::
+
+
+## Statistical Model/Hypothesis 
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+
+- An explicit mathematical and stochastic representation of the observational & mechanistic process of the empirical observations. 
+
+```{=html}
+</details>
+```
+
+## Statistical Model/Hypothesis 
+
+Example:
+
+$$\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}$$
+$$\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)$$
+
+::: {.fragment}
+
+where...
+
+$\textbf{y}$ = vector of home range sizes of coyotes <br>
+$\beta_0$ = intercept <br>
+$\beta_1$ = effect diff. of HR size for urban coyotes <br>
+$\textbf{x}$ = indicator of HR in urban (1) or not in urban (0) <br>
+$\sigma^2$ = uncertainty / unknown variability 
+
+:::
+
+
+## Statistical Model/Hypothesis 
+
+Example:
+
+$$\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}$$
+$$\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)$$
+
+#### <span style="color:red">Evidence of hypothesis support</span>
+
+$\beta_1$ is negative and **statistically clearly different**^[1](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13159)^ than zero
+
+
+
+## Prediction {.scrollable}
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+The expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example 1</summary>
+```
+
+1. <span style="color:red">Okay</span>: Coyote home ranges are smaller in urban areas compared to non-urban areas
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details>
+<summary>Example 2</summary>
+```
+
+2. <span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas
+
+```{=html}
+</details>
+```
+
+
+## Types of Studies
+
+- Descriptive/Naturalist (not hypothetico-deductive)
+
+- Hypothetico-Deductive Observational
+
+- Hypothetico-Deductive Experimental
+
+## Manuscript Writing
+
+<span style="color:red">Where do you put these?</span>
+
+- objectives 
+- justification of objectives
+- hypotheses
+- predictions
+
+
+
+##  {background-image="/img/BigData.png"}
+
+
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FF0000; font-size: 65px;";><b>Data is everywhere <br> It is the era of  BIG DATA </b></span></center>
+```
 
 ## Big Data Problems
 
 <br>
 
-["*The hidden Biases of Big Data*" by Kate Crawford](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
-**Harvard Business Review (2013)**
+"with enough data, the numbers speak for themselves"- Wired Magazine Editor
 
-
-
-. . .
-
-```{=html}
-<br><span style="color:#FF0000";><center><em>"Can numbers actually speak for themselves?"</center></em></span>
-```
 ![](/img/spreadsheet.png){fig-align="center" width="500"}
 
 ## Big Data Problems
 
 <br>
 
-["*The hidden Biases of Big Data*" by Kate Crawford](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
-**Harvard Business Review (2013)**
 
 
 ```{=html}
@@ -126,23 +298,12 @@ pre {
 Sampling Processes == Human Design
 </center>
 
-. . .
-
-<br>
-
-**What is worse?**
-
--   a very precise inaccurate result <br>
--   an accurate imprecise result
-
 
 ## Big Data Problems
 
 <br>
 
-![[link](https://www.nature.com/articles/s41586-021-04198-4)](Information_files/survey.data.png){fig-align="center" width="1000"}
-
-. . .
+![[Bradley et al. 2021 (Nature)](https://www.nature.com/articles/s41586-021-04198-4)](Information_files/survey.data.png){fig-align="center" width="1000"}
 
 ```{=html}
 <br><center><span style="color:#FF0000";><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
@@ -153,17 +314,16 @@ Using eBird data w/o accounting for sampling biases.
 
 . . .
 
-![](Information_files/ebird.png){fig-align="center" fig-width="500"}
+![](/img/ebird.png){fig-align="center" fig-width="500"}
 
 [Link1](https://www.pnas.org/doi/10.1073/pnas.2023170118). [Link2](https://www.pnas.org/doi/10.1073/pnas.2113862119). 
 
-. . .
 
-```{=html}
-<br><center><span style="color:#FF0000";><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center>
-```
+<!-- ```{=html} -->
+<!-- <br><center><span style="color:#FF0000";><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center> -->
+<!-- ``` -->
 
-. . .
+
 
 ## The Questioning Scientist {.scrollable}
 
@@ -173,7 +333,7 @@ In regard to *data* and *statistical models*, [21^st^ century scientists should 
 
 ::: {.fragment .fade-in-then-semi-out}
 -   How and why did these data come to be?
-    -   *understand the study design*
+    -   *understand how the data came to be*
     -   *ask this even when you design the study, after data collection*
 :::
 
@@ -205,18 +365,20 @@ Data ≠ Information
 . . .
 
 
-![](Information_files/info_diagram.png){fig-align="center"}
+![](/img/info_diagram.png){fig-align="center"}
 
 ## Information
 
 ```{=html}
 Data contains <span><u>information</u></span>, depending on ...
 ```
-::: incremental
+
 -   the question being asked of the data
+
 -   how the data came to be
+
 -   the goal of the question
-:::
+
 
 ## The question and the data
 
@@ -235,7 +397,7 @@ Example?
 
 . . .
 
-![](Information_files/banding.png){fig-align="center" width="494"}
+![](/img/banding.png){fig-align="center" width="494"}
 
 ## The goal of the question
 
@@ -252,12 +414,41 @@ Example?
 ```{=html}
 <center>
 <span style="color:#FF0000";>
-<em>inference</em></span></span> and <span style="color:#FF0000";><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data and statistical models, but  <br>
+<em>inference</em></span></span> and <span style="color:#FF0000";><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures, but  <br>
 </span>
 <br>
 are also <u>not mutually exclusive</u>.
 </center>
 ```
+
+##  {background-image="/img/wetlands.png"}
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px";><b>Inference and Prediction </b></span></center>
+```
+
+## Inference and Prediction 
+
+```{=html}
+<span style="color:#FF0000";>
+<p style="font-size:60px">
+What is worse?
+</p>
+</span>
+```
+
+
+-   unbiased imprecise result
+-   precise biased result
+s
+![](/img/tragets.png){fig-align="center" width="500"}
+
 ## Inference and Prediction 
 
 ```{=html}
@@ -271,7 +462,7 @@ are also <u>not mutually exclusive</u>.
 "It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000";><u>understanding</u></span>, <span style="color:#FF0000";><u>predicting</u></span>, and <span style="color:#FF0000";><u>modifying nature</u></span>. But this cannot be done."
 ```
 
-## Infernence and Prediction {.scrollable}
+## Inference and Prediction {.scrollable}
 
 ```{=html}
 <br>
@@ -280,21 +471,15 @@ are also <u>not mutually exclusive</u>.
 </p>
 ```
 
-Explanatory modeling focuses on minimizing bias to obtain the most accurate representation of the underlying theory.
+Explanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.
 
 <br>
 
 . . .
 
-Predictive modeling focuses on minimizing both bias and estimation variance;
+Predictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision.
 
-<br>
-
-. . .
-
-this may sacrifice theoretical accuracy for improved empirical precision.
-
-## Infernence and Prediction
+## Inference and Prediction
 
 ```{=html}
 <span style="color:#0000FF";>This leads to a strange result: </span>
@@ -304,349 +489,506 @@ this may sacrifice theoretical accuracy for improved empirical precision.
 ```{=html}
 the <span style="color:#FF0000";>"wrong" </span> statistical model can predict better than the correct one.
 ```
-. . .
-
-<br>
-
-```{=html}
-<span style="color:#FF0000";><center>
-Why?
-</center>
-</span>
-```
-
-## Statistical Information {.scrollable}
-
-Let's turn to the field of statistics to understand *Information*
-
 
 <br>
 
 . . .
 
-[Likelihood principle](https://en.wikipedia.org/wiki/Likelihood_principle)
+BUT ...
 
-Given a *statistical model*, all the evidence/information in a sample ($\textbf{y}$, i.e., data) relevant to model parameters ($\theta$) is contained in the *likelihood function*.
+```{=html}
+<span style="color:#0000FF";>Explanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes</span>
+```
 
-. . .
+## Inference and Prediction
 
-[Fisher Information](https://en.wikipedia.org/wiki/Fisher_information)
+```{=html}
 
-The information an observable random variable ($\textbf{y}$) has about an unknown parameter $\theta$ upon which the probability of $\textbf{y}$ $(f(\textbf{y};\theta)$ depends.
+<p style="font-size:30px; ">Trade-Off between prediction accuracy and model interpretability; from <a href="/readings/ISLRv2_website.pdf">James et al. 2013. An Introduction to Statistical Learning</a></p>
+
+```
+
+
+![](/img/interpretability.png)
+
+##  {background-image="/img/wetlands.png"}
+
+```{=html}
 
 <br>
-
-. . .
-
-```{=html}
-<br><span style="color:#FF0000";><center><em>Information is conditional</center></em></span><br> 
-```
-. . .
-
-To learn about $\theta$ from $\textbf{y}$, we need to link them together via a special function, $f(\textbf{y};\theta)$
-
-## Statistical Information
-
-<br> The pieces:
-
-::: incremental
--   The sample data, $\textbf{y}$
-
--   A probability function for $\textbf{y}$:
-
-    -   $f(\textbf{y};\theta)$
-
-    -   $[\textbf{y}|\theta]$
-
-
-
--   The unknown parameter: $\theta$
-
-    -   specified in the probability function
-
-:::
-
-## Statistical Information (an example)
-
-We want to know the proportion of a wetlands that contain a rare plant species. We can not sample the whole area.
-
-![](Information_files/wetlands.png){fig-align="center" width="494"}
-
-## Rare Plant Data
-
-We randomly select plots and look for our plant.\
-Our data are
-
-```{r, echo = TRUE}
-#| echo: TRUE
-#| eval: TRUE
-#| code-line-numbers: "1|2,3"
-y <- c(0,1,1,1,1,0,1,0,0,0)
-n <- length(y)
-n
-```
-
-. . .
-
 <br>
-
-$\textbf{y}$ is a random variable as it depends on random events.
-
 <br>
-
-. . .
-
-In this case, when we induced a random selection of sites.
-
-## Probability/Likelihood Function
-
-$f(\textbf{y};\theta)$ describes the probability for each $i^{th}$ data, $y_i$. 
-
-But, not just for the data we observed, for all possible data that could be observed.
-
-. . .
-
-**Rules about our data:** <br> $y \in \{0,1\}$,
-
-. . .
-
-```{=html}
-<p style="font-size:25px">
-where the curly brackets imply discrete values in our "set".
-```
-. . .
-
-**Not this:** $y \in [0,1]$,
-
-```{=html}
-<p style="font-size:25px">
-where the square brackets indicate all real numbers from 0 to 1, including 0 and 1.
-```
-
-. . .
-
-**Not this:** $y \in (0,1)$,
-
-```{=html}
-<p style="font-size:25px">
-where the parantheses indicate all real numbers from 0 to 1, not including 0 and 1.
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px";><b>Design- and Model-Based Inference</b></span></center>
 ```
 
 
-## Probability Function {.scrollable}
+<!-- A question of the *sampling frame* -->
 
-Two outcomes, 0 or 1, so we need two probabilities to describe our random variable.
 
-. . .
-
-$$
-  f(y;\theta) = [y|\theta]= 
-  \begin{cases}
-    \theta     & \text{if $y = 1$}, \\
-    1 - \theta & \text{if $y = 0$}.
-  \end{cases}
-$$
-
-. . .
-
-Also,
-
-$$
-f(y;\theta) = [y|\theta]=
-  \begin{align}
-        \theta^{y}\times(1-\theta)^{1-y}
-  \end{align}
-$$
-
-. . .
-
-Also,
-
-$$
-  \begin{align}
-        P(Y=1) &= \theta \\
-        P(Y=0) &= 1-\theta  
-  \end{align}
-$$
+## 
 
 ```{=html}
+<br>
+<br>
+<br>
 <center>
-This probability function is called ________?
+<span style="color:#FF0000";>
+<p style="font-size:60px">
+When do we need statistics?
+</p>
+</span>
 </center>
 ```
-## Probability Function
 
-Probabilities, such as our parameter, have rules:
 
-::: incremental
--   $0 \leq \theta \leq 1$
+## Design-Based
 
--   $0 \leq (1 - \theta) \leq 1$
+![](/img/srs.png){height=450 fig-align=center}
 
--   $\theta + (1-\theta) = 1$
+[Thompson, 2012. Sampling.](https://students.aiu.edu/submissions/profiles/resources/onlineBook/Q2T8G7_Sampling-_3rd.pdf)
 
-:::
+The sample and population are what??
 
-## Probability Function {.scrollable}
+## Design-Based 
 
-How do we find $\theta$ for our data?
+![](/img/srs.png){height=450 fig-align=center}
 
-. . .
 
-We can use our probability function to calculate the likelihood of a parameter, given our data.
+-   inference relies on randomly assigning some units to be in the sample (e.g., random sampling).
 
-. . .
 
-$$
-\mathcal{L}(\theta|y) = \prod_{i=1}^{n} p(y_{i};\theta)
-$$
+## Design-Based 
 
-. . .
+![](/img/srs.png){height=450 fig-align=center}
 
-```{r,echo=TRUE}
-#| echo: TRUE
-#| eval: TRUE
-#| code-line-numbers: 2|5|8|11|14|17|20
+-   the values themselves are held to be fixed, whereas the sampling process is random.
 
-#Bernoulli probability function
-  prob.function=function(theta){prod(theta^y*(1-theta)^y)}
+## Design-Based {.scrollable}
 
-#possible probabilities
-  theta.guess=matrix(seq(0.01,0.99,by=0.01))
-
-#implement function
-  likelihood=apply(theta.guess,1,prob.function)
-  
-#Find maximum likelood
-  max.index=which.max(likelihood)
-
-#Theta that maximizes our probability function
-  theta.est=theta.guess[max.index]
-
-#Define other probability
-  q.est <- 1-theta.est
-
-#Alternative estimation
-  theta.est2 <- sum(y)/n
-
-  
-```
+-   <span style="color:red">Key Strengths</span>: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference
 
 . . .
 
-```{r,echo=FALSE}
-#plot likelihood profile
-  plot(theta.guess,likelihood)
-  abline(v=theta.est,lwd=3,col=1,lty=1)
-  abline(v=theta.est2,lwd=3,col=4,lty=4)
-  legend("topright",lwd=3,col=c(1,4),
-         legend=c("theta.est","theta.est2"))
-```
+-   <span style="color:red">Key Weaknesses</span>: limited in application; still requires models to accommodate observational processes, such as detection probability
 
-## Statistical Information (an example)
 
-Let's combine 1 observation of our random variable, our probability function, and $\theta$ to quantify the Fisher information ([Link](https://en.wikipedia.org/wiki/Fisher_information#Single-parameter_Bernoulli_experiment)
-):
+
+## Design-Based
+
+- $\textbf{y}$ = [$y_1$,...,$y_N$]
 
 . . .
 
-```{=tex}
-\begin{align}
-I(\theta) &= -E\left[\frac{\partial^2}{\partial\theta^2}\text{log}(\theta^y(1-\theta)^{1-y}) \right]\\
-\end{align}
-```
-. . .
+<span style="color:red">This means something different</span>: 
 
-For all samples (n), this is reduced to
-
-```{=tex}
-\begin{align}
-I(\theta) &= \frac{n}{\theta(1-\theta)}\\
-\end{align}
-```
-
-
-
-## Statistical Information (an example)
-
-Therefore, for our sample
-
-```{r,echo=TRUE}
-I = n/(theta.est*q.est)
-I
-```
+- $\textbf{y}$ = ($y_1$,...,$y_N$)
 
 . . .
 
-Consider how information varies by $\theta$ for a given sample size....
+- (stuff) is exclusive of end points
 
-## Statistical Information (an example) {.scrollable}
+- [stuff] is inclusive of end points
 
-```{r,echo=TRUE, fig.height=6,fig.width=12, fig.align='center'}
-#| echo: TRUE
-#| eval: TRUE
-#| code-line-numbers: 1|3|5,6|8
+## Design-Based
 
-thetas=seq(0.05,0.95,0.1)
+- $\textbf{y}$ = [$y_1$,...,$y_N$]
 
-Information <- n/(thetas*(1-thetas))
-
-par(cex.lab=2.5,cex.axis=2.5,mar=c(5,5,2,2))
-plot(thetas,Information,type="b",lwd=8)
-
-abline(v=theta.est,col=2,lwd=8)
-```
-
-## Statistical Information (an example) {.scrollable}
-
-Funny enough, Fisher Information is the reciprocal of the variance of our estimate of $\theta$,$$Var[\hat{\theta}] = \frac{\hat{\theta}  (1-\hat{\theta})}{n}$$
-
-## Statistical Information (an example)
-
-```{r,echo=TRUE,fig.align='center',fig.width=12}
-#| echo: TRUE
-#| eval: TRUE
-#| code-line-numbers: 1|3|4,5|6
-
-thetas=seq(0.05,0.95,0.1)
-
-Var.theta <- (thetas*(1-thetas))/n
-par(cex.main=2.5,cex.axis=2.5,cex.lab=2.5,mar=c(5,5,2,2))
-plot(thetas,Var.theta,type="b",lwd=8)
-abline(v=theta.est,col=2,lwd=8)
-```
+- The mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
 
 . . .
 
-How does this knowledge about this probability function inform the design of a study?
-
-## Statistics
-
-A field dedicated to observing the real world to gain informational data.
+- The population mean is a measure of....?
 
 . . .
 
-```{=html}
-<span style="color:#FF0000";><center>BUT</center></span>
-```
-Often statistics classes only focus on Power Analysis.
+- $\textbf{y}$ is a random vector that has $n$ random variables
 
 . . .
 
-```{=html}
-To obtain <span style="color:#FF0000";>informational data</span> , we need to think about
-```
-::: incremental
--   how our data will be created
--   our question of the data
--   a probability function to use and its parameters
--   the goal of the question
-:::
 
-## Reading
+$\boldsymbol{y} = \begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\end{matrix}$
 
-![](Information_files/reading0.png){fig-align="left" width="1000"} 
+. . .
+
+$\boldsymbol{y}' = \boldsymbol{y}^{T}  = \begin{bmatrix} y_{1} & \\y_{2} &\\  y_{3}  & \\y_{4 }\end{bmatrix}$
+
+
+## Random Variable 
+
+[Wikipedia:](https://en.wikipedia.org/wiki/Random_variable) A random variable (also called 'random quantity' or 
+'stochastic variable') is a mathematical formalization of a quantity or object which depends on random events.
 
 <br>
 
-[Link](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010033)
+. . .
+
+We observe samples from the domain or population, which the random variable takes on, called 'realizations'.
+
+<br>
+
+. . .
+
+**Samples** are observed with some probability.
+
+## Statistic
+
+- $\hat{\bar{y}}$ is a 'statistic' (# computed from a sample) and is also a random variable 
+
+. . .
+
+- statistics have a sampling distribution, describing the probability associated to observing different realizations of the statistic
+
+
+
+
+## Design-Based Code 
+
+### TRUTH
+```{r design.sim, echo=TRUE, eval=TRUE}
+#random discrete uniform sampler
+rdu<-function(n,lower,upper){sample(lower:upper,n,replace=T)}
+
+mat = matrix(rdu(25, 
+                 lower = 0, 
+                 upper = 400
+                 ),
+             nrow=5, ncol=5
+             )
+mat
+```
+
+## Design-Based Code 
+
+### Random Sampling
+```{r design.sim2, echo=TRUE, eval=TRUE}
+# Option 1- sample values directly
+  n = 10
+  y = sample(c(mat),10, replace = TRUE)
+  y
+```
+
+<br>
+
+::: {.fragment}
+
+```{r design.sim3, echo=TRUE, eval=TRUE}  
+# Option 2 - Sample the coordinates and get values
+
+  coords = expand.grid(x = 1:5, y = 1:5)
+  index.samples = sample(1:nrow(coords),10)
+  y2 = mat[as.matrix(coords[index.samples,])]
+  y2 
+```
+
+:::
+
+## Design-Based Code 
+
+### Estimate population mean
+
+```{r design.sim4, echo=TRUE, eval=TRUE}  
+# Sample mean
+  mean(y)
+  mean(y2)
+  
+```
+
+
+## Model-Based {.scrollable}
+
+**Inference relies on ...**
+
+<span style="color:red"> "a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;"</span> [Williams and Brown, 2019](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279)
+
+<br>
+
+. . .
+
+<span style="color:red">"The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random."</span> [Williams and Brown, 2019](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279)
+
+## Model-Based
+
+<span style="color:red">BUT</span>....
+
+when linking 'unit values' in a model, we need to account for their dependence.
+
+<br>
+
+. . .
+
+Randomization allows us to make conditional independence claims among data in our sample, thus the model is simpler. 
+
+. . .
+
+<br>
+
+$P(y_{2}|y_{1}) = P(y_{2})$
+
+## Model-Based 
+
+-   <span style="color:red">Key Strengths</span>: Very flexible. Modeling is *magic*.
+
+. . .
+
+-   <span style="color:red">Key Weaknesses</span>: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear
+
+
+## Model-Based
+
+- $\textbf{y} \sim$ Poisson($\lambda$) [Wikipedia link](https://en.wikipedia.org/wiki/Poisson_distribution)
+
+- $y_{i} \sim$ Poisson($\lambda$)
+
+. . .
+
+- $\lambda$ is the population mean and variance
+
+. . .
+
+- Sample mean Estimator $\hat{\lambda} = \sum_{i=1}^n y_{i}/n$
+
+. . .
+
+- Maximum-Likelihood Estimate (MLE)
+
+## Model-Based Code
+
+```{r model.sim, echo=TRUE, eval=TRUE}
+# This is only one realization
+  lambda=200
+  mat = matrix(rpois(25, lambda=lambda),
+               nrow=5, ncol=55
+               )
+
+#Create a function 
+  n.sim=500
+  mat.fn = function(mu){matrix(rpois(25, lambda=lambda),
+                               nrow=5, ncol=5
+                               )
+  }
+```
+
+## Model-Based Code
+
+```{r model.sim2, echo=TRUE, eval=TRUE}
+# repeat the function n.sim times
+  list.mat = replicate(n.sim, mat.fn(mu), simplify=FALSE)
+  length(list.mat)
+```
+
+. . .
+
+```{r model.sim3, echo=TRUE, eval=TRUE}
+#One realization
+  list.mat[[1]]
+
+
+# Sample mean for the first realization
+  mean(list.mat[[1]])
+```
+
+
+## Take-Aways?
+
+**1.**    Study Objectives, Hypotheses, and Predictions
+
+. . .
+
+**2.**    Big Data and Sampling
+
+. . .
+
+**3.**    Inference and Prediction
+
+. . .
+
+**4.**    Model-Based vs Design-Based Inference
+
+
+## Lab
+
+**Objectives**
+
+- Introduce R Markdown
+
+- Use simulation and design-based sampling to investigate bias and precision
+
+
+<!-- ## Statistical Bias -->
+
+<!-- -   $y \sim \text{Poisson}(\lambda)$ -->
+
+<!-- . . . -->
+
+<!-- -   $\text{Bias}(\lambda) = E_{y|\lambda}[\hat{\lambda}] - \lambda$ -->
+
+<!-- . . . -->
+
+<!-- -   $E_{y|\lambda}[\hat{\lambda}]$ is the expected over the distribution P($y|\lambda$) (i.e., averaging over all possible observations y). [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+
+<!-- . . . -->
+
+<!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+
+
+## Lab Setup
+
+Statistical Bias - the difference b/w the true value and the mean of the sampling distribution of all possible values.
+
+::: {.fragment}
+
+```{r bias1,eval=TRUE, echo=TRUE}
+  lambda.hat = unlist(lapply(list.mat,FUN=mean))
+
+  hist(lambda.hat,xlab=bquote(lambda-hat),main=bquote("Sampling Distribution of"~lambda-hat))
+
+```
+:::
+
+## Lab Setup - Bias (Code)
+
+```{r bias22,eval=TRUE, echo=TRUE}
+  # Bias
+  bias.lambda = mean(lambda.hat) - lambda
+  bias.lambda
+  
+  # relative bias
+  (mean(lambda.hat) - lambda)/lambda
+```
+
+. . .
+
+```{r bias3,eval=TRUE, echo=FALSE}
+  hist(lambda.hat,xlab=bquote(lambda), breaks=20)
+  abline(v=mean(lambda.hat),lwd=4,col=4,lty=2)
+  abline(v=lambda,lwd=4,col=3,lty=3)
+  legend("topright",legend=c("mean","truth"),lwd=3,col=c(4,3),lty=c(2,3))
+```
+
+## Lab Setup - Precision (Code)
+
+For a given sample size, what is the probability that we will observe a mean within 5% of the truth?
+
+We can do this doing *Monte Carlo integration*
+
+. . .
+
+```{r bias4,eval=TRUE, echo=TRUE}
+  diff = 0.025*lambda
+  diff
+  lower = lambda-diff
+  upper = lambda+diff
+
+index = which(lambda.hat>=lower & lambda.hat <= upper)
+
+#Probability of getting a mean within 5% of the truth
+length(index)/n.sim
+```
+
+## Lab Setup
+
+Let's add some more *reality* in our work while using design-based sampling in R.
+
+. . .
+
+<br>
+
+**Objective**: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.
+
+. . .
+
+**Methodology**: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter.
+
+![](/img/flir.png){fig-align="center" width="483"}
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **Sampling Frame**
+
+    -   all of RI or some subset
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/RI.png){fig-align="center"  width="483"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **"Truth"**
+
+    -   how many deer per cell; how variable
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/deermap.png){fig-align="center"  width="650"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **Sampling Process**
+
+    -   how to pick each cell
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/deermap.png){fig-align="center" width="650"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+-   **Estimation Process**
+
+    -   estimate total deer population from the sample
+
+-   **Criteria to Evaluate**
+
+    -   use sampling distribution of deer abundance estimate or some other statistic\
+:::
+
+::: {.column width="50%"}
+
+![](/img/samplingdistribution.png){fig-align="center"}
+:::
+
+::::
+
+## Go to code
+
