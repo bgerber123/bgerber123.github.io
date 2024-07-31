@@ -2342,14 +2342,14 @@
     "href": "FW680A4/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\nAssigned Readings:\n\nZitomer et al. 2022 PLOS Computation Biology\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule 7 - What determines a p-value? What does it mean?\nRule 10 - How to do this?\nWhat was a good takewaway from this? What was confusing?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takewaway from this? What was confusing?"
+    "text": "Lecture: Introduction\n\n\n\n\nReadings for this day:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n#Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?"
   },
   {
     "objectID": "FW680A4/week1.html#week-1",
     "href": "FW680A4/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\nAssigned Readings:\n\nZitomer et al. 2022 PLOS Computation Biology\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule 7 - What determines a p-value? What does it mean?\nRule 10 - How to do this?\nWhat was a good takewaway from this? What was confusing?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takewaway from this? What was confusing?"
+    "text": "Lecture: Introduction\n\n\n\n\nReadings for this day:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n#Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?"
   },
   {
     "objectID": "FW680A4/Introduction.html#class-stuff",
@@ -2636,7 +2636,7 @@
     "href": "FW680A4/Introduction.html#assessment",
     "title": "Wildlife Ecology Modeling",
     "section": "Assessment",
-    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nOnline Discussion\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
+    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nDiscussions\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
   },
   {
     "objectID": "FW680A4/Introduction.html#project-1",
@@ -2727,21 +2727,21 @@
     "href": "FW680A4/BigPicture.html#big-data-problems",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n“with enough data, the numbers speak for themselves”- Wired Magazine Editor"
+    "text": "Big Data Problems\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n“with enough data, the numbers speak for themselves”- Wired Magazine Editor"
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-1",
     "href": "FW680A4/BigPicture.html#big-data-problems-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n\"Data and data sets are not objective;\"\n\n\"they are creations of human design.\""
+    "text": "Big Data Problems\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n\"Data and data sets are not objective;\"\n\n\"they are creations of human design.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-2",
     "href": "FW680A4/BigPicture.html#big-data-problems-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n\n\n\n\nSampling Processes == Human Design"
+    "text": "Big Data Problems\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n\n\n\n\nSampling Processes == Human Design"
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-3",
@@ -2790,14 +2790,14 @@
     "href": "FW680A4/BigPicture.html#the-goal-of-the-question",
     "title": "Big Picture  Science and Modeling",
     "section": "The goal of the question",
-    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n\n\n\ninference and prediction are different goals, optimally requiring different data, statistical modeling proecdures, but  \n\n\nare also not mutually exclusive."
+    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n\n\n\ninference and prediction are different goals, optimally requiring different data, statistical modeling proecdures. \n\n\n\n\n\n\nBUT, are also not mutually exclusive."
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction",
     "href": "FW680A4/BigPicture.html#inference-and-prediction",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\n\n\nWhat is worse?\n\n\n\nunbiased imprecise result\nprecise biased result s"
+    "text": "Inference and Prediction\n\n\nFrom \"The strategy of model building in population biology\" by Richard Levins (American Scientists, 1966) :\n\n\n\"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of understanding, predicting, and modifying nature. But this cannot be done.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#infernence-and-prediction",
@@ -3336,7 +3336,7 @@
     "href": "FW680A4/BigPicture.html#section-1",
     "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "Data is everywhere  It is the era of  BIG DATA"
+    "text": "Data is everywhere  It is the era of  BIG DATA!"
   },
   {
     "objectID": "FW680A4/BigPicture.html#infernence-and-prediction-2",
@@ -3350,21 +3350,21 @@
     "href": "FW680A4/BigPicture.html#inference-and-prediction-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\n\n\nFrom \"The strategy of model building in population biology\" by Richard Levins (American Scientists, 1966) :\n\n\n\"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of understanding, predicting, and modifying nature. But this cannot be done.\""
+    "text": "Inference and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.\n\n\nPredictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision."
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction-2",
     "href": "FW680A4/BigPicture.html#inference-and-prediction-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.\n\n\nPredictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision."
+    "text": "Inference and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n\nBUT …\nExplanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes"
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction-3",
     "href": "FW680A4/BigPicture.html#inference-and-prediction-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n\nBUT …\nExplanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes"
+    "text": "Inference and Prediction\n\nTrade-Off between prediction accuracy and model interpretability; from James et al. 2013. An Introduction to Statistical Learning"
   },
   {
     "objectID": "FW680A4/BigPicture.html#section-2",
@@ -3427,7 +3427,7 @@
     "href": "FW680A4/BigPicture.html#section-3",
     "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "Design- and Model-Based Inference"
+    "text": "Design- and Model-Based Sampling/Inference"
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction-4",
@@ -3448,28 +3448,28 @@
     "href": "FW680A4/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  249  216    7   46  291\n[2,]  300   46  333  131  196\n[3,]  270  386  225  384  175\n[4,]  166  190  121  358  226\n[5,]  232   87  106  241   61"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   38  256   64  151  147\n[2,]  260   49  381   98  270\n[3,]  197  349  276  138  125\n[4,]  289  119   64  161   53\n[5,]   91  139   11  238  375"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-1",
     "href": "FW680A4/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n# Option 1- sample values directly\n  n = 10\n  y = sample(c(mat),10, replace = TRUE)\n  y\n\n [1]  46 106 216 384 131  87 333 333 216 386\n\n\n\n\n\n# Option 2 - Sample the coordinates and get values\n\n  coords = expand.grid(x = 1:5, y = 1:5)\n  index.samples = sample(1:nrow(coords),10)\n  y2 = mat[as.matrix(coords[index.samples,])]\n  y2 \n\n [1] 291  46 241 232 333 190 106 225 300  61"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 147  91 139 151 139 119  38  49 349  11\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 123.3"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-2",
     "href": "FW680A4/BigPicture.html#design-based-code-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nEstimate population mean\n\n# Sample mean\n  mean(y)\n\n[1] 223.8\n\n  mean(y2)\n\n[1] 202.5"
+    "text": "Design-Based Code\nSampling Distribution\n\n# How many ways can we uniquely sample 10 things from 25\ncombs = function(n, x) {\n  factorial(n) / factorial(n-x) / factorial(x)\n}\n\ncombs(25, 10)\n\n[1] 3268760"
   },
   {
     "objectID": "FW680A4/BigPicture.html#random-variable",
     "href": "FW680A4/BigPicture.html#random-variable",
     "title": "Big Picture  Science and Modeling",
     "section": "Random Variable",
-    "text": "Random Variable\nWikipedia: A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.\n\n\nWe observe samples from the domain or population, which the random variable takes on, called ‘realizations’.\n\n\n\nSamples are observed with some probability."
+    "text": "Random Variable\nWikipedia: A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.\n\n\nWe observe samples from the domain or population or sampling frame.\n\n\n\nSamples are observed with some probability."
   },
   {
     "objectID": "FW680A4/BigPicture.html#whats-the-point-of-statistics",
@@ -3483,7 +3483,7 @@
     "href": "FW680A4/BigPicture.html#today",
     "title": "Big Picture  Science and Modeling",
     "section": "Today",
-    "text": "Today\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Inference\n\n\n\nLab: Simulation and Markdown"
+    "text": "Today\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Sampling/Inference\n\n\n\nLab: Simulation and Markdown"
   },
   {
     "objectID": "FW680A4/BigPicture.html#markdown-lab",
@@ -3511,14 +3511,14 @@
     "href": "FW680A4/BigPicture.html#model-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# This is only one realization\n  lambda=200\n  mat = matrix(rpois(25, lambda=lambda),\n               nrow=5, ncol=55\n               )\n\n#Create a function \n  n.sim=500\n  mat.fn = function(mu){matrix(rpois(25, lambda=lambda),\n                               nrow=5, ncol=5\n                               )\n  }"
+    "text": "Model-Based Code\n\n#Create a function, to be replicated\n  lambda=200\n  n.sim=500\n  mat.fn = function(lambda){matrix(rpois(25, lambda=lambda),\n                               nrow=5, ncol=5\n                               )\n  }"
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based-code-1",
     "href": "FW680A4/BigPicture.html#model-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# repeat the function n.sim times\n  list.mat = replicate(n.sim, mat.fn(mu), simplify=FALSE)\n  length(list.mat)\n\n[1] 500\n\n\n\n\n#One realization\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  207  197  195  191  198\n[2,]  202  191  207  218  215\n[3,]  191  207  227  226  168\n[4,]  225  208  225  207  193\n[5,]  177  211  203  178  188\n\n# Sample mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 202.2"
+    "text": "Model-Based Code\n\n# repeat the function n.sim times\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 500\n\n\n\n\n#One realization\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  213  221  202  204  173\n[2,]  195  182  193  190  215\n[3,]  221  216  187  182  179\n[4,]  176  196  218  210  211\n[5,]  218  182  193  229  188\n\n# Sample mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 199.76"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-3",
@@ -3539,14 +3539,14 @@
     "href": "FW680A4/BigPicture.html#design-based-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean is a measure of….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
+    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistic",
     "href": "FW680A4/BigPicture.html#statistic",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistic",
-    "text": "Statistic\n\n\\(\\hat{\\bar{y}}\\) is a ‘statistic’ (# computed from a sample) and is also a random variable\n\n\n\nstatistics have a sampling distribution, describing the probability associated to observing different realizations of the statistic"
+    "text": "Statistic\n\n\\(\\hat{\\bar{y}}\\) is a ‘statistic’ (# computed from a sample) and is also a random variable\n\n\n\nstatistics have a sampling distribution, describing the probability associated to observing different values of the statistic"
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based-3",
@@ -3560,7 +3560,7 @@
     "href": "FW680A4/BigPicture.html#take-aways",
     "title": "Big Picture  Science and Modeling",
     "section": "Take-Aways?",
-    "text": "Take-Aways?\n1. Study Objectives, Hypotheses, and Predictions\n\n2. Big Data and Sampling\n\n\n3. Inference and Prediction\n\n\n4. Model-Based vs Design-Based Inference"
+    "text": "Take-Aways?\n1. Study Objectives, Hypotheses, and Predictions"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab",
@@ -3581,7 +3581,7 @@
     "href": "FW680A4/BigPicture.html#statistical-bias",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Bias",
-    "text": "Statistical Bias\n\n\\(y \\sim \\text{Poisson}(\\lambda)\\)\n\n\n\n\\(\\text{Bias}(\\lambda) = E_{y|\\lambda}[\\hat{\\lambda}] - \\lambda\\)\n\n\n\n\n\\(E_{y|\\lambda}[\\hat{\\lambda}]\\) is the expected over the distribution P(\\(y|\\lambda\\)) (i.e., averaging over all possible observations y). Wikipedia\n\n\n\n\nAn estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. Wikipedia"
+    "text": "Statistical Bias\nthe difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling"
   },
   {
     "objectID": "FW680A4/BigPicture.html#precision",
@@ -3594,8 +3594,8 @@
     "objectID": "FW680A4/BigPicture.html#statistical-bias-code",
     "href": "FW680A4/BigPicture.html#statistical-bias-code",
     "title": "Big Picture  Science and Modeling",
-    "section": "Statistical Bias Code",
-    "text": "Statistical Bias Code\n\n  y.hat = unlist(lapply(list.mat,FUN=mean))\n  bias.lambda = mean(y.hat) - lambda\n  bias.lambda\n\n[1] 0.2688"
+    "section": "Statistical Bias (Code)",
+    "text": "Statistical Bias (Code)\n\n# Bias\n  mean(lambda.hat) - lambda\n\n[1] 0.00544\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 2.72e-05"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-modelhypothesis-2",
@@ -3609,35 +3609,35 @@
     "href": "FW680A4/BigPicture.html#lab-setup",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nStatistical Bias - the difference b/w the true value and the mean of the sampling distribution of all possible values.\n\n\n  lambda.hat = unlist(lapply(list.mat,FUN=mean))\n\n  hist(lambda.hat,xlab=bquote(lambda-hat),main=bquote(\"Sampling Distribution of\"~lambda-hat))"
+    "text": "Lab Setup\nLet’s add some more reality in our work while using design-based sampling in R.\n\n\nObjective: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.\n\n\nMethodology: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter."
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-1",
     "href": "FW680A4/BigPicture.html#lab-setup-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nLet’s add some more reality in our work while using design-based sampling in R.\n\n\nObjective: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.\n\n\nMethodology: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter."
+    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Frame\n\nall of RI or some subset"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-2",
     "href": "FW680A4/BigPicture.html#lab-setup-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Frame\n\nall of RI or some subset"
+    "text": "Lab Setup\nSteps to consider\n\n\n\n“Truth”\n\nhow many deer per cell; how variable"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-3",
     "href": "FW680A4/BigPicture.html#lab-setup-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\n“Truth”\n\nhow many deer per cell; how variable"
+    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Process\n\nhow to pick each cell"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-4",
     "href": "FW680A4/BigPicture.html#lab-setup-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Process\n\nhow to pick each cell"
+    "text": "Lab Setup\nSteps to consider\n\n\n\nEstimation Process\n\nestimate total deer population from the sample\n\nCriteria to Evaluate\n\nuse sampling distribution of deer abundance estimate or some other statistic"
   },
   {
     "objectID": "FW680A4/BigPicture.html#go-to-code",
@@ -3651,14 +3651,14 @@
     "href": "FW680A4/BigPicture.html#lab-setup---bias-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup - Bias (Code)",
-    "text": "Lab Setup - Bias (Code)\n\n  # Bias\n  bias.lambda = mean(lambda.hat) - lambda\n  bias.lambda\n\n[1] -0.26256\n\n  # relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] -0.0013128"
+    "text": "Lab Setup - Bias (Code)\n\n  # Bias\n  bias.lambda = mean(lambda.hat) - lambda\n  bias.lambda\n\n[1] 0.0304\n\n  # relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 0.000152"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup---precision-code",
     "href": "FW680A4/BigPicture.html#lab-setup---precision-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup - Precision (Code)",
-    "text": "Lab Setup - Precision (Code)\nFor a given sample size, what is the probability that we will observe a mean within 5% of the truth?\nWe can do this doing Monte Carlo integration\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\nindex = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n#Probability of getting a mean within 5% of the truth\nlength(index)/n.sim\n\n[1] 0.918"
+    "text": "Lab Setup - Precision (Code)\nFor a given sample size, what is the probability that we will observe a mean within 5% of the truth?\nWe can do this doing Monte Carlo integration\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\nindex = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n#Probability of getting a mean within 5% of the truth\nlength(index)/n.sim\n\n[1] 0.93"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-5",
@@ -3701,5 +3701,82 @@
     "title": "Occupancy models – single-species",
     "section": "",
     "text": "Gerber, BD, Martin, D, Bailey, L, Chambert, T, and Mosher, B. 2022. Occupancy models – single-species, Chapter 21 in Program MARK – a ’gentle introduction."
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#whis-is-worse",
+    "href": "FW680A4/BigPicture.html#whis-is-worse",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Whis is worse?",
+    "text": "Whis is worse?\n\nunbiased imprecise result\nprecise biased result"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#design-based-code-3",
+    "href": "FW680A4/BigPicture.html#design-based-code-3",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code\nGet Every combination and then calcualte the mean for each sample of 10\n\n  set.seed(5435)\n  all.combs = utils::combn(c(mat), 10)\n  dim(all.combs)\n\n[1]      10 3268760\n\n  mean.all.combs = apply(all.combs,2,mean)"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#design-based-code-4",
+    "href": "FW680A4/BigPicture.html#design-based-code-4",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code\nOR, we can sample enough times to approximate it\n\n  set.seed(5435)\n  sim.sampling.dist=replicate(2000,\n                              sample(c(mat),10)\n                              )\n  dim(sim.sampling.dist)\n\n[1]   10 2000\n\n  mean.samples = apply(sim.sampling.dist,2,mean)"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#design-based-code-5",
+    "href": "FW680A4/BigPicture.html#design-based-code-5",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#design-based-code-6",
+    "href": "FW680A4/BigPicture.html#design-based-code-6",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code\nSampling Distribution of the Mean"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#model-based-code-2",
+    "href": "FW680A4/BigPicture.html#model-based-code-2",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Model-Based Code",
+    "text": "Model-Based Code\nSampling Distribution\n\nlambda.hat = unlist(lapply(list.mat,FUN=mean))"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#precision-of-the-mean-code",
+    "href": "FW680A4/BigPicture.html#precision-of-the-mean-code",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Precision of the mean (Code)",
+    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n#Probability of getting a mean within 5% of the truth\n  length(index)/n.sim\n\n[1] 0.934"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#take-aways-1",
+    "href": "FW680A4/BigPicture.html#take-aways-1",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Take-Aways",
+    "text": "Take-Aways\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#take-aways-2",
+    "href": "FW680A4/BigPicture.html#take-aways-2",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Take-Aways",
+    "text": "Take-Aways\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#take-aways-3",
+    "href": "FW680A4/BigPicture.html#take-aways-3",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Take-Aways",
+    "text": "Take-Aways\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Inference"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#take-aways-4",
+    "href": "FW680A4/BigPicture.html#take-aways-4",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Take-Aways",
+    "text": "Take-Aways\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Inference"
   }
 ]

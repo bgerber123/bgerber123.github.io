@@ -393,11 +393,15 @@
     <div class="slides">
 
 <section id="title-slide" background-opacity="0.45" data-background-image="../img/thinking.png" class="quarto-title-block center">
-  <h1 class="title"><span style="color:black">Big Picture <br> Science and Modeling</span></h1>
+  <h1 class="title"><span style="color:black"><u>Big Picture</u> <br> Science and Modeling</span></h1>
 
 <div class="quarto-title-authors">
 </div>
 
+</section>
+<section class="slide level2">
+
+<!-- knitr::purl("./FW680A4/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") -->
 </section>
 <section id="whats-the-point-of-statistics" class="slide level2">
 <h2>What’s the point of statistics?</h2>
@@ -415,7 +419,7 @@
 <p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
 <p><strong>2.</strong> Big Data and Sampling</p>
 <p><strong>3.</strong> Inference and Prediction</p>
-<p><strong>4.</strong> Model-Based vs Design-Based Inference</p>
+<p><strong>4.</strong> Model-Based vs Design-Based Sampling/Inference</p>
 <p><br></p>
 <div class="fragment">
 <h3 id="section"></h3>
@@ -527,6 +531,10 @@
 <li>predictions</li>
 </ul>
 </section>
+<section id="take-aways" class="slide level2">
+<h2>Take-Aways?</h2>
+<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
+</section>
 <section id="section-1" class="slide level2" data-background-image="../img/BigData.png">
 <h2></h2>
 
@@ -535,32 +543,29 @@
 <br>
 <br>
 <br>
-<center><span style="color:#FF0000; font-size: 65px;" ;=""><b>Data is everywhere <br> It is the era of  BIG DATA </b></span></center>
+<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Data is everywhere <br> It is the era of  BIG DATA! </b></span></center>
 </section>
 <section id="big-data-problems" class="slide level2">
 <h2>Big Data Problems</h2>
-<p><br></p>
 <p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
 <p>“with enough data, the numbers speak for themselves”- Wired Magazine Editor</p>
 
-<img data-src="..\img/spreadsheet.png" class="quarto-figure quarto-figure-center r-stretch" width="500"></section>
+<img data-src="..\img/spreadsheet.png" class="quarto-figure quarto-figure-center r-stretch" width="600"></section>
 <section id="big-data-problems-1" class="slide level2">
 <h2>Big Data Problems</h2>
-<p><br></p>
 <p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
 <br><span style="color:#FF0000" ;=""><center><em>"Data and data sets are not objective;"</em></center></span>
 <div class="fragment">
 <span style="color:#FF0000" ;=""><center><em>"they are creations of human design."</em></center></span>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="..\img/thinking.png" class="quarto-figure quarto-figure-center" width="459"></p>
+<p><img data-src="..\img/thinking.png" class="quarto-figure quarto-figure-center" width="600"></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="big-data-problems-2" class="slide level2 scrollable">
 <h2>Big Data Problems</h2>
-<p><br></p>
 <p><a href="https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-2/Statistical-paradises-and-paradoxes-in-big-data-I--Law/10.1214/18-AOAS1161SF.full"><strong>The Annals of Applied Statistics (2018); Xiao Li Meng,</strong></a></p>
 <br><center><span><em>The Big Data Paradox: </em></span></center>
 <div class="fragment">
@@ -687,12 +692,21 @@ Example?
 <div class="fragment">
 <center>
 <span style="color:#FF0000" ;="">
-<em>inference</em></span> and <span style="color:#FF0000" ;=""><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures, but  <br>
+<em>inference</em></span> and <span style="color:#FF0000" ;=""><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures. <br>
 
-<br>
-are also <u>not mutually exclusive</u>.
 </center>
 </div>
+<div class="fragment">
+<br>
+<center>
+BUT, are also <u>not mutually exclusive</u>.
+</center>
+</div>
+</section>
+<section id="take-aways-1" class="slide level2">
+<h2>Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> Big Data and Sampling</p>
 </section>
 <section id="section-2" class="slide level2" data-background-image="../img/wetlands.png">
 <h2></h2>
@@ -704,19 +718,15 @@ are also <u>not mutually exclusive</u>.
 <br>
 <center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Inference and Prediction </b></span></center>
 </section>
-<section id="inference-and-prediction" class="slide level2">
-<h2>Inference and Prediction</h2>
-<span style="color:#FF0000" ;="">
-<p style="font-size:60px">
-What is worse?
-</p>
-</span>
+<section id="whis-is-worse" class="slide level2">
+<h2>Whis is worse?</h2>
 <ul>
 <li>unbiased imprecise result</li>
-<li>precise biased result s <img data-src="..\img/tragets.png" class="quarto-figure quarto-figure-center" width="500"></li>
+<li>precise biased result</li>
 </ul>
-</section>
-<section id="inference-and-prediction-1" class="slide level2">
+
+<img data-src="..\img/tragets.png" class="quarto-figure quarto-figure-center r-stretch" width="600"></section>
+<section id="inference-and-prediction" class="slide level2">
 <h2>Inference and Prediction</h2>
 <br>
 <p style="font-size:45px; font-family:Garamond;">
@@ -725,7 +735,7 @@ What is worse?
 <br>
 "It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000" ;=""><u>understanding</u></span>, <span style="color:#FF0000" ;=""><u>predicting</u></span>, and <span style="color:#FF0000" ;=""><u>modifying nature</u></span>. But this cannot be done."
 </section>
-<section id="inference-and-prediction-2" class="slide level2 scrollable">
+<section id="inference-and-prediction-1" class="slide level2 scrollable">
 <h2>Inference and Prediction</h2>
 <br>
 <p style="font-size:45px; font-family:Garamond;">
@@ -737,7 +747,7 @@ What is worse?
 <p>Predictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision.</p>
 </div>
 </section>
-<section id="inference-and-prediction-3" class="slide level2">
+<section id="inference-and-prediction-2" class="slide level2">
 <h2>Inference and Prediction</h2>
 <span style="color:#0000FF" ;="">This leads to a strange result: </span>
 <p><br></p>
@@ -748,7 +758,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span style="color:#0000FF" ;="">Explanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes</span>
 </div>
 </section>
-<section id="inference-and-prediction-4" class="slide level2">
+<section id="inference-and-prediction-3" class="slide level2">
 <h2>Inference and Prediction</h2>
 
 <p style="font-size:30px; ">Trade-Off between prediction accuracy and model interpretability; from <a href="../readings/ISLRv2_website.pdf">James et al. 2013. An Introduction to Statistical Learning</a></p>
@@ -763,8 +773,14 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <br>
 <br>
 <br>
-<center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Design- and Model-Based Inference</b></span></center>
+<center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Design- and Model-Based Sampling/Inference</b></span></center>
 <!-- A question of the *sampling frame* -->
+</section>
+<section id="take-aways-2" class="slide level2">
+<h2>Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
+<p><strong>3.</strong> Inference and Prediction</p>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
@@ -808,7 +824,7 @@ When do we need statistics?
 </figure>
 </div>
 <ul>
-<li>the values themselves are held to be fixed, whereas the sampling process is random.</li>
+<li>the values themselves are held to be <strong>fixed</strong>, whereas the sampling process is random.</li>
 </ul>
 </section>
 <section id="design-based-3" class="slide level2 scrollable">
@@ -848,7 +864,7 @@ When do we need statistics?
 </ul>
 <div class="fragment">
 <ul>
-<li>The population mean is a measure of….?</li>
+<li>The population mean describes ….?</li>
 </ul>
 </div>
 <div class="fragment">
@@ -868,7 +884,7 @@ When do we need statistics?
 <p><a href="https://en.wikipedia.org/wiki/Random_variable">Wikipedia:</a> A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.</p>
 <p><br></p>
 <div class="fragment">
-<p>We observe samples from the domain or population, which the random variable takes on, called ‘realizations’.</p>
+<p>We observe samples from the domain or population or sampling frame.</p>
 <p><br></p>
 </div>
 <div class="fragment">
@@ -882,7 +898,7 @@ When do we need statistics?
 </ul>
 <div class="fragment">
 <ul>
-<li>statistics have a sampling distribution, describing the probability associated to observing different realizations of the statistic</li>
+<li>statistics have a sampling distribution, describing the probability associated to observing different values of the statistic</li>
 </ul>
 </div>
 </section>
@@ -902,11 +918,11 @@ When do we need statistics?
 <span id="cb1-10"><a></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  249  216    7   46  291
-[2,]  300   46  333  131  196
-[3,]  270  386  225  384  175
-[4,]  166  190  121  358  226
-[5,]  232   87  106  241   61</code></pre>
+[1,]   38  256   64  151  147
+[2,]  260   49  381   98  270
+[3,]  197  349  276  138  125
+[4,]  289  119   64  161   53
+[5,]   91  139   11  238  375</code></pre>
 </div>
 </div>
 </section>
@@ -914,44 +930,76 @@ When do we need statistics?
 <h2>Design-Based Code</h2>
 <h3 id="random-sampling">Random Sampling</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Option 1- sample values directly</span></span>
-<span id="cb3-2"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
-<span id="cb3-3"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(mat),<span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-4"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb3-2"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(</span>
+<span id="cb3-3"><a></a>             <span class="fu">c</span>(mat),</span>
+<span id="cb3-4"><a></a>             <span class="dv">10</span>, </span>
+<span id="cb3-5"><a></a>             <span class="at">replace =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-6"><a></a>             )</span>
+<span id="cb3-7"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  46 106 216 384 131  87 333 333 216 386</code></pre>
+<pre><code> [1] 147  91 139 151 139 119  38  49 349  11</code></pre>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
+<!-- -->
+<h3 id="estimator-for-the-population-mean">Estimator for the population mean</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Option 2 - Sample the coordinates and get values</span></span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>  coords <span class="ot">=</span> <span class="fu">expand.grid</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">y =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb5-4"><a></a>  index.samples <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(coords),<span class="dv">10</span>)</span>
-<span id="cb5-5"><a></a>  y2 <span class="ot">=</span> mat[<span class="fu">as.matrix</span>(coords[index.samples,])]</span>
-<span id="cb5-6"><a></a>  y2 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 291  46 241 232 333 190 106 225 300  61</code></pre>
+<pre><code>[1] 123.3</code></pre>
 </div>
 </div>
 </div>
 </section>
 <section id="design-based-code-2" class="slide level2">
 <h2>Design-Based Code</h2>
-<h3 id="estimate-population-mean">Estimate population mean</h3>
+<h3 id="sampling-distribution">Sampling Distribution</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Sample mean</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># How many ways can we uniquely sample 10 things from 25</span></span>
+<span id="cb7-2"><a></a>combs <span class="ot">=</span> <span class="cf">function</span>(n, x) {</span>
+<span id="cb7-3"><a></a>  <span class="fu">factorial</span>(n) <span class="sc">/</span> <span class="fu">factorial</span>(n<span class="sc">-</span>x) <span class="sc">/</span> <span class="fu">factorial</span>(x)</span>
+<span id="cb7-4"><a></a>}</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="fu">combs</span>(<span class="dv">25</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 223.8</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>  <span class="fu">mean</span>(y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 202.5</code></pre>
+<pre><code>[1] 3268760</code></pre>
 </div>
 </div>
 </section>
+<section id="design-based-code-3" class="slide level2">
+<h2>Design-Based Code</h2>
+<p>Get Every combination and then calcualte the mean for each sample of 10</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
+<span id="cb9-2"><a></a>  all.combs <span class="ot">=</span> utils<span class="sc">::</span><span class="fu">combn</span>(<span class="fu">c</span>(mat), <span class="dv">10</span>)</span>
+<span id="cb9-3"><a></a>  <span class="fu">dim</span>(all.combs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]      10 3268760</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  mean.all.combs <span class="ot">=</span> <span class="fu">apply</span>(all.combs,<span class="dv">2</span>,mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="design-based-code-4" class="slide level2">
+<h2>Design-Based Code</h2>
+<p>OR, we can sample enough times to approximate it</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
+<span id="cb12-2"><a></a>  sim.sampling.dist<span class="ot">=</span><span class="fu">replicate</span>(<span class="dv">2000</span>,</span>
+<span id="cb12-3"><a></a>                              <span class="fu">sample</span>(<span class="fu">c</span>(mat),<span class="dv">10</span>)</span>
+<span id="cb12-4"><a></a>                              )</span>
+<span id="cb12-5"><a></a>  <span class="fu">dim</span>(sim.sampling.dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   10 2000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>  mean.samples <span class="ot">=</span> <span class="fu">apply</span>(sim.sampling.dist,<span class="dv">2</span>,mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="design-based-code-5" class="slide level2">
+<h2>Design-Based Code</h2>
+
+<img data-src="BigPicture_files/figure-revealjs/sampling dist4-1.png" width="960" class="r-stretch"></section>
 <section id="model-based" class="slide level2 scrollable">
 <h2>Model-Based</h2>
 <p><strong>Inference relies on …</strong></p>
@@ -1010,62 +1058,118 @@ When do we need statistics?
 <section id="model-based-code" class="slide level2">
 <h2>Model-Based Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># This is only one realization</span></span>
-<span id="cb11-2"><a></a>  lambda<span class="ot">=</span><span class="dv">200</span></span>
-<span id="cb11-3"><a></a>  mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rpois</span>(<span class="dv">25</span>, <span class="at">lambda=</span>lambda),</span>
-<span id="cb11-4"><a></a>               <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">55</span></span>
-<span id="cb11-5"><a></a>               )</span>
-<span id="cb11-6"><a></a></span>
-<span id="cb11-7"><a></a><span class="co">#Create a function </span></span>
-<span id="cb11-8"><a></a>  n.sim<span class="ot">=</span><span class="dv">500</span></span>
-<span id="cb11-9"><a></a>  mat.fn <span class="ot">=</span> <span class="cf">function</span>(mu){<span class="fu">matrix</span>(<span class="fu">rpois</span>(<span class="dv">25</span>, <span class="at">lambda=</span>lambda),</span>
-<span id="cb11-10"><a></a>                               <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
-<span id="cb11-11"><a></a>                               )</span>
-<span id="cb11-12"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co">#Create a function, to be replicated</span></span>
+<span id="cb15-2"><a></a>  lambda<span class="ot">=</span><span class="dv">200</span></span>
+<span id="cb15-3"><a></a>  n.sim<span class="ot">=</span><span class="dv">500</span></span>
+<span id="cb15-4"><a></a>  mat.fn <span class="ot">=</span> <span class="cf">function</span>(lambda){<span class="fu">matrix</span>(<span class="fu">rpois</span>(<span class="dv">25</span>, <span class="at">lambda=</span>lambda),</span>
+<span id="cb15-5"><a></a>                               <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
+<span id="cb15-6"><a></a>                               )</span>
+<span id="cb15-7"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="model-based-code-1" class="slide level2">
 <h2>Model-Based Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># repeat the function n.sim times</span></span>
-<span id="cb12-2"><a></a>  list.mat <span class="ot">=</span> <span class="fu">replicate</span>(n.sim, <span class="fu">mat.fn</span>(mu), <span class="at">simplify=</span><span class="cn">FALSE</span>)</span>
-<span id="cb12-3"><a></a>  <span class="fu">length</span>(list.mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># repeat the function n.sim times</span></span>
+<span id="cb16-2"><a></a>  list.mat <span class="ot">=</span> <span class="fu">replicate</span>(n.sim, </span>
+<span id="cb16-3"><a></a>                       <span class="fu">mat.fn</span>(lambda), </span>
+<span id="cb16-4"><a></a>                       <span class="at">simplify=</span><span class="cn">FALSE</span></span>
+<span id="cb16-5"><a></a>                       )</span>
+<span id="cb16-6"><a></a>  <span class="fu">length</span>(list.mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 500</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co">#One realization</span></span>
-<span id="cb14-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#One realization</span></span>
+<span id="cb18-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  207  197  195  191  198
-[2,]  202  191  207  218  215
-[3,]  191  207  227  226  168
-[4,]  225  208  225  207  193
-[5,]  177  211  203  178  188</code></pre>
+[1,]  213  221  202  204  173
+[2,]  195  182  193  190  215
+[3,]  221  216  187  182  179
+[4,]  176  196  218  210  211
+[5,]  218  182  193  229  188</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Sample mean for the first realization</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Sample mean for the first realization</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 202.2</code></pre>
+<pre><code>[1] 199.76</code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="take-aways" class="slide level2">
-<h2>Take-Aways?</h2>
-<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
-<div class="fragment">
-<p><strong>2.</strong> Big Data and Sampling</p>
+<section id="model-based-code-2" class="slide level2">
+<h2>Model-Based Code</h2>
+<h4 id="sampling-distribution-1">Sampling Distribution</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>lambda.hat <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(list.mat,<span class="at">FUN=</span>mean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<img data-src="BigPicture_files/figure-revealjs/model.sim5-1.png" width="960" class="r-stretch"></section>
+<section id="statistical-bias" class="slide level2">
+<h2>Statistical Bias</h2>
+<p>the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling</p>
+</section>
+<section id="statistical-bias-code" class="slide level2">
+<h2>Statistical Bias (Code)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Bias</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.00544</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># relative bias</span></span>
+<span id="cb25-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.72e-05</code></pre>
+</div>
 </div>
 <div class="fragment">
-<p><strong>3.</strong> Inference and Prediction</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="BigPicture_files/figure-revealjs/bias3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="precision-of-the-mean-code" class="slide level2">
+<h2>Precision of the mean (Code)</h2>
+<p>What is the probability that we will observe a mean within 5% of the truth?</p>
+<div class="fragment">
+<p>We can calculate this using <em>Monte Carlo integration</em></p>
 </div>
 <div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>  diff <span class="ot">=</span> <span class="fl">0.025</span><span class="sc">*</span>lambda</span>
+<span id="cb27-2"><a></a>  diff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>  lower <span class="ot">=</span> lambda<span class="sc">-</span>diff</span>
+<span id="cb29-2"><a></a>  upper <span class="ot">=</span> lambda<span class="sc">+</span>diff</span>
+<span id="cb29-3"><a></a></span>
+<span id="cb29-4"><a></a>  index <span class="ot">=</span> <span class="fu">which</span>(lambda.hat<span class="sc">&gt;=</span>lower <span class="sc">&amp;</span> lambda.hat <span class="sc">&lt;=</span> upper)</span>
+<span id="cb29-5"><a></a></span>
+<span id="cb29-6"><a></a><span class="co">#Probability of getting a mean within 5% of the truth</span></span>
+<span id="cb29-7"><a></a>  <span class="fu">length</span>(index)<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.934</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="take-aways-3" class="slide level2">
+<h2>Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
+<p><strong>3.</strong> <span style="color:#899499;">Inference and Prediction</span></p>
 <p><strong>4.</strong> Model-Based vs Design-Based Inference</p>
-</div>
 </section>
 <section id="lab" class="slide level2">
 <h2>Lab</h2>
@@ -1085,75 +1189,6 @@ When do we need statistics?
 </section>
 <section id="lab-setup" class="slide level2">
 <h2>Lab Setup</h2>
-<p>Statistical Bias - the difference b/w the true value and the mean of the sampling distribution of all possible values.</p>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  lambda.hat <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(list.mat,<span class="at">FUN=</span>mean))</span>
-<span id="cb18-2"><a></a></span>
-<span id="cb18-3"><a></a>  <span class="fu">hist</span>(lambda.hat,<span class="at">xlab=</span><span class="fu">bquote</span>(lambda<span class="sc">-</span>hat),<span class="at">main=</span><span class="fu">bquote</span>(<span class="st">"Sampling Distribution of"</span><span class="sc">~</span>lambda<span class="sc">-</span>hat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="BigPicture_files/figure-revealjs/bias1-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="lab-setup---bias-code" class="slide level2">
-<h2>Lab Setup - Bias (Code)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>  <span class="co"># Bias</span></span>
-<span id="cb19-2"><a></a>  bias.lambda <span class="ot">=</span> <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span>
-<span id="cb19-3"><a></a>  bias.lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.26256</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>  <span class="co"># relative bias</span></span>
-<span id="cb21-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.0013128</code></pre>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="BigPicture_files/figure-revealjs/bias3-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="lab-setup---precision-code" class="slide level2">
-<h2>Lab Setup - Precision (Code)</h2>
-<p>For a given sample size, what is the probability that we will observe a mean within 5% of the truth?</p>
-<p>We can do this doing <em>Monte Carlo integration</em></p>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  diff <span class="ot">=</span> <span class="fl">0.025</span><span class="sc">*</span>lambda</span>
-<span id="cb23-2"><a></a>  diff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  lower <span class="ot">=</span> lambda<span class="sc">-</span>diff</span>
-<span id="cb25-2"><a></a>  upper <span class="ot">=</span> lambda<span class="sc">+</span>diff</span>
-<span id="cb25-3"><a></a></span>
-<span id="cb25-4"><a></a>index <span class="ot">=</span> <span class="fu">which</span>(lambda.hat<span class="sc">&gt;=</span>lower <span class="sc">&amp;</span> lambda.hat <span class="sc">&lt;=</span> upper)</span>
-<span id="cb25-5"><a></a></span>
-<span id="cb25-6"><a></a><span class="co">#Probability of getting a mean within 5% of the truth</span></span>
-<span id="cb25-7"><a></a><span class="fu">length</span>(index)<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.918</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="lab-setup-1" class="slide level2">
-<h2>Lab Setup</h2>
 <p>Let’s add some more <em>reality</em> in our work while using design-based sampling in R.</p>
 <div class="fragment">
 <p><br></p>
@@ -1168,7 +1203,7 @@ When do we need statistics?
 </div>
 </div>
 </section>
-<section id="lab-setup-2" class="slide level2">
+<section id="lab-setup-1" class="slide level2">
 <h2>Lab Setup</h2>
 <p><span style="color:blue">Steps to consider</span></p>
 <div class="columns">
@@ -1188,7 +1223,7 @@ When do we need statistics?
 </div>
 </div>
 </section>
-<section id="lab-setup-3" class="slide level2">
+<section id="lab-setup-2" class="slide level2">
 <h2>Lab Setup</h2>
 <p><span style="color:blue">Steps to consider</span></p>
 <div class="columns">
@@ -1208,7 +1243,7 @@ When do we need statistics?
 </div>
 </div>
 </section>
-<section id="lab-setup-4" class="slide level2">
+<section id="lab-setup-3" class="slide level2">
 <h2>Lab Setup</h2>
 <p><span style="color:blue">Steps to consider</span></p>
 <div class="columns">
@@ -1228,7 +1263,7 @@ When do we need statistics?
 </div>
 </div>
 </section>
-<section id="lab-setup-5" class="slide level2">
+<section id="lab-setup-4" class="slide level2">
 <h2>Lab Setup</h2>
 <p><span style="color:blue">Steps to consider</span></p>
 <div class="columns">

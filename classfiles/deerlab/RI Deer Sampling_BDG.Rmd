@@ -1,34 +1,57 @@
 ---
-title: "Report of White-tailed Deer Study Design"
+title: "Study Design Evaluation of Estimating White-tailed Deer Abundance in Rhode Island, USA"
 author: "Brian D. Gerber"
-date: "2023-07-30"
+date: "2024-07-31"
 output: html_document
 ---
 
+<style type="text/css">
+
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+
+# **Report**
+
+**Main Take-Away:** the objective can not be met at the sample sizes investigated.
+
 ## Context
 
-In this report, I evaluate sampling design trade-offs in estimating total white-tailed deer abundance in the state of Rhode Island, USA. I consider two extremes of deer density - 1 deer/mi$^2$ and 20 deer/mi$^2$. For each deer density, I use a random sampling process to choose blocks of 1 mi$^2$ to conduct a forward-looking infrared-red (FLIR) count of deer. The count is done by helicopter with the FLIR attachment. Flights occur in the winter and at night to increase the heat signature of deer. Detection probability within a block is assumed to be one (this should be evaluated). I evaluate three sample sizes of blocks: 10, 20, and 40. The objective is to find the sample size that minimizing costs while being highly certain (90%) that the total population estimate is within 10% of the true value.
+I evaluate sampling design trade-offs in estimating total white-tailed deer abundance in the state of Rhode Island, USA. I consider two extremes of deer density - 1 deer/mi$^2$ and 20 deer/mi$^2$. For each deer density, I use a random sampling process to choose blocks of 1 mi$^2$ to conduct a forward-looking infrared-red (FLIR) count of deer. The count is presumed to be done by helicopter with a FLIR camera attachment. Flights are assumed to occur in the winter and at night to increase the heat signature of deer. As such, detection probability within a block is assumed to be one (this however should be evaluated). I evaluate three sample sizes of 10, 20, and 40 blocks. The objective is to find the sample size that minimizes costs while being highly certain (0.90 probability) that the total population estimate is within 10% of the true value. This study design evaluation is done by using design-based sampling and inference. 
 
 ## Setup
-```{r setup, echo=FALSE, eval=TRUE}
-# Set working directory and workinspace
+
+
+
+```{r setup, echo=FALSE, eval=TRUE, message=FALSE, results='hide'}
+#Setup 
+
+
+# Clear Workingspace
   rm(list=ls())
 
 # Load Packages
   library(sf)
   library(ggplot2)
   library(spsurvey)
-  library(foreach)
-  library(doParallel)
   library(grDevices)
   library(tictoc)
-
+# remotes::install_github("Pakillo/grateful")
+  library(grateful)
 # Load shapefiles  
   RI = st_read("./extra/RI.Sq.Mile.shp")
   boundary = st_read("./extra/State_Boundary__1997_.shp")
 ```
 
-The sampling frame includes all blocks of Rhode Island that have lesss than 80% 'development'.
+I considered the sampling frame to include all one square mile blocks of contiguous lands in Rhode Island that have less than 80% 'development'.
 
 ```{r plot.sampling.frame,echo=TRUE, eval=TRUE}  
 # find values of high development  
@@ -37,20 +60,21 @@ The sampling frame includes all blocks of Rhode Island that have lesss than 80% 
 # drop values of high development and make a new spatial object
   RI=RI[-index,]
 
-  # Update the id column
+# Update the id column
   RI$Id=1:nrow(RI)
 
 # plot updated map
   plot(RI["Devel_area"])
 
 ```
-There are no current studies to suggest the true mean deer density or the spatial strucutre of the Rhode Island deer population. As such, we will simulate two scenarios using two different deer densities 
+
+There are no current studies to suggest the true mean deer density or the spatial structure of the Rhode Island deer population. As such, I will simulate two scenarios that consider a low (1 deer/mi$^2$) and high mean deer density (20 deer/mi$^2$).
 
 ```{r truth, echo = TRUE, eval = TRUE}
-# Mean of 15 deer per square mile (1 cell)
+# Mean deer per square mile (1 cell)
   deer.dens=c(1,20)
 
-# Total expected deer population
+# Total expected deer populations
   deer.dens*nrow(RI)
 
 # Simulate deer densities
@@ -61,13 +85,11 @@ There are no current studies to suggest the true mean deer density or the spatia
   par(mfrow=c(1,2))
   hist(deer1,freq=FALSE, main="True distribution - mean 1 mi^2")
   hist(deer2,freq=FALSE, main="True distribution - mean 20 mi^2")
-  
 ```
 
-The assumed true total population size for both scenarios are `r sum(deer1)` and `r sum(deer2)`, respectively.
+The assumed true total population size for both scenarios are `r sum(deer1)` and `r sum(deer2)`, respectively. These populations include random spatial variation. Considering additional spatial structure, such as variation in deer density by the percentage of development (`Devel_area`) could be a useful exercise. 
 
-  
-  
+
 ```{r truth2, echo = FALSE, eval = TRUE}
 
 # Include these values in RI  
@@ -80,29 +102,36 @@ The assumed true total population size for both scenarios are `r sum(deer1)` and
   
 ```
 
-The assumed true populations have spatial variaition.
 
-```{r truth2, echo = FALSE, eval = TRUE}
+
+```{r stuff, echo = FALSE, eval = TRUE}
   plot(RI["Deer1"])
   plot(RI["Deer2"])
+  
 ```
 
   
 ## Simulation
 
+I will consider sampling both populations with three different samples sizes (10, 20, and 40). For each sample size, I will simulate random samples 1000 times. This will not evaluate all possible combinations of samples for each size, but it will be enough to approximate the sampling distribution. This can be evaluated by looking at the symmetry of the sampling distribution. Highly skewed and non-symmetric sampling distributions will require a higher number of simulations. 
 
-```{r sample sizes, eval = TRUE}
-  sample.sizes=c(10, 20, 40)
-  n.sim=400
-  
-  # Setup the object we will save to: dimensions of sample.sizes by n.sim
-  deer.total.abundance1=matrix(0,length(sample.sizes),n.sim)
-  deer.total.abundance2=matrix(0,length(sample.sizes),n.sim)
-  
+
+```{r sample sizes, eval = TRUE, echo=TRUE}
+  sample.sizes = c(10, 20, 40)
+  n.sim = 1000
 ```  
 
+```{r storage, eval = TRUE, echo=FALSE}
+  # Setup the object we will save to: dimensions of sample.sizes by n.sim
+  deer.total.abundance1 = matrix(0,length(sample.sizes),n.sim)
+  deer.total.abundance2 = matrix(0,length(sample.sizes),n.sim)
+```
 
+The below code is shown to make it clear how exactly the sampling and estimation is done There are two for loops. One (index `z`) that loops through the number of sample sizes and the other (index `i`) that loops through the the number of simulation iterations within each sample sample. 
 
+The important code is the use of the function `grts` that selects a spatially balanced sample from the areal sampling frame and the estimation of the mean deer size for each cell using the function `mean`.  There is no model used to estimate and predict the total deer abundanec. Rather, I am using the mean as the estimator. 
+
+```{r sim, eval = TRUE, echo=TRUE, cache=TRUE, cache.path="cache/", results='hide'}
 # Start code timer and Loop over sample size choices
   tic("simulation")
   for(z in 1:length(sample.sizes)){
@@ -123,52 +152,114 @@ The assumed true populations have spatial variaition.
       if(i%%10==0) cat("\nz =",z, ", i =", i)
     } #End i loop
   };toc() #End z loop and End codetimer
-  
-  
-# First thing to do is save our results
-  save(deer.total.abundance,file="deer.total.abundance.BDG")
+```  
 
-# If already run and saved, load the results.  
-  #load("deer.total.abundance.BDG")
-  
+
+<!-- # First thing to do is save our results -->
+<!--   #save(deer.total.abundance,file="deer.total.abundance.BDG") -->
+
+<!-- # If already run and saved, load the results.   -->
+<!--   #load("deer.total.abundance.BDG") -->
+
+## Results
+
+First, examining the absolute bias of the estimator, we see that for the low deer density there to be low bias across sample sizes (10, 20, 40): `r round(apply(deer.total.abundance1,1, mean)-true.total1,digits=2)`, respectively. The relative bias puts these results in proportion to the size of the true population size: `r round((apply(deer.total.abundance1,1, mean)-true.total1)/true.total1,digits=2)`, making it more clear how little bias there is. Some of this is likely Markov error, such that increasing the number of simulations would drive these values even lower. The results are similar for the high deer density scenario, where the absolute bias is `r round(apply(deer.total.abundance2,1, mean)-true.total2,digits=2)`, and the relative bias is `r round((apply(deer.total.abundance2,1, mean)-true.total2)/true.total2,digits=2)`.
+
+
+
+Looking at the sampling distributions for low and deer density, we see the range of possible deer population sizes shrink towards the true value as the sample size increases.
+
+```{r plotting, echo=FALSE, eval=TRUE}
 # Let's look at our results for density 1 - 3 sample sizes
   hist(deer.total.abundance1[1,],
        #xlim=c(5000,25000), ylim=c(0,0.0005),
-       main="Sampling Distribution of Total Deer Population",
+       main="Sampling Distribution of Total Deer Population (low)",
        freq=FALSE,
        breaks=10,
        ylim=c(0,0.004)
        
        )
+  abline(v=true.total1, lwd=4,lty=1, col=1)
   hist(deer.total.abundance1[2,],add=TRUE,col=adjustcolor("red", alpha.f=0.5),freq=FALSE,breaks=10)
   hist(deer.total.abundance1[3,],add=TRUE,col=adjustcolor("purple", alpha.f=0.5),freq=FALSE,breaks=10)
-  
-  
-
-# Relative Bias = (E[theta]  - theta)/theta
-  (mean(deer.total.abundance1[1,])-true.total1)/true.total1
-  (mean(deer.total.abundance1[2,])-true.total1)/true.total1
-  (mean(deer.total.abundance1[3,])-true.total1)/true.total1
+  legend("topright",legend=c("Truth","n =10","n = 20","n = 40"),lwd=6, col=c(1,adjustcolor("black", alpha.f=0.5),adjustcolor("red", alpha.f=0.5),adjustcolor("purple", alpha.f=0.5)))
 
   
-###################################  
-#MONTE CARLO INTEGRATION
-  
-# Let's use our sampling distribution to see how good our ONE sample will be  
-# We can ask questions about how likely it is to over estimate
-# total abundance by 1000
-  myfunc=function(total.est){
-    length(which(total.est>true.total+1000))/length(total.est)
-    }
-  apply(deer.total.abundance,1,FUN=myfunc)
-  
-# We can ask what proportion of our estimates of total population are within 
-# an error (lower/upper) of 1000
-  myfunc2=function(total.est){
-    length(which(abs(total.est-true.total)<1000))/length(total.est)
-    }
-  apply(deer.total.abundance,1,FUN=myfunc2)
+hist(deer.total.abundance2[1,],
+     #xlim=c(5000,25000), ylim=c(0,0.0005),
+     main="Sampling Distribution of Total Deer Population (high)",
+     freq=FALSE,
+     breaks=10,
+     ylim=c(0,0.0007)
+     )
+    abline(v=true.total2, lwd=4,lty=1, col=1)
+    hist(deer.total.abundance2[2,],add=TRUE,col=adjustcolor("red", alpha.f=0.5),freq=FALSE,breaks=10)
+    hist(deer.total.abundance2[3,],add=TRUE,col=adjustcolor("purple", alpha.f=0.5),freq=FALSE,breaks=10)
+    legend("topright",legend=c("Truth","n =10","n = 20","n = 40"),lwd=6, col=c(1,adjustcolor("black", alpha.f=0.5),adjustcolor("red", alpha.f=0.5),adjustcolor("purple", alpha.f=0.5)))
 
-#What are the worst estimates we could get (min, max); as a proportion of Truth
-  apply(deer.total.abundance,1,FUN=range)/true.total
-    
+  
+```
+
+The range (min-max) of possible total deer population estimates at the low deer density for sample sizes (10, 20, and 40) are: 
+
+```{r range1, echo=FALSE} 
+#low deer density
+range1=apply(deer.total.abundance1,1,FUN=range)
+rownames(range1)=c("min","max")
+colnames(range1)=c("10","20","40")
+round(range1,digits=0)
+```
+
+The same results for the high deer density are:
+
+```{r range2, echo=FALSE} 
+#high deer density
+range1=apply(deer.total.abundance2,1,FUN=range)
+rownames(range1)=c("min","max")
+colnames(range1)=c("10","20","40")
+round(range1,digits=0)
+```
+
+<br>
+<br>
+
+
+To specifically address the objective of this study, I found that the probability (given the assumed true low deer density and random sampling) of obtaining a single sample at the three different sample sizes (10, 20, and 40) to be substantially lower than the desired probability of 0.90.
+
+```{r integration, echo=TRUE, eval=TRUE}
+#Probability of means being within 10% of truth - low deer density
+apply(deer.total.abundance1,1,FUN=function(x){
+  low=true.total1-true.total1*0.05
+  upp=true.total1+true.total1*0.05
+  length(which(x>low & x<upp))/length(x)
+})
+
+```
+
+Higher probabilities were found under the high deer density, but still do not meet the goal of 90%:
+
+```{r integration2, echo=FALSE, eval=TRUE}
+#Probability of means being within 10% of truth - low deer density
+apply(deer.total.abundance2,1,FUN=function(x){
+  low=true.total2-true.total2*0.05
+  upp=true.total2+true.total2*0.05
+  length(which(x>low & x<upp))/length(x)
+})
+```
+
+
+## Conclusion
+
+Considering low and high deer densities, I found that the objective to be highly certain (0.90 probability) that a single estimate of the total population estimate is within 10% of the true value can not be met at sample sizes of 10, 20, and 40. A sample size of 50 may reach the goal at the high deer density, but a much larger sample size will be need if deer densities are low. However, there is very little bias in the estimator at either low or high deer densities.
+
+# **Appendix**
+
+
+## Software
+
+This report was generated from the R Statistical Software (v4.2.2; R Core Team 2021) using the [Markdown language](https://www.markdownguide.org/) and [RStudio](https://posit.co/products/open-source/rstudio/). The R packages used are acknowledged below. 
+
+```{r packages, eval=TRUE, echo=FALSE}
+  pkgs <- cite_packages(output = "table", out.dir = ".")
+  knitr::kable(pkgs)
+```

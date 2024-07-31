@@ -13,25 +13,35 @@ title: ""
 
 -   Readings for this day: 
     - <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>
-  - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
+    - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
 
 -   Lecture: <a href="/FW680A4/BigPicture.qmd">Big Picture</a>
 
--   Downloads: <a href="/FW680A4/BigPicture.qmd">Files</a>
+-   Downloads: <a href="/FW680A4/classfiles/deerlab/week1files.zip">Files</a>
 
+-   Install R packages:
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+  install.packages(c("sf","ggplot2", "spsurvey", "remotes"))
 
+#Github package install
+  remotes::install_github("Pakillo/grateful")
 
+# OR, download the zip file here and manually install:
+# https://cran.r-project.org/web/packages/grateful/index.html
+
+```
 ##### **In Class Discussion Questions for Zitomer et al. 2022**
 
  - Rule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?
 
 -  Rule #4 - Do you agree?
 
-- Rule 7 - What determines a p-value? What does it mean?
+- Rule #7 - What determines a p-value? What does it mean?
 
--  Rule 10 - How to do this?
+-  Rule #10 - How to do this?
 
-- What was a good takewaway from this? What was confusing?
+- What was a good takeaway from this paper? What was confusing or you disagreed with?
 
 ##### **In Class Discussion Questions for Wolcott et al. 2019**
 
@@ -43,4 +53,4 @@ title: ""
 
 - What is model selection?
 
-- What was a good takewaway from this? What was confusing?
+- What was a good takeaway from this? What was confusing or you disagreed with?

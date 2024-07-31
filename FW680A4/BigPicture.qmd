@@ -1,5 +1,5 @@
 ---
-title:  <span style="color:black">Big Picture <br> Science and Modeling</span>
+title:  <span style="color:black"><u>Big Picture</u> <br> Science and Modeling</span>
 title-slide-attributes:
   data-background-image: /img/thinking.png
   background-opacity: "0.45"
@@ -28,7 +28,7 @@ format:
 
 **3.**    Inference and Prediction
 
-**4.**    Model-Based vs Design-Based Inference
+**4.**    Model-Based vs Design-Based Sampling/Inference
 
 
 <br>
@@ -231,6 +231,12 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 - predictions
 
 
+## Take-Aways?
+
+**1.**    Study Objectives, Hypotheses, and Predictions
+
+
+
 
 ##  {background-image="/img/BigData.png"}
 
@@ -243,22 +249,19 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 <br>
 <br>
 <br>
-<center><span style="color:#FF0000; font-size: 65px;";><b>Data is everywhere <br> It is the era of  BIG DATA </b></span></center>
+<center><span style="color:#C70039; font-size: 65px;";><b>Data is everywhere <br> It is the era of  BIG DATA! </b></span></center>
 ```
 
 ## Big Data Problems
 
-<br>
 
 ["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
 "with enough data, the numbers speak for themselves"- Wired Magazine Editor
 
-![](/img/spreadsheet.png){fig-align="center" width="500"}
+![](/img/spreadsheet.png){fig-align="center" width="600"}
 
 ## Big Data Problems
-
-<br>
 
 ["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
@@ -272,11 +275,9 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 ```{=html}
 <span style="color:#FF0000";><center><em>"they are creations of human design."</center></em></span>
 ```
-![](/img/thinking.png){fig-align="center" width="459"}
+![](/img/thinking.png){fig-align="center" width="600"}
 
 ## Big Data Problems {.scrollable}
-
-<br>
 
 [**The Annals of Applied Statistics (2018); Xiao Li Meng,**](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-2/Statistical-paradises-and-paradoxes-in-big-data-I--Law/10.1214/18-AOAS1161SF.full)
 
@@ -414,12 +415,27 @@ Example?
 ```{=html}
 <center>
 <span style="color:#FF0000";>
-<em>inference</em></span></span> and <span style="color:#FF0000";><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures, but  <br>
+<em>inference</em></span></span> and <span style="color:#FF0000";><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures. <br>
 </span>
-<br>
-are also <u>not mutually exclusive</u>.
 </center>
 ```
+
+. . .
+
+```{=html}
+<br>
+<center>
+BUT, are also <u>not mutually exclusive</u>.
+</center>
+```
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    Big Data and Sampling
+
 
 ##  {background-image="/img/wetlands.png"}
 
@@ -433,21 +449,13 @@ are also <u>not mutually exclusive</u>.
 <center><span style="color:#FFFFFF; font-size:65px";><b>Inference and Prediction </b></span></center>
 ```
 
-## Inference and Prediction 
-
-```{=html}
-<span style="color:#FF0000";>
-<p style="font-size:60px">
-What is worse?
-</p>
-</span>
-```
-
+## Whis is worse?
 
 -   unbiased imprecise result
 -   precise biased result
-s
-![](/img/tragets.png){fig-align="center" width="500"}
+
+
+![](/img/tragets.png){fig-align="center" width="600"}
 
 ## Inference and Prediction 
 
@@ -520,11 +528,20 @@ BUT ...
 <br>
 <br>
 <br>
-<center><span style="color:#FFFFFF; font-size:65px";><b>Design- and Model-Based Inference</b></span></center>
+<center><span style="color:#FFFFFF; font-size:65px";><b>Design- and Model-Based Sampling/Inference</b></span></center>
 ```
 
 
 <!-- A question of the *sampling frame* -->
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    <span style="color:#899499;">Big Data and Sampling</span>
+
+**3.**    Inference and Prediction
 
 
 ## 
@@ -563,7 +580,7 @@ The sample and population are what??
 
 ![](/img/srs.png){height=450 fig-align=center}
 
--   the values themselves are held to be fixed, whereas the sampling process is random.
+-   the values themselves are held to be **fixed**, whereas the sampling process is random.
 
 ## Design-Based {.scrollable}
 
@@ -599,7 +616,7 @@ The sample and population are what??
 
 . . .
 
-- The population mean is a measure of....?
+- The population mean describes ....?
 
 . . .
 
@@ -624,7 +641,7 @@ $\boldsymbol{y}' = \boldsymbol{y}^{T}  = \begin{bmatrix} y_{1} & \\y_{2} &\\  y_
 
 . . .
 
-We observe samples from the domain or population, which the random variable takes on, called 'realizations'.
+We observe samples from the domain or population or sampling frame.
 
 <br>
 
@@ -638,7 +655,7 @@ We observe samples from the domain or population, which the random variable take
 
 . . .
 
-- statistics have a sampling distribution, describing the probability associated to observing different realizations of the statistic
+- statistics have a sampling distribution, describing the probability associated to observing different values of the statistic
 
 
 
@@ -663,9 +680,12 @@ mat
 
 ### Random Sampling
 ```{r design.sim2, echo=TRUE, eval=TRUE}
-# Option 1- sample values directly
   n = 10
-  y = sample(c(mat),10, replace = TRUE)
+  y = sample(
+             c(mat),
+             10, 
+             replace = TRUE
+             )
   y
 ```
 
@@ -673,28 +693,70 @@ mat
 
 ::: {.fragment}
 
-```{r design.sim3, echo=TRUE, eval=TRUE}  
-# Option 2 - Sample the coordinates and get values
+### Estimator for the population mean
 
-  coords = expand.grid(x = 1:5, y = 1:5)
-  index.samples = sample(1:nrow(coords),10)
-  y2 = mat[as.matrix(coords[index.samples,])]
-  y2 
+```{r design.sim4, echo=TRUE, eval=TRUE}  
+  mean(y)
+
 ```
 
 :::
 
 ## Design-Based Code 
 
-### Estimate population mean
+### Sampling Distribution
 
-```{r design.sim4, echo=TRUE, eval=TRUE}  
-# Sample mean
-  mean(y)
-  mean(y2)
-  
+```{r sampling dist, eval=TRUE, echo=TRUE}
+# How many ways can we uniquely sample 10 things from 25
+combs = function(n, x) {
+  factorial(n) / factorial(n-x) / factorial(x)
+}
+
+combs(25, 10)
 ```
 
+
+## Design-Based Code 
+
+Get Every combination and then calcualte the mean for each sample of 10
+
+```{r sampling dist2, eval=TRUE, echo=TRUE, cache=TRUE}
+  set.seed(5435)
+  all.combs = utils::combn(c(mat), 10)
+  dim(all.combs)
+  mean.all.combs = apply(all.combs,2,mean)
+```
+
+## Design-Based Code 
+
+OR, we can sample enough times to approximate it
+
+```{r sampling dist3, eval=TRUE, echo=TRUE, cache=TRUE}
+  set.seed(5435)
+  sim.sampling.dist=replicate(2000,
+                              sample(c(mat),10)
+                              )
+  dim(sim.sampling.dist)
+  mean.samples = apply(sim.sampling.dist,2,mean)
+```
+
+## Design-Based Code 
+
+```{r sampling dist4, eval=TRUE, echo=FALSE}
+  hist(mean.all.combs,
+       freq=FALSE, 
+       main="Sampling Distributiuon of the Mean",
+       breaks=10,
+       xlab="Means"
+       )
+  hist(mean.samples,
+       add=TRUE,
+       freq=FALSE,
+       col=grDevices::adjustcolor("red", alpha.f=0.5),
+       breaks=10
+       )
+  legend("topright",lwd=5,col=c(grDevices::adjustcolor("black", alpha.f=0.5),grDevices::adjustcolor("red", alpha.f=0.5)),legend = c("Complete", "Approximated"))
+```
 
 ## Model-Based {.scrollable}
 
@@ -756,15 +818,10 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 ## Model-Based Code
 
 ```{r model.sim, echo=TRUE, eval=TRUE}
-# This is only one realization
+#Create a function, to be replicated
   lambda=200
-  mat = matrix(rpois(25, lambda=lambda),
-               nrow=5, ncol=55
-               )
-
-#Create a function 
   n.sim=500
-  mat.fn = function(mu){matrix(rpois(25, lambda=lambda),
+  mat.fn = function(lambda){matrix(rpois(25, lambda=lambda),
                                nrow=5, ncol=5
                                )
   }
@@ -774,7 +831,10 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 
 ```{r model.sim2, echo=TRUE, eval=TRUE}
 # repeat the function n.sim times
-  list.mat = replicate(n.sim, mat.fn(mu), simplify=FALSE)
+  list.mat = replicate(n.sim, 
+                       mat.fn(lambda), 
+                       simplify=FALSE
+                       )
   length(list.mat)
 ```
 
@@ -789,20 +849,77 @@ $P(y_{2}|y_{1}) = P(y_{2})$
   mean(list.mat[[1]])
 ```
 
+## Model-Based Code
 
-## Take-Aways?
+#### Sampling Distribution
 
-**1.**    Study Objectives, Hypotheses, and Predictions
+```{r model.sim4, echo=TRUE, eval=TRUE}
+lambda.hat = unlist(lapply(list.mat,FUN=mean))
+```
+
+```{r model.sim5, echo=FALSE, eval=TRUE}
+hist(lambda.hat,
+     xlab=bquote(lambda-hat),
+     main=bquote("Sampling Distribution of"~lambda-hat)
+     )
+```
+
+## Statistical Bias
+
+the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling
+
+
+## Statistical Bias (Code)
+
+```{r bias22,eval=TRUE, echo=TRUE}
+# Bias
+  mean(lambda.hat) - lambda
+
+# relative bias
+  (mean(lambda.hat) - lambda)/lambda
+```
 
 . . .
 
-**2.**    Big Data and Sampling
+```{r bias3,eval=TRUE, echo=FALSE}
+  hist(lambda.hat,xlab=bquote(lambda), breaks=20)
+  abline(v=mean(lambda.hat),lwd=4,col=4,lty=2)
+  abline(v=lambda,lwd=4,col=3,lty=3)
+  legend("topright",legend=c("mean","truth"),lwd=3,col=c(4,3),lty=c(2,3))
+```
+
+## Precision of the mean (Code)
+
+What is the probability that we will observe a mean within 5% of the truth?
 
 . . .
 
-**3.**    Inference and Prediction
+We can calculate this using *Monte Carlo integration*
 
 . . .
+
+```{r bias4,eval=TRUE, echo=TRUE}
+  diff = 0.025*lambda
+  diff
+  lower = lambda-diff
+  upper = lambda+diff
+
+  index = which(lambda.hat>=lower & lambda.hat <= upper)
+
+#Probability of getting a mean within 5% of the truth
+  length(index)/n.sim
+```
+
+
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    <span style="color:#899499;">Big Data and Sampling</span>
+
+**3.**    <span style="color:#899499;">Inference and Prediction</span>
 
 **4.**    Model-Based vs Design-Based Inference
 
@@ -833,59 +950,6 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 <!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
 
 
-## Lab Setup
-
-Statistical Bias - the difference b/w the true value and the mean of the sampling distribution of all possible values.
-
-::: {.fragment}
-
-```{r bias1,eval=TRUE, echo=TRUE}
-  lambda.hat = unlist(lapply(list.mat,FUN=mean))
-
-  hist(lambda.hat,xlab=bquote(lambda-hat),main=bquote("Sampling Distribution of"~lambda-hat))
-
-```
-:::
-
-## Lab Setup - Bias (Code)
-
-```{r bias22,eval=TRUE, echo=TRUE}
-  # Bias
-  bias.lambda = mean(lambda.hat) - lambda
-  bias.lambda
-  
-  # relative bias
-  (mean(lambda.hat) - lambda)/lambda
-```
-
-. . .
-
-```{r bias3,eval=TRUE, echo=FALSE}
-  hist(lambda.hat,xlab=bquote(lambda), breaks=20)
-  abline(v=mean(lambda.hat),lwd=4,col=4,lty=2)
-  abline(v=lambda,lwd=4,col=3,lty=3)
-  legend("topright",legend=c("mean","truth"),lwd=3,col=c(4,3),lty=c(2,3))
-```
-
-## Lab Setup - Precision (Code)
-
-For a given sample size, what is the probability that we will observe a mean within 5% of the truth?
-
-We can do this doing *Monte Carlo integration*
-
-. . .
-
-```{r bias4,eval=TRUE, echo=TRUE}
-  diff = 0.025*lambda
-  diff
-  lower = lambda-diff
-  upper = lambda+diff
-
-index = which(lambda.hat>=lower & lambda.hat <= upper)
-
-#Probability of getting a mean within 5% of the truth
-length(index)/n.sim
-```
 
 ## Lab Setup
 

@@ -12,38 +12,66 @@ mat
 
 
 ## ----design.sim2, echo=TRUE, eval=TRUE----------------------------------------------------------------------------------
-# Option 1- sample values directly
   n = 10
-  y = sample(c(mat),10, replace = TRUE)
+  y = sample(
+             c(mat),
+             10, 
+             replace = TRUE
+             )
   y
 
 
-## ----design.sim3, echo=TRUE, eval=TRUE----------------------------------------------------------------------------------
-# Option 2 - Sample the coordinates and get values
-
-  coords = expand.grid(x = 1:5, y = 1:5)
-  index.samples = sample(1:nrow(coords),10)
-  y2 = mat[as.matrix(coords[index.samples,])]
-  y2 
-
-
 ## ----design.sim4, echo=TRUE, eval=TRUE----------------------------------------------------------------------------------
-# Sample mean
   mean(y)
-  mean(y2)
-  
+
+
+
+## ----sampling dist, eval=TRUE, echo=TRUE--------------------------------------------------------------------------------
+# How many ways can we uniquely sample 10 things from 25
+combs = function(n, x) {
+  factorial(n) / factorial(n-x) / factorial(x)
+}
+
+combs(25, 10)
+
+
+## ----sampling dist2, eval=TRUE, echo=TRUE, cache=TRUE-------------------------------------------------------------------
+  set.seed(5435)
+  all.combs = utils::combn(c(mat), 10)
+  dim(all.combs)
+  mean.all.combs = apply(all.combs,2,mean)
+
+
+## ----sampling dist3, eval=TRUE, echo=TRUE, cache=TRUE-------------------------------------------------------------------
+  set.seed(5435)
+  sim.sampling.dist=replicate(2000,
+                              sample(c(mat),10)
+                              )
+  dim(sim.sampling.dist)
+  mean.samples = apply(sim.sampling.dist,2,mean)
+
+
+## ----sampling dist4, eval=TRUE, echo=FALSE------------------------------------------------------------------------------
+  hist(mean.all.combs,
+       freq=FALSE, 
+       main="Sampling Distributiuon of the Mean",
+       breaks=10,
+       xlab="Means"
+       )
+  hist(mean.samples,
+       add=TRUE,
+       freq=FALSE,
+       col=grDevices::adjustcolor("red", alpha.f=0.5),
+       breaks=10
+       )
+  legend("topright",lwd=5,col=c(grDevices::adjustcolor("black", alpha.f=0.5),grDevices::adjustcolor("red", alpha.f=0.5)),legend = c("Complete", "Approximated"))
 
 
 ## ----model.sim, echo=TRUE, eval=TRUE------------------------------------------------------------------------------------
-# This is only one realization
+#Create a function, to be replicated
   lambda=200
-  mat = matrix(rpois(25, lambda=lambda),
-               nrow=5, ncol=55
-               )
-
-#Create a function 
   n.sim=500
-  mat.fn = function(mu){matrix(rpois(25, lambda=lambda),
+  mat.fn = function(lambda){matrix(rpois(25, lambda=lambda),
                                nrow=5, ncol=5
                                )
   }
@@ -51,7 +79,10 @@ mat
 
 ## ----model.sim2, echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------
 # repeat the function n.sim times
-  list.mat = replicate(n.sim, mat.fn(mu), simplify=FALSE)
+  list.mat = replicate(n.sim, 
+                       mat.fn(lambda), 
+                       simplify=FALSE
+                       )
   length(list.mat)
 
 
@@ -64,19 +95,22 @@ mat
   mean(list.mat[[1]])
 
 
-## ----bias1,eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------
-  lambda.hat = unlist(lapply(list.mat,FUN=mean))
+## ----model.sim4, echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------
+lambda.hat = unlist(lapply(list.mat,FUN=mean))
 
-  hist(lambda.hat,xlab=bquote(lambda-hat),main=bquote("Sampling Distribution of"~lambda-hat))
 
+## ----model.sim5, echo=FALSE, eval=TRUE----------------------------------------------------------------------------------
+hist(lambda.hat,
+     xlab=bquote(lambda-hat),
+     main=bquote("Sampling Distribution of"~lambda-hat)
+     )
 
 
 ## ----bias22,eval=TRUE, echo=TRUE----------------------------------------------------------------------------------------
-  # Bias
-  bias.lambda = mean(lambda.hat) - lambda
-  bias.lambda
-  
-  # relative bias
+# Bias
+  mean(lambda.hat) - lambda
+
+# relative bias
   (mean(lambda.hat) - lambda)/lambda
 
 
@@ -93,8 +127,8 @@ mat
   lower = lambda-diff
   upper = lambda+diff
 
-index = which(lambda.hat>=lower & lambda.hat <= upper)
+  index = which(lambda.hat>=lower & lambda.hat <= upper)
 
 #Probability of getting a mean within 5% of the truth
-length(index)/n.sim
+  length(index)/n.sim
 
