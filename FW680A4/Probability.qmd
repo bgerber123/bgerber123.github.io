@@ -201,7 +201,7 @@ Data (e.g., $y$) are random variables that can be described by probability distr
 
 Data (e.g., $y$) are random variables that can be described by probability functions where the unknown parameters (e.g., $\theta$) are also random variables that have probability functions that describe them.
 
-## Frequentist Random Variables 
+## Random Variables 
 $$
 \begin{align*}
 y =& \text{ event/outcome} \\

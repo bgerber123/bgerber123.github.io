@@ -2706,14 +2706,14 @@
     "href": "FW680A4/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probabilty\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3)\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf"
+    "text": "Lecture: Probability\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3)\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\nBackground Reading:\n\n HobbsHooten_Ch_3.pdf. Section 3.4."
   },
   {
     "objectID": "FW680A4/week2.html#week-2",
     "href": "FW680A4/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probabilty\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3)\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf"
+    "text": "Lecture: Probability\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.1, 3)\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\nBackground Reading:\n\n HobbsHooten_Ch_3.pdf. Section 3.4."
   },
   {
     "objectID": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
@@ -2734,42 +2734,42 @@
     "href": "FW680A4/BigPicture.html#big-data-problems-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n\"Data and data sets are not objective;\"\n\n\"they are creations of human design.\""
+    "text": "Big Data Problems\n“The hidden Biases of Big Data” by Kate Crawford in Harvard Business Review (2013)\n\"Data and data sets are not objective;\"\n. . .\n\"they are creations of human design.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-2",
     "href": "FW680A4/BigPicture.html#big-data-problems-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n\n\n\n\nSampling Processes == Human Design"
+    "text": "Big Data Problems\nThe Annals of Applied Statistics (2018); Xiao Li Meng,\nThe Big Data Paradox: \n. . .\n\n\n\"the bigger the data, the surer we fool ourselves” ... when we fail to account for our sampling process. \n. . .\n\nSampling Processes == Human Design"
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-3",
     "href": "FW680A4/BigPicture.html#big-data-problems-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n\nBradley et al. 2021 (Nature)\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
+    "text": "Big Data Problems\n\n\n\nBradley et al. 2021 (Nature)\n\n\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#big-data-problems-4",
     "href": "FW680A4/BigPicture.html#big-data-problems-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\nUsing eBird data w/o accounting for sampling biases.\n\n\n\n\n\n\nLink1. Link2."
+    "text": "Big Data Problems\nUsing eBird data w/o accounting for sampling biases.\n. . .\n\n\n\n\nLink1. Link2."
   },
   {
     "objectID": "FW680A4/BigPicture.html#the-questioning-scientist",
     "href": "FW680A4/BigPicture.html#the-questioning-scientist",
     "title": "Big Picture  Science and Modeling",
     "section": "The Questioning Scientist",
-    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\n\nHow and why did these data come to be?\n\nunderstand how the data came to be\nask this even when you design the study, after data collection\n\n\n\n\n\nWhat do these data look like?\n\nvisualize the data in many dimensions\nkeep in mind - not all outcomes are visible in data – example?\n\n\n\n\n\nHow does this statistical model work?\n\nstatistical notation, explicit and implicit assumptions, optimization\n\n\n\n\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\n\nHow and why did these data come to be?\n\nunderstand how the data came to be\nask this even when you design the study, after data collection\n\n\n\n\n\n\nWhat do these data look like?\n\nvisualize the data in many dimensions\nkeep in mind - not all outcomes are visible in data – example?\n\n\n\n\n\n\nHow does this statistical model work?\n\n\nstatistical notation, explicit and implicit assumptions, optimization\n\n\n\n\n\n\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
   },
   {
     "objectID": "FW680A4/BigPicture.html#data-vs.-information",
     "href": "FW680A4/BigPicture.html#data-vs.-information",
     "title": "Big Picture  Science and Modeling",
     "section": "Data vs. Information",
-    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information"
+    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#information",
@@ -2783,21 +2783,21 @@
     "href": "FW680A4/BigPicture.html#the-question-and-the-data",
     "title": "Big Picture  Science and Modeling",
     "section": "The question and the data",
-    "text": "The question and the data\n\nEcological surveillance monitoring will often have low quality information regarding post-hoc hypotheses.\n\n\nExample?"
+    "text": "The question and the data\n\nEcological surveillance monitoring will often have low quality information regarding post-hoc hypotheses.\n\n\nExample?\n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#the-goal-of-the-question",
     "href": "FW680A4/BigPicture.html#the-goal-of-the-question",
     "title": "Big Picture  Science and Modeling",
     "section": "The goal of the question",
-    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n\n\n\ninference and prediction are different goals, optimally requiring different data, statistical modeling proecdures. \n\n\n\n\n\n\nBUT, are also not mutually exclusive."
+    "text": "The goal of the question\n\n\nlearn about the data (data summary)\napply learning outside of the data (inference)\nlearn about conditions relevant to but not observed in the data (prediction)\n\n\n\n. . .\n\n\ninference and prediction are different goals, optimally requiring different data, statistical modeling proecdures. \n\n. . .\n\nBUT, are also not mutually exclusive."
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction",
     "href": "FW680A4/BigPicture.html#inference-and-prediction",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\n\n\nFrom \"The strategy of model building in population biology\" by Richard Levins (American Scientists, 1966) :\n\n\n\"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of understanding, predicting, and modifying nature. But this cannot be done.\""
+    "text": "Inference and Prediction\n\nFrom \"The strategy of model building in population biology\" by Richard Levins (American Scientists, 1966) :\n\n\n\"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of understanding, predicting, and modifying nature. But this cannot be done.\""
   },
   {
     "objectID": "FW680A4/BigPicture.html#infernence-and-prediction",
@@ -2951,7 +2951,7 @@
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLabs\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\n\n\n\n\n \nFr\n23-Aug\nBig Picture\nSampling and Markdown\nZitomer et al. 2022; Wolcott et al. 2019;\n\n\n\n2\nTu\n27-Aug\nProbability\n\nBetts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2)\n\n\n\n \nFr\n30-Aug\nSimulation / Power Analysis\n\n\n\n\n\n3\nTu\n3-Sep\nLikelihood / Regression I\n\n\n\n\n\n \nFr\n6-Sep\nRegression II\n\n\n\n\n\n4\nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nFr\n13-Sep\nGeneralized Linear Models I\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Oct\nNo Class\n\n\n\n\n\n \nFr\n29-Oct\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLabs\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\n\n\n\n\n \nFr\n23-Aug\nBig Picture\nSampling & Markdown\nZitomer et al. 2022; Wolcott et al. 2019;\n\n\n\n2\nTu\n27-Aug\nProbability Functions\n\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010\n\n\n \nFr\n30-Aug\nSimulation / Power Analysis\nSimulation & Prob. Functions\n\nHobbs and Hooten Ch.3\n\n\n3\nTu\n3-Sep\nLikelihood / Regression I\n\n\n\n\n\n \nFr\n6-Sep\nRegression II\n\n\n\n\n\n4\nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nFr\n13-Sep\nGeneralized Linear Models I\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Oct\nNo Class\n\n\n\n\n\n \nFr\n29-Oct\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -2984,9 +2984,9 @@
   {
     "objectID": "FW680A4/BigPicture.html",
     "href": "FW680A4/BigPicture.html",
-    "title": "Big Picture  and Probability",
+    "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "Hypotheses and Predictions\nTwo frameworks of Sampling\nInference and Prediction\nProbability and Markdown"
+    "text": "a process of learning through empirical observations\n\n. . .\n\ntogether, science philosophy and statistical modeling is the backbone to empirical learning"
   },
   {
     "objectID": "FW680A4/Rknowledge.html#fw-680a4",
@@ -3238,14 +3238,14 @@
     "href": "FW680A4/BigPicture.html#study-objective",
     "title": "Big Picture  Science and Modeling",
     "section": "Study Objective",
-    "text": "Study Objective\n\nDefinition\nWhat you want to accomplish; can have multiple related objectives in a single manuscript.\n\n\nExample\nTo understand the space-use of coyotes.\n\n\nFraming the importance of the objective(s) provides the justification and depends on the audience."
+    "text": "Study Objective\nDefinitionWhat you want to accomplish; can have multiple related objectives in a single manuscript.\nExampleTo understand the space-use of coyotes.\n\n\nFraming the importance of the objective(s) provides the justification and depends on the audience."
   },
   {
     "objectID": "FW680A4/BigPicture.html#hypothesis",
     "href": "FW680A4/BigPicture.html#hypothesis",
     "title": "Big Picture  Science and Modeling",
     "section": "Hypothesis",
-    "text": "Hypothesis\n\nDefinition\n\nA story that explains how the world works\nAn explanation for an observed phenomenon\n\n\n\nExample (weak)\nCoyotes have small home ranges in urban areas"
+    "text": "Hypothesis\nDefinition\nA story that explains how the world works\nAn explanation for an observed phenomenon\nExample (weak)Coyotes have small home ranges in urban areas"
   },
   {
     "objectID": "FW680A4/BigPicture.html#research-hypothesis",
@@ -3259,14 +3259,14 @@
     "href": "FW680A4/BigPicture.html#prediction",
     "title": "Big Picture  Science and Modeling",
     "section": "Prediction",
-    "text": "Prediction\n\nDefinition\nThe expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.\n\n\nExample 1\n\nOkay: Coyote home ranges are smaller in urban areas compared to non-urban areas\n\n\n\nExample 2\n\nBetter: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas"
+    "text": "Prediction\nDefinitionThe expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.\nExample 1\n\nOkay: Coyote home ranges are smaller in urban areas compared to non-urban areas\nExample 2\n\nBetter: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas"
   },
   {
     "objectID": "FW680A4/BigPicture.html#researchscientific-hypothesis",
     "href": "FW680A4/BigPicture.html#researchscientific-hypothesis",
     "title": "Big Picture  Science and Modeling",
     "section": "Research/Scientific Hypothesis",
-    "text": "Research/Scientific Hypothesis\n\nDefinition\n“A statement about a phenomenon that also includes the potential mechanism or cause of that phenomenon”. (Betts et al. 2021)\n\n\nExample\nCoyotes have small home ranges in urban areas because food resource density is high\n\n\nNon-hypothesis hypothesis:  We hypothesize variation in coyote home range size."
+    "text": "Research/Scientific Hypothesis\nDefinition“A statement about a phenomenon that also includes the potential mechanism or cause of that phenomenon”. (Betts et al. 2021)\nExampleCoyotes have small home ranges in urban areas because food resource density is high\n\nNon-hypothesis hypothesis:  We hypothesize variation in coyote home range size."
   },
   {
     "objectID": "FW680A4/BigPicture.html#types-of-studies",
@@ -3294,7 +3294,7 @@
     "href": "FW680A4/BigPicture.html#statistical-modelhypothesis",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Model/Hypothesis",
-    "text": "Statistical Model/Hypothesis\n\nDefinition\n\nAn explicit mathematical and stochastic representation of the observational & mechanistic process of the empirical observations."
+    "text": "Statistical Model/Hypothesis\nDefinition\nAn explicit mathematical and stochastic representation of the observational & mechanistic process of the empirical observations."
   },
   {
     "objectID": "FW680A4/BigPicture.html#manuscript",
@@ -3350,14 +3350,14 @@
     "href": "FW680A4/BigPicture.html#inference-and-prediction-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\n\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.\n\n\nPredictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision."
+    "text": "Inference and Prediction\n\nFrom \"To Explain or to Predict\" by Galit Shmueli (Statistical Science, 2010):\n\nExplanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.\n\n. . .\nPredictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision."
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction-2",
     "href": "FW680A4/BigPicture.html#inference-and-prediction-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Inference and Prediction",
-    "text": "Inference and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n\nBUT …\nExplanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes"
+    "text": "Inference and Prediction\nThis leads to a strange result: \n\nthe \"wrong\"  statistical model can predict better than the correct one.\n\n. . .\nBUT …\nExplanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes"
   },
   {
     "objectID": "FW680A4/BigPicture.html#inference-and-prediction-3",
@@ -3378,7 +3378,7 @@
     "href": "FW680A4/BigPicture.html#statistical-modelhypothesis-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Model/Hypothesis",
-    "text": "Statistical Model/Hypothesis\nExample:\n\\[\\textbf{y} = \\beta_0 + \\beta_1 \\times \\textbf{x} + \\mathbf{\\epsilon}\\] \\[\\mathbf{\\epsilon} \\sim \\text{Normal}(0, \\sigma^2)\\]\n\nwhere…\n\\(\\textbf{y}\\) = vector of home range sizes of coyotes  \\(\\beta_0\\) = intercept  \\(\\beta_1\\) = effect diff. of HR size for urban coyotes  \\(\\textbf{x}\\) = indicator of HR in urban (1) or not in urban (0)  \\(\\sigma^2\\) = uncertainty / unknown variability"
+    "text": "Statistical Model/Hypothesis\nExample:\n\\[\\textbf{y} = \\beta_0 + \\beta_1 \\times \\textbf{x} + \\mathbf{\\epsilon}\\] \\[\\mathbf{\\epsilon} \\sim \\text{Normal}(0, \\sigma^2)\\]\n\nwhere…\n\\(\\textbf{y}\\) = vector of home range sizes of coyotes \\(\\beta_0\\) = intercept \\(\\beta_1\\) = effect diff. of HR size for urban coyotes \\(\\textbf{x}\\) = indicator of HR in urban (1) or not in urban (0) \\(\\sigma^2\\) = uncertainty / unknown variability"
   },
   {
     "objectID": "FW680A4/BigPicture.html#sampling",
@@ -3392,7 +3392,7 @@
     "href": "FW680A4/BigPicture.html#design-based",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\n\n\n\nThompson, 2012. Sampling.\nThe sample and population are what??"
+    "text": "Design-Based\n\n\n\n\nThompson, 2012. Sampling.\nThe sample and population are what??"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-vs.-model",
@@ -3406,21 +3406,21 @@
     "href": "FW680A4/BigPicture.html#design-based-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\n\n\n\n\ninference relies on randomly assigning some units to be in the sample (e.g., random sampling)."
+    "text": "Design-Based\n\n\n\n\n\ninference relies on randomly assigning some units to be in the sample (e.g., random sampling)."
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-2",
     "href": "FW680A4/BigPicture.html#design-based-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\n\n\n\n\nthe values themselves are held to be fixed, whereas the sampling process is random."
+    "text": "Design-Based\n\n\n\n\n\nthe values themselves are held to be fixed, whereas the sampling process is random."
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based",
     "href": "FW680A4/BigPicture.html#model-based",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based",
-    "text": "Model-Based\nInference relies on …\n “a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;” Williams and Brown, 2019\n\n\n“The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random.” Williams and Brown, 2019"
+    "text": "Model-Based\nInference relies on …\n “a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;” Williams and Brown, 2019\n\n. . .\n“The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random.” Williams and Brown, 2019"
   },
   {
     "objectID": "FW680A4/BigPicture.html#section-3",
@@ -3455,7 +3455,7 @@
     "href": "FW680A4/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 274 369 337  12 233  29 337 130 335  50\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 210.6"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 274 369 337  12 233  29 337 130 335  50\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 210.6"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-2",
@@ -3469,21 +3469,21 @@
     "href": "FW680A4/BigPicture.html#random-variable",
     "title": "Big Picture  Science and Modeling",
     "section": "Random Variable",
-    "text": "Random Variable\nWikipedia: A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.\n\n\nWe observe samples from the domain or population or sampling frame.\n\n\n\nSamples are observed with some probability."
+    "text": "Random Variable\nWikipedia: A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.\n\n. . .\nWe observe samples from the domain or population or sampling frame.\n\n. . .\nSamples are observed with some probability."
   },
   {
     "objectID": "FW680A4/BigPicture.html#whats-the-point-of-statistics",
     "href": "FW680A4/BigPicture.html#whats-the-point-of-statistics",
     "title": "Big Picture  Science and Modeling",
-    "section": "What’s the point of statistics?",
-    "text": "What’s the point of statistics?\n\na process of learning through empirical observations\n\n\n\ntogether, science philosophy and statistical modeling is the backbone to empirical learning"
+    "section": "",
+    "text": "a process of learning through empirical observations\n\n. . .\n\ntogether, science philosophy and statistical modeling is the backbone to empirical learning"
   },
   {
     "objectID": "FW680A4/BigPicture.html#today",
     "href": "FW680A4/BigPicture.html#today",
     "title": "Big Picture  Science and Modeling",
     "section": "Today",
-    "text": "Today\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Sampling/Inference\n\n\n\nLab: Simulation and Markdown"
+    "text": "Today\n1. Study Objectives, Hypotheses, and Predictions\n2. Big Data and Sampling\n3. Inference and Prediction\n4. Model-Based vs Design-Based Sampling/Inference\n\n. . .\n\nLab: Simulation and Markdown"
   },
   {
     "objectID": "FW680A4/BigPicture.html#markdown-lab",
@@ -3497,14 +3497,14 @@
     "href": "FW680A4/BigPicture.html#model-based-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based",
-    "text": "Model-Based\nBUT….\nwhen linking ‘unit values’ in a model, we need to account for their dependence.\n\n\nRandomization allows us to make conditional independence claims among data in our sample, thus the model is simpler.\n\n\n\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
+    "text": "Model-Based\nBUT….\nwhen linking ‘unit values’ in a model, we need to account for their dependence.\n\n. . .\nRandomization allows us to make conditional independence claims among data in our sample, thus the model is simpler.\n. . .\n\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based-2",
     "href": "FW680A4/BigPicture.html#model-based-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based",
-    "text": "Model-Based\n\nKey Strengths: Very flexible. Modeling is magic.\n\n\n\nKey Weaknesses: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear"
+    "text": "Model-Based\n\n\nKey Strengths: Very flexible. Modeling is magic.\n\n. . .\n\n\nKey Weaknesses: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear"
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based-code",
@@ -3518,42 +3518,42 @@
     "href": "FW680A4/BigPicture.html#model-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# repeat the function n.sim times\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 500\n\n\n\n\n#One realization\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  213  221  202  204  173\n[2,]  195  182  193  190  215\n[3,]  221  216  187  182  179\n[4,]  176  196  218  210  211\n[5,]  218  182  193  229  188\n\n# Sample mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 199.76"
+    "text": "Model-Based Code\n\n# repeat the function n.sim times\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 500\n\n\n. . .\n\n#One realization\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  213  221  202  204  173\n[2,]  195  182  193  190  215\n[3,]  221  216  187  182  179\n[4,]  176  196  218  210  211\n[5,]  218  182  193  229  188\n\n# Sample mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 199.76"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-3",
     "href": "FW680A4/BigPicture.html#design-based-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\nKey Strengths: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference\n\n\n\nKey Weaknesses: limited in application; still requires models to accommodate observational processes, such as detection probability"
+    "text": "Design-Based\n\n\nKey Strengths: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference\n\n. . .\n\n\nKey Weaknesses: limited in application; still requires models to accommodate observational processes, such as detection probability"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-4",
     "href": "FW680A4/BigPicture.html#design-based-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n\nThis means something different:\n\n\\(\\textbf{y}\\) = (\\(y_1\\),…,\\(y_N\\))\n\n\n\n\n(stuff) is exclusive of end points\n[stuff] is inclusive of end points"
+    "text": "Design-Based\n\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n. . .\nThis means something different:\n\n\n\\(\\textbf{y}\\) = (\\(y_1\\),…,\\(y_N\\))\n\n. . .\n\n(stuff) is exclusive of end points\n[stuff] is inclusive of end points"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-5",
     "href": "FW680A4/BigPicture.html#design-based-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
+    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n. . .\n\nThe population mean describes ….?\n\n. . .\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables\n\n. . .\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n. . .\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistic",
     "href": "FW680A4/BigPicture.html#statistic",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistic",
-    "text": "Statistic\n\n\\(\\hat{\\bar{y}}\\) is a ‘statistic’ (# computed from a sample) and is also a random variable\n\n\n\nstatistics have a sampling distribution, describing the probability associated to observing different values of the statistic"
+    "text": "Statistic\n\n\n\\(\\hat{\\bar{y}}\\) is a ‘statistic’ (# computed from a sample) and is also a random variable\n\n. . .\n\nstatistics have a sampling distribution, describing the probability associated to observing different values of the statistic"
   },
   {
     "objectID": "FW680A4/BigPicture.html#model-based-3",
     "href": "FW680A4/BigPicture.html#model-based-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based",
-    "text": "Model-Based\n\n\\(\\textbf{y} \\sim\\) Poisson(\\(\\lambda\\)) Wikipedia link\n\\(y_{i} \\sim\\) Poisson(\\(\\lambda\\))\n\n\n\n\\(\\lambda\\) is the population mean and variance\n\n\n\n\nSample mean Estimator \\(\\hat{\\lambda} = \\sum_{i=1}^n y_{i}/n\\)\n\n\n\n\nMaximum-Likelihood Estimate (MLE)"
+    "text": "Model-Based\n\n\\(\\textbf{y} \\sim\\) Poisson(\\(\\lambda\\)) Wikipedia link\n\\(y_{i} \\sim\\) Poisson(\\(\\lambda\\))\n\n. . .\n\n\n\\(\\lambda\\) is the population mean and variance\n\n. . .\n\nSample mean Estimator \\(\\hat{\\lambda} = \\sum_{i=1}^n y_{i}/n\\)\n\n\n. . .\n\nMaximum-Likelihood Estimate (MLE)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#take-aways",
@@ -3595,7 +3595,7 @@
     "href": "FW680A4/BigPicture.html#statistical-bias-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Bias (Code)",
-    "text": "Statistical Bias (Code)\n\n# Bias\n  mean(lambda.hat) - lambda\n\n[1] 0.00544\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 2.72e-05"
+    "text": "Statistical Bias (Code)\n\n# Bias\n  mean(lambda.hat) - lambda\n\n[1] 0.00544\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 2.72e-05\n\n\n. . ."
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistical-modelhypothesis-2",
@@ -3609,35 +3609,35 @@
     "href": "FW680A4/BigPicture.html#lab-setup",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nLet’s add some more reality in our work while using design-based sampling in R.\n\n\nObjective: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.\n\n\nMethodology: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter."
+    "text": "Lab Setup\nLet’s add some more reality in our work while using design-based sampling in R.\n. . .\n\nObjective: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.\n. . .\nMethodology: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter."
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-1",
     "href": "FW680A4/BigPicture.html#lab-setup-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Frame\n\nall of RI or some subset"
+    "text": "Lab Setup\nSteps to consider\n\n\n\n\nSampling Frame\n\nall of RI or some subset"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-2",
     "href": "FW680A4/BigPicture.html#lab-setup-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\n“Truth”\n\nhow many deer per cell; how variable"
+    "text": "Lab Setup\nSteps to consider\n\n\n\n\n“Truth”\n\nhow many deer per cell; how variable"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-3",
     "href": "FW680A4/BigPicture.html#lab-setup-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\nSampling Process\n\nhow to pick each cell"
+    "text": "Lab Setup\nSteps to consider\n\n\n\n\nSampling Process\n\nhow to pick each cell"
   },
   {
     "objectID": "FW680A4/BigPicture.html#lab-setup-4",
     "href": "FW680A4/BigPicture.html#lab-setup-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Lab Setup",
-    "text": "Lab Setup\nSteps to consider\n\n\n\nEstimation Process\n\nestimate total deer population from the sample\n\nCriteria to Evaluate\n\nuse sampling distribution of deer abundance estimate or some other statistic"
+    "text": "Lab Setup\nSteps to consider\n\n\n\n\nEstimation Process\n\nestimate total deer population from the sample\n\n\n\nCriteria to Evaluate\n\nuse sampling distribution of deer abundance estimate or some other statistic"
   },
   {
     "objectID": "FW680A4/BigPicture.html#go-to-code",
@@ -3749,7 +3749,7 @@
     "href": "FW680A4/BigPicture.html#precision-of-the-mean-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Precision of the mean (Code)",
-    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n#Probability of getting a mean within 5% of the truth\n  length(index)/n.sim\n\n[1] 0.934"
+    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n. . .\nWe can calculate this using Monte Carlo integration\n. . .\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n#Probability of getting a mean within 5% of the truth\n  length(index)/n.sim\n\n[1] 0.934"
   },
   {
     "objectID": "FW680A4/BigPicture.html#take-aways-1",
@@ -3959,7 +3959,7 @@
     "href": "FW680A4/Probability.html#random-variables-2",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
   },
   {
     "objectID": "FW680A4/Probability.html#probability-functions",
@@ -4247,5 +4247,89 @@
     "title": "Probability",
     "section": "Gamma Distribution",
     "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 50\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+  },
+  {
+    "objectID": "FW680A4/temp2.html",
+    "href": "FW680A4/temp2.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "What we can say about our parameters using this function?\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n. . .\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function.\n. . .\nCODE:\n\n# A data point\n  y=c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y,mean=8)\n\n[1] 0.05399097\n\n\n\n. . .\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10."
+  },
+  {
+    "objectID": "FW680A4/temp2.html#the-likelihood-function",
+    "href": "FW680A4/temp2.html#the-likelihood-function",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "What we can say about our parameters using this function?\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n. . .\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function.\n. . .\nCODE:\n\n# A data point\n  y=c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y,mean=8)\n\n[1] 0.05399097\n\n\n\n. . .\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10."
+  },
+  {
+    "objectID": "FW680A4/temp2.html#many-parameter-guesses",
+    "href": "FW680A4/temp2.html#many-parameter-guesses",
+    "title": "Brian D. Gerber",
+    "section": "Many Parameter Guesses",
+    "text": "Many Parameter Guesses\n\n# Let's take many guesses of the mean\n  means=seq(0,20,by=0.1)\n\n# Use dnorm to get likelihood of each guess of the mean\n# Assumes sd = 1\n  likelihood=dnorm(y, mean=means)\n\n. . ."
+  },
+  {
+    "objectID": "FW680A4/temp2.html#statistics-and-pdf-example",
+    "href": "FW680A4/temp2.html#statistics-and-pdf-example",
+    "title": "Brian D. Gerber",
+    "section": "Statistics and PDF Example",
+    "text": "Statistics and PDF Example\nWhat is the mean height of King Penguins?"
+  },
+  {
+    "objectID": "FW680A4/temp2.html#statistics-and-pdf-example-1",
+    "href": "FW680A4/temp2.html#statistics-and-pdf-example-1",
+    "title": "Brian D. Gerber",
+    "section": "Statistics and PDF Example",
+    "text": "Statistics and PDF Example\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n. . .\nLet’s decide to use the Normal Distribution as our PDF.\n. . .\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n. . .\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\] . . .\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n. . .\nOr simply,\n\\[\n\\textbf{y} \\stackrel{iid}{\\sim} \\text{Normal}(\\mu, \\sigma)\n\\] . . .\n\\(iid\\) = independent and identically distributed\n. . ."
+  },
+  {
+    "objectID": "FW680A4/temp2.html#continued",
+    "href": "FW680A4/temp2.html#continued",
+    "title": "Brian D. Gerber",
+    "section": "Continued",
+    "text": "Continued\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]\n. . .\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(y_{1}|\\mu, \\sigma)\\times f(y_{2}|\\mu, \\sigma)\\times f(y_{3}|\\mu, \\sigma) \\end{align*}\n\\]\nWe can do this because we are assuming knowing one value (\\(y_1\\)) does not tell us any new information about another value \\(y_2\\).\n. . .\n\\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/temp2.html#code",
+    "href": "FW680A4/temp2.html#code",
+    "title": "Brian D. Gerber",
+    "section": "Code",
+    "text": "Code\nTranslate the math to code…\n\n# penguin height data\n  y=c(4.34, 3.53, 3.75)\n\n#Joint likelihood of mu=3, sigma =1, given our data\n  prod(dnorm(y,mean=3,sd=1))\n\n[1] 0.01696987\n\n\n\n. . .\nCalcualte likelihood of many guesses of \\(\\mu\\) and \\(\\sigma\\) simultaneously,\n\n# The Guesses\n  mu=seq(0,6,0.05)\n  sigma=seq(0.01,2,0.05)\n  try=expand.grid(mu,sigma)\n  colnames(try)=c(\"mu\",\"sigma\")\n\n# function\nfun=function(a,b){\n  prod(dnorm(y,mean=a,sd=b))\n  }\n\n# mapply the function with the inputs\n  likelihood=mapply(a=try$mu,b=try$sigma, FUN=fun)\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n. . ."
+  },
+  {
+    "objectID": "FW680A4/temp2.html#likelihood-plot-3d",
+    "href": "FW680A4/temp2.html#likelihood-plot-3d",
+    "title": "Brian D. Gerber",
+    "section": "Likelihood plot (3D)",
+    "text": "Likelihood plot (3D)\n\n\nLoading required package: ggplot2\n\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout"
+  },
+  {
+    "objectID": "FW680A4/temp2.html#sample-size",
+    "href": "FW680A4/temp2.html#sample-size",
+    "title": "Brian D. Gerber",
+    "section": "Sample Size",
+    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?\n. . ."
+  },
+  {
+    "objectID": "FW680A4/Probability.html#random-variables-3",
+    "href": "FW680A4/Probability.html#random-variables-3",
+    "title": "Probability",
+    "section": "Random Variables",
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "classfiles/problab/Markdown and Probability Functions.html",
+    "href": "classfiles/problab/Markdown and Probability Functions.html",
+    "title": "Markdown, Equations, and the Normal Distribution",
+    "section": "",
+    "text": "RStudio can help you use Markdown to create HTML/PDF/Word documents that can embed R code, HTML, CSS, latex (type setting language), and more. This is a good website to checkout for markdown coding.\nMarkdown is quite useful for developing reports or doing homeework. Anytime you want to combile code, plotting, or analyses with text, markdown can help. We will use markdown as a way accomplish homework. This way you can provide code and document it simultaneously. I would suggest to not try and get too fancy at first. Keep it simple. Write-text in RStudio as you would in any word processor. Write R code in R chunks. Use “echo=FALSE” and “echo=TRUE” for a code chink to either not print the code or to print the code.\n\nThis probability function is the most widely used and heard of. It has amazing utility. Let’s get to know it a bit more intimately.\nLet’s create an R chunk and plot some data by simulating from a random variable y. Let’s define this variable such that it can take on values of any real number from \\(-\\infty\\) to \\(\\infty\\). So, \\(y \\in (-\\infty, \\infty)\\) or \\(y \\in \\mathbb{R}\\).\nMore specifically, let’s define y as having a probability density function of a Normal/Gaussian distribution,\n\\[y \\sim \\text{Normal}(\\mu, \\sigma).\\]\nAnd stated more generally as,\n\\[f(y;\\mu, \\sigma) = [y|\\mu, \\theta].\\]\n\n# Simulate data from a standard normal distribution (mu = 10, sd = 1)\n  set.seed(54235)\n  y=rnorm(100,10,1)\n\n# Create a histogram\n  hist(y,xlim=c(6,14))\n\n\n\n\n\n\n\nLet’s create a new plot and not output the code. This time we will see the true probability distribution, not simulated values.\n\n\n\n\n\n\n\n\nHTML code can be embedded, such as turning text a different color.\nSimple text formatting can be done directly, such as italics or bolding."
+  },
+  {
+    "objectID": "classfiles/problab/Markdown and Probability Functions.html#approximating-an-integral",
+    "href": "classfiles/problab/Markdown and Probability Functions.html#approximating-an-integral",
+    "title": "Markdown, Equations, and the Normal Distribution",
+    "section": "Approximating an Integral",
+    "text": "Approximating an Integral\nLet’s understand this math a bit more. What we are doing is for every value of y possible (\\(-\\infty\\) to \\(\\infty\\)), we multiple it by its probability density. Then we take all these values and add them (i.e., the integral).\nIt’s a bit easier to understand what the math is doing by making an approximation.\nWe can approximate the integral by breaking it into pieces to calculate y times the \\(f(y; \\mu, \\sigma)\\) and then sum all these values.\n\n# Create a histogram and save the values\n  set.seed(14341)\n  y.hist=hist(rnorm(1000,10,1),breaks=8, freq=FALSE,ylim=c(0,0.4),\n              main=\"Random Normal Samples\")\n  \n# Plot the true probabiltiy denisty.\n  curve(dnorm(x,10,1),add=TRUE,lwd=3,col=2)\n  legend(\"topright\",lwd=3,col=c(2),legend=\"True Distribution\")\n\n\n\n\n\n\n# Get the x-axis mid-points of each bin\n  mid.point.x=y.hist$mids\n  mid.point.x\n\n[1]  6.5  7.5  8.5  9.5 10.5 11.5 12.5 13.5\n\n# Get the y-axis values (probability density) for each value. \n  prob.y=y.hist$density\n  prob.y\n\n[1] 0.003 0.021 0.134 0.348 0.343 0.133 0.017 0.001\n\n#multiple these value and sum them\n  sum(prob.y*mid.point.x)\n\n[1] 9.979\n\n\nDoes this answer make sense?\nWhat if you did the same approximation with more simulated values and bins? Perhaps our approximation would get closer to the true value (\\(\\mu = 10\\))!"
   }
 ]

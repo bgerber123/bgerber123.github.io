@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Brian D. Gerber - Big Picture  Science and Modeling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Brian D. Gerber</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
+</i> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Brian-Gerber-4"> <i class="bi bi-r-square-fill" role="img">
+</i> 
+<span class="menu-text">RG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bgerber123"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:brian.gerber@colostate.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#whats-the-point-of-statistics" id="toc-whats-the-point-of-statistics" class="nav-link active" data-scroll-target="#whats-the-point-of-statistics">What’s the point of statistics?</a></li>
+  <li>
+<a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today">Today</a>
+  <ul class="collapse">
+<li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul>
+</li>
+  <li><a href="#study-objective" id="toc-study-objective" class="nav-link" data-scroll-target="#study-objective">Study Objective</a></li>
+  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">Hypothesis</a></li>
+  <li><a href="#researchscientific-hypothesis" id="toc-researchscientific-hypothesis" class="nav-link" data-scroll-target="#researchscientific-hypothesis">Research/Scientific Hypothesis</a></li>
+  <li><a href="#statistical-modelhypothesis" id="toc-statistical-modelhypothesis" class="nav-link" data-scroll-target="#statistical-modelhypothesis">Statistical Model/Hypothesis</a></li>
+  <li><a href="#statistical-modelhypothesis-1" id="toc-statistical-modelhypothesis-1" class="nav-link" data-scroll-target="#statistical-modelhypothesis-1">Statistical Model/Hypothesis</a></li>
+  <li><a href="#statistical-modelhypothesis-2" id="toc-statistical-modelhypothesis-2" class="nav-link" data-scroll-target="#statistical-modelhypothesis-2">Statistical Model/Hypothesis</a></li>
+  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a></li>
+  <li><a href="#types-of-studies" id="toc-types-of-studies" class="nav-link" data-scroll-target="#types-of-studies">Types of Studies</a></li>
+  <li><a href="#manuscript-writing" id="toc-manuscript-writing" class="nav-link" data-scroll-target="#manuscript-writing">Manuscript Writing</a></li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">Take-Aways?</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#big-data-problems" id="toc-big-data-problems" class="nav-link" data-scroll-target="#big-data-problems">Big Data Problems</a></li>
+  <li><a href="#big-data-problems-1" id="toc-big-data-problems-1" class="nav-link" data-scroll-target="#big-data-problems-1">Big Data Problems</a></li>
+  <li><a href="#big-data-problems-2" id="toc-big-data-problems-2" class="nav-link" data-scroll-target="#big-data-problems-2">Big Data Problems</a></li>
+  <li><a href="#big-data-problems-3" id="toc-big-data-problems-3" class="nav-link" data-scroll-target="#big-data-problems-3">Big Data Problems</a></li>
+  <li><a href="#big-data-problems-4" id="toc-big-data-problems-4" class="nav-link" data-scroll-target="#big-data-problems-4">Big Data Problems</a></li>
+  <li><a href="#the-questioning-scientist" id="toc-the-questioning-scientist" class="nav-link" data-scroll-target="#the-questioning-scientist">The Questioning Scientist</a></li>
+  <li><a href="#data-vs.-information" id="toc-data-vs.-information" class="nav-link" data-scroll-target="#data-vs.-information">Data vs.&nbsp;Information</a></li>
+  <li><a href="#information" id="toc-information" class="nav-link" data-scroll-target="#information">Information</a></li>
+  <li><a href="#the-question-and-the-data" id="toc-the-question-and-the-data" class="nav-link" data-scroll-target="#the-question-and-the-data">The question and the data</a></li>
+  <li><a href="#the-goal-of-the-question" id="toc-the-goal-of-the-question" class="nav-link" data-scroll-target="#the-goal-of-the-question">The goal of the question</a></li>
+  <li><a href="#take-aways-1" id="toc-take-aways-1" class="nav-link" data-scroll-target="#take-aways-1">Take-Aways</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#whis-is-worse" id="toc-whis-is-worse" class="nav-link" data-scroll-target="#whis-is-worse">Whis is worse?</a></li>
+  <li><a href="#inference-and-prediction" id="toc-inference-and-prediction" class="nav-link" data-scroll-target="#inference-and-prediction">Inference and Prediction</a></li>
+  <li><a href="#inference-and-prediction-1" id="toc-inference-and-prediction-1" class="nav-link" data-scroll-target="#inference-and-prediction-1">Inference and Prediction</a></li>
+  <li><a href="#inference-and-prediction-2" id="toc-inference-and-prediction-2" class="nav-link" data-scroll-target="#inference-and-prediction-2">Inference and Prediction</a></li>
+  <li><a href="#inference-and-prediction-3" id="toc-inference-and-prediction-3" class="nav-link" data-scroll-target="#inference-and-prediction-3">Inference and Prediction</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#take-aways-2" id="toc-take-aways-2" class="nav-link" data-scroll-target="#take-aways-2">Take-Aways</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#design-based" id="toc-design-based" class="nav-link" data-scroll-target="#design-based">Design-Based</a></li>
+  <li><a href="#design-based-1" id="toc-design-based-1" class="nav-link" data-scroll-target="#design-based-1">Design-Based</a></li>
+  <li><a href="#design-based-2" id="toc-design-based-2" class="nav-link" data-scroll-target="#design-based-2">Design-Based</a></li>
+  <li><a href="#design-based-3" id="toc-design-based-3" class="nav-link" data-scroll-target="#design-based-3">Design-Based</a></li>
+  <li><a href="#design-based-4" id="toc-design-based-4" class="nav-link" data-scroll-target="#design-based-4">Design-Based</a></li>
+  <li><a href="#design-based-5" id="toc-design-based-5" class="nav-link" data-scroll-target="#design-based-5">Design-Based</a></li>
+  <li><a href="#random-variable" id="toc-random-variable" class="nav-link" data-scroll-target="#random-variable">Random Variable</a></li>
+  <li><a href="#statistic" id="toc-statistic" class="nav-link" data-scroll-target="#statistic">Statistic</a></li>
+  <li>
+<a href="#design-based-code" id="toc-design-based-code" class="nav-link" data-scroll-target="#design-based-code">Design-Based Code</a>
+  <ul class="collapse">
+<li><a href="#truth" id="toc-truth" class="nav-link" data-scroll-target="#truth">TRUTH</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#design-based-code-1" id="toc-design-based-code-1" class="nav-link" data-scroll-target="#design-based-code-1">Design-Based Code</a>
+  <ul class="collapse">
+<li><a href="#random-sampling" id="toc-random-sampling" class="nav-link" data-scroll-target="#random-sampling">Random Sampling</a></li>
+  <li><a href="#estimator-for-the-population-mean" id="toc-estimator-for-the-population-mean" class="nav-link" data-scroll-target="#estimator-for-the-population-mean">Estimator for the population mean</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#design-based-code-2" id="toc-design-based-code-2" class="nav-link" data-scroll-target="#design-based-code-2">Design-Based Code</a>
+  <ul class="collapse">
+<li><a href="#sampling-distribution" id="toc-sampling-distribution" class="nav-link" data-scroll-target="#sampling-distribution">Sampling Distribution</a></li>
+  </ul>
+</li>
+  <li><a href="#design-based-code-3" id="toc-design-based-code-3" class="nav-link" data-scroll-target="#design-based-code-3">Design-Based Code</a></li>
+  <li><a href="#design-based-code-4" id="toc-design-based-code-4" class="nav-link" data-scroll-target="#design-based-code-4">Design-Based Code</a></li>
+  <li><a href="#design-based-code-5" id="toc-design-based-code-5" class="nav-link" data-scroll-target="#design-based-code-5">Design-Based Code</a></li>
+  <li><a href="#model-based" id="toc-model-based" class="nav-link" data-scroll-target="#model-based">Model-Based</a></li>
+  <li><a href="#model-based-1" id="toc-model-based-1" class="nav-link" data-scroll-target="#model-based-1">Model-Based</a></li>
+  <li><a href="#model-based-2" id="toc-model-based-2" class="nav-link" data-scroll-target="#model-based-2">Model-Based</a></li>
+  <li><a href="#model-based-3" id="toc-model-based-3" class="nav-link" data-scroll-target="#model-based-3">Model-Based</a></li>
+  <li><a href="#model-based-code" id="toc-model-based-code" class="nav-link" data-scroll-target="#model-based-code">Model-Based Code</a></li>
+  <li><a href="#model-based-code-1" id="toc-model-based-code-1" class="nav-link" data-scroll-target="#model-based-code-1">Model-Based Code</a></li>
+  <li><a href="#model-based-code-2" id="toc-model-based-code-2" class="nav-link" data-scroll-target="#model-based-code-2">Model-Based Code</a></li>
+  <li><a href="#statistical-bias" id="toc-statistical-bias" class="nav-link" data-scroll-target="#statistical-bias">Statistical Bias</a></li>
+  <li><a href="#statistical-bias-code" id="toc-statistical-bias-code" class="nav-link" data-scroll-target="#statistical-bias-code">Statistical Bias (Code)</a></li>
+  <li><a href="#precision-of-the-mean-code" id="toc-precision-of-the-mean-code" class="nav-link" data-scroll-target="#precision-of-the-mean-code">Precision of the mean (Code)</a></li>
+  <li><a href="#take-aways-3" id="toc-take-aways-3" class="nav-link" data-scroll-target="#take-aways-3">Take-Aways</a></li>
+  <li><a href="#lab" id="toc-lab" class="nav-link" data-scroll-target="#lab">Lab</a></li>
+  <li><a href="#lab-setup" id="toc-lab-setup" class="nav-link" data-scroll-target="#lab-setup">Lab Setup</a></li>
+  <li><a href="#lab-setup-1" id="toc-lab-setup-1" class="nav-link" data-scroll-target="#lab-setup-1">Lab Setup</a></li>
+  <li><a href="#lab-setup-2" id="toc-lab-setup-2" class="nav-link" data-scroll-target="#lab-setup-2">Lab Setup</a></li>
+  <li><a href="#lab-setup-3" id="toc-lab-setup-3" class="nav-link" data-scroll-target="#lab-setup-3">Lab Setup</a></li>
+  <li><a href="#lab-setup-4" id="toc-lab-setup-4" class="nav-link" data-scroll-target="#lab-setup-4">Lab Setup</a></li>
+  <li><a href="#go-to-code" id="toc-go-to-code" class="nav-link" data-scroll-target="#go-to-code">Go to code</a></li>
+  </ul><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="BigPicture.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title"><span style="color:black"><u>Big Picture</u> <br> Science and Modeling</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><!-- knitr::purl("./FW680A4/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") --><style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+<section id="whats-the-point-of-statistics" class="level2"><h2 class="anchored" data-anchor-id="whats-the-point-of-statistics">What’s the point of statistics?</h2>
+<ul>
+<li>a process of learning through empirical observations</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>together, science philosophy and statistical modeling is the backbone to empirical learning</li>
+</ul></section><section id="today" class="level2"><h2 class="anchored" data-anchor-id="today">Today</h2>
+<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
+<p><strong>2.</strong> Big Data and Sampling</p>
+<p><strong>3.</strong> Inference and Prediction</p>
+<p><strong>4.</strong> Model-Based vs Design-Based Sampling/Inference</p>
+<p><br></p>
+<p>. . .</p>
+<section id="section" class="level3"><h3 class="anchored" data-anchor-id="section"></h3>
+<p><em>Lab</em>: Simulation and Markdown</p>
+</section></section><section id="study-objective" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="study-objective">Study Objective</h2>
+<details><summary>Definition</summary><p>What you want to accomplish; can have multiple related objectives in a single manuscript.</p>
+</details><details><summary>Example</summary><p>To understand the space-use of coyotes.</p>
+<p><img src="..\img/coyote.png" class="img-fluid" width="300"></p>
+<div class="fragment">
+<p>Framing the importance of the objective(s) provides the <em>justification</em> and depends on the audience.</p>
+</div>
+</details></section><section id="hypothesis" class="level2"><h2 class="anchored" data-anchor-id="hypothesis">Hypothesis</h2>
+<details><summary>Definition</summary><ol type="1">
+<li><p>A story that explains how the world works</p></li>
+<li><p>An explanation for an observed phenomenon</p></li>
+</ol></details><details><summary>Example (weak)</summary><p>Coyotes have small home ranges in urban areas</p>
+</details></section><section id="researchscientific-hypothesis" class="level2"><h2 class="anchored" data-anchor-id="researchscientific-hypothesis">Research/Scientific Hypothesis</h2>
+<details><summary>Definition</summary><p>“A statement about a phenomenon that also includes the potential mechanism or cause of that phenomenon”. <a href="https://doi.org/10.1002/ece3.7365">(Betts et al.&nbsp;2021)</a></p>
+</details><details><summary>Example</summary><p>Coyotes have small home ranges in urban areas because food resource density is high</p>
+</details><div class="fragment">
+<span style="color:#FF0000"><b>Non-hypothesis hypothesis:</b></span>  We hypothesize variation in coyote home range size.
+</div>
+</section><section id="statistical-modelhypothesis" class="level2"><h2 class="anchored" data-anchor-id="statistical-modelhypothesis">Statistical Model/Hypothesis</h2>
+<details><summary>Definition</summary><ul>
+<li>An explicit mathematical and stochastic representation of the observational &amp; mechanistic process of the empirical observations.</li>
+</ul></details></section><section id="statistical-modelhypothesis-1" class="level2"><h2 class="anchored" data-anchor-id="statistical-modelhypothesis-1">Statistical Model/Hypothesis</h2>
+<p>Example:</p>
+<p><span class="math display">\[\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}\]</span> <span class="math display">\[\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)\]</span></p>
+<div class="fragment">
+<p>where…</p>
+<p><span class="math inline">\(\textbf{y}\)</span> = vector of home range sizes of coyotes <br><span class="math inline">\(\beta_0\)</span> = intercept <br><span class="math inline">\(\beta_1\)</span> = effect diff. of HR size for urban coyotes <br><span class="math inline">\(\textbf{x}\)</span> = indicator of HR in urban (1) or not in urban (0) <br><span class="math inline">\(\sigma^2\)</span> = uncertainty / unknown variability</p>
+</div>
+</section><section id="statistical-modelhypothesis-2" class="level2"><h2 class="anchored" data-anchor-id="statistical-modelhypothesis-2">Statistical Model/Hypothesis</h2>
+<p>Example:</p>
+<p><span class="math display">\[\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}\]</span> <span class="math display">\[\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)\]</span></p>
+<section id="evidence-of-hypothesis-support" class="level4"><h4 class="anchored" data-anchor-id="evidence-of-hypothesis-support"><span style="color:red">Evidence of hypothesis support</span></h4>
+<p><span class="math inline">\(\beta_1\)</span> is negative and <strong>statistically clearly different</strong><sup><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13159">1</a></sup> than zero</p>
+</section></section><section id="prediction" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="prediction">Prediction</h2>
+<details><summary>Definition</summary><p>The expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.</p>
+</details><details><summary>Example 1</summary><ol type="1">
+<li>
+<span style="color:red">Okay</span>: Coyote home ranges are smaller in urban areas compared to non-urban areas</li>
+</ol></details><details><summary>Example 2</summary><ol start="2" type="1">
+<li>
+<span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas</li>
+</ol></details></section><section id="types-of-studies" class="level2"><h2 class="anchored" data-anchor-id="types-of-studies">Types of Studies</h2>
+<ul>
+<li><p>Descriptive/Naturalist (not hypothetico-deductive)</p></li>
+<li><p>Hypothetico-Deductive Observational</p></li>
+<li><p>Hypothetico-Deductive Experimental</p></li>
+</ul></section><section id="manuscript-writing" class="level2"><h2 class="anchored" data-anchor-id="manuscript-writing">Manuscript Writing</h2>
+<p><span style="color:red">Where do you put these?</span></p>
+<ul>
+<li>objectives</li>
+<li>justification of objectives</li>
+<li>hypotheses</li>
+<li>predictions</li>
+</ul></section><section id="take-aways" class="level2"><h2 class="anchored" data-anchor-id="take-aways">Take-Aways?</h2>
+<p><strong>1.</strong> Study Objectives, Hypotheses, and Predictions</p>
+</section><section id="section-1" class="level2" data-background-image="../img/BigData.png"><h2 data-background-image="/img/BigData.png" class="anchored" data-anchor-id="section-1"></h2>
+
+<br><br><br><br><br><center><span style="color:#C70039; font-size: 65px;"><b>Data is everywhere <br> It is the era of  BIG DATA! </b></span></center>
+</section><section id="big-data-problems" class="level2"><h2 class="anchored" data-anchor-id="big-data-problems">Big Data Problems</h2>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
+<p>“with enough data, the numbers speak for themselves”- Wired Magazine Editor</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/spreadsheet.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</section><section id="big-data-problems-1" class="level2"><h2 class="anchored" data-anchor-id="big-data-problems-1">Big Data Problems</h2>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
+<br><span style="color:#FF0000"><center><em>"Data and data sets are not objective;"</em></center></span>
+<p>. . .</p>
+<span style="color:#FF0000"><center><em>"they are creations of human design."</em></center></span>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/thinking.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</section><section id="big-data-problems-2" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="big-data-problems-2">Big Data Problems</h2>
+<p><a href="https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-2/Statistical-paradises-and-paradoxes-in-big-data-I--Law/10.1214/18-AOAS1161SF.full"><strong>The Annals of Applied Statistics (2018); Xiao Li Meng,</strong></a></p>
+<br><center><span><em>The Big Data Paradox: </em></span></center>
+<p>. . .</p>
+<center>
+<span style="color:#FF0000"><em>
+"the bigger the data, the surer we fool ourselves”</em></span> ... when we fail to account for our sampling process. </center>
+<p>. . .</p>
+<br><center>
+Sampling Processes == Human Design
+</center>
+</section><section id="big-data-problems-3" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="big-data-problems-3">Big Data Problems</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="Information_files/survey.data.png" class="img-fluid figure-img" width="1000"></p>
+<figcaption class="margin-caption"><a href="https://www.nature.com/articles/s41586-021-04198-4">Bradley et al.&nbsp;2021 (Nature)</a></figcaption></figure>
+</div>
+<br><center>
+<span style="color:#FF0000"><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
+</section><section id="big-data-problems-4" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="big-data-problems-4">Big Data Problems</h2>
+<p>Using eBird data w/o accounting for sampling biases.</p>
+<p>. . .</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/ebird.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-width="500"></p>
+</figure>
+</div>
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.2023170118">Link1</a>. <a href="https://www.pnas.org/doi/10.1073/pnas.2113862119">Link2</a>.</p>
+<!-- ```{=html} -->
+<!-- <br><center><span style="color:#FF0000";><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center> -->
+<!-- ``` -->
+</section><section id="the-questioning-scientist" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="the-questioning-scientist">The Questioning Scientist</h2>
+<p><br></p>
+<p>In regard to <em>data</em> and <em>statistical models</em>, <span style="color:red">21<sup>st</sup> century scientists should be pragmatic, excited, and questioning.</span></p>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>How and why did these data come to be?
+<ul>
+<li><em>understand how the data came to be</em></li>
+<li><em>ask this even when you design the study, after data collection</em></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>What do these data look like?
+<ul>
+<li><em>visualize the data in many dimensions</em></li>
+<li><em>keep in mind - not all outcomes are visible in data – example?</em></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>How does this statistical model work?
+<ul>
+<li>
+<em>statistical notation, explicit and implicit assumptions</em>, <em>optimization</em>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>How does this statistical model fail in theory and in practice?
+<ul>
+<li><em>statistical robustness and identifiability</em></li>
+</ul>
+</li>
+</ul>
+</div>
+</section><section id="data-vs.-information" class="level2"><h2 class="anchored" data-anchor-id="data-vs.-information">Data vs.&nbsp;Information</h2>
+<span style="color:#FF0000"><center>Data = Numbers/Groupings<br><br>
+Data ≠ Information
+</center>
+</span>
+<p>. . .</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/info_diagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section><section id="information" class="level2"><h2 class="anchored" data-anchor-id="information">Information</h2>
+Data contains <span><u>information</u></span>, depending on ...
+<ul>
+<li><p>the question being asked of the data</p></li>
+<li><p>how the data came to be</p></li>
+<li><p>the goal of the question</p></li>
+</ul></section><section id="the-question-and-the-data" class="level2"><h2 class="anchored" data-anchor-id="the-question-and-the-data">The question and the data</h2>
+<p><br></p>
+<p>Ecological surveillance monitoring will often have <em>low quality information</em> regarding post-hoc hypotheses.</p>
+<p><br></p>
+<span style="color:#FF0000"><center>
+Example?
+</center>
+</span>
+<p>. . .</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/banding.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="494"></p>
+</figure>
+</div>
+</section><section id="the-goal-of-the-question" class="level2"><h2 class="anchored" data-anchor-id="the-goal-of-the-question">The goal of the question</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>learn about the data (<span style="color:red">data summary</span>)</li>
+<li>apply learning outside of the data (<span style="color:red">inference</span>)</li>
+<li>learn about conditions relevant to but not observed in the data (<span style="color:red">prediction</span>)</li>
+</ul>
+</div>
+<p><br></p>
+<p>. . .</p>
+<center>
+<span style="color:#FF0000">
+<em>inference</em></span> and <span style="color:#FF0000"><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures. <br>
+</center>
+<p>. . .</p>
+<br><center>
+BUT, are also <u>not mutually exclusive</u>.
+</center>
+</section><section id="take-aways-1" class="level2"><h2 class="anchored" data-anchor-id="take-aways-1">Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> Big Data and Sampling</p>
+</section><section id="section-2" class="level2" data-background-image="../img/wetlands.png"><h2 data-background-image="/img/wetlands.png" class="anchored" data-anchor-id="section-2"></h2>
+
+<br><br><br><br><br><center><span style="color:#FFFFFF; font-size:65px"><b>Inference and Prediction </b></span></center>
+</section><section id="whis-is-worse" class="level2"><h2 class="anchored" data-anchor-id="whis-is-worse">Whis is worse?</h2>
+<ul>
+<li>unbiased imprecise result</li>
+<li>precise biased result</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/tragets.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</section><section id="inference-and-prediction" class="level2"><h2 class="anchored" data-anchor-id="inference-and-prediction">Inference and Prediction</h2>
+<br><p style="font-size:45px; font-family:Garamond;">
+<a href="https://www.jstor.org/stable/27836590">From "The strategy of model building in population biology" by Richard Levins (American Scientists, 1966) </a>:
+</p>
+<br>
+"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000"><u>understanding</u></span>, <span style="color:#FF0000"><u>predicting</u></span>, and <span style="color:#FF0000"><u>modifying nature</u></span>. But this cannot be done."
+</section><section id="inference-and-prediction-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="inference-and-prediction-1">Inference and Prediction</h2>
+<br><p style="font-size:45px; font-family:Garamond;">
+<a href="https://projecteuclid.org/journals/statistical-science/volume-25/issue-3/To-Explain-or-to-Predict/10.1214/10-STS330.full">From "To Explain or to Predict" by Galit Shmueli (Statistical Science, 2010)</a>:
+</p>
+<p>Explanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.</p>
+<p><br></p>
+<p>. . .</p>
+<p>Predictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision.</p>
+</section><section id="inference-and-prediction-2" class="level2"><h2 class="anchored" data-anchor-id="inference-and-prediction-2">Inference and Prediction</h2>
+<span style="color:#0000FF">This leads to a strange result: </span>
+<p><br></p>
+the <span style="color:#FF0000">"wrong" </span> statistical model can predict better than the correct one.
+<p><br></p>
+<p>. . .</p>
+<p>BUT …</p>
+<span style="color:#0000FF">Explanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes</span>
+</section><section id="inference-and-prediction-3" class="level2"><h2 class="anchored" data-anchor-id="inference-and-prediction-3">Inference and Prediction</h2>
+
+<p style="font-size:30px; ">Trade-Off between prediction accuracy and model interpretability; from <a href="../readings/ISLRv2_website.pdf">James et al. 2013. An Introduction to Statistical Learning</a></p>
+
+<p><img src="..\img/interpretability.png" class="img-fluid"></p>
+</section><section id="section-3" class="level2" data-background-image="../img/wetlands.png"><h2 data-background-image="/img/wetlands.png" class="anchored" data-anchor-id="section-3"></h2>
+
+<br><br><br><br><br><center><span style="color:#FFFFFF; font-size:65px"><b>Design- and Model-Based Sampling/Inference</b></span></center>
+<!-- A question of the *sampling frame* -->
+</section><section id="take-aways-2" class="level2"><h2 class="anchored" data-anchor-id="take-aways-2">Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
+<p><strong>3.</strong> Inference and Prediction</p>
+</section><section id="section-4" class="level2"><h2 class="anchored" data-anchor-id="section-4"></h2>
+<br><br><br><center>
+<span style="color:#FF0000">
+<p style="font-size:60px">
+When do we need statistics?
+</p>
+</span>
+</center>
+</section><section id="design-based" class="level2"><h2 class="anchored" data-anchor-id="design-based">Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/srs.png" class="quarto-figure quarto-figure-center figure-img" height="450"></p>
+</figure>
+</div>
+<p><a href="https://students.aiu.edu/submissions/profiles/resources/onlineBook/Q2T8G7_Sampling-_3rd.pdf">Thompson, 2012. Sampling.</a></p>
+<p>The sample and population are what??</p>
+</section><section id="design-based-1" class="level2"><h2 class="anchored" data-anchor-id="design-based-1">Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/srs.png" class="quarto-figure quarto-figure-center figure-img" height="450"></p>
+</figure>
+</div>
+<ul>
+<li>inference relies on randomly assigning some units to be in the sample (e.g., random sampling).</li>
+</ul></section><section id="design-based-2" class="level2"><h2 class="anchored" data-anchor-id="design-based-2">Design-Based</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/srs.png" class="quarto-figure quarto-figure-center figure-img" height="450"></p>
+</figure>
+</div>
+<ul>
+<li>the values themselves are held to be <strong>fixed</strong>, whereas the sampling process is random.</li>
+</ul></section><section id="design-based-3" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="design-based-3">Design-Based</h2>
+<ul>
+<li>
+<span style="color:red">Key Strengths</span>: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<span style="color:red">Key Weaknesses</span>: limited in application; still requires models to accommodate observational processes, such as detection probability</li>
+</ul></section><section id="design-based-4" class="level2"><h2 class="anchored" data-anchor-id="design-based-4">Design-Based</h2>
+<ul>
+<li>
+<span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</li>
+</ul>
+<p>. . .</p>
+<p><span style="color:red">This means something different</span>:</p>
+<ul>
+<li>
+<span class="math inline">\(\textbf{y}\)</span> = (<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>)</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li><p>(stuff) is exclusive of end points</p></li>
+<li><p>[stuff] is inclusive of end points</p></li>
+</ul></section><section id="design-based-5" class="level2"><h2 class="anchored" data-anchor-id="design-based-5">Design-Based</h2>
+<ul>
+<li><p><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</p></li>
+<li><p>The mean is <span class="math inline">\(\bar{Y} = \sum_{i=1}^N Y_i / N\)</span> and the sample mean is <span class="math inline">\(\hat{\bar{y}} = \sum_{i=1}^n y_i / n\)</span></p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>The population mean describes ….?</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<span class="math inline">\(\textbf{y}\)</span> is a random vector that has <span class="math inline">\(n\)</span> random variables</li>
+</ul>
+<p>. . .</p>
+<p><span class="math inline">\(\boldsymbol{y} = \begin{matrix} [y_{1} &amp; y_{2} &amp; y_{3} &amp; y_{4 }]\end{matrix}\)</span></p>
+<p>. . .</p>
+<p><span class="math inline">\(\boldsymbol{y}' = \boldsymbol{y}^{T}  = \begin{bmatrix} y_{1} &amp; \\y_{2} &amp;\\  y_{3}  &amp; \\y_{4 }\end{bmatrix}\)</span></p>
+</section><section id="random-variable" class="level2"><h2 class="anchored" data-anchor-id="random-variable">Random Variable</h2>
+<p><a href="https://en.wikipedia.org/wiki/Random_variable">Wikipedia:</a> A random variable (also called ‘random quantity’ or ‘stochastic variable’) is a mathematical formalization of a quantity or object which depends on random events.</p>
+<p><br></p>
+<p>. . .</p>
+<p>We observe samples from the domain or population or sampling frame.</p>
+<p><br></p>
+<p>. . .</p>
+<p><strong>Samples</strong> are observed with some probability.</p>
+</section><section id="statistic" class="level2"><h2 class="anchored" data-anchor-id="statistic">Statistic</h2>
+<ul>
+<li>
+<span class="math inline">\(\hat{\bar{y}}\)</span> is a ‘statistic’ (# computed from a sample) and is also a random variable</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>statistics have a sampling distribution, describing the probability associated to observing different values of the statistic</li>
+</ul></section><section id="design-based-code" class="level2"><h2 class="anchored" data-anchor-id="design-based-code">Design-Based Code</h2>
+<section id="truth" class="level3"><h3 class="anchored" data-anchor-id="truth">TRUTH</h3>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#random discrete uniform sampler</span></span>
+<span><span class="va">rdu</span><span class="op">&lt;-</span><span class="kw">function</span><span class="op">(</span><span class="va">n</span>,<span class="va">lower</span>,<span class="va">upper</span><span class="op">)</span><span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">lower</span><span class="op">:</span><span class="va">upper</span>,<span class="va">n</span>,replace<span class="op">=</span><span class="cn">T</span><span class="op">)</span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">mat</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu">rdu</span><span class="op">(</span><span class="fl">25</span>, </span>
+<span>                 lower <span class="op">=</span> <span class="fl">0</span>, </span>
+<span>                 upper <span class="op">=</span> <span class="fl">400</span></span>
+<span>                 <span class="op">)</span>,</span>
+<span>             nrow<span class="op">=</span><span class="fl">5</span>, ncol<span class="op">=</span><span class="fl">5</span></span>
+<span>             <span class="op">)</span></span>
+<span><span class="va">mat</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]   29  130  210  391  207
+[2,]  292  251   77   76  211
+[3,]   37   26  365  274  137
+[4,]   88  335  233  328  337
+[5,]  369  273   12   50  100</code></pre>
+</div>
+</div>
+</section></section><section id="design-based-code-1" class="level2"><h2 class="anchored" data-anchor-id="design-based-code-1">Design-Based Code</h2>
+<section id="random-sampling" class="level3"><h3 class="anchored" data-anchor-id="random-sampling">Random Sampling</h3>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="va">n</span> <span class="op">=</span> <span class="fl">10</span></span>
+<span>  <span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span></span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">mat</span><span class="op">)</span>,</span>
+<span>             <span class="fl">10</span>, </span>
+<span>             replace <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>             <span class="op">)</span></span>
+<span>  <span class="va">y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 274 369 337  12 233  29 337 130 335  50</code></pre>
+</div>
+</div>
+<p><br></p>
+</section><div class="fragment">
+<section id="estimator-for-the-population-mean" class="level3"><h3 class="anchored" data-anchor-id="estimator-for-the-population-mean">Estimator for the population mean</h3>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 210.6</code></pre>
+</div>
+</div>
+</section>
+</div>
+</section><section id="design-based-code-2" class="level2"><h2 class="anchored" data-anchor-id="design-based-code-2">Design-Based Code</h2>
+<section id="sampling-distribution" class="level3"><h3 class="anchored" data-anchor-id="sampling-distribution">Sampling Distribution</h3>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># How many ways can we uniquely sample 10 things from 25</span></span>
+<span><span class="va">combs</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">n</span>, <span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">n</span><span class="op">-</span><span class="va">x</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">factorial</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu">combs</span><span class="op">(</span><span class="fl">25</span>, <span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3268760</code></pre>
+</div>
+</div>
+</section></section><section id="design-based-code-3" class="level2"><h2 class="anchored" data-anchor-id="design-based-code-3">Design-Based Code</h2>
+<p>Get Every combination and then calcualte the mean for each sample of 10</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">5435</span><span class="op">)</span></span>
+<span>  <span class="va">all.combs</span> <span class="op">=</span> <span class="fu">utils</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/utils/combn.html">combn</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">mat</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">all.combs</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]      10 3268760</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="va">mean.all.combs</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">all.combs</span>,<span class="fl">2</span>,<span class="va">mean</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="design-based-code-4" class="level2"><h2 class="anchored" data-anchor-id="design-based-code-4">Design-Based Code</h2>
+<p>OR, we can sample enough times to approximate it</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">5435</span><span class="op">)</span></span>
+<span>  <span class="va">sim.sampling.dist</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="fl">2000</span>,</span>
+<span>                              <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">mat</span><span class="op">)</span>,<span class="fl">10</span><span class="op">)</span></span>
+<span>                              <span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">sim.sampling.dist</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   10 2000</code></pre>
+</div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="va">mean.samples</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">sim.sampling.dist</span>,<span class="fl">2</span>,<span class="va">mean</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="design-based-code-5" class="level2"><h2 class="anchored" data-anchor-id="design-based-code-5">Design-Based Code</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="BigPicture_files/figure-revealjs/sampling dist4-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="model-based" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="model-based">Model-Based</h2>
+<p><strong>Inference relies on …</strong></p>
+<p><span style="color:red"> “a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;”</span> <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279">Williams and Brown, 2019</a></p>
+<p><br></p>
+<p>. . .</p>
+<p><span style="color:red">“The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random.”</span> <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279">Williams and Brown, 2019</a></p>
+</section><section id="model-based-1" class="level2"><h2 class="anchored" data-anchor-id="model-based-1">Model-Based</h2>
+<p><span style="color:red">BUT</span>….</p>
+<p>when linking ‘unit values’ in a model, we need to account for their dependence.</p>
+<p><br></p>
+<p>. . .</p>
+<p>Randomization allows us to make conditional independence claims among data in our sample, thus the model is simpler.</p>
+<p>. . .</p>
+<p><br></p>
+<p><span class="math inline">\(P(y_{2}|y_{1}) = P(y_{2})\)</span></p>
+</section><section id="model-based-2" class="level2"><h2 class="anchored" data-anchor-id="model-based-2">Model-Based</h2>
+<ul>
+<li>
+<span style="color:red">Key Strengths</span>: Very flexible. Modeling is <em>magic</em>.</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<span style="color:red">Key Weaknesses</span>: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear</li>
+</ul></section><section id="model-based-3" class="level2"><h2 class="anchored" data-anchor-id="model-based-3">Model-Based</h2>
+<ul>
+<li><p><span class="math inline">\(\textbf{y} \sim\)</span> Poisson(<span class="math inline">\(\lambda\)</span>) <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Wikipedia link</a></p></li>
+<li><p><span class="math inline">\(y_{i} \sim\)</span> Poisson(<span class="math inline">\(\lambda\)</span>)</p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<span class="math inline">\(\lambda\)</span> is the population mean and variance</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Sample mean Estimator <span class="math inline">\(\hat{\lambda} = \sum_{i=1}^n y_{i}/n\)</span>
+</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Maximum-Likelihood Estimate (MLE)</li>
+</ul></section><section id="model-based-code" class="level2"><h2 class="anchored" data-anchor-id="model-based-code">Model-Based Code</h2>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Create a function, to be replicated</span></span>
+<span>  <span class="va">lambda</span><span class="op">=</span><span class="fl">200</span></span>
+<span>  <span class="va">n.sim</span><span class="op">=</span><span class="fl">500</span></span>
+<span>  <span class="va">mat.fn</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span><span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span><span class="fl">25</span>, lambda<span class="op">=</span><span class="va">lambda</span><span class="op">)</span>,</span>
+<span>                               nrow<span class="op">=</span><span class="fl">5</span>, ncol<span class="op">=</span><span class="fl">5</span></span>
+<span>                               <span class="op">)</span></span>
+<span>  <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="model-based-code-1" class="level2"><h2 class="anchored" data-anchor-id="model-based-code-1">Model-Based Code</h2>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># repeat the function n.sim times</span></span>
+<span>  <span class="va">list.mat</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="va">n.sim</span>, </span>
+<span>                       <span class="fu">mat.fn</span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span>, </span>
+<span>                       simplify<span class="op">=</span><span class="cn">FALSE</span></span>
+<span>                       <span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">list.mat</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 500</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#One realization</span></span>
+<span>  <span class="va">list.mat</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]  213  221  202  204  173
+[2,]  195  182  193  190  215
+[3,]  221  216  187  182  179
+[4,]  176  196  218  210  211
+[5,]  218  182  193  229  188</code></pre>
+</div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sample mean for the first realization</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">list.mat</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 199.76</code></pre>
+</div>
+</div>
+</section><section id="model-based-code-2" class="level2"><h2 class="anchored" data-anchor-id="model-based-code-2">Model-Based Code</h2>
+<section id="sampling-distribution-1" class="level4"><h4 class="anchored" data-anchor-id="sampling-distribution-1">Sampling Distribution</h4>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lambda.hat</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">list.mat</span>,FUN<span class="op">=</span><span class="va">mean</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="BigPicture_files/figure-revealjs/model.sim5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="statistical-bias" class="level2"><h2 class="anchored" data-anchor-id="statistical-bias">Statistical Bias</h2>
+<p>the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling</p>
+</section><section id="statistical-bias-code" class="level2"><h2 class="anchored" data-anchor-id="statistical-bias-code">Statistical Bias (Code)</h2>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Bias</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">lambda.hat</span><span class="op">)</span> <span class="op">-</span> <span class="va">lambda</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.00544</code></pre>
+</div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># relative bias</span></span>
+<span>  <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">lambda.hat</span><span class="op">)</span> <span class="op">-</span> <span class="va">lambda</span><span class="op">)</span><span class="op">/</span><span class="va">lambda</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.72e-05</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="BigPicture_files/figure-revealjs/bias3-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="precision-of-the-mean-code" class="level2"><h2 class="anchored" data-anchor-id="precision-of-the-mean-code">Precision of the mean (Code)</h2>
+<p>What is the probability that we will observe a mean within 5% of the truth?</p>
+<p>. . .</p>
+<p>We can calculate this using <em>Monte Carlo integration</em></p>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="va">diff</span> <span class="op">=</span> <span class="fl">0.025</span><span class="op">*</span><span class="va">lambda</span></span>
+<span>  <span class="va">diff</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="va">lower</span> <span class="op">=</span> <span class="va">lambda</span><span class="op">-</span><span class="va">diff</span></span>
+<span>  <span class="va">upper</span> <span class="op">=</span> <span class="va">lambda</span><span class="op">+</span><span class="va">diff</span></span>
+<span></span>
+<span>  <span class="va">index</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">lambda.hat</span><span class="op">&gt;=</span><span class="va">lower</span> <span class="op">&amp;</span> <span class="va">lambda.hat</span> <span class="op">&lt;=</span> <span class="va">upper</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Probability of getting a mean within 5% of the truth</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">index</span><span class="op">)</span><span class="op">/</span><span class="va">n.sim</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.934</code></pre>
+</div>
+</div>
+</section><section id="take-aways-3" class="level2"><h2 class="anchored" data-anchor-id="take-aways-3">Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
+<p><strong>3.</strong> <span style="color:#899499;">Inference and Prediction</span></p>
+<p><strong>4.</strong> Model-Based vs Design-Based Inference</p>
+</section><section id="lab" class="level2"><h2 class="anchored" data-anchor-id="lab">Lab</h2>
+<p><strong>Objectives</strong></p>
+<ul>
+<li><p>Introduce R Markdown</p></li>
+<li><p>Use simulation and design-based sampling to investigate bias and precision</p></li>
+</ul>
+<!-- ## Statistical Bias --><!-- -   $y \sim \text{Poisson}(\lambda)$ --><!-- . . . --><!-- -   $\text{Bias}(\lambda) = E_{y|\lambda}[\hat{\lambda}] - \lambda$ --><!-- . . . --><!-- -   $E_{y|\lambda}[\hat{\lambda}]$ is the expected over the distribution P($y|\lambda$) (i.e., averaging over all possible observations y). [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) --><!-- . . . --><!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) --></section><section id="lab-setup" class="level2"><h2 class="anchored" data-anchor-id="lab-setup">Lab Setup</h2>
+<p>Let’s add some more <em>reality</em> in our work while using design-based sampling in R.</p>
+<p>. . .</p>
+<p><br></p>
+<p><strong>Objective</strong>: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.</p>
+<p>. . .</p>
+<p><strong>Methodology</strong>: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/flir.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="483"></p>
+</figure>
+</div>
+</section><section id="lab-setup-1" class="level2"><h2 class="anchored" data-anchor-id="lab-setup-1">Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>
+<p><strong>Sampling Frame</strong></p>
+<ul>
+<li>all of RI or some subset</li>
+</ul>
+</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/RI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="483"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="lab-setup-2" class="level2"><h2 class="anchored" data-anchor-id="lab-setup-2">Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>
+<p><strong>“Truth”</strong></p>
+<ul>
+<li>how many deer per cell; how variable</li>
+</ul>
+</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/deermap.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="lab-setup-3" class="level2"><h2 class="anchored" data-anchor-id="lab-setup-3">Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>
+<p><strong>Sampling Process</strong></p>
+<ul>
+<li>how to pick each cell</li>
+</ul>
+</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/deermap.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="lab-setup-4" class="level2"><h2 class="anchored" data-anchor-id="lab-setup-4">Lab Setup</h2>
+<p><span style="color:blue">Steps to consider</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>
+<p><strong>Estimation Process</strong></p>
+<ul>
+<li>estimate total deer population from the sample</li>
+</ul>
+</li>
+<li>
+<p><strong>Criteria to Evaluate</strong></p>
+<ul>
+<li>use sampling distribution of deer abundance estimate or some other statistic<br>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="..\img/samplingdistribution.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="go-to-code" class="level2"><h2 class="anchored" data-anchor-id="go-to-code">Go to code</h2>
+
+
+</section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
