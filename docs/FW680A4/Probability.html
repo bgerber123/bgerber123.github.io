@@ -402,11 +402,12 @@
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
 <ul>
-<li><p>think about probabilities</p></li>
-<li><p>define probability functions</p>
+<li><p>Connect random variables, probabilities, and parameters</p></li>
+<li><p>define prob. functions</p>
 <ul>
 <li>discrete and continuous random variables</li>
 </ul></li>
+<li><p>use/plot prob. functions</p></li>
 <li><p>learn some notation</p></li>
 </ul>
 </section>
@@ -608,12 +609,6 @@ y \leftarrow&amp; f(y|\boldsymbol{\theta}) \\
 y \rightarrow&amp; f(y|\boldsymbol{\theta}) \\
 \end{align*}
 \]</span></p>
-<p><br></p>
-</div>
-<div class="fragment">
-<p style="text-align:center">
-<span style="color:orange"> We will come back to these with examples </span>
-</p>
 </div>
 </section>
 <section id="probability-functions" class="slide level2 scrollable">
@@ -649,7 +644,11 @@ y \rightarrow&amp; f(y|\boldsymbol{\theta}) \\
 f(y) = P(Y=y)
 \]</span></p>
 <div class="fragment">
-<p>For example 1, there are two probabilities</p>
+<p>Data has two outcomes (0 = dead, 1 = alive)</p>
+<p><span class="math inline">\(y \in  \{0,1\}\)</span></p>
+</div>
+<div class="fragment">
+<p>There are two probabilities</p>
 <ul>
 <li><span class="math inline">\(f(0) = P(Y=0)\)</span></li>
 <li><span class="math inline">\(f(1) = P(Y=1)\)</span></li>
@@ -659,7 +658,7 @@ f(y) = P(Y=y)
 <p><span style="color:blue">Axiom 1:</span> The probability of an event is greater than or equal to zero and less than or equal to 1.</p>
 <p><span class="math display">\[
 0 \leq f(y) \leq 1
-\]</span> Example 1,</p>
+\]</span> Example,</p>
 <ul>
 <li><span class="math inline">\(f(0) = 0.1\)</span></li>
 <li><span class="math inline">\(f(1) = 0.9\)</span></li>
@@ -671,14 +670,14 @@ f(y) = P(Y=y)
 <div class="fragment">
 <p><span class="math display">\[
 \sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
-\]</span> Example 1,</p>
+\]</span> Example,</p>
 <ul>
 <li><span class="math inline">\(f(0) + f(1) = 0.1 + 0.9 = 1\)</span></li>
 </ul>
 </div>
 </section>
-<section id="pmf-example-1" class="slide level2">
-<h2>PMF Example 1</h2>
+<section id="pmf-1" class="slide level2">
+<h2>PMF</h2>
 <p>Still need to define <span class="math inline">\(f()\)</span>, our PMF for <span class="math inline">\(y \in  \{0,1\}\)</span></p>
 <div class="fragment">
 <p>The <a href="https://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli distribution</a></p>
@@ -709,8 +708,8 @@ f(y|\theta) = [y|\theta]=
 </div>
 </div>
 </section>
-<section id="pmf-example-1-1" class="slide level2">
-<h2>PMF Example 1</h2>
+<section id="bernoulli-pmf" class="slide level2">
+<h2>Bernoulli PMF</h2>
 <p><span class="math display">\[
 f(y|\theta) = [y|\theta]=
   \begin{align}
@@ -729,8 +728,8 @@ f(y|\theta) = [y|\theta]=
 </ul>
 </div>
 </section>
-<section id="bernoulli-distribution" class="slide level2">
-<h2>Bernoulli distribution</h2>
+<section id="bernoulli-pmf-code" class="slide level2">
+<h2>Bernoulli PMF (Code)</h2>
 <p>What would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co">#Define inputs</span></span>
@@ -750,12 +749,11 @@ f(y|\theta) = [y|\theta]=
 </section>
 <section id="why-is-this-useful-to-us" class="slide level2">
 <h2><strong>Why is this useful to us?</strong></h2>
-<p>What if we wanted to evaluate the sample size of how many ducks we need to tag to estimate <span class="math inline">\(\theta\)</span>?</p>
+<p>How about to evaluate the sample size of ducks needed to estimate <span class="math inline">\(\theta\)</span>?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>y.mat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,</span>
-<span id="cb6-2"><a></a>                  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,<span class="at">size=</span>N,theta)</span>
-<span id="cb6-3"><a></a>                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>y.mat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,<span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,<span class="at">size=</span>N,theta))</span>
+<span id="cb6-2"><a></a>theta.hat <span class="ot">=</span> <span class="fu">apply</span>(y.mat, <span class="dv">2</span>, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -768,8 +766,8 @@ f(y|\theta) = [y|\theta]=
 </div>
 </div>
 </section>
-<section id="binomial" class="slide level2 scrollable">
-<h2>Binomial</h2>
+<section id="binomial-pmf" class="slide level2">
+<h2>Binomial PMF</h2>
 <p>The Bernoulli is a special case of the <a href="https://en.wikipedia.org/wiki/Binomial_distribution">Binomial Distribution</a>.</p>
 <p><span class="math display">\[
 f(y|\theta) = [y|\theta]=
@@ -784,14 +782,15 @@ f(y|\theta) = [y|\theta]=
 <div class="fragment">
 <p><span class="math inline">\(y\)</span> = number of successes / number of alive animals at the of the study.</p>
 </div>
-<div class="fragment">
+</section>
+<section id="binomial-pmf-code" class="slide level2 scrollable">
+<h2>Binomial PMF (Code)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># 1 duck tagged/released and one simulation</span></span>
 <span id="cb7-2"><a></a>  theta<span class="ot">=</span><span class="fl">0.2</span>;  N<span class="ot">=</span><span class="dv">1</span> </span>
 <span id="cb7-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">1</span>,<span class="at">size=</span>N,theta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
-</div>
 </div>
 </div>
 <div class="fragment">
@@ -958,14 +957,19 @@ What PDF does?
 </ul>
 </div>
 <div class="fragment">
+<p><span class="math display">\[
+y \sim \text{Normal}(\mu, \sigma) \\
+f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma})^{2}} \\
+\]</span></p>
+</div>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">library</span>(visualize)</span>
-<span id="cb18-2"><a></a><span class="fu">visualize.it</span>(<span class="at">dist =</span> <span class="st">'norm'</span>, <span class="at">stat =</span> <span class="fu">c</span>(<span class="dv">100</span>),</span>
-<span id="cb18-3"><a></a>             <span class="fu">list</span>(<span class="at">mu =</span> <span class="dv">100</span> , <span class="at">sd =</span> <span class="dv">10</span>), <span class="at">section =</span> <span class="st">"upper"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">visualize.it</span>(<span class="at">dist =</span> <span class="st">'norm'</span>, <span class="at">stat =</span> <span class="fu">c</span>(<span class="dv">100</span>),</span>
+<span id="cb18-2"><a></a>             <span class="fu">list</span>(<span class="at">mu =</span> <span class="dv">100</span> , <span class="at">sd =</span> <span class="dv">10</span>), <span class="at">section =</span> <span class="st">"upper"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -976,7 +980,7 @@ What PDF does?
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -988,7 +992,9 @@ What PDF does?
 \int_{120}^{\infty} f(y| \mu, \sigma)dy = P(120&lt;Y&lt;\infty)
 \]</span></p>
 </div>
+<div class="fragment">
 <p>Read this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.</p>
+</div>
 <p><br></p>
 <div class="fragment">
 <p>The code</p>
@@ -1067,34 +1073,12 @@ What PDF does?
 <section id="normal-distribution-pdf-code-2" class="slide level2">
 <h2>Normal Distribution (PDF Code)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">4</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <img data-src="Probability_files/figure-revealjs/pdf2b-1.png" width="960" class="r-stretch"></section>
-<section id="gamma-distribution-pdf-code" class="slide level2">
-<h2>Gamma Distribution (PDF Code)</h2>
-<p><a href="https://en.wikipedia.org/wiki/Gamma_distribution">Gamma Wikipedia</a></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>shape <span class="ot">=</span><span class="dv">10</span></span>
-<span id="cb26-2"><a></a>scale <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb26-3"><a></a></span>
-<span id="cb26-4"><a></a>mean1 <span class="ot">=</span> shape<span class="sc">*</span>scale</span>
-<span id="cb26-5"><a></a>mode1 <span class="ot">=</span> (shape<span class="dv">-1</span>)<span class="sc">*</span>scale</span>
-<span id="cb26-6"><a></a></span>
-<span id="cb26-7"><a></a>stdev <span class="ot">=</span> <span class="fu">sqrt</span>(shape<span class="sc">*</span>scale<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="gamma-distribution-pdf-code-1" class="slide level2">
-<h2>Gamma Distribution (PDF Code)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">curve</span>(<span class="fu">dgamma</span>(x, <span class="at">shape =</span> shape, <span class="at">scale=</span>scale),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">ylab=</span><span class="st">"Probability Density"</span>,<span class="at">xlab=</span><span class="st">"y"</span>)</span>
-<span id="cb27-2"><a></a><span class="fu">abline</span>(<span class="at">v=</span>mean1, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">1</span>, <span class="at">lty=</span><span class="dv">4</span>); <span class="fu">abline</span>(<span class="at">v=</span>mode1, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">4</span>)</span>
-<span id="cb27-3"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>,<span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Mean"</span>,<span class="st">"Mode"</span>),<span class="at">lwd=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="Probability_files/figure-revealjs/pdf4-1.png" width="960" class="r-stretch"></section>
-<section id="one-side-of-the-coin" class="slide level2 scrollable">
-<h2>One side of the coin</h2>
+<section id="gamma-distribution" class="slide level2 scrollable">
+<h2>Gamma Distribution</h2>
 <p><span style="color:red">Probability</span>: Interested in the variation of y, <span class="math display">\[
 \begin{align*}
 y \leftarrow&amp; f(y|\boldsymbol{\theta}) \\
@@ -1123,9 +1107,32 @@ f(y|\boldsymbol{\theta}) &amp;= \frac{1}{\Gamma(\kappa)\theta^{\kappa}}y^{y^{\ka
 <li><span class="math inline">\(\theta \in (0,\infty)\)</span></li>
 </ul>
 </div>
-<div class="fragment">
-<p>What is the probability we would sample a value &gt;40? <br> In this population, how common is a value &gt;40?</p>
+</section>
+<section id="gamma-distribution-pdf-code" class="slide level2">
+<h2>Gamma Distribution (PDF Code)</h2>
+<p><a href="https://en.wikipedia.org/wiki/Gamma_distribution">Gamma Wikipedia</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>shape <span class="ot">=</span><span class="dv">10</span></span>
+<span id="cb26-2"><a></a>scale <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb26-3"><a></a></span>
+<span id="cb26-4"><a></a>mean1 <span class="ot">=</span> shape<span class="sc">*</span>scale</span>
+<span id="cb26-5"><a></a>mode1 <span class="ot">=</span> (shape<span class="dv">-1</span>)<span class="sc">*</span>scale</span>
+<span id="cb26-6"><a></a></span>
+<span id="cb26-7"><a></a>stdev <span class="ot">=</span> <span class="fu">sqrt</span>(shape<span class="sc">*</span>scale<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="gamma-distribution-pdf-code-1" class="slide level2">
+<h2>Gamma Distribution (PDF Code)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">curve</span>(<span class="fu">dgamma</span>(x, <span class="at">shape =</span> shape, <span class="at">scale=</span>scale),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">ylab=</span><span class="st">"Probability Density"</span>,<span class="at">xlab=</span><span class="st">"y"</span>)</span>
+<span id="cb27-2"><a></a><span class="fu">abline</span>(<span class="at">v=</span>mean1, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">1</span>, <span class="at">lty=</span><span class="dv">4</span>); <span class="fu">abline</span>(<span class="at">v=</span>mode1, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">4</span>)</span>
+<span id="cb27-3"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>,<span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Mean"</span>,<span class="st">"Mode"</span>),<span class="at">lwd=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Probability_files/figure-revealjs/pdf4-1.png" width="960" class="r-stretch"></section>
+<section id="gamma-distribution-1" class="slide level2 scrollable">
+<h2>Gamma Distribution</h2>
+<p>What is the probability we would sample a value &gt;40? <br> In this population, how common is a value &gt;40?</p>
 <div class="fragment">
 <p><span class="math display">\[
 \begin{align*}
@@ -1177,7 +1184,7 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1193,7 +1200,7 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<p><img data-src="Probability_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
 </figure>
 </div>
 </div>

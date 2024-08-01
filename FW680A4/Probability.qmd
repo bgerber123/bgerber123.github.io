@@ -16,11 +16,13 @@ format:
 
 ## Objectives
 
-- think about probabilities
+- Connect random variables, probabilities, and parameters
 
-- define probability functions
+- define prob. functions
 
   - discrete and continuous random variables
+  
+- use/plot prob. functions
 
 - learn some notation
 
@@ -264,16 +266,6 @@ y \rightarrow& f(y|\boldsymbol{\theta}) \\
 \end{align*}
 $$
 
-<br>
-
-. . .
-
-
-<p style="text-align:center">
-<span style="color:orange">
-We will come back to these with examples
-</span>
-</p>
 
 ## Probability Functions {.scrollable}
 
@@ -310,7 +302,13 @@ $$
 
 . . .
 
-For example 1, there are two probabilities
+Data has two outcomes (0 = dead, 1 = alive) 
+
+$y \in  \{0,1\}$
+
+. . .
+
+There are two probabilities
 
 -   $f(0) = P(Y=0)$
 -   $f(1) = P(Y=1)$
@@ -323,7 +321,7 @@ For example 1, there are two probabilities
 $$
 0 \leq f(y) \leq 1
 $$
-Example 1,
+Example,
 
 -   $f(0) = 0.1$
 -   $f(1) = 0.9$ 
@@ -337,12 +335,12 @@ Example 1,
 $$
 \sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
 $$
-Example 1, 
+Example, 
 
 -   $f(0) + f(1) = 0.1 + 0.9 = 1$
 
 
-## PMF Example 1
+## PMF
 
 Still need to define $f()$, our PMF for $y \in  \{0,1\}$
 
@@ -382,7 +380,7 @@ $$
 :::
 
 
-## PMF Example 1
+## Bernoulli PMF
 
 $$
 f(y|\theta) = [y|\theta]=
@@ -405,7 +403,7 @@ Parameter space support ($\Theta$):
 
 ::: 
 
-## Bernoulli distribution
+## Bernoulli PMF (Code)
 
 What would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?
 
@@ -422,23 +420,22 @@ What would our data look like for 10 ducks that had a probability of survival (Y
 
 ## **Why is this useful to us?**
 
-What if we wanted to evaluate the sample size of how many ducks we need to tag to estimate $\theta$?
+How about to evaluate the sample size of ducks needed to estimate $\theta$?
 
 . . .
 
 ```{r bern2, echo=TRUE, eval=TRUE}
-y.mat = replicate(1000,
-                  rbinom(n = 10,size=N,theta)
-                  )
+y.mat = replicate(1000,rbinom(n = 10,size=N,theta))
+theta.hat = apply(y.mat, 2, mean)
 ```
 
 ```{r bern3, echo=FALSE, eval=TRUE,  out.width="75%"}
-hist(apply(y.mat, 2, mean),freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta),xlab=expression(theta))
+hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta),xlab=expression(theta))
 ```
 
 
 
-## Binomial {.scrollable}
+## Binomial PMF
 
 The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution). 
 
@@ -463,7 +460,8 @@ $y$ = number of successes / number of alive animals at the of the study.
 
 :::
 
-::: {.fragment}
+## Binomial PMF (Code) {.scrollable}
+
 
 ```{r eval=TRUE, echo=TRUE}
 # 1 duck tagged/released and one simulation
@@ -471,7 +469,6 @@ $y$ = number of successes / number of alive animals at the of the study.
   rbinom(n=1,size=N,theta)
 ```
 
-:::
 
 
 ::: {.fragment}
@@ -655,8 +652,20 @@ PDFs output <span style="color:orange">probability densities</span>, not probabi
 
 ::: {.fragment}
 
-```{r,echo=TRUE,eval=TRUE}
+$$
+y \sim \text{Normal}(\mu, \sigma) \\
+f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma})^{2}} \\
+$$
+
+:::
+
+::: {.fragment}
+
+```{r, echo=FALSE,eval=TRUE}
 library(visualize)
+```
+
+```{r,echo=TRUE,eval=TRUE}
 visualize.it(dist = 'norm', stat = c(100),
              list(mu = 100 , sd = 10), section = "upper")
 ```
@@ -684,7 +693,12 @@ $$
 $$
 :::
 
+
+::: {.fragment}
+
 Read this as "the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)".
+
+:::
 
 <br>
 
@@ -779,7 +793,7 @@ abline(v=20, lwd=3, col=1, lty=4)
 ## Normal Distribution (PDF Code)
 
 ```{r pdf2a, echo=TRUE, eval=FALSE}
-curve(dnorm(x, mean = 20, sd = 1),xlim=c(0,40),lwd=4,col=3,add=TRUE)
+curve(dnorm(x, mean = 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
 ```{r pdf2b, echo=FALSE, eval=TRUE}
@@ -788,30 +802,7 @@ abline(v=20, lwd=3, col=1, lty=4)
 curve(dnorm(x, mean= 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
-## Gamma Distribution (PDF Code)
-
-[Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution)
-
-```{r pdf3, echo=TRUE, eval=TRUE}
-shape =10
-scale = 2
-
-mean1 = shape*scale
-mode1 = (shape-1)*scale
-
-stdev = sqrt(shape*scale^2)
-```
-
-## Gamma Distribution (PDF Code)
-
-```{r pdf4, echo=TRUE, eval=TRUE}
-curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
-legend("topright",lty=3, col=c(1,2),legend=c("Mean","Mode"),lwd=3)
-```
-
-
-## One side of the coin {.scrollable}
+## Gamma Distribution {.scrollable}
 
 <span style="color:red">Probability</span>:
 Interested in the variation of y,
@@ -849,7 +840,34 @@ $$
 -   $\kappa \in (0,\infty)$
 -   $\theta \in (0,\infty)$
 
-. . .
+
+## Gamma Distribution (PDF Code)
+
+[Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution)
+
+```{r pdf3, echo=TRUE, eval=TRUE}
+shape =10
+scale = 2
+
+mean1 = shape*scale
+mode1 = (shape-1)*scale
+
+stdev = sqrt(shape*scale^2)
+```
+
+## Gamma Distribution (PDF Code)
+
+```{r pdf4, echo=TRUE, eval=TRUE}
+curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
+abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
+legend("topright",lty=3, col=c(1,2),legend=c("Mean","Mode"),lwd=3)
+```
+
+
+## Gamma Distribution {.scrollable}
+
+
+
 
 What is the probability we would sample a value >40? <br>
 In this population, how common is a value >40?

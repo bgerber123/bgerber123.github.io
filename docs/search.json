@@ -3959,7 +3959,7 @@
     "href": "FW680A4/Probability.html#random-variables-2",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\n\n\n We will come back to these with examples"
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/Probability.html#probability-functions",
@@ -3973,7 +3973,7 @@
     "href": "FW680A4/Probability.html#pmf",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n\nFor example 1, there are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n\n\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example 1,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n\n\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example 1,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
+    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n\n\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n\n\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n\n\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#pmf-example-1",
@@ -4015,7 +4015,7 @@
     "href": "FW680A4/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\nlibrary(visualize)\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-2",
@@ -4148,7 +4148,7 @@
     "href": "FW680A4/Probability.html#why-is-this-useful-to-us",
     "title": "Probability",
     "section": "Why is this useful to us?",
-    "text": "Why is this useful to us?\nWhat if we wanted to evaluate the sample size of how many ducks we need to tag to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,\n                  rbinom(n = 10,size=N,theta)\n                  )"
+    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-pdf",
@@ -4162,7 +4162,7 @@
     "href": "FW680A4/Probability.html#objectives",
     "title": "Probability",
     "section": "Objectives",
-    "text": "Objectives\n\nthink about probabilities\ndefine probability functions\n\ndiscrete and continuous random variables\n\nlearn some notation"
+    "text": "Objectives\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-distribution-pdf-code",
@@ -4190,7 +4190,7 @@
     "href": "FW680A4/Probability.html#normal-distribution-pdf-code-2",
     "title": "Probability",
     "section": "Normal Distribution (PDF Code)",
-    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean = 20, sd = 1),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
+    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean = 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-pdf-code-1",
@@ -4198,5 +4198,54 @@
     "title": "Probability",
     "section": "Gamma Distribution (PDF Code)",
     "text": "Gamma Distribution (PDF Code)\n\ncurve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab=\"Probability Density\",xlab=\"y\")\nabline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)\nlegend(\"topright\",lty=3, col=c(1,2),legend=c(\"Mean\",\"Mode\"),lwd=3)"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#pmf-1",
+    "href": "FW680A4/Probability.html#pmf-1",
+    "title": "Probability",
+    "section": "PMF",
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#bernoulli-pmf",
+    "href": "FW680A4/Probability.html#bernoulli-pmf",
+    "title": "Probability",
+    "section": "Bernoulli PMF",
+    "text": "Bernoulli PMF\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\nSample space support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#bernoulli-pmf-code",
+    "href": "FW680A4/Probability.html#bernoulli-pmf-code",
+    "title": "Probability",
+    "section": "Bernoulli PMF (Code)",
+    "text": "Bernoulli PMF (Code)\nWhat would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?\n\n#Define inputs\n  theta=0.2;  N=1 \n\n#Random sample - 1 duck\n  rbinom(n=1,size=N,theta)\n\n[1] 0\n\n#Random sample - 10 ducks\n  rbinom(n=10,size=N,theta)\n\n [1] 1 0 0 0 1 0 1 0 1 0"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#binomial-pmf",
+    "href": "FW680A4/Probability.html#binomial-pmf",
+    "title": "Probability",
+    "section": "Binomial PMF",
+    "text": "Binomial PMF\nThe Bernoulli is a special case of the Binomial Distribution.\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        {N\\choose y} \\theta^{y}\\times(1-\\theta)^{N-y}\n  \\end{align}\n\\]\n\n\\(N\\) = total trials / tagged and released animals\n\n\n\n\\(y\\) = number of successes / number of alive animals at the of the study."
+  },
+  {
+    "objectID": "FW680A4/Probability.html#binomial-pmf-code",
+    "href": "FW680A4/Probability.html#binomial-pmf-code",
+    "title": "Probability",
+    "section": "Binomial PMF (Code)",
+    "text": "Binomial PMF (Code)\n\n# 1 duck tagged/released and one simulation\n  theta=0.2;  N=1 \n  rbinom(n=1,size=N,theta)\n\n[1] 1\n\n\n\n\n# 1000 ducks tagged/released and one simulation\n  theta=0.2;  N=1000 \n  rbinom(n=1,size=N,theta)\n\n[1] 198\n\n\n\n\n\n# 1000 ducks tagged/released and 10 simulation\n  theta=0.2;  N=1000 \n  rbinom(n=10,size=N,theta)\n\n [1] 180 190 198 192 169 192 192 217 206 216\n\n\n\n\n\n# 1 duck tagged for each of 1000 simulations\n  theta=0.2;  N=1\n  y = rbinom(n=1000,size=N,theta)\n  y\n\n   [1] 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0\n  [38] 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0\n  [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n [112] 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0\n [149] 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0\n [186] 1 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [223] 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0\n [260] 0 1 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0\n [297] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\n [334] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0\n [371] 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1\n [408] 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0\n [445] 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0\n [482] 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1\n [519] 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 1 0 0\n [556] 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0\n [593] 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0\n [630] 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 1\n [667] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0\n [704] 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0\n [741] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1\n [778] 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1\n [815] 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0\n [852] 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [889] 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0\n [926] 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n [963] 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0\n[1000] 0\n\n\n\n\n\nsum(y)\n\n[1] 186"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#gamma-distribution",
+    "href": "FW680A4/Probability.html#gamma-distribution",
+    "title": "Probability",
+    "section": "Gamma Distribution",
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}) &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}) &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{y^{\\kappa-1} e^{-y/\\theta}} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+  },
+  {
+    "objectID": "FW680A4/Probability.html#gamma-distribution-1",
+    "href": "FW680A4/Probability.html#gamma-distribution-1",
+    "title": "Probability",
+    "section": "Gamma Distribution",
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 50\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
   }
 ]
