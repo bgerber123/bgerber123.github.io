@@ -52,13 +52,13 @@ title: ""
 
 Install the most recent versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>.
 
-<a href="https://github.com/">Github</a> ... still thinking about whether we will use
+<!-- <a href="https://github.com/">Github</a> ... still thinking about whether we will use -->
 
-<br>
+<!-- <br> -->
 
 ### Notes
 
--   To download lectures. Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
+-   **To download lectures:** Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
 
 
 
@@ -103,7 +103,7 @@ Install the most recent versions of <a href="https://cran.r-project.org/">R</a> 
 
 ### Project
 
--   Work individually or in a group of 2-3
+-   Work individually or in a group of 2
 
 -   Decide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.
 

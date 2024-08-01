@@ -24,7 +24,7 @@ title: ""
 # CRAN packages
   install.packages(c("sf","ggplot2", "spsurvey", "remotes"))
 
-#Github package install
+# Github package install
   remotes::install_github("Pakillo/grateful")
 
 # OR, download the zip file here and manually install:

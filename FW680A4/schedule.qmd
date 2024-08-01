@@ -30,7 +30,7 @@ code.r{
 Week                                  |	Day  |	Date     | 	Lecture Topic                             | Labs              |	   Readings                   |	Background Materials|
 --                                    | -----| ----------|----------------------------                | ----------------  |-----------------------------  |------------       |   
 <a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   |                               |      	            |
-&nbsp;                                |	Fr   | 23-Aug	 | Hypotheses, Sampling, Inference/Prediction   |  R and Markdown   | Zitomer et al. 2022; Wolcott et al. 2019;  |
+&nbsp;                                |	Fr   | 23-Aug	 | Big Picture   |  Sampling and Markdown   | Zitomer et al. 2022; Wolcott et al. 2019;  |
 <a href="/FW680A4/week2.qmd">2</a>|	Tu	 | 27-Aug	 | Probability                                  |                   | Betts et al. 2022; Dumelle et al. 2021 (Sections 1 to 1.1.1); Williams and Brown 2019 (Sections 1 and 2)                            |              |
 &nbsp;                                | Fr	 | 30-Aug	 | Simulation / Power Analysis                  |                   |                             | 		         |		            
 3                                     |	Tu	 | 3-Sep	 | Likelihood / Regression I                    |                   |                             |              |  

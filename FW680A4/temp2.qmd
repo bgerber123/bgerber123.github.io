@@ -1,0 +1,366 @@
+## The Likelihood Function {.scrollable}
+
+What we can say about our parameters using this function?
+
+$$
+\begin{align*}
+\mathcal{L}(\boldsymbol{\theta}|y) = P(y|\boldsymbol{\theta})  = f(y|\boldsymbol{\theta})
+\end{align*}
+$$
+
+. . .
+
+The likelihood ($\mathcal{L}$) of the unknown parameters, given our data, can be calculated using our probability function.
+
+. . .
+
+CODE:
+```{r,eval=TRUE,echo=TRUE}
+# A data point
+  y=c(10)
+
+#the likelihood the mean is 8, given our data
+  dnorm(y,mean=8)
+```  
+
+<br>
+
+. . .
+
+If we knew the mean is truly 8, it would also be the probability density of the observation y = 10.
+
+## Many Parameter Guesses {.scrollable}
+
+```{r,eval=TRUE,echo=TRUE}
+# Let's take many guesses of the mean
+  means=seq(0,20,by=0.1)
+
+# Use dnorm to get likelihood of each guess of the mean
+# Assumes sd = 1
+  likelihood=dnorm(y, mean=means)
+```
+
+. . .
+
+```{r,eval=TRUE,echo=FALSE, fig.align='center'}
+#Look at gueses and likelihood
+  plot(means,likelihood,xlab="Guesses for the Mean")
+  abline(v=10,lwd=3,col=3)
+  legend("topright",legend=c("Max Likelihood"),
+         lwd=3,col=3)
+```
+
+## Statistics and PDF Example
+
+What is the mean height of King Penguins? 
+
+![](/img/penguin.png){fig-align="center" width="483"}
+
+
+## Statistics and PDF Example {.scrollable}
+
+We go and collect data,
+
+$\boldsymbol{y} = \begin{matrix} [4.34 & 3.53 & 3.75] \end{matrix}$
+
+<br>
+
+. . .
+
+Let's decide to use the Normal Distribution as our PDF. 
+
+. . .
+
+$$
+\begin{align*}
+f(y_1 = 4.34|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{1}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+. . .
+
+<span style="color:red">AND</span>
+
+$$
+\begin{align*}
+f(y_2 = 3.53|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{2}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+. . .
+
+<span style="color:red">AND</span>
+
+$$
+\begin{align*}
+f(y_3 = 3.75|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{3}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+. . .
+
+Or simply, 
+
+$$
+\textbf{y} \stackrel{iid}{\sim} \text{Normal}(\mu, \sigma)
+$$
+. . .
+
+$iid$ = independent and identically distributed
+
+. . .
+
+## Continued {.scrollable}
+
+The joint probability of our data with shared parameters $\mu$ and $\sigma$,
+
+$$
+\begin{align*}
+& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \mu, \sigma) \\
+&= \mathcal{L}(\mu, \sigma|\textbf{y})
+\end{align*}
+$$
+
+. . .
+
+<span style="color:red">IF</span> each $y_{i}$ is **independent**, the *joint probability* of our data are simply the multiplication of all three probability densities,
+
+$$
+\begin{align*}
+=& f(y_{1}|\mu, \sigma)\times f(y_{2}|\mu, \sigma)\times f(y_{3}|\mu, \sigma) \end{align*}
+$$
+
+We can do this because we are assuming knowing one value ($y_1$) does not tell us any new information about another value $y_2$.
+
+. . .
+
+$$
+\begin{align*}
+=& \prod_{i=1}^{3} f(y_{i}|\mu, \sigma) \\
+=& \mathcal{L}(\mu, \sigma|y_{1},y_{2},y_{3})
+\end{align*}
+$$
+
+
+## Code {.scrollable}
+
+Translate the math to code...
+
+```{r, echo=TRUE, eval=TRUE}
+# penguin height data
+  y=c(4.34, 3.53, 3.75)
+
+#Joint likelihood of mu=3, sigma =1, given our data
+  prod(dnorm(y,mean=3,sd=1))
+```
+
+<br>
+
+. . .
+
+Calcualte likelihood of many guesses of $\mu$ and $\sigma$ simultaneously,
+
+```{r, echo=TRUE, eval=TRUE}
+
+# The Guesses
+  mu=seq(0,6,0.05)
+  sigma=seq(0.01,2,0.05)
+  try=expand.grid(mu,sigma)
+  colnames(try)=c("mu","sigma")
+
+# function
+fun=function(a,b){
+  prod(dnorm(y,mean=a,sd=b))
+  }
+
+# mapply the function with the inputs
+  likelihood=mapply(a=try$mu,b=try$sigma, FUN=fun)
+
+# maximum likelihood of parameters
+  try[which.max(likelihood),]
+
+```
+
+<br>
+
+. . .
+
+<!-- Lets compare to, -->
+<!-- ```{r, echo=TRUE, eval=TRUE} -->
+<!-- sum(y)/length(y) -->
+<!-- ``` -->
+
+## Likelihood plot (3D) {.scrollable}
+
+```{r,echo=FALSE,eval=TRUE, out.width="150%"}
+library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,likelihood)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'mu'),
+                     yaxis = list(title = 'sigma'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+#fig
+```
+
+## Sample Size  {.scrollable}
+What happens to the likelihood if we increase the sample size to N=100?
+
+. . .
+
+```{r,eval=TRUE,echo=FALSE}
+set.seed(154541)
+y=rnorm(100,3.8,1)
+
+try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
+  colnames(try)=c("mu","sigma")
+
+# mapply the function with the inputs
+  likelihood=mapply(try$mu,try$sigma, FUN=fun)
+
+  library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,likelihood)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Mean'),
+                     yaxis = list(title = 'SD'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+  
+```
+
+## Proper Guessing {.scrollable}
+
+Let's let the computer do some smarter guessing, i.e., optimization.
+
+```{r echo=TRUE}
+
+#Note: optim function uses minimization, not maximization. 
+#THUS, need to put negative in our function
+
+#Note: log=TRUE, allows us to add rather than multiply 
+#      (sum, instead of prod)
+
+neg.log.likelihood=function(par){
+  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))
+  }
+
+#find the values that minimizes the function
+#c(1,1) are the initial values for mu and sigma
+fit <- optim(par=c(1,1), fn=neg.log.likelihood,
+             method="L-BFGS-B",
+             lower=c(0,0),upper=c(10,1))
+
+#Maximum likihood estimates for mu and sigma
+fit$par
+
+```
+
+## The Linear Regression way
+
+King Penguin Height Data (N=100)
+
+```{r echo=TRUE}
+out=lm(y~1)
+summary(out)
+```
+## Moments  {.scrollable}
+[Book Chapter (Section 3.4.4.)](/Week 3/HobbsHooten_Ch_3.pdf)
+
+Probability Functions have qualities called 'Moments'
+
+
+
+-    Moment 1: Expected Value (mean)
+ 
+-    Moment 2: Variance
+
+-    Moment 3: Skewness
+
+-    Moment 4: Kurtosis
+
+-    Moment k: ...
+
+. . .
+
+Parameters are <span style="color:red">not always</span> moments.
+
+<!-- ## Moment Matching  {.scrollable} -->
+
+<!-- Colleague estimated daily rainfall as, $\hat{\mu} = 10$ and $\hat{\sigma} = 9$. -->
+
+<!-- Now, we want to consider future daily rainfall probabilities, -->
+
+<!-- . . . -->
+
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- #Parameters of Normal Distribution -->
+<!--   mu=10 -->
+<!--   sd=9 -->
+
+<!-- #simualte and plot -->
+<!--   y = rnorm(10000,mean=mu,sd=sd) -->
+<!--   hist(y, main="Daily Rainfall") -->
+<!-- ``` -->
+
+<!-- . . . -->
+
+<!-- Take our parameters/moments and match them to parameters where the *support* makes more sense. -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- ### [Gamma Distribution](https://en.wikipedia.org/wiki/Gamma_distribution) -->
+
+<!-- Moments on left, parameters on the right. -->
+
+<!-- $$ -->
+<!-- \mu = \frac{\alpha}{\beta} \\ -->
+<!-- \sigma^2 = \frac{\alpha}{\beta^2} \\ -->
+<!-- $$ -->
+
+<!-- . . . -->
+
+<!-- $$ -->
+<!-- \alpha = \frac{\mu^2}{\sigma^2} \\ -->
+<!-- \beta = \frac{\mu}{\sigma^2} \\ -->
+<!-- $$ -->
+<!-- . . . -->
+
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- #Parameters of Gamma Distribution -->
+<!--   alpha = mu^2/sd^2  -->
+<!--   beta = mu/sd^2 -->
+
+<!-- #simualte and plot -->
+<!--   y = rgamma(10000,shape=alpha, rate=beta) -->
+<!--   hist(y, main="Daily Rainfall") -->
+<!-- ``` -->
+
