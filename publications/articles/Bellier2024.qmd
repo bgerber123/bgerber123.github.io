@@ -6,6 +6,7 @@ year: "2024"
 publication: "Ecosphere"
 doi: "https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.4878"
 download: "../publications/Bellier et al. 2024.pdf"
+materials: "https://figshare.com/articles/online_resource/Code_for_a_statistical_population_reconstruction_model_for_wildlife_populations_A_case_study_with_white-tailed_deer_and_fisher_/22894874/2"
 toc: false
 categories:
   - mammal

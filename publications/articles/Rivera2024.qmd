@@ -1,11 +1,12 @@
 ---
-title: "Applying a hierarchical Bayesian framework to reveal howfear and animal ownership drive human's valuation of andinteractions with coyotes"
+title: "Applying a hierarchical Bayesian framework to reveal how fear and animal ownership drive human's valuation of and interactions with coyotes"
 type: "article"
 author: "Kimberly Rivera, Carlos Garcia-Quijano, Virginie Sonnet, and Brian D Gerber"
 year: "2024"
 publication: "Conservation Science and Practice"
 doi: "https://doi.org/10.1111/csp2.13177"
 download: "../publications/Rivera et al. 2024.pdf"
+materials: "https://github.com/kimberlyarivera/Coyote_RI"
 toc: false
 categories:
   - mammal

@@ -6,6 +6,7 @@ year: "2024"
 publication: "Ecology and Evolution"
 doi: "https://doi.org/10.1002/ece3.70043"
 download: "../publications/Ganoe et al. 2024.pdf"
+materials: "https://zenodo.org/doi/10.5281/zenodo.10459833"
 toc: false
 categories:
   - mammal
