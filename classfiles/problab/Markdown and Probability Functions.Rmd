@@ -1,5 +1,5 @@
 ---
-title: "Markdown, Equations, and the Normal Distribution"
+title: "Markdown and the Normal Distribution"
 author: "Brian Gerber"
 date: "8/1/2024"
 output: html_document
@@ -83,9 +83,9 @@ But what is the *expected value? Summarizing [wikipedia](https://en.wikipedia.or
 
 ## Approximating an Integral
 
-Let's understand this math a bit more. What we are doing is for every value of `y` possible ($-\infty$ to $\infty$), we multiple it by its probability density. Then we take all these values and add them (i.e., the integral). 
+Let's understand the expected value math a bit more. What we are doing is for every value of `y` possible ($-\infty$ to $\infty$), we multiple it by its probability density. Then we take all these values and add them (i.e., the integral). 
 
-It's a bit easier to understand what the math is doing by making an approximation. 
+It's a bit easier to understand what the math is doing by making an approximation, which breaks it into pieces. 
 
 We can approximate the integral by breaking it into pieces to calculate `y` times the $f(y; \mu, \sigma)$ and then sum all these values.
 
@@ -105,13 +105,14 @@ We can approximate the integral by breaking it into pieces to calculate `y` time
   prob.y=y.hist$density
   prob.y
 
-#multiple these value and sum them
+# multiple these value and sum them to get the approximated expected value
+
   sum(prob.y*mid.point.x)
 ```
 
 Does this answer make sense?
 
-What if you did the same approximation with more simulated values and bins? Perhaps our approximation would get closer to the true value ($\mu = 10$)!
+What if you did the same approximation with more simulated values and bins? Perhaps our approximation would get closer to the true value ($\mu = 10$)?
 
 <br>
 

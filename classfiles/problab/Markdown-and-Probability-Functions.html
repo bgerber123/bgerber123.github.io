@@ -12,7 +12,7 @@
 <meta name="author" content="Brian Gerber" />
 
 
-<title>Markdown, Equations, and the Normal Distribution</title>
+<title>Markdown and the Normal Distribution</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -349,8 +349,7 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Markdown, Equations, and the Normal
-Distribution</h1>
+<h1 class="title toc-ignore">Markdown and the Normal Distribution</h1>
 <h4 class="author">Brian Gerber</h4>
 <h4 class="date">8/1/2024</h4>
 
@@ -442,12 +441,12 @@ mode probable (i.e. mode). This is not the case for non-symmetric
 values.</p>
 <div id="approximating-an-integral" class="section level2">
 <h2>Approximating an Integral</h2>
-<p>Let’s understand this math a bit more. What we are doing is for every
-value of <code>y</code> possible (<span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>), we multiple it by its
+<p>Let’s understand the expected value math a bit more. What we are
+doing is for every value of <code>y</code> possible (<span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>), we multiple it by its
 probability density. Then we take all these values and add them (i.e.,
 the integral).</p>
 <p>It’s a bit easier to understand what the math is doing by making an
-approximation.</p>
+approximation, which breaks it into pieces.</p>
 <p>We can approximate the integral by breaking it into pieces to
 calculate <code>y</code> times the <span class="math inline">\(f(y; \mu,
 \sigma)\)</span> and then sum all these values.</p>
@@ -468,13 +467,14 @@ calculate <code>y</code> times the <span class="math inline">\(f(y; \mu,
   prob.y=y.hist$density
   prob.y</code></pre>
 <pre><code>## [1] 0.003 0.021 0.134 0.348 0.343 0.133 0.017 0.001</code></pre>
-<pre class="r"><code>#multiple these value and sum them
+<pre class="r"><code># multiple these value and sum them to get the approximated expected value
+
   sum(prob.y*mid.point.x)</code></pre>
 <pre><code>## [1] 9.979</code></pre>
 <p>Does this answer make sense?</p>
 <p>What if you did the same approximation with more simulated values and
 bins? Perhaps our approximation would get closer to the true value
-(<span class="math inline">\(\mu = 10\)</span>)!</p>
+(<span class="math inline">\(\mu = 10\)</span>)?</p>
 <p><br></p>
 <p><br></p>
 </div>
