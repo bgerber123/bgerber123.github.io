@@ -19,7 +19,7 @@ code.r{
 <a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
 ```
 
-**Readings**: Students should be prepared to discuss the assigned reading on the date they are listed under. 
+**Readings**: Come prepared to discuss the assigned reading on the date they are listed under. 
 
 - What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
 
@@ -28,13 +28,13 @@ code.r{
 ## Schedule 
 
 Week                                  |	Day  |	Date     | 	Lecture Topic                             | Labs              |	   Readings                   |	Background Materials|
---                                    | -----| ----------|----------------------------                | ----------------  |-----------------------------  |------------       |   
+--                                    | ---| ----------|-----------------------------                | ----------------  |-----------------------------  |------------------       |   
 <a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   |                               |      	            |
-&nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Sampling & Markdown   | Zitomer et al. 2022; Wolcott et al. 2019;  |
-<a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        |                    | Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                            |  Shmueli 2010            |
-&nbsp;                                | Fr	 | 30-Aug	 | Simulation / Power Analysis                  |  Simulation & Prob. Functions       |                             | Hobbs and Hooten Ch.3		         |		            
-3                                     |	Tu	 | 3-Sep	 | Likelihood / Regression I                    |                   |                             |              |  
-&nbsp;                                |	Fr	 | 6-Sep	 | Regression II                                |                   |                             |              |
+&nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Sampling & Markdown | Zitomer et al. 2022; Wolcott et al. 2019;  |
+<a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        |                    | Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                            |  Shmueli 2010; Arif and MacNeil 2022            |
+&nbsp;                                | Fr	 | 30-Aug	 | Probability Functions                  | Simulation & Prob. Functions   |                 | Hobbs and Hooten Ch.3; Bolker Ch. 4)		         |		            
+3                                     |	Tu	 | 3-Sep	 | Likelihood / Regression                      |                   |                             |              |  
+&nbsp;                                |	Fr	 | 6-Sep	 | Regression                                   |                   |                             |              |
 4                                     |	Tu	 | 10-Sep	 | Generalized Linear Models I                  |                   |                             |              |
 &nbsp;                                |	Fr	 | 13-Sep	 | Generalized Linear Models I                  |                   |                             |              |
 5                                     |	Tu	 | 17-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
@@ -57,8 +57,8 @@ Week                                  |	Day  |	Date     | 	Lecture Topic        
 &nbsp;                                | Fr	 | 15-Nov	 | Community Modeling                           |                   |                             |              |
 14                                    | Tu	 | 19-Nov	 | Group Project work                           |                   |                             |              |
 &nbsp;                                | Fr	 | 22-Nov	 | Group Project work                           |                   |                             |              |
-15                                    | Tu	 | 26-Oct	 | <span style="color:red">No Class</span>      |                   |                             |              |
-&nbsp;                                | Fr	 | 29-Oct	 | <span style="color:red">No Class</span>      |                   |                             |              |
+15                                    | Tu	 | 26-Nov	 | <span style="color:red">No Class</span>      |                   |                             |              |
+&nbsp;                                | Fr	 | 29-Nov	 | <span style="color:red">No Class</span>      |                   |                             |              |
 16                                    | Tu	 | 3-Dec	 | Present Group Project                        |                   |                             |              |
 &nbsp;                                | Fr   | 6-Dec	 | Present Group Project                        |                   |                             |              |
                                          
