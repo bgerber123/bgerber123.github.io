@@ -2209,7 +2209,7 @@
     "href": "FW680A4/index.html#wildlife-ecology-modeling-fw680a4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesLearning RProject\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study."
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling and Inference in Ecology. Code\nHierarchical Modeling in Ecology Books and Code\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW680A4/overview/CourseOverview.html",
@@ -2286,7 +2286,7 @@
     "href": "FW680A4/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesLearning RProject\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study."
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling and Inference in Ecology. Code\nHierarchical Modeling in Ecology Books and Code\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW680A4/CourseOverview.html",
@@ -2342,14 +2342,14 @@
     "href": "FW680A4/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\nDiscussion Post on Canvas link\n\n\n\nReadings for this day:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?"
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\n\nAssigned Readings:\n\nBetts et al. 2022.pdf\n\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\n\nAssigned: Probabiltiy Quiz on Canvas\n\nBackground Reading (not required):\n\n\nShmueli 2010.pdf.\n\nArif and MacNeil 2022.pdf."
   },
   {
     "objectID": "FW680A4/week1.html#week-1",
     "href": "FW680A4/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\nDiscussion Post on Canvas link\n\n\n\nReadings for this day:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?"
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\n\nAssigned Readings:\n\nBetts et al. 2022.pdf\n\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\n\nAssigned: Probabiltiy Quiz on Canvas\n\nBackground Reading (not required):\n\n\nShmueli 2010.pdf.\n\nArif and MacNeil 2022.pdf."
   },
   {
     "objectID": "FW680A4/Introduction.html#class-stuff",
@@ -2706,14 +2706,14 @@
     "href": "FW680A4/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf.\nArif and MacNeil 2022.pdf.\n\nSee Quiz on Canvas\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\nBackground Reading:\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf. Section 3.4."
+    "text": "Lecture: Probability\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf. Section 3.4.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 10"
   },
   {
     "objectID": "FW680A4/week2.html#week-2",
     "href": "FW680A4/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\nAssigned Readings:\n\nBetts et al. 2022.pdf\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\nBackground Reading (not assigned):\n\nShmueli 2010.pdf.\nArif and MacNeil 2022.pdf.\n\nSee Quiz on Canvas\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\nBackground Reading:\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf. Section 3.4."
+    "text": "Lecture: Probability\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf. Section 3.4.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 10"
   },
   {
     "objectID": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
@@ -2937,21 +2937,21 @@
     "href": "FW680A4/schedule.html",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "",
-    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the date they are listed under.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
   },
   {
     "objectID": "FW680A4/schedule.html#course-stuff",
     "href": "FW680A4/schedule.html#course-stuff",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "",
-    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the date they are listed under.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
+    "text": "Schedule\n\n\nCourse Overview\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nLabs: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
   },
   {
     "objectID": "FW680A4/schedule.html#schedule",
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nLabs\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\n\n\n\n\n\n \nFr\n23-Aug\nBig Picture\nSampling & Markdown\nZitomer et al. 2022; Wolcott et al. 2019;\n\n\n\n2\nTu\n27-Aug\nProbability Functions\n\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n \nFr\n30-Aug\nProbability Functions\nSimulation & Prob. Functions\n\nHobbs and Hooten Ch.3; Bolker Ch. 4)\n\n\n3\nTu\n3-Sep\nLikelihood / Regression\n\n\n\n\n\n \nFr\n6-Sep\nRegression\n\n\n\n\n\n4\nTu\n10-Sep\nGeneralized Linear Models I\n\n\n\n\n\n \nFr\n13-Sep\nGeneralized Linear Models I\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nStatistics 4 Ecologists Chapter 10\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\n\nStatistics 4 Ecologists Chapter 1\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nDeterministic Functions / GLM I\n\n\n\n\n\n \nFr\n13-Sep\nGLM II\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -4692,105 +4692,105 @@
   {
     "objectID": "FW680A4/likelihood.html#the-others-side-of-the-coin",
     "href": "FW680A4/likelihood.html#the-others-side-of-the-coin",
-    "title": "Likelihood / Regression",
-    "section": "",
-    "text": "Statistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "title": "Likelihood / Optimization",
+    "section": "The others side of the coin",
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\nEstimation\n\nlikelihood\nBayesian"
   },
   {
     "objectID": "FW680A4/likelihood.html#estimation",
     "href": "FW680A4/likelihood.html#estimation",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Estimation",
     "text": "Estimation\n\nlikelihood\nBayesian"
   },
   {
     "objectID": "FW680A4/likelihood.html#likelihood",
     "href": "FW680A4/likelihood.html#likelihood",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Likelihood",
-    "text": "Likelihood\nLikelihood principle\nGiven a statistical model, all the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to model parameters (\\(\\theta\\)) is contained in the likelihood function.\n. . .\nFisher Information\nThe information an observable random variable (\\(\\textbf{y}\\)) has about an unknown parameter \\(\\theta\\) upon which the probability of \\(\\textbf{y}\\) \\((f(\\textbf{y};\\theta)\\) depends.\n\n. . .\nInformation is conditional. . .\nTo learn about \\(\\theta\\) from \\(\\textbf{y}\\), we need to link them together via a special function, \\(f(\\textbf{y};\\theta)\\)\n## Statistical Information\n The pieces:\n::: incremental - The sample data, \\(\\textbf{y}\\)\n\n\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\)\n\\([\\textbf{y}|\\theta]\\)\n\n\n\nThe unknown parameter: \\(\\theta\\)\n\nspecified in the probability function\n\n\n\n:::"
+    "text": "Likelihood\nLikelihood principle\nAll the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to making inference on model parameters (\\(\\theta\\)) is contained in the likelihood function."
   },
   {
     "objectID": "FW680A4/likelihood.html#the-likelihood-function",
     "href": "FW680A4/likelihood.html#the-likelihood-function",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "The Likelihood Function",
-    "text": "The Likelihood Function\nWhat we can say about our parameters using this function?\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n. . .\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function.\n. . .\nCODE:\n\n# A data point\n  y=c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y,mean=8)\n\n[1] 0.05399097\n\n\n\n. . .\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10."
+    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
   },
   {
     "objectID": "FW680A4/likelihood.html#many-parameter-guesses",
     "href": "FW680A4/likelihood.html#many-parameter-guesses",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Many Parameter Guesses",
-    "text": "Many Parameter Guesses\n\n# Let's take many guesses of the mean\n  means=seq(0,20,by=0.1)\n\n# Use dnorm to get likelihood of each guess of the mean\n# Assumes sd = 1\n  likelihood=dnorm(y, mean=means)\n\n. . ."
+    "text": "Many Parameter Guesses\n\n# Let's take many guesses of the mean\n# (GRID SEARCH)\n  means = seq(0,20,by=0.1)\n\n# Use dnorm to get likelihood of each guess of the mean\n  likelihood = dnorm(y, mean=means, sd=1)\n  sum(likelihood*0.1)\n\n[1] 1"
   },
   {
     "objectID": "FW680A4/likelihood.html#maximum-likelihoof-properties",
     "href": "FW680A4/likelihood.html#maximum-likelihoof-properties",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Maximum Likelihoof Properties",
-    "text": "Maximum Likelihoof Properties\n\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased as small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
+    "text": "Maximum Likelihoof Properties\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased as small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
   },
   {
     "objectID": "FW680A4/likelihood.html#statistics-and-pdf-example",
     "href": "FW680A4/likelihood.html#statistics-and-pdf-example",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Statistics and PDF Example",
     "text": "Statistics and PDF Example\nWhat is the mean height of King Penguins?"
   },
   {
     "objectID": "FW680A4/likelihood.html#statistics-and-pdf-example-1",
     "href": "FW680A4/likelihood.html#statistics-and-pdf-example-1",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Statistics and PDF Example",
-    "text": "Statistics and PDF Example\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n. . .\nLet’s decide to use the Normal Distribution as our PDF.\n. . .\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n. . .\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\] . . .\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n. . .\nOr simply,\n\\[\n\\textbf{y} \\stackrel{iid}{\\sim} \\text{Normal}(\\mu, \\sigma)\n\\] . . .\n\\(iid\\) = independent and identically distributed\n. . ."
+    "text": "Statistics and PDF Example\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n\nLet’s decide to use the Normal Distribution as our PDF.\n\n\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\] . . .\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nOr simply,\n\\[\n\\textbf{y} \\stackrel{iid}{\\sim} \\text{Normal}(\\mu, \\sigma)\n\\] . . .\n\\(iid\\) = independent and identically distributed"
   },
   {
     "objectID": "FW680A4/likelihood.html#continued",
     "href": "FW680A4/likelihood.html#continued",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Continued",
-    "text": "Continued\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]\n. . .\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(y_{1}|\\mu, \\sigma)\\times f(y_{2}|\\mu, \\sigma)\\times f(y_{3}|\\mu, \\sigma) \\end{align*}\n\\]\nWe can do this because we are assuming knowing one value (\\(y_1\\)) does not tell us any new information about another value \\(y_2\\).\n. . .\n\\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
+    "text": "Continued\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]\n\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(y_{1}|\\mu, \\sigma)\\times f(y_{2}|\\mu, \\sigma)\\times f(y_{3}|\\mu, \\sigma) \\end{align*}\n\\]\nWe can do this because we are assuming knowing one value (\\(y_1\\)) does not tell us any new information about another value \\(y_2\\).\n\n\n\\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/likelihood.html#code",
     "href": "FW680A4/likelihood.html#code",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Code",
-    "text": "Code\nTranslate the math to code…\n\n# penguin height data\n  y=c(4.34, 3.53, 3.75)\n\n#Joint likelihood of mu=3, sigma =1, given our data\n  prod(dnorm(y,mean=3,sd=1))\n\n[1] 0.01696987\n\n\n\n. . .\nCalcualte likelihood of many guesses of \\(\\mu\\) and \\(\\sigma\\) simultaneously,\n\n# The Guesses\n  mu=seq(0,6,0.05)\n  sigma=seq(0.01,2,0.05)\n  try=expand.grid(mu,sigma)\n  colnames(try)=c(\"mu\",\"sigma\")\n\n# function\nfun=function(a,b){\n  prod(dnorm(y,mean=a,sd=b))\n  }\n\n# mapply the function with the inputs\n  likelihood=mapply(a=try$mu,b=try$sigma, FUN=fun)\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n. . ."
+    "text": "Code\nTranslate the math to code…\n\n# penguin height data\n  y = c(4.34, 3.53, 3.75)\n\n# Joint likelihood of mu=3, sigma =1, given our data\n  prod(dnorm(y, mean = 3,sd = 1))\n\n[1] 0.01696987"
   },
   {
     "objectID": "FW680A4/likelihood.html#likelihood-plot-3d",
     "href": "FW680A4/likelihood.html#likelihood-plot-3d",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Likelihood plot (3D)",
     "text": "Likelihood plot (3D)"
   },
   {
     "objectID": "FW680A4/likelihood.html#sample-size",
     "href": "FW680A4/likelihood.html#sample-size",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Sample Size",
-    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?\n. . ."
+    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?"
   },
   {
     "objectID": "FW680A4/likelihood.html#proper-guessing",
     "href": "FW680A4/likelihood.html#proper-guessing",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Proper Guessing",
     "text": "Proper Guessing\nLet’s let the computer do some smarter guessing, i.e., optimization.\n\n#Note: optim function uses minimization, not maximization. \n#THUS, need to put negative in our function\n\n#Note: log=TRUE, allows us to add rather than multiply \n#      (sum, instead of prod)\n\nneg.log.likelihood=function(par){\n  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))\n  }\n\n#find the values that minimizes the function\n#c(1,1) are the initial values for mu and sigma\nfit &lt;- optim(par=c(1,1), fn=neg.log.likelihood,\n             method=\"L-BFGS-B\",\n             lower=c(0,0),upper=c(10,1))\n\n#Maximum likihood estimates for mu and sigma\nfit$par\n\n[1] 3.901219 0.927352"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-linear-regression-way",
     "href": "FW680A4/likelihood.html#the-linear-regression-way",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "The Linear Regression way",
     "text": "The Linear Regression way\nKing Penguin Height Data (N=100)\n\nout=lm(y~1)\nsummary(out)\n\n\nCall:\nlm(formula = y ~ 1)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3.00136 -0.61581  0.01208  0.67407  2.58369 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   3.9012     0.0932   41.86   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.932 on 99 degrees of freedom"
   },
   {
     "objectID": "FW680A4/likelihood.html#moments",
     "href": "FW680A4/likelihood.html#moments",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "Moments",
     "text": "Moments\nBook Chapter (Section 3.4.4.)\nProbability Functions have qualities called ‘Moments’\n\nMoment 1: Expected Value (mean)\nMoment 2: Variance\nMoment 3: Skewness\nMoment 4: Kurtosis\nMoment k: …\n\n\nParameters are not always moments."
   },
@@ -4828,5 +4828,523 @@
     "title": "Likelihood / Regression",
     "section": "",
     "text": "Statistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/week3.html",
+    "href": "FW680A4/week3.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Likelihood and Optimization\n\n\n\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\n\n\n\n\nLecture: Regression\nDownloads:"
+  },
+  {
+    "objectID": "FW680A4/week3.html#week-3",
+    "href": "FW680A4/week3.html#week-3",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Likelihood and Optimization\n\n\n\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\n\n\n\n\nLecture: Regression\nDownloads:"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#the-pieces",
+    "href": "FW680A4/likelihood.html#the-pieces",
+    "title": "Likelihood / Optimization",
+    "section": "The pieces",
+    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#the-likelihood-function-1",
+    "href": "FW680A4/likelihood.html#the-likelihood-function-1",
+    "title": "Likelihood / Optimization",
+    "section": "The Likelihood Function",
+    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n\n\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n\n\n\n#the likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#maximum-likelihood-properties",
+    "href": "FW680A4/likelihood.html#maximum-likelihood-properties",
+    "title": "Likelihood / Optimization",
+    "section": "Maximum Likelihood Properties",
+    "text": "Maximum Likelihood Properties\n\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased as small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#double-check",
+    "href": "FW680A4/likelihood.html#double-check",
+    "title": "Likelihood / Optimization",
+    "section": "Double Check",
+    "text": "Double Check\n\n  means = seq(0,20,by=0.1)\n  likelihood = dnorm(y, mean=means, sd=1)\n  sum(likelihood*0.1)\n\n[1] 1\n\n\n\n\n  means = seq(0,20,by=0.01)\n  likelihood = dnorm(y, mean=means, sd=1)\n  sum(likelihood*0.1)\n\n[1] 10\n\n  sum(likelihood*0.01)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#mle-with-n-1",
+    "href": "FW680A4/likelihood.html#mle-with-n-1",
+    "title": "Likelihood / Optimization",
+    "section": "MLE with n > 1",
+    "text": "MLE with n &gt; 1\nWhat is the mean height of King Penguins?"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#mle-with-n-1-1",
+    "href": "FW680A4/likelihood.html#mle-with-n-1-1",
+    "title": "Likelihood / Optimization",
+    "section": "MLE with n > 1",
+    "text": "MLE with n &gt; 1\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n\nLet’s decide to use the Normal Distribution as our PDF.\n\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#optimization",
+    "href": "FW680A4/likelihood.html#optimization",
+    "title": "Likelihood / Optimization",
+    "section": "Optimization",
+    "text": "Optimization\nGrid Search\n\n  means = seq(0, 20,by = 0.1) # many guesses of the mean\n  likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#need-to-connect-data-together",
+    "href": "FW680A4/likelihood.html#need-to-connect-data-together",
+    "title": "Likelihood / Optimization",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nOr simply,\n\\[\n\\textbf{y} \\stackrel{iid}{\\sim} \\text{Normal}(\\mu, \\sigma)\n\\]\n\\(iid\\) = independent and identically distributed"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#optimization-code-grid-search",
+    "href": "FW680A4/likelihood.html#optimization-code-grid-search",
+    "title": "Likelihood / Optimization",
+    "section": "Optimization Code (Grid Search)",
+    "text": "Optimization Code (Grid Search)\nCalculate likelihood of many guesses of \\(\\mu\\) and \\(\\sigma\\) simultaneously,\n\n# The Guesses\n  mu = seq(0,6,0.05)\n  sigma = seq(0.01,2,0.05)\n  try = expand.grid(mu,sigma)\n  colnames(try) = c(\"mu\",\"sigma\")\n\n# function\nfun = function(a,b){\n          prod(dnorm(y,mean = a, sd = b))\n      }\n\n# mapply the function with the inputs\n  likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun)"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#mle-code",
+    "href": "FW680A4/likelihood.html#mle-code",
+    "title": "Likelihood / Optimization",
+    "section": "MLE Code",
+    "text": "MLE Code\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n\nLets compare to,\n\nsum(y)/length(y)\n\n[1] 3.873333"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#objectives",
+    "href": "FW680A4/likelihood.html#objectives",
+    "title": "Likelihood / Optimization",
+    "section": "Objectives",
+    "text": "Objectives\n\nlikelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#relativeness",
+    "href": "FW680A4/likelihood.html#relativeness",
+    "title": "Likelihood / Optimization",
+    "section": "Relativeness",
+    "text": "Relativeness\nlog-likelihood\n\n\n       mu sigma\n55683 3.9  0.93"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#optimization-code-minimizationmaximization",
+    "href": "FW680A4/likelihood.html#optimization-code-minimizationmaximization",
+    "title": "Likelihood / Optimization",
+    "section": "Optimization Code (minimization/maximization)",
+    "text": "Optimization Code (minimization/maximization)\nLet’s let the computer do some smarter guessing, i.e., optimization.\n\n# Note: optim function uses minimization, not maximization. \n# WE want to find the minimum negative log-likelihood\n# THUS, need to put negative in our function\n\nneg.log.likelihood=function(par){\n  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))\n  }\n\n#find the values that minimizes the function\n#c(1,1) are the initial values for mu and sigma\nfit &lt;- optim(par=c(1,1), fn=neg.log.likelihood,\n             method=\"L-BFGS-B\",\n             lower=c(0,0),upper=c(10,1)\n             )\n\n#Maximum likelihood estimates for mu and sigma\nfit$par\n\n[1] 3.901219 0.927352"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#need-to-connect-data-together-1",
+    "href": "FW680A4/likelihood.html#need-to-connect-data-together-1",
+    "title": "Likelihood / Optimization",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#need-to-connect-data-together-2",
+    "href": "FW680A4/likelihood.html#need-to-connect-data-together-2",
+    "title": "Likelihood / Optimization",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(4.34|\\mu, \\sigma)\\times f(3.53|\\mu, \\sigma)\\times f(3.75|\\mu, \\sigma) \\end{align*}\n\\] \\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#conditional-independence-assumption",
+    "href": "FW680A4/likelihood.html#conditional-independence-assumption",
+    "title": "Likelihood / Optimization",
+    "section": "Conditional Independence Assumption",
+    "text": "Conditional Independence Assumption\nWe can do this because we are assuming knowing one observation does not tell us any new information about another observation. Such that,\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#optimization-code-minmax",
+    "href": "FW680A4/likelihood.html#optimization-code-minmax",
+    "title": "Likelihood / Optimization",
+    "section": "Optimization Code (min/max)",
+    "text": "Optimization Code (min/max)\nLet’s let the computer do some smarter guessing, i.e., optimization.\n\n# Note: optim function uses minimization, not maximization. \n# WE want to find the minimum negative log-likelihood\n# THUS, need to put negative in our function\n\nneg.log.likelihood=function(par){\n  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))\n  }\n\n#find the values that minimizes the function\n#c(1,1) are the initial values for mu and sigma\nfit &lt;- optim(par=c(1,1), fn=neg.log.likelihood,\n             method=\"L-BFGS-B\",\n             lower=c(0,0),upper=c(10,1)\n             )\n\n#Maximum likelihood estimates for mu and sigma\nfit$par\n\n[1] 3.901219 0.927352"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#linear-regression",
+    "href": "FW680A4/likelihood.html#linear-regression",
+    "title": "Likelihood / Optimization",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nKing Penguin Height Data (N=100)\n\nout = lm(y~1)\nsummary(out)\n\n\nCall:\nlm(formula = y ~ 1)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3.00136 -0.61581  0.01208  0.67407  2.58369 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   3.9012     0.0932   41.86   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.932 on 99 degrees of freedom"
+  },
+  {
+    "objectID": "FW680A4/likelihood.html#optimization-code-numerical",
+    "href": "FW680A4/likelihood.html#optimization-code-numerical",
+    "title": "Likelihood / Optimization",
+    "section": "Optimization Code (Numerical)",
+    "text": "Optimization Code (Numerical)\nLet’s let the computer do some smarter guessing, i.e., optimization.\n\n# Note: optim function uses minimization, not maximization. \n# WE want to find the minimum negative log-likelihood\n# THUS, need to put negative in our function\n\nneg.log.likelihood=function(par){\n  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))\n  }\n\n#find the values that minimizes the function\n#c(1,1) are the initial values for mu and sigma\nfit &lt;- optim(par=c(1,1), fn=neg.log.likelihood,\n             method=\"L-BFGS-B\",\n             lower=c(0,0),upper=c(10,1)\n             )\n\n#Maximum likelihood estimates for mu and sigma\nfit$par\n\n[1] 3.901219 0.927352"
+  },
+  {
+    "objectID": "FW680A4/regression.html#objectives",
+    "href": "FW680A4/regression.html#objectives",
+    "title": "Linear Regression",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nlinear regression fundamentals\nassumptions\nlm / glm function\nconfidence intervals\ncategorical and continuous independent variables\nadditive and interactions b/w variables"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-motivation",
+    "href": "FW680A4/regression.html#linear-regression-motivation",
+    "title": "Linear Regression",
+    "section": "Linear Regression (motivation)",
+    "text": "Linear Regression (motivation)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-equation",
+    "href": "FW680A4/regression.html#linear-regression-equation",
+    "title": "Linear Regression",
+    "section": "Linear Regression (Equation)",
+    "text": "Linear Regression (Equation)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-equation-2",
+    "href": "FW680A4/regression.html#linear-regression-equation-2",
+    "title": "Linear Regression",
+    "section": "Linear Regression (Equation 2)",
+    "text": "Linear Regression (Equation 2)\n\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma)\\\\\n\\mu_{i} = \\beta_0 + \\beta_1 \\times x_i\n\\]"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-line-1",
+    "href": "FW680A4/regression.html#linear-regression-line-1",
+    "title": "Linear Regression",
+    "section": "Linear Regression Line 1",
+    "text": "Linear Regression Line 1"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-line-2",
+    "href": "FW680A4/regression.html#linear-regression-line-2",
+    "title": "Linear Regression",
+    "section": "Linear Regression Line 2",
+    "text": "Linear Regression Line 2"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linear-regression-line-3",
+    "href": "FW680A4/regression.html#linear-regression-line-3",
+    "title": "Linear Regression",
+    "section": "Linear Regression Line 3",
+    "text": "Linear Regression Line 3"
+  },
+  {
+    "objectID": "FW680A4/regression.html#visual",
+    "href": "FW680A4/regression.html#visual",
+    "title": "Linear Regression",
+    "section": "Visual",
+    "text": "Visual"
+  },
+  {
+    "objectID": "FW680A4/regression.html#assumptions",
+    "href": "FW680A4/regression.html#assumptions",
+    "title": "Linear Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\nIndependence of the errors\n\nCorrelation(\\(\\epsilon_{i}\\),\\(\\epsilon_{j}\\)) = 0, \\(\\forall\\) pairs of \\(i\\) and \\(j\\)\n\nThis means that knowing how far observation \\(i\\) will be from the true regression line tells us nothing about how far observation \\(j\\) will be from the regression line."
+  },
+  {
+    "objectID": "FW680A4/regression.html#assumptions-1",
+    "href": "FW680A4/regression.html#assumptions-1",
+    "title": "Linear Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\nHomogeniety of the variance\n\nvar(\\(\\epsilon_{i}\\)) = \\(\\sigma^2\\)\n\nConstancy in the scatter of observations above and below the line"
+  },
+  {
+    "objectID": "FW680A4/regression.html#assumptions-2",
+    "href": "FW680A4/regression.html#assumptions-2",
+    "title": "Linear Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\nLinearity\n \\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
+  },
+  {
+    "objectID": "FW680A4/regression.html#assumptions-3",
+    "href": "FW680A4/regression.html#assumptions-3",
+    "title": "Linear Regression",
+    "section": "Assumptions",
+    "text": "Assumptions\nNormality\n \\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
+  },
+  {
+    "objectID": "FW680A4/regression.html#assumption-violations",
+    "href": "FW680A4/regression.html#assumption-violations",
+    "title": "Linear Regression",
+    "section": "Assumption Violations",
+    "text": "Assumption Violations\n\nRobustness\n\n\nLinearity and constant variance are often more important than the assumption of normality (see e.g., Knief & Forstmeier, 2021 and references therein)\n\n\n\n\nThis is especially true for large sample sizes"
+  },
+  {
+    "objectID": "FW680A4/regression.html#intercept-only-model",
+    "href": "FW680A4/regression.html#intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Intercept-Only Model",
+    "text": "Intercept-Only Model\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0\n\\]"
+  },
+  {
+    "objectID": "FW680A4/regression.html#simulate-intercept-only-model",
+    "href": "FW680A4/regression.html#simulate-intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Simulate Intercept-Only Model",
+    "text": "Simulate Intercept-Only Model\n\n#Setup parameters\n  n = 100 # sample size\n  beta0 = 10 # true mean\n  sigma = 2 # true std.dev\n\n# Simulate a data set of observations\n  set.seed(43243)\n  y = rnorm(n, mean = beta0, sd = sigma)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#visualize-intercept-only-model",
+    "href": "FW680A4/regression.html#visualize-intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Visualize Intercept-Only Model",
+    "text": "Visualize Intercept-Only Model\n\n  hist(y)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#fit-intercept-only-model",
+    "href": "FW680A4/regression.html#fit-intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Fit Intercept-Only Model",
+    "text": "Fit Intercept-Only Model\n\n# Fit model/hypothesis using maximum likelihood\n  model1 =   glm(y~1, family=gaussian(link = identity))\n\n  model1.1 = glm(y~1)\n\n  model1.2 = lm(y~1)\n  \n# Compare Results  \n  rbind(model1$coefficients,model1.1$coefficients, model1.2$coefficients)\n\n     (Intercept)\n[1,]    9.913821\n[2,]    9.913821\n[3,]    9.913821"
+  },
+  {
+    "objectID": "FW680A4/regression.html#fit-intercept-only-model-1",
+    "href": "FW680A4/regression.html#fit-intercept-only-model-1",
+    "title": "Linear Regression",
+    "section": "Fit Intercept-Only Model",
+    "text": "Fit Intercept-Only Model\n\n# Summary of model results  \n  summary(model1)\n\n\nCall:\nglm(formula = y ~ 1, family = gaussian(link = identity))\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   9.9138     0.1765   56.16   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 3.116437)\n\n    Null deviance: 308.53  on 99  degrees of freedom\nResidual deviance: 308.53  on 99  degrees of freedom\nAIC: 400.45\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/regression.html#fitted-values-intercept-only-model",
+    "href": "FW680A4/regression.html#fitted-values-intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Fitted-values Intercept-Only Model",
+    "text": "Fitted-values Intercept-Only Model\n\n#Predict response for all data\n  preds=predict(model1, se.fit = TRUE)\n  preds\n\n$fit\n       1        2        3        4        5        6        7        8 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n       9       10       11       12       13       14       15       16 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      17       18       19       20       21       22       23       24 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      25       26       27       28       29       30       31       32 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      33       34       35       36       37       38       39       40 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      41       42       43       44       45       46       47       48 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      49       50       51       52       53       54       55       56 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      57       58       59       60       61       62       63       64 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      65       66       67       68       69       70       71       72 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      73       74       75       76       77       78       79       80 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      81       82       83       84       85       86       87       88 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      89       90       91       92       93       94       95       96 \n9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 9.913821 \n      97       98       99      100 \n9.913821 9.913821 9.913821 9.913821 \n\n$se.fit\n  [1] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n  [8] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [15] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [22] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [29] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [36] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [43] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [50] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [57] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [64] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [71] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [78] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [85] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [92] 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343 0.1765343\n [99] 0.1765343 0.1765343\n\n$residual.scale\n[1] 1.765343"
+  },
+  {
+    "objectID": "FW680A4/regression.html#confidence-intervals-intercept-only-model",
+    "href": "FW680A4/regression.html#confidence-intervals-intercept-only-model",
+    "title": "Linear Regression",
+    "section": "Confidence Intervals Intercept-Only Model",
+    "text": "Confidence Intervals Intercept-Only Model\n\n# Get 90% confidence intervals (Type I error = 0.1)\n  c(\n    (preds$fit+preds$se.fit*qnorm(0.05))[1],\n    (preds$fit+preds$se.fit*qnorm(0.95))[1]\n   )\n\n        1         1 \n 9.623448 10.204195 \n\n  CI.Normal=confint(model1, level=0.9)\n  CI.Normal\n\n      5 %      95 % \n 9.623448 10.204195"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping",
+    "href": "FW680A4/regression.html#bootstrapping",
+    "title": "Linear Regression",
+    "section": "Bootstrapping",
+    "text": "Bootstrapping\nSee, Stats4Ecologists\n\nInstead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by resampling our data."
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-idea",
+    "href": "FW680A4/regression.html#bootstrapping-idea",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (idea)",
+    "text": "Bootstrapping (idea)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-idea-1",
+    "href": "FW680A4/regression.html#bootstrapping-idea-1",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (idea)",
+    "text": "Bootstrapping (idea)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-idea-2",
+    "href": "FW680A4/regression.html#bootstrapping-idea-2",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (idea)",
+    "text": "Bootstrapping (idea)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-code",
+    "href": "FW680A4/regression.html#bootstrapping-code",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (code)",
+    "text": "Bootstrapping (code)\n\n# Setup\n  nboot &lt;- 1000 # number of bootstrap samples\n  nobs &lt;- length(y)\n  bootcoefs &lt;- rep(NA, nboot)\n# Start loop  \nfor(i in 1:nboot){\n  set.seed(43243+i)\n  # Create bootstrap data set by sampling original observations w/ replacement  \n  bootdat &lt;- y[sample(1:nobs, nobs, replace=TRUE)] \n  # Calculate bootstrap statistic\n  glmboot &lt;- glm(bootdat ~ 1)\n  bootcoefs[i] &lt;- coef(glmboot)\n}"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-code-1",
+    "href": "FW680A4/regression.html#bootstrapping-code-1",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (code)",
+    "text": "Bootstrapping (code)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#bootstrapping-code-2",
+    "href": "FW680A4/regression.html#bootstrapping-code-2",
+    "title": "Linear Regression",
+    "section": "Bootstrapping (code)",
+    "text": "Bootstrapping (code)\n\n# Calculate bootstrap standard errors\n  boot.se=sd(bootcoefs)\n\n# boostrap-normal CI\n  boot.normal=c(\n        (preds$fit+boot.se*qnorm(0.05))[1],\n        (preds$fit+boot.se*qnorm(0.95))[1])\n\n# bootstrap percentile\nconfdat.boot.pct &lt;- quantile(bootcoefs, probs = c(0.05, 0.95))"
+  },
+  {
+    "objectID": "FW680A4/regression.html#comparison",
+    "href": "FW680A4/regression.html#comparison",
+    "title": "Linear Regression",
+    "section": "Comparison",
+    "text": "Comparison"
+  },
+  {
+    "objectID": "FW680A4/regression.html#categorical-variable-w-2-levels",
+    "href": "FW680A4/regression.html#categorical-variable-w-2-levels",
+    "title": "Linear Regression",
+    "section": "Categorical Variable w/ 2 levels",
+    "text": "Categorical Variable w/ 2 levels\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0+\\beta_1\\times x_i\n\\] where \\(x_i\\) is either a zero or one, indicating whether the \\(i^{th}\\) row is from site 1 (0) or site 2 (1).\n\nThis is called Dummy Coding."
+  },
+  {
+    "objectID": "FW680A4/regression.html#categorical-variable-w-2-levels-1",
+    "href": "FW680A4/regression.html#categorical-variable-w-2-levels-1",
+    "title": "Linear Regression",
+    "section": "Categorical Variable w/ 2 levels",
+    "text": "Categorical Variable w/ 2 levels\n\n# Setup data\n  x=as.factor(rep(c(\"Site 1\",\"Site 2\"),n/2))\n  levels(x)\n\n[1] \"Site 1\" \"Site 2\"\n\n\n\n\n\n# Turn the factor into 0 and 1's\n  head(model.matrix(~x))\n\n  (Intercept) xSite 2\n1           1       0\n2           1       1\n3           1       0\n4           1       1\n5           1       0\n6           1       1\n\n  x.var=model.matrix(~x)[,2]\n\n\n\n\n\n# Parameters  \n  b0=50\n  b1=-20\n  mu=b0+b1*x.var\n\n# Sample Data\n  set.seed(43243)\n  y=rnorm(n,mean=mu,sd=4)\n\n\n\n\n\n#fit the model \n  model2=glm(y~x)\n  model2.1=glm(y~x.var)\n\n#comparison  \n  rbind(coef(model2), coef(model2.1))\n\n     (Intercept)  xSite 2\n[1,]    50.51109 -21.3669\n[2,]    50.51109 -21.3669"
+  },
+  {
+    "objectID": "FW680A4/regression.html#side-bar-maximum-likelihood-optimization",
+    "href": "FW680A4/regression.html#side-bar-maximum-likelihood-optimization",
+    "title": "Linear Regression",
+    "section": "Side-Bar: Maximum Likelihood Optimization",
+    "text": "Side-Bar: Maximum Likelihood Optimization\n\n#Here is our negative log-likelihood function with three\n#parameters - the mean (2) and stdev (1)\nneg.log.like = function(par) {\n  mu=par[1]+par[2]*x.var\n  sum(-dnorm(y,mean = mu,sd = par[3],log = TRUE))\n}\n\n\n\nUse our function in an optimization function\n\n#use optim with initial values and define the lower and upper limits of the possible values\nfit1 &lt;- optim(\n    par = c(0, 0,1),\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-100, -100, 0.01),\n    upper = c(400, 400, 100)\n  )\n\nfit1$par\n\n[1]  50.511067 -21.366842   3.445873"
+  },
+  {
+    "objectID": "FW680A4/regression.html#categorical-variable-w-2-levels-2",
+    "href": "FW680A4/regression.html#categorical-variable-w-2-levels-2",
+    "title": "Linear Regression",
+    "section": "Categorical Variable w/ 2 levels",
+    "text": "Categorical Variable w/ 2 levels\n\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ x)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  50.5111     0.4923  102.61   &lt;2e-16 ***\nxSite 2     -21.3669     0.6962  -30.69   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 12.11631)\n\n    Null deviance: 12601.0  on 99  degrees of freedom\nResidual deviance:  1187.4  on 98  degrees of freedom\nAIC: 537.22\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/regression.html#relevel",
+    "href": "FW680A4/regression.html#relevel",
+    "title": "Linear Regression",
+    "section": "Relevel",
+    "text": "Relevel\nWe can manipulate the factor levels of \\(x\\) to indicate that site 1 is denoted by a 1 now and site 2 is denoted by a 0.\n\n\n\n#change intercept meaning\n  x.relev=relevel(x,ref=\"Site 2\")\n  levels(x.relev)\n\n[1] \"Site 2\" \"Site 1\"\n\n\n\n\n\n\n#fit the model again\n  model2.2=glm(y~x.relev)\n\n#Look at coefs  \n  rbind(coef(model2),coef(model2.1),coef(model2.2))\n\n     (Intercept)  xSite 2\n[1,]    50.51109 -21.3669\n[2,]    50.51109 -21.3669\n[3,]    29.14419  21.3669\n\n\n\n\n\n\n#compare predictions  \n  rbind(predict(model2)[1:2],  \n        predict(model2.1)[1:2],\n        predict(model2.2)[1:2]  \n  )\n\n            1        2\n[1,] 50.51109 29.14419\n[2,] 50.51109 29.14419\n[3,] 50.51109 29.14419"
+  },
+  {
+    "objectID": "FW680A4/regression.html#categorical-variable-w-4-levels",
+    "href": "FW680A4/regression.html#categorical-variable-w-4-levels",
+    "title": "Linear Regression",
+    "section": "Categorical Variable w/ 4 levels",
+    "text": "Categorical Variable w/ 4 levels\nDummy Coding\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0+(\\beta_1\\times x_{1,i}) + (\\beta_2\\times x_{2,i}) + (\\beta_3\\times x_{3,i})\n\\] \\(x_{1,i} =\\) indicator of site 2 (1) or not (0)\n\\(x_{2,i} =\\) indicator of site 3 (1) or not (0)\n\\(x_{3,i} =\\) indicator of site 4 (1) or not (0)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#categorical-variable-w-4-levels-1",
+    "href": "FW680A4/regression.html#categorical-variable-w-4-levels-1",
+    "title": "Linear Regression",
+    "section": "Categorical Variable w/ 4 levels",
+    "text": "Categorical Variable w/ 4 levels\n\n#Setup Data\n  x=as.factor(rep(c(\"Site 1\",\"Site 2\",\"Site 3\", \"Site 4\"),n/4))\n  levels(x)\n\n[1] \"Site 1\" \"Site 2\" \"Site 3\" \"Site 4\"\n\n#Convert factors to 0 and 1's\n  head(model.matrix(~x))\n\n  (Intercept) xSite 2 xSite 3 xSite 4\n1           1       0       0       0\n2           1       1       0       0\n3           1       0       1       0\n4           1       0       0       1\n5           1       0       0       0\n6           1       1       0       0\n\n  x.var=model.matrix(~x)[,2:4]\n\n\n\n\n# Set Parameters  \n  b0=50 #Site 1\n  b1=-20 #Diff of site 2 to site 1\n  b2=-200 #Diff of site 3 to site 1\n  b3=100 #Diff of site 4 to site 1\n  \n# Mean  \n  mu = b0+b1*x.var[,1]+b2*x.var[,2]+b3*x.var[,3]\n\n#True mean group-level values\n  unique(mu)\n\n[1]   50   30 -150  150\n\n#Grand Mean\n  mean(unique(mu))\n\n[1] 20\n\n\n\n\n\n\n# Simulate Data  \n  set.seed(43243)\n  y=rnorm(n,mean=mu,sd=4)\n\n\n\n\n\n# fit the model\n  model3=glm(y~x)\n  model3.1=glm(y~x.var)\n\n# Compare coefs    \n  rbind(coef(model3), coef(model3.1))\n\n     (Intercept)   xSite 2   xSite 3  xSite 4\n[1,]    50.59576 -21.91446 -200.1693 99.01133\n[2,]    50.59576 -21.91446 -200.1693 99.01133"
+  },
+  {
+    "objectID": "FW680A4/regression.html#effect-coding-w-4-levels",
+    "href": "FW680A4/regression.html#effect-coding-w-4-levels",
+    "title": "Linear Regression",
+    "section": "Effect Coding w/ 4 levels",
+    "text": "Effect Coding w/ 4 levels\nEffect Coding Link\n\n#Use effect coding to make the intercept the grand mean\n  model3.2=glm(y~x,contrasts = list(x = contr.sum))\n\n\n# Intercept = grand mean of group-means\n# Coef 1 = effect difference of Site 1 from Grand Mean\n# Coef 2 = effect difference of Site 2 from Grand Mean\n# Coef 3 = effect difference of Site 3 from Grand Mean\n\n  coef(model3.2)\n\n(Intercept)          x1          x2          x3 \n  19.827643   30.768114    8.853654 -169.401216 \n\n\n\n\n\n#The coefficient for site-level 4 (difference from the grand mean)\n  sum(coef(model3.2)[-1]*(-1))\n\n[1] 129.7794\n\n\n\n\n\n\n#Predict the values and compare them to the true means for\n#each site\n  rbind(unique(mu),\n  predict(model3.2)[1:4])\n\n            1       2         3        4\n[1,] 50.00000 30.0000 -150.0000 150.0000\n[2,] 50.59576 28.6813 -149.5736 149.6071"
+  },
+  {
+    "objectID": "FW680A4/regression.html#additive-model",
+    "href": "FW680A4/regression.html#additive-model",
+    "title": "Linear Regression",
+    "section": "Additive Model",
+    "text": "Additive Model\nCategorical (2 levels) and Continuous Variable\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0+(\\beta_1\\times x_{1,i}) + (\\beta_2\\times x_{2,i})\n\\] \\(x_{1,i} =\\) indicator of site 2 (1) or not (0)\n\\(x_{2,i} =\\) is a continuous numeric value"
+  },
+  {
+    "objectID": "FW680A4/regression.html#additive-model-1",
+    "href": "FW680A4/regression.html#additive-model-1",
+    "title": "Linear Regression",
+    "section": "Additive Model",
+    "text": "Additive Model\n\n#A continuous and categorical variable \n  x=as.factor(rep(c(\"Site 1\",\"Site 2\"),n/2))\n  levels(x)\n\n[1] \"Site 1\" \"Site 2\"\n\n  x.var=model.matrix(~x)[,2]\n\n\n\n\n#Simulate x2 variable\n  set.seed(54334)\n  x2=rpois(n,100)\n\n#Parameters\n  b0=50\n  b1=-50\n  b2=4\n\n#Mean  \n  mu=b0+b1*x.var+b2*x2\n\n#Simualte Date  \n  set.seed(43243)\n  y=rnorm(n,mean=mu,sd=50)\n\n# fit the model\n  model4=glm(y~x+x2)\n\n  coef(model4)\n\n(Intercept)     xSite 2          x2 \n  96.615158  -66.748462    3.597896 \n\n\n\n\n\n\n#Confidence intervals of coefs\n  confint(model4)\n\n                 2.5 %     97.5 %\n(Intercept)  14.604365 178.625952\nxSite 2     -83.822719 -49.674206\nx2            2.787034   4.408758\n\n\n\n\n\n\n# Summary  \n  summary(model4)\n\n\nCall:\nglm(formula = y ~ x + x2)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  96.6152    41.8430   2.309   0.0231 *  \nxSite 2     -66.7485     8.7115  -7.662 1.39e-11 ***\nx2            3.5979     0.4137   8.697 8.70e-14 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1894.243)\n\n    Null deviance: 428531  on 99  degrees of freedom\nResidual deviance: 183742  on 97  degrees of freedom\nAIC: 1043.4\n\nNumber of Fisher Scoring iterations: 2\n\n\n\n\n\n\n# Fitted Values\n  newdata=expand.grid(x,x2)\n  head(newdata)\n\n    Var1 Var2\n1 Site 1  112\n2 Site 2  112\n3 Site 1  112\n4 Site 2  112\n5 Site 1  112\n6 Site 2  112\n\n  colnames(newdata)=c(\"x\",\"x2\")\n\n\n  preds=predict(model4,newdata=newdata,type=\"response\",\n              se.fit = TRUE)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#additive-model-plot-1",
+    "href": "FW680A4/regression.html#additive-model-plot-1",
+    "title": "Linear Regression",
+    "section": "Additive Model Plot 1",
+    "text": "Additive Model Plot 1\n\nlibrary(sjPlot)\nplot_model(model4, type = \"pred\", terms = c(\"x\"))"
+  },
+  {
+    "objectID": "FW680A4/regression.html#additive-model-plot-2",
+    "href": "FW680A4/regression.html#additive-model-plot-2",
+    "title": "Linear Regression",
+    "section": "Additive Model Plot 2",
+    "text": "Additive Model Plot 2\n\nplot_model(model4, type = \"pred\", terms = c(\"x2\",\"x\"))"
+  },
+  {
+    "objectID": "FW680A4/regression.html#interaction-model",
+    "href": "FW680A4/regression.html#interaction-model",
+    "title": "Linear Regression",
+    "section": "Interaction Model",
+    "text": "Interaction Model\nCategorical (2 levels) and Continuous Variable\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0+(\\beta_1\\times x_{1,i}) + (\\beta_2\\times x_{2,i}) + (\\beta_3*(x_{1,i}\\times x_{2,i}))\n\\] \\(x_{1,i} =\\) indicator of site 2 (1) or not (0)\n\\(x_{2,i} =\\) is a numeric value\n\\(x_{1,i} \\times x_{2,i}=\\) is zero for site 1 values and the numeric value for site 2 values"
+  },
+  {
+    "objectID": "FW680A4/regression.html#interaction-model-1",
+    "href": "FW680A4/regression.html#interaction-model-1",
+    "title": "Linear Regression",
+    "section": "Interaction Model",
+    "text": "Interaction Model\nCategorical (2 levels) and Continuous Variable\n\n# Simulate Variables\n  x=as.factor(rep(c(\"Site 1\",\"Site 2\"),n/2))\n  levels(x)\n\n[1] \"Site 1\" \"Site 2\"\n\n  x.var=model.matrix(~x)[,2]\n\n  set.seed(5453)\n  x2=rpois(n,100)\n\n# Parameters \n  b0=50\n  b1=-50\n  b2=4\n  b3=-20\n\n# Mean  \n  mu = b0+b1*x.var+b2*x2+b3*(x.var*x2)\n\n#Simulate Data\n  set.seed(43243)\n  y=rnorm(n,mean=mu,sd=10)\n\n# fit the model\n  model5=glm(y~x2*x)\n  model5.1=glm(y~x+x2+x:x2)\n\n#comparison  \n  rbind(coef(model5),coef(model5.1))\n\n     (Intercept)         x2    xSite 2 x2:xSite 2\n[1,]    47.51796   4.037598 -60.864156  -19.92472\n[2,]    47.51796 -60.864156   4.037598  -19.92472\n\n\n. . .\n\n\n#Confidence intervals of coefs\n  confint(model5)\n\n                 2.5 %     97.5 %\n(Intercept)  23.600505  71.435410\nx2            3.799657   4.275539\nxSite 2     -95.499112 -26.229199\nx2:xSite 2  -20.270675 -19.578762"
+  },
+  {
+    "objectID": "FW680A4/regression.html#interaction-model-2",
+    "href": "FW680A4/regression.html#interaction-model-2",
+    "title": "Linear Regression",
+    "section": "Interaction Model",
+    "text": "Interaction Model\n\n#Summary  \n  summary(model5)\n\n\nCall:\nglm(formula = y ~ x2 * x)\n\nCoefficients:\n            Estimate Std. Error  t value Pr(&gt;|t|)    \n(Intercept)  47.5180    12.2030    3.894 0.000182 ***\nx2            4.0376     0.1214   33.258  &lt; 2e-16 ***\nxSite 2     -60.8642    17.6712   -3.444 0.000850 ***\nx2:xSite 2  -19.9247     0.1765 -112.881  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 76.60874)\n\n    Null deviance: 1.0550e+08  on 99  degrees of freedom\nResidual deviance: 7.3544e+03  on 96  degrees of freedom\nAIC: 723.58\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/regression.html#interaction-model-plot",
+    "href": "FW680A4/regression.html#interaction-model-plot",
+    "title": "Linear Regression",
+    "section": "Interaction Model Plot",
+    "text": "Interaction Model Plot\n\ntheme_set(theme_sjplot())\nplot_model(model5, type = \"pred\", terms = c(\"x2\",\"x\"))"
+  },
+  {
+    "objectID": "FW680A4/regression.html#evaluating-assumptions",
+    "href": "FW680A4/regression.html#evaluating-assumptions",
+    "title": "Linear Regression",
+    "section": "Evaluating Assumptions",
+    "text": "Evaluating Assumptions\nLargely done based on the residuals\n\\(y_{i} - \\hat{y}_{i}\\)\n\nhist(model5$residuals)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#linearity-variance-assumption",
+    "href": "FW680A4/regression.html#linearity-variance-assumption",
+    "title": "Linear Regression",
+    "section": "Linearity & Variance Assumption",
+    "text": "Linearity & Variance Assumption"
+  },
+  {
+    "objectID": "FW680A4/regression.html#normality-assumption",
+    "href": "FW680A4/regression.html#normality-assumption",
+    "title": "Linear Regression",
+    "section": "Normality Assumption",
+    "text": "Normality Assumption\nTop-left: Normal Q-Q plot. Quantiles of the standardized residuals versus quantiles of a standard normal distribution.\n\npar(mfrow=c(2,2))\nplot(model5)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#notes",
+    "href": "FW680A4/regression.html#notes",
+    "title": "Linear Regression",
+    "section": "Notes",
+    "text": "Notes\nThe scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.\nLeverage refers to the extent to which the coefficients in the regression model would change if a particular observation was removed from the dataset."
+  },
+  {
+    "objectID": "FW680A4/regression.html#exploring-assumptions",
+    "href": "FW680A4/regression.html#exploring-assumptions",
+    "title": "Linear Regression",
+    "section": "Exploring Assumptions",
+    "text": "Exploring Assumptions\nNicer looking Plots\n\nlibrary(ggResidpanel)\nresid_panel(model5)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#continuous-variable",
+    "href": "FW680A4/regression.html#continuous-variable",
+    "title": "Linear Regression",
+    "section": "Continuous Variable",
+    "text": "Continuous Variable\nADD here and mean-centering\n\n#lm(Temperature ~ I(Chirps - mean(Chirps)), data = CricketChirps)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#what-is-a-ci",
+    "href": "FW680A4/regression.html#what-is-a-ci",
+    "title": "Linear Regression",
+    "section": "What is a CI?",
+    "text": "What is a CI?\n“A confidence interval for a parameter is an interval computed using sample data by a method that will contain the parameter for a specified proportion of all samples. The success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
+  },
+  {
+    "objectID": "FW680A4/regression.html#what-is-a-ci-1",
+    "href": "FW680A4/regression.html#what-is-a-ci-1",
+    "title": "Linear Regression",
+    "section": "What is a CI?",
+    "text": "What is a CI?\nKey\n\nthe parameter we are trying to estimate is a fixed unknown (i.e., it is not varying across samples)\nthe endpoints of our confidence interval are random and will change every time we collect a new data set (the endpoints themselves actually have a sampling distribution!)\n\nSee more Stats4Ecologists"
+  },
+  {
+    "objectID": "FW680A4/regression.html#what-is-a-ci-2",
+    "href": "FW680A4/regression.html#what-is-a-ci-2",
+    "title": "Linear Regression",
+    "section": "What is a CI?",
+    "text": "What is a CI?"
   }
 ]

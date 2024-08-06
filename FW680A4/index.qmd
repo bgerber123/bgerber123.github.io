@@ -20,7 +20,7 @@ title: ""
 
 <p><a href="week2.qmd">Week 2 (Aug 27, 30)</a></p>
 
-<p><a style="pointer-events: none; cursor: default; color:#606060"href="week3.qmd">Week 3 (Sep 3, 6)</a></p>
+<p><a href="week3.qmd">Week 3 (Sep 3, 6)</a></p>
 
 <p><a style="pointer-events: none; cursor: default; color:#606060"href="week5.qmd">Week 4 (Sep 10, 12)</a></p>
 
@@ -61,51 +61,78 @@ Install the most recent versions of <a href="https://cran.r-project.org/">R</a> 
 -   **To download lectures:** Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
 
 
-
-### Learning R
-
-
-- [Language of R](https://bgerber123.github.io/R1day/#/the-language-of-r)
-
-- [Prelude In R](http://preludeinr.com/r-basics/)
-
-- [Data Carpentry](https://datacarpentry.org/R-ecology-lesson/)
-
-- [Intro to R](https://intro2r.com/)
-
-- [Many Resources](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books)
-
-- [Our Coding Club](https://ourcodingclub.github.io/tutorials/intro-to-r/)
-
-- [SW Carpentry](http://swcarpentry.github.io/r-novice-inflammation/)
-
-- [Doser et al. Book](https://www.jeffdoser.com/files/for875/_book/)
-
-- [Intro to R for Biologists](https://melbournebioinformatics.github.io/r-intro-biologists/intro_r_biologists.html#R_for_Biologists_course)
-
-- [Introduction to R - tidyverse](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/)
-
-- [R for Data Science (2e)](https://r4ds.hadley.nz/)
-
-- [Advanced R](https://adv-r.hadley.nz/index.html)
-
-- [Introduction to the R Language](https://bookdown.org/mcwimberly/gdswr-book/introduction-to-the-r-language.html#matrices-and-lists)
-
-- [Introduction to R](https://bookdown.org/palmjulia/r_intro_script/introduction.html)
-
-- [An Introduction to R for Research](https://bookdown.org/rwnahhas/IntroToR/)
-
-- [Introduction to Data Exploration ana Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/)
-
-- [Working with Data in R](https://bookdown.org/ejvanholm/WorkingWithData/)
-
-
-
 ### Project
 
 -   Work individually or in a group of 2
 
 -   Decide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.
+
+
+### Learning 
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+#### **Learning R**
+
+-   [Language of R](https://bgerber123.github.io/R1day/#/the-language-of-r)
+-   [Prelude In R](http://preludeinr.com/r-basics/)
+-   [Data Carpentry](https://datacarpentry.org/R-ecology-lesson/)
+-   [Intro to R](https://intro2r.com/)
+-   [Many Resources](https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books)
+-   [Our Coding Club](https://ourcodingclub.github.io/tutorials/intro-to-r/)
+-   [SW Carpentry](http://swcarpentry.github.io/r-novice-inflammation/)
+-   [Doser et al. Book](https://www.jeffdoser.com/files/for875/_book/)
+-   [Intro to R for Biologists](https://melbournebioinformatics.github.io/r-intro-biologists/intro_r_biologists.html#R_for_Biologists_course)
+-   [Introduction to R - tidyverse](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/)
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/)
+-   [Advanced R](https://adv-r.hadley.nz/index.html)
+-   [Introduction to the R Language](https://bookdown.org/mcwimberly/gdswr-book/introduction-to-the-r-language.html#matrices-and-lists)
+-   [Introduction to R](https://bookdown.org/palmjulia/r_intro_script/introduction.html)
+-   [An Introduction to R for Research](https://bookdown.org/rwnahhas/IntroToR/)
+-   [Introduction to Data Exploration ana Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/)
+-   [Working with Data in R](https://bookdown.org/ejvanholm/WorkingWithData/)
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="60%"}
+
+#### **Learning Stats/Modeling**
+
+-   [An Introduction to Statistical Learning](https://www.statlearning.com/)
+-   [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/). [Download](https://hastie.su.domains/ElemStatLearn/printings/ESLII_print12_toc.pdf).
+-   [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/). [Download](http://www.stat.columbia.edu/~gelman/book/BDA3.pdf).
+-   [Bayesian Models: A Statistical Primer for Ecologists](https://press.princeton.edu/books/hardcover/9780691159287/bayesian-models).
+-   [Data Analysis Using Regression and Multilevel/Hierarchical](http://www.stat.columbia.edu/~gelman/arm/)
+-   [Statistics for Spatio-Temporal Data ](https://www.amazon.com/Statistics-Spatio-Temporal-Data-Noel-Cressie/dp/0471692743). [Download](https://download.e-bookshelf.de/download/0004/0172/80/L-G-0004017280-0009119041.pdf)
+-   [Spatio-Temporal Statistics with R](https://spacetimewithr.org/). [Download](https://spacetimewithr.org/download)
+-   [A First Course in Bayesian Statistical Methods](https://pdhoff.github.io/book/)
+-   [Bayesian Statistical Methods](https://bayessm.wordpress.ncsu.edu/)
+
+#### **Ecological Statistics**
+-   [Ecological Models and Data in R](https://ms.mcmaster.ca/~bolker/emdbook/book.pdf)
+-   [Animal Movement: Statistical Models for Telemetry Data](https://www.amazon.com/Animal-Movement-Statistical-Models-Telemetry/dp/1032097183)
+-   [Mixed Effects Models and Extensions in Ecology with R](https://www.highstat.com/index.php?view=article&id=17&catid=18)
+-   [Applied hierarchical modeling in Ecology](https://www.mbr-pwrc.usgs.gov/pubanalysis/keryroylebook/)
+-   [Hierarchical Modeling and Inference in Ecology](https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/roylebook.html). [Code]((https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/chapters.htm))
+-   [Hierarchical Modeling in Ecology Books and Code](https://www.mbr-pwrc.usgs.gov/pubanalysis/roylebook/index.html)
+
+#### **Computational Statistics**
+-   [Computational Statistics](https://www.stat.colostate.edu/computationalstatistics/)
+-   [Parameter Redundancy and Identifiability](https://www.routledge.com/Parameter-Redundancy-and-Identifiability/Cole/p/book/9780367493219)
+-   [Bringing Bayesian Models to Life](https://www.amazon.com/Bringing-Bayesian-Chapman-Environmental-Statistics/dp/0367198487)
+
+
+:::
+
+::::
+
+
 
 :::
 

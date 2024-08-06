@@ -6,15 +6,21 @@ title: ""
 
 ### Day 1
 
+#### [Today]{style="color:red;"}
+
 -   Lecture: <a href="/FW680A4/Introduction.qmd">Introduction</a>
 
--   Discussion Post on [Canvas](https://colostate.instructure.com/courses/193678/discussion_topics/1963784)
+#### [Assigned]{style="color:red;"}
+
+-   [Discussion Post on Canvas](https://colostate.instructure.com/courses/193678/discussion_topics/1963784)
+
+-   Readings for next class: 
+    - <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>
+    - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
 
 ### Day 2 (lab)
 
--   Readings for this day: 
-    - <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>
-    - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
+#### [Today]{style="color:red;"}
 
 -   Lecture: <a href="/FW680A4/BigPicture.qmd">Big Picture</a>
 
@@ -30,8 +36,8 @@ title: ""
 
 # OR, download the zip file here and manually install:
 # https://cran.r-project.org/web/packages/grateful/index.html
-
 ```
+
 ##### **In Class Discussion Questions for Zitomer et al. 2022**
 
  - Rule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?
@@ -55,3 +61,18 @@ title: ""
 - What is model selection?
 
 - What was a good takeaway from this? What was confusing or you disagreed with?
+
+
+#### [Assigned]{style="color:red;"}
+
+- Assigned Readings: 
+  - <a href="/readings/Betts et al. 2022.pdf">Betts et al. 2022.pdf</a>
+  - <a href="/readings/Dumelle et al 2021.pdf">Dumelle et al 2021.pdf</a>. Only sections 1 to 1.1.2.
+  - <a href="/readings/Williams and Brown 2019.pdf">Williams and Brown 2019.pdf</a>. Only sections 1 and 2.
+
+- Background Reading (not required): 
+  - <a href="/readings/Shmueli 2010.pdf">Shmueli 2010.pdf</a>.
+  - <a href="/readings/Arif and MacNeil 2022.pdf">Arif and MacNeil 2022.pdf</a>.
+
+
+

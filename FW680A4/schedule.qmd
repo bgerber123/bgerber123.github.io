@@ -19,7 +19,7 @@ code.r{
 <a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
 ```
 
-**Readings**: Come prepared to discuss the assigned reading on the date they are listed under. 
+**Readings**: Come prepared to discuss the assigned reading on the next class after the readings were assigned. 
 
 - What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
 
@@ -27,16 +27,16 @@ code.r{
 
 ## Schedule 
 
-Week                                  |	Day  |	Date     | 	Lecture Topic                             | Labs              |	   Readings                   |	Background Materials|
+Week                                  |	Day  |	Date     | 	Lecture Topic                             | Assignments              |	   Readings                   |	Background Materials|
 --                                    | ---| ----------|-----------------------------                | ----------------  |-----------------------------  |------------------       |   
-<a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    |                   |                               |      	            |
-&nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Sampling & Markdown | Zitomer et al. 2022; Wolcott et al. 2019;  |
-<a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        |                    | Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                            |  Shmueli 2010; Arif and MacNeil 2022            |
-&nbsp;                                | Fr	 | 30-Aug	 | Probability Functions                  | Simulation & Prob. Functions   |                 | Hobbs and Hooten Ch.3; Bolker Ch. 4)		         |		            
-3                                     |	Tu	 | 3-Sep	 | Likelihood / Regression                      |                   |                             |              |  
-&nbsp;                                |	Fr	 | 6-Sep	 | Regression                                   |                   |                             |              |
-4                                     |	Tu	 | 10-Sep	 | Generalized Linear Models I                  |                   |                             |              |
-&nbsp;                                |	Fr	 | 13-Sep	 | Generalized Linear Models I                  |                   |                             |              |
+<a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    | Discussion Post  |  Zitomer et al. 2022; Wolcott et al. 2019               |      	            |
+&nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Lab 1: Sampling & Markdown |  Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                                                | Shmueli 2010; Arif and MacNeil 2022
+<a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        | Probability Quiz        |                               |   Hobbs and Hooten Ch.3; Bolker Ch. 4           |
+&nbsp;                                | Fr	 | 30-Aug	 | Probability Functions                        | Lab 2: Simulation & Prob. Functions   |                 | 	Statistics 4 Ecologists Chapter 10	         |		            
+<a href="/FW680A4/week3.qmd">3</a>    |	Tu	 | 3-Sep	 | Likelihood / Optimization                    |            |                       |  Statistics 4 Ecologists Chapter 1            |  
+&nbsp;                                |	Fr	 | 6-Sep	 | Regression                                   | Lab 3: Regression                  |                       |                           |
+4                                     |	Tu	 | 10-Sep	 | Deterministic Functions / GLM I              |                   |                             |              |
+&nbsp;                                |	Fr	 | 13-Sep	 | GLM II                  |                   |                             |              |
 5                                     |	Tu	 | 17-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
 &nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models in Wildlife Ecology      |                   |                             |              |
 6                                     |	Tu	 | 24-Sep	 | Bayesian Models and Inference                |                   |                             |              |
