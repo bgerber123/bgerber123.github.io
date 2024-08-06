@@ -3896,49 +3896,49 @@
     "href": "FW680A4/Probability.html#probabilitystatistics",
     "title": "Probability",
     "section": "Probability/Statistics",
-    "text": "Probability/Statistics\n\n\nProbability and statistics are the opposite sides of the same coin.\n\n. . .\nTo understand statistics, we need to understand probability and probability functions.\n\n. . .\nThe two key things to understand this connection is the random variable (RV) and parameters (e.g., \\(\\theta\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\mu\\))."
+    "text": "Probability/Statistics\n\n\nProbability and statistics are the opposite sides of the same coin.\n\n\nTo understand statistics, we need to understand probability and probability functions.\n\n\n\nThe two key things to understand this connection is the random variable (RV) and parameters (e.g., \\(\\theta\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\mu\\))."
   },
   {
     "objectID": "FW680A4/Probability.html#motivation",
     "href": "FW680A4/Probability.html#motivation",
     "title": "Probability",
     "section": "Motivation",
-    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n. . .\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n. . .\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\n\nmathematical connections and notation"
+    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n\n\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\nmathematical connections and notation"
   },
   {
     "objectID": "FW680A4/Probability.html#not-random-variables",
     "href": "FW680A4/Probability.html#not-random-variables",
     "title": "Probability",
     "section": "Not Random Variables",
-    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1*c\n\\end{align*}\n\\]\n. . .\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n. . .\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
+    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1*c\n\\end{align*}\n\\]\n\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n\n\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables",
     "href": "FW680A4/Probability.html#random-variables",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n. . .\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n. . .\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n. . .\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n. . .\n\nToss of a coin Roll of a die Weight of a captured elk Count of plants in a sampled plot \n\n. . .\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
+    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n\n\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n\n\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot \n\n\n\n\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
   },
   {
     "objectID": "FW680A4/Probability.html#frequency-probabilitities",
     "href": "FW680A4/Probability.html#frequency-probabilitities",
     "title": "Probability",
     "section": "Frequency / Probabilitities",
-    "text": "Frequency / Probabilitities\n\n\n\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n. . .\nWe often only get to see ONE sample from this distribution."
+    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n\n\nWe often only get to see ONE sample from this distribution."
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables-1",
     "href": "FW680A4/Probability.html#random-variables-1",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\n\ncentral tendency (mean, mode, median)\n\nvariability (var, sd)\n\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n. . .\nWe infer what these are based on our sample (i.e., statistical inference)."
+    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
   },
   {
     "objectID": "FW680A4/Probability.html#philosophy",
     "href": "FW680A4/Probability.html#philosophy",
     "title": "Probability",
     "section": "Philosophy",
-    "text": "Philosophy\nFrequentist Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability distributions with unknown parameters that (e.g., \\(\\theta\\)) are fixed (scalars).\n\n. . .\nBayesian Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability functions where the unknown parameters (e.g., \\(\\theta\\)) are also random variables that have probability functions that describe them."
+    "text": "Philosophy\nFrequentist Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability distributions with unknown parameters that (e.g., \\(\\theta\\)) are fixed (scalars).\n\n\nBayesian Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability functions where the unknown parameters (e.g., \\(\\theta\\)) are also random variables that have probability functions that describe them."
   },
   {
     "objectID": "FW680A4/Probability.html#frequentist-random-variables",
@@ -3952,28 +3952,28 @@
     "href": "FW680A4/Probability.html#functions",
     "title": "Probability",
     "section": "Functions",
-    "text": "Functions\nWe commonly use deterministic functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input. \\[\n\\hspace{-12pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{DO STUFF\n} \\Longrightarrow \\text{g}(x)\n\\]\n. . .\n\\[\n\\hspace{-14pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{+7\n} \\Longrightarrow \\text{g}(x)\n\\]\n. . .\n\\[\n\\text{g}(x) = x + 7\n\\]\n. . ."
+    "text": "Functions\nWe commonly use deterministic functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input. \\[\n\\hspace{-12pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{DO STUFF\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\\[\n\\hspace{-14pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{+7\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\n\\[\n\\text{g}(x) = x + 7\n\\]"
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables-2",
     "href": "FW680A4/Probability.html#random-variables-2",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n. . .\n\\(f()\\) or [ ] is conveying a function (math).\n. . .\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\n\nPMF: probability mass function"
+    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
   },
   {
     "objectID": "FW680A4/Probability.html#probability-functions",
     "href": "FW680A4/Probability.html#probability-functions",
     "title": "Probability",
     "section": "Probability Functions",
-    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n. . .\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
   },
   {
     "objectID": "FW680A4/Probability.html#pmf",
     "href": "FW680A4/Probability.html#pmf",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n. . .\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n. . .\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n. . .\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n. . .\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n. . .\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
+    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n\n\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n\n\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n\n\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#pmf-example-1",
@@ -4001,21 +4001,21 @@
     "href": "FW680A4/Probability.html#normal-distribution",
     "title": "Probability",
     "section": "Normal Distribution",
-    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean? \n\n. . .\n\nDoes the support of our data match the support of the PDF?\n\n. . .\n\nWhat PDF does?\n\n. . .\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n. . .\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
+    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean?  \n\n\n\nDoes the support of our data match the support of the PDF?\n\n\n\n\nWhat PDF does?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n\n\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
   },
   {
     "objectID": "FW680A4/Probability.html#pdf",
     "href": "FW680A4/Probability.html#pdf",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\n\n\nBeta: \\(y \\in  (0,1)\\)\n\n\nContinuous Uniform: \\(y \\in  [a,b]\\)"
+    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\nBeta: \\(y \\in  (0,1)\\)\nContinuous Uniform: \\(y \\in  [a,b]\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-1",
     "href": "FW680A4/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-2",
@@ -4036,7 +4036,7 @@
     "href": "FW680A4/Probability.html#the-others-side-of-the-coin",
     "title": "Probability",
     "section": "The others side of the coin",
-    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\n\n REMEMBER \n\n\\(f(y|\\boldsymbol{\\theta})\\) is a probability statement about \\(y\\),  NOT  \\(\\boldsymbol{\\theta}\\)."
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\n REMEMBER \n\n\\(f(y|\\boldsymbol{\\theta})\\) is a probability statement about \\(y\\),  NOT  \\(\\boldsymbol{\\theta}\\)."
   },
   {
     "objectID": "FW680A4/Probability.html#the-likelihood-function",
@@ -4148,7 +4148,7 @@
     "href": "FW680A4/Probability.html#why-is-this-useful-to-us",
     "title": "Probability",
     "section": "Why is this useful to us?",
-    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n. . .\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
+    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-pdf",
@@ -4161,8 +4161,8 @@
     "objectID": "FW680A4/Probability.html#objectives",
     "href": "FW680A4/Probability.html#objectives",
     "title": "Probability",
-    "section": "",
-    "text": "Connect random variables, probabilities, and parameters\n\ndefine prob. functions\n\ndiscrete and continuous random variables\n\n\nuse/plot prob. functions\nlearn some notation"
+    "section": "Objectives",
+    "text": "Objectives\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-distribution-pdf-code",
@@ -4204,7 +4204,7 @@
     "href": "FW680A4/Probability.html#pmf-1",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n. . .\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
   },
   {
     "objectID": "FW680A4/Probability.html#bernoulli-pmf",
@@ -4239,14 +4239,14 @@
     "href": "FW680A4/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}) &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n. . .\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}) &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{y^{\\kappa-1} e^{-y/\\theta}} \\\\\n\\end{align*}\n\\]\n. . .\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}) &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}) &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{y^{\\kappa-1} e^{-y/\\theta}} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-1",
     "href": "FW680A4/Probability.html#gamma-distribution-1",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n. . .\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n. . .\nWhat is the probability of observing \\(y\\) &lt; 50\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n. . .\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n. . .\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n. . .\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n. . .\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 50\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
   },
   {
     "objectID": "FW680A4/temp2.html",
@@ -4316,7 +4316,7 @@
     "href": "FW680A4/Probability.html#random-variables-3",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
   },
   {
     "objectID": "classfiles/problab/Markdown and Probability Functions.html",
