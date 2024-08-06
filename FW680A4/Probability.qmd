@@ -936,7 +936,7 @@ pgamma(q=40, shape=10, scale=2,lower.tail=FALSE)
 . . .
 
 
-What is the probability of observing $y$ < 50
+What is the probability of observing $y$ < 20
 
 ```{r,eval=TRUE, echo=TRUE}
 pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
@@ -945,6 +945,19 @@ pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
 <br>
 
 . . .
+
+
+What is the probability of observing 20 < $y$ < 40
+
+```{r,eval=TRUE, echo=TRUE}
+pgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-
+pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
+```
+
+<br>
+
+. . .
+
 
 
 Reverse the question: What values of $y$ and lower have a probability of 0.025
