@@ -4113,7 +4113,7 @@
     "href": "FW680A4/Probability.html#moments",
     "title": "Probability",
     "section": "Moments",
-    "text": "Moments\nBook Chapter (Section 3.4.4.)\nProbability Functions have qualities called ‘Moments’\n\nMoment 1: Expected Value (mean)\nMoment 2: Variance\nMoment 3: Skewness\nMoment 4: Kurtosis\nMoment k: …\n\n\nParameters are not always moments."
+    "text": "Moments\nProperties of all probability functions.\n\n\n1\\({^{st}}\\) moment is central tendency\n2\\({^{nd}}\\) moment is the dispersion\n…\n\n\n\nNormal Distribution: parameters (\\(\\mu\\) and \\(\\sigma\\)) are 1\\({^{st}}\\) and 2\\({^{nd}}\\) moments"
   },
   {
     "objectID": "FW680A4/Probability.html#moment-matching",
@@ -4176,7 +4176,7 @@
     "href": "FW680A4/Probability.html#gamma-distribution-pdf-code",
     "title": "Probability",
     "section": "Gamma Distribution (PDF Code)",
-    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape =10\nscale = 2\n\nmean1 = shape*scale\nmode1 = (shape-1)*scale\n\nstdev = sqrt(shape*scale^2)"
+    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape =10\nscale = 2\n\nmean1 = shape*scale\nmean1\n\n[1] 20\n\nmode1 = (shape-1)*scale\nmode1\n\n[1] 18\n\nstdev = sqrt(shape*scale^2)\nstdev\n\n[1] 6.324555"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-distribution-pdf-code-1",
@@ -4197,7 +4197,7 @@
     "href": "FW680A4/Probability.html#gamma-distribution-pdf-code-1",
     "title": "Probability",
     "section": "Gamma Distribution (PDF Code)",
-    "text": "Gamma Distribution (PDF Code)\n\ncurve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab=\"Probability Density\",xlab=\"y\")\nabline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)\nlegend(\"topright\",lty=3, col=c(1,2),legend=c(\"Mean\",\"Mode\"),lwd=3)"
+    "text": "Gamma Distribution (PDF Code)"
   },
   {
     "objectID": "FW680A4/Probability.html#pmf-1",
@@ -4239,7 +4239,7 @@
     "href": "FW680A4/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}) &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}) &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{y^{\\kappa-1} e^{-y/\\theta}} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-1",
@@ -4814,5 +4814,12 @@
     "title": "Habitat selection of non-breeding American black ducks in an urban estuary",
     "section": "Abstract",
     "text": "Abstract\nShellfish aquaculture is a globally expanding industry, including in urban estuaries that support non-breeding waterfowl. The effects of shellfish aquaculture on the spatial distribution of non-breeding waterfowl, however, are poorly understood and depend on the ecology of waterfowl and cultivated shellfish species. We investigated how proximity to shellfish aquaculture influenced habitat selection and movement patterns of American black ducks (Anas rubripes) during the non-breeding season (~Oct–May) in 2020–2023 in Rhode Island, USA. The extent to which proximity to aquaculture influenced habitat selection of black ducks depended on factors specific to individuals’ primary non-breeding sites, although proximity to aquaculture did not have biologically meaningful influences on black duck movement rates across all sites. Black ducks across sites consistently selected for areas better suited for aquaculture (i.e., areas of potential future development) relative to areas poorly suited for aquaculture (i.e., areas less likely to be developed). The continued expansion of aquaculture into preferred black duck habitats will increase black duck interactions with aquaculture and therefore should be considered in the decision-making process for siting future aquaculture leases. Future studies should quantify the extent to which continued expansion of aquaculture in those preferred coastal habitats directly influences black ducks."
+  },
+  {
+    "objectID": "FW680A4/Probability.html#moments-1",
+    "href": "FW680A4/Probability.html#moments-1",
+    "title": "Probability",
+    "section": "Moments",
+    "text": "Moments\nGamma Distribution: parameters are not moments\nParameters\nShape = \\(\\alpha\\), Rate = \\(\\beta\\)\nOR\nShape = \\(\\kappa\\), Scale = \\(\\theta\\), where \\(\\theta = \\frac{1}{\\beta}\\)\n\nNOTE: probability functions can have Alternative Parameterizations, such they have different parameters.\n\n\nMoments are functions of these parameters:\n\nmean = \\(\\kappa\\theta\\) or \\(\\frac{\\alpha}{\\beta}\\)\nvar = \\(\\kappa\\theta^2\\) or \\(\\frac{\\alpha}{\\beta^2}\\)"
   }
 ]

@@ -798,6 +798,51 @@ abline(v=20, lwd=3, col=1, lty=4)
 curve(dnorm(x, mean= 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
+## Moments
+
+Properties of all probability functions.
+
+::: {.fragment}
+
+- 1${^{st}}$ moment is central tendency
+- 2${^{nd}}$ moment is the dispersion
+-  ...
+
+:::
+
+::: {.fragment}
+**Normal Distribution**: parameters ($\mu$ and $\sigma$) are 1${^{st}}$ and 2${^{nd}}$ moments
+:::
+
+
+## Moments {.scrollable}
+
+[**Gamma Distribution**](https://en.wikipedia.org/wiki/Gamma_distribution): parameters are not moments
+
+#### Parameters 
+
+Shape = $\alpha$, Rate = $\beta$ 
+
+
+**OR** 
+
+Shape = $\kappa$, Scale = $\theta$, where $\theta = \frac{1}{\beta}$
+
+::: {.fragment}
+**NOTE**: probability functions can have *Alternative Parameterizations*, such they have different parameters.
+:::
+
+::: {.fragment}
+Moments are functions of these parameters: 
+
+- mean = $\kappa\theta$ or $\frac{\alpha}{\beta}$
+
+- var = $\kappa\theta^2$ or $\frac{\alpha}{\beta^2}$
+
+
+:::
+
+
 ## Gamma Distribution {.scrollable}
 
 <span style="color:red">Probability</span>:
@@ -813,8 +858,8 @@ $$
 
 $$
 \begin{align*}
-\boldsymbol{\theta}  =& \begin{matrix} [\kappa & \theta] \end{matrix} \\
-f(y|\boldsymbol{\theta}) &= \text{Gamma(}\kappa, \theta) \\
+\boldsymbol{\theta'}  =& \begin{matrix} [\kappa & \theta] \end{matrix} \\
+f(y|\boldsymbol{\theta}') &= \text{Gamma(}\kappa, \theta) \\
 \end{align*}
 $$
 
@@ -823,7 +868,7 @@ $$
 
 $$
 \begin{align*}
-f(y|\boldsymbol{\theta}) &= \frac{1}{\Gamma(\kappa)\theta^{\kappa}}y^{y^{\kappa-1} e^{-y/\theta}} \\
+f(y|\boldsymbol{\theta}') &= \frac{1}{\Gamma(\kappa)\theta^{\kappa}}y^{\kappa-1} e^{-y/\theta} \\
 \end{align*}
 $$
 
@@ -846,14 +891,18 @@ shape =10
 scale = 2
 
 mean1 = shape*scale
+mean1
+
 mode1 = (shape-1)*scale
+mode1
 
 stdev = sqrt(shape*scale^2)
+stdev
 ```
 
 ## Gamma Distribution (PDF Code)
 
-```{r pdf4, echo=TRUE, eval=TRUE}
+```{r pdf4, echo=FALSE, eval=TRUE}
 curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
 abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
 legend("topright",lty=3, col=c(1,2),legend=c("Mean","Mode"),lwd=3)
@@ -943,6 +992,8 @@ hist(y,col=adjustcolor("red",alpha.f = 0.5),freq=FALSE,add=TRUE,breaks=100)
 <!-- <p style="text-align:center"> -->
 <!-- What use is this to us? -->
 <!-- </p> -->
+
+
 
 
 ## The others side of the coin {.scrollable}
