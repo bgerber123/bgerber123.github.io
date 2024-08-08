@@ -9,7 +9,11 @@ format:
     multiplex: true
 ---
 
+
+## What's the point of statistics?
+
 <!-- knitr::purl("./FW680A4/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") -->
+
 
 ```{=html}
 <style type="text/css">
@@ -26,7 +30,6 @@ pre {
 </style>
 ```
 
-## What's the point of statistics?
 
  - a process of learning through empirical observations
  

@@ -3448,14 +3448,14 @@
     "href": "FW680A4/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  211  218  317   57  305\n[2,]   88   39  391   28   98\n[3,]  266   34  114   87  236\n[4,]  237  356   46   69  199\n[5,]  359  170   55   39  103"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  371  221  229  178  328\n[2,]  185  360   63  165   50\n[3,]  386  142   23   98   37\n[4,]   84  199  380  182  291\n[5,]  349  160  274  370  234"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-1",
     "href": "FW680A4/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1]  39  98  28  34 305 356 356  39 359  69\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 168.3"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 274 386 380  50 234 185  37 349  63 142\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 210"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-2",
@@ -3476,7 +3476,7 @@
     "href": "FW680A4/BigPicture.html#whats-the-point-of-statistics",
     "title": "Big Picture  Science and Modeling",
     "section": "What’s the point of statistics?",
-    "text": "What’s the point of statistics?\n\na process of learning through empirical observations\n\n\n\ntogether, science philosophy and statistical modeling is the backbone to empirical learning"
+    "text": "What’s the point of statistics?\n\n\n\na process of learning through empirical observations\n\n\n\ntogether, science philosophy and statistical modeling is the backbone to empirical learning"
   },
   {
     "objectID": "FW680A4/BigPicture.html#today",
