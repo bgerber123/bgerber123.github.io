@@ -8,6 +8,8 @@ format:
     multiplex: true
 ---
 
+<!-- knitr::purl("./FW680A4/likelihood.qmd", output="./FW680A4/likelihood.R") -->
+
 ## Objectives
 
 - likelihood principle
