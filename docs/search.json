@@ -3896,49 +3896,49 @@
     "href": "FW680A4/Probability.html#probabilitystatistics",
     "title": "Probability",
     "section": "Probability/Statistics",
-    "text": "Probability/Statistics\n\n\nProbability and statistics are the opposite sides of the same coin.\n\n\nTo understand statistics, we need to understand probability and probability functions.\n\n\n\nThe two key things to understand this connection is the random variable (RV) and parameters (e.g., \\(\\theta\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\mu\\))."
+    "text": "Probability/Statistics\n\n\nProbability and statistics are the opposite sides of the same coin.\n\n. . .\nTo understand statistics, we need to understand probability and probability functions.\n\n. . .\nThe two key things to understand this connection is the random variable (RV) and parameters (e.g., \\(\\theta\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\mu\\))."
   },
   {
     "objectID": "FW680A4/Probability.html#motivation",
     "href": "FW680A4/Probability.html#motivation",
     "title": "Probability",
     "section": "Motivation",
-    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n\n\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\nmathematical connections and notation"
+    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n. . .\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n. . .\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\n\nmathematical connections and notation"
   },
   {
     "objectID": "FW680A4/Probability.html#not-random-variables",
     "href": "FW680A4/Probability.html#not-random-variables",
     "title": "Probability",
     "section": "Not Random Variables",
-    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1*c\n\\end{align*}\n\\]\n\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n\n\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
+    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1*c\n\\end{align*}\n\\]\n. . .\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n. . .\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables",
     "href": "FW680A4/Probability.html#random-variables",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n\n\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n\n\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot \n\n\n\n\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
+    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n. . .\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n. . .\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n. . .\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n. . .\n\nToss of a coin Roll of a die Weight of a captured elk Count of plants in a sampled plot \n\n. . .\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
   },
   {
     "objectID": "FW680A4/Probability.html#frequency-probabilitities",
     "href": "FW680A4/Probability.html#frequency-probabilitities",
     "title": "Probability",
     "section": "Frequency / Probabilitities",
-    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n\n\nWe often only get to see ONE sample from this distribution."
+    "text": "Frequency / Probabilitities\n\n\n\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n. . .\nWe often only get to see ONE sample from this distribution."
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables-1",
     "href": "FW680A4/Probability.html#random-variables-1",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
+    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\n\ncentral tendency (mean, mode, median)\n\nvariability (var, sd)\n\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n. . .\nWe infer what these are based on our sample (i.e., statistical inference)."
   },
   {
     "objectID": "FW680A4/Probability.html#philosophy",
     "href": "FW680A4/Probability.html#philosophy",
     "title": "Probability",
     "section": "Philosophy",
-    "text": "Philosophy\nFrequentist Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability distributions with unknown parameters that (e.g., \\(\\theta\\)) are fixed (scalars).\n\n\nBayesian Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability functions where the unknown parameters (e.g., \\(\\theta\\)) are also random variables that have probability functions that describe them."
+    "text": "Philosophy\nFrequentist Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability distributions with unknown parameters that (e.g., \\(\\theta\\)) are fixed (scalars).\n\n. . .\nBayesian Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability functions where the unknown parameters (e.g., \\(\\theta\\)) are also random variables that have probability functions that describe them."
   },
   {
     "objectID": "FW680A4/Probability.html#frequentist-random-variables",
@@ -3952,28 +3952,28 @@
     "href": "FW680A4/Probability.html#functions",
     "title": "Probability",
     "section": "Functions",
-    "text": "Functions\nWe commonly use deterministic functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input. \\[\n\\hspace{-12pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{DO STUFF\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\\[\n\\hspace{-14pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{+7\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\n\\[\n\\text{g}(x) = x + 7\n\\]"
+    "text": "Functions\nWe commonly use deterministic functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input. \\[\n\\hspace{-12pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{DO STUFF\n} \\Longrightarrow \\text{g}(x)\n\\]\n. . .\n\\[\n\\hspace{-14pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{+7\n} \\Longrightarrow \\text{g}(x)\n\\]\n. . .\n\\[\n\\text{g}(x) = x + 7\n\\]\n. . ."
   },
   {
     "objectID": "FW680A4/Probability.html#random-variables-2",
     "href": "FW680A4/Probability.html#random-variables-2",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
+    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n. . .\n\\(f()\\) or [ ] is conveying a function (math).\n. . .\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\n\nPMF: probability mass function"
   },
   {
     "objectID": "FW680A4/Probability.html#probability-functions",
     "href": "FW680A4/Probability.html#probability-functions",
     "title": "Probability",
     "section": "Probability Functions",
-    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n. . .\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
   },
   {
     "objectID": "FW680A4/Probability.html#pmf",
     "href": "FW680A4/Probability.html#pmf",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n\n\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n\n\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n\n\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
+    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n. . .\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n. . .\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n. . .\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n. . .\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n. . .\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#pmf-example-1",
@@ -4001,21 +4001,21 @@
     "href": "FW680A4/Probability.html#normal-distribution",
     "title": "Probability",
     "section": "Normal Distribution",
-    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean?  \n\n\n\nDoes the support of our data match the support of the PDF?\n\n\n\n\nWhat PDF does?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n\n\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
+    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean? \n\n. . .\n\nDoes the support of our data match the support of the PDF?\n\n. . .\n\nWhat PDF does?\n\n. . .\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n. . .\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
   },
   {
     "objectID": "FW680A4/Probability.html#pdf",
     "href": "FW680A4/Probability.html#pdf",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\nBeta: \\(y \\in  (0,1)\\)\nContinuous Uniform: \\(y \\in  [a,b]\\)"
+    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\n\n\nBeta: \\(y \\in  (0,1)\\)\n\n\nContinuous Uniform: \\(y \\in  [a,b]\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-1",
     "href": "FW680A4/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-2",
@@ -4036,7 +4036,7 @@
     "href": "FW680A4/Probability.html#the-others-side-of-the-coin",
     "title": "Probability",
     "section": "The others side of the coin",
-    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\n REMEMBER \n\n\\(f(y|\\boldsymbol{\\theta})\\) is a probability statement about \\(y\\),  NOT  \\(\\boldsymbol{\\theta}\\)."
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\n\n REMEMBER \n\n\\(f(y|\\boldsymbol{\\theta})\\) is a probability statement about \\(y\\),  NOT  \\(\\boldsymbol{\\theta}\\)."
   },
   {
     "objectID": "FW680A4/Probability.html#the-likelihood-function",
@@ -4148,7 +4148,7 @@
     "href": "FW680A4/Probability.html#why-is-this-useful-to-us",
     "title": "Probability",
     "section": "Why is this useful to us?",
-    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
+    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n. . .\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-pdf",
@@ -4161,8 +4161,8 @@
     "objectID": "FW680A4/Probability.html#objectives",
     "href": "FW680A4/Probability.html#objectives",
     "title": "Probability",
-    "section": "Objectives",
-    "text": "Objectives\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
+    "section": "",
+    "text": "Connect random variables, probabilities, and parameters\n\ndefine prob. functions\n\ndiscrete and continuous random variables\n\n\nuse/plot prob. functions\nlearn some notation"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-distribution-pdf-code",
@@ -4204,7 +4204,7 @@
     "href": "FW680A4/Probability.html#pmf-1",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n. . .\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
   },
   {
     "objectID": "FW680A4/Probability.html#bernoulli-pmf",
@@ -4239,14 +4239,14 @@
     "href": "FW680A4/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n. . .\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n. . .\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-1",
     "href": "FW680A4/Probability.html#gamma-distribution-1",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n. . .\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n. . .\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n. . .\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.4529343\n\n\n\n. . .\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n. . .\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n. . .\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n. . .\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
   },
   {
     "objectID": "FW680A4/temp2.html",
@@ -4316,7 +4316,7 @@
     "href": "FW680A4/Probability.html#random-variables-3",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n. . .\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
   },
   {
     "objectID": "classfiles/problab/Markdown and Probability Functions.html",
@@ -4694,7 +4694,7 @@
     "href": "FW680A4/likelihood.html#the-others-side-of-the-coin",
     "title": "Likelihood / Optimization",
     "section": "The others side of the coin",
-    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\nEstimation\n\nlikelihood\nBayesian"
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nEstimation\n\nlikelihood\nBayesian"
   },
   {
     "objectID": "FW680A4/likelihood.html#estimation",
@@ -4715,7 +4715,7 @@
     "href": "FW680A4/likelihood.html#the-likelihood-function",
     "title": "Likelihood / Optimization",
     "section": "The Likelihood Function",
-    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
+    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n. . .\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
   },
   {
     "objectID": "FW680A4/likelihood.html#many-parameter-guesses",
@@ -4771,7 +4771,7 @@
     "href": "FW680A4/likelihood.html#sample-size",
     "title": "Likelihood / Optimization",
     "section": "Sample Size",
-    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?"
+    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?\n. . ."
   },
   {
     "objectID": "FW680A4/likelihood.html#proper-guessing",
@@ -4825,37 +4825,37 @@
   {
     "objectID": "FW680A4/likelihood.html",
     "href": "FW680A4/likelihood.html",
-    "title": "Likelihood / Regression",
+    "title": "Likelihood / Optimization",
     "section": "",
-    "text": "Statistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "text": "likelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
   },
   {
     "objectID": "FW680A4/week3.html",
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",
     "href": "FW680A4/likelihood.html#the-pieces",
     "title": "Likelihood / Optimization",
     "section": "The pieces",
-    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
+    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\n\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-likelihood-function-1",
     "href": "FW680A4/likelihood.html#the-likelihood-function-1",
     "title": "Likelihood / Optimization",
     "section": "The Likelihood Function",
-    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n\n\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n\n\n\n#the likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
+    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n. . .\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n. . .\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n. . .\n\n#the likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
   },
   {
     "objectID": "FW680A4/likelihood.html#maximum-likelihood-properties",
@@ -4883,7 +4883,7 @@
     "href": "FW680A4/likelihood.html#mle-with-n-1-1",
     "title": "Likelihood / Optimization",
     "section": "MLE with n > 1",
-    "text": "MLE with n &gt; 1\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n\nLet’s decide to use the Normal Distribution as our PDF.\n\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]"
+    "text": "MLE with n &gt; 1\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n. . .\nLet’s decide to use the Normal Distribution as our PDF.\n\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/likelihood.html#optimization",
@@ -4911,14 +4911,14 @@
     "href": "FW680A4/likelihood.html#mle-code",
     "title": "Likelihood / Optimization",
     "section": "MLE Code",
-    "text": "MLE Code\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n\nLets compare to,\n\nsum(y)/length(y)\n\n[1] 3.873333"
+    "text": "MLE Code\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n. . .\nLets compare to,\n\nsum(y)/length(y)\n\n[1] 3.873333"
   },
   {
     "objectID": "FW680A4/likelihood.html#objectives",
     "href": "FW680A4/likelihood.html#objectives",
     "title": "Likelihood / Optimization",
-    "section": "Objectives",
-    "text": "Objectives\n\nlikelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
+    "section": "",
+    "text": "likelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
   },
   {
     "objectID": "FW680A4/likelihood.html#relativeness",
@@ -4980,8 +4980,8 @@
     "objectID": "FW680A4/regression.html#objectives",
     "href": "FW680A4/regression.html#objectives",
     "title": "Linear Regression",
-    "section": "Objectives",
-    "text": "Objectives\n\nfundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
+    "section": "",
+    "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
   },
   {
     "objectID": "FW680A4/regression.html#linear-regression-motivation",
@@ -5058,7 +5058,7 @@
     "href": "FW680A4/regression.html#assumptions-3",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nLinearity\n \\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
+    "text": "Assumptions\nLinearity\n\\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
   },
   {
     "objectID": "FW680A4/regression.html#assumption-violations",
@@ -5072,7 +5072,7 @@
     "href": "FW680A4/regression.html#intercept-only-model",
     "title": "Linear Regression",
     "section": "Intercept-Only Model",
-    "text": "Intercept-Only Model\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0\n\\]\n\n\nGenerate Data\n\n#Setup parameters\n  n = 100 # sample size\n  beta0 = 10 # true mean\n  sigma = 2 # true std.dev\n\n# Simulate a data set of observations\n  set.seed(43243)\n  y = rnorm(n, mean = beta0, sd = sigma)"
+    "text": "Intercept-Only Model\n\\[\ny_{i} \\sim \\text{Normal}(\\mu_{i}, \\sigma^2)\\\\\n\\mu_{i} = \\beta_0\n\\]\n\nGenerate Data\n\n#Setup parameters\n  n = 100 # sample size\n  beta0 = 10 # true mean\n  sigma = 2 # true std.dev\n\n# Simulate a data set of observations\n  set.seed(43243)\n  y = rnorm(n, mean = beta0, sd = sigma)"
   },
   {
     "objectID": "FW680A4/regression.html#simulate-intercept-only-model",
@@ -5331,7 +5331,7 @@
     "href": "FW680A4/regression.html#what-is-a-ci",
     "title": "Linear Regression",
     "section": "What is a CI?",
-    "text": "What is a CI?\n\n“A confidence interval for a parameter is an interval computed using sample data …\n\n\n“… by a method that will contain the parameter for a specified proportion of all samples.\n\n\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
+    "text": "What is a CI?\n. . .\n“A confidence interval for a parameter is an interval computed using sample data …\n. . .\n“… by a method that will contain the parameter for a specified proportion of all samples.\n. . .\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
   },
   {
     "objectID": "FW680A4/regression.html#what-is-a-ci-1",
@@ -5352,7 +5352,7 @@
     "href": "FW680A4/regression.html#assumptions-4",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nNormality\n \\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
+    "text": "Assumptions\nNormality\n\\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
   },
   {
     "objectID": "FW680A4/regression.html#fitted-values",
@@ -5429,7 +5429,7 @@
     "href": "FW680A4/regression.html#prairie-dog-calling",
     "title": "Linear Regression",
     "section": "Prairie Dog Calling",
-    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute\ntemp = temperature, degrees F\ndist.center = location from center of colony\n\n  head(dat)\n\n           y     temp dist.center\n1 0.38129119 39.96298    11.75578\n2 0.57770546 47.95317    14.63583\n3 0.00347806 56.13182    22.89228\n4 0.00000000 29.76491    21.14168\n5 2.67643282 40.25998    32.41442\n6 1.71519689 38.31469    35.99573"
+    "text": "Prairie Dog Calling\n\n\n\n\n\n\n\ny = # of calls per 5 minute\ntemp = temperature, degrees F\ndist.center = location from center of colony\n\n  head(dat)\n\n           y     temp dist.center\n1 0.38129119 39.96298    11.75578\n2 0.57770546 47.95317    14.63583\n3 0.00347806 56.13182    22.89228\n4 0.00000000 29.76491    21.14168\n5 2.67643282 40.25998    32.41442\n6 1.71519689 38.31469    35.99573"
   },
   {
     "objectID": "FW680A4/regression.html#exploratory",
@@ -5457,7 +5457,7 @@
     "href": "FW680A4/regression.html#marginal-predictions",
     "title": "Linear Regression",
     "section": "Marginal Predictions",
-    "text": "Marginal Predictions\n\\[\n\\hat{\\mu_{i}} = \\hat{\\beta_{0}} + \\hat{\\beta_{1}}\\times 0 +  \\hat{\\beta_{2}} \\times \\text{dist.center}_i\n\\]\n\n# Plot marginal predictions of dist.center\n  marginaleffects::plot_predictions(model, condition=c(\"dist.center\"))"
+    "text": "Marginal Predictions\n\\[\n\\hat{\\mu_{i}} = \\hat{\\beta_{0}} + \\hat{\\beta_{1}}\\times 0 +  \\hat{\\beta_{2}} \\times \\text{dist.center}_i\n\\]\n\n\n\n\n# Plot marginal predictions of dist.center\n  marginaleffects::plot_predictions(model, condition=c(\"dist.center\"))"
   },
   {
     "objectID": "FW680A4/regression.html#add-data-points",
@@ -5520,28 +5520,28 @@
     "href": "FW680A4/regression.html#linearity-assumption",
     "title": "Linear Regression",
     "section": "Linearity Assumption",
-    "text": "Linearity Assumption\n\nplot(model,1)\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
+    "text": "Linearity Assumption\n\nplot(model,1)\n\n\n\n\n\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
   },
   {
     "objectID": "FW680A4/regression.html#homogeneity-of-variance",
     "href": "FW680A4/regression.html#homogeneity-of-variance",
     "title": "Linear Regression",
     "section": "Homogeneity of Variance",
-    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
+    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\n\n\n\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
   },
   {
     "objectID": "FW680A4/regression.html#normality-of-residuals",
     "href": "FW680A4/regression.html#normality-of-residuals",
     "title": "Linear Regression",
     "section": "Normality of Residuals",
-    "text": "Normality of Residuals\n\nplot(model,2)\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
+    "text": "Normality of Residuals\n\nplot(model,2)\n\n\n\n\n\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
   },
   {
     "objectID": "FW680A4/regression.html#outliers",
     "href": "FW680A4/regression.html#outliers",
     "title": "Linear Regression",
     "section": "Outliers",
-    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
+    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\n\n\n\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
   },
   {
     "objectID": "FW680A4/regression.html#residuals",
@@ -5610,8 +5610,8 @@
     "objectID": "FW680A4/regression.html#sampling-distributions-of-hatmu",
     "href": "FW680A4/regression.html#sampling-distributions-of-hatmu",
     "title": "Linear Regression",
-    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)",
-    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
+    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)\n",
+    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/regression.html#model-notation-1",
@@ -5661,5 +5661,12 @@
     "title": "Regression Lab",
     "section": "Software",
     "text": "Software"
+  },
+  {
+    "objectID": "FW680A4/regression.html",
+    "href": "FW680A4/regression.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
   }
 ]

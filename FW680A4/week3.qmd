@@ -38,6 +38,11 @@ title: ""
   install.packages(c("marginaleffects","ggResidpanel"))
 ```
 
+##### **In Class Discussion Questions for Duscoff et al.2019**
+
+-   What is biological significance and statistical significance?
+-   What is a p-value and what are the issues with null hypothesis testing?
+
 #### [Assigned]{style="color:red;"}
 
 
