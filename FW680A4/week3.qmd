@@ -10,6 +10,7 @@ title: ""
 
 -   Lecture: <a href="/FW680A4/likelihood.qmd">Likelihood and Optimization</a>
 
+-   Lecture Code: <a href="/FW680A4/likelihood.R">Likelihood.R</a>
 
 #### [Assigned]{style="color:red;"}
 
@@ -28,7 +29,14 @@ title: ""
 
 -   Lecture: <a href="/FW680A4/regression.qmd">Regression</a>
 
--   Downloads: 
+-   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+  install.packages(c("marginaleffects","ggResidpanel"))
+```
 
 #### [Assigned]{style="color:red;"}
 

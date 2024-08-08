@@ -2706,14 +2706,14 @@
     "href": "FW680A4/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
+    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
   },
   {
     "objectID": "FW680A4/week2.html#week-2",
     "href": "FW680A4/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
+    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
   },
   {
     "objectID": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
@@ -4834,14 +4834,14 @@
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\n\n\n\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\n\n\n\n\nLecture: Regression\nDownloads:\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\n\n\n\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\n\n\n\n\nLecture: Regression\nDownloads:\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",

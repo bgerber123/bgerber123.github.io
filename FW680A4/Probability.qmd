@@ -8,6 +8,8 @@ format:
     multiplex: true
 ---
 
+<!-- knitr::purl("./FW680A4/probability.qmd", output="./FW680A4/probability.R") -->
+
 ## Objectives
 
 - Connect random variables, probabilities, and parameters
