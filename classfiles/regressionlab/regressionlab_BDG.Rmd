@@ -1,0 +1,172 @@
+---
+title: "Regression Lab"
+author: "Brian Gerber"
+date: "August 8, 2024"
+output: html_document
+---
+
+<style type="text/css">
+
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 16px;
+}
+pre {
+  font-size: 16px
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(marginaleffects)
+library(grateful)
+```
+
+# Assigment
+
+Write a report that presents code and results that evaluates the below hypotheses related to African Elephant weight. The data file is `elephant.study.csv`. There are three columns, where each row is an individual sampled elephant, indicating the variables of `weight` (weight in lbs), `age.years` (age of elephant in years), and  `lat` (mean latitude of the elephants home range).
+
+#### Your report should ...
+
+- explore/present the data. use plots/histograms
+- write model notation correctly or use equatiomatic
+- fit the model with lm or glm to get MLEs and CI's. Define Type I error rate
+- interpret results, in relation to hypotheses. Make statements about 'statistical clarity' and support or not for the hypotheses
+- make prediction plots
+- evaluate model assumptions
+- conclusions and caveats (think about what we have not considered)
+- Appendix: present a summary of the R packages you used
+
+Throughout, add text around your code and results to allow the reader to follow your thinking. The text should be minimal.
+
+
+### Hypotheses/Predictions
+
+
+![](elephant.png){width=1000}
+
+I hypothesize that adult African Elephants (*Loxodonta africana*) increase in weight as they age because they are more efficient at conserving energy and acquiring high quality resources. As such, I predict that older elephants will weigh more than younger adult elephants. Further, I hypothesize that there is a latitudinal effect on the weight of elephants across the continent of Africa because of the extreme drought in the southern part of their range. I predict that elephants further north will weigh more than elephants further south. 
+
+I evaluated these hypotheses by aggregating data on weights of elephants from collaborators. Each individual elephant was weighed in the same manner while being fit with a GPS collar. Each individual had a known age due to longterm demographic monitoring. I derived the mean latitude of each elephants dry season home range. 
+
+### Explore Data
+
+This data set consists of three columns. The response variable is `weight` and the two independent variables are `age.years` and `lat`.
+
+```{r, data, echo=TRUE, eval=TRUE, fig.height=10}
+  dat = read.csv("elephant.study.csv")
+  head(dat)
+
+  par(mfrow=c(3,1))
+    hist(dat$weight)
+    hist(dat$age.years)
+    hist(dat$lat)
+```
+
+Looking at the data, we see a good frequency of weights ranging from  `r as.integer(min(dat$weight))` to `r as.integer(max(dat$weight))`. The independent variables are also well distributed and with relatively similar frequency. To make statements of statistical clarity when it comes to rejcting or no rejecting a null hypothesis of no difference, I use a Type I error ($\alpha = 0.05$).
+
+### Define and Fit Model
+
+To evaluate my hypotheses, I will consider a linear regression model with an additive effect of `age.years` and `lat`. I mean centered the variable `age.years` so that the intercept can be interpreted in relation to the average weight of elephants when at the equator (`lat = 0`).
+
+```{r, model, echo=TRUE, eval=TRUE}
+model = lm(weight~I(age.years-mean(age.years))+lat, data=dat)
+summary(model)
+equatiomatic::extract_eq(model)
+```
+
+$$
+\begin{align} 
+\epsilon \sim \text{Normal}(0,\sigma^2) 
+\end{align}
+$$
+
+```{r, equation, echo=TRUE, eval=TRUE}
+equatiomatic::extract_eq(model, use_coefs = TRUE)
+```
+
+**Better Model Notation:**
+
+For each i$^th$ elephant, we define out model as,
+
+$$
+\begin{align*}
+y_{i} \sim& \text{Normal}(\mu_{i}, \sigma)\\
+\mu =& \beta_{0} + \beta_1 \times (\text{age}_{i}- \bar{\text{age}}) + \beta_2 \times \text{latitude}_{i}.
+\end{align*}
+$$
+
+<br>
+
+I found the average weight of elephants at the equator (`lat = 0`) was `r as.integer(summary(model)$coefficients[1,1])` lbs. The effect of age on weight was statistically unclear (p = `r round(summary(model)$coefficients[2,4],digits = 2)`), not supporting my hypothesis. The estimated effect was relatively small and negative $\hat{\beta_{1}} =$ `r round(model$coefficients[2],digits=2)`, 95% CI = `r round(confint(model)[2,],digits=2)`. I found a statistically clear effect of latitude (p = `r round(summary(model)$coefficients[3,4],digits=4)`) with an estimated effect $\hat{\beta_{2}} =$ `r round(model$coefficients[3],digits=2)`, 95% CI = `r `round(confint(model)[3,],digits=2)`. However, this does not support my hypothesis that elephants would weigh more the further north they lived. Instead, we see that weights decreas with increasing latitude. 
+
+
+### Predictions
+
+
+```{r, preds, echo=TRUE, eval=TRUE}
+plot_predictions(model, condition = list("age.years"))
+plot_predictions(model, condition = list("lat"))
+```
+
+The marginal effect plots show the lack of evidence of the effect of age on weight and the support for decreasing weight with latitude. I suggest that this effect is biologically relevant, given that at the extremes in latitudes, we see that the mean weights of elephants is decreased by 18.125%. 
+
+
+```{r, preds2, echo=TRUE, eval=TRUE}
+plot_predictions(model, condition = list("age.years","lat"))
+```
+
+The joint prediction plot demonstrates the same findings and the assumption of the additive effect between independent variables. 
+
+### Model Assumptions
+
+```{r, assumptions, echo=TRUE, eval=TRUE}
+library(ggResidpanel)
+resid_panel(model)
+```
+
+The top-right plot shows that the residuals are equally spaced below and above zero and that the variation within predicted values are relatively similar. The top-right plot shows no departre of the empirical quantiles of the residuals compared to theoretical values. Lastly, the bottom-right plot shows the residuals look symmetric and roughly Normally-distributed. 
+
+```{r, assumptions2, echo=TRUE, eval=TRUE}
+par(mfrow=c(1,2))
+plot(model,4); plot(model,5)
+```
+
+Looking at the leverage of each observation, there appears to be a few potential outliers (measured by Cook's distance), but overall there appears to be little concern. However, to evaluate the effect of the three most extreme values, I will drop these observations and then assess whether the interpretation of the results change. 
+
+```{r, assumptions4, echo=FALSE, eval=TRUE}
+dat2=dat[-c(69,75,96),]
+
+model2 = lm(weight~I(age.years-mean(age.years))+lat, data=dat2)
+summary(model2)$coefficients
+```
+
+We see that the estimated coefficients change relatively little. My interpretation of the results are the same. 
+
+### Conclusions and Caveats
+
+I did not find support of either my hypotheses. Rather, I found evidence of a relevant biological effect where the mean weight of elephants decreased with increasing latitude. The total amount of the data that was explained by this model was relatively weak with an $R^2 =$ `r round(summary(model)$r.squared,digits=2)``.
+
+There are several caveats we need to consider.
+
+- Sex was not controlled for. Males and female elephants are known to have different mean weights
+- The season of when an elephant was weighed is unknown and thus not controlled for
+- I did not consider an interaction between age and latitude
+- The range of ages might have limited our evaluation of the hypothesis. For example, 10 year olds may not be considered adults. 
+
+
+
+# **Appendix**
+
+## Software
+
+This report was generated from the R Statistical Software (v4.2.2; R Core Team 2021) using the [Markdown language](https://www.markdownguide.org/) and [RStudio](https://posit.co/products/open-source/rstudio/). The R packages used are acknowledged below. 
+
+```{r packages, eval=TRUE, echo=FALSE}
+  pkgs <- cite_packages(output = "table", out.dir = ".")
+  knitr::kable(pkgs)
+```
+

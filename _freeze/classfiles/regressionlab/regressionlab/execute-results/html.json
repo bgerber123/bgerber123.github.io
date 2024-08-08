@@ -1,0 +1,15 @@
+{
+  "hash": "17a53eae9804bc4a5d81d5b1e929d530",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Regression Lab\"\nauthor: \"Name\"\ndate: \"Date\"\noutput: html_document\n---\n\n\n<style type=\"text/css\">\n\nbody, td {\n   font-size: 16px;\n}\ncode.r{\n  font-size: 16px;\n}\npre {\n  font-size: 16px\n}\n</style>\n\n\n\n\n\n\n# Assigment\n\n![](elephant.png){width=500}\n\nWrite a report that presents code and results that evaluates the below hypotheses related to African Elephant weight. The data file is `elephant.study.csv`. There are three columns, where each row is an individual sampled elephant, indicating the variables of `weight` (weight in lbs), `age.years` (age of elephant in years), and  `lat` (mean latitude of the elephants home range).\n\n#### Your report should ...\n\n- Explore/present the data. use plots/histograms\n- Write model notation correctly or use equatiomatic\n- Fit the model with lm or glm to get MLEs and CI's. Define Type I error rate\n- Interpret results. Make statements about 'statistical clarity' and support or not for the hypotheses\n- Make prediction plots\n- Evaluate model assumptions\n- Conclusions and caveats (think about what we have not considered)\n- Appendix: present a summary of the R packages you used using `grateful`.\n\nThroughout, add text around your code and results to allow the reader to follow your thinking. The text however should be minimal and to the point.\n\n\n### Hypotheses/Predictions\n\n\nI hypothesize that adult African Elephants (*Loxodonta africana*) increase in weight as they age because they are more efficient at conserving energy and acquiring high quality resources. As such, I predict that older elephants will weigh more than younger adult elephants. Further, I hypothesize that there is a latitudinal effect on the weight of elephants across the continent of Africa because of the extreme drought in the southern part of their range. I predict that elephants further north will weigh more than elephants further south. \n\nI evaluated these hypotheses by aggregating data on weights of elephants from collaborators. Each individual elephant was weighed in the same manner while being fit with a GPS collar. Each individual had a known age due to longterm demographic monitoring. I derived the mean latitude of each elephants dry season home range. \n\n### Explore Data\n\n### Define and Fit Model\n\n\n### Predictions\n\n\n### Model Assumptions\n\n\n### Conclusions and Caveats\n\n\n# **Appendix**\n\n## Software\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

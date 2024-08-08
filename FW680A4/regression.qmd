@@ -9,25 +9,44 @@ format:
 ---
 
 ## Objectives
-::: {.incremental}
--   linear regression fundamentals
+
+-   fundamentals
 -   assumptions
--   lm / glm function
+-   lm / glm functions
 -   confidence intervals
--   categorical and continuous independent variables
--   additive and interactions b/w variables
-:::
+-   case study
+
+## 
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Fundamental Idea</b></span></center>
+```
+
+## Why model data?
+
+In ecology, we use models to,
+
+-   describe relationships among outcomes and processes
+-   to estimate hidden (latent) processes
+-   predict unobserved values
+-   forecast future outcomes, such as responses to management
 
 ## Linear Regression (motivation)
 ```{r, echo=FALSE,eval=TRUE}
-n = 1000
-b0 = 10
-b1 = 2
-x = rnorm(n,40,10)
-mu = b0+b1*x
-y = rnorm(n,mu,sd=30)
-
-plot(x,y,xlim=c(0,70))
+  n = 1000
+  b0 = 10
+  b1 = 2
+  x = rnorm(n,40,10)
+  mu = b0+b1*x
+  y = rnorm(n,mu,sd=30)
+  
+  plot(x,y,xlim=c(0,70))
 ```
 
 ## Linear Regression (Equation)
@@ -40,26 +59,32 @@ plot(x,y,xlim=c(0,70))
 
 $$
 y_{i} \sim \text{Normal}(\mu_{i}, \sigma)\\
-\mu_{i} = \beta_0 + \beta_1 \times x_i
+\mu_{i} = \beta_0 + \beta_1 \times x_i \\
 $$
 
 ## Linear Regression Line 1 {.scrollable}
+$$
+\hat{\mu_{i}} = 9.06 + 2\times x_i
+$$
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
 #" (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 
 lm.out=lm(y~x)
 abline(lm.out,lwd=3,col=3)
-
+text(x=0,y=9.06,expression(paste(beta[0])),cex=2)
 legend("topleft",col=c("green"),lty=2,legend=c("Mean"),lwd=4)
 
 ```
 
-## Linear Regression Line 2 {.scrollable}
+## Linear Regression Line 2 
+$$
+\hat{\mu_{i}} = 9.06 + 2\times x_i
+$$
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main=expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
 lines(x,predict(lm.out),lwd=3,col=3)
@@ -73,10 +98,13 @@ legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","95% Confidence Int
 
 ```
 
-## Linear Regression Line 3 {.scrollable}
+## Linear Regression Line 3 
+$$
+\hat{\mu_{i}} = 9.06 + 2\times x_i
+$$
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
-plot(x,y,cex.lab=1.3,cex.axis=1.3, main=expression(paste("Intercept (",beta[0],") = 9.06, Slope of x (",beta[1],") = 2.0")),xlim=c(0,80))
+plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
 lines(x,predict(lm.out),lwd=3,col=3)
@@ -94,11 +122,130 @@ matlines(newx, pred_interval[,2:3], col = "purple", lty=2,lwd=4)
 legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confidence Interaval (mean)", "95% Prediction Interval (data)"),lwd=4)
 
 ```
+## Residuals
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+m1=broom::augment(lm.out)
+
+ggplot(m1, aes(x, y)) +
+  geom_point() +
+  stat_smooth(method = lm, se = FALSE,linewidth=2) +
+  geom_segment(aes(xend = x, yend = .fitted), color = "red", size = 0.3)+theme_base()
+
+```
 
 
-## Visual
+<!-- ## Visual -->
 
-![](/img/regression.png){fig-align="center" width="450"}
+<!-- ![](/img/regression.png){fig-align="center" width="450"} -->
+
+## One Sample
+
+$$
+\begin{align*}
+y_{i} \sim& \text{Normal}(\mu_{i},\sigma) \\
+\mu_{i} =& \beta_{0} + \beta_{1}x_{i}\\
+\mu_{i} =& 1 + 0.5 \times x_{i}
+\end{align*}
+$$
+
+
+
+```{r, eval=TRUE, echo=FALSE,fig.align='center'}
+# x variable (independent and known)
+  x = seq(0,2,by=0.1)
+
+# marginal coefficients 
+  beta0 = 1
+  beta1 = 0.5
+
+# sd of y
+  sigma = 0.5
+
+# Derive mu  
+  mu = beta0 + beta1*x
+
+# Single random realization of y, 
+#  based on mu and sigma  
+  set.seed(43252)
+  y =  rnorm(length(mu),mean = mu, sd = sigma)
+  
+#plotting
+  par(cex.axis=1.3,cex.lab=1.3)
+  plot(x,y,type="p",col=4,lwd=4,ylim=c(-2,4),
+       pch=18,cex=2)
+  lines(x,mu,lwd=3)
+
+```
+
+
+## Sampling Distributions of y
+
+$$
+\begin{align*}
+\mu_{i} = 1 + 0.5 \times x_{i}
+\end{align*}
+$$
+
+```{r, eval=TRUE, echo=FALSE, cache=TRUE}
+#sample many times  
+  y.many = replicate(1000,rnorm(length(mu),mu, sigma))
+#  dim(y.many)
+```
+
+
+```{r, eval=TRUE, echo=FALSE}
+#plot all samples with true mu
+  par(cex.axis=1.3,cex.lab=1.3)
+  matplot(y.many,type="p",pch=18,xaxt="n",col=2,cex=2,xlab="x",ylab="y",ylim=c(-2,4))
+  axis(1,at=1:length(x),lab=x)
+  lines(1:length(x),mu,lwd=3)
+  points(1:length(x),y,type="p",col=4,lwd=4,ylim=c(-2,3),
+       pch=18,cex=2)
+  legend("bottomright",lwd=2, col=c(1,4,2),legend=c("Truth","Sample","Sampling Distributions"))
+```
+
+
+## Sampling Distributions of $\hat{\mu}$
+
+$$
+\begin{align*}
+\mu_{i} = 1 + 0.5 \times x_{i}
+\end{align*}
+$$
+
+```{r, eval=TRUE, echo=FALSE}
+temp.x=x
+preds.many = apply(y.many,2,FUN=function(x){
+                    predict(lm(x~temp.x)
+                   )
+})
+
+matplot(preds.many,type="l",xaxt="n",col=grDevices::adjustcolor("black",alpha.f = 0.05),
+        lwd=3,
+        ylim=c(0,3),xlab="x",ylab=expression(paste(hat(mu))))
+        axis(1,at=1:length(x))
+lines(1:length(x),mu,type="l",lwd=4,col=2)
+legend("bottomright",lwd=3, col=c(2,grDevices::adjustcolor("black",alpha.f = 0.05)),legend=c("Truth", "Estimate"))
+
+```
+
+
+
+## 
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Assumptions</b></span></center>
+```
+
 
 ## Assumptions
 #### Independence of the errors
@@ -112,16 +259,50 @@ Correlation($\epsilon_{i}$,$\epsilon_{j}$) = 0, $\forall$ pairs of $i$ and $j$
 
 This means that knowing how far observation  $i$ will be from the true regression line tells us nothing about how far observation  $j$  will be from the regression line.
 
-## Assumptions
-#### Homogeniety of the variance
+## Assumptions {.scrollable}
 
-<br>
+#### Homogeniety of the variance
 
 var($\epsilon_{i}$) = $\sigma^2$
 
-<br>
+Constancy in the scatter of observations above and below the line, going left to right.
 
-Constancy in the scatter of observations above and below the line
+
+:::{.fragment}
+```{r,eval=TRUE,echo=FALSE, width = 200}
+
+n = 1000
+b0 = 10
+b1 = 2
+x = rnorm(n,40,10)
+mu = b0+b1*x
+y = rnorm(n,mu,sd=30)
+
+plot(x,y,xlim=c(0,70))
+
+```
+:::
+
+## Assumptions
+
+#### Heteroskedasticity
+
+
+```{r,eval=TRUE,echo=FALSE,fig.align='center'}
+n = 1000
+b0 = 10
+b1 = 20
+x = rnorm(n,40,10)
+mu = b0+b1*x
+
+sigma =5*x
+
+y = rnorm(n,mu,sd=sigma)
+
+plot(x,y,xlim=c(0,70))
+
+```
+
 
 ## Assumptions
 
@@ -155,17 +336,13 @@ Each $i^{th}$ residual
 
 ## Assumption Violations
 
-<br>
-
 ### Robustness
 
 <br>
 
-::: {.fragment}
 
 Linearity and constant variance are often more important than the assumption of normality (see e.g., [Knief & Forstmeier, 2021](https://link.springer.com/article/10.3758/s13428-021-01587-5) and references therein)
 
-::: 
 
 <br>
 
@@ -177,6 +354,19 @@ Linearity and constant variance are often more important than the assumption of 
 
 :::
 
+## 
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>lm and glm </b></span></center>
+```
+
+
 ## Intercept-Only Model
 
 $$
@@ -184,7 +374,9 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 \mu_{i} = \beta_0
 $$
 
-## Simulate Intercept-Only Model
+::: {.fragment}
+
+#### Generate Data
 
 ```{r,eval=TRUE,echo=TRUE,fig.align='center'}
 #Setup parameters
@@ -197,6 +389,8 @@ $$
   y = rnorm(n, mean = beta0, sd = sigma)
 ```  
 
+:::
+
 ## Visualize Intercept-Only Model
 
 ```{r,eval=TRUE,echo=TRUE,fig.align='center'}
@@ -207,14 +401,18 @@ $$
 
 ```{r,eval=TRUE,echo=TRUE}
 # Fit model/hypothesis using maximum likelihood
-  model1 =   glm(y~1, family=gaussian(link = identity))
+  model1.0 = lm(y~1)
 
   model1.1 = glm(y~1)
 
-  model1.2 = lm(y~1)
+  model1.2 = glm(y~1, family=gaussian(link = identity))
+
+  
   
 # Compare Results  
-  rbind(model1$coefficients,model1.1$coefficients, model1.2$coefficients)
+  data.frame(intercept=c(model1.0$coefficients,model1.1$coefficients, model1.2$coefficients),
+             SE = c(summary(model1.0)$coefficients[, 2], summary(model1.1)$coefficients[, 2],summary(model1.2)$coefficients[, 2])
+            )
 ```
 
 ## Fit Intercept-Only Model 
@@ -222,19 +420,33 @@ $$
 ```{r,eval=TRUE,echo=TRUE}
     
 # Summary of model results  
-  summary(model1)
+  summary(model1.0)
 ```
 
 
-## Fitted-values Intercept-Only Model {.scrollable}
+## Fitted-values {.scrollable}
 
 ```{r,eval=TRUE,echo=TRUE}
 #Predict response for all data
-  preds=predict(model1, se.fit = TRUE)
+  preds = predict(model1.0, se.fit = TRUE)
   preds
 ```  
 
-## Confidence Intervals Intercept-Only Model
+## 
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Confidence Intervals </b></span></center>
+```
+
+
+## Confidence Intervals 
+#### Normal Approximation
 
 ```{r,eval=TRUE,echo=TRUE}
 # Get 90% confidence intervals (Type I error = 0.1)
@@ -242,25 +454,44 @@ $$
     (preds$fit+preds$se.fit*qnorm(0.05))[1],
     (preds$fit+preds$se.fit*qnorm(0.95))[1]
    )
-
-
-  CI.Normal=confint(model1, level=0.9)
-  CI.Normal
-  
 ```
+
+:::{.fragment}
+```{r,eval=TRUE,echo=TRUE}
+  CI.Normal=confint(model1.0, level=0.9)
+  CI.Normal
+```
+:::  
+  
+
 
 ## What is a CI?
 
-"A confidence interval for a parameter is an interval computed using sample data by a method that will contain the parameter for a specified proportion of all samples. The success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level." [R. H. Lock et al. (2020)](https://www.wileyplus.com/math-and-statistics/lock-statistics-unlocking-the-power-of-data-3e-eprof20502/)
+. . .
+
+"A confidence interval for a parameter is an interval computed using sample data ...
+
+. . .
+
+"... by a method that will contain the parameter for a specified proportion of all samples.
+
+. . .
+
+The success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level." [R. H. Lock et al. (2020)](https://www.wileyplus.com/math-and-statistics/lock-statistics-unlocking-the-power-of-data-3e-eprof20502/)
 
 ## What is a CI?
 
 #### Key
 
 -   the parameter we are trying to estimate is a fixed unknown (i.e., it is not varying across samples)
--   the endpoints of our confidence interval are random and will change every time we collect a new data set (the endpoints themselves actually have a sampling distribution!)
 
-[See more Stats4Ecologists](https://statistics4ecologists-v2.netlify.app/linreg#confidence-intervals)
+
+:::{fragment}
+-   the endpoints of our confidence interval are random and will change every time we collect a new data set (the endpoints themselves actually have a sampling distribution!)
+:::
+
+[More at Stats4Ecologists](https://statistics4ecologists-v2.netlify.app/linreg#confidence-intervals)
+
 
 ## What is a CI?
 
@@ -268,12 +499,13 @@ $$
 
 ## Bootstrapping 
 
-See, [Stats4Ecologists](https://fw8051statistics4ecologists.netlify.app/boot.html)   
-
-<br>
 
 Instead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by 
 resampling our data.
+
+<br>
+
+See, [Stats4Ecologists](https://fw8051statistics4ecologists.netlify.app/boot.html)   
 
 ## Bootstrapping (idea)
 ![](/img/fieberg0.png){fig-align="center" width="450"}
@@ -312,12 +544,13 @@ hist(bootcoefs, main = expression(paste("Bootstrap distribution of ", hat(beta)[
 ## Bootstrapping (code)
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 # Calculate bootstrap standard errors
-  boot.se=sd(bootcoefs)
+  boot.se = sd(bootcoefs)
 
 # boostrap-normal CI
-  boot.normal=c(
+  boot.normal = c(
         (preds$fit+boot.se*qnorm(0.05))[1],
-        (preds$fit+boot.se*qnorm(0.95))[1])
+        (preds$fit+boot.se*qnorm(0.95))[1]
+        )
 
 # bootstrap percentile
 confdat.boot.pct <- quantile(bootcoefs, probs = c(0.05, 0.95))
@@ -331,7 +564,7 @@ confdata <- data.frame(LCL=c(boot.normal[1],CI.Normal[1],confdat.boot.pct[1]),
            UCL=c(boot.normal[2],CI.Normal[2],confdat.boot.pct[2]),
            method=c("Normal Assumption", "Bootstrap-Normal", "Bootstrap-percentile")
           )
-confdata$estimate <- rep(coef(model1),3)
+confdata$estimate <- rep(coef(model1.0),3)
 library(ggplot2)
 ggplot(confdata, aes(y = estimate, x = " ", col = method)) + 
   geom_point() +
@@ -341,431 +574,193 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 ```
 
 
-## Categorical Variable w/ 2 levels {.scrollable}
-$$
-y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
-\mu_{i} = \beta_0+\beta_1\times x_i
-$$
-where $x_i$ is either a zero or one, indicating whether the $i^{th}$ row is from <span style="color:blue">site 1</span> (*0*) or <span style="color:blue">site 2</span> (*1*).
+
+## 
+
+```{=html}
 
 <br>
-
-This is called *Dummy Coding*.
-
-
-## Categorical Variable w/ 2 levels {.scrollable}
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Setup data
-  x=as.factor(rep(c("Site 1","Site 2"),n/2))
-  levels(x)
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Independent Variables</b></span></center>
 ```
 
-<br>
 
-. . .
+## Prairie Dog Calling {.scrollable}
 
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Turn the factor into 0 and 1's
-  head(model.matrix(~x))
+```{r, echo=FALSE, include=TRUE, eval=TRUE}  
+n = 100
+b0=1
+b1=-0.01
+b2=0.02
+b3=0.0005
+
+set.seed(543543)
+x1 = seq(40,100,length.out=n)+rnorm(n,0,10)
+x2 = seq(10,500,length.out=n)+rnorm(n,0,2)
+sigma=2
+
+mu = b0 + b1*x1 + b2*x1 + b3*(x1*x2)
+
+set.seed(43441)
+y = rnorm(n, mu,sigma)
+y[which(y<0)]=0
+
+dat = data.frame(y=y,
+                 temp = x1,
+                 dist.center = x2
+                 )
+```
+
+![](/img/pdog.png){fig-align="center" width="1200"}
+
+ y = # of calls per 5 minute
+ 
+ temp = temperature, degrees F
+ 
+ dist.center = location from center of colony
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+  head(dat)
+```
+
+
+## Exploratory {.scrollable}
+
+```{r, echo=FALSE, include=TRUE, eval=TRUE}  
+  hist(dat$y)
+  hist(dat$temp)
+  hist(dat$dist.center)
+```
+## Model Fitting 1
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+  model = lm(y ~ temp+dist.center, data=dat)
+  summary(model)
+```
+
+## Model Notation 1
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+equatiomatic::extract_eq(model)
+
+equatiomatic::extract_eq(model, use_coefs = TRUE)
+```
+
+
+## Model Fitting 2
+
+Mean-center the intercept. Slopes do not change.
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+  model = lm(y ~ I(temp - mean(temp)) + dist.center, data=dat)
+  summary(model)
+```
+
+
+## Normalizing x
+
+Mean-center and standardize by std. deviation
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+  dat$temp.sc = scale(dat$temp)
+  dat$dist.sc = scale(dat$dist.center)
+```
+
+:::{.fragment}
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}  
+  mean(dat$temp.sc)
+  sd(dat$temp.sc)
+```
+
+:::
+
+## Comparison
+
+```{r, echo=FALSE, include=TRUE, eval=TRUE}  
+  par(mfrow=c(1,2))
+  hist(dat$temp)
+  hist(dat$temp.sc)
   
-  x.var=model.matrix(~x)[,2]
-```
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Parameters  
-  b0=50
-  b1=-20
-  mu=b0+b1*x.var
-
-# Sample Data
-  set.seed(43243)
-  y=rnorm(n,mean=mu,sd=4)
-
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#fit the model 
-  model2=glm(y~x)
-  model2.1=glm(y~x.var)
-
-#comparison  
-  rbind(coef(model2), coef(model2.1))
-```
-
-## Side-Bar: Maximum Likelihood Optimization {.scrollable}
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-
-#Here is our negative log-likelihood function with three
-#parameters - the mean (2) and stdev (1)
-neg.log.like = function(par) {
-  mu=par[1]+par[2]*x.var
-  sum(-dnorm(y,mean = mu,sd = par[3],log = TRUE))
-}
-```
-
-<br>
-
-. . .
-
-### Use our function in an optimization function
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#use optim with initial values and define the lower and upper limits of the possible values
-fit1 <- optim(
-    par = c(0, 0,1),
-    fn = neg.log.like,
-    method = "L-BFGS-B",
-    lower = c(-100, -100, 0.01),
-    upper = c(400, 400, 100)
-  )
-
-fit1$par
-```
-
-<br>
-
-## Categorical Variable w/ 2 levels {.scrollable}
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-summary(model2)
-```
-
-## Relevel {.scrollable}
-
-We can manipulate the factor levels of $x$ to indicate that <span style="color:blue">site 1</span> is denoted by a **1** now and <span style="color:blue">site 2</span> is denoted by a **0**.
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#change intercept meaning
-  x.relev=relevel(x,ref="Site 2")
-  levels(x.relev)
-```
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#fit the model again
-  model2.2=glm(y~x.relev)
-
-#Look at coefs  
-  rbind(coef(model2),coef(model2.1),coef(model2.2))
-```
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#compare predictions  
-  rbind(predict(model2)[1:2],  
-        predict(model2.1)[1:2],
-        predict(model2.2)[1:2]  
-  )
-```
-
-## Categorical Variable w/ 4 levels 
-### Dummy Coding
-$$
-y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
-\mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3\times x_{3,i})
-$$
-$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
-
-$x_{2,i} =$ indicator of <span style="color:blue">site 3</span> (1) or not (0)
-
-$x_{3,i} =$ indicator of <span style="color:blue">site 4</span> (1) or not (0)
-
-
-
-## Categorical Variable w/ 4 levels {.scrollable}
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#Setup Data
-  x=as.factor(rep(c("Site 1","Site 2","Site 3", "Site 4"),n/4))
-  levels(x)
-
-#Convert factors to 0 and 1's
-  head(model.matrix(~x))
-
-  x.var=model.matrix(~x)[,2:4]
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Set Parameters  
-  b0=50 #Site 1
-  b1=-20 #Diff of site 2 to site 1
-  b2=-200 #Diff of site 3 to site 1
-  b3=100 #Diff of site 4 to site 1
-  
-# Mean  
-  mu = b0+b1*x.var[,1]+b2*x.var[,2]+b3*x.var[,3]
-
-#True mean group-level values
-  unique(mu)
-  
-#Grand Mean
-  mean(unique(mu))
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Simulate Data  
-  set.seed(43243)
-  y=rnorm(n,mean=mu,sd=4)
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# fit the model
-  model3=glm(y~x)
-  model3.1=glm(y~x.var)
-
-# Compare coefs    
-  rbind(coef(model3), coef(model3.1))
-```
-
-## Effect Coding w/ 4 levels {.scrollable}
-
-[Effect Coding Link](https://stats.stackexchange.com/questions/52132/how-to-do-regression-with-effect-coding-instead-of-dummy-coding-in-r)
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-
-#Use effect coding to make the intercept the grand mean
-  model3.2=glm(y~x,contrasts = list(x = contr.sum))
-
-
-# Intercept = grand mean of group-means
-# Coef 1 = effect difference of Site 1 from Grand Mean
-# Coef 2 = effect difference of Site 2 from Grand Mean
-# Coef 3 = effect difference of Site 3 from Grand Mean
-
-  coef(model3.2)
-
-```  
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#The coefficient for site-level 4 (difference from the grand mean)
-  sum(coef(model3.2)[-1]*(-1))
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#Predict the values and compare them to the true means for
-#each site
-  rbind(unique(mu),
-  predict(model3.2)[1:4])
-```
-
-## Continuous Variable
-
-ADD here and mean-centering
-```{r,eval=TRUE,echo=TRUE}
-
-#lm(Temperature ~ I(Chirps - mean(Chirps)), data = CricketChirps)
-
 ```
 
 
-## Additive Model
+## Model Fitting 3 {.scrollable}
 
-#### Categorical (2 levels) and Continuous Variable
+What does the slope mean now?
 
 $$
-y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
-\mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i})
+\mu_{i} = \beta_0 + \beta_1 \times 1 + \beta_2 \times 0
 $$
-$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
-
-$x_{2,i} =$ is a continuous numeric value
-
-
-## Additive Model {.scrollable}
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#A continuous and categorical variable 
-  x=as.factor(rep(c("Site 1","Site 2"),n/2))
-  levels(x)
-  x.var=model.matrix(~x)[,2]
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#Simulate x2 variable
-  set.seed(54334)
-  x2=rpois(n,100)
-
-#Parameters
-  b0=50
-  b1=-50
-  b2=4
-
-#Mean  
-  mu=b0+b1*x.var+b2*x2
-
-#Simualte Date  
-  set.seed(43243)
-  y=rnorm(n,mean=mu,sd=50)
-
-# fit the model
-  model4=glm(y~x+x2)
-
-  coef(model4)
-
-```
-
-<br>
-
-. . .
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#Confidence intervals of coefs
-  confint(model4)
-
-```
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-# Summary  
-  summary(model4)
-```
-
-. . .
-
-<br>
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}
-
-# Fitted Values
-  newdata=expand.grid(x,x2)
-  head(newdata)
-  colnames(newdata)=c("x","x2")
-
-
-  preds=predict(model4,newdata=newdata,type="response",
-              se.fit = TRUE)
-```
-
-## Additive Model Plot 1
-
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-library(sjPlot)
-plot_model(model4, type = "pred", terms = c("x"))
+  model = lm(y ~ temp.sc + dist.sc, data=dat)
+  summary(model)
 ```
 
-## Additive Model Plot 2
 
-```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-plot_model(model4, type = "pred", terms = c("x2","x"))
-```
 
-## Interaction Model
 
-#### Categorical (2 levels) and Continuous Variable
+## Marginal Predictions
 
 $$
-y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
-\mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i}))
+\hat{\mu_{i}} = \hat{\beta_{0}} + \hat{\beta_{1}}\times 0 +  \hat{\beta_{2}} \times \text{dist.center}_i
 $$
-$x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0)
 
-$x_{2,i} =$ is a numeric value
-
-$x_{1,i} \times x_{2,i}=$ is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values
-
-
-
-## Interaction Model {.scrollable}
-
-### Categorical (2 levels) and Continuous Variable
-
-```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-
-# Simulate Variables
-  x=as.factor(rep(c("Site 1","Site 2"),n/2))
-  levels(x)
-  x.var=model.matrix(~x)[,2]
-
-  set.seed(5453)
-  x2=rpois(n,100)
-
-# Parameters 
-  b0=50
-  b1=-50
-  b2=4
-  b3=-20
-
-# Mean  
-  mu = b0+b1*x.var+b2*x2+b3*(x.var*x2)
-
-#Simulate Data
-  set.seed(43243)
-  y=rnorm(n,mean=mu,sd=10)
-
-# fit the model
-  model5=glm(y~x2*x)
-  model5.1=glm(y~x+x2+x:x2)
-
-#comparison  
-  rbind(coef(model5),coef(model5.1))
+```{r, echo=FALSE,eval=TRUE}
+model = lm(y ~ I(temp - mean(temp)) + dist.center, data=dat)
 ```
 
-. . .
-
-<br>
-
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-#Confidence intervals of coefs
-  confint(model5)
+# Plot marginal predictions of dist.center
+  marginaleffects::plot_predictions(model, condition=c("dist.center"))
 ```
 
-## Interaction Model
+## Add data points
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-#Summary  
-  summary(model5)
+# Plot marginal predictions of dist.center
+  plot1 = marginaleffects::plot_predictions(model, condition=c("dist.center"))
+  plot1+geom_point(data=dat, aes(x=dist.center,y=y))
 ```
 
-## Interaction Model Plot
+
+## Combined Predictions
+
+`````{r, echo=TRUE, include=TRUE, eval=TRUE}  
+marginaleffects::plot_predictions(model, condition=list("temp","dist.center"))
+`````
+
+## Combined Predictions
+
+`````{r, echo=TRUE, include=TRUE, eval=TRUE}  
+marginaleffects::plot_predictions(model, condition=list("temp","dist.center" = 0:5))
+`````
+
+
+
+## Taking Control 
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-theme_set(theme_sjplot())
-plot_model(model5, type = "pred", terms = c("x2","x"))
+newdata = expand.grid(dat$temp,0:5)
+colnames(newdata)=c("temp","dist.center")
+
+preds = predict(model,newdata = newdata,interval="confidence", level=0.95)
+
+pred.plot = data.frame(newdata,preds)
 ```
+
+## Combined Predictions 2 {.scrollable}
+```{r, echo=FALSE, include=TRUE, eval=TRUE}  
+
+ggplot(data=pred.plot) +
+  geom_line(aes(temp, fit, group = dist.center,color = dist.center), linewidth = 1.1)+ 
+  geom_ribbon(aes(x = temp, ymax = upr, ymin = lwr, group = dist.center, color = dist.center), alpha = 0.3) +
+  theme_bw()
+                       
+```
+
+
+
 
 ## Evaluating Assumptions
 ### Largely done based on the residuals
@@ -773,34 +768,56 @@ plot_model(model5, type = "pred", terms = c("x2","x"))
 $y_{i} - \hat{y}_{i}$
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
-hist(model5$residuals)
+hist(model$residuals)
 ```
 
 
-## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r)
+<!-- ## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r) -->
 
-![](/img/assumptions.png){fig-align="center" width="1000"}
+<!-- ![](/img/assumptions2.png){fig-align="center" width="1000"} -->
 
 
-## Normality Assumption {.scrollable}
-
-Top-left: Normal Q-Q plot. Quantiles of the standardized residuals versus quantiles of a standard normal distribution. 
+## Linearity Assumption
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
-par(mfrow=c(2,2))
-plot(model5)
+plot(model,1)
+```
+Ideally, there will be no pattern and the red line should be roughly horizontal near zero.
+
+
+## Homogeneity of Variance
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
+plot(model,3)
 ```
 
-## Notes {.scrollable }
+Residuals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity).
 
-The scale-location plot is very similar to residuals vs fitted, but simplifies analysis of the homoskedasticity assumption. It takes the square root of the absolute value of standardized residuals instead of plotting the residuals themselves.
 
-Leverage refers to the extent to which the coefficients in the regression model would change if a particular observation was removed from the dataset.
+## Normality of Residuals
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
+plot(model,2)
+```
+
+Shows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line.
+
+## Outliers
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
+par(mfrow=c(1,2))
+plot(model,4)
+plot(model,5)
+```
+
+Outlier: extreme value that can affect the $\beta$ estimate. Leverage plot: points in the upper right and lower right corner. 
 
 ## Exploring Assumptions {.scrollable}
 
 Nicer looking Plots
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
 library(ggResidpanel)
-resid_panel(model5)
+resid_panel(model)
 ```
+
+## Go to Lab
