@@ -4834,14 +4834,14 @@
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nStatistics 4 Ecologists Chapter 1\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 7\nFieberg Chapter 1"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",
