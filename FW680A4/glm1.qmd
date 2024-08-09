@@ -1,0 +1,867 @@
+---
+title:  <span style="color:black">Generalized Linear Models</span>
+title-slide-attributes:
+   data-background-image: /img/background2.png
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+## Objectives
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 12px
+}
+</style>
+```
+
+-   GLM framework
+-   matrix notation
+-   link functions
+-   glm function
+
+## GLM
+<p style="color:purple">Generalized linear model framework using matrix notation</p>
+
+. . .
+
+$$
+\begin{align*}
+\textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma] \\
+\text{g}(\boldsymbol{\mu}) =& \textbf{X}\boldsymbol{\beta}
+\end{align*}
+$$
+
+![](/img/tada.png){fig-align="center" width="275"}
+
+## Motivation
+
+**GLMs:**
+
+- t-test
+- ANOVA
+- ANCOVA
+- linear regression
+- logistic / probit regression
+- Poisson regression
+- log-linear regression
+- Survival Analysis
+- AND MORE!
+
+
+
+## GLM {.scrollable}
+<p style="color:purple">Generalized linear model framework</p>
+
+
+$$
+\begin{align*}
+\textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma] \\
+\text{g}(\boldsymbol{\mu}) =& \textbf{X}\boldsymbol{\beta}
+\end{align*}
+$$
+
+### Elements
+::: {.incremental}
+
+-   prob. function to define the RV ($\textbf{y}$)
+-   parameters of the prob. function ($\boldsymbol{\mu},\sigma$)
+-   link function ($\text{g}(\boldsymbol{\mu})$); deterministic transformation of parameters to new scale
+-   inverse-link function ($\text{g}^{-1}(\boldsymbol{\textbf{X}\boldsymbol{\beta}})$); deterministic transformation of linear combination back to parameter scale
+
+-   design matrix of the explanatory variables ($\textbf{X}$); these are known
+-   coefficient parameters ($\boldsymbol{\beta}$); needs estimating
+:::
+
+
+## Linear Regression  {.scrollable}
+
+#### index notation
+$$
+\begin{align*}
+y_{i} \sim& \text{Normal}(\mu_{i},\sigma) \\
+\mu_{i} =& \beta_{0} + \beta_{1}x_{1i} + \beta_{2}x_{2i}
+\end{align*}
+$$
+
+::: {.fragment}
+
+#### matrix notation
+$$
+\begin{align*}
+\textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma]\\
+[\textbf{y}|\boldsymbol{\mu},\sigma]=& \text{Normal}(\boldsymbol{\mu},\sigma)\\
+\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1
+\end{align*}
+$$
+
+:::
+
+::: {.fragment}
+
+
+\begin{align*}
+
+\textbf{y} =
+\begin{bmatrix}
+y_{1} \\
+y_{2} \\
+y_{3} \\
+. \\
+. \\
+y_{n} & 
+\end{bmatrix}
+
+
+\textbf{X} =
+\begin{bmatrix}
+1 & x^{1}_1 & x^{2}_1 \\
+1 & x^{1}_2 & x^{2}_2 \\
+1 & x^{1}_3 & x^{2}_3 \\
+. & . .\\
+. & . .\\
+n & x^{1}_n & x^{2}_n
+\end{bmatrix}
+
+\boldsymbol{\beta} = \begin{bmatrix}
+\beta_0 \\
+\beta_1 \\
+\beta_2 \\
+\end{bmatrix}
+\end{align*}
+
+n = sample size
+
+:::
+
+## Linear Algebra {.scrollable}
+
+$\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
+
+<br>
+
+$\textbf{X}$ is called the Design Matrix.
+
+$\boldsymbol{\beta}$ is a vector of coefficients.
+
+. . .
+
+$$
+\textbf{X}=
+\begin{bmatrix}
+1 & x_{1,2} & x_{1,3} \\
+1 & x_{2,2} & x_{2,3} \\
+1 & x_{3,2} & x_{3,3}
+\end{bmatrix}
+\boldsymbol{\beta} =
+\begin{bmatrix}
+\beta_0  \\
+\beta_1 \\ 
+\beta_2   
+\end{bmatrix}
+$$
+
+. . .
+
+$$
+\textbf{X}\boldsymbol{\beta} = 
+\begin{bmatrix}
+\beta_0\times 1 + \beta_1\times x_{1,2} + \beta_2\times x_{1,3} \\
+\beta_0\times 1 + \beta_1\times x_{2,2} + \beta_2\times x_{2,3} \\
+\beta_0\times 1 + \beta_1\times x_{3,2} + \beta_2\times x_{3,3} \\
+\end{bmatrix}\\
+$$
+
+. . .
+
+$$
+ \textbf{X}\boldsymbol{\beta} = 
+\begin{bmatrix}
+\beta_0 + \beta_1 x_{1,2} + \beta_2 x_{1,3} \\
+\beta_0 + \beta_1 x_{2,2} + \beta_2 x_{2,3} \\
+\beta_0 + \beta_1 x_{3,2} + \beta_2 x_{3,3} \\
+\end{bmatrix}\\
+$$
+
+$$
+ \text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta} = \begin{bmatrix}
+\text{lt}_{1} \\
+\text{lt}_{2} \\
+\text{lt}_{3} 
+\end{bmatrix}
+$$
+lt = linear terms
+
+
+. . .
+
+$$
+\boldsymbol{\mu} = \text{g}^{-1}(\textbf{X}\boldsymbol{\beta})\ = \textbf{X}\boldsymbol{\beta}  / 1= \begin{bmatrix}
+\text{lt}_{1}/1 \\
+\text{lt}_{2}/1 \\
+\text{lt}_{3}/1
+\end{bmatrix}
+$$
+
+. . .
+
+$$
+\boldsymbol{\mu} = \textbf{X}\boldsymbol{\beta} = \begin{bmatrix}
+\mu_{1} \\
+\mu_{2} \\
+\mu_{3}
+\end{bmatrix}
+$$
+
+
+
+
+## Vector Notation {.scrollable}
+<p style="color:purple">Row vectors</p>
+
+-   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+y <- matrix(c(1,2,3),nrow=1,ncol=3)
+y
+```
+
+<br>
+
+. . .
+
+
+<p style="color:purple">Column vectors</p>
+
+-   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)'$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+y <- matrix(c(1,2,3),nrow=3,ncol=1)
+y
+```
+
+
+
+## Matrix Notation
+
+-   $\textbf{X}\equiv (\textbf{x}_1,\textbf{x}_2,...,\textbf{x}_p)$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+p=3
+X <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE)
+X
+```
+
+## Linear Algebra {.scrollable}
+
+-   $\textbf{y}'\textbf{y}$
+
+-   $\textbf{y}' \cdot \textbf{y}$
+
+. . .
+
+$$
+=\begin{bmatrix}
+1 & 2 & 3
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+2 \\
+3 \\
+\end{bmatrix}
+$$
+
+. . .
+
+$$
+=\begin{bmatrix}
+(1\times1) + (2\times2) + (3\times3)\\
+\end{bmatrix} \\= [14]
+$$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+t(y)%*%y
+```
+
+## Linear Algebra
+
+When can we do matrix multiplication?
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+first=t(y)
+dim(first)
+```
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+second=y
+dim(second)
+```
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+#When this is true
+  ncol(first)==nrow(second)
+```
+
+
+```{=html}
+<span><center>(1 x 3) (3 x 1)</center></span>
+```
+
+## Linear Algebra
+
+Note that 
+
+$\textbf{y}'\textbf{y} \neq \textbf{y}\textbf{y}'$
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+t(y)%*%y
+
+y%*%t(y)
+```
+
+
+## Elephant Linear Regression Example {.scrollable}
+
+#### Categorical Variable
+
+
+```{r echo=TRUE,eval=TRUE}
+dat = read.csv("elephant.study2.csv")
+head(dat[,1:2], n = 3)
+```
+
+## Elephant Linear Regression Example {.scrollable}
+
+#### Categorical Variable
+
+```{r echo=TRUE,eval=TRUE}
+model = glm(weight~sex, data=dat,family=gaussian(link = identity))
+summary(model)
+```
+
+
+## Elephant Linear Regression Example {.scrollable}
+
+#### Categorical Variable
+
+$x_{2}$ as an indicator of sex, female (0) or male (1)
+
+$x_{3}$ elephant age 
+
+::: {.fragment}
+$$
+\textbf{weight} \sim \text{Normal}(\boldsymbol{\mu},\sigma)\\ \\
+\boldsymbol{\mu} =\textbf{X}\boldsymbol{\beta} = 
+\begin{bmatrix}
+\beta_0 + (\beta_1\times 1) + (\beta_2\times 10) \\
+\beta_0 + (\beta_1\times 0) + (\beta_2\times 12) \\
+\beta_0 + (\beta_1\times 0) + (\beta_2\times 15) \\
+\end{bmatrix}\\
+$$
+:::
+
+::: {.fragment}
+
+$$
+\hat{\boldsymbol{\mu}} = \textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+2552.82 + (6828.96\times 1) + (145.74\times 10) \\
+2552.82 + (6828.96\times 0) + (145.74\times 12) \\
+2552.82 + (6828.96\times 0) + (145.74\times 15) \\
+\end{bmatrix}\\
+$$
+:::
+
+::: {.fragment}
+$$
+\hat{\boldsymbol{\mu}} = \textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+2552.82 + 6828.96 + 1457.4 \\
+2552.82 + 0 + 1748.88 \\
+2552.82 + 0 + 2186.1 \\
+\end{bmatrix}\\
+$$
+:::
+
+::: {.fragment}
+
+$$
+\hat{\boldsymbol{\mu}} = \textbf{X}\hat{\boldsymbol{\beta}} = 
+\begin{bmatrix}
+10401.98     \\
+6779.52 \\
+5322.02 \\
+\end{bmatrix}\\
+$$
+
+:::
+
+::: {.fragment}
+
+**So, what does $\beta_1$ mean?**
+
+:::
+
+## glm and design matix
+
+```{r, eval=TRUE, echo=TRUE}
+# GLM coefs
+  X = model.matrix(~sex+age.years,data=dat)
+  head(X)
+  glm(weight~0+X,data=dat)
+```
+
+
+## MLE Estimator with Linear Algebra
+
+$$
+\hat{\boldsymbol{\beta}} = (\textbf{X}'\textbf{X})^{-1}\textbf{X}'\textbf{y}
+$$
+
+::: {.fragment}
+
+
+```{r, eval=TRUE, echo=FALSE}
+# GLM coefs
+  coef(glm(weight~0+X,data=dat))
+```
+
+:::
+
+<br>
+
+::: {.fragment}
+
+```{r, eval=TRUE, echo=TRUE}
+# Linear Algebra Maximum Likelihood Estimate
+  y=dat$weight
+  c(solve(t(X)%*%X)%*%t(X)%*%y)
+```
+
+:::
+
+## Link functions {.scrollable}
+
+- $\text{g}(\boldsymbol{\mu}) = \textbf{X}\boldsymbol{\beta}$
+
+- $\boldsymbol{\mu} = \text{g}^{-1}(\textbf{X}\boldsymbol{\beta})$
+
+. . .
+
+Link functions map parameters from one <span style="color:red">support</span> to another.
+
+. . .
+
+<br>
+
+<span style="color:blue">Why is that important for us?</span>
+
+<br>
+
+. . .
+
+To put a linear model on parameters of interest and ensure the parameter support is maintained.
+
+```{r, eval=TRUE, echo=FALSE}
+   n=100
+   set.seed(43243)
+  x=rnorm(n,1,0.6)
+  p=0.2+0.3*x+rnorm(n,0,0.05)
+  plot(x,p,xlab="Variable",ylab="Probability",
+       ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
+    abline(h=c(0,1),lwd=3,col='purple')
+```
+
+. . . 
+
+```{r, eval=TRUE, echo=FALSE}
+  plot(x,p,xlab="Variable",ylab="Probability",
+       ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
+  abline(h=c(0,1),lwd=3,col='purple')
+
+  #abline(glm(p~x),lwd=3,col=2)
+  newdata=data.frame(x=seq(-1,3,by=0.25))
+  a=predict(glm(p~x),newdata = newdata,se.fit = TRUE)
+  LCL=a$fit-a$se.fit*qnorm(0.025)
+  UCL=a$fit-a$se.fit*qnorm(0.975)
+  lines(newdata$x,a$fit,lwd=3,col=2)
+  lines(newdata$x,LCL,lwd=3,col=3)
+  lines(newdata$x,UCL,lwd=3,col=3)
+```
+
+
+. . .
+
+<br>
+
+Computers do not like boundaries (e.g., 0 or 1). It's easier to **guess** values to evaluate in a maximum liklihood optimization when there are no bounds. ($-\infty$, $\infty$)
+
+## Link functions {.scrollable}
+
+### <span style="color:blue">Identity </span>
+$\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}$
+
+
+
+#### Linear Regression
+
+$$
+\begin{align*}
+\textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma]\\
+[\textbf{y}|\boldsymbol{\mu},\sigma]=& \text{Normal}(\boldsymbol{\mu},\sigma)\\
+\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta}
+\end{align*}
+$$
+
+
+No transformation is needed because the parameter support is maintained.
+$$
+\begin{align*}
+\mu \in& (-\infty,\infty)\\
+\textbf{X}\boldsymbol{\beta} \in& (-\infty,\infty)
+\end{align*}
+$$
+
+## Linear Regression Simulation {.scrollable}
+
+```{r, eval=TRUE,echo=TRUE}
+#Design matrix
+  set.seed(6454)
+  Var1 = seq(0,20,by=1)+rnorm(21,0,2)
+  X = model.matrix(~Var1)
+  head(X)
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+#Marginal Coefficients  
+  beta = matrix(c(0,5))
+
+#linear terms
+  lt = X%*%beta
+
+#mu (link function)
+  mu = lt*1
+
+# Plot relationship b/w mean (mu) and variable of interest
+  plot(X[,2],mu,type="l",lwd=4)  
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+#sample
+  set.seed(5435)
+  sigma = 3
+  y = rnorm(length(mu),mu,sd=sigma)
+  y
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+# Plot relationship b/w mean (mu) and variable of interest
+  plot(X[,2],mu,type="l",lwd=4)  
+  points(X[,2],y,pch=18,col=2,cex=2)
+```
+
+## Linear Regression Estimation {.scrollable}
+```{r, eval=TRUE, echo=TRUE}
+# Fit model to sample
+  model1=glm(y~0+X,family = gaussian(link = "identity"))
+```
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+  summary(model1)
+```
+
+<br>
+
+. . .
+
+```{r,echo = TRUE}
+library(equatiomatic)
+extract_eq(model1)
+```
+
+## Linear Regression Evaluation {.scrollable}
+
+```{r, eval=TRUE, echo=TRUE}
+ #sample many times  
+  y.many = replicate(1000,rnorm(length(mu),mean=c(mu), sd=sigma))
+  dim(y.many)
+  
+ #Estimate coefs for all 100 samples
+  coef.est=apply(y.many,2,FUN=function(y){
+              model1=glm(y~0+X,family = gaussian(link = "identity"))
+              model1$coefficients
+  })
+
+  dim(coef.est)
+```
+
+<br>
+
+. . .
+
+```{r, eval=TRUE, echo=FALSE}  
+  plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
+       main=bquote("Sampling Distribution"~beta[0]),
+       xlab=bquote(beta[0]))
+      abline(v=beta[1],col=2,lwd=4)
+      legend("topright",lwd=3,col=2,legend="True Value")
+  plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
+       main=bquote("Sampling Distribution"~beta[1]),
+       xlab=bquote(beta[1]))
+  abline(v=beta[2],col=2,lwd=4)
+    legend("topright",lwd=3,col=2,legend="True Value")
+```
+
+
+## A Model by another name {.scrollable}
+
+<style>
+td {
+  font-size: 23px
+}
+</style>
+
+| Model Name|$[y|\boldsymbol{\theta}]$| Link|
+|-----------|-------------------------|-----|
+| ANOVA ($x_{1}$ is categorical/multiple levels) | Normal        | identity | 
+| ANCOVA ($x_{1}$ is categorical, $x_{2}$ is continuous))              | Normal        | identity |
+| t-test ($x_{1}$ is categorical with 2 levels)      | Normal        | identity |
+| Linear Regression $x_{1}$ is continuous   | Normal        | identity |
+| Multiple Linear Regression $x_{p}$ is continuous   | Normal        | identity |
+| Logistic Regression  | Binomial      | logit    |
+| Probit Regression    | Binomial      | probit   |
+| Log-linear Regression| Poisson       | log      |
+| Poisson Regression   | Poisson       | log      |
+| Survival Analysis    | Exponential   | log      | 
+| Inverse Polynomial  | Gamma         | Reciprocal|
+
+: {tbl-colwidths="\[60,10,10\]"}
+
+[Nelder and Wedderburn (1972)](https://www.jstor.org/stable/2344614)
+
+
+
+
+## Logistic Regression (logit link) {.scrollable}
+
+
+$$
+\begin{align*}
+\textbf{y}\sim& [\textbf{y}|N,\boldsymbol{p}]\\
+\end{align*}
+$$
+
+::: {.fragment}
+
+$$
+\begin{align*}
+[\textbf{y}|N,\boldsymbol{p}] =& \text{Binomial}(N,\boldsymbol{p})
+\end{align*}
+$$
+
+:::
+
+::: {.fragment}
+$$
+\begin{align*}
+\text{g}(\boldsymbol{p}) =& \text{logit}(\boldsymbol{p}) = \text{log}(\frac{\boldsymbol{p}}{1-\boldsymbol{p}})
+\end{align*}
+$$
+
+::: 
+
+
+## inverse-logit (expit)
+
+$$
+\boldsymbol{p} = g^{-1}(\boldsymbol{\textbf{X}\boldsymbol{\beta}}) = \text{logit}^{-1}(\textbf{X}\boldsymbol{\beta}) = \frac{e^{\textbf{X}\boldsymbol{\beta}}}{e^{\textbf{X}\boldsymbol{\beta}}+1}
+$$
+
+## Logistic Regression
+
+#### Full model
+
+$$
+\begin{align*}
+\textbf{y} \sim& \text{Binomial}(N,\boldsymbol{p})\\
+\text{logit}(\boldsymbol{p}) =& \textbf{X}\boldsymbol{\beta}
+\end{align*}
+$$
+::: {.fragment}
+
+<span style="color:blue">Remember,</span>
+<br>
+$\boldsymbol{p} \in [0,1]$
+
+$\textbf{X}\boldsymbol{\beta} \in (-\infty,\infty)$
+
+:::
+
+## logit/p mapping {.scrollable}
+
+```{r, eval=TRUE,echo=TRUE, fig.align='center'}
+p=seq(0.001,0.999,by=0.01)
+logit.p=qlogis(p)
+par(cex.lab=1.5,cex.axis=1.5)
+plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
+
+```
+
+## Logistic Regression Simulation {.scrollable}
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE, fig.align='center'}
+#Design matrix
+  set.seed(43534)
+  Var1 = rnorm(100)
+  X = model.matrix(~Var1)
+  head(X)
+```  
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE, fig.align='center'}
+# marginal coefficients (on logit-scale)
+  beta=c(-2,4)
+
+#linear terms
+  lt = X%*%beta
+
+#transformation via link function to probability scale
+  p=plogis(lt)
+  head(round(p,digits=2))
+
+#sample
+  set.seed(14353)
+  y = rbinom(n=length(p),size=1,p)
+  y
+```
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE, fig.align='center'}
+#Plot the linear 'terms'  and explantory variable
+  par(cex.lab=1.2,cex.axis=1.2)
+  plot(Var1,lt,type="b",lwd=3,col=2,
+       xlab="x",ylab="Linear Terms (logit-value)")  
+
+  index=order(Var1)
+  plot(Var1[index],p[index],type="b",lwd=3,col=2,xlab="x",ylab="Probability")  
+```
+
+## Logistic Regression Estimation {.scrollable}
+```{r, eval=TRUE, echo=TRUE}
+# Fit model to sample 
+  model1=glm(y~0+X, family = binomial(link = "logit"))
+  summary(model1)
+```
+
+## Logistic Regression Evaluation {.scrollable}
+
+```{r, eval=TRUE, echo=TRUE}
+ #sample many times  
+  n.sim=1000
+  y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))
+  dim(y.many)
+  
+ #Estimate coefs for all 100 samples
+  coef.est=apply(y.many,2,FUN=function(y){
+          model1=glm(y~0+X, family = binomial(link = "logit"))
+          
+  model1$coefficients
+  })
+
+  dim(coef.est)
+```
+
+
+<br>
+
+. . .
+
+## Plot Intercept
+```{r, eval=TRUE, echo=FALSE}  
+  plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
+       main=bquote("Sampling Distribution"~beta[0]),
+       xlab=bquote(beta[0]))
+      abline(v=beta[1],col=2,lwd=4)
+            legend("topright",lwd=3,col=2,legend="True Value")
+```
+
+## Plot Slope
+```{r, eval=TRUE, echo=FALSE}  
+  plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
+       main=bquote("Sampling Distribution"~beta[1]),
+       xlab=bquote(beta[0]))
+  abline(v=beta[2],col=2,lwd=4)
+        legend("topright",lwd=3,col=2,legend="True Value")
+```
+
+## Evaluate Sampling Distributions
+
+Is our model biased?
+
+```{r, eval=TRUE, echo=TRUE}  
+# Relative Bias
+  (mean(coef.est[1,])-beta[1])/beta[1]
+  (mean(coef.est[2,])-beta[2])/beta[2]
+```
+
+## Evaluate Sampling Distributions
+
+Are we going to estimate the sign of the coef correctly?
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating a coef sign correctly
+  length(which(coef.est[1,]<0))/n.sim
+  length(which(coef.est[2,]>0))/n.sim
+```
+
+## Evaluate Sampling Distributions
+
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating the slope 2x the truth
+    length(which(coef.est[2,]>2*beta[2]))/n.sim
+```
+
+## Evaluate Sampling Distributions
+
+```{r, eval=TRUE, echo=TRUE}  
+# Probability of estimating the slope within 1
+length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim
+```
+
+

@@ -1,0 +1,47 @@
+---
+title: ""
+---
+
+## Week 4
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: <a href="/FW680A4/glm1.qmd">Genaralized Linear Models (GLM) I</a>
+
+-   Lecture Code: 
+
+#### [Assigned]{style="color:red;"}
+
+-   Readings for next class: 
+    - 
+    - 
+
+- Background Reading (not required): 
+  - 
+  - 
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: <a href="/FW680A4/glm2.qmd">Genaralized Linear Models (GLM) II</a>
+
+-   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+  
+```
+
+#### [Assigned]{style="color:red;"}
+
+
+
+
+
+

@@ -2951,7 +2951,7 @@
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nDeterministic Functions / GLM I\n\n\n\n\n\n \nFr\n13-Sep\nGLM II\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\n\n\n\n\n \nFr\n13-Sep\nGLM II\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -4834,14 +4834,14 @@
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",
@@ -5668,5 +5668,390 @@
     "title": "Linear Regression",
     "section": "",
     "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
+  },
+  {
+    "objectID": "FW680A4/week4.html",
+    "href": "FW680A4/week4.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Genaralized Linear Models (GLM) I\nLecture Code:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: Genaralized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+  },
+  {
+    "objectID": "FW680A4/week4.html#week-3",
+    "href": "FW680A4/week4.html#week-3",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+  },
+  {
+    "objectID": "FW680A4/week4.html#week-4",
+    "href": "FW680A4/week4.html#week-4",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Genaralized Linear Models (GLM) I\nLecture Code:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: Genaralized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#why-model-data",
+    "href": "FW680A4/glm1.html#why-model-data",
+    "title": "Generalized Linear Models",
+    "section": "Why model data?",
+    "text": "Why model data?\n\n\nIn ecology, we use models to,\n\ndescribe relationships among outcomes and processes\nto estimate hidden (latent) processes\npredict future outcomes, such as responses to management\n\n\n\nHistorically, ecologists focused mainly on hypothesis testing.\n\n\n\n “We found no correlation b/w bird richness and canopy cover (p &gt; 0.05)” [naked p-value]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#glm",
+    "href": "FW680A4/glm1.html#glm",
+    "title": "Generalized Linear Models",
+    "section": "GLM",
+    "text": "GLM\n\nGeneralized linear model framework using matrix notation\n\n\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma] \\\\\n\\text{g}(\\boldsymbol{\\mu}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#glm-1",
+    "href": "FW680A4/glm1.html#glm-1",
+    "title": "Generalized Linear Models",
+    "section": "GLM",
+    "text": "GLM\n\nGeneralized linear model framework\n\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma] \\\\\n\\text{g}(\\boldsymbol{\\mu}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nElements\n\n\nprob. function to define the RV (\\(\\textbf{y}\\))\nparameters of the prob. function (\\(\\boldsymbol{\\mu},\\sigma\\))\nlink function (\\(\\text{g}(\\boldsymbol{\\mu})\\)); deterministic transformation of parameters to new scale\ninverse-link function (\\(\\text{g}^{-1}(\\boldsymbol{\\textbf{X}\\boldsymbol{\\beta}})\\)); deterministic transformation of linear combination back to parameter scale\ndesign matrix of the explanatory variables (\\(\\textbf{X}\\)); these are known\ncoefficient parameters (\\(\\boldsymbol{\\beta}\\)); needs estimating"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-index-notation",
+    "href": "FW680A4/glm1.html#linear-regression-index-notation",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Index Notation",
+    "text": "Linear Regression Index Notation\n\\[\ny_{i} = \\beta_0+\\beta_1 x_i + \\epsilon_i \\\\ \\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-index-notation-better",
+    "href": "FW680A4/glm1.html#linear-regression-index-notation-better",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Index Notation (better)",
+    "text": "Linear Regression Index Notation (better)\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{i}\n\\end{align*}\n\\] . . .\n\\[\\mu_{i} = 1 + 0.5 \\times x_{i}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nPlot many replicates of y\n\n\n[1]   21 1000\n\n\n. . ."
+  },
+  {
+    "objectID": "FW680A4/glm1.html#vector-notation",
+    "href": "FW680A4/glm1.html#vector-notation",
+    "title": "Generalized Linear Models",
+    "section": "Vector Notation",
+    "text": "Vector Notation\n\nRow vectors\n\n\n\\(\\textbf{y} \\equiv (y_1, y_2, . . ., y_n)\\)\n\n\n\ny &lt;- matrix(c(1,2,3),nrow=1,ncol=3)\ny\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n\n\n\n\n\n\nColumn vectors\n\n\n\\(\\textbf{y} \\equiv (y_1, y_2, . . ., y_n)'\\)\n\n\n\n\ny &lt;- matrix(c(1,2,3),nrow=3,ncol=1)\ny\n\n     [,1]\n[1,]    1\n[2,]    2\n[3,]    3"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#vector-notation-1",
+    "href": "FW680A4/glm1.html#vector-notation-1",
+    "title": "Generalized Linear Models",
+    "section": "Vector Notation",
+    "text": "Vector Notation\n\nColumn vectors\n\n\n\\(\\textbf{x} \\equiv (x_1, x_2, . . ., x_n)'\\)\n\n\nx &lt;- matrix(c(0.5,1,-2),nrow=3,ncol=1)\nx\n\n     [,1]\n[1,]  0.5\n[2,]  1.0\n[3,] -2.0"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#vector-notation-2",
+    "href": "FW680A4/glm1.html#vector-notation-2",
+    "title": "Generalized Linear Models",
+    "section": "Vector Notation",
+    "text": "Vector Notation\n\nColumn vectors\n\n\n\\(\\boldsymbol{\\beta} \\equiv (\\beta_1,\\beta_2,...,\\beta_p)'\\)\n\n\np=3\nbeta &lt;- matrix(c(0,-2,2),nrow=p,ncol=1)\nbeta\n\n     [,1]\n[1,]    0\n[2,]   -2\n[3,]    2"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#vector-notation-3",
+    "href": "FW680A4/glm1.html#vector-notation-3",
+    "title": "Generalized Linear Models",
+    "section": "Vector Notation",
+    "text": "Vector Notation\n\nColumn vectors\n\n\n\\(\\mathbf{1} \\equiv (1,1,...,1)'\\)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#matrix-notation",
+    "href": "FW680A4/glm1.html#matrix-notation",
+    "title": "Generalized Linear Models",
+    "section": "Matrix Notation",
+    "text": "Matrix Notation\n\n\\(\\textbf{X}\\equiv (\\textbf{x}_1,\\textbf{x}_2,...,\\textbf{x}_p)\\)\n\n\n\np=3\nX &lt;- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE)\nX\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-algebra",
+    "href": "FW680A4/glm1.html#linear-algebra",
+    "title": "Generalized Linear Models",
+    "section": "Linear Algebra",
+    "text": "Linear Algebra\n\\(\\text{g}(\\boldsymbol{\\mu}) = \\textbf{X}\\boldsymbol{\\beta}\\)\n\n\\(\\textbf{X}\\) is called the Design Matrix.\n\\(\\boldsymbol{\\beta}\\) is a vector of coefficients.\n\n\\[\n\\textbf{X}=\n\\begin{bmatrix}\n1 & x_{1,2} & x_{1,3} \\\\\n1 & x_{2,2} & x_{2,3} \\\\\n1 & x_{3,2} & x_{3,3}\n\\end{bmatrix}\n\\boldsymbol{\\beta} =\n\\begin{bmatrix}\n\\beta_0  \\\\\n\\beta_1 \\\\\n\\beta_2   \n\\end{bmatrix}\n\\]\n\n\n\\[\n\\textbf{X}\\boldsymbol{\\beta} =\n\\begin{bmatrix}\n\\beta_0\\times 1 + \\beta_1\\times x_{1,2} + \\beta_2\\times x_{1,3} \\\\\n\\beta_0\\times 1 + \\beta_1\\times x_{2,2} + \\beta_2\\times x_{2,3} \\\\\n\\beta_0\\times 1 + \\beta_1\\times x_{3,2} + \\beta_2\\times x_{3,3} \\\\\n\\end{bmatrix}\\\\\n\\]\n\n\n\\[\n\\textbf{X}\\boldsymbol{\\beta} =\n\\begin{bmatrix}\n\\beta_0 + \\beta_1 x_{1,2} + \\beta_2 x_{1,3} \\\\\n\\beta_0 + \\beta_1 x_{2,2} + \\beta_2 x_{2,3} \\\\\n\\beta_0 + \\beta_1 x_{3,2} + \\beta_2 x_{3,3} \\\\\n\\end{bmatrix}\\\\\n\\]\n\\[\n\\text{g}(\\boldsymbol{\\mu}) = \\textbf{X}\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\text{lt}_{1} \\\\\n\\text{lt}_{2} \\\\\n\\text{lt}_{3}\n\\end{bmatrix}\n\\] lt = linear terms\n\n\n\\[\n\\boldsymbol{\\mu} = \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\ = \\textbf{X}\\boldsymbol{\\beta}  / 1= \\begin{bmatrix}\n\\text{lt}_{1}/1 \\\\\n\\text{lt}_{2}/1 \\\\\n\\text{lt}_{3}/1\n\\end{bmatrix}\n\\]\n\n\n\\[\n\\boldsymbol{\\mu} = \\textbf{X}\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\mu_{1} \\\\\n\\mu_{2} \\\\\n\\mu_{3}\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-algebra-1",
+    "href": "FW680A4/glm1.html#linear-algebra-1",
+    "title": "Generalized Linear Models",
+    "section": "Linear Algebra",
+    "text": "Linear Algebra\n\n\\(\\textbf{y}'\\textbf{y}\\)\n\\(\\textbf{y}' \\cdot \\textbf{y}\\)\n\n\n\\[\n=\\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}\n\\begin{bmatrix}\n1 \\\\\n2 \\\\\n3 \\\\\n\\end{bmatrix}\n\\]\n\n\n\\[\n=\\begin{bmatrix}\n(1\\times1) + (2\\times2) + (3\\times3)\\\\\n\\end{bmatrix} \\\\= [14]\n\\]\n\n\n\nt(y)%*%y\n\n     [,1]\n[1,]   14"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-algebra-2",
+    "href": "FW680A4/glm1.html#linear-algebra-2",
+    "title": "Generalized Linear Models",
+    "section": "Linear Algebra",
+    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 3 1\n\n\n\n\n\n#When this is true\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-algebra-3",
+    "href": "FW680A4/glm1.html#linear-algebra-3",
+    "title": "Generalized Linear Models",
+    "section": "Linear Algebra",
+    "text": "Linear Algebra\nNote that\n\\(\\textbf{y}'\\textbf{y} \\neq \\textbf{y}\\textbf{y}'\\)\n\n\nt(y)%*%y\n\n     [,1]\n[1,]   14\n\ny%*%t(y)\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    2    4    6\n[3,]    3    6    9"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#elephant-linear-regression-example",
+    "href": "FW680A4/glm1.html#elephant-linear-regression-example",
+    "title": "Generalized Linear Models",
+    "section": "Elephant Linear Regression Example",
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\ndat = read.csv(\"elephant.study2.csv\")\nhead(dat[,1:2], n = 3)\n\n     weight    sex\n1 11488.991   Male\n2  4105.442 Female\n3  4299.308 Female"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#link-functions",
+    "href": "FW680A4/glm1.html#link-functions",
+    "title": "Generalized Linear Models",
+    "section": "Link functions",
+    "text": "Link functions\n\n\\(\\text{g}(\\boldsymbol{\\mu}) = \\textbf{X}\\boldsymbol{\\beta}\\)\n\\(\\boldsymbol{\\mu} = \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\)\n\n\nLink functions map parameters from one support to another.\n\n\n\nWhy is that important for us?\n\n\n\nTo put a linear model on parameters of interest and ensure the parameter support is maintained.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputers do not like boundaries (e.g., 0 or 1). It’s easier to guess values to evaluate in a maximum liklihood optimization when there are no bounds. (\\(-\\infty\\), \\(\\infty\\))"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#link-functions-1",
+    "href": "FW680A4/glm1.html#link-functions-1",
+    "title": "Generalized Linear Models",
+    "section": "Link functions",
+    "text": "Link functions\nIdentity \n\\(\\text{g}(\\boldsymbol{\\mu}) = \\mathbf{1}'\\boldsymbol{\\mu}\\)\nLinear Regression\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nNo transformation is needed because the parameter support is maintained. \\[\n\\begin{align*}\n\\mu \\in& (-\\infty,\\infty)\\\\\n\\textbf{X}\\boldsymbol{\\beta} \\in& (-\\infty,\\infty)\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-simulation",
+    "href": "FW680A4/glm1.html#linear-regression-simulation",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Simulation",
+    "text": "Linear Regression Simulation\n\n#Design matrix\n  set.seed(6454)\n  Var1 = seq(0,20,by=1)+rnorm(21,0,2)\n  X = model.matrix(~Var1)\n  head(X)\n\n  (Intercept)     Var1\n1           1 1.871755\n2           1 1.965267\n3           1 3.221875\n4           1 1.761916\n5           1 3.627037\n6           1 8.805140\n\n\n\n\n#Marginal Coefficients  \n  beta = matrix(c(0,5))\n\n#linear terms\n  lt = X%*%beta\n\n#mu (link function)\n  mu = lt*1\n\n# Plot relationship b/w mean (mu) and variable of interest\n  plot(X[,2],mu,type=\"l\",lwd=4)  \n\n\n\n\n\n\n\n\n\n\n\n#sample\n  set.seed(5435)\n  sigma = 3\n  y = rnorm(length(mu),mu,sd=sigma)\n  y\n\n [1]  13.51028  10.74365  17.12227  10.72545  17.98375  44.88165  29.59957\n [8]  47.05866  49.08274  34.52391  25.02376  54.88971  55.74619  63.30454\n[15]  67.55550  87.75727  83.90235  70.66524  99.03730 103.14573  79.35456\n\n\n\n\n\n# Plot relationship b/w mean (mu) and variable of interest\n  plot(X[,2],mu,type=\"l\",lwd=4)  \n  points(X[,2],y,pch=18,col=2,cex=2)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-estimation",
+    "href": "FW680A4/glm1.html#linear-regression-estimation",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Estimation",
+    "text": "Linear Regression Estimation\n\n# Fit model to sample\n  model1=glm(y~0+X,family = gaussian(link = \"identity\"))\n\n\n\n  summary(model1)\n\n\nCall:\nglm(formula = y ~ 0 + X, family = gaussian(link = \"identity\"))\n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \nX(Intercept)   1.2914     1.4716   0.878    0.391    \nXVar1          4.8688     0.1254  38.839   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 11.43063)\n\n    Null deviance: 71532.62  on 21  degrees of freedom\nResidual deviance:   217.18  on 19  degrees of freedom\nAIC: 114.66\n\nNumber of Fisher Scoring iterations: 2\n\n\n\n\n\n\nlibrary(equatiomatic)\nextract_eq(model1)\n\n\\[\nE( \\operatorname{y} ) = \\beta_{1}(\\operatorname{X}_{\\operatorname{(Intercept)}}) + \\beta_{2}(\\operatorname{X}_{\\operatorname{Var1}})\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-evaluation",
+    "href": "FW680A4/glm1.html#linear-regression-evaluation",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Evaluation",
+    "text": "Linear Regression Evaluation\n\n #sample many times  \n  y.many = replicate(1000,rnorm(length(mu),mean=c(mu), sd=sigma))\n  dim(y.many)\n\n[1]   21 1000\n\n #Estimate coefs for all 100 samples\n  coef.est=apply(y.many,2,FUN=function(y){\n              model1=glm(y~0+X,family = gaussian(link = \"identity\"))\n              model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logit-link",
+    "href": "FW680A4/glm1.html#logit-link",
+    "title": "Generalized Linear Models",
+    "section": "logit link",
+    "text": "logit link\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|N,\\boldsymbol{p}]\\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n[\\textbf{y}|N,\\boldsymbol{p}] =& \\text{Binomial}(N,\\boldsymbol{p})\n\\end{align*}\n\\] . . .\n\\[\n\\begin{align*}\n\\text{g}(\\boldsymbol{p}) =& \\text{logit}(\\boldsymbol{p}) = \\text{log}(\\frac{\\boldsymbol{p}}{1-\\boldsymbol{p}})\n\\end{align*}\n\\] . . .\ninverse-logit (expit)\n\\[\n\\boldsymbol{p} = g^{-1}(\\boldsymbol{\\textbf{X}\\boldsymbol{\\beta}}) = \\text{logit}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) = \\frac{e^{\\textbf{X}\\boldsymbol{\\beta}}}{e^{\\textbf{X}\\boldsymbol{\\beta}}+1}\n\\]\n. . .\n\nFull model more simply as,\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,\\boldsymbol{p})\\\\\n\\text{logit}(\\boldsymbol{p}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\] . . .\nRemember,  \\(\\boldsymbol{p} \\in [0,1]\\)\n\\(\\textbf{X}\\boldsymbol{\\beta} \\in (-\\infty,\\infty)\\)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logitp-mapping",
+    "href": "FW680A4/glm1.html#logitp-mapping",
+    "title": "Generalized Linear Models",
+    "section": "logit/p mapping",
+    "text": "logit/p mapping\n\np=seq(0.001,0.999,by=0.01)\nlogit.p=qlogis(p)\npar(cex.lab=1.5,cex.axis=1.5)\nplot(p,logit.p,type=\"l\",lwd=4,col=3,xlab='p',ylab=\"logit(p)\")"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression-simulation",
+    "href": "FW680A4/glm1.html#logistic-regression-simulation",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Simulation",
+    "text": "Logistic Regression Simulation\n\n\n#Design matrix\n  set.seed(43534)\n  Var1 = rnorm(100)\n  X = model.matrix(~Var1)\n  head(X)\n\n  (Intercept)       Var1\n1           1  1.4371396\n2           1 -0.4835090\n3           1  1.0370452\n4           1 -0.5894099\n5           1  1.2633564\n6           1 -1.9008071\n\n\n\n\n\n# marginal coefficients (on logit-scale)\n  beta=c(-2,4)\n\n#linear terms\n  lt = X%*%beta\n\n#transformation via link function to probability scale\n  p=plogis(lt)\n  head(round(p,digits=2))\n\n  [,1]\n1 0.98\n2 0.02\n3 0.90\n4 0.01\n5 0.95\n6 0.00\n\n#sample\n  set.seed(14353)\n  y = rbinom(n=length(p),size=1,p)\n  y\n\n  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0\n [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0\n [75] 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0\n\n\n\n\n\n#Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression-estimation",
+    "href": "FW680A4/glm1.html#logistic-regression-estimation",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Estimation",
+    "text": "Logistic Regression Estimation\n\n# Fit model to sample \n  model1=glm(y~0+X, family = binomial(link = \"logit\"))\n  summary(model1)\n\n\nCall:\nglm(formula = y ~ 0 + X, family = binomial(link = \"logit\"))\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \nX(Intercept)  -2.5304     0.6473  -3.909 9.25e-05 ***\nXVar1          5.4198     1.2232   4.431 9.38e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 138.63  on 100  degrees of freedom\nResidual deviance:  39.14  on  98  degrees of freedom\nAIC: 43.14\n\nNumber of Fisher Scoring iterations: 7"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression-evaluation",
+    "href": "FW680A4/glm1.html#logistic-regression-evaluation",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Evaluation",
+    "text": "Logistic Regression Evaluation\n\n #sample many times  \n  n.sim=1000\n  y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))\n  dim(y.many)\n\n[1]  100 1000\n\n #Estimate coefs for all 100 samples\n  coef.est=apply(y.many,2,FUN=function(y){\n          model1=glm(y~0+X, family = binomial(link = \"logit\"))\n          \n  model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#plot-intercept",
+    "href": "FW680A4/glm1.html#plot-intercept",
+    "title": "Generalized Linear Models",
+    "section": "Plot Intercept",
+    "text": "Plot Intercept"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#plot-slope",
+    "href": "FW680A4/glm1.html#plot-slope",
+    "title": "Generalized Linear Models",
+    "section": "Plot Slope",
+    "text": "Plot Slope"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#evaluate-sampling-distributions",
+    "href": "FW680A4/glm1.html#evaluate-sampling-distributions",
+    "title": "Generalized Linear Models",
+    "section": "Evaluate Sampling Distributions",
+    "text": "Evaluate Sampling Distributions\nIs our model biased?\n\n# Relative Bias\n  (mean(coef.est[1,])-beta[1])/beta[1]\n\n[1] 0.0879452\n\n  (mean(coef.est[2,])-beta[2])/beta[2]\n\n[1] 0.09751027"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#evaluate-sampling-distributions-1",
+    "href": "FW680A4/glm1.html#evaluate-sampling-distributions-1",
+    "title": "Generalized Linear Models",
+    "section": "Evaluate Sampling Distributions",
+    "text": "Evaluate Sampling Distributions\nAre we going to estimate the sign of the coef correctly?\n\n# Probability of estimating a coef sign correctly\n  length(which(coef.est[1,]&lt;0))/n.sim\n\n[1] 1\n\n  length(which(coef.est[2,]&gt;0))/n.sim\n\n[1] 1"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#evaluate-sampling-distributions-2",
+    "href": "FW680A4/glm1.html#evaluate-sampling-distributions-2",
+    "title": "Generalized Linear Models",
+    "section": "Evaluate Sampling Distributions",
+    "text": "Evaluate Sampling Distributions\n\n# Probability of estimating the slope 2x the truth\n    length(which(coef.est[2,]&gt;2*beta[2]))/n.sim\n\n[1] 0.013"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#evaluate-sampling-distributions-3",
+    "href": "FW680A4/glm1.html#evaluate-sampling-distributions-3",
+    "title": "Generalized Linear Models",
+    "section": "Evaluate Sampling Distributions",
+    "text": "Evaluate Sampling Distributions\n\n# Probability of estimating the slope within 1\nlength(which(coef.est[2,]&gt;=beta[2]-1 & coef.est[2,]&lt;=beta[2]+1))/n.sim\n\n[1] 0.741"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#a-model-by-another-name",
+    "href": "FW680A4/glm1.html#a-model-by-another-name",
+    "title": "Generalized Linear Models",
+    "section": "A Model by another name",
+    "text": "A Model by another name\n\n\n\n\n\n\n\n\n\nModel Name\n\\([y|\\boldsymbol{\\theta}]\\)\nLink\n\n\n\n\nANOVA (\\(x_{1}\\) is categorical/multiple levels)\nNormal\nidentity\n\n\nANCOVA (\\(x_{1}\\) is categorical, \\(x_{2}\\) is continuous))\nNormal\nidentity\n\n\nt-test (\\(x_{1}\\) is categorical with 2 levels)\nNormal\nidentity\n\n\nLinear Regression \\(x_{1}\\) is continuous\nNormal\nidentity\n\n\nMultiple Linear Regression \\(x_{p}\\) is continuous\nNormal\nidentity\n\n\nLogistic Regression\nBinomial\nlogit\n\n\nProbit Regression\nBinomial\nprobit\n\n\nLog-linear Regression\nPoisson\nlog\n\n\nPoisson Regression\nPoisson\nlog\n\n\nSurvival Analysis\nExponential\nlog\n\n\nInverse Polynomial\nGamma\nReciprocal\n\n\n\nNelder and Wedderburn (1972)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#multi-collinearity",
+    "href": "FW680A4/glm1.html#multi-collinearity",
+    "title": "Generalized Linear Models",
+    "section": "Multi-Collinearity",
+    "text": "Multi-Collinearity\n\n\nCorrelation among explantory variables\n\nCan happen when \\(r \\geq 0.28\\) or \\(r^2 \\geq 0.08\\)\ncauses inaccurate estimation\ndecreases statistical power\nleads to exclusion of important predictor variables"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#multi-collinearity-code",
+    "href": "FW680A4/glm1.html#multi-collinearity-code",
+    "title": "Generalized Linear Models",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\nlibrary(faux)\nn=100\nset.seed(543531)\nx.var &lt;- rnorm_multi(n = n, \n                  mu = c(10, 20),\n                  sd = c(1, 1),\n                  r = c(0), \n                  varnames = c(\"A\", \"B\"),\n                  empirical = FALSE)\n\nset.seed(54353)\nx.var.cor &lt;- rnorm_multi(n = n, \n                  mu = c(10, 20),\n                  sd = c(1, 1),\n                  r = c(0.8), \n                  varnames = c(\"A\", \"B\"),\n                  empirical = FALSE)\n\n#Correlation\n  cor(x.var)\n\n           A          B\nA 1.00000000 0.04340106\nB 0.04340106 1.00000000\n\n  cor(x.var.cor)\n\n          A         B\nA 1.0000000 0.8354425\nB 0.8354425 1.0000000"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#multi-collinearity-code-1",
+    "href": "FW680A4/glm1.html#multi-collinearity-code-1",
+    "title": "Generalized Linear Models",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\npar(mfrow=c(1,2))\n  plot(x.var.cor$A,x.var.cor$B)\n  plot(x.var$A,x.var$B)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#multi-collinearity-code-2",
+    "href": "FW680A4/glm1.html#multi-collinearity-code-2",
+    "title": "Generalized Linear Models",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\n#Design matrices\n  X.cor=model.matrix(~x.var.cor$A+x.var.cor$B)\n  X=model.matrix(~x.var$A+x.var$B)\n\n#True coefs  \n  beta=c(1,2,3)\n\n#Derive mu  \n  mu=X%*%beta\n  mu.cor=X.cor%*%beta\n\n#simulate data  \n  set.seed(54353)\n  y=rnorm(n,mu,2)\n  y.cor=rnorm(n,mu.cor,2)"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#model-estimates",
+    "href": "FW680A4/glm1.html#model-estimates",
+    "title": "Generalized Linear Models",
+    "section": "Model Estimates",
+    "text": "Model Estimates\n\nsummary(glm(y~0+X))\n\n\nCall:\nglm(formula = y ~ 0 + X)\n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \nX(Intercept)   0.3514     4.5494   0.077    0.939    \nXx.var$A       2.0619     0.2100   9.820 3.29e-16 ***\nXx.var$B       3.0029     0.2087  14.390  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 4.288366)\n\n    Null deviance: 645623.40  on 100  degrees of freedom\nResidual deviance:    415.97  on  97  degrees of freedom\nAIC: 434.33\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#model-estimates-1",
+    "href": "FW680A4/glm1.html#model-estimates-1",
+    "title": "Generalized Linear Models",
+    "section": "Model Estimates",
+    "text": "Model Estimates\n\nsummary(glm(y~0+X.cor))\n\n\nCall:\nglm(formula = y ~ 0 + X.cor)\n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \nX.cor(Intercept) 38.361082   7.926825   4.839 4.91e-06 ***\nX.corx.var.cor$A  0.002467   0.681426   0.004  0.99712    \nX.corx.var.cor$B  2.094430   0.634710   3.300  0.00135 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 13.3163)\n\n    Null deviance: 645623.4  on 100  degrees of freedom\nResidual deviance:   1291.7  on  97  degrees of freedom\nAIC: 547.64\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#objectives",
+    "href": "FW680A4/glm1.html#objectives",
+    "title": "Generalized Linear Models",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nGLM framework\nmatrix notation\nlink functions\nglm function"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression-notation",
+    "href": "FW680A4/glm1.html#linear-regression-notation",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression Notation",
+    "text": "Linear Regression Notation\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Normal}(\\boldsymbol{\\mu},\\sigma) \\\\\n\\boldsymbol{\\mu} =& \\text{g}(\\boldsymbol{\\mu}) = \\mathbf{1}'\\boldsymbol{\\mu} = \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n} &\n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#motivation",
+    "href": "FW680A4/glm1.html#motivation",
+    "title": "Generalized Linear Models",
+    "section": "Motivation",
+    "text": "Motivation\nGLMs:\n\nt-test\nANOVA\nANCOVA\nlinear regression\nlogistic / probit regression\nPoisson regression\nlog-linear regression\nSurvival Analysis\nAND MORE!"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#matrix-notation-1",
+    "href": "FW680A4/glm1.html#matrix-notation-1",
+    "title": "Generalized Linear Models",
+    "section": "Matrix Notation",
+    "text": "Matrix Notation\n\n\\(\\textbf{X}\\equiv (\\textbf{x}_1,\\textbf{x}_2,...,\\textbf{x}_p)\\)\n\n\n\np=3\nX &lt;- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE)\nX\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#linear-regression",
+    "href": "FW680A4/glm1.html#linear-regression",
+    "title": "Generalized Linear Models",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta} \\times 1\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n} &\n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-1",
+    "href": "FW680A4/glm1.html#elephant-linear-regression-example-1",
+    "title": "Generalized Linear Models",
+    "section": "Elephant Linear Regression Example",
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\nmodel = glm(weight~sex, data=dat,family=gaussian(link = identity))\nsummary(model)\n\n\nCall:\nglm(formula = weight ~ sex, family = gaussian(link = identity), \n    data = dat)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   4970.9      120.9   41.11   &lt;2e-16 ***\nsexMale       6848.1      180.2   37.99   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1608053)\n\n    Null deviance: 2639772182  on 199  degrees of freedom\nResidual deviance:  318394574  on 198  degrees of freedom\nAIC: 3429.7\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-2",
+    "href": "FW680A4/glm1.html#elephant-linear-regression-example-2",
+    "title": "Generalized Linear Models",
+    "section": "Elephant Linear Regression Example",
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\\(x_{2}\\) as an indicator of sex, female (0) or male (1)\n\\(x_{3}\\) elephant age\n\n\\[\n\\textbf{weight} \\sim \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\ \\\\\n\\boldsymbol{\\mu} =\\textbf{X}\\boldsymbol{\\beta} =\n\\begin{bmatrix}\n\\beta_0 + (\\beta_1\\times 1) + (\\beta_2\\times 10) \\\\\n\\beta_0 + (\\beta_1\\times 0) + (\\beta_2\\times 12) \\\\\n\\beta_0 + (\\beta_1\\times 0) + (\\beta_2\\times 15) \\\\\n\\end{bmatrix}\\\\\n\\]\n\n\n\\[\n\\hat{\\boldsymbol{\\mu}} = \\textbf{X}\\hat{\\boldsymbol{\\beta}} =\n\\begin{bmatrix}\n2552.82 + (6828.96\\times 1) + (145.74\\times 10) \\\\\n2552.82 + (6828.96\\times 0) + (145.74\\times 12) \\\\\n2552.82 + (6828.96\\times 0) + (145.74\\times 15) \\\\\n\\end{bmatrix}\\\\\n\\]\n\n\n\\[\n\\hat{\\boldsymbol{\\mu}} = \\textbf{X}\\hat{\\boldsymbol{\\beta}} =\n\\begin{bmatrix}\n2552.82 + 6828.96 + 1457.4 \\\\\n2552.82 + 0 + 1748.88 \\\\\n2552.82 + 0 + 2186.1 \\\\\n\\end{bmatrix}\\\\\n\\]\n\n\n\\[\n\\hat{\\boldsymbol{\\mu}} = \\textbf{X}\\hat{\\boldsymbol{\\beta}} =\n\\begin{bmatrix}\n10401.98     \\\\\n6779.52 \\\\\n5322.02 \\\\\n\\end{bmatrix}\\\\\n\\]\n\n\nSo, what does \\(\\beta_1\\) mean?"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#an-estimator-with-linear-algebra",
+    "href": "FW680A4/glm1.html#an-estimator-with-linear-algebra",
+    "title": "Generalized Linear Models",
+    "section": "An Estimator with Linear Algebra",
+    "text": "An Estimator with Linear Algebra\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\textbf{X}'\\textbf{X})^{-1}\\textbf{X}'\\textbf{y}\n\\]\n\n\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n\nX(Intercept)     XsexMale   Xage.years \n   2552.8203    6828.9645     145.7483 \n\n\n\n\n\n\n# Linear Algebra Coefs\n  y=dat$weight\n  c(solve(t(X)%*%X)%*%t(X)%*%y)\n\n[1] 2552.8203 6828.9645  145.7483"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-3",
+    "href": "FW680A4/glm1.html#elephant-linear-regression-example-3",
+    "title": "Generalized Linear Models",
+    "section": "Elephant Linear Regression Example",
+    "text": "Elephant Linear Regression Example\nCategorical Variable"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#glm-and-design-matix",
+    "href": "FW680A4/glm1.html#glm-and-design-matix",
+    "title": "Generalized Linear Models",
+    "section": "glm and design matix",
+    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#mle-estimator-with-linear-algebra",
+    "href": "FW680A4/glm1.html#mle-estimator-with-linear-algebra",
+    "title": "Generalized Linear Models",
+    "section": "MLE Estimator with Linear Algebra",
+    "text": "MLE Estimator with Linear Algebra\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\textbf{X}'\\textbf{X})^{-1}\\textbf{X}'\\textbf{y}\n\\]\n\n\n\nX(Intercept)     XsexMale   Xage.years \n   2552.8203    6828.9645     145.7483 \n\n\n\n\n\n\n# Linear Algebra Maximum Likelihood Estimate\n  y=dat$weight\n  c(solve(t(X)%*%X)%*%t(X)%*%y)\n\n[1] 2552.8203 6828.9645  145.7483"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression-logit-link",
+    "href": "FW680A4/glm1.html#logistic-regression-logit-link",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression (logit link)",
+    "text": "Logistic Regression (logit link)\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|N,\\boldsymbol{p}]\\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n[\\textbf{y}|N,\\boldsymbol{p}] =& \\text{Binomial}(N,\\boldsymbol{p})\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\n\\text{g}(\\boldsymbol{p}) =& \\text{logit}(\\boldsymbol{p}) = \\text{log}(\\frac{\\boldsymbol{p}}{1-\\boldsymbol{p}})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#inverse-logit-expit",
+    "href": "FW680A4/glm1.html#inverse-logit-expit",
+    "title": "Generalized Linear Models",
+    "section": "inverse-logit (expit)",
+    "text": "inverse-logit (expit)\n\\[\n\\boldsymbol{p} = g^{-1}(\\boldsymbol{\\textbf{X}\\boldsymbol{\\beta}}) = \\text{logit}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) = \\frac{e^{\\textbf{X}\\boldsymbol{\\beta}}}{e^{\\textbf{X}\\boldsymbol{\\beta}}+1}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression",
+    "href": "FW680A4/glm1.html#logistic-regression",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\nFull model\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,\\boldsymbol{p})\\\\\n\\text{logit}(\\boldsymbol{p}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\] ::: {.fragment}\nRemember,  \\(\\boldsymbol{p} \\in [0,1]\\)\n\\(\\textbf{X}\\boldsymbol{\\beta} \\in (-\\infty,\\infty)\\)\n:::"
   }
 ]

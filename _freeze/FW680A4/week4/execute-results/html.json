@@ -1,0 +1,15 @@
+{
+  "hash": "68b1804b6e0b7a3fcf1cf770ef8afd89",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n## Week 4\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n-   Lecture: <a href=\"/FW680A4/glm1.qmd\">Genaralized Linear Models (GLM) I</a>\n\n-   Lecture Code: \n\n#### [Assigned]{style=\"color:red;\"}\n\n-   Readings for next class: \n    - \n    - \n\n- Background Reading (not required): \n  - \n  - \n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Lecture: <a href=\"/FW680A4/glm2.qmd\">Genaralized Linear Models (GLM) II</a>\n\n-   Downloads: <a href=\"/classfiles/regressionlab/week3files.zip\">Files</a>\n\n-   Install R packages:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\n```\n:::\n\n\n#### [Assigned]{style=\"color:red;\"}\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
