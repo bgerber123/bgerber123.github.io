@@ -1,0 +1,521 @@
+---
+title:  <span style="color:black">Generalized Linear Models II <br><br><br><br></span>
+title-slide-attributes:
+   data-background-image: /img/pika.png
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+## Objectives
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 12px
+}
+</style>
+```
+
+-   Poisson Regression
+-   categorical variables
+-   variable interactions
+-   multicollinearity
+
+## Poisson Regression
+
+We model the counts of American pika ($y_{i}$) at each site $i = 1...n$ as a Poisson random variable with parameter $\lambda$ being a function of our $p$ site-level variables in  $n$ x $p$ design matrix ($\textbf{X}$) and coefficients $\boldsymbol{\beta}$ as,
+
+$$
+\begin{align*}
+\textbf{y} \sim & \text{Poisson}(\boldsymbol{\lambda})\\
+\text{log}(\boldsymbol{\lambda}) =& \textbf{X}\boldsymbol{\beta}\\
+\boldsymbol{\lambda} =& e^{\textbf{X}\boldsymbol{\beta}}.
+\end{align*}
+$$
+
+## Data  {.scrollable}
+
+```{r eval=TRUE,echo=FALSE}
+  n=120
+  site=as.factor(rep(c("Site 1","Site 2", "Site 3"),n/3))
+
+  
+  beta=c(1,-0.5,0.5)
+  X=model.matrix(~site)
+  lambda = exp(X%*%beta)
+  y = rpois(n, lambda)
+  dat=data.frame(y=y,site=site)
+  hist(dat$y,xlab="Pika Counts")  
+```
+
+## Counts by Site
+
+```{r echo=FALSE, echo=FALSE}
+library(ggplot2)
+  ggplot(dat, aes(x=y, fill=site)) +
+    geom_histogram( color="#e9ecef", alpha=0.6, position = 'identity') +
+    scale_fill_manual(values=c("#69b3a2", "#404080",
+                               "yellow")) +
+    labs(fill="")
+```
+
+## Fit Model {.scrollable}
+
+Interpret the Coefficients
+
+```{r eval=TRUE,echo=TRUE}
+model = glm(y~site,data=dat, 
+            family = poisson(link = 'log')
+            )
+summary(model)
+
+```
+
+## Numerical Optimization of Likelihood
+
+```{r eval=TRUE,echo=TRUE}
+model$converged
+model$method
+model$boundary
+model$iter
+model$control
+```
+
+
+## Side-Bar: Negative Log-Likelihood Function {.scrollable}
+
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
+  #Here is our negative log-likelihood function with three
+  #parameters - beta0, beta1, and beta2 (1)
+  #inputs = design matrix X
+  neg.log.like = function(par,X) {
+    
+    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]
+    
+    sum(-dpois(y,lambda = exp(lam),log = TRUE))
+  }
+```
+
+
+## Numerical Optim. for MLEs
+```{r, echo=TRUE, include=TRUE, eval=TRUE}
+#use optim with initial values and define the lower and upper limits of the possible values
+  fit1 <- optim(
+    par = c(0,0,0), #start
+    X=X,
+    fn = neg.log.like,
+    method = "L-BFGS-B",
+    lower = c(-10, -10, -10),
+    upper = c(10, 10, 10)
+  )
+
+```
+
+::: {.fragment}
+
+#### Comparison
+
+```{r, echo=FALSE, include=TRUE, eval=TRUE}
+a =rbind(fit1$par,
+      coef(model)
+      )
+rownames(a)=c("glm.fit","ours")
+a
+```
+
+:::
+
+
+## Controlling Dummy Coding {.scrollable}
+
+
+```{r eval=TRUE,echo=TRUE}
+dat$site.re=relevel(dat$site,ref="Site 2")
+levels(dat$site.re) 
+```
+
+<br>
+
+::: {.fragment}
+
+```{r eval=TRUE,echo=TRUE}
+
+model2 = glm(y~site.re,
+             data=dat, 
+             family = poisson(link = 'log')
+            )
+summary(model2)
+
+
+```
+::: 
+
+## Same Model Different Estimates {.scrollable}
+
+#### Coeficients
+```{r eval=TRUE,echo=FALSE}
+a = rbind(coef(model),
+          coef(model2)
+          )
+rownames(a)=c("Model1","Model2")
+
+a
+
+```
+
+#### Predictions
+```{r eval=TRUE,echo=FALSE}
+b = rbind(predict(model)[1:5],
+      predict(model2)[1:5]
+      )
+rownames(b)=c("Model1","Model2")
+b
+```
+
+::: {.fragment}
+
+#### Design Matrix
+
+```{r}
+model.matrix(~dat$site)[1:5,]
+model.matrix(~dat$site.re)[1:5,]
+```
+
+::: 
+
+## More Control!
+
+[Deviation/Effect Coding Link](https://stats.stackexchange.com/questions/52132/how-to-do-regression-with-effect-coding-instead-of-dummy-coding-in-r) 
+
+[Lots of options](https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/)
+
+```{r, echo=TRUE, eval=TRUE}
+  model3=glm(y~site, 
+             data=dat, 
+             family = poisson(link = 'log'),
+             contrasts = list(site = contr.sum)
+            )
+```
+
+## Deviation Coding Interpretation
+
+```{r, echo=TRUE, eval=TRUE}
+coef(model3)
+```
+
+Intercept = grand mean of site-means (log-scale)
+
+beta1 1 = effect difference of Site 1 from Grand Mean
+
+beta2 2 = effect difference of Site 2 from Grand Mean
+
+::: {.fragment}
+
+```{r, echo=TRUE, eval=TRUE}
+#The coefficient for site-level 3 (difference from the grand mean) 
+sum(coef(model3)[-1]*(-1))
+```
+
+:::
+
+## More Control Again!
+
+#### Contrasts
+
+```{r, echo=TRUE, eval=TRUE}
+#Use effect coding to make the intercept the grand mean
+  model4=glm(y~0+site, 
+             data=dat, 
+             family = poisson(link = 'log')
+            )
+
+# No shared intercept
+head(model.matrix(~0+site,data=dat),n=6)
+
+```
+
+
+## Same Model Different Estimates
+
+
+#### Coeficients
+
+```{r eval=TRUE,echo=FALSE}
+c =rbind(coef(model),
+         coef(model2),
+         coef(model3),
+         coef(model4)
+        )
+rownames(c)=c("Model1","Model2","Model3","Model4")
+c
+```
+
+#### Predictions
+
+```{r eval=TRUE,echo=FALSE}
+d=rbind(predict(model)[1:5],
+      predict(model2)[1:5],
+      predict(model3)[1:5],
+      predict(model4)[1:5]
+      )
+rownames(d)=c("Model1","Model2","Model3","Model4")
+d
+
+```
+
+## Taking Control
+
+```{r, eval=FALSE, echo=TRUE}
+
+X = model.matrix(~STUFF)
+
+model = glm(y~ 0 + X, ...)
+
+```
+
+## Poisson Regression (offset)
+
+What if our counts of pika are at plots with different sizes?
+
+Plot size ($\textbf{A}$) needs to be controlled for. But, we don't want to estimate an effect as it's part of the design.
+
+$$
+\begin{align*}
+\textbf{y} \sim & \text{Poisson}(\frac{\boldsymbol{\lambda}}{\textbf{A}})\\
+\text{log}(\frac{\boldsymbol{\lambda}}{\textbf{A}}) =& \textbf{X}\boldsymbol{\beta}
+\end{align*}
+$$
+
+## Offset
+
+```{r,echo=FALSE,eval=TRUE}
+set.seed(54345)
+dat$area=rpois(n,dat$y*2)
+dat$area[which(dat$area==0)]=2
+```
+
+Equivalent
+
+$$
+\begin{align*}
+\text{log}(\frac{\boldsymbol{\lambda}}{\textbf{A}}) =& \beta_0 + \beta_1 \textbf{x}_{1}\\
+\text{log}(\boldsymbol{\lambda}) =& \beta_0 + \beta_1 \textbf{x}_{1} + 1\times \textbf{A}
+\end{align*}
+$$
+
+## Offset Code
+
+```{r,echo=TRUE,eval=TRUE}
+
+model.rate1 = glm(y~site+offset(log(area)),
+            data=dat, 
+            family = poisson(link = 'log')
+            )
+
+model.rate2 = glm(y~site,
+            offset = log(area),
+            data=dat, 
+            family = poisson(link = 'log')
+            )
+
+coef(model.rate1)
+coef(model.rate2)
+
+```
+
+## 
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Variable Interactions</b></span></center>
+
+```
+
+<!-- ## Additive Model -->
+
+<!-- #### Categorical (2 levels) and Continuous Variable -->
+
+<!-- $$ -->
+<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
+<!--  \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) -->
+<!-- $$ -->
+
+<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
+
+<!-- $x_{2,i} =$ is a continuous numeric value -->
+
+
+<!-- ## Additive Model {.scrollable} -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
+<!--   #A continuous and categorical variable  -->
+<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
+<!--   levels(x) -->
+<!--   x.var=model.matrix(~x)[,2] -->
+<!-- ``` -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
+<!--   #Simulate x2 variable -->
+<!--   set.seed(54334) -->
+<!--   x2=rpois(n,100) -->
+
+<!--   #Parameters -->
+<!--   b0=50 -->
+<!--   b1=-50 -->
+<!--   b2=4 -->
+
+<!--   #Mean   -->
+<!--   mu=b0+b1*x.var+b2*x2 -->
+
+<!--   #Simualte Date   -->
+<!--   set.seed(43243) -->
+<!--   y=rnorm(n,mean=mu,sd=50) -->
+
+<!--   # fit the model -->
+<!--   model4=glm(y~x+x2) -->
+
+<!--   coef(model4) -->
+
+<!-- ``` -->
+
+<!-- <br> -->
+
+<!-- . . . -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
+<!--   #Confidence intervals of coefs -->
+<!--   confint(model4) -->
+
+<!-- ``` -->
+
+<!-- . . . -->
+
+<!-- <br> -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
+<!--   # Summary   -->
+<!--   summary(model4) -->
+<!-- ``` -->
+
+<!-- . . . -->
+
+<!-- <br> -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
+
+<!--   # Fitted Values -->
+<!--   newdata=expand.grid(x,x2) -->
+<!--   head(newdata) -->
+<!--   colnames(newdata)=c("x","x2") -->
+
+
+<!--   preds=predict(model4,newdata=newdata,type="response", -->
+<!--                 se.fit = TRUE) -->
+<!-- ``` -->
+
+<!-- ## Additive Model Plot 1 -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+<!--   library(sjPlot) -->
+<!--   plot_model(model4, type = "pred", terms = c("x")) -->
+<!-- ``` -->
+
+<!-- ## Additive Model Plot 2 -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+<!--   plot_model(model4, type = "pred", terms = c("x2","x")) -->
+<!-- ``` -->
+
+<!-- ## Interaction Model -->
+
+<!-- #### Categorical (2 levels) and Continuous Variable -->
+
+<!-- $$ -->
+<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
+<!--   \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i})) -->
+<!-- $$ -->
+
+<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
+
+<!-- $x_{2,i} =$ is a numeric value -->
+
+<!-- $x_{1,i} \times x_{2,i}=$ is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values -->
+
+
+
+<!-- ## Interaction Model {.scrollable} -->
+
+<!-- ### Categorical (2 levels) and Continuous Variable -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+
+<!--   # Simulate Variables -->
+<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
+<!--   levels(x) -->
+<!--   x.var=model.matrix(~x)[,2] -->
+
+<!--   set.seed(5453) -->
+<!--   x2=rpois(n,100) -->
+
+<!--   # Parameters  -->
+<!--   b0=50 -->
+<!--   b1=-50 -->
+<!--   b2=4 -->
+<!--   b3=-20 -->
+
+<!--   # Mean   -->
+<!--   mu = b0+b1*x.var+b2*x2+b3*(x.var*x2) -->
+
+<!--   #Simulate Data -->
+<!--   set.seed(43243) -->
+<!--   y=rnorm(n,mean=mu,sd=10) -->
+
+<!--   # fit the model -->
+<!--   model5=glm(y~x2*x) -->
+<!--   model5.1=glm(y~x+x2+x:x2) -->
+
+<!--   #comparison   -->
+<!--   rbind(coef(model5),coef(model5.1)) -->
+<!-- ``` -->
+
+<!-- . . . -->
+
+<!-- <br> -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+<!--   #Confidence intervals of coefs -->
+<!--   confint(model5) -->
+<!-- ``` -->
+
+<!-- ## Interaction Model -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+<!--   #Summary   -->
+<!--   summary(model5) -->
+<!-- ``` -->
+
+<!-- ## Interaction Model Plot -->
+
+<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
+<!--   theme_set(theme_sjplot()) -->
+<!--   plot_model(model5, type = "pred", terms = c("x2","x")) -->
+<!-- ``` -->
+

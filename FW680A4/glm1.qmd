@@ -435,7 +435,7 @@ $$
   head(X)
   glm(weight~0+X,data=dat)
 ```
-
+**Sex variable is arranged by 'Dummy Coding'**
 
 ## MLE Estimator with Linear Algebra
 
@@ -720,6 +720,7 @@ $$
 \text{logit}(\boldsymbol{p}) =& \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
+
 ::: {.fragment}
 
 <span style="color:blue">Remember,</span>

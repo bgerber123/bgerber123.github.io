@@ -1719,7 +1719,7 @@
     "href": "R1day/index.html#why-use-rstudio",
     "title": "Introduction to R",
     "section": "Why use RStudio?",
-    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\n\nR Shiny: Interactive online apps\n\nR Markdown: Interactive documents\n\nQuarto: interactive articles, websites, blog, …\n\nPosit - Certified B corp"
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
   },
   {
     "objectID": "R1day/index.html#how-to-learn-r",
@@ -1740,7 +1740,7 @@
     "href": "R1day/index.html#the-language-of-r",
     "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\n. . .\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "R1day/index.html#the-language-of-r-1",
@@ -1845,7 +1845,7 @@
     "href": "R1day/index.html#challenge-1",
     "title": "Introduction to R",
     "section": "Challenge 1",
-    "text": "Challenge 1\nCompute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)…\n\\[d = \\frac{c}{\\pi}\\]\n\n\nc = 24,901.55 miles\n1 km = 0.621 miles\n\nHint type in ‘pi’ to see what you get\n\n\n\n\nConvert the circumference from miles to km.\nWrite the formula in R by defining objects and the values given to computer d in km.\n\n\n\nClick for Answerc.km = 24901.55/0.621\n\nd = c.km/pi"
+    "text": "Challenge 1\nCompute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)…\n\\[d = \\frac{c}{\\pi}\\]\n\n\nc = 24,901.55 miles\n1 km = 0.621 miles\nHint type in ‘pi’ to see what you get\n\n\n\n\nConvert the circumference from miles to km.\nWrite the formula in R by defining objects and the values given to computer d in km.\n\n\n\n\nClick for Answer\nc.km = 24901.55/0.621\n\nd = c.km/pi"
   },
   {
     "objectID": "R1day/index.html#introductions",
@@ -1859,7 +1859,7 @@
     "href": "R1day/index.html#the-language-of-r-5",
     "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n. . .\nobject = function(input1, input2)\n\n. . .\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
   },
   {
     "objectID": "publications/articles/Shamon2024.html",
@@ -2006,7 +2006,7 @@
     "href": "R1day/index.html#what-is-r",
     "title": "Introduction to R",
     "section": "What is R?",
-    "text": "What is R?\nR is a “suite of software facilities for data manipulation, calculation and graphical display.”\n\n. . .\nR uses packages that are collections of functions, data, and compiled code in a “well-defined format”.\n\n. . .\nPackages are downloaded from The Comprehensive R Archive Network (CRAN), R’s central software repository. Also, on GitHub, GitLab, BitBucket or other code sharing platforms."
+    "text": "What is R?\nR is a “suite of software facilities for data manipulation, calculation and graphical display.”\n\n\nR uses packages that are collections of functions, data, and compiled code in a “well-defined format”.\n\n\n\nPackages are downloaded from The Comprehensive R Archive Network (CRAN), R’s central software repository. Also, on GitHub, GitLab, BitBucket or other code sharing platforms."
   },
   {
     "objectID": "R1day/index.html#software",
@@ -2027,7 +2027,7 @@
     "href": "R1day/index.html#why-use-r",
     "title": "Introduction to R",
     "section": "Why use R?",
-    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\n\ndata management\nstatistics\nplotting / graphics"
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\nstatistics\nplotting / graphics\ndata management"
   },
   {
     "objectID": "R1day/index.html#rstudio",
@@ -2083,7 +2083,7 @@
     "href": "R1day/index.html#types-of-values",
     "title": "Introduction to R",
     "section": "Types of Values",
-    "text": "Types of Values\nNumeric\n\n\ny = 3\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\nInteger\n\ny = integer(3)\nclass(y)\n\n[1] \"integer\"\n\n\n\n\n\n\nCharacter\n\ny = \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nFactor\n\ny = factor(\"habitat\")\nclass(y)\n\n[1] \"factor\""
+    "text": "Types of Values\nNumeric\n\n\ny = 3\nclass(y)\n\n[1] \"numeric\"\n\n\n\n\n\n\nInteger\n\ny = integer(3)\nclass(y)\n\n[1] \"integer\"\n\n\n\n\n\n\nCharacter\n\ny = \"habitat\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n\n\nFactor\n\ny = factor(\"habitat\")\nclass(y)\n\n[1] \"factor\""
   },
   {
     "objectID": "R1day/index.html#challenge-1-1",
@@ -2125,7 +2125,7 @@
     "href": "R1day/index.html#challenge-2",
     "title": "Introduction to R",
     "section": "Challenge 2",
-    "text": "Challenge 2\n\nCreate a vector of numbers that has length 6; call this object ‘vec1’.\nUse the function ‘mean’ to find the mean of the values of vec1.\nSubset vec1 to only elements 4 through 6. Call this new object ‘vec1’, thereby overwriting the original vec1.\nCreate a new vector (length 3) of characters called “hab1”, “hab2”, and “hab3”. Call this object ‘vec2’.\nPut vec1 and vec2 together into a data frame and call this object ‘dat’\n\n\nClick for Answervec1 = 1:6\nmean(vec1)\nvec1 = vec1[4:6]\nvec2 = c(\"hab1\",\"hab2\",\"hab3\")\ndat = data.frame(vec1,vec2)\ndat"
+    "text": "Challenge 2\n\nCreate a vector of numbers that has length 6; call this object ‘vec1’.\nUse the function ‘mean’ to find the mean of the values of vec1.\nSubset vec1 to only elements 4 through 6. Call this new object ‘vec1’, thereby overwriting the original vec1.\nCreate a new vector (length 3) of characters called “hab1”, “hab2”, and “hab3”. Call this object ‘vec2’.\nPut vec1 and vec2 together into a data frame and call this object ‘dat’\n\n\n\nClick for Answer\nvec1 = 1:6\nmean(vec1)\nvec1 = vec1[4:6]\nvec2 = c(\"hab1\",\"hab2\",\"hab3\")\ndat = data.frame(vec1,vec2)\ndat"
   },
   {
     "objectID": "R1day/index.html#software-2",
@@ -2174,7 +2174,7 @@
     "href": "R1day/index.html#today-3",
     "title": "Introduction to R",
     "section": "Today",
-    "text": "Today\nSchedule\n\n\n900 - 930: Introductions and setup\n\n930 - 1000: RStudio and R (objects and functions)\n\n1000 - 1130: Data input and output\n\n1130- 1200: Finding help\n\n1200 - 1300: Lunch\n\n1300 - 1400: Data mgmt\n\n1400 - 1500: Plotting\n\n1500 - 1600: Final Challenge"
+    "text": "Today\nSchedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Final Challenge"
   },
   {
     "objectID": "R1day/index.html#showcases",
@@ -2194,8 +2194,8 @@
     "objectID": "R1day/index.html#download-files",
     "href": "R1day/index.html#download-files",
     "title": "Introduction to R",
-    "section": "",
-    "text": "Download this presentation as pdf\nDownload Files for today\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file."
+    "section": "Download Files",
+    "text": "Download Files\nDownload this presentation as pdf\nDownload Files for today\n\nTo save either file…. Right-click –&gt; ‘Save link as…’. Save file to location. Go to RStudio or Acrobat. File –&gt; Open File… find your file."
   },
   {
     "objectID": "FW680A4/index.html#fw680a4",
@@ -2342,14 +2342,14 @@
     "href": "FW680A4/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022.pdf\n\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.pdf.\n\nArif and MacNeil 2022.pdf."
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW680A4/week1.html#week-1",
     "href": "FW680A4/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022.pdf\n\nDumelle et al 2021.pdf. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019.pdf. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.pdf.\n\nArif and MacNeil 2022.pdf."
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW680A4/Introduction.html#class-stuff",
@@ -2706,14 +2706,14 @@
     "href": "FW680A4/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
+    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n Hobbs & Hooten Ch. 3. Section 3.4.\n Bolker 2007 Ch. 4.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Ch. 6\nFieberg Ch. 10"
   },
   {
     "objectID": "FW680A4/week2.html#week-2",
     "href": "FW680A4/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n HobbsHooten_Ch_3.pdf. Section 3.4.\n Bolker 2007 Chapter 4.pdf.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Chapter 6\nFieberg Chapter 10"
+    "text": "Lecture: Probability\nLecture Code: Probability.R\n\n\n\n\nIs the use of hypotheses in the literature changing?\nWhen are hypotheses useful?\nWhen are hypotheses not useful?\n\n\n\n\n\nWhat are the attributes and foundations of design-based sampling/inference?\nWhat are the attributes and foundations of model-based sampling/inference?\nHow do you use these two ideas?\nAny concerns of using or not using these ideas?\n\n\n\n\n\n\nProbabiltiy Quiz on Canvas\nBackground Reading (not required):\n\n Hobbs & Hooten Ch. 3. Section 3.4.\n Bolker 2007 Ch. 4.\n\n\n\n\n\n\n\n\n\nLecture: Continue with Probability\nDownloads: Files\n\n\n\n\n\nBackground Reading (not required):\n\nBolker Ch. 6\nFieberg Ch. 10"
   },
   {
     "objectID": "FW680A4/BigPicture.html#do-we-need-study-designs-anymore-to-do-research",
@@ -4834,14 +4834,14 @@
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Chapter 1\nBolker Chapter 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",
@@ -5674,7 +5674,7 @@
     "href": "FW680A4/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Genaralized Linear Models (GLM) I\nLecture Code:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: Genaralized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+    "text": "Lecture: Generalized Linear Models (GLM) I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
   },
   {
     "objectID": "FW680A4/week4.html#week-3",
@@ -5688,7 +5688,7 @@
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Genaralized Linear Models (GLM) I\nLecture Code:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: Genaralized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+    "text": "Lecture: Generalized Linear Models (GLM) I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",
@@ -6024,7 +6024,7 @@
     "href": "FW680A4/glm1.html#glm-and-design-matix",
     "title": "Generalized Linear Models",
     "section": "glm and design matix",
-    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143"
+    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\nSex variable is arranged by ‘Dummy Coding’"
   },
   {
     "objectID": "FW680A4/glm1.html#mle-estimator-with-linear-algebra",
@@ -6052,6 +6052,209 @@
     "href": "FW680A4/glm1.html#logistic-regression",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression",
-    "text": "Logistic Regression\nFull model\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,\\boldsymbol{p})\\\\\n\\text{logit}(\\boldsymbol{p}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\] ::: {.fragment}\nRemember,  \\(\\boldsymbol{p} \\in [0,1]\\)\n\\(\\textbf{X}\\boldsymbol{\\beta} \\in (-\\infty,\\infty)\\)\n:::"
+    "text": "Logistic Regression\nFull model\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,\\boldsymbol{p})\\\\\n\\text{logit}(\\boldsymbol{p}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\nRemember,  \\(\\boldsymbol{p} \\in [0,1]\\)\n\\(\\textbf{X}\\boldsymbol{\\beta} \\in (-\\infty,\\infty)\\)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#objectives",
+    "href": "FW680A4/glm2.html#objectives",
+    "title": "Generalized Linear Models II ",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nPoisson Regression\ncategorical variables\nvariable interactions\nmulticollinearity"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#poisson-regression",
+    "href": "FW680A4/glm2.html#poisson-regression",
+    "title": "Generalized Linear Models II ",
+    "section": "Poisson Regression",
+    "text": "Poisson Regression\nWe model the counts of American pika (\\(y_{i}\\)) at each site \\(i = 1...n\\) as a Poisson random variable with parameter \\(\\lambda\\) being a function of our \\(p\\) site-level variables in \\(n\\) x \\(p\\) design matrix (\\(\\textbf{X}\\)) and coefficients \\(\\boldsymbol{\\beta}\\) as,\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\boldsymbol{\\lambda})\\\\\n\\text{log}(\\boldsymbol{\\lambda}) =& \\textbf{X}\\boldsymbol{\\beta}\\\\\n\\boldsymbol{\\lambda} =& e^{\\textbf{X}\\boldsymbol{\\beta}}.\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#data-and-variable",
+    "href": "FW680A4/glm2.html#data-and-variable",
+    "title": "Generalized Linear Models II ",
+    "section": "Data and Variable",
+    "text": "Data and Variable\nVariable indicating a unique area or site\n\n\n\n  [1] Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1\n [11] Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2\n [21] Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3\n [31] Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1\n [41] Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2\n [51] Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3\n [61] Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1\n [71] Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2\n [81] Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3\n [91] Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1\n[101] Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2\n[111] Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3 Site 1 Site 2 Site 3\nLevels: Site 1 Site 2 Site 3"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#fit-model",
+    "href": "FW680A4/glm2.html#fit-model",
+    "title": "Generalized Linear Models II ",
+    "section": "Fit Model",
+    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,data=dat, \n            family = poisson(link = 'log')\n            )\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  1.07329    0.09245  11.609  &lt; 2e-16 ***\nsiteSite 2  -0.66783    0.15879  -4.206  2.6e-05 ***\nsiteSite 3   0.33158    0.12117   2.736  0.00621 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 148.739  on 119  degrees of freedom\nResidual deviance:  99.134  on 117  degrees of freedom\nAIC: 425.43\n\nNumber of Fisher Scoring iterations: 5"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#data",
+    "href": "FW680A4/glm2.html#data",
+    "title": "Generalized Linear Models II ",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#counts-by-site",
+    "href": "FW680A4/glm2.html#counts-by-site",
+    "title": "Generalized Linear Models II ",
+    "section": "Counts by Site",
+    "text": "Counts by Site"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#optimization",
+    "href": "FW680A4/glm2.html#optimization",
+    "title": "Generalized Linear Models II ",
+    "section": "Optimization",
+    "text": "Optimization\n\nmodel$converged\n\n[1] TRUE\n\nmodel$method\n\n[1] \"glm.fit\"\n\nmodel$boundary\n\n[1] FALSE\n\nmodel$iter\n\n[1] 5\n\nmodel$control\n\n$epsilon\n[1] 1e-08\n\n$maxit\n[1] 25\n\n$trace\n[1] FALSE"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#side-bar-maximum-likelihood-optimization",
+    "href": "FW680A4/glm2.html#side-bar-maximum-likelihood-optimization",
+    "title": "Generalized Linear Models II ",
+    "section": "Side-Bar: Maximum Likelihood Optimization",
+    "text": "Side-Bar: Maximum Likelihood Optimization\n\n  #Here is our negative log-likelihood function with three\n  #parameters - the beta0 (2) and beta1 (1)\n  neg.log.like = function(par,X) {\n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }\n\n\n\n### Use our function in an optimization function\n\n  #use optim with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0, 0,1),\n    X=X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\nrbind(fit1$par,\n      coef(model)\n           )\n\n     (Intercept) siteSite 2 siteSite 3\n[1,]    1.090244 -0.4886637  0.3741687\n[2,]    1.090244 -0.4886641  0.3741681"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#numerical-optimization-of-likelihood",
+    "href": "FW680A4/glm2.html#numerical-optimization-of-likelihood",
+    "title": "Generalized Linear Models II ",
+    "section": "Numerical Optimization of Likelihood",
+    "text": "Numerical Optimization of Likelihood\n\nmodel$converged\n\n[1] TRUE\n\nmodel$method\n\n[1] \"glm.fit\"\n\nmodel$boundary\n\n[1] FALSE\n\nmodel$iter\n\n[1] 5\n\nmodel$control\n\n$epsilon\n[1] 1e-08\n\n$maxit\n[1] 25\n\n$trace\n[1] FALSE"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-fucntion",
+    "href": "FW680A4/glm2.html#side-bar-negative-log-likelihood-fucntion",
+    "title": "Generalized Linear Models II ",
+    "section": "Side-Bar: Negative Log-Likelihood Fucntion",
+    "text": "Side-Bar: Negative Log-Likelihood Fucntion\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#numerical-optim.-for-mles",
+    "href": "FW680A4/glm2.html#numerical-optim.-for-mles",
+    "title": "Generalized Linear Models II ",
+    "section": "Numerical Optim. for MLEs",
+    "text": "Numerical Optim. for MLEs\n\n#use optim with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X=X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\n\nComparison\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit    1.073299 -0.6678340  0.3315581\nours       1.073294 -0.6678294  0.3315763"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#comparison",
+    "href": "FW680A4/glm2.html#comparison",
+    "title": "Generalized Linear Models II ",
+    "section": "Comparison",
+    "text": "Comparison\n\n\n     (Intercept) siteSite 2 siteSite 3\nglm    0.9932507 -0.5232463  0.5543119\nours   0.9932518 -0.5232481  0.5543107"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#controlling-dummy-coding",
+    "href": "FW680A4/glm2.html#controlling-dummy-coding",
+    "title": "Generalized Linear Models II ",
+    "section": "Controlling Dummy Coding",
+    "text": "Controlling Dummy Coding\n\ndat$site.re=relevel(dat$site,ref=\"Site 2\")\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y~site.re,\n             data=dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)     0.4055     0.1291   3.141  0.00169 ** \nsite.reSite 1   0.6678     0.1588   4.206 2.60e-05 ***\nsite.reSite 3   0.9994     0.1510   6.618 3.63e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 148.739  on 119  degrees of freedom\nResidual deviance:  99.134  on 117  degrees of freedom\nAIC: 425.43\n\nNumber of Fisher Scoring iterations: 5"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#same-model-different-estimates",
+    "href": "FW680A4/glm2.html#same-model-different-estimates",
+    "title": "Generalized Linear Models II ",
+    "section": "Same Model Different Estimates",
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0732945 -0.6678294  0.3315763\nModel2   0.4054651  0.6678294  0.9994056\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel2 1.073294 0.4054651 1.404871 1.073294 0.4054651\n\n\n\n\nDesign Matrix\n\n\n  (Intercept) dat$siteSite 2 dat$siteSite 3\n1           1              0              0\n2           1              1              0\n3           1              0              1\n4           1              0              0\n5           1              1              0\n\n\n  (Intercept) dat$site.reSite 1 dat$site.reSite 3\n1           1                 1                 0\n2           1                 0                 0\n3           1                 0                 1\n4           1                 1                 0\n5           1                 0                 0"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#more-control-of-your-coefecients",
+    "href": "FW680A4/glm2.html#more-control-of-your-coefecients",
+    "title": "Generalized Linear Models II ",
+    "section": "More Control of your coefecients!",
+    "text": "More Control of your coefecients!\ncontrasts\n\n#Use effect coding to make the intercept the grand mean\n  model4=glm(y~0+site, data=dat, \n            family = poisson(link = 'log')\n            )\n\n  coef(model4)\n\nsiteSite 1 siteSite 2 siteSite 3 \n 0.7997569  0.4219944  1.4170660 \n\n# No shared intercept\nhead(model.matrix(~0+site,data=dat),n=6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#more-control-of-your-coefecients-1",
+    "href": "FW680A4/glm2.html#more-control-of-your-coefecients-1",
+    "title": "Generalized Linear Models II ",
+    "section": "More Control of your coefecients!",
+    "text": "More Control of your coefecients!\ncontrasts\n\n\nsiteSite 1 siteSite 2 siteSite 3 \n 0.7178398  0.5158132  1.5422292 \n\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#same-model-different-estimates-1",
+    "href": "FW680A4/glm2.html#same-model-different-estimates-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Same Model Different Estimates",
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0732945 -0.6678294  0.3315763\nModel2   0.4054651  0.6678294  0.9994056\nModel3   0.9612101  0.1120844 -0.5557450\nModel4   1.0732945  0.4054651  1.4048707\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel2 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel3 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel4 1.073294 0.4054651 1.404871 1.073294 0.4054651"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",
+    "href": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",
+    "title": "Generalized Linear Models II ",
+    "section": "Side-Bar: Negative Log-Likelihood Function",
+    "text": "Side-Bar: Negative Log-Likelihood Function\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    \n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    \n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#more-control",
+    "href": "FW680A4/glm2.html#more-control",
+    "title": "Generalized Linear Models II ",
+    "section": "More Control!",
+    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y~site, \n             data=dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#take-control",
+    "href": "FW680A4/glm2.html#take-control",
+    "title": "Generalized Linear Models II ",
+    "section": "Take Control",
+    "text": "Take Control\n\nX = model.matrix(~STUFF)\n\nmodel = glm(y~ 0 + X, ...)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#deviaion-coding-interpretation",
+    "href": "FW680A4/glm2.html#deviaion-coding-interpretation",
+    "title": "Generalized Linear Models II ",
+    "section": "Deviaion Coding Interpretation",
+    "text": "Deviaion Coding Interpretation\n\n# Intercept = grand mean of site-means (log-scale)\n# Coef 1 = effect difference of Site 1 from Grand Mean\n# Coef 2 = effect difference of Site 2 from Grand Mean\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n 0.87960578 -0.07984887 -0.45761137 \n\n#The coefficient for site-level 3 (difference from the grand mean) \n sum(coef(model3)[-1]*(-1))\n\n[1] 0.5374602"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#deviation-coding-interpretation",
+    "href": "FW680A4/glm2.html#deviation-coding-interpretation",
+    "title": "Generalized Linear Models II ",
+    "section": "Deviation Coding Interpretation",
+    "text": "Deviation Coding Interpretation\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n  0.9612101   0.1120844  -0.5557450 \n\n\nIntercept = grand mean of site-means (log-scale)\nbeta1 1 = effect difference of Site 1 from Grand Mean\nbeta2 2 = effect difference of Site 2 from Grand Mean\n\n\n#The coefficient for site-level 3 (difference from the grand mean) \nsum(coef(model3)[-1]*(-1))\n\n[1] 0.4436606"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#more-control-again",
+    "href": "FW680A4/glm2.html#more-control-again",
+    "title": "Generalized Linear Models II ",
+    "section": "More Control Again!",
+    "text": "More Control Again!\nContrasts\n\n#Use effect coding to make the intercept the grand mean\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0+site,data=dat),n=6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#taking-control",
+    "href": "FW680A4/glm2.html#taking-control",
+    "title": "Generalized Linear Models II ",
+    "section": "Taking Control",
+    "text": "Taking Control\n\nX = model.matrix(~STUFF)\n\nmodel = glm(y~ 0 + X, ...)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#section",
+    "href": "FW680A4/glm2.html#section",
+    "title": "Generalized Linear Models II ",
+    "section": "",
+    "text": "Variable Interactions"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#poisson-regression-to-model-rates",
+    "href": "FW680A4/glm2.html#poisson-regression-to-model-rates",
+    "title": "Generalized Linear Models II ",
+    "section": "Poisson Regression to Model Rates",
+    "text": "Poisson Regression to Model Rates\nWhat if our counts of pika are at plots with different sizes?\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for.\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#offset",
+    "href": "FW680A4/glm2.html#offset",
+    "title": "Generalized Linear Models II ",
+    "section": "Offset",
+    "text": "Offset\nEquivalent\n\\[\n\\begin{align*}\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\beta_0 + \\beta_1 \\textbf{x}_{1}\\\\\n\\text{log}(\\boldsymbol{\\lambda}) =& \\beta_0 + \\beta_1 \\textbf{x}_{1} + 1\\times \\textbf{A}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#offset-code",
+    "href": "FW680A4/glm2.html#offset-code",
+    "title": "Generalized Linear Models II ",
+    "section": "Offset Code",
+    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.7712156  -0.1180465   0.1512329 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.7712156  -0.1180465   0.1512329"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#poisson-regression-offset",
+    "href": "FW680A4/glm2.html#poisson-regression-offset",
+    "title": "Generalized Linear Models II ",
+    "section": "Poisson Regression (offset)",
+    "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design.\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
   }
 ]
