@@ -28,6 +28,8 @@ pre {
 -   matrix notation
 -   link functions
 -   glm function
+-   categorical independent variable
+-   linear and logistic regression
 
 ## GLM
 <p style="color:purple">Generalized linear model framework using matrix notation</p>
@@ -45,16 +47,15 @@ $$
 
 ## Motivation
 
-**GLMs:**
+<p style="color:purple"><b>GLMs:</b></p>
 
 - t-test
-- ANOVA
-- ANCOVA
+- ANOVA/ANCOVA
 - linear regression
 - logistic / probit regression
 - Poisson regression
 - log-linear regression
-- Survival Analysis
+- survival analysis
 - AND MORE!
 
 
@@ -100,7 +101,8 @@ $$
 \begin{align*}
 \textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma]\\
 [\textbf{y}|\boldsymbol{\mu},\sigma]=& \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1
+\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1\\
+\text{g}(\boldsymbol{\mu}) =&   \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
 
@@ -118,7 +120,7 @@ y_{2} \\
 y_{3} \\
 . \\
 . \\
-y_{n} & 
+y_{n}  
 \end{bmatrix}
 
 
@@ -140,6 +142,7 @@ n & x^{1}_n & x^{2}_n
 \end{align*}
 
 n = sample size
+x$_{1}$ & x$_{2}$ are independent variables
 
 :::
 
@@ -350,7 +353,7 @@ y%*%t(y)
 #### Categorical Variable
 
 
-```{r echo=TRUE,eval=TRUE}
+```{r echo=FALSE,eval=TRUE}
 dat = read.csv("elephant.study2.csv")
 head(dat[,1:2], n = 3)
 ```
@@ -360,7 +363,10 @@ head(dat[,1:2], n = 3)
 #### Categorical Variable
 
 ```{r echo=TRUE,eval=TRUE}
-model = glm(weight~sex, data=dat,family=gaussian(link = identity))
+model = glm(weight~sex, 
+            data=dat,
+            family=gaussian(link = identity)
+            )
 summary(model)
 ```
 
@@ -433,8 +439,16 @@ $$
 # GLM coefs
   X = model.matrix(~sex+age.years,data=dat)
   head(X)
+```
+
+::: {.fragment}
+
+```{r, eval=TRUE, echo=TRUE}
   glm(weight~0+X,data=dat)
 ```
+
+:::
+
 **Sex variable is arranged by 'Dummy Coding'**
 
 ## MLE Estimator with Linear Algebra
@@ -865,4 +879,28 @@ Are we going to estimate the sign of the coef correctly?
 length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim
 ```
 
+## Logistic Regression Biased Correction {.scrollable}
 
+brglm: Bias Reduction in Binomial-Response Generalized Linear Models
+
+```{r, eval=FALSE, echo=TRUE}
+brglm::brglm(y~0+X, family = binomial(link = "logit"))
+```
+
+
+```{r, eval=TRUE, echo=FALSE}
+ #sample many times  
+ #Estimate coefs for all 100 samples
+  coef.est=apply(y.many,2,FUN=function(y){
+          model1=brglm::brglm(y~0+X, family = binomial(link = "logit"))
+          
+  model1$coefficients
+  })
+```
+
+```{r, eval=TRUE, echo=TRUE}
+# Relative Bias
+  (mean(coef.est[1,])-beta[1])/beta[1]
+  (mean(coef.est[2,])-beta[2])/beta[2]
+```
+  

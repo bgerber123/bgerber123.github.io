@@ -5793,7 +5793,7 @@
     "href": "FW680A4/glm1.html#elephant-linear-regression-example",
     "title": "Generalized Linear Models",
     "section": "Elephant Linear Regression Example",
-    "text": "Elephant Linear Regression Example\nCategorical Variable\n\ndat = read.csv(\"elephant.study2.csv\")\nhead(dat[,1:2], n = 3)\n\n     weight    sex\n1 11488.991   Male\n2  4105.442 Female\n3  4299.308 Female"
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\n\n     weight    sex\n1 11488.991   Male\n2  4105.442 Female\n3  4299.308 Female"
   },
   {
     "objectID": "FW680A4/glm1.html#link-functions",
@@ -5961,7 +5961,7 @@
     "href": "FW680A4/glm1.html#objectives",
     "title": "Generalized Linear Models",
     "section": "Objectives",
-    "text": "Objectives\n\n\nGLM framework\nmatrix notation\nlink functions\nglm function"
+    "text": "Objectives\n\n\nGLM framework\nmatrix notation\nlink functions\nglm function\ncategorical independent variable\nlinear and logistic regression"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-regression-notation",
@@ -5975,7 +5975,7 @@
     "href": "FW680A4/glm1.html#motivation",
     "title": "Generalized Linear Models",
     "section": "Motivation",
-    "text": "Motivation\nGLMs:\n\nt-test\nANOVA\nANCOVA\nlinear regression\nlogistic / probit regression\nPoisson regression\nlog-linear regression\nSurvival Analysis\nAND MORE!"
+    "text": "Motivation\n\nGLMs:\n\n\nt-test\nANOVA/ANCOVA\nlinear regression\nlogistic / probit regression\nPoisson regression\nlog-linear regression\nsurvival analysis\nAND MORE!"
   },
   {
     "objectID": "FW680A4/glm1.html#matrix-notation-1",
@@ -5989,14 +5989,14 @@
     "href": "FW680A4/glm1.html#linear-regression",
     "title": "Generalized Linear Models",
     "section": "Linear Regression",
-    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta} \\times 1\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n} &\n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size"
+    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta} \\times 1\\\\\n\\text{g}(\\boldsymbol{\\mu}) =&   \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n}  \n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size x\\(_{1}\\) & x\\(_{2}\\) are independent variables"
   },
   {
     "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-1",
     "href": "FW680A4/glm1.html#elephant-linear-regression-example-1",
     "title": "Generalized Linear Models",
     "section": "Elephant Linear Regression Example",
-    "text": "Elephant Linear Regression Example\nCategorical Variable\n\nmodel = glm(weight~sex, data=dat,family=gaussian(link = identity))\nsummary(model)\n\n\nCall:\nglm(formula = weight ~ sex, family = gaussian(link = identity), \n    data = dat)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   4970.9      120.9   41.11   &lt;2e-16 ***\nsexMale       6848.1      180.2   37.99   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1608053)\n\n    Null deviance: 2639772182  on 199  degrees of freedom\nResidual deviance:  318394574  on 198  degrees of freedom\nAIC: 3429.7\n\nNumber of Fisher Scoring iterations: 2"
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\nmodel = glm(weight~sex, \n            data=dat,\n            family=gaussian(link = identity)\n            )\nsummary(model)\n\n\nCall:\nglm(formula = weight ~ sex, family = gaussian(link = identity), \n    data = dat)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   4970.9      120.9   41.11   &lt;2e-16 ***\nsexMale       6848.1      180.2   37.99   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1608053)\n\n    Null deviance: 2639772182  on 199  degrees of freedom\nResidual deviance:  318394574  on 198  degrees of freedom\nAIC: 3429.7\n\nNumber of Fisher Scoring iterations: 2"
   },
   {
     "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-2",
@@ -6024,7 +6024,7 @@
     "href": "FW680A4/glm1.html#glm-and-design-matix",
     "title": "Generalized Linear Models",
     "section": "glm and design matix",
-    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\nSex variable is arranged by ‘Dummy Coding’"
+    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n\n\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\n\nSex variable is arranged by ‘Dummy Coding’"
   },
   {
     "objectID": "FW680A4/glm1.html#mle-estimator-with-linear-algebra",
@@ -6256,5 +6256,12 @@
     "title": "Generalized Linear Models II ",
     "section": "Poisson Regression (offset)",
     "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design.\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/glm1.html#logistic-regression-biased-correction",
+    "href": "FW680A4/glm1.html#logistic-regression-biased-correction",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Biased Correction",
+    "text": "Logistic Regression Biased Correction\nbrglm: Bias Reduction in Binomial-Response Generalized Linear Models\n\nbrglm::brglm(y~0+X, family = binomial(link = \"logit\"))\n\n\n# Relative Bias\n  (mean(coef.est[1,])-beta[1])/beta[1]\n\n[1] 0.007785692\n\n  (mean(coef.est[2,])-beta[2])/beta[2]\n\n[1] 0.008799186"
   }
 ]
