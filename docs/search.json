@@ -5674,7 +5674,7 @@
     "href": "FW680A4/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models (GLM) I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
   },
   {
     "objectID": "FW680A4/week4.html#week-3",
@@ -5688,7 +5688,7 @@
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models (GLM) I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models (GLM) II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",

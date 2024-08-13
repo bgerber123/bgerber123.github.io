@@ -8,7 +8,7 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Lecture: <a href="/FW680A4/glm1.qmd">Generalized Linear Models (GLM) I</a>
+-   Lecture: <a href="/FW680A4/glm1.qmd">Generalized Linear Models I</a>
 
 -   Lecture Code: 
 
@@ -23,7 +23,7 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Lecture: <a href="/FW680A4/glm2.qmd">Generalized Linear Models (GLM) II</a>
+-   Lecture: <a href="/FW680A4/glm2.qmd">Generalized Linear Models II</a>
 
 -   Downloads: <a href="/classfiles/glmlab/week4files.zip">Files</a>
 
@@ -31,7 +31,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-  
+install.packages(c("equatiomatic"))
 ```
 
 #### [Assigned]{style="color:red;"}
