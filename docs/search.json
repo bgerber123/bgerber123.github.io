@@ -1782,21 +1782,21 @@
     "href": "R1day/index.html#types-of-objects",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nVector\n\n# An ordered collection indexed 1,2,...n\n# Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n\nThe value 4 is in element/index/position 1 of the vector\nThe value 6 is in element/index/position 3 of the vector\n\n\n\n# the dimension of a vector\nlength(z1)\n\n[1] 3\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",1,\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\""
+    "text": "Types of Objects\nVector\n\n# An ordered collection indexed 1,2,...n\n# Using the function 'c' to concetanate\nz1 = c(4,5,6)\nz1\n\n[1] 4 5 6\n\n\nThe value 4 is in element/index/position 1 of the vector\nThe value 6 is in element/index/position 3 of the vector\n\n\n\n# the dimension of a vector\nlength(z1)\n\n[1] 3\n\n\n\n\n\n\n# A vector of characters\nz2 = c(\"dog\",\"cat\",\"horse\")\nz2\n\n[1] \"dog\"   \"cat\"   \"horse\"\n\n\n\n\n\n\nz3 = c(\"dog\",\"1\",\"horse\")\nz3\n\n[1] \"dog\"   \"1\"     \"horse\"\n\n\n\n\n\n\n\n\n\n\n\n:::"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-1",
     "href": "R1day/index.html#types-of-objects-1",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\"1\",\"horse\",\"chicken\")\nz3[2]\n\n[1] \"1\"\n\n\n\n\n\n\n2:4\n\n[1] 2 3 4\n\n\n\n\n\n\nz3[2:4]\n\n[1] \"1\"       \"horse\"   \"chicken\"\n\n\n\n\n\n\nz3[c(2,3)]\n\n[1] \"1\"     \"horse\"\n\n\n\n\n\n\nz3[-1]\n\n[1] \"1\"       \"horse\"   \"chicken\""
+    "text": "Types of Objects\nSubsetting a vector\n\n\nz3 = c(\"dog\",\n       \"1\",\n       \"horse\",\n       \"chicken\"\n       )\nz3[2]\n\n[1] \"1\"\n\n\n\n\n\n\n2:4\n\n[1] 2 3 4\n\n\n\n\n\n\nz3[2:4]\n\n[1] \"1\"       \"horse\"   \"chicken\"\n\n\n\n\n\n\nz3[c(2,4)]\n\n[1] \"1\"       \"chicken\"\n\n\n\n\n\n\nz3[-1]\n\n[1] \"1\"       \"horse\"   \"chicken\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-2",
     "href": "R1day/index.html#types-of-objects-2",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nVector of factors, a special kind of character string\n\n\nz4 = factor(\n            c(\"dog\", \"dog\", \"cat\",\"horse\")\n           )\n\n\n\n\n\nz4\n\n[1] dog   dog   cat   horse\nLevels: cat dog horse\n\n\n\n\n\n\nlevels(z4)\n\n[1] \"cat\"   \"dog\"   \"horse\"\n\n\n\n\n\n\nsummary(z4)\n\n  cat   dog horse \n    1     2     1"
+    "text": "Types of Objects\nVector of factors\n\n\nz4 = factor(\n            c(\"dog\", \n              \"dog\", \n              \"cat\",\n              \"horse\"\n              )\n           )\n\n\n\n\n\nz4\n\n[1] dog   dog   cat   horse\nLevels: cat dog horse\n\n\n\n\n\n\nlevels(z4)\n\n[1] \"cat\"   \"dog\"   \"horse\"\n\n\n\n\n\n\nsummary(z4)\n\n  cat   dog horse \n    1     2     1"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-3",
@@ -1810,14 +1810,14 @@
     "href": "R1day/index.html#types-of-objects-4",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nSubsetting a matrix\n\n# get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n# get element of row 2 and column 3\nx[2,3]\n\n[1] 6\n\n\n\n\n\n\n# get all elements of row 2\nx[2,]\n\n[1] 2 4 6\n\n\n\n\n\n\n# same as\nx[2,1:3]\n\n[1] 2 4 6"
+    "text": "Types of Objects\nSubsetting a matrix\n\n# get element of row 1 and column 2\nx[1,2]\n\n[1] 3\n\n\n\n\n\n# get all elements of row 2\nx[2,]\n\n[1] 2 4 6\n\n\n\n\n\n\n# same as\nx[2,1:3]\n\n[1] 2 4 6"
   },
   {
     "objectID": "R1day/index.html#types-of-objects-5",
     "href": "R1day/index.html#types-of-objects-5",
     "title": "Introduction to R",
     "section": "Types of Objects",
-    "text": "Types of Objects\nArray\n\n# ARRAY - more than two dimensions\nz5 = array(\n            c(\"a\",\"b\",\"c\",\"d\",\"e\",\"f\"), \n            dim = c(2,2,2)\n           )\n\n\n\n\ndim(z5)\n\n[1] 2 2 2\n\n\n\n\n\n\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"e\"  \"a\" \n[2,] \"f\"  \"b\""
+    "text": "Types of Objects\nArray\n\n# ARRAY - more than two dimensions\nz5 = array(\n            c(\"a\",\"b\",\"c\",\"d\",\"1\",\"2\",\"3\",\"4\"), \n            dim = c(2,2,2)\n           )\n\n\n\n\n\n\n\n\n\n\n\n\nz5\n\n, , 1\n\n     [,1] [,2]\n[1,] \"a\"  \"c\" \n[2,] \"b\"  \"d\" \n\n, , 2\n\n     [,1] [,2]\n[1,] \"1\"  \"3\" \n[2,] \"2\"  \"4\""
   },
   {
     "objectID": "R1day/index.html#types-of-objects-6",
@@ -1859,7 +1859,7 @@
     "href": "R1day/index.html#the-language-of-r-5",
     "title": "Introduction to R",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
   },
   {
     "objectID": "publications/articles/Shamon2024.html",
@@ -1999,7 +1999,7 @@
     "href": "R1day/index.html#today-1",
     "title": "Introduction to R",
     "section": "Today",
-    "text": "Today\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nFind help\nRead/write data\nManipulate data efficiently\nPlot data or results"
+    "text": "Today\nLearning Objectives\n\nWrite and execute code in R via RStudio\nR language vocabulary\nRead/write data\nFind help\nManipulate data efficiently\nPlot data/results"
   },
   {
     "objectID": "R1day/index.html#what-is-r",
@@ -2020,7 +2020,7 @@
     "href": "R1day/index.html#what-is-rstudio",
     "title": "Introduction to R",
     "section": "What is RStudio?",
-    "text": "What is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”. It brings tools/languages together. We use R within RStudio."
+    "text": "What is RStudio?\nRStudio is an “Integrated Development Environment (IDE)”.\n\nRStudio brings tools/languages together.\n\nWe use R within RStudio."
   },
   {
     "objectID": "R1day/index.html#why-use-r",
@@ -2174,14 +2174,14 @@
     "href": "R1day/index.html#today-3",
     "title": "Introduction to R",
     "section": "Today",
-    "text": "Today\nSchedule\n\n900 - 930: Introductions and setup\n930 - 1000: RStudio and R (objects and functions)\n1000 - 1130: Data input and output\n1130- 1200: Finding help\n1200 - 1300: Lunch\n1300 - 1400: Data mgmt\n1400 - 1500: Plotting\n1500 - 1600: Final Challenge"
+    "text": "Today\nSchedule\n\n900 - 930: Introductions and Setup\n930 - 1015: RStudio and R (objects and functions)\n1015 - 1130: Data Input and Output\n1130- 1200: Finding Help\n1200 - 1300: Lunch\n1300 - 1400: Data Mgmt\n1400 - 1500: Plotting\n1500 - 1600: Final Challenge"
   },
   {
     "objectID": "R1day/index.html#showcases",
     "href": "R1day/index.html#showcases",
     "title": "Introduction to R",
     "section": "Showcases",
-    "text": "Showcases\nBrian - R Shiny application that allows users to subset data and visualize 14,586 results\n\nKyle - example here\n\nGeorgia - example here"
+    "text": "Showcases\n\nBrian - R Shiny application\n\nKyle - Lights out alerts\n\nGeorgia - The Orion Nebula?"
   },
   {
     "objectID": "R1day/index.html#files",
@@ -3119,7 +3119,7 @@
     "href": "R1day/index.html#packages-for-workshop",
     "title": "Introduction to R",
     "section": "Packages for Workshop",
-    "text": "Packages for Workshop\nPlease install\n\ntidyverse\nreadxl"
+    "text": "Packages for Workshop\nPlease install from CRAN\n\ntidyverse\nreadxl\nggridges\ngridExtra\n\n\n  install.packages(c(\"tidyverse\",\n                     \"readxl\", \n                     \"ggridges\", \n                     \"gridExtra\")\n                   )"
   },
   {
     "objectID": "publications/articles/Ganoe2024.html",
@@ -6059,7 +6059,7 @@
     "href": "FW680A4/glm2.html#objectives",
     "title": "Generalized Linear Models II ",
     "section": "Objectives",
-    "text": "Objectives\n\n\nPoisson Regression\ncategorical variables\nvariable interactions\nmulticollinearity"
+    "text": "Objectives\n\n\nPoisson Regression\nNumerical Optimization\ncategorical variables &gt;2 levels\nvariable combinations"
   },
   {
     "objectID": "FW680A4/glm2.html#poisson-regression",
@@ -6080,7 +6080,7 @@
     "href": "FW680A4/glm2.html#fit-model",
     "title": "Generalized Linear Models II ",
     "section": "Fit Model",
-    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,data=dat, \n            family = poisson(link = 'log')\n            )\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  1.07329    0.09245  11.609  &lt; 2e-16 ***\nsiteSite 2  -0.66783    0.15879  -4.206  2.6e-05 ***\nsiteSite 3   0.33158    0.12117   2.736  0.00621 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 148.739  on 119  degrees of freedom\nResidual deviance:  99.134  on 117  degrees of freedom\nAIC: 425.43\n\nNumber of Fisher Scoring iterations: 5"
+    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,\n            data=dat, \n            family = poisson(link = 'log')\n            )\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  1.02962    0.09449  10.896  &lt; 2e-16 ***\nsiteSite 2  -0.51381    0.15445  -3.327 0.000879 ***\nsiteSite 3   0.57982    0.11802   4.913 8.97e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 209.44  on 119  degrees of freedom\nResidual deviance: 137.65  on 117  degrees of freedom\nAIC: 467.21\n\nNumber of Fisher Scoring iterations: 5"
   },
   {
     "objectID": "FW680A4/glm2.html#data",
@@ -6129,7 +6129,7 @@
     "href": "FW680A4/glm2.html#numerical-optim.-for-mles",
     "title": "Generalized Linear Models II ",
     "section": "Numerical Optim. for MLEs",
-    "text": "Numerical Optim. for MLEs\n\n#use optim with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X=X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\n\nComparison\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit    1.073299 -0.6678340  0.3315581\nours       1.073294 -0.6678294  0.3315763"
+    "text": "Numerical Optim. for MLEs\n\n#use optim with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X=X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\n####\n\nComparison\n\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit    1.029620 -0.5138073  0.5798174\nours       1.029619 -0.5138063  0.5798185"
   },
   {
     "objectID": "FW680A4/glm2.html#comparison",
@@ -6143,14 +6143,14 @@
     "href": "FW680A4/glm2.html#controlling-dummy-coding",
     "title": "Generalized Linear Models II ",
     "section": "Controlling Dummy Coding",
-    "text": "Controlling Dummy Coding\n\ndat$site.re=relevel(dat$site,ref=\"Site 2\")\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y~site.re,\n             data=dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)     0.4055     0.1291   3.141  0.00169 ** \nsite.reSite 1   0.6678     0.1588   4.206 2.60e-05 ***\nsite.reSite 3   0.9994     0.1510   6.618 3.63e-11 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 148.739  on 119  degrees of freedom\nResidual deviance:  99.134  on 117  degrees of freedom\nAIC: 425.43\n\nNumber of Fisher Scoring iterations: 5"
+    "text": "Controlling Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re=relevel(dat$site,ref=\"Site 2\")\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y~site.re,\n             data=dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)     0.5158     0.1222   4.222 2.42e-05 ***\nsite.reSite 1   0.5138     0.1544   3.327 0.000879 ***\nsite.reSite 3   1.0936     0.1412   7.748 9.37e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 209.44  on 119  degrees of freedom\nResidual deviance: 137.65  on 117  degrees of freedom\nAIC: 467.21\n\nNumber of Fisher Scoring iterations: 5"
   },
   {
     "objectID": "FW680A4/glm2.html#same-model-different-estimates",
     "href": "FW680A4/glm2.html#same-model-different-estimates",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0732945 -0.6678294  0.3315763\nModel2   0.4054651  0.6678294  0.9994056\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel2 1.073294 0.4054651 1.404871 1.073294 0.4054651\n\n\n\n\nDesign Matrix\n\n\n  (Intercept) dat$siteSite 2 dat$siteSite 3\n1           1              0              0\n2           1              1              0\n3           1              0              1\n4           1              0              0\n5           1              1              0\n\n\n  (Intercept) dat$site.reSite 1 dat$site.reSite 3\n1           1                 1                 0\n2           1                 0                 0\n3           1                 0                 1\n4           1                 1                 0\n5           1                 0                 0"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0296194 -0.5138063  0.5798185\nModel2   0.5158132  0.5138063  1.0936247\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel2 1.029619 0.5158132 1.609438 1.029619 0.5158132\n\n\n\n\nDesign Matrix\n\n\n  (Intercept) dat$siteSite 2 dat$siteSite 3\n1           1              0              0\n2           1              1              0\n3           1              0              1\n4           1              0              0\n5           1              1              0\n\n\n  (Intercept) dat$site.reSite 1 dat$site.reSite 3\n1           1                 1                 0\n2           1                 0                 0\n3           1                 0                 1\n4           1                 1                 0\n5           1                 0                 0"
   },
   {
     "objectID": "FW680A4/glm2.html#more-control-of-your-coefecients",
@@ -6171,14 +6171,14 @@
     "href": "FW680A4/glm2.html#same-model-different-estimates-1",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0732945 -0.6678294  0.3315763\nModel2   0.4054651  0.6678294  0.9994056\nModel3   0.9612101  0.1120844 -0.5557450\nModel4   1.0732945  0.4054651  1.4048707\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel2 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel3 1.073294 0.4054651 1.404871 1.073294 0.4054651\nModel4 1.073294 0.4054651 1.404871 1.073294 0.4054651"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept)  siteSite 2 siteSite 3\nModel1   1.0296194 -0.51380625  0.5798185\nModel2   0.5158132  0.51380625  1.0936247\nModel3   1.0516235 -0.02200408 -0.5358103\nModel4   1.0296194  0.51581317  1.6094379\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel2 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel3 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel4 1.029619 0.5158132 1.609438 1.029619 0.5158132\n\n\nDeviance\n\n\n           [,1]\nModel1 137.6467\nModel2 137.6467\nModel3 137.6467\nModel4 137.6467"
   },
   {
     "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",
     "href": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",
     "title": "Generalized Linear Models II ",
     "section": "Side-Bar: Negative Log-Likelihood Function",
-    "text": "Side-Bar: Negative Log-Likelihood Function\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    \n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    \n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
+    "text": "Side-Bar: Negative Log-Likelihood Function\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    \n    #linear model of parameters par and design matrix (X)\n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    \n    #neg log-likelihood\n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
   },
   {
     "objectID": "FW680A4/glm2.html#more-control",
@@ -6206,28 +6206,28 @@
     "href": "FW680A4/glm2.html#deviation-coding-interpretation",
     "title": "Generalized Linear Models II ",
     "section": "Deviation Coding Interpretation",
-    "text": "Deviation Coding Interpretation\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n  0.9612101   0.1120844  -0.5557450 \n\n\nIntercept = grand mean of site-means (log-scale)\nbeta1 1 = effect difference of Site 1 from Grand Mean\nbeta2 2 = effect difference of Site 2 from Grand Mean\n\n\n#The coefficient for site-level 3 (difference from the grand mean) \nsum(coef(model3)[-1]*(-1))\n\n[1] 0.4436606"
+    "text": "Deviation Coding Interpretation\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n 1.05162350 -0.02200408 -0.53581033 \n\n\nIntercept = grand mean of site-means (log-scale)\n\\(\\beta_{1}\\) = effect difference of Site 1 from Grand Mean\n\\(\\beta_{2}\\) = effect difference of Site 2 from Grand Mean\n\n\nThe coefficient for site-level 3 (difference from the grand mean)\n\nsum(coef(model3)[-1]*(-1))\n\n[1] 0.5578144"
   },
   {
     "objectID": "FW680A4/glm2.html#more-control-again",
     "href": "FW680A4/glm2.html#more-control-again",
     "title": "Generalized Linear Models II ",
     "section": "More Control Again!",
-    "text": "More Control Again!\nContrasts\n\n#Use effect coding to make the intercept the grand mean\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0+site,data=dat),n=6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+    "text": "More Control Again!\nContrasts\nNo shared connection among these partial intercepts\n\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0+site,data=dat),n=6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
   },
   {
     "objectID": "FW680A4/glm2.html#taking-control",
     "href": "FW680A4/glm2.html#taking-control",
     "title": "Generalized Linear Models II ",
     "section": "Taking Control",
-    "text": "Taking Control\n\nX = model.matrix(~STUFF)\n\nmodel = glm(y~ 0 + X, ...)"
+    "text": "Taking Control\n\nX = model.matrix(~Independent Variables)\n\n#all variables in dat (additive)\nX = model.matrix(~.,dat)\n\n#all variables in dat (pair-wise interactions)\nX = model.matrix(~.^2,dat)\n\n#all variables in dat (three way- interactions)\nX = model.matrix(~.^3,dat) \n\nmodel = glm(y~ 0 + X, ...)"
   },
   {
     "objectID": "FW680A4/glm2.html#section",
     "href": "FW680A4/glm2.html#section",
     "title": "Generalized Linear Models II ",
     "section": "",
-    "text": "Variable Interactions"
+    "text": "Variable Combinations"
   },
   {
     "objectID": "FW680A4/glm2.html#poisson-regression-to-model-rates",
@@ -6248,7 +6248,7 @@
     "href": "FW680A4/glm2.html#offset-code",
     "title": "Generalized Linear Models II ",
     "section": "Offset Code",
-    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.7712156  -0.1180465   0.1512329 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.7712156  -0.1180465   0.1512329"
+    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n-0.68867290 -0.09024110  0.04419089 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n-0.68867290 -0.09024110  0.04419089"
   },
   {
     "objectID": "FW680A4/glm2.html#poisson-regression-offset",
@@ -6263,5 +6263,54 @@
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Biased Correction",
     "text": "Logistic Regression Biased Correction\nbrglm: Bias Reduction in Binomial-Response Generalized Linear Models\n\nbrglm::brglm(y~0+X, family = binomial(link = \"logit\"))\n\n\n# Relative Bias\n  (mean(coef.est[1,])-beta[1])/beta[1]\n\n[1] 0.007785692\n\n  (mean(coef.est[2,])-beta[2])/beta[2]\n\n[1] 0.008799186"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#pika-study",
+    "href": "FW680A4/glm2.html#pika-study",
+    "title": "Generalized Linear Models II ",
+    "section": "Pika Study",
+    "text": "Pika Study\n\nWe sample plots of high elevation rocky outcrops, counting the number of pika within each plot; plot sizes are the same size."
+  },
+  {
+    "objectID": "FW680A4/glm2.html#intuition-check",
+    "href": "FW680A4/glm2.html#intuition-check",
+    "title": "Generalized Linear Models II ",
+    "section": "Intuition Check",
+    "text": "Intuition Check\n\nmean.group = aggregate(y, by=list(site=site),FUN=mean)\nmean.group\n\n    site     x\n1 Site 1 2.800\n2 Site 2 1.675\n3 Site 3 5.000\n\n\n\n\n#Site 1\nexp(1.05162350 + -0.02200408)\n\n[1] 2.8\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 2.8\n\n\n\n\n\n#Site 2\nexp(1.05162350 + -0.53581033)\n\n[1] 1.675\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 1.675\n\n\n\n\n\n#Site 3\nexp(1.05162350+0.5578144)\n\n[1] 5\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 5"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#additive",
+    "href": "FW680A4/glm2.html#additive",
+    "title": "Generalized Linear Models II ",
+    "section": "Additive",
+    "text": "Additive\nContinuous and Categorical\n\nlm(weight~sex+age.years,data=eleph)\n\n\n\n\n\n\n\n\n\n\nContinuous and Continuous\n\nlm(weight~parastites+age.years,data=eleph)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#interaction",
+    "href": "FW680A4/glm2.html#interaction",
+    "title": "Generalized Linear Models II ",
+    "section": "Interaction",
+    "text": "Interaction\nContinuous and Categorical\n\nlm(weight~sex*age.years,data=eleph)\nlm(weight~sex+age.years+sex:age.years,data=eleph)\n\n\n\n\n\n\n\n\n\n\nContinuous and Continuous\n\nlm(weight~age.years*parastites,data=eleph)\nlm(weight~age.years+parastites+age.years:parastites,data=eleph)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#polynomial",
+    "href": "FW680A4/glm2.html#polynomial",
+    "title": "Generalized Linear Models II ",
+    "section": "Polynomial",
+    "text": "Polynomial\nQuadratic\n\nlm(weight~poly(age.years,2),data=eleph)\nlm(weight~age.years+I(age.years^2),data=eleph)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#transormations",
+    "href": "FW680A4/glm2.html#transormations",
+    "title": "Generalized Linear Models II ",
+    "section": "Transormations",
+    "text": "Transormations\nlog\n\nlm(weight~sex*I(log(age.years)),data=eleph)"
+  },
+  {
+    "objectID": "R1day/index.html#section",
+    "href": "R1day/index.html#section",
+    "title": "Introduction to R",
+    "section": "",
+    "text": "Next: Data input and output (Kyle)"
   }
 ]

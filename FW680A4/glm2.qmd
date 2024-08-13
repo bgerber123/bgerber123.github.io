@@ -26,9 +26,16 @@ pre {
 ```
 
 -   Poisson Regression
--   categorical variables
--   variable interactions
--   multicollinearity
+-   Numerical Optimization
+-   Categorical variables >2 levels
+-   Effect Coding
+-   Variable combinations
+
+## Pika Study
+
+![](/img/pika2.png)
+
+We sample plots of high elevation rocky outcrops, counting the number of pika within each plot; plot sizes are the same size.
 
 ## Poisson Regression
 
@@ -52,6 +59,7 @@ $$
   beta=c(1,-0.5,0.5)
   X=model.matrix(~site)
   lambda = exp(X%*%beta)
+  set.seed(3434)
   y = rpois(n, lambda)
   dat=data.frame(y=y,site=site)
   hist(dat$y,xlab="Pika Counts")  
@@ -70,10 +78,11 @@ library(ggplot2)
 
 ## Fit Model {.scrollable}
 
-Interpret the Coefficients
+<span style="color:purple">Interpret the Coefficients</span>
 
 ```{r eval=TRUE,echo=TRUE}
-model = glm(y~site,data=dat, 
+model = glm(y~site,
+            data=dat, 
             family = poisson(link = 'log')
             )
 summary(model)
@@ -99,14 +108,17 @@ model$control
   #inputs = design matrix X
   neg.log.like = function(par,X) {
     
+    #linear model of parameters par and design matrix (X)
     lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]
     
+    #neg log-likelihood
     sum(-dpois(y,lambda = exp(lam),log = TRUE))
   }
 ```
 
 
 ## Numerical Optim. for MLEs
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 #use optim with initial values and define the lower and upper limits of the possible values
   fit1 <- optim(
@@ -120,9 +132,10 @@ model$control
 
 ```
 
+
 ::: {.fragment}
 
-#### Comparison
+#### <p style="color:purple">Comparison</p>
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}
 a =rbind(fit1$par,
@@ -137,6 +150,7 @@ a
 
 ## Controlling Dummy Coding {.scrollable}
 
+<span style="color:purple">Make 'Site 2' the intercept</span>
 
 ```{r eval=TRUE,echo=TRUE}
 dat$site.re=relevel(dat$site,ref="Site 2")
@@ -161,7 +175,7 @@ summary(model2)
 
 ## Same Model Different Estimates {.scrollable}
 
-#### Coeficients
+#### <span style="color:purple">Coeficients</span>
 ```{r eval=TRUE,echo=FALSE}
 a = rbind(coef(model),
           coef(model2)
@@ -172,7 +186,7 @@ a
 
 ```
 
-#### Predictions
+#### <span style="color:purple">Predictions</span>
 ```{r eval=TRUE,echo=FALSE}
 b = rbind(predict(model)[1:5],
       predict(model2)[1:5]
@@ -206,7 +220,7 @@ model.matrix(~dat$site.re)[1:5,]
             )
 ```
 
-## Deviation Coding Interpretation
+## Deviation Coding Interpretation {.scrollable}
 
 ```{r, echo=TRUE, eval=TRUE}
 coef(model3)
@@ -214,25 +228,68 @@ coef(model3)
 
 Intercept = grand mean of site-means (log-scale)
 
-beta1 1 = effect difference of Site 1 from Grand Mean
+$\beta_{1}$ = effect difference of Site 1 from Grand Mean
 
-beta2 2 = effect difference of Site 2 from Grand Mean
+$\beta_{2}$ = effect difference of Site 2 from Grand Mean
+
+::: {.fragment}
+
+#### The coefficient for site-level 3 (difference from the grand mean) 
+
+```{r, echo=TRUE, eval=TRUE}
+sum(coef(model3)[-1]*(-1))
+```
+
+:::
+
+
+
+## Intuition Check {.scrollable}
+
+```{r, echo=TRUE, eval=TRUE}
+mean.group = aggregate(y, by=list(site=site),FUN=mean)
+mean.group
+```
+
 
 ::: {.fragment}
 
 ```{r, echo=TRUE, eval=TRUE}
-#The coefficient for site-level 3 (difference from the grand mean) 
-sum(coef(model3)[-1]*(-1))
+#Site 1
+exp(1.05162350 + -0.02200408)
+as.numeric(predict(model3,type="response")[1])
+```
+
+:::
+
+
+::: {.fragment}
+
+```{r, echo=TRUE, eval=TRUE}
+#Site 2
+exp(1.05162350 + -0.53581033)
+as.numeric(predict(model3,type="response")[2])
+```
+
+:::
+
+::: {.fragment}
+
+```{r, echo=TRUE, eval=TRUE}
+#Site 3
+exp(1.05162350+0.5578144)
+as.numeric(predict(model3,type="response")[3])
 ```
 
 :::
 
 ## More Control Again!
 
-#### Contrasts
+#### <span style="color:purple">Contrasts</span>
+
+No shared connection among these partial intercepts
 
 ```{r, echo=TRUE, eval=TRUE}
-#Use effect coding to make the intercept the grand mean
   model4=glm(y~0+site, 
              data=dat, 
              family = poisson(link = 'log')
@@ -244,10 +301,10 @@ head(model.matrix(~0+site,data=dat),n=6)
 ```
 
 
-## Same Model Different Estimates
+## Same Model Different Estimates{.scrollable}
 
 
-#### Coeficients
+#### <span style="color:purple">Coeficients</span>
 
 ```{r eval=TRUE,echo=FALSE}
 c =rbind(coef(model),
@@ -259,7 +316,7 @@ rownames(c)=c("Model1","Model2","Model3","Model4")
 c
 ```
 
-#### Predictions
+#### <span style="color:purple">Predictions</span>
 
 ```{r eval=TRUE,echo=FALSE}
 d=rbind(predict(model)[1:5],
@@ -272,11 +329,34 @@ d
 
 ```
 
+#### <span style="color:purple">Deviance</span>
+
+```{r eval=TRUE,echo=FALSE}
+d=rbind(model$deviance,
+      model2$deviance,
+      model3$deviance,
+      model4$deviance
+      )
+rownames(d)=c("Model1","Model2","Model3","Model4")
+d
+
+```
+
+
 ## Taking Control
 
 ```{r, eval=FALSE, echo=TRUE}
 
-X = model.matrix(~STUFF)
+X = model.matrix(~Independent Variables)
+
+#all variables in dat (additive)
+X = model.matrix(~.,dat)
+
+#all variables in dat (pair-wise interactions)
+X = model.matrix(~.^2,dat)
+
+#all variables in dat (three way- interactions)
+X = model.matrix(~.^3,dat) 
 
 model = glm(y~ 0 + X, ...)
 
@@ -303,7 +383,7 @@ dat$area=rpois(n,dat$y*2)
 dat$area[which(dat$area==0)]=2
 ```
 
-Equivalent
+<span style="color:purple">Equivalent</span>
 
 $$
 \begin{align*}
@@ -341,9 +421,97 @@ coef(model.rate2)
 <br>
 <br>
 <br>
-<center><span style="color:#C70039; font-size: 65px;";><b>Variable Interactions</b></span></center>
+<center><span style="color:#C70039; font-size: 65px;";><b>Variable Combinations</b></span></center>
 
 ```
+
+## Additive
+
+#### <span style="color:purple">Continuous and Categorical</span>
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~sex+age.years,data=eleph)
+```
+
+```{r,echo=FALSE,eval=TRUE}
+eleph = read.csv("elephant.study2.csv")
+eleph$parastites = runif(nrow(eleph))
+m1 = lm(weight~sex+age.years,data=eleph)
+
+marginaleffects::plot_predictions(m1, condition=c("age.years","sex"))
+
+```
+
+
+#### <span style="color:purple">Continuous and Continuous</span>
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~parastites+age.years,data=eleph)
+```
+
+```{r,echo=FALSE,eval=TRUE}
+m1 = lm(weight~parastites+age.years,data=eleph)
+
+marginaleffects::plot_predictions(m1, condition=c("age.years","parastites"))
+
+```
+
+## Interaction
+
+#### Continuous and Categorical
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~sex*age.years,data=eleph)
+lm(weight~sex+age.years+sex:age.years,data=eleph)
+```
+
+```{r,echo=FALSE,eval=TRUE}
+m1 = lm(weight~sex*age.years,data=eleph)
+marginaleffects::plot_predictions(m1, condition=c("age.years","sex"))
+```
+
+#### Continuous and Continuous
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~age.years*parastites,data=eleph)
+lm(weight~age.years+parastites+age.years:parastites,data=eleph)
+```
+
+```{r,echo=FALSE,eval=TRUE}
+m1 = lm(weight~age.years*parastites,data=eleph)
+marginaleffects::plot_predictions(m1, condition=c("age.years","parastites"))
+
+```
+
+## Polynomial
+
+#### Quadratic
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~poly(age.years,2),data=eleph)
+lm(weight~age.years+I(age.years^2),data=eleph)
+
+```
+
+```{r,echo=FALSE,eval=TRUE}
+m1 = lm(weight~poly(age.years,2),data=eleph)
+marginaleffects::plot_predictions(m1, condition=c("age.years"))
+```
+
+## Transormations
+
+#### log
+
+```{r,echo=TRUE,eval=FALSE}
+lm(weight~sex*I(log(age.years)),data=eleph)
+```
+
+```{r,echo=FALSE,eval=TRUE}
+m1 = lm(weight~sex*I(log(age.years)),data=eleph)
+marginaleffects::plot_predictions(m1, condition=c("age.years"))
+```
+
+
 
 <!-- ## Additive Model -->
 

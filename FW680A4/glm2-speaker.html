@@ -415,10 +415,15 @@ pre {
 </style>
 <ul>
 <li>Poisson Regression</li>
-<li>categorical variables</li>
-<li>variable interactions</li>
-<li>multicollinearity</li>
+<li>Numerical Optimization</li>
+<li>categorical variables &gt;2 levels</li>
+<li>variable combinations</li>
 </ul>
+</section>
+<section id="pika-study" class="slide level2">
+<h2>Pika Study</h2>
+
+<img data-src="..\img/pika2.png" class="r-stretch"><p>We sample plots of high elevation rocky outcrops, counting the number of pika within each plot; plot sizes are the same size.</p>
 </section>
 <section id="poisson-regression" class="slide level2">
 <h2>Poisson Regression</h2>
@@ -441,12 +446,13 @@ pre {
 <img data-src="glm2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="fit-model" class="slide level2 scrollable">
 <h2>Fit Model</h2>
-<p>Interpret the Coefficients</p>
+<p><span style="color:purple">Interpret the Coefficients</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site,<span class="at">data=</span>dat, </span>
-<span id="cb1-2"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb1-3"><a></a>            )</span>
-<span id="cb1-4"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site,</span>
+<span id="cb1-2"><a></a>            <span class="at">data=</span>dat, </span>
+<span id="cb1-3"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb1-4"><a></a>            )</span>
+<span id="cb1-5"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -454,17 +460,17 @@ glm(formula = y ~ site, family = poisson(link = "log"), data = dat)
 
 Coefficients:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  1.07329    0.09245  11.609  &lt; 2e-16 ***
-siteSite 2  -0.66783    0.15879  -4.206  2.6e-05 ***
-siteSite 3   0.33158    0.12117   2.736  0.00621 ** 
+(Intercept)  1.02962    0.09449  10.896  &lt; 2e-16 ***
+siteSite 2  -0.51381    0.15445  -3.327 0.000879 ***
+siteSite 3   0.57982    0.11802   4.913 8.97e-07 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
-    Null deviance: 148.739  on 119  degrees of freedom
-Residual deviance:  99.134  on 117  degrees of freedom
-AIC: 425.43
+    Null deviance: 209.44  on 119  degrees of freedom
+Residual deviance: 137.65  on 117  degrees of freedom
+AIC: 467.21
 
 Number of Fisher Scoring iterations: 5</code></pre>
 </div>
@@ -510,10 +516,12 @@ $trace
 <span id="cb13-3"><a></a>  <span class="co">#inputs = design matrix X</span></span>
 <span id="cb13-4"><a></a>  neg.log.like <span class="ot">=</span> <span class="cf">function</span>(par,X) {</span>
 <span id="cb13-5"><a></a>    </span>
-<span id="cb13-6"><a></a>    lam<span class="ot">=</span>par[<span class="dv">1</span>]<span class="sc">*</span>X[,<span class="dv">1</span>]<span class="sc">+</span>par[<span class="dv">2</span>]<span class="sc">*</span>X[,<span class="dv">2</span>]<span class="sc">+</span>par[<span class="dv">3</span>]<span class="sc">*</span>X[,<span class="dv">3</span>]</span>
-<span id="cb13-7"><a></a>    </span>
-<span id="cb13-8"><a></a>    <span class="fu">sum</span>(<span class="sc">-</span><span class="fu">dpois</span>(y,<span class="at">lambda =</span> <span class="fu">exp</span>(lam),<span class="at">log =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb13-9"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a></a>    <span class="co">#linear model of parameters par and design matrix (X)</span></span>
+<span id="cb13-7"><a></a>    lam<span class="ot">=</span>par[<span class="dv">1</span>]<span class="sc">*</span>X[,<span class="dv">1</span>]<span class="sc">+</span>par[<span class="dv">2</span>]<span class="sc">*</span>X[,<span class="dv">2</span>]<span class="sc">+</span>par[<span class="dv">3</span>]<span class="sc">*</span>X[,<span class="dv">3</span>]</span>
+<span id="cb13-8"><a></a>    </span>
+<span id="cb13-9"><a></a>    <span class="co">#neg log-likelihood</span></span>
+<span id="cb13-10"><a></a>    <span class="fu">sum</span>(<span class="sc">-</span><span class="fu">dpois</span>(y,<span class="at">lambda =</span> <span class="fu">exp</span>(lam),<span class="at">log =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb13-11"><a></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="numerical-optim.-for-mles" class="slide level2">
@@ -530,19 +538,22 @@ $trace
 <span id="cb14-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<!-- -->
-<h4 id="comparison">Comparison</h4>
+####
+<p style="color:purple">
+Comparison
+</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>        (Intercept) siteSite 2 siteSite 3
-glm.fit    1.073299 -0.6678340  0.3315581
-ours       1.073294 -0.6678294  0.3315763</code></pre>
+glm.fit    1.029620 -0.5138073  0.5798174
+ours       1.029619 -0.5138063  0.5798185</code></pre>
 </div>
 </div>
 </div>
 </section>
 <section id="controlling-dummy-coding" class="slide level2 scrollable">
 <h2>Controlling Dummy Coding</h2>
+<p><span style="color:purple">Make ‘Site 2’ the intercept</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>dat<span class="sc">$</span>site.re<span class="ot">=</span><span class="fu">relevel</span>(dat<span class="sc">$</span>site,<span class="at">ref=</span><span class="st">"Site 2"</span>)</span>
 <span id="cb16-2"><a></a><span class="fu">levels</span>(dat<span class="sc">$</span>site.re) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -565,17 +576,17 @@ glm(formula = y ~ site.re, family = poisson(link = "log"), data = dat)
 
 Coefficients:
               Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)     0.4055     0.1291   3.141  0.00169 ** 
-site.reSite 1   0.6678     0.1588   4.206 2.60e-05 ***
-site.reSite 3   0.9994     0.1510   6.618 3.63e-11 ***
+(Intercept)     0.5158     0.1222   4.222 2.42e-05 ***
+site.reSite 1   0.5138     0.1544   3.327 0.000879 ***
+site.reSite 3   1.0936     0.1412   7.748 9.37e-15 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
-    Null deviance: 148.739  on 119  degrees of freedom
-Residual deviance:  99.134  on 117  degrees of freedom
-AIC: 425.43
+    Null deviance: 209.44  on 119  degrees of freedom
+Residual deviance: 137.65  on 117  degrees of freedom
+AIC: 467.21
 
 Number of Fisher Scoring iterations: 5</code></pre>
 </div>
@@ -584,20 +595,20 @@ Number of Fisher Scoring iterations: 5</code></pre>
 </section>
 <section id="same-model-different-estimates" class="slide level2 scrollable">
 <h2>Same Model Different Estimates</h2>
-<h4 id="coeficients">Coeficients</h4>
+<h4 id="coeficients"><span style="color:purple">Coeficients</span></h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>       (Intercept) siteSite 2 siteSite 3
-Model1   1.0732945 -0.6678294  0.3315763
-Model2   0.4054651  0.6678294  0.9994056</code></pre>
+Model1   1.0296194 -0.5138063  0.5798185
+Model2   0.5158132  0.5138063  1.0936247</code></pre>
 </div>
 </div>
-<h4 id="predictions">Predictions</h4>
+<h4 id="predictions"><span style="color:purple">Predictions</span></h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>              1         2        3        4         5
-Model1 1.073294 0.4054651 1.404871 1.073294 0.4054651
-Model2 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
+Model1 1.029619 0.5158132 1.609438 1.029619 0.5158132
+Model2 1.029619 0.5158132 1.609438 1.029619 0.5158132</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -635,40 +646,93 @@ Model2 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 <span id="cb24-5"><a></a>            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="deviation-coding-interpretation" class="slide level2">
+<section id="deviation-coding-interpretation" class="slide level2 scrollable">
 <h2>Deviation Coding Interpretation</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">coef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)       site1       site2 
-  0.9612101   0.1120844  -0.5557450 </code></pre>
+ 1.05162350 -0.02200408 -0.53581033 </code></pre>
 </div>
 </div>
 <p>Intercept = grand mean of site-means (log-scale)</p>
-<p>beta1 1 = effect difference of Site 1 from Grand Mean</p>
-<p>beta2 2 = effect difference of Site 2 from Grand Mean</p>
+<p><span class="math inline">\(\beta_{1}\)</span> = effect difference of Site 1 from Grand Mean</p>
+<p><span class="math inline">\(\beta_{2}\)</span> = effect difference of Site 2 from Grand Mean</p>
+<div class="fragment">
+<!-- -->
+<h4 id="the-coefficient-for-site-level-3-difference-from-the-grand-mean">The coefficient for site-level 3 (difference from the grand mean)</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">sum</span>(<span class="fu">coef</span>(model3)[<span class="sc">-</span><span class="dv">1</span>]<span class="sc">*</span>(<span class="sc">-</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5578144</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="intuition-check" class="slide level2 scrollable">
+<h2>Intuition Check</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>mean.group <span class="ot">=</span> <span class="fu">aggregate</span>(y, <span class="at">by=</span><span class="fu">list</span>(<span class="at">site=</span>site),<span class="at">FUN=</span>mean)</span>
+<span id="cb29-2"><a></a>mean.group</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    site     x
+1 Site 1 2.800
+2 Site 2 1.675
+3 Site 3 5.000</code></pre>
+</div>
+</div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="co">#The coefficient for site-level 3 (difference from the grand mean) </span></span>
-<span id="cb27-2"><a></a><span class="fu">sum</span>(<span class="fu">coef</span>(model3)[<span class="sc">-</span><span class="dv">1</span>]<span class="sc">*</span>(<span class="sc">-</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="co">#Site 1</span></span>
+<span id="cb31-2"><a></a><span class="fu">exp</span>(<span class="fl">1.05162350</span> <span class="sc">+</span> <span class="sc">-</span><span class="fl">0.02200408</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4436606</code></pre>
+<pre><code>[1] 2.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>)[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.8</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="co">#Site 2</span></span>
+<span id="cb35-2"><a></a><span class="fu">exp</span>(<span class="fl">1.05162350</span> <span class="sc">+</span> <span class="sc">-</span><span class="fl">0.53581033</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.675</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>)[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.675</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="co">#Site 3</span></span>
+<span id="cb39-2"><a></a><span class="fu">exp</span>(<span class="fl">1.05162350+0.5578144</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>)[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
 </div>
 </div>
 </div>
 </section>
 <section id="more-control-again" class="slide level2">
 <h2>More Control Again!</h2>
-<h4 id="contrasts">Contrasts</h4>
+<h4 id="contrasts"><span style="color:purple">Contrasts</span></h4>
+<p>No shared connection among these partial intercepts</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co">#Use effect coding to make the intercept the grand mean</span></span>
-<span id="cb29-2"><a></a>  model4<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>site, </span>
-<span id="cb29-3"><a></a>             <span class="at">data=</span>dat, </span>
-<span id="cb29-4"><a></a>             <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb29-5"><a></a>            )</span>
-<span id="cb29-6"><a></a></span>
-<span id="cb29-7"><a></a><span class="co"># No shared intercept</span></span>
-<span id="cb29-8"><a></a><span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>site,<span class="at">data=</span>dat),<span class="at">n=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>  model4<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>site, </span>
+<span id="cb43-2"><a></a>             <span class="at">data=</span>dat, </span>
+<span id="cb43-3"><a></a>             <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb43-4"><a></a>            )</span>
+<span id="cb43-5"><a></a></span>
+<span id="cb43-6"><a></a><span class="co"># No shared intercept</span></span>
+<span id="cb43-7"><a></a><span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>site,<span class="at">data=</span>dat),<span class="at">n=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  siteSite 1 siteSite 2 siteSite 3
 1          1          0          0
@@ -680,35 +744,54 @@ Model2 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 </div>
 </div>
 </section>
-<section id="same-model-different-estimates-1" class="slide level2">
+<section id="same-model-different-estimates-1" class="slide level2 scrollable">
 <h2>Same Model Different Estimates</h2>
-<h4 id="coeficients-1">Coeficients</h4>
+<h4 id="coeficients-1"><span style="color:purple">Coeficients</span></h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>       (Intercept) siteSite 2 siteSite 3
-Model1   1.0732945 -0.6678294  0.3315763
-Model2   0.4054651  0.6678294  0.9994056
-Model3   0.9612101  0.1120844 -0.5557450
-Model4   1.0732945  0.4054651  1.4048707</code></pre>
+<pre><code>       (Intercept)  siteSite 2 siteSite 3
+Model1   1.0296194 -0.51380625  0.5798185
+Model2   0.5158132  0.51380625  1.0936247
+Model3   1.0516235 -0.02200408 -0.5358103
+Model4   1.0296194  0.51581317  1.6094379</code></pre>
 </div>
 </div>
-<h4 id="predictions-1">Predictions</h4>
+<h4 id="predictions-1"><span style="color:purple">Predictions</span></h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>              1         2        3        4         5
-Model1 1.073294 0.4054651 1.404871 1.073294 0.4054651
-Model2 1.073294 0.4054651 1.404871 1.073294 0.4054651
-Model3 1.073294 0.4054651 1.404871 1.073294 0.4054651
-Model4 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
+Model1 1.029619 0.5158132 1.609438 1.029619 0.5158132
+Model2 1.029619 0.5158132 1.609438 1.029619 0.5158132
+Model3 1.029619 0.5158132 1.609438 1.029619 0.5158132
+Model4 1.029619 0.5158132 1.609438 1.029619 0.5158132</code></pre>
+</div>
+</div>
+<h4 id="deviance"><span style="color:purple">Deviance</span></h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>           [,1]
+Model1 137.6467
+Model2 137.6467
+Model3 137.6467
+Model4 137.6467</code></pre>
 </div>
 </div>
 </section>
 <section id="taking-control" class="slide level2">
 <h2>Taking Control</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>STUFF)</span>
-<span id="cb33-2"><a></a></span>
-<span id="cb33-3"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> X, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>Independent Variables)</span>
+<span id="cb48-2"><a></a></span>
+<span id="cb48-3"><a></a><span class="co">#all variables in dat (additive)</span></span>
+<span id="cb48-4"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>.,dat)</span>
+<span id="cb48-5"><a></a></span>
+<span id="cb48-6"><a></a><span class="co">#all variables in dat (pair-wise interactions)</span></span>
+<span id="cb48-7"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>.<span class="sc">^</span><span class="dv">2</span>,dat)</span>
+<span id="cb48-8"><a></a></span>
+<span id="cb48-9"><a></a><span class="co">#all variables in dat (three way- interactions)</span></span>
+<span id="cb48-10"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>.<span class="sc">^</span><span class="dv">3</span>,dat) </span>
+<span id="cb48-11"><a></a></span>
+<span id="cb48-12"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> X, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="poisson-regression-offset" class="slide level2">
@@ -724,7 +807,7 @@ Model4 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 </section>
 <section id="offset" class="slide level2">
 <h2>Offset</h2>
-<p>Equivalent</p>
+<p><span style="color:purple">Equivalent</span></p>
 <p><span class="math display">\[
 \begin{align*}
 \text{log}(\frac{\boldsymbol{\lambda}}{\textbf{A}}) =&amp; \beta_0 + \beta_1 \textbf{x}_{1}\\
@@ -735,26 +818,26 @@ Model4 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 <section id="offset-code" class="slide level2">
 <h2>Offset Code</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>model.rate1 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">+</span><span class="fu">offset</span>(<span class="fu">log</span>(area)),</span>
-<span id="cb34-2"><a></a>            <span class="at">data=</span>dat, </span>
-<span id="cb34-3"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb34-4"><a></a>            )</span>
-<span id="cb34-5"><a></a></span>
-<span id="cb34-6"><a></a>model.rate2 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site,</span>
-<span id="cb34-7"><a></a>            <span class="at">offset =</span> <span class="fu">log</span>(area),</span>
-<span id="cb34-8"><a></a>            <span class="at">data=</span>dat, </span>
-<span id="cb34-9"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb34-10"><a></a>            )</span>
-<span id="cb34-11"><a></a></span>
-<span id="cb34-12"><a></a><span class="fu">coef</span>(model.rate1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>model.rate1 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">+</span><span class="fu">offset</span>(<span class="fu">log</span>(area)),</span>
+<span id="cb49-2"><a></a>            <span class="at">data=</span>dat, </span>
+<span id="cb49-3"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb49-4"><a></a>            )</span>
+<span id="cb49-5"><a></a></span>
+<span id="cb49-6"><a></a>model.rate2 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site,</span>
+<span id="cb49-7"><a></a>            <span class="at">offset =</span> <span class="fu">log</span>(area),</span>
+<span id="cb49-8"><a></a>            <span class="at">data=</span>dat, </span>
+<span id="cb49-9"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb49-10"><a></a>            )</span>
+<span id="cb49-11"><a></a></span>
+<span id="cb49-12"><a></a><span class="fu">coef</span>(model.rate1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)  siteSite 2  siteSite 3 
- -0.7712156  -0.1180465   0.1512329 </code></pre>
+-0.68867290 -0.09024110  0.04419089 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">coef</span>(model.rate2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">coef</span>(model.rate2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(Intercept)  siteSite 2  siteSite 3 
- -0.7712156  -0.1180465   0.1512329 </code></pre>
+-0.68867290 -0.09024110  0.04419089 </code></pre>
 </div>
 </div>
 </section>
@@ -766,7 +849,84 @@ Model4 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 <br>
 <br>
 <br>
-<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Variable Interactions</b></span></center>
+<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Variable Combinations</b></span></center>
+
+</section>
+<section id="additive" class="slide level2">
+<h2>Additive</h2>
+<h4 id="continuous-and-categorical">Continuous and Categorical</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>sex<span class="sc">+</span>age.years,<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<h4 id="continuous-and-continuous">Continuous and Continuous</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>parastites<span class="sc">+</span>age.years,<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interaction" class="slide level2">
+<h2>Interaction</h2>
+<h4 id="continuous-and-categorical-1">Continuous and Categorical</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>sex<span class="sc">*</span>age.years,<span class="at">data=</span>eleph)</span>
+<span id="cb55-2"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>sex<span class="sc">+</span>age.years<span class="sc">+</span>sex<span class="sc">:</span>age.years,<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<h4 id="continuous-and-continuous-1">Continuous and Continuous</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>age.years<span class="sc">*</span>parastites,<span class="at">data=</span>eleph)</span>
+<span id="cb56-2"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>age.years<span class="sc">+</span>parastites<span class="sc">+</span>age.years<span class="sc">:</span>parastites,<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="polynomial" class="slide level2">
+<h2>Polynomial</h2>
+<h4 id="quadratic">Quadratic</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span><span class="fu">poly</span>(age.years,<span class="dv">2</span>),<span class="at">data=</span>eleph)</span>
+<span id="cb57-2"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>age.years<span class="sc">+</span><span class="fu">I</span>(age.years<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<img data-src="glm2_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
+<section id="transormations" class="slide level2">
+<h2>Transormations</h2>
+<h4 id="log">log</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">lm</span>(weight<span class="sc">~</span>sex<span class="sc">*</span><span class="fu">I</span>(<span class="fu">log</span>(age.years)),<span class="at">data=</span>eleph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 <!-- ## Additive Model -->
 <!-- #### Categorical (2 levels) and Continuous Variable -->
@@ -884,7 +1044,7 @@ Model4 1.073294 0.4054651 1.404871 1.073294 0.4054651</code></pre>
 <!--   plot_model(model5, type = "pred", terms = c("x2","x")) -->
 <!-- ``` -->
 
-<div class="quarto-auto-generated-content">
+<img data-src="glm2_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>

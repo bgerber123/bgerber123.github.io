@@ -109,7 +109,15 @@ R uses **packages** that are collections of functions, data, and compiled code i
 ## [What is RStudio?]{style="color:green;"}
 
 
-[RStudio](https://posit.co/download/rstudio-desktop/) is an "Integrated Development Environment (IDE)". It brings tools/languages together. We use R within RStudio.
+[RStudio](https://posit.co/download/rstudio-desktop/) is an "Integrated Development Environment (IDE)". 
+
+<br>
+
+RStudio brings tools/languages together. 
+
+<br>
+
+We use R within RStudio.
 
 
 ## [Why use RStudio?]{style="color:green;"}
@@ -157,10 +165,10 @@ R uses **packages** that are collections of functions, data, and compiled code i
 
 -   Write and execute code in R via RStudio
 -   R language vocabulary
--   Find help
 -   Read/write data
+-   Find help
 -   Manipulate data efficiently
--   Plot data or results
+-   Plot data/results
 
 ## [Today]{style="color:green;"}
 
@@ -173,26 +181,28 @@ R uses **packages** that are collections of functions, data, and compiled code i
 
 **Schedule**
 
--   [900 - 930]{style="color:blue;"}: Introductions and setup
--   [930 - 1000]{style="color:blue;"}: RStudio and R (objects and functions)
--   [1000 - 1130]{style="color:blue;"}: Data input and output
--   [1130- 1200]{style="color:blue;"}: Finding help
+-   [900 - 930]{style="color:blue;"}: Introductions and Setup
+-   [930 - 1015]{style="color:blue;"}: RStudio and R (objects and functions)
+-   [1015 - 1130]{style="color:blue;"}: Data Input and Output
+-   [1130- 1200]{style="color:blue;"}: Finding Help
 -   [1200 - 1300]{style="color:blue;"}: Lunch
--   [1300 - 1400]{style="color:blue;"}: Data mgmt
+-   [1300 - 1400]{style="color:blue;"}: Data Mgmt
 -   [1400 - 1500]{style="color:blue;"}: Plotting
 -   [1500 - 1600]{style="color:blue;"}: Final Challenge
 
 ## [Showcases]{style="color:green;"}
 
-Brian - [R Shiny application](https://shiny.uri.edu/bgerber/GlobalDiel/) that allows users to subset data and visualize 14,586 results
+<br>
+
+Brian - [R Shiny application](https://shiny.uri.edu/bgerber/GlobalDiel/)
 
 <br>
 
-Kyle - example here
+Kyle - [Lights out alerts](https://aeroecolab.com/uslights)
 
 <br>
 
-Georgia - example here
+Georgia - [The Orion Nebula?](net_showcase.png)
 
 
 ## [RStudio]{style="color:green;"}
@@ -209,9 +219,21 @@ Georgia - example here
 
 ## [Packages for Workshop]{style="color:green;"}
 
-#### Please install
+#### Please install from CRAN
 - tidyverse
 - readxl
+- ggridges
+- gridExtra
+
+```{r, eval=FALSE, echo=TRUE}
+  install.packages(c("tidyverse",
+                     "readxl", 
+                     "ggridges", 
+                     "gridExtra")
+                   )
+```
+
+
 
 ## [The language of R]{style="color:green;"}
 
@@ -284,34 +306,34 @@ y*2 / (y*4)
 ```
 :::
 
-## [Challenge 1]{style="color:green;"} {.scrollable}
+<!-- ## [Challenge 1]{style="color:green;"} {.scrollable} -->
 
-Compute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)...
+<!-- Compute the diameter (d) of the Earth (in km) at the equator using this formula for the circumfrance (c)... -->
 
-$$d = \frac{c}{\pi}$$
+<!-- $$d = \frac{c}{\pi}$$ -->
 
-::: {style="font-size: 75%;"}
--   c = 24,901.55 miles
--   1 km = 0.621 miles
--   **Hint** type in 'pi' to see what you get
-:::
+<!-- ::: {style="font-size: 75%;"} -->
+<!-- -   c = 24,901.55 miles -->
+<!-- -   1 km = 0.621 miles -->
+<!-- -   **Hint** type in 'pi' to see what you get -->
+<!-- ::: -->
 
-::: {style="font-size: 75%;"}
-1.  Convert the circumference from miles to km.
-2.  Write the formula in R by defining objects and the values given to computer d in km.
-:::
+<!-- ::: {style="font-size: 75%;"} -->
+<!-- 1.  Convert the circumference from miles to km. -->
+<!-- 2.  Write the formula in R by defining objects and the values given to computer d in km. -->
+<!-- ::: -->
 
-```{r}
-#| echo: TRUE
-#| eval: TRUE
-#| code-fold: true
-#| code-summary: "Click for Answer"
+<!-- ```{r} -->
+<!-- #| echo: TRUE -->
+<!-- #| eval: TRUE -->
+<!-- #| code-fold: true -->
+<!-- #| code-summary: "Click for Answer" -->
 
-c.km = 24901.55/0.621
+<!-- c.km = 24901.55/0.621 -->
 
-d = c.km/pi
+<!-- d = c.km/pi -->
 
-```
+<!-- ``` -->
 
 
 
@@ -349,7 +371,7 @@ d = c.km/pi
 #| echo: TRUE
 #| eval: TRUE
 sign(-5)
-sign(54)
+sign(5)
 ```
 :::
 
@@ -556,15 +578,15 @@ z3
 ```
 :::
 
-<br>
+<!-- <br> -->
 
-::: fragment
-```{r}
-#| echo: TRUE
-#| eval: TRUE
-z3 = c("dog",1,"horse")
-z3
-```
+<!-- ::: fragment -->
+<!-- ```{r} -->
+<!-- #| echo: TRUE -->
+<!-- #| eval: TRUE -->
+<!-- z3 = c("dog",1,"horse") -->
+<!-- z3 -->
+<!-- ``` -->
 :::
 
 ##  [Types of Objects]{style="color:green;"}{.scrollable}
@@ -575,7 +597,11 @@ z3
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3 = c("dog","1","horse","chicken")
+z3 = c("dog",
+       "1",
+       "horse",
+       "chicken"
+       )
 z3[2]
 ```
 :::
@@ -606,7 +632,7 @@ z3[2:4]
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-z3[c(2,3)]
+z3[c(2,4)]
 ```
 :::
 
@@ -622,7 +648,7 @@ z3[-1]
 
 ##  [Types of Objects]{style="color:green;"}{.scrollable}
 
-### Vector of factors, a special kind of character string
+### Vector of factors
 
 ::: fragment
 ```{r}
@@ -630,7 +656,11 @@ z3[-1]
 #| eval: TRUE
 
 z4 = factor(
-            c("dog", "dog", "cat","horse")
+            c("dog", 
+              "dog", 
+              "cat",
+              "horse"
+              )
            )
 ```
 :::
@@ -726,17 +756,6 @@ dim(x)
 x[1,2]
 ```
 
-<br>
-
-::: fragment
-```{r}
-#| echo: TRUE
-#| eval: TRUE
-
-# get element of row 2 and column 3
-x[2,3]
-```
-:::
 
 <br>
 
@@ -772,23 +791,23 @@ x[2,1:3]
 #| eval: TRUE
 # ARRAY - more than two dimensions
 z5 = array(
-            c("a","b","c","d","e","f"), 
+            c("a","b","c","d","1","2","3","4"), 
             dim = c(2,2,2)
            )
 ```
 
 
-<br>
+<!-- <br> -->
 
-::: fragment
-```{r}
-#| echo: TRUE
-#| eval: TRUE
+<!-- ::: fragment -->
+<!-- ```{r} -->
+<!-- #| echo: TRUE -->
+<!-- #| eval: TRUE -->
 
-dim(z5)
+<!-- dim(z5) -->
 
-```
-:::
+<!-- ``` -->
+<!-- ::: -->
 
 <br>
 
@@ -891,28 +910,40 @@ x[,2]
 ```
 :::
 
+## 
 
-## [Challenge 2]{style="color:green;"} {.scrollable}
+```{=html}
 
-1. Create a vector of numbers that has length 6; call this object 'vec1'.
-2. Use the function 'mean' to find the mean of the values of vec1.
-3. Subset vec1 to only elements 4 through 6. Call this new object 'vec1', thereby overwriting the original vec1.
-4. Create a new vector (length 3) of characters called "hab1", "hab2", and "hab3". Call this object 'vec2'.
-5. Put vec1 and vec2 together into a data frame and call this object 'dat'
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Next: <br>Data input and output (Kyle)</b></span></center>
 
-```{r}
-#| echo: TRUE
-#| eval: FALSE
-#| code-fold: true
-#| code-summary: "Click for Answer"
-
-vec1 = 1:6
-mean(vec1)
-vec1 = vec1[4:6]
-vec2 = c("hab1","hab2","hab3")
-dat = data.frame(vec1,vec2)
-dat
 ```
+
+<!-- ## [Challenge 2]{style="color:green;"} {.scrollable} -->
+
+<!-- 1. Create a vector of numbers that has length 6; call this object 'vec1'. -->
+<!-- 2. Use the function 'mean' to find the mean of the values of vec1. -->
+<!-- 3. Subset vec1 to only elements 4 through 6. Call this new object 'vec1', thereby overwriting the original vec1. -->
+<!-- 4. Create a new vector (length 3) of characters called "hab1", "hab2", and "hab3". Call this object 'vec2'. -->
+<!-- 5. Put vec1 and vec2 together into a data frame and call this object 'dat' -->
+
+<!-- ```{r} -->
+<!-- #| echo: TRUE -->
+<!-- #| eval: FALSE -->
+<!-- #| code-fold: true -->
+<!-- #| code-summary: "Click for Answer" -->
+
+<!-- vec1 = 1:6 -->
+<!-- mean(vec1) -->
+<!-- vec1 = vec1[4:6] -->
+<!-- vec2 = c("hab1","hab2","hab3") -->
+<!-- dat = data.frame(vec1,vec2) -->
+<!-- dat -->
+<!-- ``` -->
 
 
 

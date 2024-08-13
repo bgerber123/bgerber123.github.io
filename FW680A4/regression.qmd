@@ -140,8 +140,8 @@ ggplot(m1, aes(x, y)) +
 
 
 <!-- ## Visual -->
-
 <!-- ![](/img/regression.png){fig-align="center" width="450"} -->
+
 
 ## One Sample
 
