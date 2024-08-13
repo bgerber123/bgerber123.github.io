@@ -5674,7 +5674,7 @@
     "href": "FW680A4/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
   },
   {
     "objectID": "FW680A4/week4.html#week-3",
@@ -5688,7 +5688,7 @@
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code:\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",
@@ -6059,7 +6059,7 @@
     "href": "FW680A4/glm2.html#objectives",
     "title": "Generalized Linear Models II ",
     "section": "Objectives",
-    "text": "Objectives\n\n\nPoisson Regression\nNumerical Optimization\ncategorical variables &gt;2 levels\nvariable combinations"
+    "text": "Objectives\n\n\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
   },
   {
     "objectID": "FW680A4/glm2.html#poisson-regression",
@@ -6080,7 +6080,7 @@
     "href": "FW680A4/glm2.html#fit-model",
     "title": "Generalized Linear Models II ",
     "section": "Fit Model",
-    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,\n            data=dat, \n            family = poisson(link = 'log')\n            )\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  1.02962    0.09449  10.896  &lt; 2e-16 ***\nsiteSite 2  -0.51381    0.15445  -3.327 0.000879 ***\nsiteSite 3   0.57982    0.11802   4.913 8.97e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 209.44  on 119  degrees of freedom\nResidual deviance: 137.65  on 117  degrees of freedom\nAIC: 467.21\n\nNumber of Fisher Scoring iterations: 5"
+    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\n\n\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   0.6549     0.1140   5.747 9.09e-09 ***\nsiteSite 2   -1.0116     0.2207  -4.584 4.56e-06 ***\nsiteSite 3    0.1221     0.1565   0.780    0.435    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
   },
   {
     "objectID": "FW680A4/glm2.html#data",
@@ -6115,7 +6115,7 @@
     "href": "FW680A4/glm2.html#numerical-optimization-of-likelihood",
     "title": "Generalized Linear Models II ",
     "section": "Numerical Optimization of Likelihood",
-    "text": "Numerical Optimization of Likelihood\n\nmodel$converged\n\n[1] TRUE\n\nmodel$method\n\n[1] \"glm.fit\"\n\nmodel$boundary\n\n[1] FALSE\n\nmodel$iter\n\n[1] 5\n\nmodel$control\n\n$epsilon\n[1] 1e-08\n\n$maxit\n[1] 25\n\n$trace\n[1] FALSE"
+    "text": "Numerical Optimization of Likelihood\n\nmodel$converged\n\n[1] TRUE\n\nmodel$method\n\n[1] \"glm.fit\"\n\nmodel$boundary\n\n[1] FALSE\n\nmodel$iter\n\n[1] 6\n\nmodel$control\n\n$epsilon\n[1] 1e-08\n\n$maxit\n[1] 25\n\n$trace\n[1] FALSE"
   },
   {
     "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-fucntion",
@@ -6129,7 +6129,7 @@
     "href": "FW680A4/glm2.html#numerical-optim.-for-mles",
     "title": "Generalized Linear Models II ",
     "section": "Numerical Optim. for MLEs",
-    "text": "Numerical Optim. for MLEs\n\n#use optim with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X=X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\n####\n\nComparison\n\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit    1.029620 -0.5138073  0.5798174\nours       1.029619 -0.5138063  0.5798185"
+    "text": "Numerical Optim. for MLEs\n\n#Use optim function with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X = X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\n\nComparison\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit   0.6549253  -1.011598  0.1221050\nours      0.6549260  -1.011601  0.1221027"
   },
   {
     "objectID": "FW680A4/glm2.html#comparison",
@@ -6150,7 +6150,7 @@
     "href": "FW680A4/glm2.html#same-model-different-estimates",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   1.0296194 -0.5138063  0.5798185\nModel2   0.5158132  0.5138063  1.0936247\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel2 1.029619 0.5158132 1.609438 1.029619 0.5158132\n\n\n\n\nDesign Matrix\n\n\n  (Intercept) dat$siteSite 2 dat$siteSite 3\n1           1              0              0\n2           1              1              0\n3           1              0              1\n4           1              0              0\n5           1              1              0\n\n\n  (Intercept) dat$site.reSite 1 dat$site.reSite 3\n1           1                 1                 0\n2           1                 0                 0\n3           1                 0                 1\n4           1                 1                 0\n5           1                 0                 0"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1      0.6549    -1.0116     0.1221\nModel2     -0.3567     1.0116     1.1337\n\n\nPredictions\n\n\n            1       2     3      4       5\nModel1 0.6549 -0.3567 0.777 0.6549 -0.3567\nModel2 0.6549 -0.3567 0.777 0.6549 -0.3567\n\n\n\n\nDesign Matrix\n\n\n  (Intercept) dat$siteSite 2 dat$siteSite 3\n1           1              0              0\n2           1              1              0\n3           1              0              1\n4           1              0              0\n5           1              1              0\n\n\n  (Intercept) dat$site.reSite 1 dat$site.reSite 3\n1           1                 1                 0\n2           1                 0                 0\n3           1                 0                 1\n4           1                 1                 0\n5           1                 0                 0"
   },
   {
     "objectID": "FW680A4/glm2.html#more-control-of-your-coefecients",
@@ -6171,7 +6171,7 @@
     "href": "FW680A4/glm2.html#same-model-different-estimates-1",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept)  siteSite 2 siteSite 3\nModel1   1.0296194 -0.51380625  0.5798185\nModel2   0.5158132  0.51380625  1.0936247\nModel3   1.0516235 -0.02200408 -0.5358103\nModel4   1.0296194  0.51581317  1.6094379\n\n\nPredictions\n\n\n              1         2        3        4         5\nModel1 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel2 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel3 1.029619 0.5158132 1.609438 1.029619 0.5158132\nModel4 1.029619 0.5158132 1.609438 1.029619 0.5158132\n\n\nDeviance\n\n\n           [,1]\nModel1 137.6467\nModel2 137.6467\nModel3 137.6467\nModel4 137.6467"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   0.6549260 -1.0116009  0.1221027\nModel2  -0.3566749  1.0116009  1.1337036\nModel3   0.3584266  0.2964994 -0.7151015\nModel4   0.6549260 -0.3566749  0.7770287\n\n\nPredictions\n\n\n              1          2         3        4          5\nModel1 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel2 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel3 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel4 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\n\n\nDeviance\n\n\n           [,1]\nModel1 305.7557\nModel2 305.7557\nModel3 305.7557\nModel4 305.7557"
   },
   {
     "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",
@@ -6185,7 +6185,7 @@
     "href": "FW680A4/glm2.html#more-control",
     "title": "Generalized Linear Models II ",
     "section": "More Control!",
-    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y~site, \n             data=dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
+    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y~site, \n             data = dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
   },
   {
     "objectID": "FW680A4/glm2.html#take-control",
@@ -6206,21 +6206,21 @@
     "href": "FW680A4/glm2.html#deviation-coding-interpretation",
     "title": "Generalized Linear Models II ",
     "section": "Deviation Coding Interpretation",
-    "text": "Deviation Coding Interpretation\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n 1.05162350 -0.02200408 -0.53581033 \n\n\nIntercept = grand mean of site-means (log-scale)\n\\(\\beta_{1}\\) = effect difference of Site 1 from Grand Mean\n\\(\\beta_{2}\\) = effect difference of Site 2 from Grand Mean\n\n\nThe coefficient for site-level 3 (difference from the grand mean)\n\nsum(coef(model3)[-1]*(-1))\n\n[1] 0.5578144"
+    "text": "Deviation Coding Interpretation\n\ncoef(model3)\n\n(Intercept)       site1       site2 \n  0.3584266   0.2964994  -0.7151015 \n\n\nIntercept = grand mean of site-means (log-scale), not mean of all observations\n\n\\(\\beta_{0} + \\beta_{1} \\times 1 + \\beta_{2}\\times 0\\)\n\n\n\\(0.3584266 + 0.2964994   \\times 1 + 0\\)\n\n\n\\(\\beta_{1}\\) = effect difference of Site 1 from Grand Mean\n\n\n\\(\\beta_{2}\\) = effect difference of Site 2 from Grand Mean\n\n\n\nThe coefficient for site-level 3 (difference from the grand mean)\n\nsum(coef(model3)[-1]*(-1))\n\n[1] 0.4186021"
   },
   {
     "objectID": "FW680A4/glm2.html#more-control-again",
     "href": "FW680A4/glm2.html#more-control-again",
     "title": "Generalized Linear Models II ",
-    "section": "More Control Again!",
-    "text": "More Control Again!\nContrasts\nNo shared connection among these partial intercepts\n\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0+site,data=dat),n=6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+    "section": "More Control Again",
+    "text": "More Control Again\nContrasts\nNo shared connection among these partial intercepts\n\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0 + site, data = dat), n = 6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
   },
   {
     "objectID": "FW680A4/glm2.html#taking-control",
     "href": "FW680A4/glm2.html#taking-control",
     "title": "Generalized Linear Models II ",
     "section": "Taking Control",
-    "text": "Taking Control\n\nX = model.matrix(~Independent Variables)\n\n#all variables in dat (additive)\nX = model.matrix(~.,dat)\n\n#all variables in dat (pair-wise interactions)\nX = model.matrix(~.^2,dat)\n\n#all variables in dat (three way- interactions)\nX = model.matrix(~.^3,dat) \n\nmodel = glm(y~ 0 + X, ...)"
+    "text": "Taking Control\n\nX = model.matrix(~Independent Variables)\n\n#all variables in dat (additive)\nX = model.matrix(~., data = dat)\n\n#all variables in dat (pair-wise interactions)\nX = model.matrix(~.^2, data = dat)\n\n#all variables in dat (three way- interactions)\nX = model.matrix(~.^3, data = dat) \n\nmodel = glm(y~ 0 + X, ...)"
   },
   {
     "objectID": "FW680A4/glm2.html#section",
@@ -6248,14 +6248,14 @@
     "href": "FW680A4/glm2.html#offset-code",
     "title": "Generalized Linear Models II ",
     "section": "Offset Code",
-    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n-0.68867290 -0.09024110  0.04419089 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n-0.68867290 -0.09024110  0.04419089"
+    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790"
   },
   {
     "objectID": "FW680A4/glm2.html#poisson-regression-offset",
     "href": "FW680A4/glm2.html#poisson-regression-offset",
     "title": "Generalized Linear Models II ",
     "section": "Poisson Regression (offset)",
-    "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design.\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
+    "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\n\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design. Rather, we want to model the rate - counts per unit area.\n\n\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/glm1.html#logistic-regression-biased-correction",
@@ -6269,42 +6269,42 @@
     "href": "FW680A4/glm2.html#pika-study",
     "title": "Generalized Linear Models II ",
     "section": "Pika Study",
-    "text": "Pika Study\n\nWe sample plots of high elevation rocky outcrops, counting the number of pika within each plot; plot sizes are the same size."
+    "text": "Pika Study\n\nWe sample plots of high elevation rocky outcrops, counting the number of American Pika within each plot; plot sizes are the same size."
   },
   {
     "objectID": "FW680A4/glm2.html#intuition-check",
     "href": "FW680A4/glm2.html#intuition-check",
     "title": "Generalized Linear Models II ",
     "section": "Intuition Check",
-    "text": "Intuition Check\n\nmean.group = aggregate(y, by=list(site=site),FUN=mean)\nmean.group\n\n    site     x\n1 Site 1 2.800\n2 Site 2 1.675\n3 Site 3 5.000\n\n\n\n\n#Site 1\nexp(1.05162350 + -0.02200408)\n\n[1] 2.8\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 2.8\n\n\n\n\n\n#Site 2\nexp(1.05162350 + -0.53581033)\n\n[1] 1.675\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 1.675\n\n\n\n\n\n#Site 3\nexp(1.05162350+0.5578144)\n\n[1] 5\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 5"
+    "text": "Intuition Check\n\nmean.group = aggregate(y, by=list(site=site),FUN=mean)\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\n\n\n#Site 1\nexp(0.3584266 + 0.2964994)\n\n[1] 1.925\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 1.925\n\n\n\n\n\n\n#Site 2\nexp(0.3584266 + -0.7151015 )\n\n[1] 0.7\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 0.7\n\n\n\n\n\n\n#Site 3\nexp(0.3584266 + 0.4186021)\n\n[1] 2.175\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 2.175"
   },
   {
     "objectID": "FW680A4/glm2.html#additive",
     "href": "FW680A4/glm2.html#additive",
     "title": "Generalized Linear Models II ",
     "section": "Additive",
-    "text": "Additive\nContinuous and Categorical\n\nlm(weight~sex+age.years,data=eleph)\n\n\n\n\n\n\n\n\n\n\nContinuous and Continuous\n\nlm(weight~parastites+age.years,data=eleph)"
+    "text": "Additive\nContinuous and Categorical\nLinear Combination on log-scale\n\nm1 = glm(y~site+herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m1, condition=c(\"herb.cover\",\"site\"),type=\"link\")\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m1, \n                                  condition=c(\"herb.cover\",\"site\"),\n                                  type=\"response\")"
   },
   {
     "objectID": "FW680A4/glm2.html#interaction",
     "href": "FW680A4/glm2.html#interaction",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Categorical\n\nlm(weight~sex*age.years,data=eleph)\nlm(weight~sex+age.years+sex:age.years,data=eleph)\n\n\n\n\n\n\n\n\n\n\nContinuous and Continuous\n\nlm(weight~age.years*parastites,data=eleph)\nlm(weight~age.years+parastites+age.years:parastites,data=eleph)"
+    "text": "Interaction\nContinuous and Categorical\n\nm3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))\nm3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m3,condition=c(\"herb.cover\",\"site\"))"
   },
   {
     "objectID": "FW680A4/glm2.html#polynomial",
     "href": "FW680A4/glm2.html#polynomial",
     "title": "Generalized Linear Models II ",
     "section": "Polynomial",
-    "text": "Polynomial\nQuadratic\n\nlm(weight~poly(age.years,2),data=eleph)\nlm(weight~age.years+I(age.years^2),data=eleph)"
+    "text": "Polynomial\nQuadratic\n\nm5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))\nm5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"))"
   },
   {
     "objectID": "FW680A4/glm2.html#transormations",
     "href": "FW680A4/glm2.html#transormations",
     "title": "Generalized Linear Models II ",
     "section": "Transormations",
-    "text": "Transormations\nlog\n\nlm(weight~sex*I(log(age.years)),data=eleph)"
+    "text": "Transormations\nlog\n\nglm(y~site*I(log(herb.cover)),data=dat,family = poisson(link = 'log'))"
   },
   {
     "objectID": "R1day/index.html#section",
@@ -6312,5 +6312,47 @@
     "title": "Introduction to R",
     "section": "",
     "text": "Next: Data input and output (Kyle)"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#side-bar",
+    "href": "FW680A4/glm2.html#side-bar",
+    "title": "Generalized Linear Models II ",
+    "section": "Side-Bar",
+    "text": "Side-Bar\nNegative Log-Likelihood Function\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    \n    #linear model of parameters par and design matrix (X)\n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    \n    #neg log-likelihood\n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#control-over-dummy-coding",
+    "href": "FW680A4/glm2.html#control-over-dummy-coding",
+    "title": "Generalized Linear Models II ",
+    "section": "Control over Dummy Coding",
+    "text": "Control over Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re = relevel(dat$site,ref=\"Site 2\")\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y~site.re,\n             data = dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -0.3567     0.1890  -1.887   0.0591 .  \nsite.reSite 1   1.0116     0.2207   4.584 4.56e-06 ***\nsite.reSite 3   1.1337     0.2173   5.218 1.81e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#additive-1",
+    "href": "FW680A4/glm2.html#additive-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Additive",
+    "text": "Additive\nContinuous and Continuous\nLinear Combination on log-scale\n\nm2 = glm(y~dist.trail+herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m2, \n                                  condition=c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"link\")\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m2, \n                                  condition=c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"response\")"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#interaction-1",
+    "href": "FW680A4/glm2.html#interaction-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Interaction",
+    "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))\nm4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#data-1",
+    "href": "FW680A4/glm2.html#data-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Data",
+    "text": "Data\n\nhead(dat)\n\n  y   site  herb.cover  dist.trail site.re area\n1 0 Site 1 -0.22630093  0.06679655  Site 1    2\n2 1 Site 2  0.02221148 -0.24641488  Site 2    5\n3 0 Site 3 -1.01517375 -0.73612867  Site 3    2\n4 1 Site 1  1.18038309  0.07586011  Site 1    3\n5 0 Site 2 -2.04470642 -0.81595409  Site 2    2\n6 2 Site 3  2.44433686  0.17929858  Site 3    2"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#variable-combinations",
+    "href": "FW680A4/glm2.html#variable-combinations",
+    "title": "Generalized Linear Models II ",
+    "section": "Variable Combinations",
+    "text": "Variable Combinations\nAdditive & Interaction combinations of categorical and continuous variables\n\nsite (categorical)\nherb.cover (continuous)\ndist.trail (continuous)\n\n\n\nhead(dat)\n\n  y   site  herb.cover  dist.trail site.re area\n1 0 Site 1 -0.22630093  0.06679655  Site 1    2\n2 1 Site 2  0.02221148 -0.24641488  Site 2    5\n3 0 Site 3 -1.01517375 -0.73612867  Site 3    2\n4 1 Site 1  1.18038309  0.07586011  Site 1    3\n5 0 Site 2 -2.04470642 -0.81595409  Site 2    2\n6 2 Site 3  2.44433686  0.17929858  Site 3    2"
   }
 ]

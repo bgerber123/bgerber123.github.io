@@ -9,6 +9,9 @@ format:
 ---
 
 ## Objectives
+
+<!-- knitr::purl("./FW680A4/glm1.qmd", output="./FW680A4/glm1.R") -->
+
 ```{=html}
 <style type="text/css">
 

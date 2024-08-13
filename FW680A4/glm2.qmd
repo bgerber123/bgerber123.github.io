@@ -10,6 +10,8 @@ format:
 
 ## Objectives
 
+<!-- knitr::purl("./FW680A4/glm2.qmd", output="./FW680A4/glm2.R") -->
+
 ```{=html}
 <style type="text/css">
 
@@ -29,13 +31,13 @@ pre {
 -   Numerical Optimization
 -   Categorical variables >2 levels
 -   Effect Coding
--   Variable combinations
+-   Variable Combinations
 
 ## Pika Study
 
 ![](/img/pika2.png)
 
-We sample plots of high elevation rocky outcrops, counting the number of pika within each plot; plot sizes are the same size.
+We sample plots of high elevation rocky outcrops, counting the number of American Pika within each plot; plot sizes are the same size.
 
 ## Poisson Regression
 
@@ -54,15 +56,16 @@ $$
 ```{r eval=TRUE,echo=FALSE}
   n=120
   site=as.factor(rep(c("Site 1","Site 2", "Site 3"),n/3))
-
-  
-  beta=c(1,-0.5,0.5)
-  X=model.matrix(~site)
+  set.seed(354)
+  herb.cover = rnorm(n, 0, 1)
+  dist.trail = rnorm(n, 0, 1)
+  beta=c(0,-1,0.5,0.25,1,-0.25)
+  X=model.matrix(~site+herb.cover*dist.trail)
   lambda = exp(X%*%beta)
   set.seed(3434)
   y = rpois(n, lambda)
-  dat=data.frame(y=y,site=site)
-  hist(dat$y,xlab="Pika Counts")  
+  dat = data.frame(y=y,site=site,herb.cover=herb.cover,dist.trail=dist.trail)
+  hist(dat$y,xlab="Pika Counts",breaks=20)  
 ```
 
 ## Counts by Site
@@ -85,9 +88,16 @@ model = glm(y~site,
             data=dat, 
             family = poisson(link = 'log')
             )
-summary(model)
 
 ```
+
+::: {.fragment}
+
+```{r eval=TRUE,echo=TRUE}
+summary(model)
+```
+
+:::
 
 ## Numerical Optimization of Likelihood
 
@@ -100,7 +110,9 @@ model$control
 ```
 
 
-## Side-Bar: Negative Log-Likelihood Function {.scrollable}
+## Side-Bar {.scrollable}
+
+#### Negative Log-Likelihood Function 
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
   #Here is our negative log-likelihood function with three
@@ -120,10 +132,10 @@ model$control
 ## Numerical Optim. for MLEs
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#use optim with initial values and define the lower and upper limits of the possible values
+#Use optim function with initial values and define the lower and upper limits of the possible values
   fit1 <- optim(
     par = c(0,0,0), #start
-    X=X,
+    X = X,
     fn = neg.log.like,
     method = "L-BFGS-B",
     lower = c(-10, -10, -10),
@@ -135,7 +147,7 @@ model$control
 
 ::: {.fragment}
 
-#### <p style="color:purple">Comparison</p>
+#### <span style="color:purple">Comparison</span>
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}
 a =rbind(fit1$par,
@@ -148,12 +160,12 @@ a
 :::
 
 
-## Controlling Dummy Coding {.scrollable}
+## Control over Dummy Coding {.scrollable}
 
 <span style="color:purple">Make 'Site 2' the intercept</span>
 
 ```{r eval=TRUE,echo=TRUE}
-dat$site.re=relevel(dat$site,ref="Site 2")
+dat$site.re = relevel(dat$site,ref="Site 2")
 levels(dat$site.re) 
 ```
 
@@ -162,14 +174,11 @@ levels(dat$site.re)
 ::: {.fragment}
 
 ```{r eval=TRUE,echo=TRUE}
-
 model2 = glm(y~site.re,
-             data=dat, 
+             data = dat, 
              family = poisson(link = 'log')
             )
 summary(model2)
-
-
 ```
 ::: 
 
@@ -182,7 +191,7 @@ a = rbind(coef(model),
           )
 rownames(a)=c("Model1","Model2")
 
-a
+round(a,digits=4)
 
 ```
 
@@ -192,12 +201,12 @@ b = rbind(predict(model)[1:5],
       predict(model2)[1:5]
       )
 rownames(b)=c("Model1","Model2")
-b
+round(b,digits=4)
 ```
 
 ::: {.fragment}
 
-#### Design Matrix
+#### <span style="color:purple">Design Matrix</span>
 
 ```{r}
 model.matrix(~dat$site)[1:5,]
@@ -214,7 +223,7 @@ model.matrix(~dat$site.re)[1:5,]
 
 ```{r, echo=TRUE, eval=TRUE}
   model3=glm(y~site, 
-             data=dat, 
+             data = dat, 
              family = poisson(link = 'log'),
              contrasts = list(site = contr.sum)
             )
@@ -226,11 +235,23 @@ model.matrix(~dat$site.re)[1:5,]
 coef(model3)
 ```
 
-Intercept = grand mean of site-means (log-scale)
+Intercept = `grand` mean of site-means (log-scale), not mean of all observations
 
+::: {.fragment}
+$\beta_{0} + \beta_{1} \times 1 + \beta_{2}\times 0$ 
+:::
+
+::: {.fragment}
+$0.3584266 + 0.2964994   \times 1 + 0$ 
+:::
+
+::: {.fragment}
 $\beta_{1}$ = effect difference of Site 1 from Grand Mean
+:::
 
+::: {.fragment}
 $\beta_{2}$ = effect difference of Site 2 from Grand Mean
+:::
 
 ::: {.fragment}
 
@@ -256,34 +277,37 @@ mean.group
 
 ```{r, echo=TRUE, eval=TRUE}
 #Site 1
-exp(1.05162350 + -0.02200408)
+exp(0.3584266 + 0.2964994)
 as.numeric(predict(model3,type="response")[1])
 ```
 
 :::
 
+<br>
 
 ::: {.fragment}
 
 ```{r, echo=TRUE, eval=TRUE}
 #Site 2
-exp(1.05162350 + -0.53581033)
+exp(0.3584266 + -0.7151015 )
 as.numeric(predict(model3,type="response")[2])
 ```
 
 :::
 
+<br>
+
 ::: {.fragment}
 
 ```{r, echo=TRUE, eval=TRUE}
 #Site 3
-exp(1.05162350+0.5578144)
+exp(0.3584266 + 0.4186021)
 as.numeric(predict(model3,type="response")[3])
 ```
 
 :::
 
-## More Control Again!
+## More Control Again
 
 #### <span style="color:purple">Contrasts</span>
 
@@ -296,7 +320,7 @@ No shared connection among these partial intercepts
             )
 
 # No shared intercept
-head(model.matrix(~0+site,data=dat),n=6)
+head(model.matrix(~0 + site, data = dat), n = 6)
 
 ```
 
@@ -350,13 +374,13 @@ d
 X = model.matrix(~Independent Variables)
 
 #all variables in dat (additive)
-X = model.matrix(~.,dat)
+X = model.matrix(~., data = dat)
 
 #all variables in dat (pair-wise interactions)
-X = model.matrix(~.^2,dat)
+X = model.matrix(~.^2, data = dat)
 
 #all variables in dat (three way- interactions)
-X = model.matrix(~.^3,dat) 
+X = model.matrix(~.^3, data = dat) 
 
 model = glm(y~ 0 + X, ...)
 
@@ -366,14 +390,20 @@ model = glm(y~ 0 + X, ...)
 
 What if our counts of pika are at plots with different sizes?
 
-Plot size ($\textbf{A}$) needs to be controlled for. But, we don't want to estimate an effect as it's part of the design.
+::: {.fragment}
+Plot size ($\textbf{A}$) needs to be controlled for. But, we don't want to estimate an effect as it's part of the design. Rather, we want to model the rate - counts per unit area.
+:::
 
+
+::: {.fragment}
 $$
 \begin{align*}
 \textbf{y} \sim & \text{Poisson}(\frac{\boldsymbol{\lambda}}{\textbf{A}})\\
 \text{log}(\frac{\boldsymbol{\lambda}}{\textbf{A}}) =& \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
+
+:::
 
 ## Offset
 
@@ -425,92 +455,94 @@ coef(model.rate2)
 
 ```
 
-## Additive
+## Variable Combinations
 
-#### <span style="color:purple">Continuous and Categorical</span>
+Additive & Interaction combinations of categorical and continuous variables
 
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~sex+age.years,data=eleph)
-```
+- site (categorical)
+- herb.cover (continuous)
+- dist.trail (continuous)
 
-```{r,echo=FALSE,eval=TRUE}
-eleph = read.csv("elephant.study2.csv")
-eleph$parastites = runif(nrow(eleph))
-m1 = lm(weight~sex+age.years,data=eleph)
+. . .
 
-marginaleffects::plot_predictions(m1, condition=c("age.years","sex"))
-
+```{r,echo=TRUE,eval=TRUE}
+head(dat)
 ```
 
 
-#### <span style="color:purple">Continuous and Continuous</span>
 
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~parastites+age.years,data=eleph)
+## Additive {.scrollable}
+
+### Continuous and Categorical
+
+#### <span style="color:purple">Linear Combination on log-scale</span>
+
+```{r,echo=TRUE,eval=TRUE}
+m1 = glm(y~site+herb.cover,data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m1, condition=c("herb.cover","site"),type="link")
 ```
 
-```{r,echo=FALSE,eval=TRUE}
-m1 = lm(weight~parastites+age.years,data=eleph)
+#### <span style="color:purple">Linear Combination on response-scale</span>
 
-marginaleffects::plot_predictions(m1, condition=c("age.years","parastites"))
-
+```{r,echo=TRUE,eval=TRUE}
+marginaleffects::plot_predictions(m1, 
+                                  condition=c("herb.cover","site"),
+                                  type="response")
 ```
 
-## Interaction
+## Additive {.scrollable}
+
+### Continuous and Continuous</span>
+
+#### <span style="color:purple">Linear Combination on log-scale</span>
+
+```{r,echo=TRUE,eval=TRUE}
+m2 = glm(y~dist.trail+herb.cover,data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m2, 
+                                  condition=c("dist.trail","herb.cover"),
+                                  type="link")
+```
+
+#### <span style="color:purple">Linear Combination on response-scale</span>
+
+```{r,echo=TRUE,eval=TRUE}
+marginaleffects::plot_predictions(m2, 
+                                  condition=c("dist.trail","herb.cover"),
+                                  type="response")
+```
+
+## Interaction {.scrollable}
 
 #### Continuous and Categorical
 
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~sex*age.years,data=eleph)
-lm(weight~sex+age.years+sex:age.years,data=eleph)
+
+```{r,echo=TRUE,eval=TRUE}
+m3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))
+m3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
 ```
 
-```{r,echo=FALSE,eval=TRUE}
-m1 = lm(weight~sex*age.years,data=eleph)
-marginaleffects::plot_predictions(m1, condition=c("age.years","sex"))
-```
+## Interaction {.scrollable}
 
 #### Continuous and Continuous
 
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~age.years*parastites,data=eleph)
-lm(weight~age.years+parastites+age.years:parastites,data=eleph)
-```
-
-```{r,echo=FALSE,eval=TRUE}
-m1 = lm(weight~age.years*parastites,data=eleph)
-marginaleffects::plot_predictions(m1, condition=c("age.years","parastites"))
+```{r,echo=TRUE,eval=TRUE}
+m4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))
+m4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m4, condition=c("herb.cover","dist.trail"))
 
 ```
 
-## Polynomial
+## Polynomial {.scrollable}
 
 #### Quadratic
 
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~poly(age.years,2),data=eleph)
-lm(weight~age.years+I(age.years^2),data=eleph)
 
+```{r,echo=TRUE,eval=TRUE}
+m5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))
+m5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m5,condition=c("dist.trail"))
 ```
-
-```{r,echo=FALSE,eval=TRUE}
-m1 = lm(weight~poly(age.years,2),data=eleph)
-marginaleffects::plot_predictions(m1, condition=c("age.years"))
-```
-
-## Transormations
-
-#### log
-
-```{r,echo=TRUE,eval=FALSE}
-lm(weight~sex*I(log(age.years)),data=eleph)
-```
-
-```{r,echo=FALSE,eval=TRUE}
-m1 = lm(weight~sex*I(log(age.years)),data=eleph)
-marginaleffects::plot_predictions(m1, condition=c("age.years"))
-```
-
 
 
 <!-- ## Additive Model -->
