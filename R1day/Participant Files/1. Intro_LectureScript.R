@@ -1,15 +1,3 @@
-## <!-- .big-code{ -->
-## <!--   font-size: 140%   -->
-## <!-- } -->
-## 
-## 
-## code {
-##   font-size: 1.5em;
-##   /* or try font-size: xx-large; */
-## }
-## 
-## #knitr::purl("index.qmd", output = "lecturescript.R", documentation = 00L)
-## 
 
 ##   install.packages(c("tidyverse",
 ##                      "readxl",

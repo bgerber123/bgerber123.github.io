@@ -505,7 +505,7 @@ marginaleffects::plot_predictions(m2,
 
 #### <span style="color:purple">Linear Combination on response-scale</span>
 
-```{r,echo=TRUE,eval=TRUE}
+```{r,echo=TRUE,eval=TRUE, fig.width=5, fig.height=5}
 marginaleffects::plot_predictions(m2, 
                                   condition=c("dist.trail","herb.cover"),
                                   type="response")
@@ -516,7 +516,7 @@ marginaleffects::plot_predictions(m2,
 #### Continuous and Categorical
 
 
-```{r,echo=TRUE,eval=TRUE}
+```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
 m3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))
 m3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))
 marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
@@ -530,7 +530,6 @@ marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
 m4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))
 m4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))
 marginaleffects::plot_predictions(m4, condition=c("herb.cover","dist.trail"))
-
 ```
 
 ## Polynomial {.scrollable}
@@ -538,184 +537,27 @@ marginaleffects::plot_predictions(m4, condition=c("herb.cover","dist.trail"))
 #### Quadratic
 
 
-```{r,echo=TRUE,eval=TRUE}
+```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
 m5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))
 m5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))
-marginaleffects::plot_predictions(m5,condition=c("dist.trail"))
+marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="link")
+```
+```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
+m5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))
+m5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="response")
 ```
 
 
-<!-- ## Additive Model -->
+## 
 
-<!-- #### Categorical (2 levels) and Continuous Variable -->
+```{=html}
 
-<!-- $$ -->
-<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
-<!--  \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) -->
-<!-- $$ -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Lab</b></span></center>
 
-<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
-
-<!-- $x_{2,i} =$ is a continuous numeric value -->
-
-
-<!-- ## Additive Model {.scrollable} -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #A continuous and categorical variable  -->
-<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
-<!--   levels(x) -->
-<!--   x.var=model.matrix(~x)[,2] -->
-<!-- ``` -->
-
-<!-- <br> -->
-
-<!-- . . . -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #Simulate x2 variable -->
-<!--   set.seed(54334) -->
-<!--   x2=rpois(n,100) -->
-
-<!--   #Parameters -->
-<!--   b0=50 -->
-<!--   b1=-50 -->
-<!--   b2=4 -->
-
-<!--   #Mean   -->
-<!--   mu=b0+b1*x.var+b2*x2 -->
-
-<!--   #Simualte Date   -->
-<!--   set.seed(43243) -->
-<!--   y=rnorm(n,mean=mu,sd=50) -->
-
-<!--   # fit the model -->
-<!--   model4=glm(y~x+x2) -->
-
-<!--   coef(model4) -->
-
-<!-- ``` -->
-
-<!-- <br> -->
-
-<!-- . . . -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #Confidence intervals of coefs -->
-<!--   confint(model4) -->
-
-<!-- ``` -->
-
-<!-- . . . -->
-
-<!-- <br> -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   # Summary   -->
-<!--   summary(model4) -->
-<!-- ``` -->
-
-<!-- . . . -->
-
-<!-- <br> -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-
-<!--   # Fitted Values -->
-<!--   newdata=expand.grid(x,x2) -->
-<!--   head(newdata) -->
-<!--   colnames(newdata)=c("x","x2") -->
-
-
-<!--   preds=predict(model4,newdata=newdata,type="response", -->
-<!--                 se.fit = TRUE) -->
-<!-- ``` -->
-
-<!-- ## Additive Model Plot 1 -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   library(sjPlot) -->
-<!--   plot_model(model4, type = "pred", terms = c("x")) -->
-<!-- ``` -->
-
-<!-- ## Additive Model Plot 2 -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   plot_model(model4, type = "pred", terms = c("x2","x")) -->
-<!-- ``` -->
-
-<!-- ## Interaction Model -->
-
-<!-- #### Categorical (2 levels) and Continuous Variable -->
-
-<!-- $$ -->
-<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
-<!--   \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i})) -->
-<!-- $$ -->
-
-<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
-
-<!-- $x_{2,i} =$ is a numeric value -->
-
-<!-- $x_{1,i} \times x_{2,i}=$ is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values -->
-
-
-
-<!-- ## Interaction Model {.scrollable} -->
-
-<!-- ### Categorical (2 levels) and Continuous Variable -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-
-<!--   # Simulate Variables -->
-<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
-<!--   levels(x) -->
-<!--   x.var=model.matrix(~x)[,2] -->
-
-<!--   set.seed(5453) -->
-<!--   x2=rpois(n,100) -->
-
-<!--   # Parameters  -->
-<!--   b0=50 -->
-<!--   b1=-50 -->
-<!--   b2=4 -->
-<!--   b3=-20 -->
-
-<!--   # Mean   -->
-<!--   mu = b0+b1*x.var+b2*x2+b3*(x.var*x2) -->
-
-<!--   #Simulate Data -->
-<!--   set.seed(43243) -->
-<!--   y=rnorm(n,mean=mu,sd=10) -->
-
-<!--   # fit the model -->
-<!--   model5=glm(y~x2*x) -->
-<!--   model5.1=glm(y~x+x2+x:x2) -->
-
-<!--   #comparison   -->
-<!--   rbind(coef(model5),coef(model5.1)) -->
-<!-- ``` -->
-
-<!-- . . . -->
-
-<!-- <br> -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   #Confidence intervals of coefs -->
-<!--   confint(model5) -->
-<!-- ``` -->
-
-<!-- ## Interaction Model -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   #Summary   -->
-<!--   summary(model5) -->
-<!-- ``` -->
-
-<!-- ## Interaction Model Plot -->
-
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   theme_set(theme_sjplot()) -->
-<!--   plot_model(model5, type = "pred", terms = c("x2","x")) -->
-<!-- ``` -->
-
+```

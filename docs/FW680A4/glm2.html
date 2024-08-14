@@ -950,7 +950,7 @@ Model4 305.7557</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-32-1.png" width="480"></p>
 </figure>
 </div>
 </div>
@@ -982,126 +982,40 @@ Model4 305.7557</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
 <span id="cb62-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb62-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<span id="cb62-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"link"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+</figure>
 </div>
-<!-- ## Additive Model -->
-<!-- #### Categorical (2 levels) and Continuous Variable -->
-<!-- $$ -->
-<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
-<!--  \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) -->
-<!-- $$ -->
-<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
-<!-- $x_{2,i} =$ is a continuous numeric value -->
-<!-- ## Additive Model {.scrollable} -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #A continuous and categorical variable  -->
-<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
-<!--   levels(x) -->
-<!--   x.var=model.matrix(~x)[,2] -->
-<!-- ``` -->
-<!-- <br> -->
-<!-- . . . -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #Simulate x2 variable -->
-<!--   set.seed(54334) -->
-<!--   x2=rpois(n,100) -->
-<!--   #Parameters -->
-<!--   b0=50 -->
-<!--   b1=-50 -->
-<!--   b2=4 -->
-<!--   #Mean   -->
-<!--   mu=b0+b1*x.var+b2*x2 -->
-<!--   #Simualte Date   -->
-<!--   set.seed(43243) -->
-<!--   y=rnorm(n,mean=mu,sd=50) -->
-<!--   # fit the model -->
-<!--   model4=glm(y~x+x2) -->
-<!--   coef(model4) -->
-<!-- ``` -->
-<!-- <br> -->
-<!-- . . . -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   #Confidence intervals of coefs -->
-<!--   confint(model4) -->
-<!-- ``` -->
-<!-- . . . -->
-<!-- <br> -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   # Summary   -->
-<!--   summary(model4) -->
-<!-- ``` -->
-<!-- . . . -->
-<!-- <br> -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE} -->
-<!--   # Fitted Values -->
-<!--   newdata=expand.grid(x,x2) -->
-<!--   head(newdata) -->
-<!--   colnames(newdata)=c("x","x2") -->
-<!--   preds=predict(model4,newdata=newdata,type="response", -->
-<!--                 se.fit = TRUE) -->
-<!-- ``` -->
-<!-- ## Additive Model Plot 1 -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   library(sjPlot) -->
-<!--   plot_model(model4, type = "pred", terms = c("x")) -->
-<!-- ``` -->
-<!-- ## Additive Model Plot 2 -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   plot_model(model4, type = "pred", terms = c("x2","x")) -->
-<!-- ``` -->
-<!-- ## Interaction Model -->
-<!-- #### Categorical (2 levels) and Continuous Variable -->
-<!-- $$ -->
-<!--     y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\ -->
-<!--   \mu_{i} = \beta_0+(\beta_1\times x_{1,i}) + (\beta_2\times x_{2,i}) + (\beta_3*(x_{1,i}\times x_{2,i})) -->
-<!-- $$ -->
-<!-- $x_{1,i} =$ indicator of <span style="color:blue">site 2</span> (1) or not (0) -->
-<!-- $x_{2,i} =$ is a numeric value -->
-<!-- $x_{1,i} \times x_{2,i}=$ is zero for <span style="color:blue">site 1</span> values and the numeric value for site 2 values -->
-<!-- ## Interaction Model {.scrollable} -->
-<!-- ### Categorical (2 levels) and Continuous Variable -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   # Simulate Variables -->
-<!--   x=as.factor(rep(c("Site 1","Site 2"),n/2)) -->
-<!--   levels(x) -->
-<!--   x.var=model.matrix(~x)[,2] -->
-<!--   set.seed(5453) -->
-<!--   x2=rpois(n,100) -->
-<!--   # Parameters  -->
-<!--   b0=50 -->
-<!--   b1=-50 -->
-<!--   b2=4 -->
-<!--   b3=-20 -->
-<!--   # Mean   -->
-<!--   mu = b0+b1*x.var+b2*x2+b3*(x.var*x2) -->
-<!--   #Simulate Data -->
-<!--   set.seed(43243) -->
-<!--   y=rnorm(n,mean=mu,sd=10) -->
-<!--   # fit the model -->
-<!--   model5=glm(y~x2*x) -->
-<!--   model5.1=glm(y~x+x2+x:x2) -->
-<!--   #comparison   -->
-<!--   rbind(coef(model5),coef(model5.1)) -->
-<!-- ``` -->
-<!-- . . . -->
-<!-- <br> -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   #Confidence intervals of coefs -->
-<!--   confint(model5) -->
-<!-- ``` -->
-<!-- ## Interaction Model -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   #Summary   -->
-<!--   summary(model5) -->
-<!-- ``` -->
-<!-- ## Interaction Model Plot -->
-<!-- ```{r, echo=TRUE, include=TRUE, eval=TRUE}   -->
-<!--   theme_set(theme_sjplot()) -->
-<!--   plot_model(model5, type = "pred", terms = c("x2","x")) -->
-<!-- ``` -->
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb63-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb63-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 
-<img data-src="glm2_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Lab</b></span></center>
+
+
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
