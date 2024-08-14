@@ -907,3 +907,12 @@ brglm::brglm(y~0+X, family = binomial(link = "logit"))
   (mean(coef.est[2,])-beta[2])/beta[2]
 ```
   
+
+# Recap
+
+-   GLM framework
+-   matrix notation
+-   link functions
+-   glm function
+-   categorical independent variable
+-   linear and logistic regression

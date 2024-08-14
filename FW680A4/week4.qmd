@@ -12,10 +12,21 @@ title: ""
 
 -   Lecture Code: <a href="/FW680A4/glm1.R">GLM1.R</a>
 
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("equatiomatic"))
+```
+
 #### [Assigned]{style="color:red;"}
 
 -   Readings for next class: 
     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a>
+
+- Background Reading (not required): 
+  - <a href="/readings/Zurr et al Chapter 9.pdf"> Zurr et al Chapter 9</a>. 
+
 
 
 
@@ -27,12 +38,6 @@ title: ""
 
 -   Downloads: <a href="/classfiles/glmlab/week4files.zip">Files</a>
 
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("equatiomatic"))
-```
 
 #### [Assigned]{style="color:red;"}
 

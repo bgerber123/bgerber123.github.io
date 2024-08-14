@@ -2951,7 +2951,7 @@
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\n\n\n\n\n \nFr\n13-Sep\nGLM II\n\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n13-Sep\nGLM II\nLab 4: GLM\n\n\n\n\n5\nTu\n17-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -4834,14 +4834,14 @@
     "href": "FW680A4/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW680A4/week3.html#week-3",
     "href": "FW680A4/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\n\n\nReadings for next class:\n\nZurr and Iano 2016"
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW680A4/likelihood.html#the-pieces",
@@ -5674,7 +5674,7 @@
     "href": "FW680A4/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files"
   },
   {
     "objectID": "FW680A4/week4.html#week-3",
@@ -5688,7 +5688,7 @@
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",
@@ -5961,7 +5961,7 @@
     "href": "FW680A4/glm1.html#objectives",
     "title": "Generalized Linear Models",
     "section": "Objectives",
-    "text": "Objectives\n\n\nGLM framework\nmatrix notation\nlink functions\nglm function\ncategorical independent variable\nlinear and logistic regression"
+    "text": "Objectives\n\n\n\nGLM framework\nmatrix notation\nlink functions\nglm function\ncategorical independent variable\nlinear and logistic regression"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-regression-notation",
@@ -6361,5 +6361,75 @@
     "title": "Generalized Linear Models II ",
     "section": "",
     "text": "Lab"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html",
+    "href": "FW680A4/temp.multicollinear.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": ". . .\nCorrelation among explantory variables\n\nCan happen when \\(r \\geq 0.28\\) or \\(r^2 \\geq 0.08\\)\n\ncauses inaccurate estimation\ndecreases statistical power\nleads to exclusion of important predictor variables"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#multi-collinearity",
+    "href": "FW680A4/temp.multicollinear.html#multi-collinearity",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": ". . .\nCorrelation among explantory variables\n\nCan happen when \\(r \\geq 0.28\\) or \\(r^2 \\geq 0.08\\)\n\ncauses inaccurate estimation\ndecreases statistical power\nleads to exclusion of important predictor variables"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#multi-collinearity-code",
+    "href": "FW680A4/temp.multicollinear.html#multi-collinearity-code",
+    "title": "Brian D. Gerber",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\nlibrary(faux)\n\n\n************\nWelcome to faux. For support and examples visit:\nhttps://debruine.github.io/faux/\n- Get and set global package options with: faux_options()\n************\n\nn=100\nset.seed(543531)\nx.var &lt;- rnorm_multi(n = n, \n                  mu = c(10, 20),\n                  sd = c(1, 1),\n                  r = c(0), \n                  varnames = c(\"A\", \"B\"),\n                  empirical = FALSE)\n\nset.seed(54353)\nx.var.cor &lt;- rnorm_multi(n = n, \n                  mu = c(10, 20),\n                  sd = c(1, 1),\n                  r = c(0.8), \n                  varnames = c(\"A\", \"B\"),\n                  empirical = FALSE)\n\n#Correlation\n  cor(x.var)\n\n           A          B\nA 1.00000000 0.04340106\nB 0.04340106 1.00000000\n\n  cor(x.var.cor)\n\n          A         B\nA 1.0000000 0.8354425\nB 0.8354425 1.0000000"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#multi-collinearity-code-1",
+    "href": "FW680A4/temp.multicollinear.html#multi-collinearity-code-1",
+    "title": "Brian D. Gerber",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\npar(mfrow=c(1,2))\n  plot(x.var.cor$A,x.var.cor$B)\n  plot(x.var$A,x.var$B)"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#multi-collinearity-code-2",
+    "href": "FW680A4/temp.multicollinear.html#multi-collinearity-code-2",
+    "title": "Brian D. Gerber",
+    "section": "Multi-Collinearity (Code)",
+    "text": "Multi-Collinearity (Code)\n\n#Design matrices\n  X.cor=model.matrix(~x.var.cor$A+x.var.cor$B)\n  X=model.matrix(~x.var$A+x.var$B)\n\n#True coefs  \n  beta=c(1,2,3)\n\n#Derive mu  \n  mu=X%*%beta\n  mu.cor=X.cor%*%beta\n\n#simulate data  \n  set.seed(54353)\n  y=rnorm(n,mu,2)\n  y.cor=rnorm(n,mu.cor,2)"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#model-estimates",
+    "href": "FW680A4/temp.multicollinear.html#model-estimates",
+    "title": "Brian D. Gerber",
+    "section": "Model Estimates",
+    "text": "Model Estimates\n\nsummary(glm(y~0+X))\n\n\nCall:\nglm(formula = y ~ 0 + X)\n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \nX(Intercept)   0.3514     4.5494   0.077    0.939    \nXx.var$A       2.0619     0.2100   9.820 3.29e-16 ***\nXx.var$B       3.0029     0.2087  14.390  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 4.288366)\n\n    Null deviance: 645623.40  on 100  degrees of freedom\nResidual deviance:    415.97  on  97  degrees of freedom\nAIC: 434.33\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/temp.multicollinear.html#model-estimates-1",
+    "href": "FW680A4/temp.multicollinear.html#model-estimates-1",
+    "title": "Brian D. Gerber",
+    "section": "Model Estimates",
+    "text": "Model Estimates\n\nsummary(glm(y~0+X.cor))\n\n\nCall:\nglm(formula = y ~ 0 + X.cor)\n\nCoefficients:\n                  Estimate Std. Error t value Pr(&gt;|t|)    \nX.cor(Intercept) 38.361082   7.926825   4.839 4.91e-06 ***\nX.corx.var.cor$A  0.002467   0.681426   0.004  0.99712    \nX.corx.var.cor$B  2.094430   0.634710   3.300  0.00135 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 13.3163)\n\n    Null deviance: 645623.4  on 100  degrees of freedom\nResidual deviance:   1291.7  on  97  degrees of freedom\nAIC: 547.64\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/glm1.html",
+    "href": "FW680A4/glm1.html",
+    "title": "Generalized Linear Models",
+    "section": "",
+    "text": "GLM framework\nmatrix notation\nlink functions\nglm function\ncategorical independent variable\nlinear and logistic regression"
+  },
+  {
+    "objectID": "classfiles/glmlab/Assignment.GLM.html",
+    "href": "classfiles/glmlab/Assignment.GLM.html",
+    "title": "GLM Assignment",
+    "section": "",
+    "text": "Objective: Create a report using Markdown that presents code, results, and summarized findings that uses pilot study data to then inform an evaluation of a study design to monitor Canada lynx (Lynx canadensis) in the southern Rocky Mountains.\nOverview\nA colleague sampled the occurrence (0 or 1) of Canada lynx at 75 grid cells using camera-traps. They are interested in you helping 1) fit a model to estimate the occurrence probability of lynx and investigate the influence of two variables, and 2) use these estimates to inform future study design scenarios.\n\n\nData and Hypothesis\nA colleague used camera traps to sample whether a lynx was present (1) or assumed absent (0) at each grid cell or ‘site’ (y) during the winter (December to February); we will assume there are no false-positives or false-negatives in these data. They designed the sampling and site selection such they had variation in two important covariates: the distance the camera was from a road (dist.road) and the percentage of forest cover (cover). Their hypothesis is that lynx will avoid human activity by occurring further from roads when they are not under cover, but will occur near roads that are under cover as they are able to remain hidden.\nTo do\nFit the data (lynx.data.csv) using a model that captures the hypothesis of your colleague.\n\ninterpret coefficients\nmake prediction plots\nsummarize results\nStudy Design Evaluation\nYour colleague would like these data to inform them on whether they are sampling enough grid cells/sites. They specifically want to know whether the sample size provides them enough statistical power to be confident that they will reject the null hypothesis of no difference with zero for each of the estimated coefficient at a type I error rate of 0.05. The power they want to achieve is 0.80 probability. Note- in a simulation context - think of getting the sampling distribution of the p-value for each coefficient and evaluating whether the proportion of p-values is below the type I error rate.\nTo do\nUse the estimated coefficients to simulate many data sets (&gt;1000). Fit each data set using the same model as you used to fit the empirical data. Extract the p-value of each coefficient to evaluate whether there is adequate statistical power based on your colleagues desire. If there is not adequate power, consider increasing the sample size.\n\nsimulate many datasets\nfit the same model to each dataset\ncalculate statistical power\nsummarize results and inform your colleague one what they need to know"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#recap",
+    "href": "FW680A4/glm2.html#recap",
+    "title": "Generalized Linear Models II ",
+    "section": "Recap",
+    "text": "Recap\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
   }
 ]
