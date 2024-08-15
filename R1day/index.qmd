@@ -347,7 +347,7 @@ y*2 / (y*4)
 
 ## [The language of R]{style="color:green;"}
 
-[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([attribute1]{style="color:purple;"} = input1, [attribute2]{style="color:purple;"} = input2)
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([argument]{style="color:purple;"} = input1, [argument]{style="color:purple;"} = input2)
 
 <br>
 
