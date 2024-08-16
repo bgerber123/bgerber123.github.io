@@ -551,6 +551,8 @@ marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="response")
 
 ## Recap
 
+. . .
+
 -   Poisson Regression
 -   Numerical Optimization
 -   Categorical variables >2 levels

@@ -11,7 +11,7 @@ format:
 
 
 
-## [Class Stuff]{style="color:#078BCD;"}{.smaller}
+## [Class Stuff]{style="color:#078BCD;"}{.scrollable}
 ```{=html}
 <style type="text/css">
 
@@ -55,12 +55,6 @@ A mix of...
 - science philosophy
 - wildlife ecology and conservation
 
-. . .
-
-
-```{=html}
-<center>Also, a work in progress <span style="color:#FF0000";>¯\\\_(ツ)\_/¯</center>
-```
 
 ##  [Assessment]{style="color:#078BCD;"}
 
@@ -111,7 +105,7 @@ Upon successful completion of this course students will be able to:
 -   Taking control of your analyses
 
 
--   Collaborate with statisticians
+-   Collaborate with colleagues/statisticians
 
 ## [Software]{style="color:#078BCD;"}
 
@@ -275,13 +269,13 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 ## [Why is statistics and ecological modeling so difficult?]{style="color:#078BCD"}
 
+## [My Background]{style="color:#078BCD"}
 
 
 ## [My Background]{style="color:#078BCD"}
 
 ![](/img/me2.png)
 
-## [My Background]{style="color:#078BCD"}
 
 ![](/img/me.png)
 
@@ -451,7 +445,7 @@ y
 
 ## [The language of R]{style="color:green;"}
 
-[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([attribute1]{style="color:purple;"} = input1, [attribute2]{style="color:purple;"} = input2)
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([argument1]{style="color:purple;"} = input1, [argument1]{style="color:purple;"} = input2)
 
 <br>
 
@@ -473,7 +467,7 @@ y
 #| echo: TRUE
 #| eval: TRUE
 sign(-5)
-sign(54)
+sign(5)
 ```
 :::
 
@@ -489,6 +483,22 @@ for(i in 1:10){
 }
 ```
 
+## [Some useful functions]{style="color:green;"}
+
+Create your own function
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+my.mean.func = function(x){
+                           sum(x)/length(x)
+                          }
+
+my.mean.func(
+             c(5,4,7,2,7,1)
+             )
+
+```
 
 ## [Some useful functions]{style="color:green;"}
 
@@ -497,22 +507,25 @@ apply/sapply/lapply/vapply
 #| echo: TRUE
 #| eval: TRUE
 
+mat= matrix(rnorm(100),nrow=10, ncol=10)
 
-
+apply(mat, 2, FUN=median)
 ```
+::: {.fragment}
 
-## [Some useful functions]{style="color:green;"}
-
-Create your own function
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
 
-my.mean.func = function(x){sum(x)/length(x)}
-
-my.mean.func(c(5,4,7,2,7,1))
-
+apply(mat, 2, FUN=function(x){
+  
+  length(which(x>1))/length(x)
+  
+})
 ```
+
+:::
+
 
 
 ## [Code Organization]{style="color:green;"}

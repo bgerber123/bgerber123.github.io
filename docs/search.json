@@ -2363,7 +2363,7 @@
     "href": "FW680A4/Introduction.html#what-is-this-course",
     "title": "Wildlife Ecology Modeling",
     "section": "What is this course?",
-    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation\n\n\nAlso, a work in progress ¯\\\\\\_(ツ)\\_/¯"
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-goals",
@@ -2377,7 +2377,7 @@
     "href": "FW680A4/Introduction.html#why-is-this-class-useful",
     "title": "Wildlife Ecology Modeling",
     "section": "Why is this class useful?",
-    "text": "Why is this class useful?\n\nAble to read modern ecological literature\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\nStatistical modeling and coding skills are highly marketable\nTaking control of your analyses\nCollaborate with statisticians"
+    "text": "Why is this class useful?\n\nAble to read modern ecological literature\nUnderstand what you are doing when using data and models; coding/statistics/modeling are related but not the same\nStatistical modeling and coding skills are highly marketable\nTaking control of your analyses\nCollaborate with colleagues/statisticians"
   },
   {
     "objectID": "FW680A4/Introduction.html#who-am-i",
@@ -2594,14 +2594,14 @@
     "href": "FW680A4/Introduction.html#some-useful-functions-1",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply"
+    "text": "Some useful functions\nCreate your own function\n\nmy.mean.func = function(x){\n                           sum(x)/length(x)\n                          }\n\nmy.mean.func(\n             c(5,4,7,2,7,1)\n             )\n\n[1] 4.333333"
   },
   {
     "objectID": "FW680A4/Introduction.html#some-useful-functions-2",
     "href": "FW680A4/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\nCreate your own function\n\nmy.mean.func = function(x){sum(x)/length(x)}\n\nmy.mean.func(c(5,4,7,2,7,1))\n\n[1] 4.333333"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.14427201  0.66302743  0.19670657 -0.21576566  0.53389364  0.58596143\n [7]  0.19498671 -0.06640871  0.29005776  0.12329368\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.5 0.2 0.2 0.2 0.3 0.1 0.1 0.1 0.2"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
@@ -2699,7 +2699,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r-4",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(attribute1 = input1, attribute2 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(54)\n\n[1] 1"
+    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
   },
   {
     "objectID": "FW680A4/week2.html",
@@ -2951,7 +2951,7 @@
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n13-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8\n\n\n\n5\nTu\n17-Sep\nModeling Strategies\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n13-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8; Tredennick et al. 2021\n\n\n\n5\nTu\n17-Sep\nModeling Strategies\n\n\n\n\n\n \nFr\n20-Sep\nHierarchical Models in Wildlife Ecology\n\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -5674,7 +5674,7 @@
     "href": "FW680A4/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
   },
   {
     "objectID": "FW680A4/week4.html#week-3",
@@ -5688,7 +5688,7 @@
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",
@@ -6430,6 +6430,20 @@
     "href": "FW680A4/glm2.html#recap",
     "title": "Generalized Linear Models II ",
     "section": "Recap",
-    "text": "Recap\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
+    "text": "Recap\n\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
+  },
+  {
+    "objectID": "FW680A4/week5.html",
+    "href": "FW680A4/week5.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture:\nLecture Code:\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+  },
+  {
+    "objectID": "FW680A4/week5.html#week-5",
+    "href": "FW680A4/week5.html#week-5",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture:\nLecture Code:\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
   }
 ]

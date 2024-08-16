@@ -910,6 +910,8 @@ brglm::brglm(y~0+X, family = binomial(link = "logit"))
 
 # Recap
 
+. . .
+
 -   GLM framework
 -   matrix notation
 -   link functions
