@@ -2356,7 +2356,7 @@
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
     "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
@@ -2405,7 +2405,7 @@
     "href": "FW680A4/Introduction.html#teaching-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Teaching Philosophy",
-    "text": "Teaching Philosophy\n\n\nI can not make you learn; learning is a choice (in every movement)\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
+    "text": "Teaching Philosophy\n\n\nLearning is a choice (in every movement)\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
   },
   {
     "objectID": "FW680A4/Introduction.html#tentative-schedule",
@@ -2601,7 +2601,7 @@
     "href": "FW680A4/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.22834829  0.52159005  0.55795458 -0.28897045  0.03180544  0.21069848\n [7] -0.16916879 -0.44680437  0.14931553 -0.36470980\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.1 0.2 0.2 0.3 0.1 0.1 0.0 0.2 0.0"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.22895129 -0.23543173  0.25250440 -0.05512031 -0.19921642 -0.06873026\n [7] -0.15605470  0.57359061  0.32028873  0.22507929\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.2 0.1 0.2 0.1 0.0 0.0 0.4 0.3 0.3"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
