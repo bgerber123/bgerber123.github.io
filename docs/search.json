@@ -6450,8 +6450,8 @@
     "objectID": "FW680A4/hierarchical.html#objectives",
     "href": "FW680A4/hierarchical.html#objectives",
     "title": "Hierarchical Models",
-    "section": "",
-    "text": "where they are used\nexamples\ncase study"
+    "section": "Objectives",
+    "text": "Objectives\n\n\nwhere they are used\nexamples\ncase study"
   },
   {
     "objectID": "FW680A4/hierarchical.html#section",
@@ -6465,7 +6465,7 @@
     "href": "FW680A4/hierarchical.html#data-and-problem",
     "title": "Hierarchical Models",
     "section": "Data and Problem",
-    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\n\n\n\nInterested in detection rate by vegetation type and overall."
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nInterested in detection rate by vegetation type and overall."
   },
   {
     "objectID": "FW680A4/hierarchical.html#situations",
@@ -6507,7 +6507,7 @@
     "href": "FW680A4/hierarchical.html#data-and-problem-1",
     "title": "Hierarchical Models",
     "section": "Data and Problem",
-    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\n\n\n\nDetection Rate = Independent Counts / Effort"
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nDetection Rate = Independent Counts / Effort"
   },
   {
     "objectID": "FW680A4/hierarchical.html#code",
@@ -6570,7 +6570,7 @@
     "href": "FW680A4/hierarchical.html#data",
     "title": "Hierarchical Models",
     "section": "Data",
-    "text": "Data\n\n\n\n\n\n   y    x effort\n1 10 Veg1      5\n2  8 Veg1      5\n3  8 Veg1      5\n4 11 Veg1      5\n5 10 Veg1      5\n6 10 Veg1      5"
+    "text": "Data\n\n\n   y    x effort\n1 10 Veg1      5\n2  8 Veg1      5\n3  8 Veg1      5\n4 11 Veg1      5\n5 10 Veg1      5\n6 10 Veg1      5"
   },
   {
     "objectID": "FW680A4/hierarchical.html#model-1",
