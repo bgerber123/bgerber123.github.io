@@ -467,7 +467,7 @@ BUT, are also <u>not mutually exclusive</u>.
 <center><span style="color:#FFFFFF; font-size:65px";><b>Inference and Prediction </b></span></center>
 ```
 
-## Whis is worse?
+## Which is worse?
 
 -   unbiased imprecise result
 -   precise biased result
@@ -612,13 +612,13 @@ The sample and population are what??
 
 ## Design-Based
 
-- $\textbf{y}$ = [$y_1$,...,$y_N$]
+- $\textbf{Y}$ = [$y_1$,...,$y_N$]
 
 . . .
 
 <span style="color:red">This means something different</span>: 
 
-- $\textbf{y}$ = ($y_1$,...,$y_N$)
+- $\textbf{Y}$ = ($y_1$,...,$y_N$)
 
 . . .
 
@@ -628,7 +628,7 @@ The sample and population are what??
 
 ## Design-Based {.scrollable}
 
-- $\textbf{y}$ = [$y_1$,...,$y_N$]
+- $\textbf{Y}$ = [$y_1$,...,$y_N$]
 
 - The mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
 
@@ -638,7 +638,7 @@ The sample and population are what??
 
 . . .
 
-- $\textbf{y}$ is a random vector that has $n$ random variables
+- $\textbf{y}$ is a random vector that has $n$ random variables. One sample of 4 cells. 
 
 . . .
 

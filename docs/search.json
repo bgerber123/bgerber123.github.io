@@ -3448,14 +3448,14 @@
     "href": "FW680A4/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  176   67  238  240  335\n[2,]   49    8  133   72  289\n[3,]  169   38  394  324   29\n[4,]  279  233  301  222  305\n[5,]  178   35  380  156  262"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   51   33  294  191  366\n[2,]  184   71  312  302  290\n[3,]   99  285   98  336  128\n[4,]    0  298  105   15  294\n[5,]  216  224   88  341   30"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-1",
     "href": "FW680A4/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 301 324 238 222 233 324  49  29 289 279\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 228.8"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 216 285 216  30 312 341 216  71  30 294\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 201.1"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-2",
@@ -3532,14 +3532,14 @@
     "href": "FW680A4/BigPicture.html#design-based-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n\nThis means something different:\n\n\\(\\textbf{y}\\) = (\\(y_1\\),…,\\(y_N\\))\n\n\n\n\n(stuff) is exclusive of end points\n[stuff] is inclusive of end points"
+    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n\nThis means something different:\n\n\\(\\textbf{Y}\\) = (\\(y_1\\),…,\\(y_N\\))\n\n\n\n\n(stuff) is exclusive of end points\n[stuff] is inclusive of end points"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-5",
     "href": "FW680A4/BigPicture.html#design-based-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
+    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random variables. One sample of 4 cells.\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
   },
   {
     "objectID": "FW680A4/BigPicture.html#statistic",
@@ -6774,5 +6774,12 @@
     "title": "Hierarchical Models",
     "section": "",
     "text": "where they are used\nexamples\ncase study"
+  },
+  {
+    "objectID": "FW680A4/BigPicture.html#which-is-worse",
+    "href": "FW680A4/BigPicture.html#which-is-worse",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Which is worse?",
+    "text": "Which is worse?\n\nunbiased imprecise result\nprecise biased result"
   }
 ]
