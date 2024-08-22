@@ -8,7 +8,27 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion Questions for Fieberg, Ch. 8 * Tredennick et al. 2021**
+##### **In Class Discussion Questions for Fieberg, Ch. 8 and Tredennick et al. 2021**
+
+- Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2
+
+- What is stepwise selection? How does it perform?
+
+- Why fit only one model? Drawbacks? How to decide on how many variables?
+
+- What is AIC? 
+
+- What is Regularization using penalization?
+
+- "Model selection is the Black Hole of Statistics". What do you think?
+
+- Covariate selection vs. model selection?
+
+#### [Assigned]{style="color:red;"}
+
+- Background Reading (not required):
+  - <a href="/readings/Gelman and Hill Chapters 11 and 12.pdf"> Gelman and Hill Ch. 11 and 12</a>.
+
 
 
 
@@ -17,8 +37,6 @@ title: ""
 <!-- -   Readings for next class:  -->
 <!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
 
-<!-- - Background Reading (not required):  -->
-<!--   - <a href="/readings/Zurr et al Chapter 9.pdf"> Zurr et al Chapter 9</a>.  -->
 
 
 
