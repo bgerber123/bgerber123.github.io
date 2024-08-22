@@ -1,0 +1,428 @@
+---
+title: <span style="color:white">Hierarchical Models</span>
+title-slide-attributes:
+    data-background-image: /img/background3.png
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+
+## Objectives
+
+<!-- knitr::purl("./FW680A4/hierarchical.qmd", output="./classfiles/glmmlab/hierarchical.R") -->
+
+-   where they are used
+-   examples
+-   case study
+
+## Hobbs and Hooten 2015 (pg. 109)
+
+::: {.incremental}
+
+- Representing variation among individuals arising, for example, from genetics, location, or experience.
+
+- Studying phenomena operating at more than one spatial scale or level of ecological organization.
+
+- Modeling a process as well as uncertainty that results from imperfect observations of the process.
+
+- Understanding changes in states of ecological systems that cannot be observed directly. These states arise from “hidden” processes.
+
+:::
+
+## General Types
+
+- Random Effect / Multi-level Model
+
+- latent/unobserved state or process
+
+
+
+## Example 1
+
+- student grades within classroom, within school
+
+![](/img/school.png)
+
+
+## Example 2
+
+- forest cover effect on occurrence of bobcats at different protected areas
+
+![](/img/bobcat.png)
+
+## Random Effect / Multi-level Model
+
+- repeated *measurements* of individual within population
+
+- repeated *measurements* at a small spatial scale that is part of a larger one
+
+
+## Hierarchical Structure to Data
+
+![](/img/HM1.png)
+
+## Hierarchical Structure to Data
+
+![](/img/HM2.png)
+
+## Hierarchical Structure to Data
+
+![](/img/HM.png)
+
+## Hierarchical Structure to Data
+
+![](/img/HM-general.png)
+
+## Latent State
+
+![](/img/occupancy0.png)
+
+
+## Latent State
+
+![](/img/occupancy1.png)
+
+##
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Case Study</b></span></center>
+```
+
+
+## Data and Problem
+
+We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park. 
+
+![](/img/Amur Leopard.png){fig-align="center"}
+
+Interested in detection rate by vegetation type and overall. 
+
+## Data and Problem
+
+We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park. 
+
+![](/img/Amur Leopard.png){fig-align="center"}
+
+**Detection Rate = Independent Counts / Effort**
+
+## Data
+
+```{r echo=FALSE, eval=TRUE}
+N.groups = 5
+n.group = 50
+
+mu.overall = log(20)
+sd.overall = 3
+
+set.seed(432423)
+mu.group = rnorm(N.groups, mu.overall,sd.overall)
+#exp(mu.group)
+
+y=c()
+for(i in 1:N.groups){
+  set.seed(432423+i)
+y = c(y,rpois(n.group, exp(mu.group[i])))
+}
+
+x = rep(c("Veg1","Veg2","Veg3","Veg4","Veg5"),each=n.group)
+dat = data.frame(y=y,x=x, effort = 5)
+```
+
+```{r echo=FALSE, eval=TRUE}
+head(dat)
+
+library(ggplot2)
+ggplot(dat, aes(x=x, y=y, fill=x)) + 
+    geom_boxplot()+theme(text = element_text(size = 20)) 
+
+```
+
+## Model 1 (No Difference) {.scrollable}
+
+```{r echo=TRUE, eval=TRUE}
+library(glmmTMB)
+library(broom.mixed)
+
+model1 = glmmTMB(y~1, family=poisson(link="log"),data=dat)
+```
+
+<br>
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+summary(model1)
+```
+
+:::
+
+## Model 1 (No Difference) {.scrollable}
+
+
+```{r echo=TRUE, eval=TRUE}
+marginaleffects::predictions(model1,type = "response")
+```
+
+
+## Model 2 (All Different)
+
+```{r echo=TRUE, eval=TRUE}
+model2 = glmmTMB(y~x, family=poisson(link="log"),data=dat,
+                 contrasts = list(x = "contr.sum"))
+```
+
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+summary(model2)
+```
+
+::: 
+
+## Model 2 (All Different)
+
+```{r echo=TRUE, eval=TRUE}
+marginaleffects::predictions(model2, 
+                             newdata = data.frame(x=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                             re.form=NA)
+```
+
+
+
+
+
+## Model 3 (middle-ground) {.scrollable}
+
+```{r echo=TRUE, eval=TRUE}
+model3 = glmmTMB(y~1+(1|x), family=poisson(link="log"),data=dat)
+```
+
+::: {.fragment}
+
+
+```{r echo=TRUE, eval=TRUE}
+summary(model3)
+```
+
+:::
+
+## Model 3 (middle-ground) {.scrollable}
+
+```{r echo=TRUE, eval=TRUE}
+ranef(model3)
+```
+
+<br>
+
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+broom.mixed::tidy(model3, effects = "ran_vals", conf.int = TRUE)
+```
+
+:::
+
+<br>
+
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+confint(model3, component = c("all"))
+```
+
+:::
+
+<br>
+
+<!-- ::: {.fragment} -->
+
+<!-- ```{r echo=TRUE, eval=TRUE} -->
+<!-- broom.mixed::tidy(model3, conf.int = TRUE) -->
+<!-- ``` -->
+
+<!-- ::: -->
+
+<br>
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+fixef(model3)
+```
+
+:::
+
+<br>
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+#Predictions - does not include RE uncertainty
+preds = predict(model3,
+                newdata=data.frame(x=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                type="link",
+                re.form=NULL,
+                se.fit = TRUE
+                )
+
+
+preds$LCL = exp(preds$fit-1.96*preds$se.fit)
+preds$UCL = exp(preds$fit+1.96*preds$se.fit)
+preds$fit = exp(preds$fit)
+
+data.frame(preds)
+```
+
+:::
+
+<br>
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+#A typical site
+predict(model3,type="response",re.form=NA)[1]
+```
+
+
+:::
+
+
+
+## Model 3b
+
+```{r echo=TRUE, eval=TRUE}
+library(lme4)
+model3b = glmer(y~1+(1|x), family=poisson(link="log"),data=dat)
+```
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+equatiomatic::extract_eq(model3b)
+```
+
+:::
+
+## Alt Model Notation
+
+
+\begin{align*}
+y_{i} \sim& \text{Poisson}(\lambda_{i})\\
+\text{log}(\lambda_{i}) =& \mu + \alpha_{j[i]}\\
+ \alpha_{j} \sim& \text{Normal}(0, \sigma^2_{\alpha})
+
+\end{align*}
+
+
+## Random Intercept + Slope
+
+Leopard detection varies by cover and veg, where the effect of cover comes from a shared distribution
+
+```{r echo=FALSE, eval=TRUE}
+N.groups = 10
+n.group = 50
+
+mu.beta0 = 0
+sd.beta0 = 1
+
+mu.beta1 = 2
+sd.beta1 = 0.2
+
+
+set.seed(14324231)
+beta0 = rnorm(N.groups, mu.beta0,sd.beta0)
+beta1 = rnorm(N.groups, mu.beta1,sd.beta1)
+
+
+
+y=NULL
+x=NULL
+for(i in 1:N.groups){
+  set.seed(432423+i)
+  x=c(x,rnorm(n.group))
+y = c(y,
+      rpois(n.group,exp(beta0[i]+beta1[i]*x))
+      )
+}
+
+veg = rep(c("Veg1","Veg2","Veg3","Veg4","Veg5"),each=n.group)
+dat2 = data.frame(y=y,cov=x,veg=veg)
+head(dat2)
+```
+
+
+## Random Intercept + Slope
+
+```{r echo=TRUE, eval=TRUE}
+re.model = glmer(y~cov+(cov|veg), family=poisson(link="log"),data=dat2)
+```
+
+
+::: {.fragment}
+
+```{r echo=TRUE, eval=TRUE}
+summary(re.model)
+```
+
+:::
+
+## Random Intercept + Slope
+
+```{r echo=TRUE, eval=TRUE}
+marginaleffects::plot_predictions(re.model,
+                                  condition=c("cov","veg"),
+                                  type="link",
+                                  re.form=NULL
+                                  )
+```
+
+
+## Random Intercept + Slope
+
+```{r echo=TRUE, eval=TRUE}
+marginaleffects::plot_predictions(re.model,
+                                  condition=c("cov","veg"),
+                                  type="link",
+                                  re.form=NA
+                                  )
+```
+
+## Random Intercept + Slope
+
+```{r echo=TRUE, eval=TRUE}
+equatiomatic::extract_eq(re.model)
+```
+
+
+
+## FAQ
+
+[GLMM FAQ](https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html)
+
+- model specifications
+
+- predictions with uncertainty
+
+- Testing RE's
+
+## Considerations
+
+- Shrinkage/Regularization
+
+- When to use a random effect?
+
+## Lab
+
+
+

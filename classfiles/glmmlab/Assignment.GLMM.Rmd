@@ -1,0 +1,55 @@
+---
+title: "GLMM Assignment"
+author: "Brian D. Gerber"
+date: "2024-8-22"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**
+Create a report using Markdown that presents code, results, and summarized findings that makes inference to the occurence of the Annamite striped rabbit (*Nesolagus timminsi*) across multiple protected areas in Vietnam.
+
+### **Background**
+This is not real data. However, the basic premise has been adopted from the paper, [Getting the big picture: Landscape-scale occupancy patterns of two Annamite endemics among multiple protected areas](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.620).
+
+
+### **Overview**
+The Annamite striped rabbit is a forest-dwelling lagomorph that was discovered by science in the mid-1990s. Little is known about this species. What has been done indicates that hunting pressure is a primary driver of its distribution. As such, protected areas are paramount to their conservation. However, protected areas vary in their effectiveness in limiting hunting and some protected areas are founded on multi-use, such that hunting is still allowed. 
+
+
+<p align="center">
+<img src="Annamite striped rabbit.png" width="750"/>
+</p>
+
+
+### Data and Hypothesis
+
+A camera trap study was conducted in the Annamite mountain range of Vietnam to better understand the distribution of the unique mammal fauna. A central focus was to learn about the effects of anthropogenic activity on the distribution of the Annamite striped rabbit. A total of 50 camera traps were deployed at 5 different protected areas. The cameras were placed systematically with a random starting point to capture variation in the Euclidean distance between a camera and the nearest center of human activity (i.e., village/town). A colleague organized the data, such that for each camera site, the presence (1) or assumed absence (0) of the rabbit was recorded (`occur`); we will assume there are no false-positives or false-negatives in these data. The main variables of interest are the protected areas (`PA`) and the distance to human activity (`dist.human`) in meters.
+
+Working with your colleagues, they outline their hypothesis that the main driver of rabbit occurrence is hunting within the protected areas. They predict that increasing distance away from human activity will lead to higher rabbit occupancy because people will only travel so far in difficult mountainous terrain. They also hypothesize that this effect will vary by protected area because there is different levels of patrolling and enforcement. But, regardless of protected area, they hypothesize that occurrence at the edge of the protected areas nearest to human activity will be the same because of the similar density of people and that occurrence will be very low.
+
+#### *To do*
+
+Fit the data (`rabbit.occ.data.csv`) using a model that captures the hypothesis of your colleague.
+
+- present all parameters with measures of uncertainty
+- make sure to provide evidence whether there is or is not variation of 'dist.human' across protected areas
+- make prediction plots that display all relevant variables
+- make a prediction plot for a 'typical' protected area; make it clear why this results is important
+- summarize results and offer suggestions for the type of followup study that would be useful
+
+
+<br>
+<br>

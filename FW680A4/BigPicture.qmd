@@ -626,7 +626,7 @@ The sample and population are what??
 
 - [stuff] is inclusive of end points
 
-## Design-Based
+## Design-Based {.scrollable}
 
 - $\textbf{y}$ = [$y_1$,...,$y_N$]
 
@@ -880,6 +880,7 @@ hist(lambda.hat,
      xlab=bquote(lambda-hat),
      main=bquote("Sampling Distribution of"~lambda-hat)
      )
+#abline(v=lambda, lwd=3, col=4)
 ```
 
 ## Statistical Bias
@@ -887,7 +888,7 @@ hist(lambda.hat,
 the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling
 
 
-## Statistical Bias (Code)
+## Statistical Bias (Code) {.scrollable}
 
 ```{r bias22,eval=TRUE, echo=TRUE}
 # Bias
@@ -969,7 +970,7 @@ We can calculate this using *Monte Carlo integration*
 
 
 
-## Lab Setup
+## Lab Setup {.scrollable}
 
 Let's add some more *reality* in our work while using design-based sampling in R.
 

@@ -865,7 +865,7 @@ When do we need statistics?
 </ul>
 </div>
 </section>
-<section id="design-based-5" class="slide level2">
+<section id="design-based-5" class="slide level2 scrollable">
 <h2>Design-Based</h2>
 <ul>
 <li><p><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</p></li>
@@ -927,11 +927,11 @@ When do we need statistics?
 <span id="cb1-10"><a></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  371  221  229  178  328
-[2,]  185  360   63  165   50
-[3,]  386  142   23   98   37
-[4,]   84  199  380  182  291
-[5,]  349  160  274  370  234</code></pre>
+[1,]  176   67  238  240  335
+[2,]   49    8  133   72  289
+[3,]  169   38  394  324   29
+[4,]  279  233  301  222  305
+[5,]  178   35  380  156  262</code></pre>
 </div>
 </div>
 </section>
@@ -947,7 +947,7 @@ When do we need statistics?
 <span id="cb3-6"><a></a>             )</span>
 <span id="cb3-7"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 274 386 380  50 234 185  37 349  63 142</code></pre>
+<pre><code> [1] 301 324 238 222 233 324  49  29 289 279</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -957,7 +957,7 @@ When do we need statistics?
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 210</code></pre>
+<pre><code>[1] 228.8</code></pre>
 </div>
 </div>
 </div>
@@ -1121,7 +1121,7 @@ When do we need statistics?
 <h2>Statistical Bias</h2>
 <p>the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling</p>
 </section>
-<section id="statistical-bias-code" class="slide level2">
+<section id="statistical-bias-code" class="slide level2 scrollable">
 <h2>Statistical Bias (Code)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Bias</span></span>
@@ -1196,7 +1196,7 @@ When do we need statistics?
 <!-- . . . -->
 <!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
 </section>
-<section id="lab-setup" class="slide level2">
+<section id="lab-setup" class="slide level2 scrollable">
 <h2>Lab Setup</h2>
 <p>Let’s add some more <em>reality</em> in our work while using design-based sampling in R.</p>
 <div class="fragment">

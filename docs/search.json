@@ -3448,14 +3448,14 @@
     "href": "FW680A4/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  371  221  229  178  328\n[2,]  185  360   63  165   50\n[3,]  386  142   23   98   37\n[4,]   84  199  380  182  291\n[5,]  349  160  274  370  234"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  176   67  238  240  335\n[2,]   49    8  133   72  289\n[3,]  169   38  394  324   29\n[4,]  279  233  301  222  305\n[5,]  178   35  380  156  262"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-1",
     "href": "FW680A4/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 274 386 380  50 234 185  37 349  63 142\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 210"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 301 324 238 222 233 324  49  29 289 279\n\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 228.8"
   },
   {
     "objectID": "FW680A4/BigPicture.html#design-based-code-2",
@@ -6437,13 +6437,335 @@
     "href": "FW680A4/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture:\nLecture Code:\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+    "text": "Lecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))"
   },
   {
     "objectID": "FW680A4/week5.html#week-5",
     "href": "FW680A4/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture:\nLecture Code:\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+    "text": "Lecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#objectives",
+    "href": "FW680A4/hierarchical.html#objectives",
+    "title": "Hierarchical Models",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nwhere they are used\nexamples\ncase study"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#section",
+    "href": "FW680A4/hierarchical.html#section",
+    "title": "Hierarchical Models",
+    "section": "",
+    "text": "Case Study"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#data-and-problem",
+    "href": "FW680A4/hierarchical.html#data-and-problem",
+    "title": "Hierarchical Models",
+    "section": "Data and Problem",
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nInterested in detection rate by vegetation type and overall."
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#situations",
+    "href": "FW680A4/hierarchical.html#situations",
+    "title": "Hierarchical Models",
+    "section": "Situations",
+    "text": "Situations\n\nstudent grades within classroom, within school\nmeasurement of individual within population\nunobserved latent state or process"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarhcical-structure-to-data",
+    "href": "FW680A4/hierarchical.html#hierarhcical-structure-to-data",
+    "title": "Hierarchical Models",
+    "section": "Hierarhcical Structure to Data",
+    "text": "Hierarhcical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-1",
+    "href": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-1",
+    "title": "Hierarchical Models",
+    "section": "Hierarhcical Structure to Data",
+    "text": "Hierarhcical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-2",
+    "href": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-2",
+    "title": "Hierarchical Models",
+    "section": "Hierarhcical Structure to Data",
+    "text": "Hierarhcical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-3",
+    "href": "FW680A4/hierarchical.html#hierarhcical-structure-to-data-3",
+    "title": "Hierarchical Models",
+    "section": "Hierarhcical Structure to Data",
+    "text": "Hierarhcical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#data-and-problem-1",
+    "href": "FW680A4/hierarchical.html#data-and-problem-1",
+    "title": "Hierarchical Models",
+    "section": "Data and Problem",
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nDetection Rate = Independent Counts / Effort"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#code",
+    "href": "FW680A4/hierarchical.html#code",
+    "title": "Hierarchical Models",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#types",
+    "href": "FW680A4/hierarchical.html#types",
+    "title": "Hierarchical Models",
+    "section": "Types",
+    "text": "Types\n\nRandom Effect / Multi-level Model\nlatent/unobserved state or process"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#example-1",
+    "href": "FW680A4/hierarchical.html#example-1",
+    "title": "Hierarchical Models",
+    "section": "Example 1",
+    "text": "Example 1\n\nstudent grades within classroom, within school"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#example-2",
+    "href": "FW680A4/hierarchical.html#example-2",
+    "title": "Hierarchical Models",
+    "section": "Example 2",
+    "text": "Example 2\n\nforest cover effect on occurrence of bobcats at different protected areas"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-effect-multi-level-model",
+    "href": "FW680A4/hierarchical.html#random-effect-multi-level-model",
+    "title": "Hierarchical Models",
+    "section": "Random Effect / Multi-level Model",
+    "text": "Random Effect / Multi-level Model\n\nrepeated measurements of individual within population\nrepeated measurements at a small spatial scale that is part of a larger one"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#latent-state",
+    "href": "FW680A4/hierarchical.html#latent-state",
+    "title": "Hierarchical Models",
+    "section": "Latent State",
+    "text": "Latent State"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#latent-state-1",
+    "href": "FW680A4/hierarchical.html#latent-state-1",
+    "title": "Hierarchical Models",
+    "section": "Latent State",
+    "text": "Latent State"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hobbs-and-hooten-2015-pg.-109",
+    "href": "FW680A4/hierarchical.html#hobbs-and-hooten-2015-pg.-109",
+    "title": "Hierarchical Models",
+    "section": "Hobbs and Hooten 2015 (pg. 109)",
+    "text": "Hobbs and Hooten 2015 (pg. 109)\n\n\nRepresenting variation among individuals arising, for example, from genetics, location, or experience.\nStudying phenomena operating at more than one spatial scale or level of ecological organization.\nModeling a process as well as uncertainty that results from imperfect observations of the process.\nUnderstanding changes in states of ecological systems that cannot be observed directly. These states arise from “hidden” processes."
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#data",
+    "href": "FW680A4/hierarchical.html#data",
+    "title": "Hierarchical Models",
+    "section": "Data",
+    "text": "Data\n\n\n   y    x effort\n1 10 Veg1      5\n2  8 Veg1      5\n3  8 Veg1      5\n4 11 Veg1      5\n5 10 Veg1      5\n6 10 Veg1      5"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-1",
+    "href": "FW680A4/hierarchical.html#model-1",
+    "title": "Hierarchical Models",
+    "section": "Model 1",
+    "text": "Model 1\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y~1, family=poisson(link=\"log\"),data=dat)\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n  1234.4   1236.3   -616.2   1232.4       49 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  3.19867    0.02857     112   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 1 × 9\n  effect component term  estimate std.error statistic p.value conf.low conf.high\n  &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 fixed  cond      (Int…     3.20    0.0286      112.       0     3.14      3.25"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-2",
+    "href": "FW680A4/hierarchical.html#model-2",
+    "title": "Hierarchical Models",
+    "section": "Model 2",
+    "text": "Model 2\n\nmodel2 = glmmTMB(y~x, family=poisson(link=\"log\"),data=dat)\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ x\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n   666.0    673.6   -329.0    658.0       46 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.2925     0.1005  22.810  &lt; 2e-16 ***\nxVeg2        -1.1939     0.2084  -5.729 1.01e-08 ***\nxVeg3         1.2614     0.1074  11.746  &lt; 2e-16 ***\nxVeg5         1.3888     0.1123  12.363  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-3",
+    "href": "FW680A4/hierarchical.html#model-3",
+    "title": "Hierarchical Models",
+    "section": "Model 3",
+    "text": "Model 3\n\nmodel3 = glmmTMB(y~1+(1|x), family=poisson(link=\"log\"),data=dat)\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | x)\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n   686.9    690.7   -341.4    682.9       48 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n x      (Intercept) 1.089    1.044   \nNumber of obs: 50, groups:  x, 4\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.6624     0.5246   5.075 3.87e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-3b",
+    "href": "FW680A4/hierarchical.html#model-3b",
+    "title": "Hierarchical Models",
+    "section": "Model 3b",
+    "text": "Model 3b\n\nlibrary(lme4)\nmodel3b = glmer(y~1+(1|x), family=poisson(link=\"log\"),data=dat)\n\n\n\nequatiomatic::extract_eq(model3b)\n\n\\[\n\\begin{aligned}\n  \\operatorname{y}_{i}  &\\sim \\operatorname{Poisson}(\\lambda_i) \\\\\n    \\log(\\lambda_i) &=\\alpha_{j[i]} \\\\\n    \\alpha_{j}  &\\sim N \\left(\\mu_{\\alpha_{j}}, \\sigma^2_{\\alpha_{j}} \\right)\n    \\text{, for x j = 1,} \\dots \\text{,J}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-1-no-difference",
+    "href": "FW680A4/hierarchical.html#model-1-no-difference",
+    "title": "Hierarchical Models",
+    "section": "Model 1 (No Difference)",
+    "text": "Model 1 (No Difference)\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y~1, family=poisson(link=\"log\"),data=dat)\n\n\n\n\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n  6138.7   6142.2  -3068.3   6136.7      249 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  3.14605    0.01312   239.8   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-2-all-different",
+    "href": "FW680A4/hierarchical.html#model-2-all-different",
+    "title": "Hierarchical Models",
+    "section": "Model 2 (All Different)",
+    "text": "Model 2 (All Different)\n\nmodel2 = glmmTMB(y~x, family=poisson(link=\"log\"),data=dat,\n                 contrasts = list(x = \"contr.sum\"))\n\n\n\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ x\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n  1357.8   1375.4   -673.9   1347.8      245 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.61640    0.02260  115.75   &lt;2e-16 ***\nx1          -0.41033    0.04281   -9.59   &lt;2e-16 ***\nx2          -1.63807    0.07087  -23.11   &lt;2e-16 ***\nx3          -0.39503    0.04257   -9.28   &lt;2e-16 ***\nx4           1.44783    0.02678   54.07   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-2-all-different-1",
+    "href": "FW680A4/hierarchical.html#model-2-all-different-1",
+    "title": "Hierarchical Models",
+    "section": "Model 2 (All Different)",
+    "text": "Model 2 (All Different)\n\nmarginaleffects::predictions(model2, \n                             newdata = data.frame(x=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                             re.form=NA)\n\n\n Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     9.08      0.426 21.3   &lt;0.001 332.2  8.24   9.92\n     2.66      0.231 11.5   &lt;0.001  99.8  2.21   3.11\n     9.22      0.429 21.5   &lt;0.001 337.3  8.38  10.06\n    58.22      1.079 54.0   &lt;0.001   Inf 56.11  60.33\n    37.04      0.861 43.0   &lt;0.001   Inf 35.35  38.73\n\nColumns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, x, y \nType:  response"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-3-middle-ground",
+    "href": "FW680A4/hierarchical.html#model-3-middle-ground",
+    "title": "Hierarchical Models",
+    "section": "Model 3 (middle-ground)",
+    "text": "Model 3 (middle-ground)\n\nmodel3 = glmmTMB(y~1+(1|x), family=poisson(link=\"log\"),data=dat)\n\n\n\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | x)\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n  1390.4   1397.5   -693.2   1386.4      248 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n x      (Intercept) 1.217    1.103   \nNumber of obs: 250, groups:  x, 5\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.6173     0.4939     5.3 1.16e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-specificaiton",
+    "href": "FW680A4/hierarchical.html#model-specificaiton",
+    "title": "Hierarchical Models",
+    "section": "Model Specificaiton",
+    "text": "Model Specificaiton\nGLMM FAQ\n\nmodel specifications\npredictions with uncertainty\nTesting RE’s"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#alt-model-notation",
+    "href": "FW680A4/hierarchical.html#alt-model-notation",
+    "title": "Hierarchical Models",
+    "section": "Alt Model Notation",
+    "text": "Alt Model Notation\n\\[\\begin{align*}\ny_{i} \\sim& \\text{Poisson}(\\lambda_{i})\\\\\n\\text{log}(\\lambda_{i}) =& \\mu + \\alpha_{j[i]}\\\\\n\\alpha_{j} \\sim& \\text{Normal}(0, \\sigma^2_{\\alpha})\n\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarchical-structure-to-data",
+    "href": "FW680A4/hierarchical.html#hierarchical-structure-to-data",
+    "title": "Hierarchical Models",
+    "section": "Hierarchical Structure to Data",
+    "text": "Hierarchical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarchical-structure-to-data-1",
+    "href": "FW680A4/hierarchical.html#hierarchical-structure-to-data-1",
+    "title": "Hierarchical Models",
+    "section": "Hierarchical Structure to Data",
+    "text": "Hierarchical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarchical-structure-to-data-2",
+    "href": "FW680A4/hierarchical.html#hierarchical-structure-to-data-2",
+    "title": "Hierarchical Models",
+    "section": "Hierarchical Structure to Data",
+    "text": "Hierarchical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#hierarchical-structure-to-data-3",
+    "href": "FW680A4/hierarchical.html#hierarchical-structure-to-data-3",
+    "title": "Hierarchical Models",
+    "section": "Hierarchical Structure to Data",
+    "text": "Hierarchical Structure to Data"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#testing-res",
+    "href": "FW680A4/hierarchical.html#testing-res",
+    "title": "Hierarchical Models",
+    "section": "Testing RE’s",
+    "text": "Testing RE’s\n\nanova(model2, model3)\n\nData: dat\nModels:\nmodel3: y ~ 1 + (1 | x), zi=~0, disp=~1\nmodel2: y ~ x, zi=~0, disp=~1\n       Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(&gt;Chisq)    \nmodel3  2 1390.4 1397.5 -693.22   1386.4                             \nmodel2  5 1357.8 1375.4 -673.90   1347.8 38.639      3   2.07e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-intercept-slope",
+    "href": "FW680A4/hierarchical.html#random-intercept-slope",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\nLeopard detection varies by cover and veg, where the effect of cover comes from a shared distribution\n\n\n  y         cov  veg\n1 3  0.40161608 Veg1\n2 0 -0.12360373 Veg1\n3 3  0.62883136 Veg1\n4 0  0.07607150 Veg1\n5 2  0.04150764 Veg1\n6 0 -0.39289231 Veg1"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#general-types",
+    "href": "FW680A4/hierarchical.html#general-types",
+    "title": "Hierarchical Models",
+    "section": "General Types",
+    "text": "General Types\n\nRandom Effect / Multi-level Model\nlatent/unobserved state or process"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-1-no-difference-1",
+    "href": "FW680A4/hierarchical.html#model-1-no-difference-1",
+    "title": "Hierarchical Models",
+    "section": "Model 1 (No Difference)",
+    "text": "Model 1 (No Difference)\n\nmarginaleffects::predictions(model1,type = \"response\")\n\n\n Estimate Std. Error    z Pr(&gt;|z|)   S 2.5 % 97.5 %\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n--- 240 rows omitted. See ?avg_predictions and ?print.marginaleffects --- \n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\n     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8\nColumns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, y \nType:  response"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#model-3-middle-ground-1",
+    "href": "FW680A4/hierarchical.html#model-3-middle-ground-1",
+    "title": "Hierarchical Models",
+    "section": "Model 3 (middle-ground)",
+    "text": "Model 3 (middle-ground)\n\nranef(model3)\n\n$x\n     (Intercept)\nVeg1  -0.4104470\nVeg2  -1.6289235\nVeg3  -0.3951846\nVeg4   1.4465567\nVeg5   0.9942933\n\n\n\n\n\nbroom.mixed::tidy(model3, effects = \"ran_vals\", conf.int = TRUE)\n\n# A tibble: 5 × 9\n  effect   component group level term      estimate std.error conf.low conf.high\n  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 ran_vals cond      x     Veg1  (Interce…   -0.410     0.495  -1.38       0.560\n2 ran_vals cond      x     Veg2  (Interce…   -1.63      0.498  -2.61      -0.652\n3 ran_vals cond      x     Veg3  (Interce…   -0.395     0.495  -1.37       0.575\n4 ran_vals cond      x     Veg4  (Interce…    1.45      0.494   0.478      2.41 \n5 ran_vals cond      x     Veg5  (Interce…    0.994     0.494   0.0257     1.96 \n\n\n\n\n\n\nconfint(model3, component = c(\"all\"))\n\n                          2.5 %   97.5 % Estimate\n(Intercept)           1.6493302 3.585197 2.617264\nStd.Dev.(Intercept)|x 0.5924539 2.054005 1.103133\n\n\n\n\n\n\n\n\n\n\n\n\nfixef(model3)\n\n\nConditional model:\n(Intercept)  \n      2.617  \n\n\n\n\n\n\n#Predictions - does not include RE uncertainty\npreds = predict(model3,\n                newdata=data.frame(x=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                type=\"link\",\n                re.form=NULL,\n                se.fit = TRUE\n                )\n\n\npreds$LCL = exp(preds$fit-1.96*preds$se.fit)\npreds$UCL = exp(preds$fit+1.96*preds$se.fit)\npreds$fit = exp(preds$fit)\n\ndata.frame(preds)\n\n        fit     se.fit       LCL       UCL\n1  9.086746 0.04688339  8.288967  9.961307\n2  2.686772 0.08629719  2.268679  3.181914\n3  9.226495 0.04652728  8.422324 10.107449\n4 58.196226 0.01853791 56.119660 60.349630\n5 37.023659 0.02323965 35.375073 38.749074\n\n\n\n\n\n\n#A typical site\npredict(model3,type=\"response\",re.form=NA)[1]\n\n[1] 13.69819"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-intercept-slope-1",
+    "href": "FW680A4/hierarchical.html#random-intercept-slope-1",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\n\nre.model = glmer(y~cov+(cov|veg), family=poisson(link=\"log\"),data=dat2)\n\n\n\nsummary(re.model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: poisson  ( log )\nFormula: y ~ cov + (cov | veg)\n   Data: dat2\n\n     AIC      BIC   logLik deviance df.resid \n 14274.7  14295.8  -7132.4  14264.7      495 \n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n -4.798  -2.443  -1.630  -0.946 145.188 \n\nRandom effects:\n Groups Name        Variance Std.Dev. Corr\n veg    (Intercept) 0.4896   0.6997       \n        cov         0.1392   0.3732   0.14\nNumber of obs: 500, groups:  veg, 5\n\nFixed effects:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   1.6210     0.3137   5.166 2.39e-07 ***\ncov           0.1121     0.1683   0.666    0.505    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n    (Intr)\ncov 0.140"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-intercept-slope-2",
+    "href": "FW680A4/hierarchical.html#random-intercept-slope-2",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\n\nmarginaleffects::plot_predictions(re.model,\n                                  condition=c(\"cov\",\"veg\"),\n                                  type=\"link\",\n                                  re.form=NULL\n                                  )"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#lab",
+    "href": "FW680A4/hierarchical.html#lab",
+    "title": "Hierarchical Models",
+    "section": "Lab",
+    "text": "Lab"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-intercept-slope-3",
+    "href": "FW680A4/hierarchical.html#random-intercept-slope-3",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\n\nmarginaleffects::plot_predictions(re.model,\n                                  condition=c(\"cov\",\"veg\"),\n                                  type=\"link\",\n                                  re.form=NA\n                                  )"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-intercept-slope-4",
+    "href": "FW680A4/hierarchical.html#random-intercept-slope-4",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\n\nequatiomatic::extract_eq(re.model)\n\n\\[\n\\begin{aligned}\n  \\operatorname{y}_{i}  &\\sim \\operatorname{Poisson}(\\lambda_i) \\\\\n    \\log(\\lambda_i) &=\\alpha_{j[i]} + \\beta_{1j[i]}(\\operatorname{cov}) \\\\    \n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\alpha_{j} \\\\\n      &\\beta_{1j}\n    \\end{aligned}\n  \\end{array}\n\\right)\n  &\\sim N \\left(\n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\mu_{\\alpha_{j}} \\\\\n      &\\mu_{\\beta_{1j}}\n    \\end{aligned}\n  \\end{array}\n\\right)\n,\n\\left(\n  \\begin{array}{cc}\n     \\sigma^2_{\\alpha_{j}} & \\rho_{\\alpha_{j}\\beta_{1j}} \\\\\n     \\rho_{\\beta_{1j}\\alpha_{j}} & \\sigma^2_{\\beta_{1j}}\n  \\end{array}\n\\right)\n\\right)\n    \\text{, for veg j = 1,} \\dots \\text{,J}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#random-effect-or-not",
+    "href": "FW680A4/hierarchical.html#random-effect-or-not",
+    "title": "Hierarchical Models",
+    "section": "Random Effect or Not?",
+    "text": "Random Effect or Not?"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#faq",
+    "href": "FW680A4/hierarchical.html#faq",
+    "title": "Hierarchical Models",
+    "section": "FAQ",
+    "text": "FAQ\nGLMM FAQ\n\nmodel specifications\npredictions with uncertainty\nTesting RE’s"
+  },
+  {
+    "objectID": "FW680A4/hierarchical.html#considerations",
+    "href": "FW680A4/hierarchical.html#considerations",
+    "title": "Hierarchical Models",
+    "section": "Considerations",
+    "text": "Considerations\n\nShrinkage/Regularization\nWhen to use a random effect?"
+  },
+  {
+    "objectID": "classfiles/glmmlab/Assignment.GLMM.html",
+    "href": "classfiles/glmmlab/Assignment.GLMM.html",
+    "title": "GLMM Assignment",
+    "section": "",
+    "text": "Objective\nCreate a report using Markdown that presents code, results, and summarized findings that makes inference to the occurence of the Annamite striped rabbit (Nesolagus timminsi) across multiple protected areas in Vietnam.\nBackground\nThis is not real data. However, the basic premise has been adopted from the paper, Getting the big picture: Landscape-scale occupancy patterns of two Annamite endemics among multiple protected areas.\nOverview\nThe Annamite striped rabbit is a forest-dwelling lagomorph that was discovered by science in the mid-1990s. Little is known about this species. What has been done indicates that hunting pressure is a primary driver of its distribution. As such, protected areas are paramount to their conservation. However, protected areas vary in their effectiveness in limiting hunting and some protected areas are founded on multi-use, such that hunting is still allowed.\n\n\nData and Hypothesis\nA camera trap study was conducted in the Annamite mountain range of Vietnam to better understand the distribution of the unique mammal fauna. A central focus was to learn about the effects of anthropogenic activity on the distribution of the Annamite striped rabbit. A total of 50 camera traps were deployed at 5 different protected areas. The cameras were placed systematically with a random starting point to capture variation in the Euclidean distance between a camera and the nearest center of human activity (i.e., village/town). A colleague organized the data, such that for each camera site, the presence (1) or assumed absence (0) of the rabbit was recorded (occur); we will assume there are no false-positives or false-negatives in these data. The main variables of interest are the protected areas (PA) and the distance to human activity (dist.human).\nWorking with your colleagues, they outline their hypothesis that the main driver of rabbit occurrence is hunting within the protected areas. They predict that increasing distance away from human activity will lead to higher rabbit occupancy because people will only travel so far in difficult mountainous terrain. They also hypothesize that this effect will vary by protected area because there is different levels of patrolling and enforcement. But, regardless of protected area, they hypothesize that occurrence at the edge of the protected areas nearest to human activity will be the same because of the similar density of people and that occurrence will be very low.\nTo do\nFit the data (rabbit.occ.data.csv) using a model that captures the hypothesis of your colleague.\n\npresent all parameters with measures of uncertainty\nmake sure to provide evidence whether there is or is not variation of ‘dist.human’ across protected areas\nmake prediction plots that display all relevant variables\nmake a prediction plot for a ‘typical’ protected area; make it clear why this results is important\nsummarize results and offer suggestions for the type of followup study that would be useful"
   }
 ]

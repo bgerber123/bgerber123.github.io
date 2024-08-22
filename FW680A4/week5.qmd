@@ -8,17 +8,6 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Lecture: 
-
--   Lecture Code: 
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c(""))
-```
-
 ##### **In Class Discussion Questions for Fieberg, Ch. 8 * Tredennick et al. 2021**
 
 
@@ -38,9 +27,16 @@ install.packages(c(""))
 
 #### [Today]{style="color:red;"}
 
-<!-- -   Lecture: <a href="/FW680A4/glm2.qmd">Generalized Linear Models II</a> -->
+-   Lecture: <a href="/FW680A4/hierarchical.qmd">Hierarchical Models</a>
 
-<!-- -   Downloads: <a href="/classfiles/glmlab/week4files.zip">Files</a> -->
+-   Downloads: <a href="/classfiles/glmmlab/week5files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("glmmTMB","broom.mixed","lme4"))
+```
 
 
 <!-- #### [Assigned]{style="color:red;"} -->
