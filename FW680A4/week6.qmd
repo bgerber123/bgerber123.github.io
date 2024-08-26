@@ -1,0 +1,58 @@
+---
+title: ""
+---
+
+## Week 6
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+
+-   Lecture: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
+
+-   Lecture Code: <a href="/FW680A4/bayesian.R">bayesian.R</a>
+
+#### [Assigned]{style="color:red;"}
+
+- Background Reading (not required):
+  - <a href="/readings/Gelman and Hill Chapters 11 and 12.pdf"> Gelman and Hill Ch. 11 and 12</a>.
+
+
+
+
+<!-- #### [Assigned]{style="color:red;"} -->
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
+
+
+
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-    Lecture: Continue with: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
+
+-   Downloads: <a href="/classfiles/bayeslab/week5files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("rjags","bayesplot","rstanarm"))
+```
+
+
+<!-- #### [Assigned]{style="color:red;"} -->
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+---
+title: "Bayesin Assignment"
+author: "Brian D. Gerber"
+date: "2022-10-28"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre{
+  font-size: 20px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**: To understand Bayesian model inference and computation.
+
+### **Background**
+
+We were able to draw samples from the posterior distribution of $p$, the probability of hippo survival, because of the conjugacy of the Binomial likelihood and Beta prior probability distribution of $p$.
+
+Another conjugate relationship is between a Poisson likelihood and a Gamma prior probability on $\lambda$ (the mean of the Poisson).
+
+$$
+\begin{align*}
+\textbf{y} \sim& \text{Poisson}(\lambda)\\
+\lambda \sim& \text{Gamma}(\kappa,\theta)
+\end{align*}
+$$
+where, the posterior distribution of lambda is
+
+$$
+\begin{align*}
+[\lambda|\textbf{y}] \sim& \text{Gamma}(\kappa^*,\theta^*).
+\end{align*}
+$$
+
+I am providing two data sets of counts of Gingko biloba (tree) at different number of sample size. We know in the sampling area that this tree is rare. This *prior knowledge* should inform how we specify the prior probability distribution.
+
+### **Part 1**
+
+Fit a Bayesian model to the two datasets provided, each using two different prior distributions on $\lambda$.
+
+Fit the model by sampling from the posterior distribution directly. You can do this by using the [Wikipedia Conjugate Page](https://en.wikipedia.org/wiki/Conjugate_prior) to look up the posterior hyperparameters.
+
+To decide on your two different prior probability distributions, you need to understand the shape ($\kappa$) and scale ($\theta$) parameters of the Gamma distribution. I suggest looking at the [Gamma distribution wikipedia page](https://en.wikipedia.org/wiki/Gamma_distribution), choosing values, and then plotting the distributions. The two prior probability distribution you choose should be a 'highly informative' and a 'low/less informative' prior distribution. Do this prior to looking at the data. 
+
+### The markdown should include
+
+-   Two plots of the prior probability distributions
+
+-   Four plots of posterior distributions (2 for each data set using each of the two priors).
+
+-   A table or list of the posterior means or medians along with 95\% credible intervals, as well as a description of what these intervals mean.
+
+-   A description of how the different priors influenced the first and second data sets. Did each prior have the same importance with each data set? Why?
+
+### **Part 2**
+
+Here, the goal is to replicate the above 4 analyses (2 data sets and 2 priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'.
+
+For JAGS, you will need to setup a model.jags file that has the likelihood and prior. Note, that the probability density funcitons in JAGS for Gamma and Poisson are dgamma, and dpois, respectively.
+
+For Stan, use the code provided and adapt it based on what you know from the GLM homework. 
+
+### The markdown should include
+
+-   Four plots of posterior distributions (2 for each data set using each of the two priors).
+
+-   A table or list of the posterior means or medians along with 95\% credible intervals.
+
+

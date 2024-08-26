@@ -33,14 +33,14 @@ Week                                  |	Day  |	Date     | 	Lecture Topic        
 &nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Lab 1: Sampling & Markdown |  Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                                                | Shmueli 2010; Arif and MacNeil 2022
 <a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        | Probability Quiz        |                               |   Hobbs and Hooten Ch.3; Bolker Ch. 4           |
 &nbsp;                                | Fr	 | 30-Aug	 | Probability Functions                        | Lab 2: Simulation & Prob. Functions   |                 | 	Fieberg Ch. 10; Bolker Ch. 6     |		            
-<a href="/FW680A4/week3.qmd">3</a>    |	Tu	 | 3-Sep	 | Likelihood / Optimization                    |            |    Dushoff et al. 2019; Fieberg, Ch. 1.10         |  Fieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2            |  
+<a href="/FW680A4/week3.qmd">3</a>    |	Tu	 | 3-Sep	 | Likelihood / Optimization                    |            |    Dushoff et al. 2019; Fieberg, Ch. 1.10         |  Fieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2  | 
 &nbsp;                                |	Fr	 | 6-Sep	 | Regression                                   | Lab 3: Regression                  |                        |                           |
 <a href="/FW680A4/week4.qmd">4</a>    |	Tu	 | 10-Sep	 | GLM I                                        |                   |Zurr and Iano, 2016                 |              |
-&nbsp;                                |	Fr	 | 13-Sep	 | GLM II                                       |Lab 4: GLM         | Fieberg, Ch. 8; Tredennick et al. 2021  |              |
-<a href="/FW680A4/week5.qmd">5</a>     |	Tu	 | 17-Sep	 | Modeling Strategies      |                   |                             | Gelman and Hill Ch. 11 and 12             |
-&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models / GLMM                   |    Lab 5: GLMM      |                             |              |
-6                                     |	Tu	 | 24-Sep	 | Bayesian Models and Inference                |                   |                             |              |
-&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Models and Computation              |                   |                             |              |
+&nbsp;                                |	Fr	 | 13-Sep	 | GLM II                                       |Lab 4: GLM         |Fieberg, Ch. 8; Tredennick et al. 2021  |              |
+<a href="/FW680A4/week5.qmd">5</a>    |	Tu	 | 17-Sep	 | Modeling Strategies                          |                   |                             | Gelman and Hill Ch. 11 and 12             |
+&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models / GLMM                   |Lab 5: GLMM        |                             |              |
+<a href="/FW680A4/week6.qmd">6</a>    |	Tu	 | 24-Sep	 | Bayesian Inference                           |                   |                             |              |
+&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Inference and Computation           |Lab 5: Bayes       |                             |              |
 7                                     |	Tu	 | 1-Oct	 | Hierarchical Bayesian Occupancy Models I     |                   |                             |              |
 &nbsp;                                |	Fr	 | 4-Oct	 | Hierarchical Bayesian Occupancy Models II    |                   |                             |              |
 8                                     |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   |                             |              | 			

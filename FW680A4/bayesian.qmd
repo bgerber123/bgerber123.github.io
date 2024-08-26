@@ -1,5 +1,5 @@
 ---
-title:  <span style="color:purple">Bayes the way</span>
+title:  <span style="color:purple"><br><br><br>Bayes the way</span>
 title-slide-attributes:
   data-background-image: /img//background4.png
   background-opacity: "0.45"
@@ -12,6 +12,10 @@ format:
 
 
 ## All things Bayesian
+
+<!-- knitr::purl("./FW680A4/bayesian.qmd", output="./FW680A4/bayesian.R") -->
+
+
 ```{=html}
 <style type="text/css">
 
@@ -28,8 +32,25 @@ code.r{
 -   <p style="color:orange">Bayesian Components</p>
     - likelihood, prior, evidence, posterior
 
+-   <p style="color:orange">Conjugacy</p>
+    
+-   <p style="color:orange">Hippo Case Study</p>
+
 -   <p style="color:orange">Bayesian Computation</p>
-    - Conjugacy, Markov Chain Monte Carlo
+
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Inference </b></span></center>
+```
+
 
 ## Probability, Data, and Parameters
 
@@ -93,10 +114,14 @@ ggplot(data, aes(Site, Pop.Size)) +        # ggplot2 plot with confidence interv
 
 <span style="color:orange">Posterior Samples</span>
 
+::: {.fragment}
+
 ```{r, eval=TRUE,echo=FALSE}
 set.seed(5435)
 rnorm(10,75,20)
 ```
+
+:::
 
 ```{r, eval=TRUE,echo=FALSE,fig.align='center'}
 par(mfrow=c(1,2))
@@ -211,7 +236,22 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
  length(which(post<0))/length(post)
 ``` 
 
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Theorem </b></span></center>
+```
+
+
 ## Bayes Theorem 
+
+[Link](https://www.statisticshowto.com/probability-and-statistics/probability-main-index/probability-of-a-and-b/)
 
 ::: columns
 ::: {.column width="40%"}
@@ -219,12 +259,29 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 -   <p style="color:purple">Marginal Probability</p>
     - $P(A)$
     - $P(B)$
+
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A)
+3/10 = 0.3
+
+#P(B)
+5/10 = 0.5
+```
+
+
 :::
+
 ::: {.column width="60%"}
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](Bayesian_files/bayes.png){fig-align="center" width="700"}
+![](/img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -236,14 +293,27 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 -   <p style="color:purple">Joint Probability</p>
     - $P(A \cap B)$
-    - $P(A \cap \overline{B})$
-    - $P(B \cap \overline{A})$
+    <!-- - $P(A \cap \overline{B})$ -->
+    <!-- - $P(B \cap \overline{A})$ -->
+
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A and B)
+2/10 = 0.2
+
+```
 :::
+
 ::: {.column width="60%"}
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](Bayesian_files/bayes.png){fig-align="center" width="700"}
+![](/img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -256,14 +326,28 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 -   <p style="color:purple">Conditional Probability</p>
     - $P(A|B)$ 
     - $P(B|A)$
-    - $P(B|\overline{A})$
-    - $P(A|\overline{B})$
+    <!-- - $P(B|\overline{A})$ -->
+    <!-- - $P(A|\overline{B})$ -->
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A|B)
+2/5 = 0.4
+
+#P(B|A)
+2/3 = 0.6666
+```
+
 :::
 ::: {.column width="60%"}
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](Bayesian_files/bayes.png){fig-align="center" width="700"}
+![](/img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -276,12 +360,30 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 -   <p style="color:purple">OR Probability</p>
     - $P(A\cup B)$
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+# P(A or B)
+# P(A) + P(B) - P(A and B)
+
+0.3 + 0.5 - 0.2 = 0.6
+
+
+```
+
+
+
 :::
+
 ::: {.column width="60%"}
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](Bayesian_files/bayes.png){fig-align="center" width="700"}
+![](/img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -291,13 +393,13 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 $$
 \begin{equation}
-P(A \cap B) = \\
-P(A|B)P(B) = \\
-P(B|A)P(A) = \\
+P(A \cap B) = 0.2 \\
+P(A|B)P(B) = 0.4 \times 0.5 = 0.2 \\
+P(B|A)P(A) = 0.6666 \times 0.3 = 0.2 \\
 \end{equation}
 $$
 
-. . .
+::: {.fragment}
 
 $$
 \begin{equation}
@@ -305,8 +407,9 @@ P(A|B)P(B) = P(A \cap B) \\
 P(B|A)P(A) = P(A \cap B) \\
 \end{equation}
 $$
+:::
 
-. . .
+::: {.fragment}
 
 $$
 \begin{equation}
@@ -314,11 +417,10 @@ P(B|A)P(A) = P(A|B)P(B)
 \end{equation}
 $$
 
+:::
 
-. . .
 
-
-### <span style="color:orange">Bayes Theoreom</span> 
+## Bayes Theoreom {.scrollable}
 
 
 $$
@@ -327,13 +429,28 @@ P(B|A) = \frac{P(A|B)P(B)}{P(A)} \\
 \end{equation}
 $$
 
-. . .
+::: {.fragment}
 
 $$
 \begin{equation}
 P(B|A) = \frac{P(A \cap B)}{P(A)} \\
 \end{equation}
 $$
+
+:::
+
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Components </b></span></center>
+```
 
 ## Bayes Components {.scrollable}
 
@@ -404,7 +521,7 @@ $$
 
 ## The Prior {.scrollable}
 
-All parameters in a Bayesian model require a prior specified
+All parameters in a Bayesian model require a prior specified; parameters are random variables.
 
 
 $y_{i} \sim \text{Binom}(N, \theta)$
@@ -422,11 +539,6 @@ curve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)
 
 
 ## The Prior {.scrollable}
-
-All parameters in a Bayesian model require a prior specified
-
-
-$y_{i} \sim \text{Binom}(N, \theta)$
 
 $\theta \sim \text{Beta}(\alpha = 1, \beta=1)$
 
@@ -447,6 +559,8 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 -   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>)
 
 -   Well-constructed priors can also improve the behavior of our models (computational advantage)
+
+-   No such thing as a 'non-informative' prior
 
 :::
 
@@ -492,6 +606,20 @@ Be sure to look at the prior in terms of the parameters you want to make inferen
 
 Does changing the prior change your posterior inference? If not, don't sweat it. If it does, you'll need to return to point 2 and justify your prior choice
 
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Conjugacy </b></span></center>
+```
+
+
 ## Bayesian Model {.scrollable}
 
 <p style="color:purple">Model</p> 
@@ -507,7 +635,7 @@ $$
 p \sim \text{Beta}( \alpha, \beta) \\
 $$
 
-. . .
+::: {.fragment}
 
 These are called Prior hyperparameters
 
@@ -515,7 +643,10 @@ $$
 \alpha = 1 \\
 \beta = 1
 $$
-. . .
+
+:::
+
+::: {.fragment}
 
 ```{r eval=TRUE, echo=TRUE}
 curve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab="p",
@@ -524,6 +655,8 @@ curve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab="p",
 
 <!-- sum(dbinom(y,size=1,p,log=TRUE)) -->
 <!-- dbeta(p,1,1,log=TRUE) -->
+
+::: 
 
 ## Conjugate Distribution {.scrollable}
 
@@ -577,11 +710,23 @@ $$
 
 :::
 
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Case Study </b></span></center>
+```
+
 ## Hippos
 
 We do a small study on hippo survival and get these data...
 
-![](Bayesian_files/hippos.png){fig-align="center" width="300"}
+![](/img/hippos.png){fig-align="center" width="300"}
 
 <span><center>7 Hippos Died </center></span>
 <span><center>2 Hippos Lived</center></span>
@@ -818,18 +963,56 @@ legend("topleft",lwd=3,lty=c(1,1,1),col=c("black","red","green"),
 
 ```
 
-## Markov Chain Monte Carlo {.scollable}
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Computation </b></span></center>
+```
+
+
+## Markov Chain Monte Carlo {.scrollable}
 
 Often don't have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.
 
-Options
+**Class of algorithim**
 
--   Write your own algorithim
--   BUGS, JAGS, Stan, Nimble
+- Metropolis-Hastings
+- Gibbs
+- Reversible-Juno
+- No U-turn Sampling
+
+::: {.fragment}
+
+$$
+P(p|y) = \frac{\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)} }{\int_{p}(\text{numerator})}
+$$
+
+:::
+
+::: {.fragment}
+
+$$
+P(p|y) \propto\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}
+$$
+
+:::
 
 ## MCMC Sampling 
 
 -   number of sample (iterations)
 -   thinning (which iterations to keep), every one (1), ever other one (2), every third one (3)
 -   burn-in (how many of the first samples to remove)
--   chains (uniqe sets of samples; needed for convergence tests)
+-   chains (unique sets of samples; needed for convergence tests)
+
+
+## Sofware Options
+
+-   Write your own algorithim
+-   WinBUGS/OpenBUGS, JAGS, Stan, Nimble
+

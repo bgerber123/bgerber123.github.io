@@ -2209,7 +2209,7 @@
     "href": "FW680A4/index.html#wildlife-ecology-modeling-fw680a4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW680A4/overview/CourseOverview.html",
@@ -2286,7 +2286,7 @@
     "href": "FW680A4/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\n\nWeeksSoftwareNotesProjectLearning\n\n\n\nWeek 1 (Aug 20, 23)\n\n\nWeek 2 (Aug 27, 30)\n\n\nWeek 3 (Sep 3, 6)\n\n\nWeek 4 (Sep 10, 12)\n\n\nWeek 5 (Sep 17, 20)\n\n\nWeek 6 (Sep 24, 27)\n\n\nWeek 7 (Oct 1, 4)\n\n\nWeek 8 (Oct 8, 11)\n\n\nWeek 9 (Oct 15, 18)\n\n\nWeek 10 (Oct 22, 25)\n\n\nWeek 11 (Oct 29, Nov 1)\n\n\nWeek 12 (Nov 5, 8)\n\n\nWeek 13 (Nov 12, 15)\n\n\nWeek 14 (Nov 19, 22)\n\n\nWeek 15 (Nov 26, 29): No Classes\n\n\nWeek 16 (Dec 3, 6)\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\nWork individually or in a group of 2\nDecide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.\n\n\n\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW680A4/CourseOverview.html",
@@ -2951,7 +2951,7 @@
     "href": "FW680A4/schedule.html#schedule",
     "title": "\nFW 680A4  Wildlife Ecology Modeling  (Fall 2024)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n13-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8; Tredennick et al. 2021\n\n\n\n5\nTu\n17-Sep\nModeling Strategies\n\n\nGelman and Hill Ch. 11 and 12\n\n\n \nFr\n20-Sep\nHierarchical Models / GLMM\nLab 5: GLMM\n\n\n\n\n6\nTu\n24-Sep\nBayesian Models and Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Models and Computation\n\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n 1 \nTu\n20-Aug\nClass Intro; Why statistical model/coding\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n23-Aug\nBig Picture\nLab 1: Sampling & Markdown\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nTu\n27-Aug\nProbability Functions\nProbability Quiz\n\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n30-Aug\nProbability Functions\nLab 2: Simulation & Prob. Functions\n\nFieberg Ch. 10; Bolker Ch. 6\n\n\n3\nTu\n3-Sep\nLikelihood / Optimization\n\nDushoff et al. 2019; Fieberg, Ch. 1.10\nFieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2\n\n\n \nFr\n6-Sep\nRegression\nLab 3: Regression\n\n\n\n\n4\nTu\n10-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n13-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8; Tredennick et al. 2021\n\n\n\n5\nTu\n17-Sep\nModeling Strategies\n\n\nGelman and Hill Ch. 11 and 12\n\n\n \nFr\n20-Sep\nHierarchical Models / GLMM\nLab 5: GLMM\n\n\n\n\n6\nTu\n24-Sep\nBayesian Inference\n\n\n\n\n\n \nFr\n27-Sep\nBayesian Inference and Computation\nLab 5: Bayes\n\n\n\n\n7\nTu\n1-Oct\nHierarchical Bayesian Occupancy Models I\n\n\n\n\n\n \nFr\n4-Oct\nHierarchical Bayesian Occupancy Models II\n\n\n\n\n\n8\nTu\n8-Oct\nSpecies Distribution Modeling\n\n\n\n\n\n \nFr\n11-Oct\nN-Mixture and Integrated Data Models\n\n\n\n\n\n9\nTu\n15-Oct\nMark Recapture\n\n\n\n\n\n \nFr\n18-Oct\nSpatial Capture Recapture\n\n\n\n\n\n10\nTU\n22-Oct\nDistance Sampling\n\n\n\n\n\n \nFr\n25-Oct\nAnimal Movement I\n\n\n\n\n\n11\nTu\n29-Oct\nAnimal Movement II\n\n\n\n\n\n \nFr\n1-Nov\nHabitat Selection I\n\n\n\n\n\n12\nTu\n5-Nov\nHabitat Selection II\n\n\n\n\n\n \nFr\n8-Nov\nPredictive Modeling\n\n\n\n\n\n13\nTu\n12-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n15-Nov\nCommunity Modeling\n\n\n\n\n\n14\nTu\n19-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n22-Nov\nGroup Project work\n\n\n\n\n\n15\nTu\n26-Nov\nNo Class\n\n\n\n\n\n \nFr\n29-Nov\nNo Class\n\n\n\n\n\n16\nTu\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW680A4/Markdown and R Stuff.html",
@@ -6787,7 +6787,7 @@
     "href": "FW680A4/bayesian.html#all-things-bayesian",
     "title": "Bayes the way",
     "section": "All things Bayesian",
-    "text": "All things Bayesian\n\n\n\nBayesian Inference\n\n\nBayes Thereom\n\n\nBayesian Components\n\n\nlikelihood, prior, evidence, posterior\n\n\nBayesian Computation\n\n\nConjugacy, Markov Chain Monte Carlo"
+    "text": "All things Bayesian\n\n\n\n\nBayesian Inference\n\n\nBayes Thereom\n\n\nBayesian Components\n\n\nlikelihood, prior, evidence, posterior\n\n\nConjugacy\n\n\nHippo Case Study\n\n\nBayesian Computation"
   },
   {
     "objectID": "FW680A4/bayesian.html#probability-data-and-parameters",
@@ -6815,7 +6815,7 @@
     "href": "FW680A4/bayesian.html#bayesian-inference",
     "title": "Bayes the way",
     "section": "Bayesian Inference",
-    "text": "Bayesian Inference\nPosterior Samples\n\n\n [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219\n [8]  83.99927  64.74208  26.93133"
+    "text": "Bayesian Inference\nPosterior Samples\n\n\n\n [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219\n [8]  83.99927  64.74208  26.93133"
   },
   {
     "objectID": "FW680A4/bayesian.html#bayesian-inference-1",
@@ -6857,35 +6857,35 @@
     "href": "FW680A4/bayesian.html#bayes-theorem",
     "title": "Bayes the way",
     "section": "Bayes Theorem",
-    "text": "Bayes Theorem\n\n\n\n\nMarginal Probability\n\n\n\\(P(A)\\)\n\\(P(B)\\)\n\n\n\n\n\nSampled N = 10 locations"
+    "text": "Bayes Theorem\nLink\n\n\n\n\nMarginal Probability\n\n\n\\(P(A)\\)\n\\(P(B)\\)\n\n\n\n\nClick for Answer\n#P(A)\n3/10 = 0.3\n\n#P(B)\n5/10 = 0.5\n\n\n\n\n\nSampled N = 10 locations"
   },
   {
     "objectID": "FW680A4/bayesian.html#bayes-theorem-1",
     "href": "FW680A4/bayesian.html#bayes-theorem-1",
     "title": "Bayes the way",
     "section": "Bayes Theorem",
-    "text": "Bayes Theorem\n\n\n\n\nJoint Probability\n\n\n\\(P(A \\cap B)\\)\n\\(P(A \\cap \\overline{B})\\)\n\\(P(B \\cap \\overline{A})\\)\n\n\n\n\n\nSampled N = 10 locations"
+    "text": "Bayes Theorem\n\n\n\n\nJoint Probability\n\n\n\\(P(A \\cap B)\\)  \n\n\n\n\nClick for Answer\n#P(A and B)\n2/10 = 0.2\n\n\n\n\n\nSampled N = 10 locations"
   },
   {
     "objectID": "FW680A4/bayesian.html#bayes-theorem-2",
     "href": "FW680A4/bayesian.html#bayes-theorem-2",
     "title": "Bayes the way",
     "section": "Bayes Theorem",
-    "text": "Bayes Theorem\n\n\n\n\nConditional Probability\n\n\n\\(P(A|B)\\)\n\\(P(B|A)\\)\n\\(P(B|\\overline{A})\\)\n\\(P(A|\\overline{B})\\)\n\n\n\n\n\nSampled N = 10 locations"
+    "text": "Bayes Theorem\n\n\n\n\nConditional Probability\n\n\n\\(P(A|B)\\)\n\\(P(B|A)\\)  \n\n\n\n\nClick for Answer\n#P(A|B)\n2/5 = 0.4\n\n#P(B|A)\n2/3 = 0.6666\n\n\n\n\n\nSampled N = 10 locations"
   },
   {
     "objectID": "FW680A4/bayesian.html#bayes-theorem-3",
     "href": "FW680A4/bayesian.html#bayes-theorem-3",
     "title": "Bayes the way",
     "section": "Bayes Theorem",
-    "text": "Bayes Theorem\n\n\n\n\nOR Probability\n\n\n\\(P(A\\cup B)\\)\n\n\n\n\n\nSampled N = 10 locations"
+    "text": "Bayes Theorem\n\n\n\n\nOR Probability\n\n\n\\(P(A\\cup B)\\)\n\n\n\n\nClick for Answer\n# P(A or B)\n# P(A) + P(B) - P(A and B)\n\n0.3 + 0.5 - 0.2 = 0.6\n\n\n\n\n\nSampled N = 10 locations"
   },
   {
     "objectID": "FW680A4/bayesian.html#notice-that",
     "href": "FW680A4/bayesian.html#notice-that",
     "title": "Bayes the way",
     "section": "Notice that…",
-    "text": "Notice that…\n\\[\n\\begin{equation}\nP(A \\cap B) = \\\\\nP(A|B)P(B) = \\\\\nP(B|A)P(A) = \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\nP(A|B)P(B) = P(A \\cap B) \\\\\nP(B|A)P(A) = P(A \\cap B) \\\\\n\\end{equation}\n\\]\n\n\n\\[\n\\begin{equation}\nP(B|A)P(A) = P(A|B)P(B)\n\\end{equation}\n\\]\n\n\nBayes Theoreom\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A|B)P(B)}{P(A)} \\\\\n\\end{equation}\n\\]\n. . .\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A \\cap B)}{P(A)} \\\\\n\\end{equation}\n\\]"
+    "text": "Notice that…\n\\[\n\\begin{equation}\nP(A \\cap B) = 0.2 \\\\\nP(A|B)P(B) = 0.4 \\times 0.5 = 0.2 \\\\\nP(B|A)P(A) = 0.6666 \\times 0.3 = 0.2 \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\nP(A|B)P(B) = P(A \\cap B) \\\\\nP(B|A)P(A) = P(A \\cap B) \\\\\n\\end{equation}\n\\]\n\n\n\\[\n\\begin{equation}\nP(B|A)P(A) = P(A|B)P(B)\n\\end{equation}\n\\]"
   },
   {
     "objectID": "FW680A4/bayesian.html#bayes-components",
@@ -6913,21 +6913,21 @@
     "href": "FW680A4/bayesian.html#the-prior",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nAll parameters in a Bayesian model require a prior specified\n\\(y_{i} \\sim \\text{Binom}(N, \\theta)\\)\n\n\\(\\theta \\sim \\text{Beta}(\\alpha = 4, \\beta=2)\\)\n\n\n\ncurve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)"
+    "text": "The Prior\nAll parameters in a Bayesian model require a prior specified; parameters are random variables.\n\\(y_{i} \\sim \\text{Binom}(N, \\theta)\\)\n\n\\(\\theta \\sim \\text{Beta}(\\alpha = 4, \\beta=2)\\)\n\n\n\ncurve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)"
   },
   {
     "objectID": "FW680A4/bayesian.html#the-prior-1",
     "href": "FW680A4/bayesian.html#the-prior-1",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nAll parameters in a Bayesian model require a prior specified\n\\(y_{i} \\sim \\text{Binom}(N, \\theta)\\)\n\\(\\theta \\sim \\text{Beta}(\\alpha = 1, \\beta=1)\\)\n\n\ncurve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)"
+    "text": "The Prior\n\\(\\theta \\sim \\text{Beta}(\\alpha = 1, \\beta=1)\\)\n\n\ncurve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)"
   },
   {
     "objectID": "FW680A4/bayesian.html#the-prior-2",
     "href": "FW680A4/bayesian.html#the-prior-2",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\n\n\nThe prior describes what we know about the parameter before we collect any data\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)"
+    "text": "The Prior\n\n\nThe prior describes what we know about the parameter before we collect any data\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)\nNo such thing as a ‘non-informative’ prior"
   },
   {
     "objectID": "FW680A4/bayesian.html#the-prior-3",
@@ -6955,7 +6955,7 @@
     "href": "FW680A4/bayesian.html#bayesian-model",
     "title": "Bayes the way",
     "section": "Bayesian Model",
-    "text": "Bayesian Model\n\nModel\n\n\\[\n\\textbf{y} \\sim \\text{Bernoulli}(p)\n\\]\n\n\nPrior\n\n\\[\np \\sim \\text{Beta}( \\alpha, \\beta) \\\\\n\\]\n\n\nThese are called Prior hyperparameters\n\\[\n\\alpha = 1 \\\\\n\\beta = 1\n\\] . . .\n\ncurve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab=\"p\",\n      ylab = \"Prior Probability Density\")"
+    "text": "Bayesian Model\n\nModel\n\n\\[\n\\textbf{y} \\sim \\text{Bernoulli}(p)\n\\]\n\n\nPrior\n\n\\[\np \\sim \\text{Beta}( \\alpha, \\beta) \\\\\n\\]\n\nThese are called Prior hyperparameters\n\\[\n\\alpha = 1 \\\\\n\\beta = 1\n\\]\n\n\n\ncurve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab=\"p\",\n      ylab = \"Prior Probability Density\")"
   },
   {
     "objectID": "FW680A4/bayesian.html#conjugate-distribution",
@@ -7060,14 +7060,14 @@
     "href": "FW680A4/bayesian.html#markov-chain-monte-carlo",
     "title": "Bayes the way",
     "section": "Markov Chain Monte Carlo",
-    "text": "Markov Chain Monte Carlo\nOften don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.\nOptions\n\nWrite your own algorithim\nBUGS, JAGS, Stan, Nimble"
+    "text": "Markov Chain Monte Carlo\nOften don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.\nClass of algorithim\n\nMetropolis-Hastings\nGibbs\nReversible-Juno\nNo U-turn Sampling\n\n\n\\[\nP(p|y) = \\frac{\\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \\times \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)} }{\\int_{p}(\\text{numerator})}\n\\]\n\n\n\\[\nP(p|y) \\propto\\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \\times \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)}\n\\]"
   },
   {
     "objectID": "FW680A4/bayesian.html#mcmc-sampling",
     "href": "FW680A4/bayesian.html#mcmc-sampling",
     "title": "Bayes the way",
     "section": "MCMC Sampling",
-    "text": "MCMC Sampling\n\nnumber of sample (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (uniqe sets of samples; needed for convergence tests)"
+    "text": "MCMC Sampling\n\nnumber of sample (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (unique sets of samples; needed for convergence tests)"
   },
   {
     "objectID": "FW680A4/bayesian.html#the-prior-6",
@@ -7082,5 +7082,82 @@
     "title": "Bayes the way",
     "section": "The Prior",
     "text": "The Prior\nDo a sensitivity analysis\n\nDoes changing the prior change your posterior inference? If not, don’t sweat it. If it does, you’ll need to return to point 2 and justify your prior choice"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section",
+    "href": "FW680A4/bayesian.html#section",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Bayesian Inference"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section-1",
+    "href": "FW680A4/bayesian.html#section-1",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Bayesian Theorem"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section-2",
+    "href": "FW680A4/bayesian.html#section-2",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Bayesian Components"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#bayes-theoreom",
+    "href": "FW680A4/bayesian.html#bayes-theoreom",
+    "title": "Bayes the way",
+    "section": "Bayes Theoreom",
+    "text": "Bayes Theoreom\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A|B)P(B)}{P(A)} \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A \\cap B)}{P(A)} \\\\\n\\end{equation}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section-3",
+    "href": "FW680A4/bayesian.html#section-3",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Conjugacy"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section-4",
+    "href": "FW680A4/bayesian.html#section-4",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Case Study"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#sofware-options",
+    "href": "FW680A4/bayesian.html#sofware-options",
+    "title": "Bayes the way",
+    "section": "Sofware Options",
+    "text": "Sofware Options\n\nWrite your own algorithim\nWinBUGS/OpenBUGS, JAGS, Stan, Nimble"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html#section-5",
+    "href": "FW680A4/bayesian.html#section-5",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Bayesian Computation"
+  },
+  {
+    "objectID": "FW680A4/week6.html",
+    "href": "FW680A4/week6.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+  },
+  {
+    "objectID": "FW680A4/week6.html#week-6",
+    "href": "FW680A4/week6.html#week-6",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+  },
+  {
+    "objectID": "FW680A4/bayesian.html",
+    "href": "FW680A4/bayesian.html",
+    "title": "Bayes the way",
+    "section": "",
+    "text": "Bayesian Inference\n\n\nBayes Thereom\n\n\n\nBayesian Components\n\n\nlikelihood, prior, evidence, posterior\n\n\n\nConjugacy\n\n\nHippo Case Study\n\n\nBayesian Computation"
   }
 ]
