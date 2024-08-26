@@ -399,12 +399,9 @@
 </div>
 
 </section>
-<section class="slide level2">
-
-<!-- knitr::purl("./FW680A4/probability.qmd", output="./FW680A4/probability.R") -->
-</section>
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
+<!-- knitr::purl("./FW680A4/probability.qmd", output="./FW680A4/probability.R") -->
 <ul>
 <li><p>Connect random variables, probabilities, and parameters</p></li>
 <li><p>define prob. functions</p>
@@ -997,7 +994,7 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 \]</span></p>
 </div>
 <div class="fragment">
-<p>Read this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.</p>
+<p>Read this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.</p>
 </div>
 <p><br></p>
 <div class="fragment">
@@ -1077,7 +1074,7 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <section id="normal-distribution-pdf-code-2" class="slide level2">
 <h2>Normal Distribution (PDF Code)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">4</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">3</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <img data-src="Probability_files/figure-revealjs/pdf2b-1.png" width="960" class="r-stretch"></section>
@@ -1117,7 +1114,7 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <h2>Gamma Distribution</h2>
 <p><span style="color:red">Probability</span>: Interested in the variation of y, <span class="math display">\[
 \begin{align*}
-y \leftarrow&amp; f(y|\boldsymbol{\theta}) \\
+y \leftarrow&amp; f(y|\boldsymbol{\theta'}) \\
 \end{align*}
 \]</span></p>
 <div class="fragment">

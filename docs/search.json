@@ -4015,7 +4015,7 @@
     "href": "FW680A4/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
   },
   {
     "objectID": "FW680A4/Probability.html#pdf-2",
@@ -4162,7 +4162,7 @@
     "href": "FW680A4/Probability.html#objectives",
     "title": "Probability",
     "section": "Objectives",
-    "text": "Objectives\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
+    "text": "Objectives\n\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
   },
   {
     "objectID": "FW680A4/Probability.html#normal-distribution-pdf-code",
@@ -4190,7 +4190,7 @@
     "href": "FW680A4/Probability.html#normal-distribution-pdf-code-2",
     "title": "Probability",
     "section": "Normal Distribution (PDF Code)",
-    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean = 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
+    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-pdf-code-1",
@@ -4239,7 +4239,7 @@
     "href": "FW680A4/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW680A4/Probability.html#gamma-distribution-1",

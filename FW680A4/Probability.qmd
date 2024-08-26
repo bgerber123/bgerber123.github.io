@@ -8,9 +8,11 @@ format:
     multiplex: true
 ---
 
-<!-- knitr::purl("./FW680A4/probability.qmd", output="./FW680A4/probability.R") -->
+
 
 ## Objectives
+
+<!-- knitr::purl("./FW680A4/probability.qmd", output="./FW680A4/probability.R") -->
 
 - Connect random variables, probabilities, and parameters
 
@@ -692,7 +694,7 @@ $$
 
 ::: {.fragment}
 
-Read this as "the integral of the probability density function between 100 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 100 and infinity (on the right-hand side)".
+Read this as "the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)".
 
 :::
 
@@ -789,13 +791,13 @@ abline(v=20, lwd=3, col=1, lty=4)
 ## Normal Distribution (PDF Code)
 
 ```{r pdf2a, echo=TRUE, eval=FALSE}
-curve(dnorm(x, mean = 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)
+curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
 ```{r pdf2b, echo=FALSE, eval=TRUE}
 curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
 abline(v=20, lwd=3, col=1, lty=4)
-curve(dnorm(x, mean= 10, sd = 4),xlim=c(0,40),lwd=4,col=3,add=TRUE)
+curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
 ## Moments
@@ -849,7 +851,7 @@ Moments are functions of these parameters:
 Interested in the variation of y,
 $$
 \begin{align*}
-y \leftarrow& f(y|\boldsymbol{\theta}) \\
+y \leftarrow& f(y|\boldsymbol{\theta'}) \\
 \end{align*}
 $$
 
