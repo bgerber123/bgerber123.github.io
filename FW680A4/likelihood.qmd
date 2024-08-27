@@ -8,9 +8,11 @@ format:
     multiplex: true
 ---
 
-<!-- knitr::purl("./FW680A4/likelihood.qmd", output="./FW680A4/likelihood.R") -->
+
 
 ## Objectives
+
+<!-- knitr::purl("./FW680A4/likelihood.qmd", output="./FW680A4/likelihood.R") -->
 
 - likelihood principle
 - likelihood connection to probability function
@@ -159,7 +161,7 @@ The **key** is to understand that the likelihood values are relative, which mean
 
 - MLEs are <span style="color:red">asymptotically unbiased</span>. The $E[\hat{\theta}]$ converges to $\theta$ as the sample size gets larger.
 
-- No guarantee that MLE is unbiased as small sample size. Can be tested!
+- No guarantee that MLE is unbiased at small sample size. Can be tested!
 
 - MLEs will have the minimum variance among all estimators, as the sample size gets larger.
 
@@ -233,12 +235,19 @@ The joint probability of our data with shared parameters $\mu$ and $\sigma$,
 $$
 \begin{align*}
 & P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \mu, \sigma) \\
+\end{align*}
+$$
+
+::: {.fragment}
+
+$$
+\begin{align*}
 & P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \mu, \sigma) \\
 &= \mathcal{L}(\mu, \sigma|\textbf{y})
 \end{align*}
 $$
 
-
+:::
 ## Need to connect data together
 
 <span style="color:red">IF</span> each $y_{i}$ is **independent**, the *joint probability* of our data are simply the multiplication of all three probability densities,

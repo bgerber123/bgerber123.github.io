@@ -4862,7 +4862,7 @@
     "href": "FW680A4/likelihood.html#maximum-likelihood-properties",
     "title": "Likelihood / Optimization",
     "section": "Maximum Likelihood Properties",
-    "text": "Maximum Likelihood Properties\n\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased as small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
+    "text": "Maximum Likelihood Properties\n\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased at small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
   },
   {
     "objectID": "FW680A4/likelihood.html#double-check",
@@ -4918,7 +4918,7 @@
     "href": "FW680A4/likelihood.html#objectives",
     "title": "Likelihood / Optimization",
     "section": "Objectives",
-    "text": "Objectives\n\nlikelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
+    "text": "Objectives\n\n\nlikelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
   },
   {
     "objectID": "FW680A4/likelihood.html#relativeness",
@@ -4939,7 +4939,7 @@
     "href": "FW680A4/likelihood.html#need-to-connect-data-together-1",
     "title": "Likelihood / Optimization",
     "section": "Need to connect data together",
-    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]"
+    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/likelihood.html#need-to-connect-data-together-2",
