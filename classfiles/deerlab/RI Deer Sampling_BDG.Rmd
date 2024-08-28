@@ -21,7 +21,7 @@ pre {
 
 # **Report**
 
-**Main Take-Away:** the objective can not be met at the sample sizes investigated.
+**Main Take-Away:** the objective can not be met at the sample sizes investigated when assuming low or high deer density.
 
 ## Context
 
@@ -118,7 +118,7 @@ I will consider sampling both populations with three different samples sizes (10
 
 ```{r sample sizes, eval = TRUE, echo=TRUE}
   sample.sizes = c(10, 20, 40)
-  n.sim = 1000
+  n.sim = 4000
 ```  
 
 ```{r storage, eval = TRUE, echo=FALSE}
@@ -139,7 +139,7 @@ The important code is the use of the function `grts` that selects a spatially ba
   # For each sample size, repeat the 
   # sampling/estimation criteria n.sim times
     for(i in 1:n.sim){  
-        set.seed(434343+i) #defined random number generation
+        set.seed(434343+i+z) #define random number generation
         eqprob <- grts(RI, n_base = sample.sizes[z])
         y1=eqprob$sites_base$Deer1
         y2=eqprob$sites_base$Deer2
@@ -155,17 +155,9 @@ The important code is the use of the function `grts` that selects a spatially ba
 ```  
 
 
-<!-- # First thing to do is save our results -->
-<!--   #save(deer.total.abundance,file="deer.total.abundance.BDG") -->
-
-<!-- # If already run and saved, load the results.   -->
-<!--   #load("deer.total.abundance.BDG") -->
-
 ## Results
 
 First, examining the absolute bias of the estimator, we see that for the low deer density there to be low bias across sample sizes (10, 20, 40): `r round(apply(deer.total.abundance1,1, mean)-true.total1,digits=2)`, respectively. The relative bias puts these results in proportion to the size of the true population size: `r round((apply(deer.total.abundance1,1, mean)-true.total1)/true.total1,digits=2)`, making it more clear how little bias there is. Some of this is likely Markov error, such that increasing the number of simulations would drive these values even lower. The results are similar for the high deer density scenario, where the absolute bias is `r round(apply(deer.total.abundance2,1, mean)-true.total2,digits=2)`, and the relative bias is `r round((apply(deer.total.abundance2,1, mean)-true.total2)/true.total2,digits=2)`.
-
-
 
 Looking at the sampling distributions for low and deer density, we see the range of possible deer population sizes shrink towards the true value as the sample size increases.
 
@@ -250,7 +242,7 @@ apply(deer.total.abundance2,1,FUN=function(x){
 
 ## Conclusion
 
-Considering low and high deer densities, I found that the objective to be highly certain (0.90 probability) that a single estimate of the total population estimate is within 10% of the true value can not be met at sample sizes of 10, 20, and 40. A sample size of 50 may reach the goal at the high deer density, but a much larger sample size will be need if deer densities are low. However, there is very little bias in the estimator at either low or high deer densities.
+Considering low and high deer densities, I found that the objective of a single estimate of the total population to be within 10% of the true value was not possible to be met at sample sizes of 10, 20, and 40. Specifically, at the low deer density, the highest probability was 0.25 at a sample size of 40. At the high deer density, the highest probability was 0.85 at a sample size of 40. A sample size of 50 may reach the goal at the high deer density, but a much larger sample size will be need if deer densities are low. Lastly, there is very little bias in the estimator at either low or high deer densities.
 
 # **Appendix**
 
