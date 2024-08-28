@@ -40,11 +40,14 @@ A camera trap study was conducted in the Annamite mountain range of Vietnam to b
 
 Working with your colleagues, they outline their hypothesis that the main driver of rabbit occurrence is hunting within the protected areas. They predict that increasing distance away from human activity will lead to higher rabbit occupancy because people will only travel so far in difficult mountainous terrain. They also hypothesize that this effect will vary by protected area because there is different levels of patrolling and enforcement. But, regardless of protected area, they hypothesize that occurrence at the edge of the protected areas nearest to human activity will be the same because of the similar density of people and that occurrence will be very low.
 
+<br>
+
 #### *To do*
 
 Fit the data (`rabbit.occ.data.csv`) using a model that captures the hypothesis of your colleague.
 
 - present all parameters with measures of uncertainty
+- describe what each parameter means; discuss relevant measures of statistical clarity using hypothesis tests
 - make sure to provide evidence whether there is or is not variation of 'dist.human' across protected areas
 - make prediction plots that display all relevant variables
 - make a prediction plot for a 'typical' protected area; make it clear why this results is important

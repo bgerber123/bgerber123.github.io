@@ -13,11 +13,12 @@ format:
 
 <!-- knitr::purl("./FW680A4/hierarchical.qmd", output="./classfiles/glmmlab/hierarchical.R") -->
 
--   where they are used
+-   General Use and Language
 -   examples
 -   case study
     - random intercept
     - random intercept & slope
+- Considerations
 
 ## Hobbs and Hooten 2015 (pg. 109)
 
