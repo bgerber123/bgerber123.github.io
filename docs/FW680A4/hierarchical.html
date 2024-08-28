@@ -405,7 +405,11 @@
 <ul>
 <li>where they are used</li>
 <li>examples</li>
-<li>case study</li>
+<li>case study
+<ul>
+<li>random intercept</li>
+<li>random intercept &amp; slope</li>
+</ul></li>
 </ul>
 </section>
 <section id="hobbs-and-hooten-2015-pg.-109" class="slide level2">
@@ -425,6 +429,20 @@
 <li><p>Random Effect / Multi-level Model</p></li>
 <li><p>latent/unobserved state or process</p></li>
 </ul>
+</section>
+<section id="random-effect" class="slide level2">
+<h2>Random Effect</h2>
+<p><a href="https://statmodeling.stat.columbia.edu/2005/01/25/why_i_dont_use/">Andrew Gelman Blog Post</a></p>
+<p><a href="http://www.stat.columbia.edu/~gelman/research/published/banova7.pdf">Paper Link</a></p>
+<p>“People are always asking me if I want to use a fixed or random effects model for this or that.”</p>
+<div class="fragment">
+<p><br></p>
+<p>“I always reply that these terms have no agreed-upon definition.”</p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>“People with their own favorite definition of “fixed and random effects” don’t always realize that other definitions are out there. Worse, people conflate different definitions.</p>
+</div>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example 1</h2>
@@ -493,17 +511,22 @@
 
 <img data-src="..\img/Amur Leopard.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Detection Rate = Independent Counts / Effort</strong></p>
 </section>
-<section id="data" class="slide level2">
+<section id="data" class="slide level2 scrollable">
 <h2>Data</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>   y    x effort
-1 10 Veg1      5
-2  8 Veg1      5
-3  8 Veg1      5
-4 11 Veg1      5
-5 10 Veg1      5
-6 10 Veg1      5</code></pre>
+<pre><code>   y  veg effort
+1 15 Veg1      5
+2 18 Veg1      5
+3 12 Veg2      5
+4 14 Veg2      5
+5 12 Veg2      5
+6 14 Veg2      5</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Veg1 Veg2 Veg3 Veg4 Veg5 
+   2   20   20   10   10 </code></pre>
 </div>
 
 </div>
@@ -511,27 +534,27 @@
 <section id="model-1-no-difference" class="slide level2 scrollable">
 <h2>Model 1 (No Difference)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(glmmTMB)</span>
-<span id="cb2-2"><a></a><span class="fu">library</span>(broom.mixed)</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a>model1 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span><span class="dv">1</span>, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(glmmTMB)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(broom.mixed)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>model1 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span><span class="dv">1</span>, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Family: poisson  ( log )
 Formula:          y ~ 1
 Data: dat
 
      AIC      BIC   logLik deviance df.resid 
-  6138.7   6142.2  -3068.3   6136.7      249 
+   532.2    534.4   -265.1    530.2       61 
 
 
 Conditional model:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  3.14605    0.01312   239.8   &lt;2e-16 ***
+(Intercept)  2.91165    0.02962   98.31   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -541,21 +564,21 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="model-1-no-difference-1" class="slide level2 scrollable">
 <h2>Model 1 (No Difference)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model1,<span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model1,<span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
- Estimate Std. Error    z Pr(&gt;|z|)   S 2.5 % 97.5 %
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
---- 240 rows omitted. See ?avg_predictions and ?print.marginaleffects --- 
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
-     23.2      0.305 76.2   &lt;0.001 Inf  22.6   23.8
+ Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+--- 52 rows omitted. See ?avg_predictions and ?print.marginaleffects --- 
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
+     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5
 Columns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, y 
 Type:  response </code></pre>
 </div>
@@ -564,28 +587,28 @@ Type:  response </code></pre>
 <section id="model-2-all-different" class="slide level2">
 <h2>Model 2 (All Different)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>model2 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span>x, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat,</span>
-<span id="cb7-2"><a></a>                 <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">x =</span> <span class="st">"contr.sum"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>model2 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span>veg, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat,</span>
+<span id="cb8-2"><a></a>                 <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">veg =</span> <span class="st">"contr.sum"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">summary</span>(model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Family: poisson  ( log )
-Formula:          y ~ x
+Formula:          y ~ veg
 Data: dat
 
      AIC      BIC   logLik deviance df.resid 
-  1357.8   1375.4   -673.9   1347.8      245 
+   369.4    380.1   -179.7    359.4       57 
 
 
 Conditional model:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  2.61640    0.02260  115.75   &lt;2e-16 ***
-x1          -0.41033    0.04281   -9.59   &lt;2e-16 ***
-x2          -1.63807    0.07087  -23.11   &lt;2e-16 ***
-x3          -0.39503    0.04257   -9.28   &lt;2e-16 ***
-x4           1.44783    0.02678   54.07   &lt;2e-16 ***
+(Intercept)  2.93764    0.04235   69.37  &lt; 2e-16 ***
+veg1        -0.13427    0.14133   -0.95    0.342    
+veg2        -0.42398    0.06498   -6.52 6.82e-11 ***
+veg3        -0.29146    0.06262   -4.65 3.25e-06 ***
+veg4         0.47681    0.06138    7.77 7.94e-15 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -595,19 +618,19 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="model-2-all-different-1" class="slide level2">
 <h2>Model 2 (All Different)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model2, </span>
-<span id="cb10-2"><a></a>                             <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">"Veg1"</span>,<span class="st">"Veg2"</span>,<span class="st">"Veg3"</span>,<span class="st">"Veg4"</span>,<span class="st">"Veg5"</span>)),</span>
-<span id="cb10-3"><a></a>                             <span class="at">re.form=</span><span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model2, </span>
+<span id="cb11-2"><a></a>                             <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">veg=</span><span class="fu">c</span>(<span class="st">"Veg1"</span>,<span class="st">"Veg2"</span>,<span class="st">"Veg3"</span>,<span class="st">"Veg4"</span>,<span class="st">"Veg5"</span>)),</span>
+<span id="cb11-3"><a></a>                             <span class="at">re.form=</span><span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
- Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %
-     9.08      0.426 21.3   &lt;0.001 332.2  8.24   9.92
-     2.66      0.231 11.5   &lt;0.001  99.8  2.21   3.11
-     9.22      0.429 21.5   &lt;0.001 337.3  8.38  10.06
-    58.22      1.079 54.0   &lt;0.001   Inf 56.11  60.33
-    37.04      0.861 43.0   &lt;0.001   Inf 35.35  38.73
+ Estimate Std. Error     z Pr(&gt;|z|)     S 2.5 % 97.5 %
+     16.5      2.872  5.74   &lt;0.001  26.7  10.9   22.1
+     12.4      0.786 15.72   &lt;0.001 182.5  10.8   13.9
+     14.1      0.840 16.79   &lt;0.001 207.8  12.5   15.7
+     30.4      1.744 17.44   &lt;0.001 223.7  27.0   33.8
+     27.4      1.655 16.55   &lt;0.001 202.0  24.2   30.6
 
-Columns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, x, y 
+Columns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, veg, y 
 Type:  response </code></pre>
 </div>
 </div>
@@ -615,29 +638,29 @@ Type:  response </code></pre>
 <section id="model-3-middle-ground" class="slide level2 scrollable">
 <h2>Model 3 (middle-ground)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>model3 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span><span class="dv">1</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">|</span>x), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>model3 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span><span class="dv">1</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">|</span>veg), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">summary</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">summary</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Family: poisson  ( log )
-Formula:          y ~ 1 + (1 | x)
+Formula:          y ~ 1 + (1 | veg)
 Data: dat
 
      AIC      BIC   logLik deviance df.resid 
-  1390.4   1397.5   -693.2   1386.4      248 
+   384.4    388.6   -190.2    380.4       60 
 
 Random effects:
 
 Conditional model:
  Groups Name        Variance Std.Dev.
- x      (Intercept) 1.217    1.103   
-Number of obs: 250, groups:  x, 5
+ veg    (Intercept) 0.1299   0.3604  
+Number of obs: 62, groups:  veg, 5
 
 Conditional model:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   2.6173     0.4939     5.3 1.16e-07 ***
+(Intercept)   2.9391     0.1662   17.69   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -647,41 +670,41 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="model-3-middle-ground-1" class="slide level2 scrollable">
 <h2>Model 3 (middle-ground)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ranef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ranef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$x
+<pre><code>$veg
      (Intercept)
-Veg1  -0.4104470
-Veg2  -1.6289235
-Veg3  -0.3951846
-Veg4   1.4465567
-Veg5   0.9942933</code></pre>
+Veg1  -0.1103110
+Veg2  -0.4126484
+Veg3  -0.2851561
+Veg4   0.4635429
+Veg5   0.3612502</code></pre>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>broom.mixed<span class="sc">::</span><span class="fu">tidy</span>(model3, <span class="at">effects =</span> <span class="st">"ran_vals"</span>, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>broom.mixed<span class="sc">::</span><span class="fu">tidy</span>(model3, <span class="at">effects =</span> <span class="st">"ran_vals"</span>, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 9
   effect   component group level term      estimate std.error conf.low conf.high
   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
-1 ran_vals cond      x     Veg1  (Interce…   -0.410     0.495  -1.38       0.560
-2 ran_vals cond      x     Veg2  (Interce…   -1.63      0.498  -2.61      -0.652
-3 ran_vals cond      x     Veg3  (Interce…   -0.395     0.495  -1.37       0.575
-4 ran_vals cond      x     Veg4  (Interce…    1.45      0.494   0.478      2.41 
-5 ran_vals cond      x     Veg5  (Interce…    0.994     0.494   0.0257     1.96 </code></pre>
+1 ran_vals cond      veg   Veg1  (Interce…   -0.110     0.206  -0.514     0.294 
+2 ran_vals cond      veg   Veg2  (Interce…   -0.413     0.173  -0.751    -0.0738
+3 ran_vals cond      veg   Veg3  (Interce…   -0.285     0.172  -0.622     0.0520
+4 ran_vals cond      veg   Veg4  (Interce…    0.464     0.172   0.126     0.801 
+5 ran_vals cond      veg   Veg5  (Interce…    0.361     0.173   0.0230    0.699 </code></pre>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">confint</span>(model3, <span class="at">component =</span> <span class="fu">c</span>(<span class="st">"all"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">confint</span>(model3, <span class="at">component =</span> <span class="fu">c</span>(<span class="st">"all"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                          2.5 %   97.5 % Estimate
-(Intercept)           1.6493302 3.585197 2.617264
-Std.Dev.(Intercept)|x 0.5924539 2.054005 1.103133</code></pre>
+<pre><code>                            2.5 %    97.5 %  Estimate
+(Intercept)             2.6134002 3.2647754 2.9390878
+Std.Dev.(Intercept)|veg 0.1896794 0.6846043 0.3603545</code></pre>
 </div>
 </div>
 </div>
@@ -694,49 +717,49 @@ Std.Dev.(Intercept)|x 0.5924539 2.054005 1.103133</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">fixef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">fixef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Conditional model:
 (Intercept)  
-      2.617  </code></pre>
+      2.939  </code></pre>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co">#Predictions - does not include RE uncertainty</span></span>
-<span id="cb23-2"><a></a>preds <span class="ot">=</span> <span class="fu">predict</span>(model3,</span>
-<span id="cb23-3"><a></a>                <span class="at">newdata=</span><span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="st">"Veg1"</span>,<span class="st">"Veg2"</span>,<span class="st">"Veg3"</span>,<span class="st">"Veg4"</span>,<span class="st">"Veg5"</span>)),</span>
-<span id="cb23-4"><a></a>                <span class="at">type=</span><span class="st">"link"</span>,</span>
-<span id="cb23-5"><a></a>                <span class="at">re.form=</span><span class="cn">NULL</span>,</span>
-<span id="cb23-6"><a></a>                <span class="at">se.fit =</span> <span class="cn">TRUE</span></span>
-<span id="cb23-7"><a></a>                )</span>
-<span id="cb23-8"><a></a></span>
-<span id="cb23-9"><a></a></span>
-<span id="cb23-10"><a></a>preds<span class="sc">$</span>LCL <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit<span class="fl">-1.96</span><span class="sc">*</span>preds<span class="sc">$</span>se.fit)</span>
-<span id="cb23-11"><a></a>preds<span class="sc">$</span>UCL <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit<span class="fl">+1.96</span><span class="sc">*</span>preds<span class="sc">$</span>se.fit)</span>
-<span id="cb23-12"><a></a>preds<span class="sc">$</span>fit <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit)</span>
-<span id="cb23-13"><a></a></span>
-<span id="cb23-14"><a></a><span class="fu">data.frame</span>(preds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co">#Predictions - does not include RE uncertainty</span></span>
+<span id="cb24-2"><a></a>preds <span class="ot">=</span> <span class="fu">predict</span>(model3,</span>
+<span id="cb24-3"><a></a>                <span class="at">newdata=</span><span class="fu">data.frame</span>(<span class="at">veg=</span><span class="fu">c</span>(<span class="st">"Veg1"</span>,<span class="st">"Veg2"</span>,<span class="st">"Veg3"</span>,<span class="st">"Veg4"</span>,<span class="st">"Veg5"</span>)),</span>
+<span id="cb24-4"><a></a>                <span class="at">type=</span><span class="st">"link"</span>,</span>
+<span id="cb24-5"><a></a>                <span class="at">re.form=</span><span class="cn">NULL</span>,</span>
+<span id="cb24-6"><a></a>                <span class="at">se.fit =</span> <span class="cn">TRUE</span></span>
+<span id="cb24-7"><a></a>                )</span>
+<span id="cb24-8"><a></a></span>
+<span id="cb24-9"><a></a></span>
+<span id="cb24-10"><a></a>preds<span class="sc">$</span>LCL <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit<span class="fl">-1.96</span><span class="sc">*</span>preds<span class="sc">$</span>se.fit)</span>
+<span id="cb24-11"><a></a>preds<span class="sc">$</span>UCL <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit<span class="fl">+1.96</span><span class="sc">*</span>preds<span class="sc">$</span>se.fit)</span>
+<span id="cb24-12"><a></a>preds<span class="sc">$</span>fit <span class="ot">=</span> <span class="fu">exp</span>(preds<span class="sc">$</span>fit)</span>
+<span id="cb24-13"><a></a></span>
+<span id="cb24-14"><a></a><span class="fu">data.frame</span>(preds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        fit     se.fit       LCL       UCL
-1  9.086746 0.04688339  8.288967  9.961307
-2  2.686772 0.08629719  2.268679  3.181914
-3  9.226495 0.04652728  8.422324 10.107449
-4 58.196226 0.01853791 56.119660 60.349630
-5 37.023659 0.02323965 35.375073 38.749074</code></pre>
+<pre><code>       fit     se.fit      LCL      UCL
+1 16.92475 0.15877885 12.39843 23.10348
+2 12.50889 0.06300056 11.05583 14.15291
+3 14.20980 0.05890828 12.66030 15.94893
+4 30.04303 0.05761047 26.83519 33.63433
+5 27.12181 0.06039730 24.09392 30.53021</code></pre>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co">#A typical site</span></span>
-<span id="cb25-2"><a></a><span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>,<span class="at">re.form=</span><span class="cn">NA</span>)[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#A typical site</span></span>
+<span id="cb26-2"><a></a><span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>,<span class="at">re.form=</span><span class="cn">NA</span>)[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 13.69819</code></pre>
+<pre><code>[1] 18.8986</code></pre>
 </div>
 </div>
 </div>
@@ -744,19 +767,19 @@ Conditional model:
 <section id="model-3b" class="slide level2">
 <h2>Model 3b</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">library</span>(lme4)</span>
-<span id="cb27-2"><a></a>model3b <span class="ot">=</span> <span class="fu">glmer</span>(y<span class="sc">~</span><span class="dv">1</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">|</span>x), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">library</span>(lme4)</span>
+<span id="cb28-2"><a></a>model3b <span class="ot">=</span> <span class="fu">glmer</span>(y<span class="sc">~</span><span class="dv">1</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">|</span>veg), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model3b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model3b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
 \begin{aligned}
   \operatorname{y}_{i}  &amp;\sim \operatorname{Poisson}(\lambda_i) \\
     \log(\lambda_i) &amp;=\alpha_{j[i]} \\
     \alpha_{j}  &amp;\sim N \left(\mu_{\alpha_{j}}, \sigma^2_{\alpha_{j}} \right)
-    \text{, for x j = 1,} \dots \text{,J}
+    \text{, for veg j = 1,} \dots \text{,J}
 \end{aligned}
 \]</span></p>
 </div>
@@ -772,6 +795,18 @@ y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
 
 \end{align*}\]</span></p>
 </section>
+<section id="pooling-information" class="slide level2">
+<h2>Pooling Information</h2>
+
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="pooling-information-1" class="slide level2">
+<h2>Pooling Information</h2>
+
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="pooling-information-2" class="slide level2">
+<h2>Pooling Information</h2>
+
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <p>Leopard detection varies by cover and veg, where the effect of cover comes from a shared distribution</p>
@@ -790,11 +825,11 @@ y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
 <section id="random-intercept-slope-1" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>re.model <span class="ot">=</span> <span class="fu">glmer</span>(y<span class="sc">~</span>cov<span class="sc">+</span>(cov<span class="sc">|</span>veg), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>re.model <span class="ot">=</span> <span class="fu">glmer</span>(y<span class="sc">~</span>cov<span class="sc">+</span>(cov<span class="sc">|</span>veg), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">summary</span>(re.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">summary</span>(re.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Generalized linear mixed model fit by maximum likelihood (Laplace
   Approximation) [glmerMod]
@@ -832,29 +867,29 @@ cov 0.140 </code></pre>
 <section id="random-intercept-slope-2" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model,</span>
-<span id="cb33-2"><a></a>                                  <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
-<span id="cb33-3"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>,</span>
-<span id="cb33-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NULL</span></span>
-<span id="cb33-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
-<section id="random-intercept-slope-3" class="slide level2">
-<h2>Random Intercept + Slope</h2>
-<div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model,</span>
 <span id="cb34-2"><a></a>                                  <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
 <span id="cb34-3"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>,</span>
-<span id="cb34-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NA</span></span>
+<span id="cb34-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NULL</span></span>
 <span id="cb34-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<section id="random-intercept-slope-3" class="slide level2">
+<h2>Random Intercept + Slope</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model,</span>
+<span id="cb35-2"><a></a>                                  <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
+<span id="cb35-3"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>,</span>
+<span id="cb35-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NA</span></span>
+<span id="cb35-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope-4" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(re.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(re.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
 \begin{aligned}
