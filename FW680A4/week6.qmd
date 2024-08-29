@@ -50,7 +50,10 @@ install.packages(c("rjags","bayesplot","rstanarm"))
 
 - Install External Software Program [JAGS](https://sourceforge.net/projects/mcmc-jags/files/)
 
-<!-- #### [Assigned]{style="color:red;"} -->
+#### [Assigned]{style="color:red;"}
+
+- [Bayes Quiz on Canvas](https://colostate.instructure.com/courses/193678/quizzes)
+
 
 <!-- -   Readings for next class:  -->
 <!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
