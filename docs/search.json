@@ -7194,5 +7194,19 @@
     "title": "Hierarchical Models",
     "section": "Pooling Information",
     "text": "Pooling Information"
+  },
+  {
+    "objectID": "FW680A4/week7.html",
+    "href": "FW680A4/week7.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nLecture: Continue with: Bayesian Occupancy Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+  },
+  {
+    "objectID": "FW680A4/week7.html#week-7",
+    "href": "FW680A4/week7.html#week-7",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nLecture: Continue with: Bayesian Occupancy Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
   }
 ]

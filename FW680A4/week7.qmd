@@ -10,20 +10,24 @@ title: ""
 
 -   Student-led paper discussion
 
--   Lecture: <a href="/FW680A4/hbayes.qmd">Hierarchical Bayesian Model</a>
-
+-   Lecture (Code): <a href="/classfiles/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("brms"))
+install.packages(c("brms","bayesplot"))
 ```
+
+#### [Assigned]{style="color:red;"}
+
+- Background Reading (not required): 
+  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
 
 
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
--    Lecture: Continue with: <a href="/FW680A4/bayesian.qmd">Occupancy Models</a>
+-    Lecture: Continue with: <a href="/FW680A4/bayesian.occ.qmd">Bayesian Occupancy Models</a>
 
 -   Downloads: <a href="/classfiles/occlab/week7files.zip">Files</a>
 

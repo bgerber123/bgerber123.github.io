@@ -49,7 +49,7 @@ Lets explore the [Bernoulli/Binomial](https://en.wikipedia.org/wiki/Binomial_dis
 Imagine doing a tagging study to estimate the survival of [sandhill cranes](https://www.allaboutbirds.org/guide/Sandhill_Crane/overview) 
 in New Mexico over the winter. We want to use the PMF to connect the ideas of generating data via a probability distribution that is defined by parameters. 
 
-In this situation, we are interested in simulating samples or observations  (or more generally, generate synthetic data) of where cranes either lived ($y = 1$) or died (*y = 0*) over our period of interest (winter). If we use the Bernoulli PMF our focus is typically on each i$^th$ crane, while if we are interested in the sum of the number of cranes that lived ($\sum_{i}^n y_i$) than we would use the Binomial PMF. Either way, we need to define the parameter associeted with both function, which is the probability of observing a 1 ($P(Y=1)$), which we will define here as $\theta$. To make this a useful exercise, we want to decide on $\theta$ could be *in real life*. 
+In this situation, we are interested in simulating samples or observations  (or more generally, generate synthetic data) of where cranes either lived ($y = 1$) or died ($y = 0$) over our period of interest (winter). If we use the Bernoulli PMF our focus is typically on each $i^{th}$ crane, while if we are interested in the sum of the number of cranes that lived ($\sum_{i}^n y_i$) than we would use the Binomial PMF. Either way, we need to define the parameter associeted with both functions, which is the probability of observing a 1 ($P(Y=1)$), which we will define here as $\theta$. To make this a useful exercise, we want to decide on $\theta$ could be *in real life*. 
 
 Remember, estimation is turning the process around and having data to inform the parameter. Before we do estimation, we want to understand probability functions through simulating/generating synthetic data so we have a better idea of what we are assuming about our empirical data when we use probability functions to estimate parameters. Plus, this process can help us guide our design of future studies. 
 
@@ -80,7 +80,7 @@ Now, consider 10 tagged cranes and you want to keep track of each bird and wheth
 ```
   
 Notice that changing the arguments 'size' and 'n' either focuses on the individual event of
-0 and 1's (size = 1) or the sum of the 1's (size > 1). n controls how many of those outputs you would like to have
+0 and 1's (size = 1) or the sum of the 1's (size > 1). n controls how many of those outputs you would like to have.
 
 What if we wanted to generate synthetic data of mortality, rather than survival? Well, we just change our setup. Still assuming survival probability is 0.80, than the equivalent mortality probability would be $\theta = 1 - 0.80 = 0.20$, such the we are saying the probability a crane dies is $P(Y = 1) = \theta = 0.2$ Now, we can generate data of cranes that have died (1) and that have lived (0).
 
@@ -91,7 +91,7 @@ rbinom(n = 10, size = 1,prob = theta)
 
 What  is `rbinom` really doing? Well, the [code](https://github.com/SurajGupta/r-source/blob/master/src/nmath/rbinom.c) is actually calling a function using the C programming language because it is fast. But, we can understand more simply what the binomial sampling process looks like by using the generic `sample` function.
 
-The code here defines the outcomes of the stochastic process as either a 0 or 1; `x` is the argument name of the function. We are asking for 10 trials using `size`. The `replace` argument is telling the sampler that we are allowing it sample each outcome (0 and 1) more than one time. Lastly, we are defining the $P(y = 1)$ to be 0.80 and the $P(y = 0)$ to be 0.20. This code replicates the same process as the code above: `rbinom(n = 10, size = 1,prob = theta)`.
+The code here defines the outcomes of the stochastic process as either a 0 or 1; `x` is the argument name of the function. We are asking for 10 trials using `size`. The `replace` argument is telling the sampler that we are allowing it to sample each outcome (0 and 1) more than one time. Lastly, we are defining the $P(y = 1)$ to be 0.80 and the $P(y = 0)$ to be 0.20. This code replicates the same process as the code above: `rbinom(n = 10, size = 1,prob = theta)`.
 
 ```{r}
 sample(x = c(1,0),
@@ -105,8 +105,8 @@ sample(x = c(1,0),
 ### Exercise 1a
 
 Use your knowledge of the Binomial PMF and investigate the study design trade offs of a tagging study to estimate the survival of sandhill cranes.
-Consider 3 sample sizes of tagged individuals (N): 100, 250, and 500. Define the survival probability as `$\theta$ = 0.80`. For each sample, estimate the probability
-of survival using the estimator $\sum(y)/N$, where `y` is the number of alive cranes at the end of the study and `N` is the number of total tagged cranes. 
+Consider 3 sample sizes of tagged individuals (N): 100, 250, and 500. Define the survival probability as $\theta$ = 0.80. For each sample, estimate the probability
+of survival using the estimator $\sum(y_{i})/N$, where `y` is the number of alive cranes at the end of the study and `N` is the number of total tagged cranes. 
 We will justify this decision at a later point, but logically this should be a good estimator. For each sample size, you want
 to approximate the sampling distribution of the estimator. Once you have each sampling distribution, 
 
@@ -115,7 +115,7 @@ to approximate the sampling distribution of the estimator. Once you have each sa
 -   estimate the probability a given sample mean will be within 10% of the true values (`theta`). 
 -   determine the most cost efficient number of tags to use such that there is 0.90 probability that a single sample mean is within 10% of the true value
 
-Note: make sure you use enough replicates such that the sampling distribution appears well approximated (i.e., symmetric). 
+Note: make sure you use enough replicates such that the sampling distribution appears well approximated (i.e., symmetric and does not change with increasing replicates). 
 
 ```{r, echo=TRUE, eval=TRUE}
 # Simulate data
@@ -157,7 +157,7 @@ We see that our objective (green horizontal line) is met or is higher at all val
 
 ## Objective 2
 
-The [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) PMF is often the distribution used first when considering count data. For example, counts of plants or animals within a given area. Its always a goog choice when needing to consider rates, such as counts per unit effort. Note that we are not going to think about detection probability at this point. Assuming constant detection probability, we can think of these counts as a measure of relative abundance. 
+The [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) PMF is often the distribution used first when considering count data. For example, counts of plants or animals within a given area. It is also a good choice when needing to consider rates, such as counts per unit effort. Note that we are not going to think about detection probability at this point. Assuming constant detection probability, we can think of these counts as a measure of relative abundance. 
 
 Let's say we are interested in counts of [American Pika](American Pika) in 10x10 m plots throughout boulder fields in the Rocky Mountains. First, we need to define the mean count, defined as $\lambda$. Then, we need to decide on how many plots to sample (`n`).
 
@@ -190,7 +190,7 @@ So, when using the Poisson distribution, we need to consider that the mean and v
 
 ### Exercise 2
 
-Evaluate the sampling distribution of the estimator $\sum(y)/N$, where `y` are the counts and `N` is the number of counts. Assuming $\lambda = 100$, determine how many sample plots are needed such that the probability a sample is within 5% of the mean is at least 95%. Once this is completed, change to $\lambda  = 25$. How does your evaluation of the sample size change? Do you need the same, more, or less samples to achieve the same objective?
+Evaluate the sampling distribution of the estimator $\sum(y_{i})/N$, where `y` are the counts and `N` is the number of counts. Assuming $\lambda = 100$, determine how many sample plots are needed such that the probability a sample is within 5% of the mean is at least 95% (0.95 probability a single mean is within these bounds). Once this is completed, change to $\lambda  = 25$. How does your evaluation of the sample size change? Do you need the same, more, or less samples to achieve the same objective?
 
 ```{r, echo=TRUE, eval=TRUE, cache=TRUE}
 # Simulation Code
