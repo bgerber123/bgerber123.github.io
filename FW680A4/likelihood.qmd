@@ -391,7 +391,7 @@ fig %>% layout(font = f, margin = m)
 ## Relativeness
 
 #### log-likelihood
-```{r,eval=TRUE,echo=FALSE}
+```{r,eval=TRUE,echo=TRUE}
 fun.log = function(a,b){
               sum(dnorm(y,mean = a, sd = b, log=TRUE))
           }

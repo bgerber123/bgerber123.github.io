@@ -14,8 +14,8 @@ format:
 <!-- knitr::purl("./FW680A4/hierarchical.qmd", output="./classfiles/glmmlab/hierarchical.R") -->
 
 -   General Use and Language
--   examples
--   case study
+-   Examples
+-   Case studies
     - random intercept
     - random intercept & slope
 - Considerations
@@ -60,7 +60,7 @@ format:
 <br>
 
 
-"People with their own favorite definition of “fixed and random effects” don’t always realize that other definitions are out there. Worse, people conflate different definitions.
+"People with their own favorite definitions don’t always realize that other definitions are out there. Worse, people conflate different definitions".
 
 
 ## Example 1

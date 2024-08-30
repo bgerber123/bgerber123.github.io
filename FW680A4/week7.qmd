@@ -12,13 +12,18 @@ title: ""
 
 -   Lecture (Code): <a href="/classfiles/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
+-   Install R packages:
+
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
 install.packages(c("brms","bayesplot"))
 ```
 
 #### [Assigned]{style="color:red;"}
+ -   Readings for next class: 
+    - <a href="/readings/Gerber et al. 2014.pdf">Gerber et al. 2014</a>
 
+ 
 - Background Reading (not required): 
   - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
 
@@ -27,7 +32,7 @@ install.packages(c("brms","bayesplot"))
 
 #### [Today]{style="color:red;"}
 
--    Lecture: Continue with: <a href="/FW680A4/bayesian.occ.qmd">Bayesian Occupancy Models</a>
+-   Lecture: Continue with: <a href="/FW680A4/bayesian.occ.qmd">Bayesian Occupancy Models</a>
 
 -   Downloads: <a href="/classfiles/occlab/week7files.zip">Files</a>
 
