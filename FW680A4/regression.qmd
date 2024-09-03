@@ -8,9 +8,9 @@ format:
     multiplex: true
 ---
 
-<!-- knitr::purl("./FW680A4/regression.qmd", output="./classfiles/regressionlab/regression.R") -->
-
 ## Objectives
+
+<!-- knitr::purl("./FW680A4/regression.qmd", output="./classfiles/regressionlab/regression.R") -->
 
 -   fundamentals
 -   assumptions

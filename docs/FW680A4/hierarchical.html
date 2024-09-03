@@ -651,7 +651,7 @@ Type:  response </code></pre>
 </div>
 </section>
 <section id="model-2-no-pooling" class="slide level2">
-<h2>Model 2 (NO Pooling)</h2>
+<h2>Model 2 (No Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>model2 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span>veg, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat,</span>
 <span id="cb8-2"><a></a>                 <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">veg =</span> <span class="st">"contr.sum"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

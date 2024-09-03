@@ -261,7 +261,7 @@ marginaleffects::predictions(model1,type = "response")
 ```
 
 
-## Model 2 (NO Pooling)
+## Model 2 (No Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
 model2 = glmmTMB(y~veg, family=poisson(link="log"),data=dat,
