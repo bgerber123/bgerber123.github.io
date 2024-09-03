@@ -20,6 +20,23 @@ format:
     - random intercept & slope
 - Considerations
 
+## Names
+
+- multilevel model
+- mixed model
+- random effects model
+- nested data model
+- split-plot model
+
+## Sort of definitions
+
+
+- models where parameters vary at more than one level
+- models in which lower levels are sorted under a hierarchy of successive higher-level units
+- Generalization of linear and generalized linear modeling in which regression coefficients are themselves given a model whose parameters are also estimated from data (Gelman)
+- Model where unobserved parameters are estimated as a function of other unobserved parameters
+
+
 ## Hobbs and Hooten 2015 (pg. 109)
 
 ::: {.incremental}
@@ -99,6 +116,40 @@ format:
 
 ![](/img/HM-general.png)
 
+## Hierarchical Structure Example
+
+**Study goals**
+
+- Estimate state-wide average mass
+
+- Understand site-level variation 
+
+![](/img/mouse1.png)
+
+## Hierarchical Structure Example
+
+![](/img/mouse2.png)
+
+## Complete Pooling
+
+- Ignores variance across sites, which is a goal of study
+- Data within sampling site might not be independent, leading to pseudoreplication (depressed variance)
+
+![](/img/mouse3.png)
+
+
+## No Pooling
+
+- No state-level estimate
+- Estimator for each site may be biased, particularly at low sample sizes
+
+![](/img/mouse4.png)
+
+##  Partial Pooling (Hierarhical Model)
+
+
+![](/img/mouse5.png)
+
 ## Latent State
 
 ![](/img/occupancy0.png)
@@ -161,17 +212,29 @@ dat = data.frame(y=y,veg=x, effort = 5)
 
 ```
 
+:::: {.columns}
+
+::: {.column width=35%}
 ```{r echo=FALSE, eval=TRUE}
 head(dat)
 table(dat$veg)
+```
 
+:::
+
+::: {.column width=65%}
+```{r echo=FALSE, eval=TRUE, fig.height=5}
 library(ggplot2)
 ggplot(dat, aes(x=veg, y=y, fill=veg)) + 
     geom_boxplot()+theme(text = element_text(size = 20)) 
 
 ```
 
-## Model 1 (No Difference) {.scrollable}
+:::
+
+::::
+
+## Model 1 (Complete Pooling) {.scrollable}
 
 ```{r echo=TRUE, eval=TRUE}
 library(glmmTMB)
@@ -190,7 +253,7 @@ summary(model1)
 
 :::
 
-## Model 1 (No Difference) {.scrollable}
+## Model 1 (Complete Pooling) {.scrollable}
 
 
 ```{r echo=TRUE, eval=TRUE}
@@ -198,7 +261,7 @@ marginaleffects::predictions(model1,type = "response")
 ```
 
 
-## Model 2 (All Different)
+## Model 2 (NO Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
 model2 = glmmTMB(y~veg, family=poisson(link="log"),data=dat,
@@ -214,7 +277,7 @@ summary(model2)
 
 ::: 
 
-## Model 2 (All Different)
+## Model 2 (No Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
 marginaleffects::predictions(model2, 
@@ -226,7 +289,7 @@ marginaleffects::predictions(model2,
 
 
 
-## Model 3 (middle-ground) {.scrollable}
+## Model 3 (Partial Pooling) {.scrollable}
 
 ```{r echo=TRUE, eval=TRUE}
 model3 = glmmTMB(y~1+(1|veg), family=poisson(link="log"),data=dat)
@@ -241,7 +304,7 @@ summary(model3)
 
 :::
 
-## Model 3 (middle-ground) {.scrollable}
+## Model 3 (Partial Pooling) {.scrollable}
 
 ```{r echo=TRUE, eval=TRUE}
 ranef(model3)

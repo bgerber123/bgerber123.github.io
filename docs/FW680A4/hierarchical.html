@@ -413,6 +413,25 @@
 <li>Considerations</li>
 </ul>
 </section>
+<section id="names" class="slide level2">
+<h2>Names</h2>
+<ul>
+<li>multilevel model</li>
+<li>mixed model</li>
+<li>random effects model</li>
+<li>nested data model</li>
+<li>split-plot model</li>
+</ul>
+</section>
+<section id="sort-of-definitions" class="slide level2">
+<h2>Sort of definitions</h2>
+<ul>
+<li>models where parameters vary at more than one level</li>
+<li>models in which lower levels are sorted under a hierarchy of successive higher-level units</li>
+<li>Generalization of linear and generalized linear modeling in which regression coefficients are themselves given a model whose parameters are also estimated from data (Gelman)</li>
+<li>Model where unobserved parameters are estimated as a function of other unobserved parameters</li>
+</ul>
+</section>
 <section id="hobbs-and-hooten-2015-pg.-109" class="slide level2">
 <h2>Hobbs and Hooten 2015 (pg. 109)</h2>
 <div>
@@ -482,6 +501,39 @@
 <h2>Hierarchical Structure to Data</h2>
 
 <img data-src="..\img/HM-general.png" class="r-stretch"></section>
+<section id="hierarchical-structure-example" class="slide level2">
+<h2>Hierarchical Structure Example</h2>
+<p><strong>Study goals</strong></p>
+<ul>
+<li><p>Estimate state-wide average mass</p></li>
+<li><p>Understand site-level variation</p></li>
+</ul>
+
+<img data-src="..\img/mouse1.png" class="r-stretch"></section>
+<section id="hierarchical-structure-example-1" class="slide level2">
+<h2>Hierarchical Structure Example</h2>
+
+<img data-src="..\img/mouse2.png" class="r-stretch"></section>
+<section id="complete-pooling" class="slide level2">
+<h2>Complete Pooling</h2>
+<ul>
+<li>Ignores variance across sites, which is a goal of study</li>
+<li>Data within sampling site might not be independent, leading to pseudoreplication (depressed variance)</li>
+</ul>
+
+<img data-src="..\img/mouse3.png" class="r-stretch"></section>
+<section id="no-pooling" class="slide level2">
+<h2>No Pooling</h2>
+<ul>
+<li>No state-level estimate</li>
+<li>Estimator for each site may be biased, particularly at low sample sizes</li>
+</ul>
+
+<img data-src="..\img/mouse4.png" class="r-stretch"></section>
+<section id="partial-pooling-hierarhical-model" class="slide level2">
+<h2>Partial Pooling (Hierarhical Model)</h2>
+
+<img data-src="..\img/mouse5.png" class="r-stretch"></section>
 <section id="latent-state" class="slide level2">
 <h2>Latent State</h2>
 
@@ -514,6 +566,8 @@
 </section>
 <section id="data" class="slide level2 scrollable">
 <h2>Data</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>   y  veg effort
@@ -529,11 +583,22 @@
 Veg1 Veg2 Veg3 Veg4 Veg5 
    2   20   20   10   10 </code></pre>
 </div>
-
 </div>
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="model-1-no-difference" class="slide level2 scrollable">
-<h2>Model 1 (No Difference)</h2>
+</div><div class="column" style="width:65%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-1-complete-pooling" class="slide level2 scrollable">
+<h2>Model 1 (Complete Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(glmmTMB)</span>
 <span id="cb3-2"><a></a><span class="fu">library</span>(broom.mixed)</span>
@@ -562,8 +627,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="model-1-no-difference-1" class="slide level2 scrollable">
-<h2>Model 1 (No Difference)</h2>
+<section id="model-1-complete-pooling-1" class="slide level2 scrollable">
+<h2>Model 1 (Complete Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model1,<span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -585,8 +650,8 @@ Type:  response </code></pre>
 </div>
 </div>
 </section>
-<section id="model-2-all-different" class="slide level2">
-<h2>Model 2 (All Different)</h2>
+<section id="model-2-no-pooling" class="slide level2">
+<h2>Model 2 (NO Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>model2 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span>veg, <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat,</span>
 <span id="cb8-2"><a></a>                 <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">veg =</span> <span class="st">"contr.sum"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -616,8 +681,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="model-2-all-different-1" class="slide level2">
-<h2>Model 2 (All Different)</h2>
+<section id="model-2-no-pooling-1" class="slide level2">
+<h2>Model 2 (No Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">predictions</span>(model2, </span>
 <span id="cb11-2"><a></a>                             <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">veg=</span><span class="fu">c</span>(<span class="st">"Veg1"</span>,<span class="st">"Veg2"</span>,<span class="st">"Veg3"</span>,<span class="st">"Veg4"</span>,<span class="st">"Veg5"</span>)),</span>
@@ -636,8 +701,8 @@ Type:  response </code></pre>
 </div>
 </div>
 </section>
-<section id="model-3-middle-ground" class="slide level2 scrollable">
-<h2>Model 3 (middle-ground)</h2>
+<section id="model-3-partial-pooling" class="slide level2 scrollable">
+<h2>Model 3 (Partial Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>model3 <span class="ot">=</span> <span class="fu">glmmTMB</span>(y<span class="sc">~</span><span class="dv">1</span><span class="sc">+</span>(<span class="dv">1</span><span class="sc">|</span>veg), <span class="at">family=</span><span class="fu">poisson</span>(<span class="at">link=</span><span class="st">"log"</span>),<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -668,8 +733,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="model-3-middle-ground-1" class="slide level2 scrollable">
-<h2>Model 3 (middle-ground)</h2>
+<section id="model-3-partial-pooling-1" class="slide level2 scrollable">
+<h2>Model 3 (Partial Pooling)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ranef</span>(model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -799,15 +864,15 @@ y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
 <section id="pooling-information" class="slide level2">
 <h2>Pooling Information</h2>
 
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
 <section id="pooling-information-1" class="slide level2">
 <h2>Pooling Information</h2>
 
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
 <section id="pooling-information-2" class="slide level2">
 <h2>Pooling Information</h2>
 
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <p>Leopard detection varies by cover and veg, where the effect of cover comes from a shared distribution</p>
@@ -875,7 +940,7 @@ cov 0.140 </code></pre>
 <span id="cb34-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope-3" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <div class="cell">
@@ -886,7 +951,7 @@ cov 0.140 </code></pre>
 <span id="cb35-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope-4" class="slide level2">
 <h2>Random Intercept + Slope</h2>
 <div class="cell">
