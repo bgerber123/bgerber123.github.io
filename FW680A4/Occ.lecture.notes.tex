@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,activeacute]{babel}
+ \usepackage{amsmath}
+\usepackage{kbordermatrix}
+\title{Occupancy Lecture}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+
+\section{Single Season Single-Species Occupancy}
+\subsection{The Setup}
+
+Assigned primate-occupancy paper.
+
+\textbf{Questions}
+\begin{itemize}
+	\item why do we care where species are and are not?
+	\item What are the data?
+	\item why is this not just logistic regression?
+	\item what is a season?
+	\item What is the unit of replication?
+\end{itemize}
+
+Start with what we want.... we want to know occurence and the probabiliy a unit $i$ will be occupied
+
+Discuss false-negatives and false positives
+
+Show on board data for true occurence 0, 1, 1, etc.
+Show on board data for detection data 0, 0, 1, etc.
+
+What is the concern? Undersestimating occurence.
+
+Problem also when using covariates
+
+Drawn prob occupancy going up as a function of cover looking for cottontails?
+Draw line for observed curve that goes down as cover increasing - implying what?
+
+
+\subsection{The Process Model}
+
+\textbf{Constant Occupancy}
+\begin{align*}
+z_{[i]} \sim \text{Bernoulli}(\psi)
+\end{align*}
+
+
+\noindent \textbf{Site-level Occupancy}
+\begin{align*}
+z_{[i]} \sim \text{Bernoulli}(\psi_{i})\\
+\text{logit}(\psi_{i}) = \textbf{X}_{i}\boldsymbol{\beta}
+\end{align*}
+
+
+Next, we need to get our data to this process. What is out data?
+
+\subsection{The detection model i}
+
+\[y_{i}\sim
+	\begin{cases}
+	0\hspace{67pt}, \hspace{4pt}z_1=0\\
+	\text{Binomial}(J_{i}, p_{i,j}) \hspace{1pt}, z_i=1, \hspace{3pt}
+	\end{cases}\
+\]
+
+
+\subsection{The detection model i,j}
+
+\begin{align*}
+z_{[i]} \sim \text{Bernoulli}(\psi)
+\end{align*}
+
+Next, we need to get our data to this process. What is out data?
+
+\[y_{i,j}\sim
+	\begin{cases}
+	0\hspace{60pt}, z_1=0\\
+	\text{Bernoulli}(p_{i,j}) \hspace{2pt}, z_i=1, \hspace{2pt}
+	\end{cases}\
+\]
+
+We could also write this as 
+
+\begin{align*}
+y_{i,j}\sim \text{Bernoullli}(p_{i,j} \times z_{i})
+\end{align*}
+
+Last, let's connect our detection model with some variables
+
+\begin{align*}
+\text{logit}(p_{i,j}) = \textbf{W}_{i,j}\boldsymbol{\alpha}
+\end{align*}
+
+\subsection{Priors}
+
+\begin{align*}
+\beta_{k} \sim \text{Logistic}(0,1)\\
+\alpha_{k} \sim \text{Logistic}(0,1)\\
+\end{align*}
+
+\subsection{Additional Site-level Variance in Occurence}
+
+\begin{align*}
+\text{logit}(\psi_{i}) = \textbf{X}_{i}\boldsymbol{\beta}+ \sigma
+\end{align*}
+
+Need a new prior...
+
+\begin{align*}
+\sigma \sim \text{Uniform}(0, 4)
+\end{align*}
+
+
+\subsection{Go to Code}
+
+\section{Multi-State Occupancy}
+
+\textbf{Questions}
+\begin{itemize}
+	\item why multi-state?
+\end{itemize}
+
+
+\subsection{The States and Process Model}
+
+The states of interest
+
+\begin{align*}
+\psi_1 = \text{Prob. Species Occurence with no Reproduction}\\
+\psi_2 = \text{Prob. Species Occurence with Reproduction}\\
+1 - \psi_1 - \psi_2 =  \text{Prob.  Not Occupied}\\
+\psi^{*} =  \psi_1 + \psi_2 = \text{Species Occurence regardless of Reproduction}\\
+\end{align*}
+
+
+\begin{align*}
+\Omega \sim
+\begin{bmatrix}
+           1- \psi_{1} - \psi_{2} \\
+           \psi_1 \\
+	 \psi_2
+\end{bmatrix}
+\end{align*}
+
+
+\begin{align*}
+z_{i} \sim \text{Categorical}(\Omega)
+\end{align*}
+
+Code - rmultinom(1,1,prob=c(0.2,0.5,0.1))
+
+
+\subsection{Alt States}
+\begin{align*}
+\psi = \text{Prob. Species Occurence}\\
+r = \text{Prob of Reproduction}\\
+\end{align*}
+
+\begin{align*}
+\Omega \sim
+\begin{bmatrix}
+           1-\psi \\
+           \psi\times(1-r) \\
+	 \psi \times r
+\end{bmatrix}
+\end{align*}
+
+
+\subsection{Detection Model}
+
+
+\begin{align*}
+y_{i,j} \sim \text{Categorical}(\textbf{P}_{\textbf{z}_{i},})
+\end{align*}
+
+dimensions to consider of this 
+3x3 times 3x1 = 3 x1
+
+\[
+  \textbf{P} = \kbordermatrix{
+    & \text{Not Seen} & \text{Seen without Repro} & \text{Seen with Repro} \\
+   \text{Not Occ} & 1 & 0 & 0 \\
+    \text{Occ without repro} & 1-p_2 & p_2 & 0\\
+    \text{Occ with repro} & p_{3,1} &  p_{3,2}& p_{3,3}\\
+  }
+\]
+
+
+\subsection{Priors}
+
+\begin{align*}
+\psi \sim \text{Unif}(0,1)\\
+r \sim \text{Unif}(0,1)\\
+p_{2} \sim \text{Unif}(0,1)\\
+p_3 \sim \text{Dirichlet}(1,1,1)
+\end{align*}
+
+
+\end{document}
