@@ -857,7 +857,7 @@ $residual.scale
 <br>
 <br>
 <br>
-<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Independent Variables</b></span></center>
+<center><span style="color:#C70039; font-size: 65px;" ;=""><b>Case Study /<br> Independent Variables</b></span></center>
 </section>
 <section id="prairie-dog-calling" class="slide level2 scrollable">
 <h2>Prairie Dog Calling</h2>
@@ -865,6 +865,7 @@ $residual.scale
 <img data-src="..\img/pdog.png" class="quarto-figure quarto-figure-center r-stretch" width="1200"><p>y = # of calls per 5 minute</p>
 <p>temp = temperature, degrees F</p>
 <p>dist.center = location from center of colony</p>
+<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>  <span class="fu">head</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -875,6 +876,7 @@ $residual.scale
 4 0.00000000 29.76491    21.14168
 5 2.67643282 40.25998    32.41442
 6 1.71519689 38.31469    35.99573</code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -982,8 +984,8 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Normalizing x</h2>
 <p>Mean-center and standardize by std. deviation</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  dat<span class="sc">$</span>temp.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>temp)</span>
-<span id="cb23-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.center)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  dat<span class="sc">$</span>temp.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>temp, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.center, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">

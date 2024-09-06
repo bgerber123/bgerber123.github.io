@@ -594,7 +594,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 <br>
 <br>
 <br>
-<center><span style="color:#C70039; font-size: 65px;";><b>Independent Variables</b></span></center>
+<center><span style="color:#C70039; font-size: 65px;";><b>Case Study /<br> Independent Variables</b></span></center>
 ```
 
 
@@ -632,10 +632,13 @@ dat = data.frame(y=y,
  
  dist.center = location from center of colony
 
+::: {.fragment}
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   head(dat)
 ```
 
+::: 
 
 ## Exploratory {.scrollable}
 
@@ -673,8 +676,8 @@ Mean-center the intercept. Slopes do not change.
 
 Mean-center and standardize by std. deviation
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-  dat$temp.sc = scale(dat$temp)
-  dat$dist.sc = scale(dat$dist.center)
+  dat$temp.sc = scale(dat$temp, center=TRUE, scale = TRUE)
+  dat$dist.sc = scale(dat$dist.center, center=TRUE, scale = TRUE)
 ```
 
 :::{.fragment}
