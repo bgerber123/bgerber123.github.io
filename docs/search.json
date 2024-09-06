@@ -5415,7 +5415,7 @@
     "href": "FW680A4/regression.html#why-model-data",
     "title": "Linear Regression",
     "section": "Why model data?",
-    "text": "Why model data?\nIn ecology, we use models to,\n\ndescribe relationships among outcomes and processes\nto estimate hidden (latent) processes\npredict unobserved values\nforecast future outcomes, such as responses to management"
+    "text": "Why model data?\nIn ecology, we use models to,\n\n\ndescribe relationships among outcomes and processes\nto estimate hidden (latent) processes\npredict unobserved values\nforecast future outcomes, such as responses to management"
   },
   {
     "objectID": "FW680A4/regression.html#sampling-distribution",
@@ -7200,14 +7200,14 @@
     "href": "FW680A4/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Gerber et al. 2014\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Gerber et al. 2014\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\"))"
   },
   {
     "objectID": "FW680A4/week7.html#week-7",
     "href": "FW680A4/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Gerber et al. 2014\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"\"))"
+    "text": "Student-led paper discussion\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Gerber et al. 2014\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse\n\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\"))"
   },
   {
     "objectID": "FW680A4/hierarchical.html#names",

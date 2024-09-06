@@ -32,12 +32,18 @@ format:
 
 ## Why model data?
 
+
+
 In ecology, we use models to,
+
+::: {.fragment}
 
 -   describe relationships among outcomes and processes
 -   to estimate hidden (latent) processes
 -   predict unobserved values
 -   forecast future outcomes, such as responses to management
+
+::: 
 
 ## Linear Regression (motivation)
 ```{r, echo=FALSE,eval=TRUE}
@@ -446,27 +452,6 @@ $$
 <center><span style="color:#C70039; font-size: 65px;";><b>Confidence Intervals </b></span></center>
 ```
 
-
-## Confidence Intervals 
-#### Normal Approximation
-
-```{r,eval=TRUE,echo=TRUE}
-# Get 90% confidence intervals (Type I error = 0.1)
-  c(
-    (preds$fit+preds$se.fit*qnorm(0.05))[1],
-    (preds$fit+preds$se.fit*qnorm(0.95))[1]
-   )
-```
-
-:::{.fragment}
-```{r,eval=TRUE,echo=TRUE}
-  CI.Normal=confint(model1.0, level=0.9)
-  CI.Normal
-```
-:::  
-  
-
-
 ## What is a CI?
 
 . . .
@@ -498,6 +483,29 @@ The success rate (proportion of all samples whose intervals contain the paramete
 ## What is a CI?
 
 ![](/img/CI.png){fig-align="center"}
+
+
+
+## Confidence Intervals 
+#### Normal Approximation
+
+```{r,eval=TRUE,echo=TRUE}
+# Get 90% confidence intervals (Type I error = 0.1)
+  c(
+    (preds$fit+preds$se.fit*qnorm(0.05))[1],
+    (preds$fit+preds$se.fit*qnorm(0.95))[1]
+   )
+```
+
+:::{.fragment}
+```{r,eval=TRUE,echo=TRUE}
+  CI.Normal=confint(model1.0, level=0.9)
+  CI.Normal
+```
+:::  
+  
+
+
 
 ## Bootstrapping 
 

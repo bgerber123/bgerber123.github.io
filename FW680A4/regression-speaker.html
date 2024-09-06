@@ -423,12 +423,14 @@
 <section id="why-model-data" class="slide level2">
 <h2>Why model data?</h2>
 <p>In ecology, we use models to,</p>
+<div class="fragment">
 <ul>
 <li>describe relationships among outcomes and processes</li>
 <li>to estimate hidden (latent) processes</li>
 <li>predict unobserved values</li>
 <li>forecast future outcomes, such as responses to management</li>
 </ul>
+</div>
 </section>
 <section id="linear-regression-motivation" class="slide level2">
 <h2>Linear Regression (motivation)</h2>
@@ -733,31 +735,6 @@ $residual.scale
 <br>
 <center><span style="color:#C70039; font-size: 65px;" ;=""><b>Confidence Intervals </b></span></center>
 </section>
-<section id="confidence-intervals" class="slide level2">
-<h2>Confidence Intervals</h2>
-<h4 id="normal-approximation">Normal Approximation</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Get 90% confidence intervals (Type I error = 0.1)</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">c</span>(</span>
-<span id="cb9-3"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
-<span id="cb9-4"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
-<span id="cb9-5"><a></a>   )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>        1         1 
- 9.623448 10.204195 </code></pre>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  CI.Normal<span class="ot">=</span><span class="fu">confint</span>(model1<span class="fl">.0</span>, <span class="at">level=</span><span class="fl">0.9</span>)</span>
-<span id="cb11-2"><a></a>  CI.Normal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                 5 %     95 %
-(Intercept) 9.620705 10.20694</code></pre>
-</div>
-</div>
-</div>
-</section>
 <section id="what-is-a-ci" class="slide level2">
 <h2>What is a CI?</h2>
 <div class="fragment">
@@ -787,6 +764,31 @@ $residual.scale
 <h2>What is a CI?</h2>
 
 <img data-src="..\img/CI.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="confidence-intervals" class="slide level2">
+<h2>Confidence Intervals</h2>
+<h4 id="normal-approximation">Normal Approximation</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Get 90% confidence intervals (Type I error = 0.1)</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">c</span>(</span>
+<span id="cb9-3"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
+<span id="cb9-4"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
+<span id="cb9-5"><a></a>   )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        1         1 
+ 9.623448 10.204195 </code></pre>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  CI.Normal<span class="ot">=</span><span class="fu">confint</span>(model1<span class="fl">.0</span>, <span class="at">level=</span><span class="fl">0.9</span>)</span>
+<span id="cb11-2"><a></a>  CI.Normal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 5 %     95 %
+(Intercept) 9.620705 10.20694</code></pre>
+</div>
+</div>
+</div>
+</section>
 <section id="bootstrapping" class="slide level2">
 <h2>Bootstrapping</h2>
 <p>Instead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by resampling our data.</p>

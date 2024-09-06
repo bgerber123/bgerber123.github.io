@@ -32,6 +32,8 @@ install.packages(c("brms","bayesplot"))
 
 #### [Today]{style="color:red;"}
 
+-   Discuss Project
+
 -   Lecture: Board Work
 
 -   Downloads: <a href="/classfiles/occlab/week7files.zip">Files</a>
@@ -40,7 +42,7 @@ install.packages(c("brms","bayesplot"))
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c(""))
+install.packages(c("ubms"))
 ```
 
 
