@@ -495,8 +495,7 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 <h4 id="matrix-notation">matrix notation</h4>
 <p><span class="math display">\[
 \begin{align*}
-\textbf{y}\sim&amp; [\textbf{y}|\boldsymbol{\mu},\sigma]\\
-[\textbf{y}|\boldsymbol{\mu},\sigma]=&amp; \text{Normal}(\boldsymbol{\mu},\sigma)\\
+[\textbf{y}|\boldsymbol{\mu},\sigma]\sim&amp; \text{Normal}(\boldsymbol{\mu},\sigma)\\
 \boldsymbol{\mu} =&amp; \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1\\
 \text{g}(\boldsymbol{\mu}) =&amp;   \textbf{X}\boldsymbol{\beta}
 \end{align*}
@@ -601,65 +600,31 @@ n &amp; x^{1}_n &amp; x^{2}_n
 \mu_{3}
 \end{bmatrix}
 \]</span></p>
-</div>
-</section>
-<section id="vector-notation" class="slide level2 scrollable">
-<h2>Vector Notation</h2>
-<p style="color:purple">
-Row vectors
-</p>
-<ul>
-<li><span class="math inline">\(\textbf{y} \equiv (y_1, y_2, . . ., y_n)\)</span></li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="at">nrow=</span><span class="dv">1</span>,<span class="at">ncol=</span><span class="dv">3</span>)</span>
-<span id="cb1-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    2    3</code></pre>
-</div>
-</div>
-<p><br></p>
-</div>
-<div class="fragment">
-<p style="color:purple">
-Column vectors
-</p>
-<ul>
-<li><span class="math inline">\(\textbf{y} \equiv (y_1, y_2, . . ., y_n)'\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">ncol=</span><span class="dv">1</span>)</span>
-<span id="cb3-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1]
-[1,]    1
-[2,]    2
-[3,]    3</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="matrix-notation-1" class="slide level2">
-<h2>Matrix Notation</h2>
-<ul>
-<li><span class="math inline">\(\textbf{X}\equiv (\textbf{x}_1,\textbf{x}_2,...,\textbf{x}_p)\)</span></li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>p<span class="ot">=</span><span class="dv">3</span></span>
-<span id="cb5-2"><a></a>X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>),<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">ncol=</span>p,<span class="at">byrow=</span><span class="cn">FALSE</span>)</span>
-<span id="cb5-3"><a></a>X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9</code></pre>
-</div>
-</div>
+<!-- ## Vector Notation {.scrollable} -->
+<!-- <p style="color:purple">Row vectors</p> -->
+<!-- -   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)$ -->
+<!-- . . . -->
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- y <- matrix(c(1,2,3),nrow=1,ncol=3) -->
+<!-- y -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- . . . -->
+<!-- <p style="color:purple">Column vectors</p> -->
+<!-- -   $\textbf{y} \equiv (y_1, y_2, . . ., y_n)'$ -->
+<!-- . . . -->
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- y <- matrix(c(1,2,3),nrow=3,ncol=1) -->
+<!-- y -->
+<!-- ``` -->
+<!-- ## Matrix Notation -->
+<!-- -   $\textbf{X}\equiv (\textbf{x}_1,\textbf{x}_2,...,\textbf{x}_p)$ -->
+<!-- . . . -->
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- p=3 -->
+<!-- X <- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3,ncol=p,byrow=FALSE) -->
+<!-- X -->
+<!-- ``` -->
 </div>
 </section>
 <section id="linear-algebra-1" class="slide level2 scrollable">
@@ -689,10 +654,12 @@ Column vectors
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">t</span>(y)<span class="sc">%*%</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">t</span>(y)<span class="sc">%*%</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     [,1]
-[1,]   14</code></pre>
+<pre><code>     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    2    4    6
+[3,]    3    6    9</code></pre>
 </div>
 </div>
 </div>
@@ -702,17 +669,8 @@ Column vectors
 <p>When can we do matrix multiplication?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>first<span class="ot">=</span><span class="fu">t</span>(y)</span>
-<span id="cb9-2"><a></a><span class="fu">dim</span>(first)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 3</code></pre>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>second<span class="ot">=</span>y</span>
-<span id="cb11-2"><a></a><span class="fu">dim</span>(second)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>first<span class="ot">=</span><span class="fu">t</span>(y)</span>
+<span id="cb3-2"><a></a><span class="fu">dim</span>(first)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 1</code></pre>
 </div>
@@ -720,8 +678,17 @@ Column vectors
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co">#When this is true</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">ncol</span>(first)<span class="sc">==</span><span class="fu">nrow</span>(second)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>second<span class="ot">=</span>y</span>
+<span id="cb5-2"><a></a><span class="fu">dim</span>(second)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 3</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co">#When this is true</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">ncol</span>(first)<span class="sc">==</span><span class="fu">nrow</span>(second)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -735,17 +702,17 @@ Column vectors
 <p><span class="math inline">\(\textbf{y}'\textbf{y} \neq \textbf{y}\textbf{y}'\)</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">t</span>(y)<span class="sc">%*%</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1]
-[1,]   14</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>y<span class="sc">%*%</span><span class="fu">t</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">t</span>(y)<span class="sc">%*%</span>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]    1    2    3
 [2,]    2    4    6
 [3,]    3    6    9</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>y<span class="sc">%*%</span><span class="fu">t</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1]
+[1,]   14</code></pre>
 </div>
 </div>
 </div>
@@ -766,11 +733,11 @@ Column vectors
 <h2>Elephant Linear Regression Example</h2>
 <h4 id="categorical-variable-1">Categorical Variable</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(weight<span class="sc">~</span>sex, </span>
-<span id="cb20-2"><a></a>            <span class="at">data=</span>dat,</span>
-<span id="cb20-3"><a></a>            <span class="at">family=</span><span class="fu">gaussian</span>(<span class="at">link =</span> identity)</span>
-<span id="cb20-4"><a></a>            )</span>
-<span id="cb20-5"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(weight<span class="sc">~</span>sex, </span>
+<span id="cb14-2"><a></a>            <span class="at">data=</span>dat,</span>
+<span id="cb14-3"><a></a>            <span class="at">family=</span><span class="fu">gaussian</span>(<span class="at">link =</span> identity)</span>
+<span id="cb14-4"><a></a>            )</span>
+<span id="cb14-5"><a></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -847,9 +814,9 @@ Number of Fisher Scoring iterations: 2</code></pre>
 <section id="glm-and-design-matix" class="slide level2">
 <h2>glm and design matix</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># GLM coefs</span></span>
-<span id="cb22-2"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>sex<span class="sc">+</span>age.years,<span class="at">data=</span>dat)</span>
-<span id="cb22-3"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># GLM coefs</span></span>
+<span id="cb16-2"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>sex<span class="sc">+</span>age.years,<span class="at">data=</span>dat)</span>
+<span id="cb16-3"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept) sexMale age.years
 1           1       1        10
@@ -862,7 +829,7 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>  <span class="fu">glm</span>(weight<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  <span class="fu">glm</span>(weight<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:  glm(formula = weight ~ 0 + X, data = dat)
@@ -895,9 +862,9 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="co"># Linear Algebra Maximum Likelihood Estimate</span></span>
-<span id="cb27-2"><a></a>  y<span class="ot">=</span>dat<span class="sc">$</span>weight</span>
-<span id="cb27-3"><a></a>  <span class="fu">c</span>(<span class="fu">solve</span>(<span class="fu">t</span>(X)<span class="sc">%*%</span>X)<span class="sc">%*%</span><span class="fu">t</span>(X)<span class="sc">%*%</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Linear Algebra Maximum Likelihood Estimate</span></span>
+<span id="cb21-2"><a></a>  y<span class="ot">=</span>dat<span class="sc">$</span>weight</span>
+<span id="cb21-3"><a></a>  <span class="fu">c</span>(<span class="fu">solve</span>(<span class="fu">t</span>(X)<span class="sc">%*%</span>X)<span class="sc">%*%</span><span class="fu">t</span>(X)<span class="sc">%*%</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2552.8203 6828.9645  145.7483</code></pre>
 </div>
@@ -924,7 +891,7 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -935,7 +902,7 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -968,11 +935,11 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <section id="linear-regression-simulation" class="slide level2 scrollable">
 <h2>Linear Regression Simulation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co">#Design matrix</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">6454</span>)</span>
-<span id="cb29-3"><a></a>  Var1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">20</span>,<span class="at">by=</span><span class="dv">1</span>)<span class="sc">+</span><span class="fu">rnorm</span>(<span class="dv">21</span>,<span class="dv">0</span>,<span class="dv">2</span>)</span>
-<span id="cb29-4"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>Var1)</span>
-<span id="cb29-5"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co">#Design matrix</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">6454</span>)</span>
+<span id="cb23-3"><a></a>  Var1 <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">20</span>,<span class="at">by=</span><span class="dv">1</span>)<span class="sc">+</span><span class="fu">rnorm</span>(<span class="dv">21</span>,<span class="dv">0</span>,<span class="dv">2</span>)</span>
+<span id="cb23-4"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>Var1)</span>
+<span id="cb23-5"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept)     Var1
 1           1 1.871755
@@ -985,21 +952,21 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="co">#Marginal Coefficients  </span></span>
-<span id="cb31-2"><a></a>  beta <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>))</span>
-<span id="cb31-3"><a></a></span>
-<span id="cb31-4"><a></a><span class="co">#linear terms</span></span>
-<span id="cb31-5"><a></a>  lt <span class="ot">=</span> X<span class="sc">%*%</span>beta</span>
-<span id="cb31-6"><a></a></span>
-<span id="cb31-7"><a></a><span class="co">#mu (link function)</span></span>
-<span id="cb31-8"><a></a>  mu <span class="ot">=</span> lt<span class="sc">*</span><span class="dv">1</span></span>
-<span id="cb31-9"><a></a></span>
-<span id="cb31-10"><a></a><span class="co"># Plot relationship b/w mean (mu) and variable of interest</span></span>
-<span id="cb31-11"><a></a>  <span class="fu">plot</span>(X[,<span class="dv">2</span>],mu,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co">#Marginal Coefficients  </span></span>
+<span id="cb25-2"><a></a>  beta <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">5</span>))</span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a><span class="co">#linear terms</span></span>
+<span id="cb25-5"><a></a>  lt <span class="ot">=</span> X<span class="sc">%*%</span>beta</span>
+<span id="cb25-6"><a></a></span>
+<span id="cb25-7"><a></a><span class="co">#mu (link function)</span></span>
+<span id="cb25-8"><a></a>  mu <span class="ot">=</span> lt<span class="sc">*</span><span class="dv">1</span></span>
+<span id="cb25-9"><a></a></span>
+<span id="cb25-10"><a></a><span class="co"># Plot relationship b/w mean (mu) and variable of interest</span></span>
+<span id="cb25-11"><a></a>  <span class="fu">plot</span>(X[,<span class="dv">2</span>],mu,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1007,11 +974,11 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="co">#sample</span></span>
-<span id="cb32-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
-<span id="cb32-3"><a></a>  sigma <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb32-4"><a></a>  y <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(mu),mu,<span class="at">sd=</span>sigma)</span>
-<span id="cb32-5"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#sample</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
+<span id="cb26-3"><a></a>  sigma <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb26-4"><a></a>  y <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(mu),mu,<span class="at">sd=</span>sigma)</span>
+<span id="cb26-5"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  13.51028  10.74365  17.12227  10.72545  17.98375  44.88165  29.59957
  [8]  47.05866  49.08274  34.52391  25.02376  54.88971  55.74619  63.30454
@@ -1021,13 +988,13 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="co"># Plot relationship b/w mean (mu) and variable of interest</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">plot</span>(X[,<span class="dv">2</span>],mu,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>)  </span>
-<span id="cb34-3"><a></a>  <span class="fu">points</span>(X[,<span class="dv">2</span>],y,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="co"># Plot relationship b/w mean (mu) and variable of interest</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">plot</span>(X[,<span class="dv">2</span>],mu,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>)  </span>
+<span id="cb28-3"><a></a>  <span class="fu">points</span>(X[,<span class="dv">2</span>],y,<span class="at">pch=</span><span class="dv">18</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">cex=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1037,12 +1004,12 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <section id="linear-regression-estimation" class="slide level2 scrollable">
 <h2>Linear Regression Estimation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="co"># Fit model to sample</span></span>
-<span id="cb35-2"><a></a>  model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co"># Fit model to sample</span></span>
+<span id="cb29-2"><a></a>  model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>  <span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>  <span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1068,8 +1035,8 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">library</span>(equatiomatic)</span>
-<span id="cb38-2"><a></a><span class="fu">extract_eq</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">library</span>(equatiomatic)</span>
+<span id="cb32-2"><a></a><span class="fu">extract_eq</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
 E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}}) + \beta_{2}(\operatorname{X}_{\operatorname{Var1}})
@@ -1081,19 +1048,19 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <section id="linear-regression-evaluation" class="slide level2 scrollable">
 <h2>Linear Regression Evaluation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a> <span class="co">#sample many times  </span></span>
-<span id="cb39-2"><a></a>  y.many <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,<span class="fu">rnorm</span>(<span class="fu">length</span>(mu),<span class="at">mean=</span><span class="fu">c</span>(mu), <span class="at">sd=</span>sigma))</span>
-<span id="cb39-3"><a></a>  <span class="fu">dim</span>(y.many)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a> <span class="co">#sample many times  </span></span>
+<span id="cb33-2"><a></a>  y.many <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,<span class="fu">rnorm</span>(<span class="fu">length</span>(mu),<span class="at">mean=</span><span class="fu">c</span>(mu), <span class="at">sd=</span>sigma))</span>
+<span id="cb33-3"><a></a>  <span class="fu">dim</span>(y.many)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]   21 1000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a> <span class="co">#Estimate coefs for all 100 samples</span></span>
-<span id="cb41-2"><a></a>  coef.est<span class="ot">=</span><span class="fu">apply</span>(y.many,<span class="dv">2</span>,<span class="at">FUN=</span><span class="cf">function</span>(y){</span>
-<span id="cb41-3"><a></a>              model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span>
-<span id="cb41-4"><a></a>              model1<span class="sc">$</span>coefficients</span>
-<span id="cb41-5"><a></a>  })</span>
-<span id="cb41-6"><a></a></span>
-<span id="cb41-7"><a></a>  <span class="fu">dim</span>(coef.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a> <span class="co">#Estimate coefs for all 100 samples</span></span>
+<span id="cb35-2"><a></a>  coef.est<span class="ot">=</span><span class="fu">apply</span>(y.many,<span class="dv">2</span>,<span class="at">FUN=</span><span class="cf">function</span>(y){</span>
+<span id="cb35-3"><a></a>              model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X,<span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span>
+<span id="cb35-4"><a></a>              model1<span class="sc">$</span>coefficients</span>
+<span id="cb35-5"><a></a>  })</span>
+<span id="cb35-6"><a></a></span>
+<span id="cb35-7"><a></a>  <span class="fu">dim</span>(coef.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]    2 1000</code></pre>
 </div>
@@ -1104,14 +1071,14 @@ E( \operatorname{y} ) = \beta_{1}(\operatorname{X}_{\operatorname{(Intercept)}})
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-25-2.png" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-23-2.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1202,16 +1169,9 @@ td {
 <h2>Logistic Regression (logit link)</h2>
 <p><span class="math display">\[
 \begin{align*}
-\textbf{y}\sim&amp; [\textbf{y}|N,\boldsymbol{p}]\\
+\textbf{y} \sim&amp; \text{Binomial}(N,\boldsymbol{p})
 \end{align*}
 \]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-\begin{align*}
-[\textbf{y}|N,\boldsymbol{p}] =&amp; \text{Binomial}(N,\boldsymbol{p})
-\end{align*}
-\]</span></p>
-</div>
 <div class="fragment">
 <p><span class="math display">\[
 \begin{align*}
@@ -1243,22 +1203,22 @@ td {
 <section id="logitp-mapping" class="slide level2 scrollable">
 <h2>logit/p mapping</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>p<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.001</span>,<span class="fl">0.999</span>,<span class="at">by=</span><span class="fl">0.01</span>)</span>
-<span id="cb43-2"><a></a>logit.p<span class="ot">=</span><span class="fu">qlogis</span>(p)</span>
-<span id="cb43-3"><a></a><span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">1.5</span>,<span class="at">cex.axis=</span><span class="fl">1.5</span>)</span>
-<span id="cb43-4"><a></a><span class="fu">plot</span>(p,logit.p,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">xlab=</span><span class="st">'p'</span>,<span class="at">ylab=</span><span class="st">"logit(p)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>p<span class="ot">=</span><span class="fu">seq</span>(<span class="fl">0.001</span>,<span class="fl">0.999</span>,<span class="at">by=</span><span class="fl">0.01</span>)</span>
+<span id="cb37-2"><a></a>logit.p<span class="ot">=</span><span class="fu">qlogis</span>(p)</span>
+<span id="cb37-3"><a></a><span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">1.5</span>,<span class="at">cex.axis=</span><span class="fl">1.5</span>)</span>
+<span id="cb37-4"><a></a><span class="fu">plot</span>(p,logit.p,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">xlab=</span><span class="st">'p'</span>,<span class="at">ylab=</span><span class="st">"logit(p)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="glm1_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="glm1_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="logistic-regression-simulation" class="slide level2 scrollable">
 <h2>Logistic Regression Simulation</h2>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="co">#Design matrix</span></span>
-<span id="cb44-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">43534</span>)</span>
-<span id="cb44-3"><a></a>  Var1 <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
-<span id="cb44-4"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>Var1)</span>
-<span id="cb44-5"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="co">#Design matrix</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">43534</span>)</span>
+<span id="cb38-3"><a></a>  Var1 <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb38-4"><a></a>  X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>Var1)</span>
+<span id="cb38-5"><a></a>  <span class="fu">head</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept)       Var1
 1           1  1.4371396
@@ -1272,15 +1232,15 @@ td {
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="co"># marginal coefficients (on logit-scale)</span></span>
-<span id="cb46-2"><a></a>  beta<span class="ot">=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">4</span>)</span>
-<span id="cb46-3"><a></a></span>
-<span id="cb46-4"><a></a><span class="co">#linear terms</span></span>
-<span id="cb46-5"><a></a>  lt <span class="ot">=</span> X<span class="sc">%*%</span>beta</span>
-<span id="cb46-6"><a></a></span>
-<span id="cb46-7"><a></a><span class="co">#transformation via link function to probability scale</span></span>
-<span id="cb46-8"><a></a>  p<span class="ot">=</span><span class="fu">plogis</span>(lt)</span>
-<span id="cb46-9"><a></a>  <span class="fu">head</span>(<span class="fu">round</span>(p,<span class="at">digits=</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="co"># marginal coefficients (on logit-scale)</span></span>
+<span id="cb40-2"><a></a>  beta<span class="ot">=</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">4</span>)</span>
+<span id="cb40-3"><a></a></span>
+<span id="cb40-4"><a></a><span class="co">#linear terms</span></span>
+<span id="cb40-5"><a></a>  lt <span class="ot">=</span> X<span class="sc">%*%</span>beta</span>
+<span id="cb40-6"><a></a></span>
+<span id="cb40-7"><a></a><span class="co">#transformation via link function to probability scale</span></span>
+<span id="cb40-8"><a></a>  p<span class="ot">=</span><span class="fu">plogis</span>(lt)</span>
+<span id="cb40-9"><a></a>  <span class="fu">head</span>(<span class="fu">round</span>(p,<span class="at">digits=</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [,1]
 1 0.98
@@ -1290,10 +1250,10 @@ td {
 5 0.95
 6 0.00</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="co">#sample</span></span>
-<span id="cb48-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">14353</span>)</span>
-<span id="cb48-3"><a></a>  y <span class="ot">=</span> <span class="fu">rbinom</span>(<span class="at">n=</span><span class="fu">length</span>(p),<span class="at">size=</span><span class="dv">1</span>,p)</span>
-<span id="cb48-4"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="co">#sample</span></span>
+<span id="cb42-2"><a></a>  <span class="fu">set.seed</span>(<span class="dv">14353</span>)</span>
+<span id="cb42-3"><a></a>  y <span class="ot">=</span> <span class="fu">rbinom</span>(<span class="at">n=</span><span class="fu">length</span>(p),<span class="at">size=</span><span class="dv">1</span>,p)</span>
+<span id="cb42-4"><a></a>  y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0
  [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0
@@ -1303,23 +1263,23 @@ td {
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="co">#Plot the linear 'terms'  and explantory variable</span></span>
-<span id="cb50-2"><a></a>  <span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">1.2</span>,<span class="at">cex.axis=</span><span class="fl">1.2</span>)</span>
-<span id="cb50-3"><a></a>  <span class="fu">plot</span>(Var1,lt,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,</span>
-<span id="cb50-4"><a></a>       <span class="at">xlab=</span><span class="st">"x"</span>,<span class="at">ylab=</span><span class="st">"Linear Terms (logit-value)"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="co">#Plot the linear 'terms'  and explantory variable</span></span>
+<span id="cb44-2"><a></a>  <span class="fu">par</span>(<span class="at">cex.lab=</span><span class="fl">1.2</span>,<span class="at">cex.axis=</span><span class="fl">1.2</span>)</span>
+<span id="cb44-3"><a></a>  <span class="fu">plot</span>(Var1,lt,<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,</span>
+<span id="cb44-4"><a></a>       <span class="at">xlab=</span><span class="st">"x"</span>,<span class="at">ylab=</span><span class="st">"Linear Terms (logit-value)"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-29-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>  index<span class="ot">=</span><span class="fu">order</span>(Var1)</span>
-<span id="cb51-2"><a></a>  <span class="fu">plot</span>(Var1[index],p[index],<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"x"</span>,<span class="at">ylab=</span><span class="st">"Probability"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>  index<span class="ot">=</span><span class="fu">order</span>(Var1)</span>
+<span id="cb45-2"><a></a>  <span class="fu">plot</span>(Var1[index],p[index],<span class="at">type=</span><span class="st">"b"</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"x"</span>,<span class="at">ylab=</span><span class="st">"Probability"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-29-2.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="glm1_files/figure-revealjs/unnamed-chunk-27-2.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1329,9 +1289,9 @@ td {
 <section id="logistic-regression-estimation" class="slide level2 scrollable">
 <h2>Logistic Regression Estimation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="co"># Fit model to sample </span></span>
-<span id="cb52-2"><a></a>  model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
-<span id="cb52-3"><a></a>  <span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="co"># Fit model to sample </span></span>
+<span id="cb46-2"><a></a>  model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
+<span id="cb46-3"><a></a>  <span class="fu">summary</span>(model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1357,21 +1317,21 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <section id="logistic-regression-evaluation" class="slide level2 scrollable">
 <h2>Logistic Regression Evaluation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a> <span class="co">#sample many times  </span></span>
-<span id="cb54-2"><a></a>  n.sim<span class="ot">=</span><span class="dv">1000</span></span>
-<span id="cb54-3"><a></a>  y.many <span class="ot">=</span> <span class="fu">replicate</span>(n.sim,<span class="fu">rbinom</span>(<span class="at">n=</span><span class="fu">length</span>(p),<span class="at">size=</span><span class="dv">1</span>,p))</span>
-<span id="cb54-4"><a></a>  <span class="fu">dim</span>(y.many)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a> <span class="co">#sample many times  </span></span>
+<span id="cb48-2"><a></a>  n.sim<span class="ot">=</span><span class="dv">1000</span></span>
+<span id="cb48-3"><a></a>  y.many <span class="ot">=</span> <span class="fu">replicate</span>(n.sim,<span class="fu">rbinom</span>(<span class="at">n=</span><span class="fu">length</span>(p),<span class="at">size=</span><span class="dv">1</span>,p))</span>
+<span id="cb48-4"><a></a>  <span class="fu">dim</span>(y.many)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  100 1000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a> <span class="co">#Estimate coefs for all 100 samples</span></span>
-<span id="cb56-2"><a></a>  coef.est<span class="ot">=</span><span class="fu">apply</span>(y.many,<span class="dv">2</span>,<span class="at">FUN=</span><span class="cf">function</span>(y){</span>
-<span id="cb56-3"><a></a>          model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
-<span id="cb56-4"><a></a>          </span>
-<span id="cb56-5"><a></a>  model1<span class="sc">$</span>coefficients</span>
-<span id="cb56-6"><a></a>  })</span>
-<span id="cb56-7"><a></a></span>
-<span id="cb56-8"><a></a>  <span class="fu">dim</span>(coef.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a> <span class="co">#Estimate coefs for all 100 samples</span></span>
+<span id="cb50-2"><a></a>  coef.est<span class="ot">=</span><span class="fu">apply</span>(y.many,<span class="dv">2</span>,<span class="at">FUN=</span><span class="cf">function</span>(y){</span>
+<span id="cb50-3"><a></a>          model1<span class="ot">=</span><span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
+<span id="cb50-4"><a></a>          </span>
+<span id="cb50-5"><a></a>  model1<span class="sc">$</span>coefficients</span>
+<span id="cb50-6"><a></a>  })</span>
+<span id="cb50-7"><a></a></span>
+<span id="cb50-8"><a></a>  <span class="fu">dim</span>(coef.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]    2 1000</code></pre>
 </div>
@@ -1381,21 +1341,21 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <section id="plot-intercept" class="slide level2">
 <h2>Plot Intercept</h2>
 
-<img data-src="glm1_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section>
+<img data-src="glm1_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
 <section id="plot-slope" class="slide level2">
 <h2>Plot Slope</h2>
 
-<img data-src="glm1_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="glm1_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
 <section id="evaluate-sampling-distributions" class="slide level2">
 <h2>Evaluate Sampling Distributions</h2>
 <p>Is our model biased?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="co"># Relative Bias</span></span>
-<span id="cb58-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="co"># Relative Bias</span></span>
+<span id="cb52-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.0879452</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.09751027</code></pre>
 </div>
@@ -1405,12 +1365,12 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <h2>Evaluate Sampling Distributions</h2>
 <p>Are we going to estimate the sign of the coef correctly?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="co"># Probability of estimating a coef sign correctly</span></span>
-<span id="cb62-2"><a></a>  <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">1</span>,]<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="co"># Probability of estimating a coef sign correctly</span></span>
+<span id="cb56-2"><a></a>  <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">1</span>,]<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>  <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>  <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
@@ -1419,8 +1379,8 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <section id="evaluate-sampling-distributions-2" class="slide level2">
 <h2>Evaluate Sampling Distributions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="co"># Probability of estimating the slope 2x the truth</span></span>
-<span id="cb66-2"><a></a>    <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;</span><span class="dv">2</span><span class="sc">*</span>beta[<span class="dv">2</span>]))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="co"># Probability of estimating the slope 2x the truth</span></span>
+<span id="cb60-2"><a></a>    <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;</span><span class="dv">2</span><span class="sc">*</span>beta[<span class="dv">2</span>]))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.013</code></pre>
 </div>
@@ -1429,8 +1389,8 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <section id="evaluate-sampling-distributions-3" class="slide level2">
 <h2>Evaluate Sampling Distributions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="co"># Probability of estimating the slope within 1</span></span>
-<span id="cb68-2"><a></a><span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;=</span>beta[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> coef.est[<span class="dv">2</span>,]<span class="sc">&lt;=</span>beta[<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="co"># Probability of estimating the slope within 1</span></span>
+<span id="cb62-2"><a></a><span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;=</span>beta[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> coef.est[<span class="dv">2</span>,]<span class="sc">&lt;=</span>beta[<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.741</code></pre>
 </div>
@@ -1440,15 +1400,15 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <h2>Logistic Regression Biased Correction</h2>
 <p>brglm: Bias Reduction in Binomial-Response Generalized Linear Models</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>brglm<span class="sc">::</span><span class="fu">brglm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>brglm<span class="sc">::</span><span class="fu">brglm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="co"># Relative Bias</span></span>
-<span id="cb71-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="co"># Relative Bias</span></span>
+<span id="cb65-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.007785692</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.008799186</code></pre>
 </div>

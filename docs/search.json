@@ -5772,21 +5772,21 @@
     "href": "FW680A4/glm1.html#linear-algebra-1",
     "title": "Generalized Linear Models",
     "section": "Linear Algebra",
-    "text": "Linear Algebra\n\n\\(\\textbf{y}'\\textbf{y}\\)\n\\(\\textbf{y}' \\cdot \\textbf{y}\\)\n\n\n\\[\n=\\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}\n\\begin{bmatrix}\n1 \\\\\n2 \\\\\n3 \\\\\n\\end{bmatrix}\n\\]\n\n\n\\[\n=\\begin{bmatrix}\n(1\\times1) + (2\\times2) + (3\\times3)\\\\\n\\end{bmatrix} \\\\= [14]\n\\]\n\n\n\nt(y)%*%y\n\n     [,1]\n[1,]   14"
+    "text": "Linear Algebra\n\n\\(\\textbf{y}'\\textbf{y}\\)\n\\(\\textbf{y}' \\cdot \\textbf{y}\\)\n\n\n\\[\n=\\begin{bmatrix}\n1 & 2 & 3\n\\end{bmatrix}\n\\begin{bmatrix}\n1 \\\\\n2 \\\\\n3 \\\\\n\\end{bmatrix}\n\\]\n\n\n\\[\n=\\begin{bmatrix}\n(1\\times1) + (2\\times2) + (3\\times3)\\\\\n\\end{bmatrix} \\\\= [14]\n\\]\n\n\n\nt(y)%*%y\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    2    4    6\n[3,]    3    6    9"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-algebra-2",
     "href": "FW680A4/glm1.html#linear-algebra-2",
     "title": "Generalized Linear Models",
     "section": "Linear Algebra",
-    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 3 1\n\n\n\n\n\n#When this is true\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
+    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 3 1\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 1 3\n\n\n\n\n\n#When this is true\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-algebra-3",
     "href": "FW680A4/glm1.html#linear-algebra-3",
     "title": "Generalized Linear Models",
     "section": "Linear Algebra",
-    "text": "Linear Algebra\nNote that\n\\(\\textbf{y}'\\textbf{y} \\neq \\textbf{y}\\textbf{y}'\\)\n\n\nt(y)%*%y\n\n     [,1]\n[1,]   14\n\ny%*%t(y)\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    2    4    6\n[3,]    3    6    9"
+    "text": "Linear Algebra\nNote that\n\\(\\textbf{y}'\\textbf{y} \\neq \\textbf{y}\\textbf{y}'\\)\n\n\nt(y)%*%y\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    2    4    6\n[3,]    3    6    9\n\ny%*%t(y)\n\n     [,1]\n[1,]   14"
   },
   {
     "objectID": "FW680A4/glm1.html#elephant-linear-regression-example",
@@ -5989,7 +5989,7 @@
     "href": "FW680A4/glm1.html#linear-regression",
     "title": "Generalized Linear Models",
     "section": "Linear Regression",
-    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta} \\times 1\\\\\n\\text{g}(\\boldsymbol{\\mu}) =&   \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n}  \n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size x\\(_{1}\\) & x\\(_{2}\\) are independent variables"
+    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\n\nmatrix notation\n\\[\n\\begin{align*}\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\sim& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta} \\times 1\\\\\n\\text{g}(\\boldsymbol{\\mu}) =&   \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n}  \n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x^{1}_1 & x^{2}_1 \\\\\n1 & x^{1}_2 & x^{2}_2 \\\\\n1 & x^{1}_3 & x^{2}_3 \\\\\n. & . .\\\\\n. & . .\\\\\nn & x^{1}_n & x^{2}_n\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size x\\(_{1}\\) & x\\(_{2}\\) are independent variables"
   },
   {
     "objectID": "FW680A4/glm1.html#elephant-linear-regression-example-1",
@@ -6038,7 +6038,7 @@
     "href": "FW680A4/glm1.html#logistic-regression-logit-link",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression (logit link)",
-    "text": "Logistic Regression (logit link)\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|N,\\boldsymbol{p}]\\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n[\\textbf{y}|N,\\boldsymbol{p}] =& \\text{Binomial}(N,\\boldsymbol{p})\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\n\\text{g}(\\boldsymbol{p}) =& \\text{logit}(\\boldsymbol{p}) = \\text{log}(\\frac{\\boldsymbol{p}}{1-\\boldsymbol{p}})\n\\end{align*}\n\\]"
+    "text": "Logistic Regression (logit link)\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,\\boldsymbol{p})\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\text{g}(\\boldsymbol{p}) =& \\text{logit}(\\boldsymbol{p}) = \\text{log}(\\frac{\\boldsymbol{p}}{1-\\boldsymbol{p}})\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/glm1.html#inverse-logit-expit",
