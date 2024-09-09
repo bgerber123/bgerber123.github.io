@@ -33,8 +33,7 @@ pre {
 -   design matrix / categorical variable
 -   glm function
 -   link functions
--   regression 
--   linear and logistic regression
+-   logistic regression
 
 ## GLM
 <p style="color:purple">Generalized linear model framework using matrix notation</p>
