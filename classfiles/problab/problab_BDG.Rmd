@@ -270,11 +270,17 @@ dim(mean.mat)
 
 # Plot the probability versus the sample size
   plot(n,probs,type="l",lwd=3,col=1)
-  abline(h=0.90,lwd=3,col=3)
+  abline(h=0.95,lwd=3,col=3)
 
 ```
 
-We need 45 samples to achieve our objective.
+```{r calc, echo=FALSE, eval=TRUE}
+
+results=data.frame(n, probs)
+sp.results=results[which(probs>=0.95)[1],1]
+
+```
+We need `r sp.results` samples to achieve our objective.
 
 ```{r, echo=FALSE, eval=TRUE, cache=TRUE}
 #Define inputs and outputs
@@ -314,10 +320,17 @@ for(i in 1:length(n)){
   plot(n,probs,type="l",lwd=3,col=1)
   lines(n, probs2, lwd=3,col=2)
   legend("bottomright",lwd=3,col=c(1,2,3),legend=c("lambda = 100", "lambda = 25", "Objective"))
-  abline(h=0.90,lwd=3,col=3)
+  abline(h=0.95,lwd=3,col=3)
 ```
 
-Changing to $\lambda = 25$, we see that a lot more samples are needed to achieve the same objective (>100).
+```{r calc2, echo=FALSE, eval=TRUE}
+
+results2=data.frame(n, probs2)
+sp.results2=results2[which(probs2>=0.95)[1],1]
+
+```
+
+Changing to $\lambda = 25$, we see that a lot more samples are needed to achieve the same objective (>100). Specifically, we need `r sp.results2`.
 
 ## Objective 3
 

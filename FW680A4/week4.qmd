@@ -16,7 +16,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("equatiomatic"))
+install.packages(c("equatiomatic","brglm"))
 ```
 
 #### [Assigned]{style="color:red;"}

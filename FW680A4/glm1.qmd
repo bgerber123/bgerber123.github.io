@@ -29,9 +29,11 @@ pre {
 
 -   GLM framework
 -   matrix notation
--   link functions
+-   linear algebra
+-   design matrix / categorical variable
 -   glm function
--   categorical independent variable
+-   link functions
+-   regression 
 -   linear and logistic regression
 
 ## GLM
@@ -102,7 +104,7 @@ $$
 #### matrix notation
 $$
 \begin{align*}
-[\textbf{y}|\boldsymbol{\mu},\sigma]\sim& \text{Normal}(\boldsymbol{\mu},\sigma)\\
+\textbf{y}\sim& \text{Normal}(\boldsymbol{\mu},\sigma)\\
 \boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1\\
 \text{g}(\boldsymbol{\mu}) =&   \textbf{X}\boldsymbol{\beta}
 \end{align*}
@@ -301,13 +303,9 @@ $$
 
 . . .
 
-```{r, eval=TRUE, echo=FALSE}
-y <- matrix(c(1,2,3),nrow=1,ncol=3)
-```
-
-
 
 ```{r, eval=TRUE, echo=TRUE}
+y <- matrix(c(1,2,3),nrow=3,ncol=1)
 t(y)%*%y
 ```
 
@@ -569,103 +567,103 @@ $$
 \end{align*}
 $$
 
-## Linear Regression Simulation {.scrollable}
+<!-- ## Linear Regression Simulation {.scrollable} -->
 
-```{r, eval=TRUE,echo=TRUE}
-#Design matrix
-  set.seed(6454)
-  Var1 = seq(0,20,by=1)+rnorm(21,0,2)
-  X = model.matrix(~Var1)
-  head(X)
-```
+<!-- ```{r, eval=TRUE,echo=TRUE} -->
+<!-- #Design matrix -->
+<!--   set.seed(6454) -->
+<!--   Var1 = seq(0,20,by=1)+rnorm(21,0,2) -->
+<!--   X = model.matrix(~Var1) -->
+<!--   head(X) -->
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-```{r, eval=TRUE,echo=TRUE}
-#Marginal Coefficients  
-  beta = matrix(c(0,5))
+<!-- ```{r, eval=TRUE,echo=TRUE} -->
+<!-- #Marginal Coefficients   -->
+<!--   beta = matrix(c(0,5)) -->
 
-#linear terms
-  lt = X%*%beta
+<!-- #linear terms -->
+<!--   lt = X%*%beta -->
 
-#mu (link function)
-  mu = lt*1
+<!-- #mu (link function) -->
+<!--   mu = lt*1 -->
 
-# Plot relationship b/w mean (mu) and variable of interest
-  plot(X[,2],mu,type="l",lwd=4)  
-```
+<!-- # Plot relationship b/w mean (mu) and variable of interest -->
+<!--   plot(X[,2],mu,type="l",lwd=4)   -->
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-```{r, eval=TRUE,echo=TRUE}
-#sample
-  set.seed(5435)
-  sigma = 3
-  y = rnorm(length(mu),mu,sd=sigma)
-  y
-```
+<!-- ```{r, eval=TRUE,echo=TRUE} -->
+<!-- #sample -->
+<!--   set.seed(5435) -->
+<!--   sigma = 3 -->
+<!--   y = rnorm(length(mu),mu,sd=sigma) -->
+<!--   y -->
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-```{r, eval=TRUE,echo=TRUE}
-# Plot relationship b/w mean (mu) and variable of interest
-  plot(X[,2],mu,type="l",lwd=4)  
-  points(X[,2],y,pch=18,col=2,cex=2)
-```
+<!-- ```{r, eval=TRUE,echo=TRUE} -->
+<!-- # Plot relationship b/w mean (mu) and variable of interest -->
+<!--   plot(X[,2],mu,type="l",lwd=4)   -->
+<!--   points(X[,2],y,pch=18,col=2,cex=2) -->
+<!-- ``` -->
 
-## Linear Regression Estimation {.scrollable}
-```{r, eval=TRUE, echo=TRUE}
-# Fit model to sample
-  model1=glm(y~0+X,family = gaussian(link = "identity"))
-```
+<!-- ## Linear Regression Estimation {.scrollable} -->
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!-- # Fit model to sample -->
+<!--   model1=glm(y~0+X,family = gaussian(link = "identity")) -->
+<!-- ``` -->
 
-. . .
+<!-- . . . -->
 
-```{r, eval=TRUE, echo=TRUE}
-  summary(model1)
-```
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!--   summary(model1) -->
+<!-- ``` -->
 
-<br>
+<!-- <br> -->
 
-. . .
+<!-- . . . -->
 
-```{r,echo = TRUE}
-library(equatiomatic)
-extract_eq(model1)
-```
+<!-- ```{r,echo = TRUE} -->
+<!-- library(equatiomatic) -->
+<!-- extract_eq(model1) -->
+<!-- ``` -->
 
-## Linear Regression Evaluation {.scrollable}
+<!-- ## Linear Regression Evaluation {.scrollable} -->
 
-```{r, eval=TRUE, echo=TRUE}
- #sample many times  
-  y.many = replicate(1000,rnorm(length(mu),mean=c(mu), sd=sigma))
-  dim(y.many)
-  
- #Estimate coefs for all 100 samples
-  coef.est=apply(y.many,2,FUN=function(y){
-              model1=glm(y~0+X,family = gaussian(link = "identity"))
-              model1$coefficients
-  })
+<!-- ```{r, eval=TRUE, echo=TRUE} -->
+<!--  #sample many times   -->
+<!--   y.many = replicate(1000,rnorm(length(mu),mean=c(mu), sd=sigma)) -->
+<!--   dim(y.many) -->
 
-  dim(coef.est)
-```
+<!--  #Estimate coefs for all 100 samples -->
+<!--   coef.est=apply(y.many,2,FUN=function(y){ -->
+<!--               model1=glm(y~0+X,family = gaussian(link = "identity")) -->
+<!--               model1$coefficients -->
+<!--   }) -->
 
-<br>
+<!--   dim(coef.est) -->
+<!-- ``` -->
 
-. . .
+<!-- <br> -->
 
-```{r, eval=TRUE, echo=FALSE}  
-  plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
-       main=bquote("Sampling Distribution"~beta[0]),
-       xlab=bquote(beta[0]))
-      abline(v=beta[1],col=2,lwd=4)
-      legend("topright",lwd=3,col=2,legend="True Value")
-  plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
-       main=bquote("Sampling Distribution"~beta[1]),
-       xlab=bquote(beta[1]))
-  abline(v=beta[2],col=2,lwd=4)
-    legend("topright",lwd=3,col=2,legend="True Value")
-```
+<!-- . . . -->
+
+<!-- ```{r, eval=TRUE, echo=FALSE}   -->
+<!--   plot(density(coef.est[1,],adjust=2),type="l",lwd=2, -->
+<!--        main=bquote("Sampling Distribution"~beta[0]), -->
+<!--        xlab=bquote(beta[0])) -->
+<!--       abline(v=beta[1],col=2,lwd=4) -->
+<!--       legend("topright",lwd=3,col=2,legend="True Value") -->
+<!--   plot(density(coef.est[2,],adjust=2),type="l",lwd=2, -->
+<!--        main=bquote("Sampling Distribution"~beta[1]), -->
+<!--        xlab=bquote(beta[1])) -->
+<!--   abline(v=beta[2],col=2,lwd=4) -->
+<!--     legend("topright",lwd=3,col=2,legend="True Value") -->
+<!-- ``` -->
 
 
 ## A Model by another name {.scrollable}
