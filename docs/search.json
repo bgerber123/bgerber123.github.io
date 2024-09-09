@@ -5961,7 +5961,7 @@
     "href": "FW680A4/glm1.html#objectives",
     "title": "Generalized Linear Models",
     "section": "Objectives",
-    "text": "Objectives\n\n\n\nGLM framework\nmatrix notation\nlinear algebra\ndesign matrix / categorical variable\nglm function\nlink functions\nregression\nlinear and logistic regression"
+    "text": "Objectives\n\n\n\nGLM framework\nmatrix notation\nlinear algebra\ndesign matrix / categorical variable\nglm function\nlink functions\nlogistic regression"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-regression-notation",
