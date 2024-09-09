@@ -5807,7 +5807,7 @@
     "href": "FW680A4/glm1.html#link-functions-1",
     "title": "Generalized Linear Models",
     "section": "Link functions",
-    "text": "Link functions\nIdentity \n\\(\\text{g}(\\boldsymbol{\\mu}) = \\mathbf{1}'\\boldsymbol{\\mu}\\)\nLinear Regression\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma]\\\\\n[\\textbf{y}|\\boldsymbol{\\mu},\\sigma]=& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta}) =  \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nNo transformation is needed because the parameter support is maintained. \\[\n\\begin{align*}\n\\mu \\in& (-\\infty,\\infty)\\\\\n\\textbf{X}\\boldsymbol{\\beta} \\in& (-\\infty,\\infty)\n\\end{align*}\n\\]"
+    "text": "Link functions\nIdentity \nNo transformation is needed because the parameter support is maintained. \\[\n\\begin{align*}\n\\mu \\in& (-\\infty,\\infty)\\\\\n\\textbf{X}\\boldsymbol{\\beta} \\in& (-\\infty,\\infty)\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/glm1.html#linear-regression-simulation",

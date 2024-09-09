@@ -543,21 +543,6 @@ Computers do not like boundaries (e.g., 0 or 1). It's easier to **guess** values
 ## Link functions {.scrollable}
 
 ### <span style="color:blue">Identity </span>
-$\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}$
-
-
-
-#### Linear Regression
-
-$$
-\begin{align*}
-\textbf{y}\sim& [\textbf{y}|\boldsymbol{\mu},\sigma]\\
-[\textbf{y}|\boldsymbol{\mu},\sigma]=& \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta}
-\end{align*}
-$$
-
-
 No transformation is needed because the parameter support is maintained.
 $$
 \begin{align*}
@@ -862,19 +847,19 @@ Are we going to estimate the sign of the coef correctly?
   length(which(coef.est[2,]>0))/n.sim
 ```
 
-## Evaluate Sampling Distributions
+<!-- ## Evaluate Sampling Distributions -->
 
-```{r, eval=TRUE, echo=TRUE}  
-# Probability of estimating the slope 2x the truth
-    length(which(coef.est[2,]>2*beta[2]))/n.sim
-```
+<!-- ```{r, eval=TRUE, echo=TRUE}   -->
+<!-- # Probability of estimating the slope 2x the truth -->
+<!--     length(which(coef.est[2,]>2*beta[2]))/n.sim -->
+<!-- ``` -->
 
-## Evaluate Sampling Distributions
+<!-- ## Evaluate Sampling Distributions -->
 
-```{r, eval=TRUE, echo=TRUE}  
-# Probability of estimating the slope within 1
-length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim
-```
+<!-- ```{r, eval=TRUE, echo=TRUE}   -->
+<!-- # Probability of estimating the slope within 1 -->
+<!-- length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim -->
+<!-- ``` -->
 
 ## Logistic Regression Biased Correction {.scrollable}
 
@@ -904,11 +889,6 @@ brglm::brglm(y~0+X, family = binomial(link = "logit"))
 
 # Recap
 
-. . .
-
--   GLM framework
--   matrix notation
--   link functions
--   glm function
--   categorical independent variable
--   linear and logistic regression
+-   GLM framework: What are key components?
+-   matrix notation - why learn this?
+-   link functions - what are they?

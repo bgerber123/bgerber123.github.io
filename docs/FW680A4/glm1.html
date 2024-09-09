@@ -916,15 +916,6 @@ Residual Deviance: 75320000     AIC: 3143</code></pre>
 <section id="link-functions-1" class="slide level2 scrollable">
 <h2>Link functions</h2>
 <h3 id="identity"><span style="color:blue">Identity </span></h3>
-<p><span class="math inline">\(\text{g}(\boldsymbol{\mu}) = \mathbf{1}'\boldsymbol{\mu}\)</span></p>
-<h4 id="linear-regression-1">Linear Regression</h4>
-<p><span class="math display">\[
-\begin{align*}
-\textbf{y}\sim&amp; [\textbf{y}|\boldsymbol{\mu},\sigma]\\
-[\textbf{y}|\boldsymbol{\mu},\sigma]=&amp; \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =&amp; \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta}
-\end{align*}
-\]</span></p>
 <p>No transformation is needed because the parameter support is maintained. <span class="math display">\[
 \begin{align*}
 \mu \in&amp; (-\infty,\infty)\\
@@ -1296,40 +1287,30 @@ Number of Fisher Scoring iterations: 7</code></pre>
 <pre><code>[1] 1</code></pre>
 </div>
 </div>
-</section>
-<section id="evaluate-sampling-distributions-2" class="slide level2">
-<h2>Evaluate Sampling Distributions</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="co"># Probability of estimating the slope 2x the truth</span></span>
-<span id="cb46-2"><a></a>    <span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;</span><span class="dv">2</span><span class="sc">*</span>beta[<span class="dv">2</span>]))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.013</code></pre>
-</div>
-</div>
-</section>
-<section id="evaluate-sampling-distributions-3" class="slide level2">
-<h2>Evaluate Sampling Distributions</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="co"># Probability of estimating the slope within 1</span></span>
-<span id="cb48-2"><a></a><span class="fu">length</span>(<span class="fu">which</span>(coef.est[<span class="dv">2</span>,]<span class="sc">&gt;=</span>beta[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span> <span class="sc">&amp;</span> coef.est[<span class="dv">2</span>,]<span class="sc">&lt;=</span>beta[<span class="dv">2</span>]<span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span>n.sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.741</code></pre>
-</div>
-</div>
+<!-- ## Evaluate Sampling Distributions -->
+<!-- ```{r, eval=TRUE, echo=TRUE}   -->
+<!-- # Probability of estimating the slope 2x the truth -->
+<!--     length(which(coef.est[2,]>2*beta[2]))/n.sim -->
+<!-- ``` -->
+<!-- ## Evaluate Sampling Distributions -->
+<!-- ```{r, eval=TRUE, echo=TRUE}   -->
+<!-- # Probability of estimating the slope within 1 -->
+<!-- length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim -->
+<!-- ``` -->
 </section>
 <section id="logistic-regression-biased-correction" class="slide level2 scrollable">
 <h2>Logistic Regression Biased Correction</h2>
 <p>brglm: Bias Reduction in Binomial-Response Generalized Linear Models</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a>brglm<span class="sc">::</span><span class="fu">brglm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a>brglm<span class="sc">::</span><span class="fu">brglm</span>(y<span class="sc">~</span><span class="dv">0</span><span class="sc">+</span>X, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="co"># Relative Bias</span></span>
-<span id="cb51-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="co"># Relative Bias</span></span>
+<span id="cb47-2"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">1</span>,])<span class="sc">-</span>beta[<span class="dv">1</span>])<span class="sc">/</span>beta[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.007785692</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>  (<span class="fu">mean</span>(coef.est[<span class="dv">2</span>,])<span class="sc">-</span>beta[<span class="dv">2</span>])<span class="sc">/</span>beta[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.008799186</code></pre>
 </div>
@@ -1337,20 +1318,15 @@ Number of Fisher Scoring iterations: 7</code></pre>
 </section>
 <section id="recap" class="title-slide slide level1 center">
 <h1>Recap</h1>
-<div class="fragment">
 <ul>
-<li>GLM framework</li>
-<li>matrix notation</li>
-<li>link functions</li>
-<li>glm function</li>
-<li>categorical independent variable</li>
-<li>linear and logistic regression</li>
+<li>GLM framework: What are key components?</li>
+<li>matrix notation - why learn this?</li>
+<li>link functions - what are they?</li>
 </ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
-</div>
 </div>
 </div>
 </section>
