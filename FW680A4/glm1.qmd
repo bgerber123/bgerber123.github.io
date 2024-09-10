@@ -104,7 +104,7 @@ $$
 $$
 \begin{align*}
 \textbf{y}\sim& \text{Normal}(\boldsymbol{\mu},\sigma)\\
-\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta}) =  \textbf{X}\boldsymbol{\beta} \times 1\\
+\boldsymbol{\mu} =& \text{g}^{-1}(\textbf{X}\boldsymbol{\beta})\\
 \text{g}(\boldsymbol{\mu}) =&   \textbf{X}\boldsymbol{\beta}
 \end{align*}
 $$
@@ -129,12 +129,12 @@ y_{n}
 
 \textbf{X} =
 \begin{bmatrix}
-1 & x^{1}_1 & x^{2}_1 \\
-1 & x^{1}_2 & x^{2}_2 \\
-1 & x^{1}_3 & x^{2}_3 \\
+1 & x_{1,2} & x_{1,3} \\
+1 & x_{2,2} & x_{2,3} \\
+1 & x_{3,2} & x_{3,3} \\
 . & . .\\
 . & . .\\
-n & x^{1}_n & x^{2}_n
+n & x_{n,2} & x_{n,3}
 \end{bmatrix}
 
 \boldsymbol{\beta} = \begin{bmatrix}
@@ -145,7 +145,7 @@ n & x^{1}_n & x^{2}_n
 \end{align*}
 
 n = sample size
-x$_{1}$ & x$_{2}$ are independent variables
+x$_{2}$ & x$_{3}$ are independent variables
 
 :::
 
@@ -546,7 +546,7 @@ Computers do not like boundaries (e.g., 0 or 1). It's easier to **guess** values
 No transformation is needed because the parameter support is maintained.
 $$
 \begin{align*}
-\mu \in& (-\infty,\infty)\\
+\boldsymbol{\mu} \in& (-\infty,\infty)\\
 \textbf{X}\boldsymbol{\beta} \in& (-\infty,\infty)
 \end{align*}
 $$
@@ -880,14 +880,17 @@ brglm::brglm(y~0+X, family = binomial(link = "logit"))
   })
 ```
 
+::: {.fragment}
+
 ```{r, eval=TRUE, echo=TRUE}
 # Relative Bias
   (mean(coef.est[1,])-beta[1])/beta[1]
   (mean(coef.est[2,])-beta[2])/beta[2]
 ```
   
+:::
 
-# Recap
+## Recap
 
 -   GLM framework: What are key components?
 -   matrix notation - why learn this?
