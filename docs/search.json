@@ -6171,7 +6171,7 @@
     "href": "FW680A4/glm2.html#same-model-different-estimates-1",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   0.6549260 -1.0116009  0.1221027\nModel2  -0.3566749  1.0116009  1.1337036\nModel3   0.3584266  0.2964994 -0.7151015\nModel4   0.6549260 -0.3566749  0.7770287\n\n\nPredictions\n\n\n              1          2         3        4          5\nModel1 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel2 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel3 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\nModel4 0.654926 -0.3566749 0.7770287 0.654926 -0.3566749\n\n\nDeviance\n\n\n           [,1]\nModel1 305.7557\nModel2 305.7557\nModel3 305.7557\nModel4 305.7557"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   0.6549260 -1.0116009  0.1221027\nModel2  -0.3566749  1.0116009  1.1337036\nModel3   0.3584266  0.2964994 -0.7151015\nModel4   0.6549260 -0.3566749  0.7770287\n\n\nPredictions\n\n\n           1   2     3     4   5\nModel1 1.925 0.7 2.175 1.925 0.7\nModel2 1.925 0.7 2.175 1.925 0.7\nModel3 1.925 0.7 2.175 1.925 0.7\nModel4 1.925 0.7 2.175 1.925 0.7\n\n\nDeviance\n\n\n           [,1]\nModel1 305.7557\nModel2 305.7557\nModel3 305.7557\nModel4 305.7557"
   },
   {
     "objectID": "FW680A4/glm2.html#side-bar-negative-log-likelihood-function",

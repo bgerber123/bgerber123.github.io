@@ -343,10 +343,10 @@ c
 #### <span style="color:purple">Predictions</span>
 
 ```{r eval=TRUE,echo=FALSE}
-d=rbind(predict(model)[1:5],
-      predict(model2)[1:5],
-      predict(model3)[1:5],
-      predict(model4)[1:5]
+d=rbind(predict(model,type="response")[1:5],
+      predict(model2,type="response")[1:5],
+      predict(model3,type="response")[1:5],
+      predict(model4,type="response")[1:5]
       )
 rownames(d)=c("Model1","Model2","Model3","Model4")
 d
