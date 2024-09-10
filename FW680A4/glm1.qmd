@@ -79,7 +79,7 @@ $$
 ::: {.incremental}
 
 -   prob. function to define the RV ($\textbf{y}$)
--   parameters of the prob. function ($\boldsymbol{\mu},\sigma$)
+-   parameters or moments of the prob. function ($\boldsymbol{\mu},\sigma$)
 -   link function ($\text{g}(\boldsymbol{\mu})$); deterministic transformation of parameters to new scale
 -   inverse-link function ($\text{g}^{-1}(\boldsymbol{\textbf{X}\boldsymbol{\beta}})$); deterministic transformation of linear combination back to parameter scale
 

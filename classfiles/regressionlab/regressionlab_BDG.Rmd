@@ -90,7 +90,7 @@ equatiomatic::extract_eq(model, use_coefs = TRUE)
 
 **Better Model Notation:**
 
-For each i$^th$ elephant, we define out model as,
+For each i$^{th}$ elephant, we define out model as,
 
 $$
 \begin{align*}
@@ -101,7 +101,7 @@ $$
 
 <br>
 
-I found the average weight of elephants at the equator (`lat = 0`) was `r as.integer(summary(model)$coefficients[1,1])` lbs. The effect of age on weight was statistically unclear (p = `r round(summary(model)$coefficients[2,4],digits = 2)`), not supporting my hypothesis. The estimated effect was relatively small and negative $\hat{\beta_{1}} =$ `r round(model$coefficients[2],digits=2)`, 95% CI = `r round(confint(model)[2,],digits=2)`. I found a statistically clear effect of latitude (p = `r round(summary(model)$coefficients[3,4],digits=4)`) with an estimated effect $\hat{\beta_{2}} =$ `r round(model$coefficients[3],digits=2)`, 95% CI = `r `round(confint(model)[3,],digits=2)`. However, this does not support my hypothesis that elephants would weigh more the further north they lived. Instead, we see that weights decreas with increasing latitude. 
+I found the average weight of elephants at the equator (`lat = 0`) was `r as.integer(summary(model)$coefficients[1,1])` lbs. The effect of age on weight was statistically unclear (p = `r round(summary(model)$coefficients[2,4],digits = 2)`), not supporting my hypothesis. The estimated effect was relatively small and negative $\hat{\beta_{1}} =$ `r round(model$coefficients[2],digits=2)`, 95% CI = `r round(confint(model)[2,],digits=2)`. I found a statistically clear effect of latitude (p = `r round(summary(model)$coefficients[3,4],digits=4)`) with an estimated effect $\hat{\beta_{2}} =$ `r round(model$coefficients[3],digits=2)`, 95% CI = `r round(confint(model)[3,],digits=2)`. However, this does not support my hypothesis that elephants would weigh more the further north they lived. Instead, we see that weights decreas with increasing latitude. 
 
 
 ### Predictions

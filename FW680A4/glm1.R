@@ -176,16 +176,6 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   length(which(coef.est[2,]>0))/n.sim
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
-# Probability of estimating the slope 2x the truth
-    length(which(coef.est[2,]>2*beta[2]))/n.sim
-
-
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
-# Probability of estimating the slope within 1
-length(which(coef.est[2,]>=beta[2]-1 & coef.est[2,]<=beta[2]+1))/n.sim
-
-
 ## ----eval=FALSE, echo=TRUE----------------------------------------------------------------------------------------------------------------------
 ## brglm::brglm(y~0+X, family = binomial(link = "logit"))
 
