@@ -525,6 +525,16 @@ summary(m3)
 
 #### Continuous and Categorical
 
+```{r,echo=TRUE,eval=TRUE}
+head(model.matrix(~site*herb.cover,data=dat))
+```
+
+
+
+## Interaction {.scrollable}
+
+#### Continuous and Categorical
+
 ```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
 marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
 ```

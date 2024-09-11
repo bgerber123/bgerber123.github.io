@@ -6339,7 +6339,7 @@
     "href": "FW680A4/glm2.html#interaction-1",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Categorical\n\nmarginaleffects::plot_predictions(m3,condition=c(\"herb.cover\",\"site\"))"
+    "text": "Interaction\nContinuous and Categorical\n\nhead(model.matrix(~site*herb.cover,data=dat))\n\n  (Intercept) siteSite 2 siteSite 3  herb.cover siteSite 2:herb.cover\n1           1          0          0 -0.22630093            0.00000000\n2           1          1          0  0.02221148            0.02221148\n3           1          0          1 -1.01517375            0.00000000\n4           1          0          0  1.18038309            0.00000000\n5           1          1          0 -2.04470642           -2.04470642\n6           1          0          1  2.44433686            0.00000000\n  siteSite 3:herb.cover\n1              0.000000\n2              0.000000\n3             -1.015174\n4              0.000000\n5              0.000000\n6              2.444337"
   },
   {
     "objectID": "FW680A4/glm2.html#data-1",
@@ -7331,6 +7331,13 @@
   {
     "objectID": "FW680A4/glm2.html#interaction-2",
     "href": "FW680A4/glm2.html#interaction-2",
+    "title": "Generalized Linear Models II ",
+    "section": "Interaction",
+    "text": "Interaction\nContinuous and Categorical\n\nmarginaleffects::plot_predictions(m3,condition=c(\"herb.cover\",\"site\"))"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#interaction-3",
+    "href": "FW680A4/glm2.html#interaction-3",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
     "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))\nm4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
