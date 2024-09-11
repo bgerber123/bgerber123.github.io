@@ -515,10 +515,17 @@ marginaleffects::plot_predictions(m2,
 
 #### Continuous and Categorical
 
-
 ```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
 m3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))
 m3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))
+summary(m3)
+```
+
+## Interaction {.scrollable}
+
+#### Continuous and Categorical
+
+```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
 marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
 ```
 

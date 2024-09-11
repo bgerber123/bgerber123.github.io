@@ -6290,7 +6290,7 @@
     "href": "FW680A4/glm2.html#interaction",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Categorical\n\nm3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))\nm3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m3,condition=c(\"herb.cover\",\"site\"))"
+    "text": "Interaction\nContinuous and Categorical\n\nm3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))\nm3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))\nsummary(m3)\n\n\nCall:\nglm(formula = y ~ site + herb.cover + site:herb.cover, family = poisson(link = \"log\"), \n    data = dat)\n\nCoefficients:\n                      Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)             0.2495     0.1609   1.551   0.1209    \nsiteSite 2             -0.6522     0.2561  -2.546   0.0109 *  \nsiteSite 3              0.4728     0.1987   2.379   0.0174 *  \nherb.cover             -0.9102     0.1626  -5.597 2.18e-08 ***\nsiteSite 2:herb.cover   1.1299     0.2665   4.240 2.24e-05 ***\nsiteSite 3:herb.cover   1.0650     0.1948   5.466 4.61e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 267.16  on 114  degrees of freedom\nAIC: 463.74\n\nNumber of Fisher Scoring iterations: 6"
   },
   {
     "objectID": "FW680A4/glm2.html#polynomial",
@@ -6339,7 +6339,7 @@
     "href": "FW680A4/glm2.html#interaction-1",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))\nm4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
+    "text": "Interaction\nContinuous and Categorical\n\nmarginaleffects::plot_predictions(m3,condition=c(\"herb.cover\",\"site\"))"
   },
   {
     "objectID": "FW680A4/glm2.html#data-1",
@@ -7327,5 +7327,12 @@
     "title": "Generalized Linear Models",
     "section": "Recap",
     "text": "Recap\n\nGLM framework: What are key components?\nmatrix notation - why learn this?\nlink functions - what are they?"
+  },
+  {
+    "objectID": "FW680A4/glm2.html#interaction-2",
+    "href": "FW680A4/glm2.html#interaction-2",
+    "title": "Generalized Linear Models II ",
+    "section": "Interaction",
+    "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))\nm4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
   }
 ]

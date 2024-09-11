@@ -962,43 +962,75 @@ Model4 305.7557</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>m3 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">*</span>herb.cover,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
 <span id="cb60-2"><a></a>m3 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">+</span>herb.cover<span class="sc">+</span>site<span class="sc">:</span>herb.cover,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb60-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m3,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"herb.cover"</span>,<span class="st">"site"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb60-3"><a></a><span class="fu">summary</span>(m3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = y ~ site + herb.cover + site:herb.cover, family = poisson(link = "log"), 
+    data = dat)
 
+Coefficients:
+                      Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)             0.2495     0.1609   1.551   0.1209    
+siteSite 2             -0.6522     0.2561  -2.546   0.0109 *  
+siteSite 3              0.4728     0.1987   2.379   0.0174 *  
+herb.cover             -0.9102     0.1626  -5.597 2.18e-08 ***
+siteSite 2:herb.cover   1.1299     0.2665   4.240 2.24e-05 ***
+siteSite 3:herb.cover   1.0650     0.1948   5.466 4.61e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 341.36  on 119  degrees of freedom
+Residual deviance: 267.16  on 114  degrees of freedom
+AIC: 463.74
+
+Number of Fisher Scoring iterations: 6</code></pre>
 </div>
-<img data-src="glm2_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+</div>
+</section>
 <section id="interaction-1" class="slide level2 scrollable">
 <h2>Interaction</h2>
-<h4 id="continuous-and-continuous-1">Continuous and Continuous</h4>
+<h4 id="continuous-and-categorical-2">Continuous and Categorical</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>m4 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>herb.cover<span class="sc">*</span>dist.trail,<span class="at">data=</span>dat, <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb61-2"><a></a>m4 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>herb.cover<span class="sc">+</span>dist.trail<span class="sc">+</span>herb.cover<span class="sc">:</span>dist.trail,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb61-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m4, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"herb.cover"</span>,<span class="st">"dist.trail"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m3,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"herb.cover"</span>,<span class="st">"site"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="glm2_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
+<section id="interaction-2" class="slide level2 scrollable">
+<h2>Interaction</h2>
+<h4 id="continuous-and-continuous-1">Continuous and Continuous</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>m4 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>herb.cover<span class="sc">*</span>dist.trail,<span class="at">data=</span>dat, <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb63-2"><a></a>m4 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>herb.cover<span class="sc">+</span>dist.trail<span class="sc">+</span>herb.cover<span class="sc">:</span>dist.trail,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb63-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m4, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"herb.cover"</span>,<span class="st">"dist.trail"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="glm2_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
 <section id="polynomial" class="slide level2 scrollable">
 <h2>Polynomial</h2>
 <h4 id="quadratic">Quadratic</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb62-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb62-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"link"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb64-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb64-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"link"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb63-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb63-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="fu">poly</span>(dist.trail,<span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb65-2"><a></a>m5 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>dist.trail<span class="sc">+</span><span class="fu">I</span>(dist.trail<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
+<span id="cb65-3"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(m5,<span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.trail"</span>),<span class="at">type=</span><span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+<p><img data-src="glm2_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
 </figure>
 </div>
 </div>
