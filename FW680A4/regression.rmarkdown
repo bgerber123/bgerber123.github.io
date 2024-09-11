@@ -8,6 +8,7 @@ format:
     multiplex: true
 ---
 
+
 ## Objectives
 
 <!-- knitr::purl("./FW680A4/regression.qmd", output="./classfiles/regressionlab/regression.R") -->
@@ -20,6 +21,7 @@ format:
 
 ## 
 
+
 ```{=html}
 
 <br>
@@ -29,6 +31,7 @@ format:
 <br>
 <center><span style="color:#C70039; font-size: 65px;";><b>Fundamental Idea</b></span></center>
 ```
+
 
 ## Why model data?
 
@@ -46,6 +49,7 @@ In ecology, we use models to,
 ::: 
 
 ## Linear Regression (motivation)
+
 ```{r, echo=FALSE,eval=TRUE}
   n = 1000
   b0 = 10
@@ -56,6 +60,7 @@ In ecology, we use models to,
   
   plot(x,y,xlim=c(0,70))
 ```
+
 
 ## Linear Regression (Equation)
 
@@ -75,6 +80,7 @@ $$
 \hat{\mu_{i}} = 9.06 + 2\times x_i
 $$
 
+
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
 #" (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
@@ -86,10 +92,12 @@ legend("topleft",col=c("green"),lty=2,legend=c("Mean"),lwd=4)
 
 ```
 
+
 ## Linear Regression Line 2 
 $$
 \hat{\mu_{i}} = 9.06 + 2\times x_i
 $$
+
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
@@ -106,10 +114,12 @@ legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","95% Confidence Int
 
 ```
 
+
 ## Linear Regression Line 3 
 $$
 \hat{\mu_{i}} = 9.06 + 2\times x_i
 $$
+
 
 ```{r,echo=FALSE,eval=TRUE, fig.align='center',width="1000"}
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
@@ -130,7 +140,9 @@ matlines(newx, pred_interval[,2:3], col = "purple", lty=2,lwd=4)
 legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confidence Interaval (mean)", "95% Prediction Interval (data)"),lwd=4)
 
 ```
+
 ## Residuals
+
 
 ```{r}
 library(ggplot2)
@@ -143,6 +155,7 @@ ggplot(m1, aes(x, y)) +
   geom_segment(aes(xend = x, yend = .fitted), color = "red", size = 0.3)+theme_base()
 
 ```
+
 
 
 <!-- ## Visual -->
@@ -158,6 +171,7 @@ y_{i} \sim& \text{Normal}(\mu_{i},\sigma) \\
 \mu_{i} =& 1 + 0.5 \times x_{i}
 \end{align*}
 $$
+
 
 
 
@@ -189,6 +203,7 @@ $$
 ```
 
 
+
 ## Sampling Distributions of y
 
 $$
@@ -197,12 +212,12 @@ $$
 \end{align*}
 $$
 
+
 ```{r, eval=TRUE, echo=FALSE, cache=TRUE}
 #sample many times  
   y.many = replicate(1000,rnorm(length(mu),mu, sigma))
 #  dim(y.many)
 ```
-
 
 ```{r, eval=TRUE, echo=FALSE}
 #plot all samples with true mu
@@ -216,6 +231,7 @@ $$
 ```
 
 
+
 ## Sampling Distributions of $\hat{\mu}$
 
 $$
@@ -223,6 +239,7 @@ $$
 \mu_{i} = 1 + 0.5 \times x_{i}
 \end{align*}
 $$
+
 
 ```{r, eval=TRUE, echo=FALSE}
 temp.x=x
@@ -242,7 +259,9 @@ legend("bottomright",lwd=3, col=c(2,grDevices::adjustcolor("black",alpha.f = 0.0
 
 
 
+
 ## 
+
 
 ```{=html}
 
@@ -253,6 +272,7 @@ legend("bottomright",lwd=3, col=c(2,grDevices::adjustcolor("black",alpha.f = 0.0
 <br>
 <center><span style="color:#C70039; font-size: 65px;";><b>Assumptions</b></span></center>
 ```
+
 
 
 ## Assumptions
@@ -277,6 +297,7 @@ Constancy in the scatter of observations above and below the line, going left to
 
 
 :::{.fragment}
+
 ```{r,eval=TRUE,echo=FALSE, width = 200}
 
 n = 1000
@@ -289,11 +310,13 @@ y = rnorm(n,mu,sd=30)
 plot(x,y,xlim=c(0,70))
 
 ```
+
 :::
 
 ## Assumptions
 
 #### Heteroskedasticity
+
 
 
 ```{r,eval=TRUE,echo=FALSE,fig.align='center'}
@@ -310,6 +333,7 @@ y = rnorm(n,mu,sd=sigma)
 plot(x,y,xlim=c(0,70))
 
 ```
+
 
 
 ## Assumptions
@@ -364,6 +388,7 @@ Linearity and constant variance are often more important than the assumption of 
 
 ## 
 
+
 ```{=html}
 
 <br>
@@ -373,6 +398,7 @@ Linearity and constant variance are often more important than the assumption of 
 <br>
 <center><span style="color:#C70039; font-size: 65px;";><b>lm and glm </b></span></center>
 ```
+
 
 
 ## Intercept-Only Model
@@ -386,6 +412,7 @@ $$
 
 #### Generate Data
 
+
 ```{r,eval=TRUE,echo=TRUE,fig.align='center'}
 #Setup parameters
   n = 100 # sample size
@@ -397,15 +424,19 @@ $$
   y = rnorm(n, mean = beta0, sd = sigma)
 ```  
 
+
 :::
 
 ## Visualize Intercept-Only Model
+
 
 ```{r,eval=TRUE,echo=TRUE,fig.align='center'}
   hist(y)
 ```  
 
+
 ## Fit Intercept-Only Model 
+
 
 ```{r,eval=TRUE,echo=TRUE}
 # Fit model/hypothesis using maximum likelihood
@@ -423,7 +454,9 @@ $$
             )
 ```
 
+
 ## Fit Intercept-Only Model 
+
 
 ```{r,eval=TRUE,echo=TRUE}
     
@@ -432,7 +465,9 @@ $$
 ```
 
 
+
 ## Fitted-values {.scrollable}
+
 
 ```{r,eval=TRUE,echo=TRUE}
 #Predict response for all data
@@ -440,7 +475,9 @@ $$
   preds
 ```  
 
+
 ## 
+
 
 ```{=html}
 
@@ -451,6 +488,7 @@ $$
 <br>
 <center><span style="color:#C70039; font-size: 65px;";><b>Confidence Intervals </b></span></center>
 ```
+
 
 ## What is a CI?
 
@@ -489,6 +527,7 @@ The success rate (proportion of all samples whose intervals contain the paramete
 ## Confidence Intervals 
 #### Normal Approximation
 
+
 ```{r,eval=TRUE,echo=TRUE}
 # Get 90% confidence intervals (Type I error = 0.1)
   c(
@@ -497,11 +536,14 @@ The success rate (proportion of all samples whose intervals contain the paramete
    )
 ```
 
+
 :::{.fragment}
+
 ```{r,eval=TRUE,echo=TRUE}
   CI.Normal=confint(model1.0, level=0.9)
   CI.Normal
 ```
+
 :::  
   
 
@@ -529,6 +571,7 @@ See, [Stats4Ecologists](https://fw8051statistics4ecologists.netlify.app/boot.htm
 
 ## Bootstrapping (code)
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 
 # Setup
@@ -545,13 +588,17 @@ for(i in 1:nboot){
   bootcoefs[i] <- coef(glmboot)
 }
 ```  
+
 ## Bootstrapping (code)
+
 ```{r}
 par(mfrow = c(1, 1))
 hist(bootcoefs, main = expression(paste("Bootstrap distribution of ", hat(beta)[0])), xlab = "")
 ```
 
+
 ## Bootstrapping (code)
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
 # Calculate bootstrap standard errors
   boot.se = sd(bootcoefs)
@@ -567,7 +614,9 @@ confdat.boot.pct <- quantile(bootcoefs, probs = c(0.05, 0.95))
 
 ```
 
+
 ## Comparison
+
 
 ```{r, eval=TRUE, echo=FALSE}
 confdata <- data.frame(LCL=c(boot.normal[1],CI.Normal[1],confdat.boot.pct[1]),
@@ -585,7 +634,9 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 
 
 
+
 ## 
+
 
 ```{=html}
 
@@ -598,7 +649,9 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 ```
 
 
+
 ## Prairie Dog Calling {.scrollable}
+
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
 n = 100
@@ -624,6 +677,7 @@ dat = data.frame(y=y,
                  )
 ```
 
+
 ![](/img/pdog.png){fig-align="center" width="1200"}
 
  y = # of calls per 5 minute at a prairie dog colony
@@ -634,27 +688,34 @@ dat = data.frame(y=y,
 
 ::: {.fragment}
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   head(dat)
 ```
 
+
 ::: 
 
 ## Exploratory {.scrollable}
+
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
   hist(dat$y)
   hist(dat$temp)
   hist(dat$dist.human)
 ```
+
 ## Model Fitting 1
+
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   model = lm(y ~ temp+dist.human, data=dat)
   summary(model)
 ```
 
+
 ## Model Notation 1
+
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
 equatiomatic::extract_eq(model)
@@ -663,33 +724,41 @@ equatiomatic::extract_eq(model, use_coefs = TRUE)
 ```
 
 
+
 ## Model Fitting 2
 
 Mean-center the intercept. Slopes do not change.
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
   summary(model)
 ```
 
 
+
 ## Normalizing x
 
 Mean-center and standardize by std. deviation
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   dat$temp.sc = scale(dat$temp, center=TRUE, scale = TRUE)
   dat$dist.sc = scale(dat$dist.human, center=TRUE, scale = TRUE)
 ```
 
+
 :::{.fragment}
+
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   mean(dat$temp.sc)
   sd(dat$temp.sc)
 ```
 
+
 :::
 
 ## Comparison
+
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
   par(mfrow=c(1,2))
@@ -699,6 +768,7 @@ Mean-center and standardize by std. deviation
 ```
 
 
+
 ## Model Fitting 3 {.scrollable}
 
 What does the slope mean now?
@@ -706,10 +776,12 @@ What does the slope mean now?
 $$
 \mu_{i} = \beta_0 + \beta_1 \times 1 + \beta_2 \times 0
 $$
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
   model = lm(y ~ temp.sc + dist.sc, data=dat)
   summary(model)
 ```
+
 
 
 
@@ -720,6 +792,7 @@ $$
 \hat{\mu_{i}} = \hat{\beta_{0}} + \hat{\beta_{1}}\times 0 +  \hat{\beta_{2}} \times \text{dist.human}_i
 $$
 
+
 ```{r, echo=FALSE,eval=TRUE}
 model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
 ```
@@ -729,7 +802,9 @@ model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
   marginaleffects::plot_predictions(model, condition=c("dist.human"))
 ```
 
+
 ## Add data points
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
 # Plot marginal predictions of dist.human
   plot1 = marginaleffects::plot_predictions(model, condition=c("dist.human"))
@@ -737,13 +812,17 @@ model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
 ```
 
 
+
 ## Combined Predictions
+
 
 `````{r, echo=TRUE, include=TRUE, eval=TRUE}  
 marginaleffects::plot_predictions(model, condition=list("temp","dist.human"))
 `````
 
+
 ## Combined Predictions
+
 
 `````{r, echo=TRUE, include=TRUE, eval=TRUE}  
 marginaleffects::plot_predictions(model, condition=list("temp","dist.human" = 0:5))
@@ -751,7 +830,9 @@ marginaleffects::plot_predictions(model, condition=list("temp","dist.human" = 0:
 
 
 
+
 ## Taking Control 
+
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
 newdata = expand.grid(dat$temp,0:5)
@@ -762,7 +843,9 @@ preds = predict(model,newdata = newdata,interval="confidence", level=0.95)
 pred.plot = data.frame(newdata,preds)
 ```
 
+
 ## Combined Predictions 2 {.scrollable}
+
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
 
 ggplot(data=pred.plot) +
@@ -775,14 +858,17 @@ ggplot(data=pred.plot) +
 
 
 
+
 ## Evaluating Assumptions
 ### Largely done based on the residuals
 
 $y_{i} - \hat{y}_{i}$
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
 hist(model$residuals)
 ```
+
 
 
 <!-- ## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r) -->
@@ -792,30 +878,37 @@ hist(model$residuals)
 
 ## Linearity Assumption
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
 plot(model,1)
 ```
+
 Ideally, there will be no pattern and the red line should be roughly horizontal near zero.
 
 
 ## Homogeneity of Variance
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
 plot(model,3)
 ```
+
 
 Residuals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity).
 
 
 ## Normality of Residuals
 
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
 plot(model,2)
 ```
 
+
 Shows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line.
 
 ## Outliers
+
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'}  
 par(mfrow=c(1,2))
@@ -823,14 +916,18 @@ plot(model,4)
 plot(model,5)
 ```
 
+
 Outlier: extreme value that can affect the $\beta$ estimate. Leverage plot: points in the upper right and lower right corner. 
 
 ## Exploring Assumptions {.scrollable}
 
 Nicer looking Plots
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
 library(ggResidpanel)
 resid_panel(model)
 ```
 
+
 ## Go to Lab
+

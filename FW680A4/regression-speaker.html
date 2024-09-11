@@ -862,20 +862,20 @@ $residual.scale
 <section id="prairie-dog-calling" class="slide level2 scrollable">
 <h2>Prairie Dog Calling</h2>
 
-<img data-src="..\img/pdog.png" class="quarto-figure quarto-figure-center r-stretch" width="1200"><p>y = # of calls per 5 minute</p>
+<img data-src="..\img/pdog.png" class="quarto-figure quarto-figure-center r-stretch" width="1200"><p>y = # of calls per 5 minute at a prairie dog colony near recreational trails</p>
 <p>temp = temperature, degrees F</p>
-<p>dist.center = location from center of colony</p>
+<p>dist.human = distance of nearest human activity to colony</p>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>  <span class="fu">head</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>           y     temp dist.center
-1 0.38129119 39.96298    11.75578
-2 0.57770546 47.95317    14.63583
-3 0.00347806 56.13182    22.89228
-4 0.00000000 29.76491    21.14168
-5 2.67643282 40.25998    32.41442
-6 1.71519689 38.31469    35.99573</code></pre>
+<pre><code>           y     temp dist.human
+1 0.38129119 39.96298   11.75578
+2 0.57770546 47.95317   14.63583
+3 0.00347806 56.13182   22.89228
+4 0.00000000 29.76491   21.14168
+5 2.67643282 40.25998   32.41442
+6 1.71519689 38.31469   35.99573</code></pre>
 </div>
 </div>
 </div>
@@ -909,12 +909,12 @@ $residual.scale
 <section id="model-fitting-1" class="slide level2">
 <h2>Model Fitting 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp<span class="sc">+</span>dist.center, <span class="at">data=</span>dat)</span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp<span class="sc">+</span>dist.human, <span class="at">data=</span>dat)</span>
 <span id="cb17-2"><a></a>  <span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = y ~ temp + dist.center, data = dat)
+lm(formula = y ~ temp + dist.human, data = dat)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
@@ -924,7 +924,7 @@ Coefficients:
              Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept) -8.312197   1.074281  -7.737 9.65e-12 ***
 temp         0.156393   0.024605   6.356 6.75e-09 ***
-dist.center  0.036010   0.003388  10.629  &lt; 2e-16 ***
+dist.human   0.036010   0.003388  10.629  &lt; 2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -940,13 +940,13 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
-\operatorname{y} = \alpha + \beta_{1}(\operatorname{temp}) + \beta_{2}(\operatorname{dist.center}) + \epsilon
+\operatorname{y} = \alpha + \beta_{1}(\operatorname{temp}) + \beta_{2}(\operatorname{dist.human}) + \epsilon
 \]</span></p>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model, <span class="at">use_coefs =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
-\operatorname{\widehat{y}} = -8.31 + 0.16(\operatorname{temp}) + 0.04(\operatorname{dist.center})
+\operatorname{\widehat{y}} = -8.31 + 0.16(\operatorname{temp}) + 0.04(\operatorname{dist.human})
 \]</span></p>
 </div>
 </div>
@@ -955,12 +955,12 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Model Fitting 2</h2>
 <p>Mean-center the intercept. Slopes do not change.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">I</span>(temp <span class="sc">-</span> <span class="fu">mean</span>(temp)) <span class="sc">+</span> dist.center, <span class="at">data=</span>dat)</span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">I</span>(temp <span class="sc">-</span> <span class="fu">mean</span>(temp)) <span class="sc">+</span> dist.human, <span class="at">data=</span>dat)</span>
 <span id="cb21-2"><a></a>  <span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = y ~ I(temp - mean(temp)) + dist.center, data = dat)
+lm(formula = y ~ I(temp - mean(temp)) + dist.human, data = dat)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
@@ -970,7 +970,7 @@ Coefficients:
                      Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept)          2.614311   0.895284   2.920  0.00435 ** 
 I(temp - mean(temp)) 0.156393   0.024605   6.356 6.75e-09 ***
-dist.center          0.036010   0.003388  10.629  &lt; 2e-16 ***
+dist.human           0.036010   0.003388  10.629  &lt; 2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -985,7 +985,7 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Mean-center and standardize by std. deviation</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  dat<span class="sc">$</span>temp.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>temp, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.center, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.human, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -1039,34 +1039,34 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="marginal-predictions" class="slide level2">
 <h2>Marginal Predictions</h2>
 <p><span class="math display">\[
-\hat{\mu_{i}} = \hat{\beta_{0}} + \hat{\beta_{1}}\times 0 +  \hat{\beta_{2}} \times \text{dist.center}_i
+\hat{\mu_{i}} = \hat{\beta_{0}} + \hat{\beta_{1}}\times 0 +  \hat{\beta_{2}} \times \text{dist.human}_i
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="co"># Plot marginal predictions of dist.center</span></span>
-<span id="cb30-2"><a></a>  marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.center"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
+<span id="cb30-2"><a></a>  marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
 <section id="add-data-points" class="slide level2">
 <h2>Add data points</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="co"># Plot marginal predictions of dist.center</span></span>
-<span id="cb31-2"><a></a>  plot1 <span class="ot">=</span> marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.center"</span>))</span>
-<span id="cb31-3"><a></a>  plot1<span class="sc">+</span><span class="fu">geom_point</span>(<span class="at">data=</span>dat, <span class="fu">aes</span>(<span class="at">x=</span>dist.center,<span class="at">y=</span>y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
+<span id="cb31-2"><a></a>  plot1 <span class="ot">=</span> marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span>
+<span id="cb31-3"><a></a>  plot1<span class="sc">+</span><span class="fu">geom_point</span>(<span class="at">data=</span>dat, <span class="fu">aes</span>(<span class="at">x=</span>dist.human,<span class="at">y=</span>y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
 <section id="combined-predictions" class="slide level2">
 <h2>Combined Predictions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.center"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
 <section id="combined-predictions-1" class="slide level2">
 <h2>Combined Predictions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.center"</span> <span class="ot">=</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span> <span class="ot">=</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
@@ -1074,7 +1074,7 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Taking Control</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>newdata <span class="ot">=</span> <span class="fu">expand.grid</span>(dat<span class="sc">$</span>temp,<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb34-2"><a></a><span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"temp"</span>,<span class="st">"dist.center"</span>)</span>
+<span id="cb34-2"><a></a><span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>)</span>
 <span id="cb34-3"><a></a></span>
 <span id="cb34-4"><a></a>preds <span class="ot">=</span> <span class="fu">predict</span>(model,<span class="at">newdata =</span> newdata,<span class="at">interval=</span><span class="st">"confidence"</span>, <span class="at">level=</span><span class="fl">0.95</span>)</span>
 <span id="cb34-5"><a></a></span>

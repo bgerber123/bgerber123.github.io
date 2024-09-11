@@ -77,21 +77,32 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 
 ### Co-lead Discussion
 
-- Students will be paired and assigned a topic (e.g., mark-recapture). 
+- Students will be grouped and assigned a topic (e.g., mark-recapture). 
 
-- They will pick an application paper (ideally) or methods paper (if desired) that is published on the assigned topic. 
+- Each group should pick an application paper (ideally) or methods paper (if desired) that is published on the assigned topic for the class to read. 
 
-- Send the paper to me via email **2 weeks** before the topic is listed on the <a href="schedule.qmd">Schedule</a>; I will then post the paper on the website the class prior to the discussion date.
+- Please send the paper (pdf) to me via email **2 weeks** before the topic is listed on the <a href="schedule.qmd">Schedule</a>; I will then post the paper on the website under the class prior to the discussion date.
 
-- Come prepared to lead the discussion on the paper for (20-25 minutes). Assign questions for us to focus on or come prepared with questions to lead the discussion. Generally focus on things like...
+- The group should come prepared to lead the discussion on the paper for (20-25 minutes). Assign questions for us to focus on or come prepared with questions to lead the discussion. Generally focus on things like...
 
-  - the statistical model definition
+  - what is the statistical model
+  - did the authors define it clearly or reference another paper
   - the type of data that is relevant
   - how the sampling was achieved
   - the inference/prediction that was sought
   - how the model was used to answer the fundamental research question
-  - nuisance of issues of concern in the modeling or sampling
+  - nuisances of issues of concern in the modeling or sampling
+  - try and connect principles/stastistics in the paper to what we have been doing in the class
 
+
+## Assigned Groups
+
+**Species Distribution Model (10/8):** 		Libby Mojica, Travis Rainey		
+**Mark Recapture (10/11):**		Alex Badeaux, Noel Clark, Elke Tukker		
+**N mixture or Integrated Data Models (10/22):**	Sarah Gaulke, Sean Ingram		
+**Animal Movement (10/25):**		Jeremy Alder, Becca Windell		
+**Habitat Selection (11/1):**		Waverly Davis,  Lisa Roerk		
+**Community Modeling (11/12):**		Cat Adams, Bijoya Paul		
 
 
 ### Project
