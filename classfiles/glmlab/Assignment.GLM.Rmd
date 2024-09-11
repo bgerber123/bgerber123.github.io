@@ -18,10 +18,10 @@ pre{
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: Create a report using Markdown that presents code, results, and summarized findings that uses pilot study data to then inform an evaluation of a study design to monitor Canada lynx (*Lynx canadensis*) in the southern Rocky Mountains.
+### **Objective**: Create a report using Markdown that presents code, results, and summarized findings that evaluates a hypothesis reagarding the occurence of lynx (*Lynx canadensis*) in the southern Rocky Mountains.
 
 ### **Overview**
-A colleague sampled the occurrence (0 or 1) of Canada lynx at 75 grid cells using camera-traps. They are interested in you helping 1) fit a model to estimate the occurrence probability of lynx and investigate the influence of two variables, and 2) inform future study design scenarios. 
+A colleague sampled the occurrence (0 or 1) of Canada lynx at 75 grid cells using camera-traps. They are interested in you helping fit a model to estimate the occurrence probability of lynx and evaluate their hypothesis.
 
 <p align="center">
 <img src="lynx.png" alt="drawing" width="450"/>
@@ -34,23 +34,9 @@ A colleague used camera traps to sample whether a lynx was present  (1) or assum
 
 #### *To do*
 
-Fit the data (`lynx.data.csv`) using a model that captures the hypothesis of your colleague.
+Fit the data (`lynx.data.csv`) using a single model that allows you to evaluate the hypothesis of your colleague.
 
-- interpret coefficients (what they mean and their units)
-- make prediction plots
-- summarize results
-
-### Study Design Evaluation
-
-Your colleague would like these data to inform them on whether they can sample less grid cells/sites in the future. They specifically want to know whether sampling at only 50 sites provides them enough statistical power to be confident that they will reject the null hypothesis of no difference with zero for each of the estimated coefficient at a type I error rate of 0.05. The power they want to achieve is 0.80 probability. Note - in a simulation context - think of getting the sampling distribution of the p-value for each coefficient and evaluating whether the proportion of p-values is greater than or equal to 0.80. 
-
-#### *To do*
-
-Use the estimated coefficients to simulate many data sets (>1000) for a sample of sites of 50. Fit each data set using the same model as you used to fit the empirical data. Extract the p-value of each coefficient to evaluate whether there is adequate statistical power based on your colleagues desire.
-
-- simulate many datasets
-- fit the same model to each dataset
-- calculate statistical power
-- summarize results and inform your colleague one what they need to know
-
-<br>
+- interpret coefficients (what they mean exactly)
+- make prediction plot(s)
+- summarize results and evaluate hypothesis support or not
+- provide any nuance in findings that are outside of the core hypothesis
