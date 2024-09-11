@@ -34,7 +34,7 @@ write.csv(lynx.data, file="lynx.data.csv")
 #simulation
 n.sim=2000
 
-n = 75
+n = 150
 dist.road2 = rnorm(n)
 cover2 = rnorm(n)
 
@@ -52,7 +52,6 @@ dim(y)
 fit = apply(y,2,FUN=function(x){
   m = brglm::brglm(x~dist.road2*cover2, family = binomial(link="logit"))
   
-  m
   c(summary(m)$coef[2,4],
   summary(m)$coef[3,4],
   summary(m)$coef[4,4],

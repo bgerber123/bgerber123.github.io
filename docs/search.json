@@ -5429,7 +5429,7 @@
     "href": "FW680A4/regression.html#prairie-dog-calling",
     "title": "Linear Regression",
     "section": "Prairie Dog Calling",
-    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute at a prairie dog colony near recreational trails\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
+    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
   },
   {
     "objectID": "FW680A4/regression.html#exploratory",
