@@ -534,14 +534,13 @@
 <h2>Partial Pooling (Hierarhical Model)</h2>
 
 <img data-src="..\img/mouse5.png" class="r-stretch"></section>
-<section id="latent-state" class="slide level2">
+<section id="latent-state" class="slide level2 scrollable">
 <h2>Latent State</h2>
-
-<img data-src="..\img/occupancy0.png" class="r-stretch"></section>
-<section id="latent-state-1" class="slide level2">
-<h2>Latent State</h2>
-
-<img data-src="..\img/occupancy1.png" class="r-stretch"></section>
+<center>
+<img data-src="..\img/obs.latent.cube.png" style="width:50.0%">
+</center>
+<p><img data-src="..\img/occupancy1.png" style="width:75.0%"></p>
+</section>
 <section id="section" class="slide level2">
 <h2></h2>
 
@@ -822,8 +821,9 @@ Conditional model:
 <p><br></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#A typical site</span></span>
-<span id="cb26-2"><a></a><span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>,<span class="at">re.form=</span><span class="cn">NA</span>)[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#A typical site (non an average site)</span></span>
+<span id="cb26-2"><a></a><span class="co"># Done by setting the random effect mean to 0</span></span>
+<span id="cb26-3"><a></a><span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>,<span class="at">re.form=</span><span class="cn">NA</span>)[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 18.8986</code></pre>
 </div>
@@ -932,23 +932,23 @@ cov 0.140 </code></pre>
 </section>
 <section id="random-intercept-slope-2" class="slide level2">
 <h2>Random Intercept + Slope</h2>
+<ul>
+<li>Called conditional mean predictions</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model,</span>
-<span id="cb34-2"><a></a>                                  <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
-<span id="cb34-3"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>,</span>
-<span id="cb34-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NULL</span></span>
-<span id="cb34-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
+<span id="cb34-2"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>, <span class="at">re.form=</span><span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="random-intercept-slope-3" class="slide level2">
 <h2>Random Intercept + Slope</h2>
+<ul>
+<li>predictions for a ‘typical site’; not an average site <a href="https://fw8051statistics4ecologists.netlify.app/glmm#glmminterp">Stats4Ecologists</a></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model,</span>
-<span id="cb35-2"><a></a>                                  <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
-<span id="cb35-3"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>,</span>
-<span id="cb35-4"><a></a>                                  <span class="at">re.form=</span><span class="cn">NA</span></span>
-<span id="cb35-5"><a></a>                                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(re.model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"cov"</span>,<span class="st">"veg"</span>),</span>
+<span id="cb35-2"><a></a>                                  <span class="at">type=</span><span class="st">"link"</span>, <span class="at">re.form=</span><span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="hierarchical_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>

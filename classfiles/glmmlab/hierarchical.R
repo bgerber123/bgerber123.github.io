@@ -105,7 +105,8 @@ data.frame(preds)
 
 
 ## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------
-#A typical site
+#A typical site (non an average site)
+# Done by setting the random effect mean to 0
 predict(model3,type="response",re.form=NA)[1]
 
 
@@ -233,19 +234,13 @@ summary(re.model)
 
 
 ## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------
-marginaleffects::plot_predictions(re.model,
-                                  condition=c("cov","veg"),
-                                  type="link",
-                                  re.form=NULL
-                                  )
+marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
+                                  type="link", re.form=NULL)
 
 
 ## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------
-marginaleffects::plot_predictions(re.model,
-                                  condition=c("cov","veg"),
-                                  type="link",
-                                  re.form=NA
-                                  )
+marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
+                                  type="link", re.form=NA)
 
 
 ## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------

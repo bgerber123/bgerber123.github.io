@@ -150,14 +150,13 @@ format:
 
 ![](/img/mouse5.png)
 
-## Latent State
+## Latent State {.scrollable}
 
-![](/img/occupancy0.png)
+<center>
+![](/img/obs.latent.cube.png){width=50%}
+</center>
 
-
-## Latent State
-
-![](/img/occupancy1.png)
+![](/img/occupancy1.png){width=75%}
 
 ##
 ```{=html}
@@ -380,7 +379,8 @@ data.frame(preds)
 ::: {.fragment}
 
 ```{r echo=TRUE, eval=TRUE}
-#A typical site
+#A typical site (non an average site)
+# Done by setting the random effect mean to 0
 predict(model3,type="response",re.form=NA)[1]
 ```
 
@@ -553,23 +553,22 @@ summary(re.model)
 
 ## Random Intercept + Slope
 
+- Called conditional mean predictions
+
 ```{r echo=TRUE, eval=TRUE}
-marginaleffects::plot_predictions(re.model,
-                                  condition=c("cov","veg"),
-                                  type="link",
-                                  re.form=NULL
-                                  )
+marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
+                                  type="link", re.form=NULL)
 ```
 
 
 ## Random Intercept + Slope
 
+- predictions for a 'typical site'; not an average site
+[Stats4Ecologists](https://fw8051statistics4ecologists.netlify.app/glmm#glmminterp)
+
 ```{r echo=TRUE, eval=TRUE}
-marginaleffects::plot_predictions(re.model,
-                                  condition=c("cov","veg"),
-                                  type="link",
-                                  re.form=NA
-                                  )
+marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
+                                  type="link", re.form=NA)
 ```
 
 ## Random Intercept + Slope
