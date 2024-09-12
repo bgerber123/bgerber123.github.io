@@ -265,7 +265,8 @@ Example 1
   x=seq(a,b,by=1)
   n=length(x)
 #plotting probability mass  
-  plot(x,rep(1/n,length(x)),col=2,pch=18,cex=3,
+  plot(x,dunif(x,a,b),col=2,pch=18,cex=2,
+      type= 'b',
      ylab="f(y)",xlab=c("a = 1, b = 5"))
      abline(v=(a+b)/2,lwd=3,col=4)
      legend("topright",lwd=3,col=4,legend=c("Mean"))
@@ -280,28 +281,35 @@ Example 2
   x=seq(a,b,by=1)
   n=length(x)
 #plotting probability mass    
-  plot(x,rep(1/n,length(x)),col=2,pch=18,cex=1,
-     ylab="f(y)",xlab=c("a = 10, b = 100"))
+  plot(x,dunif(x,a,b),col=2,pch=18,cex=2,
+       type="b",
+       ylab="f(y)",xlab=c("a = 10, b = 100"))
   abline(v=(a+b)/2,lwd=3,col=4)
   legend("topright",lwd=3,col=4,legend=c("Mean"))
   
 ```
 
 ### **Probability**
-The probability of observing samples $\geq$ 60 when $a$ = 10 and $b$ =100 is,
+The probability of observing samples $>$ 60 when $a$ = 10 and $b$ =100 is,
 
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
   a=10; b=100
-#Sample space
-  x=seq(a,b,by=1)
-  n=length(x)
-#Probability of any one value
-  p=1/n
-  p
-#Add probabilities for all the integers >=60
-  length(which(x>=60))*p
+
+  punif(60,a,b,lower.tail = FALSE)
+
 ```
+
+The value associated with the upper tail probability of 0.4444444 when $a$ = 10 and $b$ =100 is,
+
+```{r,echo = TRUE, eval=TRUE}
+#Parameters
+  a=10; b=100
+
+  qunif(0.4444444,a,b,lower.tail = FALSE)
+
+```
+
 
 ### **Sampling**
 ```{r,echo = TRUE, eval=TRUE}
@@ -319,10 +327,7 @@ The probability of observing samples $\geq$ 60 when $a$ = 10 and $b$ =100 is,
   par(mfrow=c(1,2))
   
   hist(y,main="N = 100",freq = FALSE)
-  abline(h=p,col=3,lwd=3)
-  
   hist(y2,main="N = 10000",freq = FALSE)
-  abline(h=p,col=3,lwd=3)
 
   
   
