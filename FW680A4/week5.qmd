@@ -56,14 +56,7 @@ title: ""
 install.packages(c("glmmTMB","broom.mixed","lme4"))
 ```
 
+#### [Assigned]{style="color:red;"}
 
-<!-- #### [Assigned]{style="color:red;"} -->
-
-<!-- -   Readings for next class:  -->
-<!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
-
-
-
-
-
+  - <a href="/readings/Kery and Kellner Chapter 2.pdf"> Kery and Kellner Ch. 2, sections 2.7-2.10</a>.
 
