@@ -101,8 +101,8 @@ round(a,digits=4)
 
 
 ## ----eval=TRUE,echo=FALSE-----------------------------------------------------------------------------------------------------------------------
-b = rbind(predict(model)[1:5],
-      predict(model2)[1:5]
+b = rbind(predict(model,type="response")[1:5],
+      predict(model2,type="response")[1:5]
       )
 rownames(b)=c("Model1","Model2")
 round(b,digits=4)
@@ -267,11 +267,11 @@ marginaleffects::plot_predictions(m2,
 ## ----echo=TRUE,eval=TRUE, fig.width=10, fig.height=5--------------------------------------------------------------------------------------------
 m3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))
 m3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))
-summary(m3)
+head(model.matrix(~site*herb.cover,data=dat))
 
 
 ## ----echo=TRUE,eval=TRUE------------------------------------------------------------------------------------------------------------------------
-head(model.matrix(~site*herb.cover,data=dat))
+summary(m3)
 
 
 ## ----echo=TRUE,eval=TRUE, fig.width=10, fig.height=5--------------------------------------------------------------------------------------------
