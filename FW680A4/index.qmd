@@ -70,9 +70,22 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 
 <!-- <br> -->
 
-### Notes
+### Additionals
 
+#### Notes
 -   **To download lectures:** Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
+
+
+#### Extras
+
+- <a href="/classfiles/extras/Likelihood and MLE.r">Likelihood and MLE.r</a>
+
+- <a href="/classfiles/extras/Matrix Algebra.r">Matrix Algebra.r</a>
+
+- <a href="/classfiles/extras/Occupancy MaximumLikelihood.r">Occupancy Maximum Likelihood.r</a>
+
+
+#### Labs
 
 - **Brian's Deer lab**: <a href="/classfiles/deerlab/RI-Deer-Sampling_BDG.html">html</a> and
 <a href="/classfiles/deerlab/RIDeerRmd.BDG.zip">Zip</a>.
