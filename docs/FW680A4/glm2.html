@@ -611,9 +611,9 @@ Model2     -0.3567     1.0116     1.1337</code></pre>
 <h4 id="predictions"><span style="color:purple">Predictions</span></h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>            1       2     3      4       5
-Model1 0.6549 -0.3567 0.777 0.6549 -0.3567
-Model2 0.6549 -0.3567 0.777 0.6549 -0.3567</code></pre>
+<pre><code>           1   2     3     4   5
+Model1 1.925 0.7 2.175 1.925 0.7
+Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -962,7 +962,30 @@ Model4 305.7557</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>m3 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">*</span>herb.cover,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
 <span id="cb60-2"><a></a>m3 <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span>site<span class="sc">+</span>herb.cover<span class="sc">+</span>site<span class="sc">:</span>herb.cover,<span class="at">data=</span>dat,<span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>))</span>
-<span id="cb60-3"><a></a><span class="fu">summary</span>(m3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb60-3"><a></a><span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>site<span class="sc">*</span>herb.cover,<span class="at">data=</span>dat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  (Intercept) siteSite 2 siteSite 3  herb.cover siteSite 2:herb.cover
+1           1          0          0 -0.22630093            0.00000000
+2           1          1          0  0.02221148            0.02221148
+3           1          0          1 -1.01517375            0.00000000
+4           1          0          0  1.18038309            0.00000000
+5           1          1          0 -2.04470642           -2.04470642
+6           1          0          1  2.44433686            0.00000000
+  siteSite 3:herb.cover
+1              0.000000
+2              0.000000
+3             -1.015174
+4              0.000000
+5              0.000000
+6              2.444337</code></pre>
+</div>
+</div>
+</section>
+<section id="interaction-1" class="slide level2 scrollable">
+<h2>Interaction</h2>
+<h4 id="continuous-and-categorical-2">Continuous and Categorical</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">summary</span>(m3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -987,29 +1010,6 @@ Residual deviance: 267.16  on 114  degrees of freedom
 AIC: 463.74
 
 Number of Fisher Scoring iterations: 6</code></pre>
-</div>
-</div>
-</section>
-<section id="interaction-1" class="slide level2 scrollable">
-<h2>Interaction</h2>
-<h4 id="continuous-and-categorical-2">Continuous and Categorical</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">head</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>site<span class="sc">*</span>herb.cover,<span class="at">data=</span>dat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  (Intercept) siteSite 2 siteSite 3  herb.cover siteSite 2:herb.cover
-1           1          0          0 -0.22630093            0.00000000
-2           1          1          0  0.02221148            0.02221148
-3           1          0          1 -1.01517375            0.00000000
-4           1          0          0  1.18038309            0.00000000
-5           1          1          0 -2.04470642           -2.04470642
-6           1          0          1  2.44433686            0.00000000
-  siteSite 3:herb.cover
-1              0.000000
-2              0.000000
-3             -1.015174
-4              0.000000
-5              0.000000
-6              2.444337</code></pre>
 </div>
 </div>
 </section>
