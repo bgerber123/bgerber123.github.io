@@ -8,7 +8,7 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Student-led paper discussion
+-   Please bring laptop today
 
 -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
@@ -24,10 +24,6 @@ install.packages(c("brms","bayesplot"))
     - <a href="/readings/Gerber et al. 2014.pdf">Gerber et al. 2014</a>
 
  
-- Background Reading (not required): 
-  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
-
-
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}

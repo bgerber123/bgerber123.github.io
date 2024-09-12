@@ -57,6 +57,8 @@ To decide on your two different prior probability distributions, you need to und
 
 ### The markdown should include
 
+-   code of the model fitting
+
 -   Two plots of the prior probability distributions
 
 -   Four plots of posterior distributions (2 for each data set using each of the two priors).
@@ -74,6 +76,8 @@ For JAGS, you will need to setup a model.jags file that has the likelihood and p
 For Stan, use the code provided and adapt it based on what you know from the GLM homework. 
 
 ### The markdown should include
+
+-   code of the model fitting
 
 -   Four plots of posterior distributions (2 for each data set using each of the two priors).
 
