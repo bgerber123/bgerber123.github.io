@@ -1,0 +1,98 @@
+---
+title: "Variable Combinations"
+output: html_document
+---
+
+<style type="text/css">
+
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 18px;
+}
+pre {
+  font-size: 18px
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data
+
+![](elephant.png){width=500}
+```{r data,echo=FALSE}
+dat = read.csv("elephant.study.csv")
+
+dat$site = rep(c("Site 1","Site 2"),50)
+head(dat)
+
+```
+
+# Questions
+
+### 1. What model syntax allows for the effect of age.years to be different at each level of  site?
+
+```{r echo=TRUE,eval=FALSE}
+first = glm(weight~age.years+site+age.years:site)
+second = glm(weight~age.years+site)
+third = glm(weight~age.years*site)
+fourth = glm(weight~poly(age.years,2)+site
+```
+
+<b><span style="color:purple">First and Third</span></b>
+
+<br>
+
+### 2. Draw an x-y plot showing the relationship b/w weight and the additive effect of site and age.years. Assume a negative slope of age.years with weight and two levels of the variable site. Assume the intercept mle is 13000 and the estimated effect of siteSite2 = -2000. Label axes and slopes for each site.
+
+```{r echo=TRUE,eval=FALSE}
+glm(weight~age.years+site)
+```
+
+<b><span style="color:purple"> The plot should have weight on the y-axis and age.years on the x-axis. There should be two lines, representing the slopes of age.years for each site. The slopes should be parallel with site 2 lower than site 1.
+</span></b>
+
+<br>
+
+### 3. Looking at the data table above, write out the design matrix for the two models below.
+
+```{r echo=TRUE,eval=FALSE}
+glm(weight~age.years+site)
+glm(weight~age.years*site)
+```
+
+
+```{r echo=FALSE,eval=TRUE}
+head(model.matrix(weight~age.years+site,data=dat))
+head(model.matrix(weight~age.years*site,data=dat))
+```
+
+
+### 4. When might it be good to assume an additive effect b/w a categorical and continuous variable over an interaction? 
+
+<b><span style="color:purple"> When there are many levels of the categorical variable and not a lot of replicate data at each or some levels. Also, when the hypothesis is an effect of difference by each level, but the same slope.
+</span></b>
+
+<br>
+
+### 5. Define what each coefficient means. Make sure to make clear the units.
+
+```{r echo=TRUE,eval=TRUE}
+dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=FALSE)
+summary(glm(weight~age.yeras.sc*site,data=dat))
+```
+
+Intercept = the mean weight of elephants at the observed mean age of elephants at site 1
+
+age.yeras.sc = the one year change in mean weight of elephants at site 1
+
+siteSite 2 = the mean weight effect difference of site 2 from site 1 (intercept) at the mean observed age of elephants.
+
+age.yeras.sc:siteSite 2 - the change in the slope or one year change in mean weight of elephants at site 2 from site 1
+
+<br>
+<br>

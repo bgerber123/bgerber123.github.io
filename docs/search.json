@@ -6437,14 +6437,14 @@
     "href": "FW680A4/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW680A4/week5.html#week-5",
     "href": "FW680A4/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW680A4/hierarchical.html#objectives",
