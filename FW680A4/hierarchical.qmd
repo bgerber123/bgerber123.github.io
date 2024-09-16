@@ -478,6 +478,16 @@ m3.est$LCL = m3.est$fit-1.96*m3.est$se.fit
 m3.est$UCL = m3.est$fit+1.96*m3.est$se.fit
 
 
+m3.est.typical = predict(model3,
+                newdata=data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                type="link",
+                re.form=NA,
+                se.fit = TRUE
+                )
+
+m3.est.typical$LCL = m3.est.typical$fit-1.96*m3.est.typical$se.fit
+m3.est.typical$UCL = m3.est.typical$fit+1.96*m3.est.typical$se.fit
+
 
 plot(1:5,rep(-50,5),ylim=c(2,4.2),xaxt='n',xlab="Vegetation",ylab="Coeficient",main="Estimates")
 axis(1,at=1:5,lab=c("Veg1","Veg2","Veg3","Veg4","Veg5"))
@@ -489,6 +499,15 @@ legend("topright",lwd=3,col=1,legend=c("Model 1, (y~1), Complete Pooling"))
 plotCI(1:5,y=m2.est$estimate,ui=m2.est$conf.high,li=m2.est$conf.low,pch=18,xaxt='n',add=TRUE,col="purple")
 
 plotCI(1:5,y=m3.est$fit,ui=m3.est$UCL,li=m3.est$LCL,pch=18,xaxt='n',add=TRUE,col="green")
+
+
+abline(h=m3.est.typical$fit,lwd=3,col="green",lty=1)
+abline(h=m3.est.typical$LCL,lwd=2,col="green",lty=4)
+abline(h=m3.est.typical$UCL,lwd=2,col="green",lty=4)
+ 
+# abline(h=m1.est$Estimate,lwd=3,col=1,lty=1)
+# abline(h=m1.est$X2.5..,lwd=2,col=1,lty=4)
+# abline(h=m1.est$X97.5..,lwd=2,col=1,lty=4)
 
 
 legend("topright",lwd=3,col=c(1,"purple","green"),legend=c("Model 1, (y~1), Complete Pooling",
