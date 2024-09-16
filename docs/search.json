@@ -5687,8 +5687,8 @@
     "objectID": "FW680A4/week4.html#week-4",
     "href": "FW680A4/week4.html#week-4",
     "title": "Brian D. Gerber",
-    "section": "Week 4",
-    "text": "Week 4\nDay 1\nToday\n\nLecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\nAssigned\n\nReadings for next class:\n\nZurr and Iano, 2016\n\nBackground Reading (not required):\n\n Zurr et al Chapter 9.\n\n\nDay 2 (lab)\nToday\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Files\n\nAssigned\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
+    "section": "",
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
   },
   {
     "objectID": "FW680A4/glm1.html#why-model-data",
