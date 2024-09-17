@@ -400,8 +400,8 @@ should inform how we specify the prior probability distribution.</p>
 <h3><strong>Part 1</strong></h3>
 <p>Fit a Bayesian model to the two data sets provided, each using two
 different prior distributions on <span class="math inline">\(\lambda\)</span>.</p>
-<p>Fit the model by sampling from the posterior distribution directly
-(called Gibbs sampling). You can do this by using the <a href="https://en.wikipedia.org/wiki/Conjugate_prior">Wikipedia Conjugate
+<p>Fit the model by sampling from the posterior distribution of <span class="math inline">\(\lambda\)</span> directly (called Gibbs sampling).
+You can do this by using the <a href="https://en.wikipedia.org/wiki/Conjugate_prior">Wikipedia Conjugate
 Page</a> to look up the posterior hyperparameters.</p>
 <p>To decide on your two different prior probability distributions, you
 need to understand the shape (<span class="math inline">\(\kappa\)</span>) and scale (<span class="math inline">\(\theta\)</span>) parameters of the Gamma
@@ -438,8 +438,9 @@ lambda.</p></li>
 set and 1 set of priors) using JAGS via the r pacakge ‘rjags’ or Stan
 via the rpackage ‘rstanarm’; if you use rstanarm, setting the priors is
 rather complicated. For the the purpose of this exercise, it is okay to
-use the default priors. Use the function ‘default_prior’ and just say
-what the prior is.</p>
+use the default priors. Looking the attributes of the fitted model
+object from stan to figure out what the default prior is and plot
+it.</p>
 <p>For JAGS, you will need to setup a model.jags file that has the
 likelihood and prior. Note, that the probability density functions in
 JAGS for Gamma and Poisson are dgamma, and dpois, respectively.</p>

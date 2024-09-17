@@ -51,7 +51,7 @@ I am providing two data sets of counts of Brown mouse lemurs (*Microcebus rufus*
 
 Fit a Bayesian model to the two data sets provided, each using two different prior distributions on $\lambda$.
 
-Fit the model by sampling from the posterior distribution directly (called Gibbs sampling). You can do this by using the [Wikipedia Conjugate Page](https://en.wikipedia.org/wiki/Conjugate_prior) to look up the posterior hyperparameters.
+Fit the model by sampling from the posterior distribution of $\lambda$ directly (called Gibbs sampling). You can do this by using the [Wikipedia Conjugate Page](https://en.wikipedia.org/wiki/Conjugate_prior) to look up the posterior hyperparameters.
 
 To decide on your two different prior probability distributions, you need to understand the shape ($\kappa$) and scale ($\theta$) parameters of the Gamma distribution. I suggest looking at the [Gamma distribution wikipedia page](https://en.wikipedia.org/wiki/Gamma_distribution), choosing values, and then plotting the distributions. The two prior probability distribution you choose should be a 'highly informative' and a 'low/less informative' prior distribution. Investigate possible prior probability distributions before looking at the data. 
 
