@@ -65,11 +65,11 @@ To decide on your two different prior probability distributions, you need to und
 
 -   A table or list of the posterior means or medians along with 95\% credible intervals, as well as a description of what these intervals mean.
 
--   A description of how the different priors influenced the first and second data sets. Did each prior have the same importance with each data set? Why?
+-   A description of how the different priors influenced the first and second data sets. Did each prior have the same importance with each data set? Why? To help understnad the influence of the prior, make sure your plots have the sam x-axis range and you plot a vertical line for the maximum likelihood estimate of the expected/mean counts (which is not influence by the prior). How do we get the mle? Just take the mean of the data or fit a generalized linear model to get the mean of lambda.
 
 ### **Part 2**
 
-Here, the goal is to replicate the above 4 analyses (2 data sets and 2 priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'.
+Here, the goal is to replicate one of the analyses from above (1 data set and 1 set of priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'; if you use rstanarm, setting the priors is rather complicated. For the the purpose of this exercise, it is okay to use the default priors. Looking the attributes of the fitted model object from stan to figure out what the default prior is and plot it. 
 
 For JAGS, you will need to setup a model.jags file that has the likelihood and prior. Note, that the probability density functions in JAGS for Gamma and Poisson are dgamma, and dpois, respectively.
 
@@ -79,8 +79,6 @@ For Stan, use the code provided and adapt it based on what you know from the GLM
 
 -   code of the model fitting
 
--   Four plots of posterior distributions (2 for each data set using each of the two priors).
-
--   A table or list of the posterior means or medians along with 95\% credible intervals.
+-   A plot of the posterior distribution of lambda .
 
 

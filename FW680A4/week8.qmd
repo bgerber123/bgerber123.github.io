@@ -1,0 +1,54 @@
+---
+title: ""
+---
+
+## Week 7
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("brms","bayesplot")) -->
+<!-- ``` -->
+
+#### [Assigned]{style="color:red;"}
+ <!-- -   Readings for next class:  -->
+ <!--    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13</a> -->
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: Board Work on Mark Recapture
+
+-   Downloads: <a href="/classfiles/occlab/week8files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+```
+
+
+#### [Assigned]{style="color:red;"}
+ -   Readings for next class: 
+ <!-- - <a href="/readings/">Assigned Reading on SDM</a> -->
+
+
+
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
+
+
+
+
+
+

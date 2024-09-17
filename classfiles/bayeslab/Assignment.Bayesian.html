@@ -424,14 +424,22 @@ credible intervals, as well as a description of what these intervals
 mean.</p></li>
 <li><p>A description of how the different priors influenced the first
 and second data sets. Did each prior have the same importance with each
-data set? Why?</p></li>
+data set? Why? To help understnad the influence of the prior, make sure
+your plots have the sam x-axis range and you plot a vertical line for
+the maximum likelihood estimate of the expected/mean counts (which is
+not influence by the prior). How do we get the mle? Just take the mean
+of the data or fit a generalized linear model to get the mean of
+lambda.</p></li>
 </ul>
 </div>
 <div id="part-2" class="section level3">
 <h3><strong>Part 2</strong></h3>
-<p>Here, the goal is to replicate the above 4 analyses (2 data sets and
-2 priors) using JAGS via the r pacakge ‘rjags’ or Stan via the rpackage
-‘rstanarm’.</p>
+<p>Here, the goal is to replicate one of the analyses from above (1 data
+set and 1 set of priors) using JAGS via the r pacakge ‘rjags’ or Stan
+via the rpackage ‘rstanarm’; if you use rstanarm, setting the priors is
+rather complicated. For the the purpose of this exercise, it is okay to
+use the default priors. Use the function ‘default_prior’ and just say
+what the prior is.</p>
 <p>For JAGS, you will need to setup a model.jags file that has the
 likelihood and prior. Note, that the probability density functions in
 JAGS for Gamma and Poisson are dgamma, and dpois, respectively.</p>
@@ -442,10 +450,7 @@ from the GLM homework.</p>
 <h3>The markdown should include</h3>
 <ul>
 <li><p>code of the model fitting</p></li>
-<li><p>Four plots of posterior distributions (2 for each data set using
-each of the two priors).</p></li>
-<li><p>A table or list of the posterior means or medians along with 95%
-credible intervals.</p></li>
+<li><p>A plot of the posterior distribution of lambda .</p></li>
 </ul>
 </div>
 

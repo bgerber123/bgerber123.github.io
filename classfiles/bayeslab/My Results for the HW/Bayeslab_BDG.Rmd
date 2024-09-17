@@ -1,0 +1,306 @@
+---
+title: "Bayesian Assignment"
+author: "Brian D. Gerber"
+date: "2024-9-17"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+rm(list = ls())
+
+library(rjags)
+library(bayesplot)
+
+
+lemurs1 <- read.csv("counts.lemurs1.csv")
+lemurs2 <- read.csv("counts.lemurs2.csv")
+
+N1 <- length(lemurs1[,1])
+N2 <- length(lemurs2[,1])
+
+mle.1 <- mean(lemurs1[,1])
+mle.2 <- mean(lemurs2[,1])
+
+```
+
+# Part 1
+
+## Priors
+
+```{r part 1 priors, eval = TRUE, echo = FALSE}
+
+# First set of priors - highly informative
+  kappa.prior1 <- 100
+  theta.prior1 <- 0.01
+# Second set of priors - less informative
+  kappa.prior2 <- 10
+  theta.prior2 <- 0.1
+
+par(mfrow = c(1,2))  
+par(mar = c(3,3,3,3))
+# Plot first set of priors
+  curve(dgamma(x, shape = kappa.prior1, scale = theta.prior1),lwd = 3,
+        xlab="Probability",ylab="Probabilty Density",
+        main="Prior Probability \n Highly Informative",
+        ylim = c(0,5),xlim=c(0,2))
+  legend("topright",col=c(1,2),legend=c("Prior1: k=100, theta=0.01"),lwd=3)
+
+# Plot second set of priors
+  curve(dgamma(x, shape = kappa.prior2, scale = theta.prior2),lwd = 3,
+        xlab="Probability",ylab="Probabilty Density",
+        main="Prior Probability \n Less Informative",
+        ylim = c(0,5),xlim=c(0,2))
+  legend("topright",col=c(1,2),legend=c("Prior2: k=10, theta=0.1"),lwd=3)
+
+```
+
+## Sample Posterior Distributions of Mean Intensity parameter (Gibbs Sampling)
+
+```{r part 1 posteriors, eval = TRUE, echo = TRUE, cache=TRUE}
+# Gibbs sampler
+# Dataset 1 
+  post.1 <- rgamma(10000,shape=kappa.prior1+sum(lemurs1[,1]),scale=theta.prior1/(N1*theta.prior1+1))
+  post.2 <- rgamma(10000,shape=kappa.prior2+sum(lemurs1[,1]),scale=theta.prior2/(N1*theta.prior2+1))
+# Dataset 2
+  post.3 <- rgamma(10000,shape=kappa.prior1+sum(lemurs2[,1]),scale=theta.prior1/(N2*theta.prior1+1))
+  post.4 <- rgamma(10000,shape=kappa.prior2+sum(lemurs2[,1]),scale=theta.prior2/(N2*theta.prior2+1))
+```
+
+## Plot posterior Distributions
+
+```{r part 1 plot, eval = TRUE, echo = FALSE, fig.width=8,fig.height=8}
+par(mfrow = c(2,2))
+
+# Prior 1- Highly informative, Dataset 1- low sample size
+  plot(density(post.1),col=1,lwd=3,main="Highly Informative Prior , Low Sample Size",
+       xlab="Posterior Probability",ylab="Probability Density",
+       ylim = c(0,10), xlim = c(0,2))
+  curve(dgamma(x, shape = kappa.prior1, scale = theta.prior1),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.1,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+# Prior 2 Low informative, Dataset 1 - low sample size
+  plot(density(post.2),col=1,lwd=3,main="Less Informative Prior, Low Sample Size",
+       xlab="Posterior Probability",ylab="Probability Density",
+       ylim = c(0,10), xlim = c(0,2))
+  curve(dgamma(x, shape = kappa.prior2, scale = theta.prior2),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.1,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+# Prior 1 Highly informative, Dataset 2 - large sample size
+  plot(density(post.3),col=1,lwd=3,main="Highly Informative Prior, Large Sample Size",
+       xlab="Posterior Probability",ylab="Probability Density",
+       ylim = c(0,10), xlim = c(0,2))
+  curve(dgamma(x, shape = kappa.prior1, scale = theta.prior1),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.2,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+# Prior 2 Low Informative, Dataset 2 - large sample size
+  plot(density(post.4),col=1,lwd=3,main="Less Informative Prior, Large Sample Size",
+       xlab="Posterior Probability",ylab="Probability Density",
+       ylim = c(0,10), xlim = c(0,2))
+  curve(dgamma(x, shape = kappa.prior2, scale = theta.prior2),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.2,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+
+```
+
+### Posterior Means and 95% CIs
+
+
+```{r part 1 posterior table, eval = TRUE, echo = FALSE}
+posteriors <- data.frame(c(mle.1, mean(post.1), quantile(post.1,prob=c(0.025,0.975))),
+                         c(mle.1, mean(post.2), quantile(post.2,prob=c(0.025,0.975))),
+                         c(mle.2, mean(post.3), quantile(post.3,prob=c(0.025,0.975))),
+                         c(mle.2, mean(post.4), quantile(post.4,prob=c(0.025,0.975))))
+
+colnames(posteriors) <- c("Prior1lemurs1", "Prior2lemurs1", "Prior2lemurs2", "Prior2lemurs2")
+rownames(posteriors) <- c("MLE", "mean", "low.ci", "high.ci")
+
+posteriors
+
+```
+
+The highly informative prior had a strong influence on the posterior distribution of the small sample size data set and a bit less, but still a strong influence on the large sample size data set. The less informative prior had a moderate effect on the low sample size data and very little effect on the large sample size data set. 
+
+
+# Part 2
+
+## Model Fitting with JAGS
+
+```{r jags implementation, echo = TRUE, message = FALSE, warning = FALSE, results = 'hide', cache=TRUE}
+#JAGS data lists (different for 2 datasets and 2 priors)
+  data1.prior1 <- list(
+                      y = lemurs1[,1],
+                      N = length(lemurs1[,1]),
+                      prior.r = kappa.prior1,
+                      prior.lambda = 1/theta.prior1
+            )
+
+  data1.prior2 <- list(
+                        y=lemurs1[,1],
+                        N=length(lemurs1[,1]),
+                        prior.r = kappa.prior2,
+                        prior.lambda = 1/theta.prior2
+            )
+
+  data2.prior1 <- list(
+                      y=lemurs2[,1],
+                      N=length(lemurs2[,1]),
+                      prior.r = kappa.prior1,
+                      prior.lambda = 1/theta.prior1
+            )
+
+  data2.prior2 <- list(
+                        y=lemurs2[,1],
+                        N=length(lemurs2[,1]),
+                        prior.r = kappa.prior2,
+                        prior.lambda = 1/theta.prior2
+            )
+  
+  
+#MCMC inputs  (same across priors and datasets)
+  n.chains = 2
+  n.adapt = 1000
+  n.iter = 10000
+  thin = 2
+  burn = 5000
+
+# Model Parameters to save values of (same across priors and datasets)
+  parms <- c("lambda")	
+
+
+# Setup the Models
+  jm1 <- jags.model(file="model.jags.binomial.gamma.r", data = data1.prior1, n.chains = n.chains)
+  jm2 <- jags.model(file="model.jags.binomial.gamma.r", data = data1.prior2, n.chains = n.chains)
+  jm3 <- jags.model(file="model.jags.binomial.gamma.r", data = data2.prior1, n.chains = n.chains)
+  jm4 <- jags.model(file="model.jags.binomial.gamma.r", data = data2.prior2, n.chains = n.chains)
+
+# Update the models with the burnin
+  update(jm1, n.iter = burn, n.adapt = n.adapt)
+  update(jm2, n.iter = burn, n.adapt = n.adapt)
+  update(jm3, n.iter = burn, n.adapt = n.adapt)
+  update(jm4, n.iter = burn, n.adapt = n.adapt)
+
+# Fit the models
+  post1=coda.samples(jm1, variable.names = parms, n.iter = n.iter, thin = thin)
+  post2=coda.samples(jm2, variable.names = parms, n.iter = n.iter, thin = thin)
+  post3=coda.samples(jm3, variable.names = parms, n.iter = n.iter, thin = thin)
+  post4=coda.samples(jm4, variable.names = parms, n.iter = n.iter, thin = thin)
+
+```
+
+  
+# Plots of posteriors for lambda
+
+```{r jags implementation2, echo = FALSE, message = FALSE, warning = FALSE, results = 'hide', cache=TRUE, fig.width=8,fig.height=8}
+  par(mfrow = c(2,2))
+  plot(density(as.matrix(post1)), main = "Prior 1, Dataset 1",lwd=3,xlim=c(0,2),ylim=c(0,10))
+    curve(dgamma(x, shape = kappa.prior1, scale = theta.prior1),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.1,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+  
+  plot(density(as.matrix(post2)), main = "Prior 2, Dataset 1",lwd=3,xlim=c(0,2),ylim=c(0,10))
+    curve(dgamma(x, shape = kappa.prior2, scale = theta.prior2),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.1,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+  
+  plot(density(as.matrix(post3)), main = "Prior 1, Dataset 2",lwd=3,xlim=c(0,2),ylim=c(0,10))
+    curve(dgamma(x, shape = kappa.prior1, scale = theta.prior1),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.2,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+  
+  
+  plot(density(as.matrix(post4)), main = "Prior 2, Dataset 2",lwd=3,xlim=c(0,2),ylim=c(0,10))
+    curve(dgamma(x, shape = kappa.prior2, scale = theta.prior2),
+        add=TRUE,col=1,lwd=3,lty=3)
+  abline(v=mle.2,col="purple",lwd=3)
+  legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+         legend=c("Posterior","Prior","MLE"))
+
+```
+
+We gain the same inference using JAGS as done using our conjugate prior knowledge and gibbs sampling. 
+
+## Posterior means and 95% CIs 
+
+```{r posteriors table 2, echo = FALSE}
+posteriors2 <- data.frame(c(mle.1, mean(as.matrix(post1)), quantile(as.matrix(post1),probs=c(0.025,0.975))),
+                          c(mle.1, mean(as.matrix(post2)), quantile(as.matrix(post2),probs=c(0.025,0.975))),
+                          c(mle.2, mean(as.matrix(post3)), quantile(as.matrix(post3),probs=c(0.025,0.975))),
+                          c(mle.2, mean(as.matrix(post4)), quantile(as.matrix(post4),probs=c(0.025,0.975))))
+
+colnames(posteriors2) <- c("Prior1lemurs1", "Prior2lemurs1", "Prior2lemurs2", "Prior2lemurs2")
+rownames(posteriors2) <- c("MLE", "mean", "low.ci", "high.ci")
+
+posteriors2
+```
+
+
+```{r, eval = FALSE, include = FALSE}
+#Look at chains (confirm convergence)
+  #Plot all chains MCMC iterations
+  color_scheme_set("mix-blue-red")
+  mcmc_trace(post1)
+  mcmc_trace(post2)
+  mcmc_trace(post3)
+  mcmc_trace(post4)
+```
+
+## Stan Model Implementatinon
+
+
+### Using the small sample data set
+
+Below is using default priors, rather than prior set above. 
+
+```{r, eval = TRUE, echo=TRUE, cache=TRUE, results='hide'}
+library(rstanarm)
+dat=data.frame(y=lemurs1)
+colnames(dat)="y"
+
+
+post1 <- stan_glm(y~1, data = dat,
+                 family = poisson(link = "log"))
+
+plot(post1)
+summary(post1)
+post1$coefficients
+
+post1$fitted.values
+
+lambda.posterior = exp(post1$stanfit@sim$samples[[1]]$`alpha[1]`)
+
+#plot the posterior distribution of the mean intensity
+plot(density(lambda.posterior,adjust = 2),lwd=3,xlim=c(0,2),
+     main="Small sample data and default priors")
+```
+
+```{r, eval = TRUE, echo=TRUE}
+#The default prior
+post1$prior.info
+
+#plot the prior
+curve(dnorm(x,0,2.5),lwd=3,xlim=c(-10,10))
+
+```

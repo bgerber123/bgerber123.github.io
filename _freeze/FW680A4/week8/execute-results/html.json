@@ -1,0 +1,15 @@
+{
+  "hash": "105e82a93bfb1abf05c0badb618f6b9b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n## Week 7\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n<!-- -   Lecture (Code): <a href=\"/classfiles/hbayes/Bayesian.Hierarchical.Model.zip\">Bayesian Hierarchical Model Files</a> -->\n\n<!-- -   Install R packages: -->\n\n<!-- ```{r, eval=FALSE, echo=TRUE} -->\n<!-- # CRAN packages -->\n<!-- install.packages(c(\"brms\",\"bayesplot\")) -->\n<!-- ``` -->\n\n#### [Assigned]{style=\"color:red;\"}\n <!-- -   Readings for next class:  -->\n <!--    - <a href=\"/readings/Kery and Schaub Ch13.pdf\">Kery and Schaub Ch13</a> -->\n\n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Lecture: Board Work on Mark Recapture\n\n-   Downloads: <a href=\"/classfiles/occlab/week8files.zip\">Files</a>\n\n-   Install R packages:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\n```\n:::\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n -   Readings for next class: \n <!-- - <a href=\"/readings/\">Assigned Reading on SDM</a> -->\n\n\n\n\n<!-- -   Readings for next class:  -->\n<!--     - <a href=\"https://statistics4ecologists-v2.netlify.app/mmi#mmi\">Fieberg, Ch. 8</a> -->\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
