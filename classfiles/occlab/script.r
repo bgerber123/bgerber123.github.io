@@ -83,7 +83,8 @@
 
   # Get quantiles of posterior of psi
   quantile(M1[[1]][,2])
-  
+
+####################################################  
 ####################################################
 # MODEL 2 - Base Model version 2
   params=c("a0","b0")
@@ -105,7 +106,8 @@
   hist(plogis(M2[[1]][,1]))
   hist((M1[[1]][,1]),add=TRUE,col=2)
 
-################################  
+####################################################  
+####################################################
 # MODEL 3 - Model with site-level covariates
   
   # Need to include are covaraite
@@ -149,9 +151,64 @@
   quantile(beta1)
   plot(density(beta1),lwd=3)
   
+
+####################################################  
+####################################################
+# MODEL 4 - Model with site-level covariates using design matrix notation
   
-################################  
-# MODEL 3 - Model with site-level covariates - via unmarked and then ubms
+#Design matrix for occupancy  
+  X = model.matrix(~bunny$Veg)
+  
+#Design matrix for detection
+  W = model.matrix(~bunny$Veg)  
+
+  # Need to include design matrices for detection and occupancy
+  data=list(
+    y=bunny.data,
+    n.sites=nrow(bunny.data),
+    n.visits=ncol(bunny.data),
+    X=X,
+    W=W,
+    n.beta = ncol(X),
+    n.alpha = ncol(W)
+  )
+  
+  
+  params=c("alpha","beta")
+  
+  inits <- function(){list(z=apply(bunny.data, 1, max), alpha=rnorm(ncol(W)),beta=rnorm(ncol(X)))}
+  
+  jm=jags.model(file="occ.model.cov.design.matrix.JAGS.R", data=data, inits=inits, n.chains=nchains, n.adapt=2000)
+  
+  # Run the burn-in portion of the model
+  update(jm, n.iter=nburn)
+  
+  # Sample from the posterior
+  M4 = coda.samples(jm, variable.names=params, n.iter=niter, thin=nthin)
+  
+  # Check out a summary
+  summary(M4)
+  
+  # Evaluate whether there is statistical support for the effect of Veg on psi and p
+  head(M4[[1]])
+  
+  # alpha 1  - slope of Veg on detection probability
+  alpha1=M4[[1]][,2]
+  length(which(alpha1<0))/nrow(M3[[1]])
+  quantile(alpha1)
+  plot(density(alpha1),lwd=3)
+
+  # beta 1  - slope of Veg on psi
+  beta1=M4[[1]][,4]
+  length(which(beta1<0))/length(beta1)
+  quantile(beta1)
+  plot(density(beta1),lwd=3)  
+  
+  
+    
+####################################################  
+####################################################
+# MODEL 5 - Model with site-level covariates - via unmarked and then ubms
   
 library(ubms)  
 library(unmarked)  
@@ -162,16 +219,13 @@ model3.likelihood = occu(~veg ~veg, data=UMF)
 summary(model3.likelihood)
 
 # use R package to fit the same model in stan
-
-model3.stan = stan_occu(~veg ~veg, data=UMF, chains=3, iter=2000)
-
-model3.stan
-
-model3.stan@stanfit
+  model5.stan = stan_occu(~veg ~veg, data=UMF, chains=3, iter=2000)
+  model5.stan
+  model5.stan@stanfit
 
 
-################################  
-
+####################################################  
+####################################################
 #CHALLENGE
 
 # Step 1
@@ -186,7 +240,7 @@ bunny.ignore.det[which(bunny.ignore.det==2)]=1
 # Now, we have site level observation without replication. A 1 indicates a detection in either column 1 or column 2 or both.
 # A zero is no detection for other observation.
 
-# Fit the model and estimate a slope for the effect of veg (bunny$veg)
+# Fit the Bayesian logistic regression model and estimate a slope for the effect of veg (bunny$veg)
 bunny.ignore.det
 
 # Compare this slope to your findings from your Bayesian occupancy model slopes - either model3.stan or M3. How are the results different?

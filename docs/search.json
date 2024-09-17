@@ -6450,8 +6450,8 @@
     "objectID": "FW680A4/hierarchical.html#objectives",
     "href": "FW680A4/hierarchical.html#objectives",
     "title": "Hierarchical Models",
-    "section": "Objectives",
-    "text": "Objectives\n\n\nGeneral Use and Language\nExamples\nCase studies\n\nrandom intercept\nrandom intercept & slope\n\nConsiderations"
+    "section": "",
+    "text": "General Use and Language\nExamples\nCase studies\n\nrandom intercept\nrandom intercept & slope\n\n\nConsiderations"
   },
   {
     "objectID": "FW680A4/hierarchical.html#section",
@@ -6465,7 +6465,7 @@
     "href": "FW680A4/hierarchical.html#data-and-problem",
     "title": "Hierarchical Models",
     "section": "Data and Problem",
-    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nInterested in detection rate by vegetation type and overall."
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\n\n\n\nInterested in detection rate by vegetation type and overall."
   },
   {
     "objectID": "FW680A4/hierarchical.html#situations",
@@ -6507,7 +6507,7 @@
     "href": "FW680A4/hierarchical.html#data-and-problem-1",
     "title": "Hierarchical Models",
     "section": "Data and Problem",
-    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\nDetection Rate = Independent Counts / Effort"
+    "text": "Data and Problem\nWe sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.\n\n\n\n\nDetection Rate = Independent Counts / Effort"
   },
   {
     "objectID": "FW680A4/hierarchical.html#code",
@@ -6570,7 +6570,7 @@
     "href": "FW680A4/hierarchical.html#data",
     "title": "Hierarchical Models",
     "section": "Data",
-    "text": "Data\n\n\n\n\n   y  veg effort\n1 15 Veg1      5\n2 18 Veg1      5\n3 12 Veg2      5\n4 14 Veg2      5\n5 12 Veg2      5\n6 14 Veg2      5\n\n\n\nVeg1 Veg2 Veg3 Veg4 Veg5 \n   2   20   20   10   10"
+    "text": "Data\n\n\n\n\n\n\n\n   y  veg effort\n1 15 Veg1      5\n2 18 Veg1      5\n3 12 Veg2      5\n4 14 Veg2      5\n5 12 Veg2      5\n6 14 Veg2      5\n\n\n\nVeg1 Veg2 Veg3 Veg4 Veg5 \n   2   20   20   10   10"
   },
   {
     "objectID": "FW680A4/hierarchical.html#model-1",
@@ -6731,7 +6731,7 @@
     "href": "FW680A4/hierarchical.html#random-intercept-slope-3",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\npredictions for a ‘typical site’; not an average site Stats4Ecologists\n\n\nmarginaleffects::plot_predictions(re.model, condition=c(\"cov\",\"veg\"),\n                                  type=\"link\", re.form=NA)"
+    "text": "Random Intercept + Slope\n\npredictions for a ‘typical site’; not an average site Stats4Ecologists\n\n\n\nmarginaleffects::plot_predictions(re.model, condition=c(\"cov\",\"veg\"),\n                                  type=\"link\", re.form=NA)"
   },
   {
     "objectID": "FW680A4/hierarchical.html#random-intercept-slope-4",
@@ -7172,7 +7172,7 @@
     "href": "FW680A4/hierarchical.html#random-effect",
     "title": "Hierarchical Models",
     "section": "Random Effect",
-    "text": "Random Effect\nAndrew Gelman Blog Post\nPaper Link\n“People are always asking me if I want to use a fixed or random effects model for this or that.”\n\n\n“I always reply that these terms have no agreed-upon definition.”\n\n\n\n“People with their own favorite definitions don’t always realize that other definitions are out there. Worse, people conflate different definitions”."
+    "text": "Random Effect\nAndrew Gelman Blog Post\nPaper Link\n“People are always asking me if I want to use a fixed or random effects model for this or that.”\n. . .\n\n“I always reply that these terms have no agreed-upon definition.”\n. . .\n\n“People with their own favorite definitions don’t always realize that other definitions are out there. Worse, people conflate different definitions”."
   },
   {
     "objectID": "FW680A4/hierarchical.html#pooling-information",
@@ -7200,14 +7200,14 @@
     "href": "FW680A4/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring laptop today\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Kery and Schaub Ch13\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\"))\n\n\n\nReadings for next class:\nAssigned Reading on SDM"
+    "text": "Please bring laptop today\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Kery and Schaub Ch13\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\nAssigned Reading on SDM"
   },
   {
     "objectID": "FW680A4/week7.html#week-7",
     "href": "FW680A4/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring laptop today\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Kery and Schaub Ch13\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\"))\n\n\n\nReadings for next class:\nAssigned Reading on SDM"
+    "text": "Please bring laptop today\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class: - Kery and Schaub Ch13\n\n\n\n\nDiscuss Project\nLecture: Board Work\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\nAssigned Reading on SDM"
   },
   {
     "objectID": "FW680A4/hierarchical.html#names",

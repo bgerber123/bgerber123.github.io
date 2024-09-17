@@ -38,7 +38,7 @@ install.packages(c("brms","bayesplot"))
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("ubms"))
+install.packages(c("ubms","unmarked"))
 ```
 
 
