@@ -1,7 +1,7 @@
 model {
 	# Priors
-	b0~dnorm(0,1)
-	a0~dnorm(0,1)
+	b0~dlogis(0,1)
+	a0~dlogis(0,1)
 	
   # Loop over sites	
 	for(i in 1:n.sites){
