@@ -83,18 +83,21 @@ library(coda)
   apply(post[[1]],2,quantile, prob=c(0.025,0.975))
 ########################################################  
 
-# Lab Assignment- Create a Markdown file and compiled HTML showing the code
-# and results for the below steps. Make sure to add text to describe what and
-# why you are doing; this helps me see your thinking. 
+# Lab Assignment
+  
+#  Create a Markdown file and compiled HTML showing the code
+#  and results for the below steps. Make sure to add text to describe what 
+#  you are doing, why, and the result.
 
   
 # Step 1  
 # Fit a CJS survival model that includes a sex effect on survival probability.
-# Adapt the jags model code in the other file and implementation code that is above.
+# Do this by adapting the jags model code in the file (cjs1.r) and implementation code that is above.
 
 # Step 2
 # Check that parameters have converged. Show evidence of this by plotting and calculating
-# the gelman-rubin convergence diagnostic, i.e, function gelman.diag.
+# the gelman-rubin convergence diagnostic, i.e, function gelman.diag. Make comments about what the plots
+# and diagnostic statistic is telling you. 
 
 
 # Step 3

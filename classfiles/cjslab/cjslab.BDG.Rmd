@@ -1,0 +1,171 @@
+---
+title: "Survival Estimation with Capture-Recapture Data"
+output: html_document
+---
+
+<style type="text/css">
+
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 18px;
+}
+pre {
+  font-size: 18px
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# The Setup
+
+We will estimate the annual survival probability of European Dipper using capture-recapture data 
+via a hierarchical Bayesian version of the cormack-jolly-seber model.
+
+Load the necessary packages.
+
+```{r,echo=TRUE,eval=TRUE, warning=FALSE, message=FALSE}
+  library(stringr)
+  library(rjags)
+  library(coda)
+```
+
+Next, read in the data. The first column is the capture-history. The second column indicates males (0) and females (1). The third column indicate females (1) and males (0). The fourth column are just semi-colons...it's MARK thing. 
+
+```{r,echo=TRUE,eval=TRUE}
+#Load the Data
+  dipper = read.table("DIPPER.INP", skip = 2,sep="", colClasses = "character")
+  head(dipper)
+
+#The number of individuals marked
+  nrow(dipper)
+```
+
+Next, lets manipulate the inputted data to create capture-histories in columns, which we will use to fit our model. 
+
+```{r,echo=TRUE,eval=TRUE}
+# split column 1 into columns
+  CH = matrix(as.integer(str_split_fixed(dipper[,1],"",7)),nrow=nrow(dipper))
+  head(CH)
+#  Sex variable: female = 1; male = 0
+  sex = as.integer(dipper$V3)
+```
+
+We can see that there are 7 columns in the capture-history, 1 for each year. So, this study has 7 years of data total. 
+
+Next, we need to setup two specialized functions. 'get.first' will identify the first occasion each individual was initially captured. The next function will use the capture history to create logical designations of when we know individuals are alive to be used to initialize the state parameter z.
+
+```{r,echo=TRUE,eval=TRUE}
+# Create vector with occasion of marking for each individual (row of CH)
+  get.first <- function(x) min(which(x!=0))
+  f <- apply(CH, 1, get.first)
+
+  z.init <- matrix(NA, nrow = nrow(CH), ncol = ncol(CH))
+  for(i in 1:dim(z.init)[1]){
+    z.init[i, f[i]:dim(z.init)[2]] <- 1
+    z.init[i,f[i]] <- NA
+  }
+```
+
+
+# Lab Assignment  
+
+## Step 1    
+
+Fit a CJS survival model that includes a sex effect on survival probability.
+Adapt the jags model code in the other file and implementation code that is above.
+
+```{r echo=TRUE,eval=TRUE, cache=TRUE}
+
+# MCMC settings
+  ni <- 15000 # number of iterations
+  nt <- 2     # number of iterations to thin by
+  nb <- 5000  # number of iterations to burn (to toss out initially)
+  na <- 2000  # number of iterations to use to adapt to sample efficiently
+  nc <- 3     # number of chains
+
+
+# Parameters monitored
+  parameters <- c("beta0","beta1", "p")
+  
+  inits <- function(){list(beta0 = rnorm(1),
+                           beta1 = rnorm(1),
+                           p = runif(1, 0, 1), 
+                           z = z.init)}
+  
+# Bundle data
+  jags.data <- list(y = CH, f = f, nind = dim(CH)[1], n.occasions = dim(CH)[2],
+                    sex=sex)
+  
+# Setup the Model
+  jm <- jags.model(file="cjs2.r", data=jags.data,n.chains=nc,n.adapt=na,inits=inits)
+  
+# Update the model with the burnin
+  update(jm, n.iter=nb)
+  
+#Fit the model
+  post2 <- coda.samples(jm, variable.names=parameters, n.iter=ni, thin=nt)
+  
+#Look at the results
+  summary(post2)  
+```
+
+
+The summary output shows us the quantiles of each model paramter that was defined in the variable `parameters`.
+
+## Step 2
+
+Check that parameters have converged. Show evidence of this by plotting and calculating
+the gelman-rubin convergence diagnostic, i.e, function gelman.diag.
+
+```{r echo=TRUE,eval=TRUE}
+  plot(post2)
+  gelman.diag(post2)
+```
+
+
+We see the diagnostic statistic (gelman-rubin statistics; known as $\hat{R}$) are at 1, indicating no sign of lack of convergence. Also, the posterior distribution traceplots look like fuzzy caterpillars and are overlapping, also demonstrating no signs of convergence issues. 
+
+# Step 3
+
+Use the estimated posterior parameters of survival to derive the posterior distributions 
+for the probability of survival for males and females. Visualize these distributions on the same plot.
+
+```{r echo=TRUE,eval=TRUE}
+
+  beta0 = post2[[1]][,1]
+  beta1 = post2[[1]][,2]
+  
+  # Posteriors of survival of males and females  
+  male.survival = plogis(beta0+beta1)
+  female.survival = plogis(beta0)
+  
+  # Plot posteriors  
+  plot(density(male.survival),lwd=3,col=1,"Annual Survival")
+  lines(density(female.survival),lwd=3,col=2)  
+  legend("topright",lwd=3,col=c(1,2),legend=c("Male","Female"))
+
+```
+
+Here we see the posterior distributions of male and female annual survival. They are similar, indicating only a possible small differences in survival between the sexes.
+
+# Step 4
+
+Use Monte Carlo integration on the sex effect parameter to estimate the probability that the 
+the effect difference of male survival is less than female survival
+
+
+```{r echo=TRUE,eval=TRUE}
+# The probability of a sex effect- that male survival is less than female survival
+# To evaluate this, we want to know if beta1 is negative  
+length(which(beta1<0))/length(beta1)
+```
+
+The probability that $\beta_1 < 0$ indicates there is no evidence of a difference. A high probability, values near 1, would indicate a stististical clear negative effect. However, if we saw probabilities near 0, this would indicate a clear statistical positive effect difference between male and female survival probability.
+
+<br>
+<br>

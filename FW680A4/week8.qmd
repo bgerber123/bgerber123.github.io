@@ -46,7 +46,7 @@ title: ""
 
 -   Paper discussion led by Alex Badeaux, Noel Clark, Elke Tukker
 
--   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection
+-   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
 
 -   Downloads: <a href="/classfiles/cjslab/week9files.zip">Files</a> -->
 
@@ -54,13 +54,13 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(stringr)
+install.packages(c("stringr","coda"))
 ```
 
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class: 
- <!-- - <a href="/readings/">Assigned Reading on SDM</a> -->
+ <!-- - <a href="/readings/">Assigned Reading on Spatial Capture Recapture</a> -->
 
 
 
