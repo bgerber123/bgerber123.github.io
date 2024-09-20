@@ -43,7 +43,13 @@ third = glm(weight~age.years*site)
 fourth = glm(weight~poly(age.years,2)+site
 ```
 
-<b><span style="color:purple">First and Third</span></b>
+<b><span style="color:purple">The First and Third (same model/design matrix, but different code syntax) allow the effect of slope to be different at each level of site. These are interactions b/w variables, such that the variables co-depend on each other. </span></b>
+
+<b><span style="color:purple">The Second allows there to be a site-level differences but the same slope</span></b>
+
+<b><span style="color:purple">The fourth also allows a site level difference of a quadratic effect, but the same quadratic effect</span></b>
+
+<b><span style="color:purple">Main take away - all allow for different effects of age.years by site, but the First and Third let the effect/slope be different, while the other models just move the same slope up and down due to site.</span></b>
 
 <br>
 
@@ -53,7 +59,7 @@ fourth = glm(weight~poly(age.years,2)+site
 glm(weight~age.years+site)
 ```
 
-<b><span style="color:purple"> The plot should have weight on the y-axis and age.years on the x-axis. There should be two lines, representing the slopes of age.years for each site. The slopes should be parallel with site 2 lower than site 1.
+<b><span style="color:purple"> The plot should have weight on the y-axis and age.years on the x-axis. There should be two lines, representing the slopes of age.years for each site. The slopes should be parallel with site 2 lower than site 1. The slope for site 2 should be lower on the y-axis than site 1.
 </span></b>
 
 <br>
@@ -86,13 +92,13 @@ dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=FALSE)
 summary(glm(weight~age.yeras.sc*site,data=dat))
 ```
 
-Intercept = the mean weight of elephants at the observed mean age of elephants at site 1
+<b><span style="color:purple">Intercept = the mean weight of elephants at the observed mean age of elephants at site 1</span></b>
 
-age.yeras.sc = the one year change in mean weight of elephants at site 1
+<b><span style="color:purple">age.yeras.sc = the one year change in mean weight of elephants at site 1</span></b>
 
-siteSite 2 = the mean weight effect difference of site 2 from site 1 (intercept) at the mean observed age of elephants.
+<b><span style="color:purple">siteSite 2 = the mean weight effect difference of site 2 from site 1 (intercept) at the mean observed age of elephants.</span></b>
 
-age.yeras.sc:siteSite 2 - the change in the slope or one year change in mean weight of elephants at site 2 from site 1
+<b><span style="color:purple">age.yeras.sc:siteSite 2 - the change in the slope or one year change in mean weight of elephants at site 2 from site 1</span></b>
 
 <br>
 <br>

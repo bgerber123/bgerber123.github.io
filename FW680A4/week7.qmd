@@ -21,7 +21,7 @@ install.packages(c("brms","bayesplot"))
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class: 
-    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13</a>
+    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
 
  
 ### Day 2 (lab)
@@ -43,6 +43,13 @@ install.packages(c("ubms","unmarked"))
 
 
 #### [Assigned]{style="color:red;"}
- -   <a href="/readings/Guillera-Arroita et al. 2015.pdf">Guillera-Arroita et al. 2015</a>
- -   <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
+
+-   Readings for next class:
+    -   <a href="/readings/Guillera-Arroita et al. 2015.pdf">Guillera-Arroita et al. 2015</a>
+    -   <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
  
+- Background Reading (not required):
+  - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
+
+
+

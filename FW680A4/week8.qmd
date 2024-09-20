@@ -8,6 +8,24 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
+##### **In Class Discussion Questions for Guillera-Arroita et al. 2015 and Soley-Guardia et al. 2024**
+
+- what is a SDM?
+
+- what are they used for?
+
+- what are the types of data used and how does that change the inference/predictions?
+
+- what are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?
+
+- what is the difference/importance of being able to estimate occurrence probability and occurence relative liklihood?
+
+- what is the difference b/w environmental space and geographic space?
+
+- Have you encountered or thought abiout any of the top ten hazards to avoid in applying a SDM or other model?
+
+- What are some specific model types or algorithms commonly used for fitting a sdm?
+
 <!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
 
 <!-- -   Install R packages: -->
@@ -18,22 +36,25 @@ title: ""
 <!-- ``` -->
 
 #### [Assigned]{style="color:red;"}
- <!-- -   Readings for next class:  -->
- <!--    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13</a> -->
+ -   Readings for next class:
+    - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch 7 (sections 7.1-7.3)</a>
 
  
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
--   Lecture: Board Work on Mark Recapture
+-   Paper discussion led by Alex Badeaux, Noel Clark, Elke Tukker
 
--   Downloads: <a href="/classfiles/occlab/week8files.zip">Files</a>
+-   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection
+
+-   Downloads: <a href="/classfiles/cjslab/week9files.zip">Files</a> -->
 
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
+install.packages(stringr)
 ```
 
 
