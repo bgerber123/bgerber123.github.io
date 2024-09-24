@@ -1,0 +1,73 @@
+---
+title: ""
+---
+
+## Week 9
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of Royle et al. 2018**
+
+- How are data different than a typical capture-recapture study?
+
+- What is an 'activity center'?
+
+- What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume?
+
+- What are the two components that control 'detection probability'?
+
+- If using a SCR model, how might your sampling strategy change?
+
+- What is the exact meaning of abundance in this type of model?
+
+
+<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("brms","bayesplot")) -->
+<!-- ``` -->
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+    - <a href="/readings/Miller et al 2019.pdf">Miller et al 2019</a>
+
+- Background Reading (not required):
+  - <a href="/readings/Miller et al 2013.pdf">Miller et al 2013</a>
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Small Group Discussion: fundamental premise of the sampling and modeling using 'Distance Sampling'
+
+
+-   Downloads: <a href="/classfiles/scrlab/week9files.zip">Files</a>
+
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("secr","Distance"))
+```
+
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+    <!-- - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a> -->
+
+
+- Background Reading (not required):
+  <!-- - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a> -->
+
+
+
+
+
+

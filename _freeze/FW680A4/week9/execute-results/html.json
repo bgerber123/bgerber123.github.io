@@ -1,0 +1,15 @@
+{
+  "hash": "a4988950a4d9c382be07823f790cf481",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n## Week 9\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion of Royle et al. 2018**\n\n- How are data different than a typical capture-recapture study?\n\n- What is an 'activity center'?\n\n- What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume?\n\n- What are the two components that control 'detection probability'?\n\n- If using a SCR model, how might your sampling strategy change?\n\n- What is the exact meaning of abundance in this type of model?\n\n\n<!-- -   Lecture (Code): <a href=\"/classfiles/hbayes/Bayesian.Hierarchical.Model.zip\">Bayesian Hierarchical Model Files</a> -->\n\n<!-- -   Install R packages: -->\n\n<!-- ```{r, eval=FALSE, echo=TRUE} -->\n<!-- # CRAN packages -->\n<!-- install.packages(c(\"brms\",\"bayesplot\")) -->\n<!-- ``` -->\n\n#### [Assigned]{style=\"color:red;\"}\n-   Readings for next class:\n    - <a href=\"/readings/Miller et al 2019.pdf\">Miller et al 2019</a>\n\n- Background Reading (not required):\n  - <a href=\"/readings/Miller et al 2013.pdf\">Miller et al 2013</a>\n\n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Small Group Discussion: fundamental premise of the sampling and modeling using 'Distance Sampling'\n\n\n-   Downloads: <a href=\"/classfiles/scrlab/week9files.zip\">Files</a>\n\n\n-   Install R packages:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"secr\",\"Distance\"))\n```\n:::\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n-   Readings for next class:\n    <!-- - <a href=\"/readings/Royle et al 2018.pdf\">Royle et al. 2018</a> -->\n\n\n- Background Reading (not required):\n  <!-- - <a href=\"/readings/Borchers and Marques 2017.pdf\">Borchers and Marques 2017</a> -->\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

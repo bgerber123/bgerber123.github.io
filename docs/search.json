@@ -7816,7 +7816,7 @@
     "href": "FW680A4/week8.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class: - Kery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\"))\n\n\n\nReadings for next class:"
+    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class: - Kery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017"
   },
   {
     "objectID": "FW680A4/week8.html#week-7",
@@ -7858,7 +7858,7 @@
     "href": "FW680A4/week8.html#week-8",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class: - Kery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\"))\n\n\n\nReadings for next class:"
+    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class: - Kery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017"
   },
   {
     "objectID": "classfiles/cjslab/cjslab.BDG.html",
@@ -7880,5 +7880,19 @@
     "title": "Survival Estimation with Capture-Recapture Data",
     "section": "Step 2",
     "text": "Step 2\nCheck that parameters have converged. Show evidence of this by plotting and calculating the gelman-rubin convergence diagnostic, i.e, function gelman.diag.\n\n  plot(post2)\n\n\n\n\n\n\n  gelman.diag(post2)\n\nPotential scale reduction factors:\n\n      Point est. Upper C.I.\nbeta0          1          1\nbeta1          1          1\np              1          1\n\nMultivariate psrf\n\n1\n\n\nWe see the diagnostic statistic (gelman-rubin statistics; known as \\(\\hat{R}\\)) are at 1, indicating no sign of lack of convergence. Also, the posterior distribution traceplots look like fuzzy caterpillars and are overlapping, also demonstrating no signs of convergence issues."
+  },
+  {
+    "objectID": "FW680A4/week9.html",
+    "href": "FW680A4/week9.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\n\nReadings for next class:\n\nMiller et al 2019\n\n\nBackground Reading (not required):\n\nMiller et al 2013\n\n\n\n\n\nSmall Group Discussion: fundamental premise of the sampling and modeling using ‘Distance Sampling’\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"Distance\"))\n\n\n\nReadings for next class: \nBackground Reading (not required):"
+  },
+  {
+    "objectID": "FW680A4/week9.html#week-9",
+    "href": "FW680A4/week9.html#week-9",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\n\nReadings for next class:\n\nMiller et al 2019\n\n\nBackground Reading (not required):\n\nMiller et al 2013\n\n\n\n\n\nSmall Group Discussion: fundamental premise of the sampling and modeling using ‘Distance Sampling’\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"Distance\"))\n\n\n\nReadings for next class: \nBackground Reading (not required):"
   }
 ]
