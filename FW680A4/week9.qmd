@@ -8,6 +8,35 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
+##### **In Class Discussion of Furnas et al. 2018**
+
+- ?
+
+- ?
+
+<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("brms","bayesplot")) -->
+<!-- ``` -->
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
+
+
+- Background Reading (not required):
+  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
+  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
 ##### **In Class Discussion of Royle et al. 2018**
 
 - How are data different than a typical capture-recapture study?
@@ -23,30 +52,6 @@ title: ""
 - What is the exact meaning of abundance in this type of model?
 
 
-<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
-
-<!-- -   Install R packages: -->
-
-<!-- ```{r, eval=FALSE, echo=TRUE} -->
-<!-- # CRAN packages -->
-<!-- install.packages(c("brms","bayesplot")) -->
-<!-- ``` -->
-
-#### [Assigned]{style="color:red;"}
--   Readings for next class:
-    - <a href="/readings/Miller et al 2019.pdf">Miller et al 2019</a>
-
-- Background Reading (not required):
-  - <a href="/readings/Miller et al 2013.pdf">Miller et al 2013</a>
-
- 
-### Day 2 (lab)
-
-#### [Today]{style="color:red;"}
-
--   Small Group Discussion: fundamental premise of the sampling and modeling using 'Distance Sampling'
-
-
 -   Downloads: <a href="/classfiles/scrlab/week9files.zip">Files</a>
 
 
@@ -54,7 +59,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("secr","Distance"))
+install.packages(c("secr","sf"))
 ```
 
 
