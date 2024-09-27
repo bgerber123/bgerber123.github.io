@@ -10,9 +10,23 @@ title: ""
 
 ##### **In Class Discussion of Furnas et al. 2018**
 
-- ?
+- What is distancing sampling used for?
 
-- ?
+- What is temporary emigration?
+
+- How was the model fit? What was the package and was it likelihood or Bayesian?
+
+- How/why was bootstrapping used?
+
+- Interpret the AIC model selection findings in Table 2
+
+- What was the form of the detection function?
+
+- What is the coefficient of variation?
+
+<!-- ##### **In Class Group Recitation** -->
+
+
 
 <!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
 
