@@ -38,15 +38,15 @@ Week                                  |	Day  |	Date     | 	Lecture Topic        
 <a href="/FW680A4/week4.qmd">4</a>    |	Tu	 | 10-Sep	 | GLM I                                        |                   |Zurr and Iano, 2016                 |              |
 &nbsp;                                |	Fr	 | 13-Sep	 | GLM II                                       |Lab 4: GLM         |Fieberg, Ch. 8; Tredennick et al. 2021  |              |
 <a href="/FW680A4/week5.qmd">5</a>    |	Tu	 | 17-Sep	 | Modeling Strategies                          |                   |                             | Gelman and Hill Ch. 11 and 12             |
-&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models / GLMM                   |Lab 5: GLMM        |  Kery and Kellner Ch. 2.7-2.10               |              |
+&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models / GLMM                   |Lab 5: GLMM        | Kery and Kellner Ch. 2.7-2.10               |              |
 <a href="/FW680A4/week6.qmd">6</a>    |	Tu	 | 24-Sep	 | Bayesian Inference                           |                   | Ellison 2004                | Hobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12       |
 &nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Inference and Computation           |Lab 6: Bayes; Bayes Quiz       |                             |  Kurz, 2023            |
-<a href="/FW680A4/week7.qmd">7</a>    |	Tu	 | 1-Oct	 | Hierarchical Bayesian Models                 |                   |Kery and Schaub Ch13          |
-&nbsp;                                |	Fr	 | 4-Oct	 | Hierarchical Bayesian Occupancy Models       |Lab 7: HMB Occupancy| Widmer et al 2021; Guillera-Arroita et al. 2015   |Soley-Guardia et al. 2024;Valavi et al. 2021              |
-<a href="/FW680A4/week8.qmd">8</a>    |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   | Kery and Schaub Ch 7    |              | 			
-&nbsp;                                |	Fr	 | 11-Oct	 | Mark Recapture                               |Lab 8: CJS          | Furnas et al 2018.pdf      | McClintock and Thomas (Section 3.2)             | 			
-<a href="/FW680A4/week9.qmd">9</a>    |	Tu	 | 15-Oct	 | Distance Sampling                            |                   |Royle et al. 2018            |              |
-&nbsp;                                |	Fr	 | 18-Oct	 | Spatial Capture Recapture                    |Lab 9: SCR         |                             |              |
+<a href="/FW680A4/week7.qmd">7</a>    |	Tu	 | 1-Oct	 | Hierarchical Bayesian Models                 |                   |           |
+&nbsp;                                |	Fr	 | 4-Oct	 | Recitation                                   |                   |Widmer et al 2021; Guillera-Arroita et al. 2015   |Soley-Guardia et al. 2024;Valavi et al. 2021              |
+<a href="/FW680A4/week8.qmd">8</a>    |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   | Kery and Schaub Ch 7        |              | 			
+&nbsp;                                |	Fr	 | 11-Oct	 | Mark Recapture                               |Lab 7: CJS         | Kery and Schaub Ch 13        |              | 			
+<a href="/FW680A4/week9.qmd">9</a>    |	Tu	 | 15-Oct	 | Hierarchical Bayesian Occupancy Models       |Lab 8: HB Occupancy|Royle et al. 2018            |              |
+&nbsp;                                |	Fr	 | 18-Oct	 | Spatial Capture Recapture                    |Lab 9: SCR         |Zipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale ch 18 |              |
 10                                    | TU	 | 22-Oct	 | N-Mixture and Integrated Data Models         |                   |                             |              |
 &nbsp;                                | Fr	 | 25-Oct	 | Animal Movement I                            |                   |                             |              | 	
 11                                    | Tu	 | 29-Oct	 | Animal Movement II                           |                   |                             |              |

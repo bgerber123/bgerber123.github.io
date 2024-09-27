@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[english,activeacute]{babel}
+\usepackage{amsmath}
+
+\title{Bayesian Hierarhical Model}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+\section{Generalized Linear Mixed Model}
+\subsection{Fixed Effect Intercept and Random Slope (Version 1)}
+
+\Large
+
+We fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \alpha_{0} + \beta_{j}\times \text{dist.human}_{i,j}\\
+\beta_{j} &\sim \text{Normal}(\mu^{\beta}, \sigma^{\beta})
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\alpha_{0} \sim& \text{Logistic}(0, 1)\\
+\mu^{\beta} \sim& \text{Normal}(0, 3)\\
+\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\end{align*}
+
+
+\pagebreak
+
+\subsection{Fixed Effect Intercept and Random Slope (Version 2)}
+
+
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \alpha_{0} + (\beta_1 + \beta_{2,j}) \times \text{dist.human}_{i,j}\\
+\beta_{2,j} &\sim \text{Normal}(0, \sigma^{\beta})
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\alpha_{0} \sim& \text{Logistic}(0, 1)\\
+\beta_{1} \sim& \text{Normal}(0, 3)\\
+\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\end{align*}
+
+
+\end{document}

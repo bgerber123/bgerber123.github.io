@@ -144,7 +144,7 @@
   
 #####################################
 #####################################
-# Fit the same model in JAGS (parameterized Differently - version 1; see pdf)
+# Fit the same model in JAGS (parameterized Differently - version 2; see pdf)
 
 
 #JAGS data list

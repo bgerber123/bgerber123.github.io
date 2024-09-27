@@ -10,7 +10,7 @@ title: ""
 
 -   Please bring your laptop today
 
--   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
+-   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip">Bayesian Hierarchical Model Files</a>
 
 -   Install R packages:
 
@@ -20,9 +20,7 @@ install.packages(c("brms","bayesplot"))
 ```
 
 #### [Assigned]{style="color:red;"}
- -   Readings for next class: 
-    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
-
+ 
  
 ### Day 2 (lab)
 
@@ -30,16 +28,10 @@ install.packages(c("brms","bayesplot"))
 
 -   Discuss Project
 
--   Lecture: Board Work
+-   Continue investigation of Hierarchical Bayesian modeling. No lab to turn in.
 
--   Downloads: <a href="/classfiles/occlab/week7files.zip">Files</a>
+-   Recitation
 
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("ubms","unmarked"))
-```
 
 
 #### [Assigned]{style="color:red;"}

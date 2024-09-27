@@ -49,7 +49,7 @@ title: ""
 
 -   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
 
--   Downloads: <a href="/classfiles/cjslab/week8files.zip">Files</a>
+-   Downloads: <a href="/classfiles/cjslab/cjslabfiles.zip">Files</a>
 
 -   Install R packages:
 
@@ -60,12 +60,8 @@ install.packages(c("stringr","coda"))
 
 
 #### [Assigned]{style="color:red;"}
--   Readings for next class:
-    - <a href="/readings/Furnas et al 2018.pdf">Furnas et al 2018</a>
-
-
-- Background Reading (not required):
-  - <a href="/readings/McClintock and Thomas Book Chapter.pdf">McClintock and Thomas (book chapter; Section 3.2)</a>
+-   Readings for next class: 
+    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
 
 
 
