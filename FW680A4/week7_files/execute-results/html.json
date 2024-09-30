@@ -1,0 +1,15 @@
+{
+  "hash": "63a9b628d82497c83d7813e796afe3db",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 7\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n-   Please bring your laptop today\n\n-   Lecture (Code): <a href=\"/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip\">Bayesian Hierarchical Model Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n```\n:::\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n \n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Discuss Project\n\n-   Continue investigation of Hierarchical Bayesian modeling. No lab to turn in.\n\n-   Recitation\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n\n-   Readings for next class:\n    -   <a href=\"/readings/Widmer et al 2021.pdf\">Widmer et al 2021</a>\n    -   <a href=\"/readings/Guillera‐Arroita et al. 2015.pdf\">Guillera‐Arroita et al. 2015</a>\n\n- Background Reading (not required):\n  - <a href=\"/readings/Soley-Guardia et al. 2024.pdf\">Soley-Guardia et al. 2024</a>\n  - <a href=\"/readings/Valavi et al. 2021.pdf\"> Valavi et al. 2021 (assessment of modeling methods)</a>.\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
