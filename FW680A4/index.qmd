@@ -8,7 +8,6 @@ title: ""
 
 <p><a href="schedule.qmd">Schedule (Subject to Change)</a></p>
 
-<br>
 
 ::: {.panel-tabset}
 
@@ -140,12 +139,43 @@ glmm.BDG.zip
 
 ### Project
 
--   Work individually or in a group of 2
+#### **Project Type**
 
--   Decide on whether you will work on a 1) research project or 2) develop a short lecture along with a lab-case study.
+Decide on whether you will work on a **1)** independent research project or **2)** develop a short lecture or lab case study on a statistical methodology. Research projects are individual, while a lecture/lab case study can be a team of 2-3 people. 
 
+Once decided, individually (for a research project) or as a group (case study), email me a one paragraph synopsis of your plan and topic of choice. <span style="color:purple"><b>Please do this by October 25. </b></span> I will followup if I have any questions.
 
-### Learning 
+##### **Independent Research Project**
+
+Conduct a quantitative-focused project, such as a statistical analysis of data, or simulation based investigation. If you are unsure of whether your idea fits, come talk with me. If you want to use data from your graduate research, that would be great, but no need to use all of it or for exactly the purpose of your project. Simplifying the data and analysis is good and appropriate. 
+
+*Objectives:*
+
+- Write a report; this should be turned in <span style="color:purple"><b>December 6 (last day of classes).</b></span> 
+
+- Present findings in class as an [ignite talk](https://www.ignitetalks.io/); i.e., a 5 minute long presentation with 20 slides and with the slides advancing automatically every 15 seconds. <span style="color:purple"><b>Presentations will be on December 3 and 6.</b></span> 
+
+Prepare a report via R Markdown that generally follows the sections of 1) idea/hypothesis/setup, 2) data explanation, sampling methodology, and modeling, 3) results, and 4) summary/conclusions. 
+
+In Canvas, please submit the compiled HTML, as well as all other files needed to knit this file.
+
+This class is focused on  statistical models and model fitting, so make sure to emphasize the specifics of the statistical model that is being used and how it is being fit. 
+
+This report does not have to be long, but it should be clear and well presented. Part of the grade will be your focus on communicating the data/model/results visually and via clear statistical language. 
+
+##### **Lecture/Lab Case Study **
+
+*Objective:*
+
+- Create a lecture, R code lab, or hybrid centered around a quantitative approach relevant to wildlife ecology and conservation.
+
+For example, 1) develop a lecture on a specific statistical model, 2) a lab walk through implementing the model and important nuances to consider, or 3) some mixture of these.
+
+Aim for the lecture/lab to be around 25-30 minutes. Please submit the final materials on Canvas by <span style="color:purple"><b>December 6 (last day of classes).</b></span> 
+
+Evaluation will be based on the clarity and organization of the materials presented and the preparedness of the instructors in engaging with the class. 
+
+### Learning
 
 :::: {.columns}
 
