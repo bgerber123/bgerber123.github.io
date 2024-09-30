@@ -72,7 +72,7 @@ install.packages(c("secr","sf"))
 
 
 #### [Assigned]{style="color:red;"}
--   Readings for next class:
+- Readings for next class:
   - <a href="/readings/Zipkin and Saunders 2018.pdf">Zipkin and Saunders 2018 (lines 153-208, AKA section 3)</a>
   - <a href="/readings/Zipkin et al. 2021.pdf">Zipkin et al. 2021</a>
   - <a href="/readings/Powell and Gale 2015 Ch 18.pdf">Powell and Gale ch 18</a>
