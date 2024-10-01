@@ -17,6 +17,10 @@ head(data[[2]])
 head(data[[3]])
 
 
+#######################
+#######################
+# Likelihood
+
 # First, lets fit our Count data
 fm1 <- glm(Counts ~ selev1, family = poisson(link = "log"),data=data[[1]])
 
@@ -35,3 +39,10 @@ fm3 <- glm(y ~ selev3, family = binomial(link = "cloglog"), data = data[[3]])
 
 summary(fm3)
 exp(coef(fm3)[1])   
+
+
+
+#######################
+#######################
+# Bayesian
+
