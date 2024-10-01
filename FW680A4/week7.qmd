@@ -10,14 +10,7 @@ title: ""
 
 -   Please bring your laptop today
 
--   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip">Bayesian Hierarchical Model Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("brms","bayesplot"))
-```
+-   Discussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels
 
 #### [Assigned]{style="color:red;"}
  
@@ -30,8 +23,14 @@ install.packages(c("brms","bayesplot"))
 
 -   Continue investigation of Hierarchical Bayesian modeling. No lab to turn in.
 
--   Recitation
+-   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip">Bayesian Hierarchical Model Files</a>
 
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("brms","bayesplot"))
+```
 
 
 #### [Assigned]{style="color:red;"}
