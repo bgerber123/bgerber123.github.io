@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[english,activeacute]{babel}
+\usepackage{amsmath}
+
+\title{Bayesian  Model}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+\section{Bayesian Generalized Linear Model}
+\subsection{Hierarchical Statistical Model with extra Variance Term for Unexplained Site Specific Variation}
+
+\Large
+
+We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \beta_{0} + \beta_{1}\times \text{dist.human}_{i,j}+ \epsilon_{i,j}\\
+\epsilon_{i,j} \sim \text{Normal}(0,\sigma)
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\beta_{0} \sim& \text{Logistic}(0, 1)\\
+\beta_{1} \sim& \text{Logistic}(0, 1)\\
+\sigma \sim& \text{Uniform}(0,5)
+\end{align*}
+
+
+\pagebreak
+
+\subsection{JAGS syntax for this model}
+
+\begin{verbatim}
+model {
+
+# Priors
+  b0 ~ dlogis(0,1)
+  b1 ~ dlogis(0,1)
+  sigma ~ dunif(0,5)
+  tau <- 1/sigma^2
+
+# Likelihood
+  for (i in 1:N) {
+     y[i] ~ dbern(p[i])
+     logit(p[i]) <- b0 + b1*dist.human[i]+epsilon[i]
+     epsilon[i]~ dnorm(0,tau)
+  } #End loop
+  
+} #End Model
+\end{verbatim}
+
+
+
+
+
+\subsection{Hierarchical Statistical Model with extra Variance Term for Unexplained Variation by Protected Area}
+
+\Large
+
+We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \beta_{0} + \beta_{1}\times \text{dist.human}_{i,j}+ \epsilon_{j}\\
+\epsilon_{j} &\sim \text{Normal}(0,\sigma)
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\beta_{0} \sim& \text{Logistic}(0, 1)\\
+\beta_{1} \sim& \text{Logistic}(0, 1)\\
+\sigma \sim& \text{Uniform}(0,5)
+\end{align*}
+
+
+\pagebreak
+
+\subsection{JAGS syntax for this model}
+
+Note that the variable PA should be an index of which PA is which, labled as 1,1,1,1....50 times for the first PA and then 2,2,2,2...50 times for the second PA and so on....
+
+\begin{verbatim}
+model {
+
+# Priors
+  b0 ~ dlogis(0,1)
+  b1 ~ dlogis(0,1)
+  sigma ~ dunif(0,5)
+  tau <- 1/sigma^2
+
+# Likelihood
+  for (i in 1:N) {
+     y[i] ~ dbern(p[i])
+     logit(p[i]) <- b0 + b1*dist.human[i]+epsilon[PA[i]]
+  } #End loop
+
+#Random variation by PA
+for(i in 1:N.PA){
+  epsilon[j] ~ dnorm(0,tau)
+ }
+ 
+} #End Model
+\end{verbatim}
+
+
+\end{document}

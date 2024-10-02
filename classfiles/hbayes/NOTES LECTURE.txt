@@ -1,0 +1,22 @@
+The idea is to setup the basic GLM model as a Bayesian model on the board
+
+Then write the JAGS model
+
+Then ask the students to fit that model
+
+
+Then we walk through the pdf 'Bayesian hierarchical model' and the JAGS models model.jags1.r and model.jags2.r. We then
+fit these models together via script model.script.
+
+
+Then we go back to the board to write the statistical model and code syntax
+
+for the extra variance parameter per camera/site and the one for the extra variance for the PA.
+
+I then ask the students to write out those models and fit these models
+
+
+
+
+
+

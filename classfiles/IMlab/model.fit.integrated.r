@@ -26,7 +26,7 @@ data.list <- list(C1 = C1,
                   )
 
 # Parameters monitored
-params <- c("mean.lam", "alpha", "beta")
+params <- c("alpha", "beta")
 
 # MCMC settings
 na <- 1000; ni <- 6000; nb <- 2000; nc <- 4; nt <- 4
@@ -40,10 +40,10 @@ jm=jags.model(file="IM.jags.r", data=data.list,
 update(jm, n.iter=nb)
 
 #Fit the modedl  
-post=coda.samples(jm, variable.names=params, n.iter=ni, thin=nt)
+post.IM=coda.samples(jm, variable.names=params, n.iter=ni, thin=nt)
 
-#save(post,file="post.IM")
-#load("post")
+#save(post.IM,file="post.IM")
+#load("post.IM")
 
 #Look at chains
 #Plot all chains MCMC iterations
@@ -53,20 +53,31 @@ mcmc_trace(post)
 #Fancy plot of posterior
 mcmc_areas(as.matrix(post))
 
-#Posterior mean and median
-apply(as.matrix(post),2,mean)
-apply(as.matrix(post),2,median)
+##########################
+# If we have fit the separate models to each data set, we can then plot posteriors for each separate model 
+# and compare to the integrated model
 
-#95% Credible Intervals
-apply(as.matrix(post),2,quantile, probs=c(0.025,0.5,0.975))
+#plot intercept
+plot(density(post1[[1]][,1]),lwd=3,col=1,xlim=c(0.3,1),main="Posteriors of Intercept",
+     ylim=c(0,20))
+lines(density(post2[[1]][,1]),lwd=3,col=2)
+lines(density(post3[[1]][,1]),lwd=3,col=3)
+lines(density(post.IM[[1]][,1]),lwd=4,col=4)
+legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
+                                                "Posterior of ZT Counts",
+                                                "Posterior of Det/Non-Det",
+                                                "Posterior of Integrated Model"
+))
 
-# Compare with brms mode fit  
-apply(as.matrix(post)[,1:2],2,quantile, probs=c(0.025,0.5,0.975))
-summary(brm.fit)$fixed
 
-# Compare with brms mode fit  
-quantile(as.matrix(post)[,8],probs=c(0.025,0.5,0.975))
-summary(brm.fit)$random
-
-
-
+#plot slope
+plot(density(post1[[1]][,2]),lwd=3,col=1,xlim=c(-2.5,-1),main="Posteriors of Slope",
+     ylim=c(0,15))
+lines(density(post2[[1]][,2]),lwd=3,col=2)
+lines(density(post3[[1]][,2]),lwd=3,col=3)
+lines(density(post.IM[[1]][,2]),lwd=4,col=4)
+legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
+                                                "Posterior of ZT Counts",
+                                                "Posterior of Det/Non-Det",
+                                                "Posterior of Integrated Model"
+                                                ))

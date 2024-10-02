@@ -1,0 +1,7 @@
+The idea is to walk through the text in the book for the setup
+
+Then walk through psi - lambda connection and code
+
+We then fit each model separately.
+
+Then together we create the script (model.fit.integrated.r) and jags model for the integrated model (IM.jags)
