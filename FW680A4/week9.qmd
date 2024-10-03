@@ -8,29 +8,6 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("ubms","unmarked"))
-```
-
-#### [Assigned]{style="color:red;"}
--   Readings for next class:
-    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
-
-
-- Background Reading (not required):
-  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
-  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
-
- 
-### Day 2 (lab)
-
-#### [Today]{style="color:red;"}
-
 ##### **In Class Discussion of Royle et al. 2018**
 
 - How are data different than a typical capture-recapture study?
@@ -45,6 +22,7 @@ install.packages(c("ubms","unmarked"))
 
 - What is the exact meaning of abundance in this type of model?
 
+#####
 
 -   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Files</a>
 
@@ -54,6 +32,26 @@ install.packages(c("ubms","unmarked"))
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
 install.packages(c("secr","sf"))
+```
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Board work defining the occupancy model hierarchically
+
+-   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("ubms","unmarked"))
 ```
 
 
