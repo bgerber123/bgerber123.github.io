@@ -7200,14 +7200,14 @@
     "href": "FW680A4/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in next week.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nFit models specified in the previous class\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nNo lab to turn in next week.\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
   },
   {
     "objectID": "FW680A4/week7.html#week-7",
     "href": "FW680A4/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in next week.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nFit models specified in the previous class\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nNo lab to turn in next week.\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
   },
   {
     "objectID": "FW680A4/hierarchical.html#names",

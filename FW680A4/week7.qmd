@@ -10,7 +10,7 @@ title: ""
 
 -   Please bring your laptop today
 
--   Discussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels
+-   Board work for statistical notation and JAGS syntax for Bayesian generalized linear models
 
 #### [Assigned]{style="color:red;"}
  
@@ -21,9 +21,13 @@ title: ""
 
 -   Discuss Project
 
--   Continue investigation of Hierarchical Bayesian modeling. No lab to turn in next week.
+-   Fit models specified in the previous class
 
--   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip">Bayesian Hierarchical Model Files</a>
+-   Board work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models
+
+-   No lab to turn in next week.
+
+-   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model2.zip">Bayesian Hierarchical Model Files</a>
 
 -   Install R packages:
 
