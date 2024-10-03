@@ -1,0 +1,59 @@
+---
+title: ""
+---
+
+## Week 11
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of XXX, led by Jeremy Alder and Becca Windell**
+
+
+##### **In Class Discussion of Wittemyer et al. 2019.pdf**
+
+
+<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("brms","bayesplot")) -->
+<!-- ``` -->
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+
+-   Background Reading (not required):
+     - <a href="/readings/Nathan et al 2008.pdf">Nathan et al 2008</a>
+     - <a href="/readings/Nathan et al. 2022.pdf">Nathan et al. 2022</a>
+     - <a href="/readings/Signer et al 2018.pdf">Signer et al 2018</a>
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of XXX**
+
+-   Downloads: <a href="/classfiles/XXX/XXXX.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("amt"))
+```
+
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class: 
+    <!-- - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a> -->
+
+
+
+
+
+

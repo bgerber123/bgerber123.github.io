@@ -1,0 +1,15 @@
+{
+  "hash": "c37f8eaf5ec9a81478e7df4f57998beb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n\n## Week 11\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion of XXX, led by Jeremy Alder and Becca Windell**\n\n\n##### **In Class Discussion of Wittemyer et al. 2019.pdf**\n\n\n<!-- -   Lecture (Code): <a href=\"/classfiles/hbayes/Bayesian.Hierarchical.Model.zip\">Bayesian Hierarchical Model Files</a> -->\n\n<!-- -   Install R packages: -->\n\n<!-- ```{r, eval=FALSE, echo=TRUE} -->\n<!-- # CRAN packages -->\n<!-- install.packages(c(\"brms\",\"bayesplot\")) -->\n<!-- ``` -->\n\n#### [Assigned]{style=\"color:red;\"}\n-   Readings for next class:\n\n-   Background Reading (not required):\n     - <a href=\"/readings/Nathan et al 2008.pdf\">Nathan et al 2008</a>\n     - <a href=\"/readings/Nathan et al. 2022.pdf\">Nathan et al. 2022</a>\n     - <a href=\"/readings/Signer et al 2018.pdf\">Signer et al 2018</a>\n\n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion of XXX**\n\n-   Downloads: <a href=\"/classfiles/XXX/XXXX.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"amt\"))\n```\n:::\n\n\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n-   Readings for next class: \n    <!-- - <a href=\"/readings/Kery and Schaub Ch13.pdf\">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a> -->\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
