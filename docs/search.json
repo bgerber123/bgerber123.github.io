@@ -7200,14 +7200,14 @@
     "href": "FW680A4/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
+    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in next week.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
   },
   {
     "objectID": "FW680A4/week7.html#week-7",
     "href": "FW680A4/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
+    "text": "Please bring your laptop today\nDiscussing/Board work for parameterizing Bayesian and hierarchical Bayesian generalized linear mdoels\n\n\n\n\nDiscuss Project\nContinue investigation of Hierarchical Bayesian modeling. No lab to turn in next week.\nLecture (Code): Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods)."
   },
   {
     "objectID": "FW680A4/hierarchical.html#names",
@@ -7886,28 +7886,28 @@
     "href": "FW680A4/week9.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Downloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\n\n\n\n\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011\n\n\n\n\n\n\nHow are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Downloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011\n\n\n\n\n\n\nHow are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
   },
   {
     "objectID": "FW680A4/week9.html#week-9",
     "href": "FW680A4/week9.html#week-9",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Downloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\n\n\n\n\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011\n\n\n\n\n\n\nHow are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Downloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011\n\n\n\n\n\n\nHow are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
   },
   {
     "objectID": "FW680A4/week10.html",
     "href": "FW680A4/week10.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\npaper assigned by Sarah Gaulke, Sean Ingram\nKery and Kellner ch20 (section 20.1) \n\n\n\n\n\n\n\n\n\n\n\nDownloads: Files\n\n\n\n\n\n\nReadings for next class:\n\npaper assigned by Jeremy Alder, Becca Windell\n Wittemyer et al. 2019"
+    "text": "Readings for next class:\n\npaper assigned by Sarah Gaulke, Sean Ingram\nKery and Kellner ch20 (section 20.1) \n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\npaper assigned by Jeremy Alder, Becca Windell\n Wittemyer et al. 2019"
   },
   {
     "objectID": "FW680A4/week10.html#week-10",
     "href": "FW680A4/week10.html#week-10",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\npaper assigned by Sarah Gaulke, Sean Ingram\nKery and Kellner ch20 (section 20.1) \n\n\n\n\n\n\n\n\n\n\n\nDownloads: Files\n\n\n\n\n\n\nReadings for next class:\n\npaper assigned by Jeremy Alder, Becca Windell\n Wittemyer et al. 2019"
+    "text": "Readings for next class:\n\npaper assigned by Sarah Gaulke, Sean Ingram\nKery and Kellner ch20 (section 20.1) \n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\npaper assigned by Jeremy Alder, Becca Windell\n Wittemyer et al. 2019"
   },
   {
     "objectID": "FW680A4/week16.html",

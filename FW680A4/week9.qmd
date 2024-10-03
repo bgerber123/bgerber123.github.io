@@ -17,20 +17,6 @@ title: ""
 install.packages(c("ubms","unmarked"))
 ```
 
-
-<!-- ##### **In Class Group Recitation** -->
-
-
-
-<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
-
-<!-- -   Install R packages: -->
-
-<!-- ```{r, eval=FALSE, echo=TRUE} -->
-<!-- # CRAN packages -->
-<!-- install.packages(c("brms","bayesplot")) -->
-<!-- ``` -->
-
 #### [Assigned]{style="color:red;"}
 -   Readings for next class:
     - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>

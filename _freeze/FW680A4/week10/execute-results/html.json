@@ -1,0 +1,15 @@
+{
+  "hash": "4044c1f7a2173ffa41658d3bc1c19052",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 10\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### Lecture by Dr. Casey Setash of Colorado Parks of Wildlife \n\n#### [Assigned]{style=\"color:red;\"}\n -   Readings for next class:\n     - paper assigned by Sarah Gaulke, Sean Ingram\n     - <a href=\"/readings/Kery and Kellner ch20.pdf\">Kery and Kellner ch20 (section 20.1) </a>\n\n\n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion of XXX, co-led by Sarah Gaulke, Sean Ingram**\n\n-   Downloads: <a href=\"/classfiles/IMlab/IMlabfiles.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n```\n:::\n\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n- Readings for next class:\n  - paper assigned by Jeremy Alder, Becca Windell\n  - <a href=\"/readings/Wittemyer et al. 2019.pdf\"> Wittemyer et al. 2019 </a>\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

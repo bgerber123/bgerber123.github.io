@@ -25,6 +25,14 @@ title: ""
 
 -   Downloads: <a href="/classfiles/IMlab/IMlabfiles.zip">Files</a>
 
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("VGAM"))
+```
+
+
 #### [Assigned]{style="color:red;"}
 - Readings for next class:
   - paper assigned by Jeremy Alder, Becca Windell
