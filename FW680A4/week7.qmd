@@ -21,13 +21,19 @@ title: ""
 
 -   Discuss Project
 
--   Fit models specified in the previous class
+- <a href="/classfiles/hbayes/Bayesian non hierarchical model.pdf">Statistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits</a>
 
 -   Board work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models
+
+-   Fit models specified in the previous class
 
 -   No lab to turn in next week.
 
 -   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
+
+
+<!-- - <a href="/classfiles/hbayes/Bayesian models inclass.zip">Bayesian hierarchical models In Class for Annamite Rabbits</a> -->
+
 
 -   Install R packages:
 
