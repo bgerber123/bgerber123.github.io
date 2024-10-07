@@ -226,39 +226,58 @@ summary(model3.likelihood)
 
 ####################################################  
 ####################################################
-#CHALLENGE
+# Assignment 
 
+  
+##############
 # Step 1
 
-# Ignore detection probability  and fit a Bayesian logistic regression model. 
-# Use brm or JAGS
-# To create this data, we sill combine our observations,
-
+  
+# Fit a Bayesian logistic regression model that ignores detection probability.
+# Do this in JAGS or the brm R package
+  
+# The data we will use is the same as a above 'bunny.data', but we will combine the two columns
+# This was common practice prior to the developement of the occupancy modeling approach
+  
 bunny.ignore.det = apply(bunny.data,1,sum)
 bunny.ignore.det[which(bunny.ignore.det==2)]=1
-
-# Now, we have site level observation without replication. A 1 indicates a detection in either column 1 or column 2 or both.
-# A zero is no detection for other observation.
-
-# Fit the Bayesian logistic regression model and estimate a slope for the effect of veg (bunny$veg)
 bunny.ignore.det
 
-# Compare this slope to your findings from your Bayesian occupancy model slopes - either model3.stan or M3. How are the results different?
-# Think about the issue of ignoring detection probability and what this might mean for your interpretation of an ecological effect?
+# Now, we have site level observation without replication. A '1' indicates a detection in either column 1 or column 2 or both.
+# A zero is no detection for other observation. We will assumes these are perfect presence / absence data 
 
-# Consider fitting this model in brms and loading the bayesplot package to plot posterior distributions
-# Note that as_draws is a function in brms to extract posterior samples
+# Fit the Bayesian logistic regression model and estimate a slope for the effect of veg (bunny$veg). Examine the traceplots and provide evidence
+# that the posteriors have converged. 
 
+# Compare this posterior distribution slope to your findings from your Bayesian occupancy model slope - either model3.stan or M3. How are the results different?
+# Think about the issue of ignoring detection probability and what this might mean when investigating ecological effects when not accounting
+# for the observation process?
 
+# If fitting this model in brms, use the bayesplot lot package to plot posterior distributions.
+# Note that 'as_draws' is a function in brms to extract posterior samples
+
+##############
 # Step 2
 
-# Use model3.stan or M3 to make a prediction plot of occupancy (y-axis) and veg (x-axis).
+# Use the JAGS model 'model3.stan' to make a prediction plot of the probability of occupancy (y-axis) and veg (x-axis).
+#
+# Make your predictions outside of JAGS and in R. 
+#
+# NOte the range of the Veg covariate
 
+range(bunny$Veg)
 
-# Using ubms/stan
+# Make your predictions b/w this range at an interval of 0.1. i.e
 
-#The predict function works with ubms to get predictions
+x.pred = seq(0,1,by=0.1)
 
-#We can use the predict function to get predictions of the 'state' or occurence probabiltiy
-# Using Jags - need to backtransform parameters ourselves. There is no function to do this for us.
-  
+# For each value in x.pred, you want to use your linear model....
+# logit(psi[i]) <- b0+b1*veg[i] 
+#.... to derive the posterior distribution of psi for each value
+
+# Remember, b0 is a posterior and b1 is a posterior. Combine the linear terms,
+# then backtransform the combination to the probability scale.
+
+# Once you have a probabilty distribution of psi for each value of x.pred, think
+# about how you might plot the full posterior for each value, or summarize the posterior
+# median and 95% credible intervals to then plot

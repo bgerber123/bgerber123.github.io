@@ -12,7 +12,7 @@ head(data[[1]])
 # standard deviation of 1000
 head(data[[2]])
 
-# Detection non-detection data with elevation covariate and scaled elevation covariate at a mean of 1000 and 
+# Presence Absencet data with elevation covariate and scaled elevation covariate at a mean of 1000 and 
 # standard deviation of 1000
 head(data[[3]])
 
@@ -36,7 +36,7 @@ summary(fm2)
 exp(coef(fm2)[1])   
 
 
-#Third, fit detection non-detection data
+#Third, fit presence absence data
 fm3 <- glm(y ~ selev3, family = binomial(link = "cloglog"), data = data[[3]])
 
 summary(fm3)
@@ -137,7 +137,7 @@ mcmc_trace(post2)
 
 
 ##################################
-# Detection - non-detection data
+# Presence - Absence data
 
 # Initial values
 inits <- function(){list(alpha = runif(1), beta = rnorm(1))}
@@ -157,7 +157,7 @@ params <- c("alpha", "beta")
 na <- 2000; ni <- 10000; nb <- 4000; nc <- 4; nt <- 4
 
 # Setup the Model
-jm=jags.model(file="detection.jags.model.r", data=data.list,
+jm=jags.model(file="presence.absence.jags.model.r", data=data.list,
               n.chains=nc,
               n.adapt=na)
 
@@ -167,8 +167,8 @@ update(jm, n.iter=nb)
 #Fit the modedl  
 post3=coda.samples(jm, variable.names=params, n.iter=ni, thin=nt)
 
-#save(post3,file="post.detection3")
-#load("post.detection3")
+#save(post3,file="post.PA3")
+#load("post.PA3")
 
 #Look at chains
 #Plot all chains MCMC iterations
