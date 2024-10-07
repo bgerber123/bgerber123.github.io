@@ -32,9 +32,6 @@ title: ""
 -   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
 
-<!-- - <a href="/classfiles/hbayes/Bayesian models inclass.zip">Bayesian hierarchical models In Class for Annamite Rabbits</a> -->
-
-
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
