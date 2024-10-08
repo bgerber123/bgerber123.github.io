@@ -27,40 +27,37 @@ code.r{
 
 ## Schedule 
 
-Week                                  |	Day  |	Date     | 	Lecture Topic                             | Assignments              |	   Readings                   |	Background Materials|
---                                    | ---| ----------|-----------------------------                | ----------------  |-----------------------------  |------------------       |   
-<a href="/FW680A4/week1.qmd"> 1 </a>  | Tu	 | 20-Aug	 | Class Intro; Why statistical model/coding    | Discussion Post  |  Zitomer et al. 2022; Wolcott et al. 2019               |      	            |
-&nbsp;                                |	Fr   | 23-Aug	 | Big Picture                                  | Lab 1: Sampling & Markdown |  Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019                                                | Shmueli 2010; Arif and MacNeil 2022 
-<a href="/FW680A4/week2.qmd">2</a>    |	Tu	 | 27-Aug	 | Probability Functions                        | Probability Quiz        |  Kery and Kellner Chapter 2.0-2.4                             |   Hobbs and Hooten Ch.3; Bolker Ch. 4           |
-&nbsp;                                | Fr	 | 30-Aug	 | Probability Functions                        | Lab 2: Simulation & Prob. Functions   |   Kery and Kellner Chapter 2.5-2.6              | 	Fieberg Ch. 10; Bolker Ch. 6     |		            
-<a href="/FW680A4/week3.qmd">3</a>    |	Tu	 | 3-Sep	 | Likelihood / Optimization                    |            |    Dushoff et al. 2019; Fieberg, Ch. 1.10         |  Fieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2  | 
-&nbsp;                                |	Fr	 | 6-Sep	 | Regression                                   | Lab 3: Regression                  |                        |                           |
-<a href="/FW680A4/week4.qmd">4</a>    |	Tu	 | 10-Sep	 | GLM I                                        |                   |Zurr and Iano, 2016                 |              |
-&nbsp;                                |	Fr	 | 13-Sep	 | GLM II                                       |Lab 4: GLM         |Fieberg, Ch. 8; Tredennick et al. 2021  |              |
-<a href="/FW680A4/week5.qmd">5</a>    |	Tu	 | 17-Sep	 | Modeling Strategies                          |                   |                             | Gelman and Hill Ch. 11 and 12             |
-&nbsp;                                |	Fr	 | 20-Sep	 | Hierarchical Models / GLMM                   |Lab 5: GLMM        | Kery and Kellner Ch. 2.7-2.10               |              |
-<a href="/FW680A4/week6.qmd">6</a>    |	Tu	 | 24-Sep	 | Bayesian Inference                           |                   | Ellison 2004                | Hobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12       |
-&nbsp;                                |	Fr	 | 27-Sep	 | Bayesian Inference and Computation           |Lab 6: Bayes; Bayes Quiz       |                             |  Kurz, 2023            |
-<a href="/FW680A4/week7.qmd">7</a>    |	Tu	 | 1-Oct	 | Hierarchical Bayesian Models                 |                   |           |
-&nbsp;                                |	Fr	 | 4-Oct	 | Hierarchical Bayesian Models                 |Lab  7; Nothing to submit| Widmer et al 2021; Guillera-Arroita et al. 2015   |Soley-Guardia et al. 2024; Valavi et al. 2021  |
-<a href="/FW680A4/week8.qmd">8</a>    |	Tu	 | 8-Oct	 | Species Distribution Modeling                |                   | Kery and Schaub Ch 7        |              | 			
-&nbsp;                                |	Fr	 | 11-Oct	 | Mark Recapture                               |Lab 8: CJS         | Royle et al. 2018        |              | 			
-<a href="/FW680A4/week9.qmd">9</a>    |	Tu	 | 15-Oct	 | Spatial Capture Recapture                    |                   | Kery and Schaub Ch 13           |              |
-&nbsp;                                |	Fr	 | 18-Oct	 | Hierarchical Bayesian Occupancy Models       |Lab 9: HB Occupancy| Zipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18 |           |
-<a href="/FW680A4/week10.qmd">10</a>  | TU	 | 22-Oct  | N-Mixture and Integrated Data Models         |                   | Kery and Kellner Ch20        |              |
-&nbsp;                                | Fr	 | 25-Oct	 | Integrated Data Models                       |                   |                             |              | 	
-11                                    | Tu	 | 29-Oct	 | Animal Movement I                            |                   |                             |              |
-&nbsp;                                | Fr	 | 1-Nov	 | Animal Movement I                            |                   |                             |              |
-12                                    | Tu	 | 5-Nov	 | Habitat Selection I                          |                   |                             |              |
-&nbsp;                                | Fr	 | 8-Nov	 | Habitat Selection II                         |                   |                             |              |
-13                                    | Tu	 | 12-Nov	 | Community Modeling                           |                   |                             |              |
-&nbsp;                                | Fr	 | 15-Nov	 | Community Modeling                           |                   |                             |              |
-<a href="/FW680A4/week14.qmd">14</a>  | Tu	 | 19-Nov	 | Group Project work                           |                   |                             |              |
-&nbsp;                                | Fr	 | 22-Nov	 | Group Project work                           |                   |                             |              |
-15                                    | Tu	 | 26-Nov	 | <span style="color:red">No Class</span>      |                   |                             |              |
-&nbsp;                                | Fr	 | 29-Nov	 | <span style="color:red">No Class</span>      |                   |                             |              |
-<a href="/FW680A4/week16.qmd">16</a>  | Tu	 | 3-Dec	 | Present Group Project                        |                   |                             |              |
-&nbsp;                                | Fr   | 6-Dec	 | Present Group Project                        |                   |                             |              |
-                                         
-                                
-                                
+Week                                  |	Day|	Date   | 	Lecture Topic                          | Assignments       |	   Readings                  |	Background Materials                           
+--                                    | -- | --------  |---------------------                  | ----------------  |--------------------------     |------------------                                  
+<a href="/FW680A4/week1.qmd">1</a>    | Tu | 20-Aug	 | Class Intro                             | Discussion Post   | Zitomer et al. 2022; Wolcott et al. 2019  |                                     
+&nbsp;                                |	Fr | 23-Aug	 | Big Picture                             | Lab 1: Sampling   | Betts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019 | Shmueli 2010; Arif and MacNeil 2022
+<a href="/FW680A4/week2.qmd">2</a>    |	Tu | 27-Aug	 | Probability Functions                   | Probability Quiz  | Kery and Kellner Ch. 2.0-2.4          |   Hobbs and Hooten Ch.3; Bolker Ch. 4   
+&nbsp;                                | Fr | 30-Aug	 | Probability Functions                   | Lab 2: Simulation & Prob. Functions   |   Kery and Kellner Ch. 2.5-2.6              | 	Fieberg Ch. 10; Bolker Ch. 6    
+<a href="/FW680A4/week3.qmd">3</a>    |	Tu | 3-Sep	 | Likelihood / Optimization               |                   | Dushoff et al. 2019; Fieberg, Ch. 1.10    |  Fieberg Ch. 1; Bolker Ch. 7; Zurr et al. Ch. 2   
+&nbsp;                                |	Fr | 6-Sep	 | Regression                              | Lab 3: Regression |                               |                                
+<a href="/FW680A4/week4.qmd">4</a>    |	Tu | 10-Sep	 | GLM I                                   |                   | Zurr and Iano, 2016           |                                
+&nbsp;                                |	Fr | 13-Sep	 | GLM II                                  | Lab 4: GLM        | Fieberg, Ch. 8; Tredennick et al. 2021  |                                
+<a href="/FW680A4/week5.qmd">5</a>    |	Tu | 17-Sep	 | Modeling Strategies                     |                   |                               | Gelman and Hill Ch. 11 and 12              
+&nbsp;                                |	Fr | 20-Sep	 | Hierarchical Models / GLMM              | Lab 5: GLMM       | Kery and Kellner Ch. 2.7-2.10 |                                
+<a href="/FW680A4/week6.qmd">6</a>    |	Tu | 24-Sep	 | Bayesian Inference                      |                   | Ellison 2004                  | Hobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12 
+&nbsp;                                |	Fr | 27-Sep	 | Bayesian Inference and Computation      | Lab 6: Bayes; <br>Bayes Quiz  |                   |  Kurz, 2023                                
+<a href="/FW680A4/week7.qmd">7</a>    |	Tu | 1-Oct	 | Hierarchical Bayesian                   |                   |                               |                                            
+&nbsp;                                |	Fr | 4-Oct	 | Hierarchical Bayesian                   | Lab  7; <br>Nothing to submit | Widmer et al 2021; Guillera-Arroita et al. 2015 | Soley-Guardia et al. 2024; Valavi et al. 2021 
+<a href="/FW680A4/week8.qmd">8</a>    |	Tu | 8-Oct	 | Species Distribution Modeling           |                   | Kery and Schaub Ch 7          |                                             			
+&nbsp;                                |	Fr | 11-Oct	 | Mark Recapture                          | Lab 8: CJS        | Royle et al. 2018             |                                             			
+<a href="/FW680A4/week9.qmd">9</a>    |	Tu | 15-Oct	 | Spatial Capture Recapture               |                   | Kery and Schaub Ch 13         |                                            
+&nbsp;                                |	Fr | 18-Oct	 | Hierarchical Bayesian Occupancy         | Lab 9:<br>HB Occu.| Zipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18  |
+<a href="/FW680A4/week10.qmd">10</a>  | TU | 22-Oct  | N-Mixture and Integrated Data Models    |                   | Kery and Kellner Ch20         |                                               
+&nbsp;                                | Fr | 25-Oct	 | Integrated Data Models                  | Lab 10: ISDM      | Wittemyer et al. 2019; Huggler et al. 2022                               	
+<a href="/FW680A4/week11.qmd">11</a>  | Tu | 29-Oct	 | Animal Movement                         |                   |                               | Nathan et al 2008 and 2022; Signer et al 2018             
+&nbsp;                                | Fr | 1-Nov	 | Animal Movement                         |                   | XXXX; Northrup et al. 2022    |              
+12                                    | Tu | 5-Nov	 | Habitat Selection                       |                   |                               |              
+&nbsp;                                | Fr | 8-Nov	 | Habitat Selection                       |                   |                               |              
+13                                    | Tu | 12-Nov	 | Community Modeling                      |                   |                               |              
+&nbsp;                                | Fr | 15-Nov	 | Community Modeling                      |                   |                               |              
+<a href="/FW680A4/week14.qmd">14</a>  | Tu | 19-Nov	 | Group Project work                      |                   |                               |              
+&nbsp;                                | Fr | 22-Nov	 | Group Project work                      |                   |                               |              
+15                                    | Tu | 26-Nov	 | <span style="color:red">No Class</span> |                   |                               |              
+&nbsp;                                | Fr | 29-Nov	 | <span style="color:red">No Class</span> |                   |                               |              
+<a href="/FW680A4/week16.qmd">16</a>  | Tu | 3-Dec	 | Present Group Project                   |                   |                               |              
+&nbsp;                                | Fr | 6-Dec	 | Present Group Project                   |                   |                               |              
