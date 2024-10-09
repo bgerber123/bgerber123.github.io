@@ -56,9 +56,9 @@ library(coda)
   parameters <- c("phi", "p")
 
 # MCMC settings
-  ni <- 10000 # number of iterations
+  ni <- 5000 # number of iterations
   nt <- 2     # number of iterations to thin by
-  nb <- 5000  # number of iterations to burn (to toss out initially)
+  nb <- 1000  # number of iterations to burn (to toss out initially)
   na <- 1000  # number of iterations to use to adapt to sample efficiently
   nc <- 3     # number of chains
 
@@ -72,12 +72,16 @@ library(coda)
 #Fit the model
   post=coda.samples(jm, variable.names=parameters, n.iter=ni, thin=nt)
 
+# save(post,file="post.cjs")  
+# load("post.cjs")  
+  
 #Interpret the results  
   summary(post)  
   plot(post)
   coda::gelman.diag(post)
 
 # Highest posterior density intervals  ('credible intervals')
+  browseURL("https://mathematica.stackexchange.com/questions/173282/computing-credible-region-highest-posterior-density-from-empirical-distributio")  
   coda::HPDinterval(post[[1]], prob = 0.95)
 # Quantile posterior intervals ('credible intervals')
   apply(post[[1]],2,quantile, prob=c(0.025,0.975))
