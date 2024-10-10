@@ -41,7 +41,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("amt"))
+install.packages(c("amt","dplyr"))
 ```
 
 #### [Assigned]{style="color:red;"}
