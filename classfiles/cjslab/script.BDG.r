@@ -132,17 +132,20 @@ library(runjags)
   post.combined = runjags::combine.mcmc(post2)
   head(post.combined)
 
+# This is equivalent to using the do.call function to rbind each matrix of posterior samples across list elements
+  df <- do.call("rbind", post2)
+  
 # Female and male survival probability  
   # Plot posteriors  
   plot(density(post.combined[,3]),lwd=3,col=1,"Annual Survival")
   lines(density(post.combined[,4]),lwd=3,col=2)  
-  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Maale"))
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Male"))
   
 # Instead of asking JAGS to do it, we can use the estimated posterior parameters of survival to derive the posterior distributions 
 # for the probability of survival for males and females. Visualize these distributions on the same plot.
   
-  beta0 = post2[[1]][,1]
-  beta1 = post2[[1]][,2]
+  beta0 = post.combined[,1]
+  beta1 = post.combined[,2]
   
   # Posteriors of survival of males and females  
   male.survival = plogis(beta0)

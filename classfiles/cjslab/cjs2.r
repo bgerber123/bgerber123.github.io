@@ -24,9 +24,10 @@ model {
     
     
   } #end loop i
-  #Derive probability of survival for male and female
+  
+# Derive probability of survival for male and female
+# This is done outside of the loops as we are not using the indices
   male.phi <- phi[1]
   female.phi <- phi[2] 
-  
-  
+
 }

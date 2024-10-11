@@ -32,6 +32,7 @@ Load the necessary packages.
   library(stringr)
   library(rjags)
   library(coda)
+  library(runjags)
 ```
 
 Next, read in the data. The first column is the capture-history. The second column indicates males (0) and females (1). The third column indicate females (1) and males (0). The fourth column are just semi-colons...it's MARK thing. 
@@ -90,7 +91,7 @@ Adapt the jags model code in the other file and implementation code that is abov
 
 
 # Parameters monitored
-  parameters <- c("beta0","beta1", "p")
+  parameters <- c("beta0","beta1", "p","male.phi","female.phi")
   
   inits <- function(){list(beta0 = rnorm(1),
                            beta1 = rnorm(1),
@@ -130,26 +131,51 @@ the gelman-rubin convergence diagnostic, i.e, function gelman.diag.
 
 We see the diagnostic statistic (gelman-rubin statistics; known as $\hat{R}$) are at 1, indicating no sign of lack of convergence. Also, the posterior distribution traceplots look like fuzzy caterpillars and are overlapping, also demonstrating no signs of convergence issues. 
 
-# Step 3
+# Step 3a
 
-Use the estimated posterior parameters of survival to derive the posterior distributions 
-for the probability of survival for males and females. Visualize these distributions on the same plot.
+Since the parameters have converged, we can combine the chains.
+
+```{r echo=TRUE,eval=TRUE}
+  post.combined = runjags::combine.mcmc(post2)
+  head(post.combined)
+  
+# This is equivalent to using the do.call function to rbind each matrix of posterior samples across list elements
+  post.combined <- do.call("rbind", post2)
+  
+```
+
+
+Since we setup derived parameters in our JAGS model, we simply need to grab these posterior distributions for plotting.
+
+```{r echo=TRUE,eval=TRUE}
+# Female and male survival probability  
+  # Plot posteriors  
+  plot(density(post.combined[,3]),lwd=3,col=1,"Annual Survival")
+  lines(density(post.combined[,4]),lwd=3,col=2)  
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Maale"))
+```
+
+
+# Step 3b
+
+Alternativel, if we didn't specify the derived parameters in JAGS, we can use the estimated posterior parameters of survival ($\beta_{0}$ and $\beta_{1}$) to derive the posterior distributions for the probability of survival for males and females. These are exactly equivalent to the posteriors from above.
 
 ```{r echo=TRUE,eval=TRUE}
 
-  beta0 = post2[[1]][,1]
-  beta1 = post2[[1]][,2]
+  beta0 = post.combined[,1]
+  beta1 = post.combined[,2]
   
   # Posteriors of survival of males and females  
-  male.survival = plogis(beta0+beta1)
-  female.survival = plogis(beta0)
+  male.survival = plogis(beta0)
+  female.survival = plogis(beta0+beta1)
   
   # Plot posteriors  
-  plot(density(male.survival),lwd=3,col=1,"Annual Survival")
-  lines(density(female.survival),lwd=3,col=2)  
-  legend("topright",lwd=3,col=c(1,2),legend=c("Male","Female"))
+  plot(density(female.survival),lwd=3,col=1,"Annual Survival")
+  lines(density(male.survival),lwd=3,col=2)  
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Male"))
 
 ```
+
 
 Here we see the posterior distributions of male and female annual survival. They are similar, indicating only a possible small differences in survival between the sexes.
 
@@ -160,12 +186,12 @@ the effect difference of male survival is less than female survival
 
 
 ```{r echo=TRUE,eval=TRUE}
-# The probability of a sex effect- that male survival is less than female survival
+# The probability of a sex effect- that female survival is less than male survival
 # To evaluate this, we want to know if beta1 is negative  
 length(which(beta1<0))/length(beta1)
 ```
 
-The probability that $\beta_1 < 0$ indicates there is no evidence of a difference. A high probability, values near 1, would indicate a stististical clear negative effect. However, if we saw probabilities near 0, this would indicate a clear statistical positive effect difference between male and female survival probability.
+The probability that $\beta_1 < 0$ indicates there is no evidence of a difference. A high probability, values near 1, would indicate a statistical clear negative effect. However, if we saw probabilities near 0, this would indicate a clear statistical positive effect difference between female and male survival probability.
 
 <br>
 <br>
