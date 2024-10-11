@@ -67,7 +67,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("stringr","coda"))
+install.packages(c("stringr","coda","runjags"))
 ```
 
 

@@ -6,6 +6,7 @@
 library(stringr)
 library(rjags)
 library(coda)
+library(runjags)
 
 # We will use capture recapture data on the European Dipper which is
 # available from Program MARK
@@ -25,6 +26,7 @@ library(coda)
 # split column 1 into columns
   CH = matrix(as.integer(str_split_fixed(dipper[,1],"",7)),nrow=nrow(dipper))
   head(CH)
+  
 #  Sex variable: female = 1; male = 0
   sex = as.integer(dipper$V3)
 
@@ -91,7 +93,7 @@ library(coda)
 # Adapt the jags model code in the other file and implementation code that is above.
 
 # Parameters monitored
-  parameters <- c("beta0","beta1", "p")
+  parameters <- c("beta0","beta1", "p","male.phi","female.phi")
   
   inits <- function(){list(beta0 = rnorm(1),
                            beta1 = rnorm(1),
@@ -125,20 +127,31 @@ library(coda)
   
   
 # Step 3
-# Use the estimated posterior parameters of survival to derive the posterior distributions 
-# for the probability of survival for males and females. Visualize these distributions on the same plot.
+  
+#We setup the JAGS model to derive the probability of survival. These are..  
+  post.combined = runjags::combine.mcmc(post2)
+  head(post.combined)
 
+# Female and male survival probability  
+  # Plot posteriors  
+  plot(density(post.combined[,3]),lwd=3,col=1,"Annual Survival")
+  lines(density(post.combined[,4]),lwd=3,col=2)  
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Maale"))
+  
+# Instead of asking JAGS to do it, we can use the estimated posterior parameters of survival to derive the posterior distributions 
+# for the probability of survival for males and females. Visualize these distributions on the same plot.
+  
   beta0 = post2[[1]][,1]
   beta1 = post2[[1]][,2]
   
   # Posteriors of survival of males and females  
-  male.survival = plogis(beta0+beta1)
-  female.survival = plogis(beta0)
+  male.survival = plogis(beta0)
+  female.survival = plogis(beta0+beta1)
   
   # Plot posteriors  
-  plot(density(male.survival),lwd=3,col=1,"Annual Survival")
-  lines(density(female.survival),lwd=3,col=2)  
-  legend("topright",lwd=3,col=c(1,2),legend=c("Male","Female"))
+  plot(density(female.survival),lwd=3,col=1,"Annual Survival")
+  lines(density(male.survival),lwd=3,col=2)  
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Male"))
   
   
   
