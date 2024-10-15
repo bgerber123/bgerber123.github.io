@@ -46,6 +46,35 @@ save(det.nondet,file="det.nondet")
 
 #######################
 #######################
+
+# Convert the Count data into under detected counts with replication - suitable for an N-mixture model. 
+
+abundance =data[[1]]
+
+
+#Again, we need to consider the number of replicates and detection probability....
+
+# How many occasions/replicates per site?
+k = 2
+
+# Probability of detection per occasion, given occurence (z==1)
+p = 0.7
+
+
+#Create replcaited count data
+  count.rep = matrix(NA, nrow=nrow(abundance),ncol=k)
+
+for(i in 1:nrow(abundance)){
+   set.seed(543534+i)
+   count.rep[i,] = rbinom(k, abundance$Counts[i], p)
+}
+
+head(count.rep)
+save(count.rep,file="count.rep")
+  
+  
+#######################
+#######################
 # Assignment
 
 # Step 1
