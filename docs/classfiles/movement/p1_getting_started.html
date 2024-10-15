@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Johannes Signer">
+<meta name="dcterms.date" content="2024-10-15">
+<title>Getting started with amt – Brian D. Gerber</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Brian D. Gerber</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../FW680A4/index.html"> 
+<span class="menu-text">FW680A4</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
+</i> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Brian-Gerber-4"> <i class="bi bi-r-square-fill" role="img">
+</i> 
+<span class="menu-text">RG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bgerber123"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:brian.gerber@colostate.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a>
+  <ul class="collapse">
+<li><a href="#creating-a-track" id="toc-creating-a-track" class="nav-link" data-scroll-target="#creating-a-track">Creating a track</a></li>
+  <li><a href="#adding-additional-information" id="toc-adding-additional-information" class="nav-link" data-scroll-target="#adding-additional-information">Adding additional information</a></li>
+  <li><a href="#coordinate-reference-system" id="toc-coordinate-reference-system" class="nav-link" data-scroll-target="#coordinate-reference-system">Coordinate reference system</a></li>
+  <li><a href="#an-example-with-one-real-animal" id="toc-an-example-with-one-real-animal" class="nav-link" data-scroll-target="#an-example-with-one-real-animal">An example with one real animal</a></li>
+  <li><a href="#a-note-on-pipes" id="toc-a-note-on-pipes" class="nav-link" data-scroll-target="#a-note-on-pipes">A note on pipes (<code>|&gt;</code>)</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#working-with-tracks" id="toc-working-with-tracks" class="nav-link" data-scroll-target="#working-with-tracks">Working with tracks</a>
+  <ul class="collapse">
+<li><a href="#utility-functions" id="toc-utility-functions" class="nav-link" data-scroll-target="#utility-functions">Utility functions</a></li>
+  <li><a href="#some-initial-data-exploration" id="toc-some-initial-data-exploration" class="nav-link" data-scroll-target="#some-initial-data-exploration">Some initial data exploration</a></li>
+  <li><a href="#from-tracks-to-steps" id="toc-from-tracks-to-steps" class="nav-link" data-scroll-target="#from-tracks-to-steps">From tracks to steps</a></li>
+  </ul>
+</li>
+  <li><a href="#how-to-deal-with-several-animals" id="toc-how-to-deal-with-several-animals" class="nav-link" data-scroll-target="#how-to-deal-with-several-animals">How to deal with several animals</a></li>
+  <li><a href="#session" id="toc-session" class="nav-link" data-scroll-target="#session">Session</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Getting started with <code>amt</code>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Johannes Signer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="basics" class="level2"><h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<section id="creating-a-track" class="level3"><h3 class="anchored" data-anchor-id="creating-a-track">Creating a track</h3>
+<p>The basic building blocks of <code>amt</code> are tracks. Tracks are <code>tibble</code>s with at least two columns that contain the coordinates: <code>x_</code> and <code>y_</code>. A track behaves exactly like a <code>tibble</code> (the only difference being that we added an other S3 class). Below is an example of creating a track with some dummy locations.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jmsigner/amt">amt</a></span><span class="op">)</span></span>
+<span><span class="va">df1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">is.data.frame</a></span><span class="op">(</span><span class="va">df1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+      x     y
+  &lt;int&gt; &lt;int&gt;
+1     1     1
+2     2     2
+3     3     3</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Now we can create a track</span></span>
+<span><span class="va">tr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">df1</span>, <span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">is.data.frame</a></span><span class="op">(</span><span class="va">tr1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+     x_    y_
+* &lt;int&gt; &lt;int&gt;
+1     1     1
+2     2     2
+3     3     3</code></pre>
+</div>
+</div>
+<p>At the moment <code>amt</code> supports two types of tracks:</p>
+<ul>
+<li>
+<code>track_xy</code> is a track that only has coordinates, and</li>
+<li>
+<code>track_xyt</code> is a track that has a timestamp associated to each coordinate pair.</li>
+</ul>
+<p>If a <code>track_xy</code> or <code>track_xyt</code> is created with the function <code>make_track</code>, is determined whether or not a timestamp is passed as a third argument (called <code>.t</code>) to the function <code>make_track</code>. In the previous example we only passed <code>x</code> and <code>y</code> coordinates. Hence a <code>track_xy</code> was created.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">tr1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "track_xy"   "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+<p>To create a <code>track_xyt</code> we could do the following</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, t <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2017-01-01"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">days</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tr2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">df1</span>, <span class="va">x</span>, <span class="va">y</span>, <span class="va">t</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">tr2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "track_xyt"  "track_xy"   "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+<p>From the output above we see that a <code>track_xyt</code> is also a <code>track_xy</code>. This means that all methods for <code>track_xy</code> also work for a <code>track_xyt</code> (but not the reverse).</p>
+</section><section id="adding-additional-information" class="level3"><h3 class="anchored" data-anchor-id="adding-additional-information">Adding additional information</h3>
+<p>We can also add additional information for each relocation (e.g., the id of the animal, or some other sensor information such as the DOP). Any number of additional named columns can be passed to <code>make_track</code>. By named we mean, that columns should always be passed in the form of <code>column_name = content</code> to avoid confusion with coordinates and time stamp. We will extend the dummy example from above, by passing 2 more columns (the id of animal and the age).</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, y <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, t <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2017-01-01"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">days</a></span><span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span>, </span>
+<span>                  id <span class="op">=</span> <span class="fl">1</span>, age <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># first we only create a track_xy</span></span>
+<span><span class="va">tr3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">df1</span>, <span class="va">x</span>, <span class="va">y</span>, id <span class="op">=</span> <span class="va">id</span>, age <span class="op">=</span> <span class="va">age</span><span class="op">)</span></span>
+<span><span class="va">tr3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+     x_    y_    id   age
+* &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     1     1     4
+2     2     2     1     4
+3     3     3     1     4</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># now lets create a track_xyt</span></span>
+<span><span class="va">tr4</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">df1</span>, <span class="va">x</span>, <span class="va">y</span>, <span class="va">t</span>, id <span class="op">=</span> <span class="va">id</span>, age <span class="op">=</span> <span class="va">age</span><span class="op">)</span></span>
+<span><span class="va">tr4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+     x_    y_ t_            id   age
+* &lt;int&gt; &lt;int&gt; &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1     1     1 2017-01-01     1     4
+2     2     2 2017-01-02     1     4
+3     3     3 2017-01-03     1     4</code></pre>
+</div>
+</div>
+</section><section id="coordinate-reference-system" class="level3"><h3 class="anchored" data-anchor-id="coordinate-reference-system">Coordinate reference system</h3>
+<p><code>make_track</code> has one further optional argument (<code>crs</code>), which allows the user to set a coordinate reference system (CRS) of the track. The CRS needs to be provided as valid EPSG code.</p>
+</section><section id="an-example-with-one-real-animal" class="level3"><h3 class="anchored" data-anchor-id="an-example-with-one-real-animal">An example with one real animal</h3>
+<p>In the <code>amt</code> relocation data of one red deer from northern Germany is included. We will use this data set to to illustrate how to create a track.</p>
+<p>We begin with loading and inspecting the data.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">sh</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">sh</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  x_epsg31467 y_epsg31467        day     time
+1     3558403     5999400 2009-02-13 00:02:23
+2     3558548     5999099 2009-02-13 06:02:21
+3     3558541     5999019 2009-02-13 12:01:51
+4     3558453     5999026 2009-02-13 18:00:55
+5     3558566     5999365 2009-02-14 00:01:36
+6     3557836     5999185 2009-02-14 06:02:24</code></pre>
+</div>
+</div>
+<p>Before creating a track, we have to do some data cleaning:</p>
+<ol type="1">
+<li>check if any coordinates are missing (and if so, remove the relocation),</li>
+<li>parse the date and time,</li>
+<li>create a time stamp,</li>
+<li>check for duplicated time stamps, and</li>
+<li>create two new columns for the id and month of the year.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check if all observations are complete</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html">complete.cases</a></span><span class="op">(</span><span class="va">sh</span><span class="op">)</span><span class="op">)</span> <span class="co"># no action required</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># parse date and time and create time stamps</span></span>
+<span><span class="va">sh</span><span class="op">$</span><span class="va">ts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html">as.POSIXct</a></span><span class="op">(</span><span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="va">sh</span><span class="op">$</span><span class="va">day</span><span class="op">)</span> <span class="op">+</span></span>
+<span>                      <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/hms.html">hms</a></span><span class="op">(</span><span class="va">sh</span><span class="op">$</span><span class="va">time</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># check for duplicated time stamps</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/any.html">any</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">sh</span><span class="op">$</span><span class="va">ts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># We have some duplicated time stamps, these need to be removed prior to</span></span>
+<span><span class="co"># creating a track.</span></span>
+<span><span class="va">sh</span> <span class="op">&lt;-</span> <span class="va">sh</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">sh</span><span class="op">$</span><span class="va">ts</span><span class="op">)</span>, <span class="op">]</span></span>
+<span></span>
+<span><span class="co"># create new columns</span></span>
+<span><span class="va">sh</span><span class="op">$</span><span class="va">id</span> <span class="op">&lt;-</span> <span class="st">"Animal 1"</span></span>
+<span><span class="va">sh</span><span class="op">$</span><span class="va">month</span> <span class="op">&lt;-</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/month.html">month</a></span><span class="op">(</span><span class="va">sh</span><span class="op">$</span><span class="va">ts</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we can create a track.</p>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">sh</span>, <span class="va">x_epsg31467</span>, <span class="va">y_epsg31467</span>, <span class="va">ts</span>, id <span class="op">=</span> <span class="va">id</span>, month <span class="op">=</span> <span class="va">month</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The column names of the data set already indicate the CRS of the data. We can add this information when creating a track.</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">sh</span>, <span class="va">x_epsg31467</span>, <span class="va">y_epsg31467</span>, <span class="va">ts</span>, id <span class="op">=</span> <span class="va">id</span>, month <span class="op">=</span> <span class="va">month</span>, </span>
+<span>                crs <span class="op">=</span> <span class="fl">31467</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="a-note-on-pipes" class="level3"><h3 class="anchored" data-anchor-id="a-note-on-pipes">A note on pipes (<code>|&gt;</code>)</h3>
+<p><code>amt</code> was heavily inspired through workflows suggested by the popular packages from the <code>tidyverse</code>. The above steps could easily be connected using pipes. Note that result will be exactly the same.</p>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">sh</span><span class="op">)</span></span>
+<span><span class="va">tr2</span> <span class="op">&lt;-</span> <span class="va">sh</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html">complete.cases</a></span><span class="op">(</span><span class="va">sh</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    ts <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html">as.POSIXct</a></span><span class="op">(</span><span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="va">day</span><span class="op">)</span> <span class="op">+</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/hms.html">hms</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>    id <span class="op">=</span> <span class="st">"Animal 1"</span>, </span>
+<span>    month <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/month.html">month</a></span><span class="op">(</span><span class="va">ts</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">ts</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">x_epsg31467</span>, <span class="va">y_epsg31467</span>, <span class="va">ts</span>, id <span class="op">=</span> <span class="va">id</span>, month <span class="op">=</span> <span class="va">month</span>, </span>
+<span>           crs <span class="op">=</span> <span class="fl">31467</span><span class="op">)</span></span>
+<span><span class="va">tr2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,493 × 5
+        x_      y_ t_                  id       month
+ *   &lt;int&gt;   &lt;int&gt; &lt;dttm&gt;              &lt;chr&gt;    &lt;dbl&gt;
+ 1 3558528 5999094 2008-03-30 00:01:47 Animal 1     3
+ 2 3558513 5999055 2008-03-30 06:00:54 Animal 1     3
+ 3 3558564 5999146 2008-03-30 12:01:47 Animal 1     3
+ 4 3558504 5999072 2008-03-30 18:01:24 Animal 1     3
+ 5 3558495 5999051 2008-03-30 18:25:56 Animal 1     3
+ 6 3558493 5999052 2008-03-30 18:26:05 Animal 1     3
+ 7 3558489 5999051 2008-03-30 18:26:14 Animal 1     3
+ 8 3558486 5999046 2008-03-30 18:26:24 Animal 1     3
+ 9 3558484 5999052 2008-03-30 18:26:33 Animal 1     3
+10 3558317 5998989 2008-03-30 18:38:01 Animal 1     3
+# ℹ 1,483 more rows</code></pre>
+</div>
+</div>
+</section></section><section id="working-with-tracks" class="level2"><h2 class="anchored" data-anchor-id="working-with-tracks">Working with tracks</h2>
+<section id="utility-functions" class="level3"><h3 class="anchored" data-anchor-id="utility-functions">Utility functions</h3>
+<section id="basic-manipulation" class="level4"><h4 class="anchored" data-anchor-id="basic-manipulation">Basic manipulation</h4>
+<p>Remember, that a <code>track_xy*</code> behaves like regular a <code>data.frame</code>. This means that we can use all data manipulation verbs that we are used to from <code>base</code> R or the <code>tidyverse</code>. For example, we can filter a track based on some characteristic. As an example we extract all relocations from the month May.</p>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr3</span> <span class="op">&lt;-</span> <span class="va">tr2</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">month</span> <span class="op">==</span> <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># we are left with a track</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">tr3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "track_xyt"  "track_xy"   "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+</section><section id="transforming-crs" class="level4"><h4 class="anchored" data-anchor-id="transforming-crs">Transforming CRS</h4>
+<p>If we set the CRS when creating a track (we can verify this with <code>has_crs</code>), we can transform the CRS of the coordinates with the function <code>transform_coords</code> (a wrapper around <code><a href="https://r-spatial.github.io/sf/reference/st_transform.html">sf::st_transform()</a></code>). For illustration, we will transform the CRS of <code>tr2</code> to geographical coordinates (EPSG:4326).</p>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/transform_coords.html">transform_coords</a></span><span class="op">(</span><span class="va">tr2</span>, <span class="fl">4326</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,493 × 5
+      x_    y_ t_                  id       month
+ * &lt;dbl&gt; &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;    &lt;dbl&gt;
+ 1  9.89  54.1 2008-03-30 00:01:47 Animal 1     3
+ 2  9.89  54.1 2008-03-30 06:00:54 Animal 1     3
+ 3  9.89  54.1 2008-03-30 12:01:47 Animal 1     3
+ 4  9.89  54.1 2008-03-30 18:01:24 Animal 1     3
+ 5  9.89  54.1 2008-03-30 18:25:56 Animal 1     3
+ 6  9.89  54.1 2008-03-30 18:26:05 Animal 1     3
+ 7  9.89  54.1 2008-03-30 18:26:14 Animal 1     3
+ 8  9.89  54.1 2008-03-30 18:26:24 Animal 1     3
+ 9  9.89  54.1 2008-03-30 18:26:33 Animal 1     3
+10  9.89  54.1 2008-03-30 18:38:01 Animal 1     3
+# ℹ 1,483 more rows</code></pre>
+</div>
+</div>
+</section></section><section id="some-initial-data-exploration" class="level3"><h3 class="anchored" data-anchor-id="some-initial-data-exploration">Some initial data exploration</h3>
+<p>Several functions for calculating derived quantities are available. We will start with looking at step length. The function <code>step_lengths</code> can be used for this.</p>
+<div class="cell">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr2</span> <span class="op">&lt;-</span> <span class="va">tr2</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>sl_ <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/steps.html">step_lengths</a></span><span class="op">(</span><span class="va">tr2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If we look at a summary of <code>sl_</code> we note two things:</p>
+<div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">tr2</span><span class="op">$</span><span class="va">sl_</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   0.00   35.01  105.33  249.07  297.75 4727.86       1 </code></pre>
+</div>
+</div>
+<p>Note, 1) there is a <code>NA</code> for the last step length, this is expected because we are still in a point representation (i.e., there is no step length for the last relocation). 2) the range is fairly large ranging from 0 to almost 5 km. Before looking at step lengths in any further detail, we will have to make sure the sampling rate is more or less regular (i.e., the same time step between any two points).</p>
+<p>The function <code>summarize_sampling_rate</code> provides an easy way to look at the sampling rate.</p>
+<div class="cell">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/summarize_sampling_rate.html">summarize_sampling_rate</a></span><span class="op">(</span><span class="va">tr2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 9
+     min    q1 median  mean    q3   max    sd     n unit 
+   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;
+1 0.0025  2.00   2.01  6.34  6.00 3924.  102.  1492 hour </code></pre>
+</div>
+</div>
+<p>This suggests that a sampling rate for 6 hours might be adequate. We can then use the function <code>track_resample</code> to resample the track and only keep relocations that are approximately 6 hours apart (within some tolerance, that can be specified). We will use the function <code><a href="https://lubridate.tidyverse.org/reference/period.html">lubridate::hours</a></code> to specify the sampling rate and <code><a href="https://lubridate.tidyverse.org/reference/period.html">lubridate::minutes</a></code> to specify the tolerance. Both arguments <code>rate</code> and <code>tolerance</code> are expected to be a <code>Period</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tr3</span> <span class="op">&lt;-</span> <span class="va">tr2</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track_resample.html">track_resample</a></span><span class="op">(</span>rate <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">hours</a></span><span class="op">(</span><span class="fl">6</span><span class="op">)</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">minutes</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tr3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 826 × 7
+        x_      y_ t_                  id       month    sl_ burst_
+ *   &lt;int&gt;   &lt;int&gt; &lt;dttm&gt;              &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 3558528 5999094 2008-03-30 00:01:47 Animal 1     3  41.8       1
+ 2 3558513 5999055 2008-03-30 06:00:54 Animal 1     3 104.        1
+ 3 3558564 5999146 2008-03-30 12:01:47 Animal 1     3  95.3       1
+ 4 3558504 5999072 2008-03-30 18:01:24 Animal 1     3  22.8       1
+ 5 3557474 5999130 2008-03-31 00:01:23 Animal 1     3 155.        1
+ 6 3557319 5999127 2008-03-31 06:01:45 Animal 1     3   6.08      1
+ 7 3557313 5999126 2008-03-31 12:01:11 Animal 1     3   4.47      1
+ 8 3557317 5999128 2008-03-31 18:01:55 Animal 1     3 113.        1
+ 9 3557204 5999130 2008-04-01 00:01:24 Animal 1     4 187.        1
+10 3557108 5999291 2008-04-01 06:00:54 Animal 1     4   6.32      1
+# ℹ 816 more rows</code></pre>
+</div>
+</div>
+<p><code>tr3</code> still a track, but with two differences compared to <code>tr2</code>. 1) the number of rows is reduced from 1493 to 826, because only relocations that are 6 hours +/- the tolerance apart of each other are retained; 2) <code>tr3</code> has one new column called <code>burst_</code>. A burst is sequence of relocations with equal sampling rates. Consider the following hypothetical example: 5 relocations are all 6 hours apart. Then there is a gap of 12 hours because one relocation failed and afterwards then there are an other 10 relocations all 6 hours apart. Then we would consider the first 5 relocations as a burst and the second 10 relocations (after the 12 hour gap) as a second burst.</p>
+</section><section id="from-tracks-to-steps" class="level3"><h3 class="anchored" data-anchor-id="from-tracks-to-steps">From tracks to steps</h3>
+<p>In many situations we are more interested in steps (that is the animal moving from one relocation to an other, or the straight line between a start and a end point), that in the individual relocations. <code>amt</code> supports <code>steps</code> as an other way to represent movement data. The transition from a track to steps can be done via two functions.</p>
+<ol type="1">
+<li>
+<code><a href="https://rdrr.io/pkg/amt/man/steps.html">steps()</a></code>: Takes as an input a track, converts the track to step and calculating some derived quantities (e.g., step lengths, turning angles). The function <code><a href="https://rdrr.io/pkg/amt/man/steps.html">steps()</a></code> expects a track with regular sampling rates.</li>
+<li>
+<code><a href="https://rdrr.io/pkg/amt/man/steps.html">steps_by_burst()</a></code>: Takes as an input a resampled track (i.e., a track with several bursts) and will calculate derived quantities per burst.</li>
+</ol></section></section><section id="how-to-deal-with-several-animals" class="level2"><h2 class="anchored" data-anchor-id="how-to-deal-with-several-animals">How to deal with several animals</h2>
+<p>Up to now we have only considered situations with one animal. However, in most telemetry studies more than one animal are tracked and we often want to calculated movement relevant characteristics for several animals individually. <code>amt</code> does not provide a infrastructure for dealing with several animal, however, <code>list</code>-columns from the <code>tidyverse</code> can be used to manage many animals. Because a track is just a <code>tibble</code> all <code>tidyverse</code> verbs can be used. The general strategy consists of three steps:</p>
+<ol type="1">
+<li>Nest a track by one or more columns. This retains the unique values of the grouping variable(s) and creates a new <code>list</code>-column with tracks.</li>
+<li>Now we can perform operations on the grouped data creating a new list column. This can be done in a combination with <code>mutate</code> and <code>map</code> (instead of <code>map</code> also <code>lapply</code> could be used).</li>
+<li>Select the relevant columns and unnest. With <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code> we can select columns of interest and reverse the nesting with the function <code><a href="https://tidyr.tidyverse.org/reference/unnest.html">unnest()</a></code>.</li>
+</ol>
+<p>As an example we will use a second data set included in <code>amt</code> on tracks of four fishers. We will load the data, create a track, resample the tracks individually to 30 min and create a histogram of step lengths (accounting for bursts).</p>
+<p>We start by loading the data and creating a track of all individuals together</p>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"amt_fisher"</span><span class="op">)</span></span>
+<span><span class="va">trk</span> <span class="op">&lt;-</span> <span class="va">amt_fisher</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track.html">make_track</a></span><span class="op">(</span><span class="va">x_</span>, <span class="va">y_</span>, <span class="va">t_</span>, id <span class="op">=</span> <span class="va">id</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, we group the track by <code>id</code> and nest the track.</p>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trk1</span> <span class="op">&lt;-</span> <span class="va">trk</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/nest.html">nest</a></span><span class="op">(</span>data <span class="op">=</span> <span class="op">-</span><span class="st">"id"</span><span class="op">)</span></span>
+<span><span class="va">trk1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  id    data                  
+  &lt;chr&gt; &lt;list&gt;                
+1 M1    &lt;trck_xyt [919 × 3]&gt;  
+2 M4    &lt;trck_xyt [8,958 × 3]&gt;
+3 F2    &lt;trck_xyt [3,004 × 3]&gt;
+4 F1    &lt;trck_xyt [1,349 × 3]&gt;</code></pre>
+</div>
+</div>
+<p>We now want to resample each track to 30 minutes with a tolerance of 5 minutes and create steps for each animal. For the first animal we would do as follows:</p>
+<div class="cell">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># get the data for the first animal</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">trk1</span><span class="op">$</span><span class="va">data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># apply the data analysis</span></span>
+<span><span class="va">x</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track_resample.html">track_resample</a></span><span class="op">(</span>rate <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">minutes</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">minutes</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/amt/man/steps.html">steps_by_burst</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 412 × 11
+   burst_      x1_      x2_      y1_      y2_   sl_ direction_p   ta_
+ *  &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+ 1      1 1782673. 1782683. 2402297. 2402292. 10.6       -0.427 NA   
+ 2      1 1782683. 1782681. 2402292. 2402297.  4.96       2.08   2.51
+ 3      1 1782681. 1782683. 2402297. 2402298.  2.19       0.464 -1.62
+ 4      1 1782683. 1782682. 2402298. 2402290.  7.50      -1.68  -2.15
+ 5      1 1782682. 1782684. 2402290. 2402298.  8.01       1.24   2.92
+ 6      1 1782684. 1782685. 2402298. 2402274. 24.2       -1.54  -2.78
+ 7      1 1782685. 1782669. 2402274. 2402309. 38.8        1.98  -2.76
+ 8      1 1782669. 1782679. 2402309. 2402299. 13.6       -0.825 -2.80
+ 9      1 1782679. 1782679. 2402299. 2402304.  5.26       1.52   2.34
+10      1 1782679. 1782699. 2402304. 2402273. 37.2       -1.00  -2.52
+# ℹ 402 more rows
+# ℹ 3 more variables: t1_ &lt;dttm&gt;, t2_ &lt;dttm&gt;, dt_ &lt;drtn&gt;</code></pre>
+</div>
+</div>
+<p>We now want to apply exactly the same logic to all animals. We can do this by using a <code>map</code> and save the results to a new column using <code>mutate</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trk2</span> <span class="op">&lt;-</span> <span class="va">trk1</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>steps <span class="op">=</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">data</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span>
+<span>    <span class="va">x</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/track_resample.html">track_resample</a></span><span class="op">(</span>rate <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">minutes</a></span><span class="op">(</span><span class="fl">30</span><span class="op">)</span>, tolerance <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/period.html">minutes</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/steps.html">steps_by_burst</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">trk2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  id    data                   steps                
+  &lt;chr&gt; &lt;list&gt;                 &lt;list&gt;               
+1 M1    &lt;trck_xyt [919 × 3]&gt;   &lt;brstd_s_ [412 × 11]&gt;
+2 M4    &lt;trck_xyt [8,958 × 3]&gt; &lt;brstd_s_ [850 × 11]&gt;
+3 F2    &lt;trck_xyt [3,004 × 3]&gt; &lt;brstd_s_ [308 × 11]&gt;
+4 F1    &lt;trck_xyt [1,349 × 3]&gt; &lt;brstd_s_ [413 × 11]&gt;</code></pre>
+</div>
+</div>
+<p>Finally, we can select <code>id</code> and <code>steps</code>, unnest the new <code>data_frame</code> and create a plot of the step-length distributions.</p>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trk2</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">id</span>, <span class="va">steps</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/unnest.html">unnest</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="va">steps</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">sl_</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">id</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="p1_getting_started_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="session" class="level2"><h2 class="anchored" data-anchor-id="session">Session</h2>
+<div class="cell">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.4.1 (2024-06-14 ucrt)
+ os       Windows 11 x64 (build 22631)
+ system   x86_64, mingw32
+ ui       RTerm
+ language (EN)
+ collate  English_United States.utf8
+ ctype    English_United States.utf8
+ tz       America/Denver
+ date     2024-10-15
+ pandoc   3.2 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ amt         * 0.2.2.0 2024-04-01 [1] CRAN (R 4.4.1)
+ backports     1.5.0   2024-05-23 [1] CRAN (R 4.4.0)
+ checkmate     2.3.1   2023-12-04 [1] CRAN (R 4.4.1)
+ class         7.3-22  2023-05-03 [1] CRAN (R 4.4.1)
+ classInt      0.4-10  2023-09-05 [1] CRAN (R 4.4.1)
+ cli           3.6.2   2023-12-11 [1] CRAN (R 4.4.0)
+ colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.4.0)
+ data.table    1.15.4  2024-03-30 [1] CRAN (R 4.4.0)
+ DBI           1.2.3   2024-06-02 [1] CRAN (R 4.4.1)
+ digest        0.6.36  2024-06-23 [1] CRAN (R 4.4.1)
+ dplyr       * 1.1.4   2023-11-17 [1] CRAN (R 4.4.1)
+ e1071         1.7-14  2023-12-06 [1] CRAN (R 4.4.1)
+ evaluate      0.24.0  2024-06-10 [1] CRAN (R 4.4.1)
+ fansi         1.0.6   2023-12-08 [1] CRAN (R 4.4.0)
+ farver        2.1.2   2024-05-13 [1] CRAN (R 4.4.0)
+ fastmap       1.2.0   2024-05-15 [1] CRAN (R 4.4.1)
+ generics      0.1.3   2022-07-05 [1] CRAN (R 4.4.0)
+ ggplot2     * 3.5.1   2024-04-23 [1] CRAN (R 4.4.0)
+ glue          1.7.0   2024-01-09 [1] CRAN (R 4.4.0)
+ gtable        0.3.5   2024-04-22 [1] CRAN (R 4.4.0)
+ htmltools     0.5.8.1 2024-04-04 [1] CRAN (R 4.4.1)
+ htmlwidgets   1.6.4   2023-12-06 [1] CRAN (R 4.4.1)
+ jsonlite      1.8.8   2023-12-04 [1] CRAN (R 4.4.1)
+ KernSmooth    2.23-24 2024-05-17 [1] CRAN (R 4.4.1)
+ knitr         1.47    2024-05-29 [1] CRAN (R 4.4.1)
+ labeling      0.4.3   2023-08-29 [1] CRAN (R 4.4.0)
+ lattice       0.22-6  2024-03-20 [1] CRAN (R 4.4.1)
+ lifecycle     1.0.4   2023-11-07 [1] CRAN (R 4.4.0)
+ lubridate     1.9.3   2023-09-27 [1] CRAN (R 4.4.0)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.4.0)
+ Matrix        1.7-0   2024-04-26 [1] CRAN (R 4.4.1)
+ munsell       0.5.1   2024-04-01 [1] CRAN (R 4.4.0)
+ pillar        1.9.0   2023-03-22 [1] CRAN (R 4.4.0)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.4.0)
+ proxy         0.4-27  2022-06-09 [1] CRAN (R 4.4.1)
+ purrr         1.0.2   2023-08-10 [1] CRAN (R 4.4.1)
+ R6            2.5.1   2021-08-19 [1] CRAN (R 4.4.0)
+ rbibutils     2.3     2024-10-04 [1] CRAN (R 4.4.1)
+ Rcpp          1.0.12  2024-01-09 [1] CRAN (R 4.4.0)
+ Rdpack        2.6.1   2024-08-06 [1] CRAN (R 4.4.1)
+ rlang         1.1.4   2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown     2.27    2024-05-17 [1] CRAN (R 4.4.1)
+ rstudioapi    0.16.0  2024-03-24 [1] CRAN (R 4.4.1)
+ scales        1.3.0   2023-11-28 [1] CRAN (R 4.4.0)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.4.1)
+ sf            1.0-16  2024-03-24 [1] CRAN (R 4.4.1)
+ survival      3.6-4   2024-04-24 [1] CRAN (R 4.4.1)
+ tibble        3.2.1   2023-03-20 [1] CRAN (R 4.4.0)
+ tidyr         1.3.1   2024-01-24 [1] CRAN (R 4.4.1)
+ tidyselect    1.2.1   2024-03-11 [1] CRAN (R 4.4.1)
+ timechange    0.3.0   2024-01-18 [1] CRAN (R 4.4.0)
+ units         0.8-5   2023-11-28 [1] CRAN (R 4.4.1)
+ utf8          1.2.4   2023-10-22 [1] CRAN (R 4.4.0)
+ vctrs         0.6.5   2023-12-01 [1] CRAN (R 4.4.0)
+ withr         3.0.0   2024-01-16 [1] CRAN (R 4.4.0)
+ xfun          0.45    2024-06-16 [1] CRAN (R 4.4.1)
+ yaml          2.3.8   2023-12-11 [1] CRAN (R 4.4.0)
+
+ [1] C:/Users/C825033651/AppData/Local/Programs/R/R-4.4.1/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
