@@ -33,6 +33,8 @@ title: ""
 -   Background Videos (not required):
      - <a href="https://youtu.be/WELTpbB5BuU">Movement Ecology Théo Michelot. February 7, 2022</a>; <a href="https://github.com/eco4cast/Statistical-Methods-Seminar-Series/tree/main/michelot_movement">Code</a>
      - <a href="https://www.youtube.com/playlist?list=PLnKBE9qOev54122QkFKB_nFo3pDEPMIDZ">Intro. Animal Movement Ecology - Josh Cullen</a>
+     - <a href="https://animove.org/elearning/">Animove Resources</a>
+
 
 
 
@@ -53,7 +55,7 @@ install.packages(c("amt","dplyr"))
 #### [Assigned]{style="color:red;"}
 -   Readings for next class: 
     - <a href="/readings/XXXX.pdf"> Assigned by Waverly Davis and Lisa Roerk</a>
-    - <a href="/readings/Northrup et al. 2022 .pdf">Northrup et al. 2022 .pdf (Intro through 'How are selection functions fit?')</a>
+    - <a href="/readings/Northrup et al. 2022.pdf">Northrup et al. 2022 (Intro through 'How are selection functions fit?')</a>
 
 
 

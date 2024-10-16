@@ -15,27 +15,52 @@
 
 \Large
 
-We fit a model to our data, where the we detect (1) or not detect (0) our species of interest ($y_{i,j}$) for site $i$ and replicate $j$ as,
+We fit a model to our data, where we detected (1) or not detected (0) our species of interest ($y_{i,j}$) for site $i$ and replicate $j$ as,
 
 \begin{align*}
 y_{i,j}\sim& \text{Bernoulli}(z_{i} \times p_{i,j})\\
-z[i] \sim&  \text{Bernoulli}(\psi)
+z_{i} \sim&  \text{Bernoulli}(\psi)
 \end{align*}
 
 \subsubsection{Priors}
 
 \begin{align*}
 p \sim& \text{Uniform}(1, 1)\\
-psi \sim& \text{Uniform}(1, 1)\\
+\psi \sim& \text{Uniform}(1, 1)\\
 \end{align*}
 
 
 \pagebreak
 
-\subsubsection{JAGS syntax}
+
+
+\subsection{Alternate representation of the same model as explictly hierarhical}
+
+\[y_{ij}\sim
+	\begin{cases}
+	0\hspace{88pt}, z_1=0\\
+	\text{Bernoulli}(p_{ij}) \hspace{2pt}, z_i=1, \hspace{2pt}
+	\end{cases}\
+\]
+
+\vspace{0.1in}
+\begin{align}
+z_i\sim 	\text{Bernoulli}(\psi_i)\\
+\end{align}
+
+
+
+\subsubsection{Priors}
+
+\begin{align*}
+p \sim& \text{Uniform}(1, 1)\\
+\psi \sim& \text{Uniform}(1, 1)\\
+\end{align*}
+
+
+\subsection{JAGS syntax}
 
 \begin{verbatim}
-
 model {
 # Priors
 	psi~dunif(0,1)
@@ -44,12 +69,12 @@ model {
  # Loop over sites	
 	for(i in 1:n.sites){
 	     z[i] ~ dbern(psi)
-	 # Loop over occasions within sites			
+	# Loop over occasions within sites			
 	 for(j in 1:n.visits){
 		y[i,j] ~ dbern(p*z[i])
-	 }# j loop
+	 } # j loop
 	} #i loop
-}
+} #End model
 
 
 
@@ -59,52 +84,56 @@ model {
 
 
 
-\subsection{Fixed Effect Intercept and Random Slope (Version 2)}
+\section{Model with covariates}
+
+
+We fit a model to our data, where we detected (1) or not detected (0) our species of interest ($y_{ij}$) for site $i$ and replicate $j$. We link the probability of occupancy ($\psi$) and detection probability $p$ with covariates of interest on the logit scale via the design matrices $\textbf{X}$ and $\textbf{W}$ along with their respective vector of coeficients, $\boldsymbol{\beta}$ and $\boldsymbol{\alpha}$. 
 
 \begin{align*}
-y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
-\text{logit}(p_{i,j}) &= \alpha_{0} + (\beta_1 + \beta_{2,j}) \times \text{dist.human}_{i,j}\\
-\beta_{2,j} &\sim \text{Normal}(0, \sigma^{\beta})
+y_{i,j}\sim& \text{Bernoulli}(z_{i} \times p_{i,j})\\
+z_{i} \sim&  \text{Bernoulli}(\psi_{i})\\
+\text{logit}(\psi_{i}) =& \textbf{X}_{i}\boldsymbol{\beta}\\
+\text{logit}(p_{ij}) =& \textbf{W}_{ij}\boldsymbol{\alpha}
 \end{align*}
 
 \subsubsection{Priors}
-
 \begin{align*}
-\alpha_{0} \sim& \text{Logistic}(0, 1)\\
-\beta_{1} \sim& \text{Normal}(0, 3)\\
-\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\beta_{p_1} \sim& \text{Logistic}(0, 1)\\
+\alpha_{p_2} \sim& \text{Logistic}(0, 1)
 \end{align*}
+where, $p_{1}$ are the number of parameters to be estimated modeling $\psi$ and $p_{2}$ are the number of parameters to be estimated modeling $p$.
 
 \pagebreak
 
-\subsubsection{JAGS syntax}
+
+
+\subsection{JAGS syntax}
 
 \begin{verbatim}
-
-
 model {
-
-# Priors
-  b0 ~ dlogis(0,1)
-  b1 ~ dlogis(0,1)
-  sigma.b1 ~ dunif(0,5)
-  tau.b1 <- 1/sigma.b1^2
+	# Priors
+  for(i in 1:n.beta){
+    beta[i]~dlogis(0,1)
+  }
+  for(i in 1:n.alpha){
+    alpha[i]~dlogis(0,1)
+  }
   
-# Likelihood
-  for (i in 1:N) {
-     y[i] ~ dbern(p[i])
-     logit(p[i]) <- b0 + (b1 + b2[PA[i]])*dist.human[i]
-  } #End loop
-  
-# Random Slope
-  for(j in 1:N.PA){
-    b2[j] ~ dnorm(0,tau.b1)
-  } #End loop
-  
-} #End Model
-
-
+# Loop over sites	
+  for(i in 1:n.sites){
+   logit(psi[i]) <-  inprod(X[i,], beta)
+   z[i] ~ dbern(psi[i])
+  # Loop over occasions within sites			
+   for(j in 1:n.visits){
+       logit(p[i,j]) <- inprod(W[i,], alpha)
+       peff[i,j] <- p[i,j]*z[i]
+       y[i,j] ~ dbern(peff[i,j])
+   }# j loop
+ } #i loop
+} #End model
 
 \end{verbatim}
+
+
 
 \end{document}
