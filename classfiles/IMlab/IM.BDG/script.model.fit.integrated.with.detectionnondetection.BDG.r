@@ -4,6 +4,7 @@
 # Load packages
   library(rjags)
   library(bayesplot)
+  library(coda)
   color_scheme_set("viridis")
 
 # Load data
@@ -50,9 +51,10 @@
   save(post.IM2,file="post.IM2")
 # load("post.IM2")
 
-#Look at chains
+#Look at chains / convergence
   mcmc_trace(post.IM2)
-
+  gelman.diag(post.IM2)
+  
 #Fancy plot of posterior
   mcmc_areas(as.matrix(post.IM2))
 

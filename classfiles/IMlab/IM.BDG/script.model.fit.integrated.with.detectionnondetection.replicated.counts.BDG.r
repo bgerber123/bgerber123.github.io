@@ -4,6 +4,7 @@
 # Load packages
   library(rjags)
   library(bayesplot)
+  library(coda)
   color_scheme_set("viridis")
 
 # Load data
@@ -58,11 +59,12 @@
 
 # load("post.IM3")
 
-#Look at chains
+#Look at chains/convergence
   mcmc_trace(post.IM3)
-
+  gelman.diag(post.IM3)
+  
 #Fancy plot of posterior
-  mcmc_areas(as.matrix(post.IM2))
+  mcmc_areas(as.matrix(post.IM3))
 
 ##########################
 # If we have fit the separate models to each data set, we can then plot posteriors for each separate model 
@@ -73,26 +75,26 @@ load("post.count2")
 load("post.occu")
 
 #plot intercept
-plot(density(post1c[[1]][,1]),lwd=3,col=1,xlim=c(0.3,2),main="Posteriors of Intercept",
-     ylim=c(0,20))
-lines(density(post2[[1]][,1]),lwd=3,col=2)
-lines(density(post3b[[1]][,1]),lwd=3,col=3)
-lines(density(post.IM2[[1]][,1]),lwd=4,col=4)
-legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
-                                                "Posterior of ZT Counts",
-                                                "Posterior of Det/Non-Det",
-                                                "Posterior of Integrated Model2"
-))
+  plot(density(post1c[[1]][,1]),lwd=3,col=1,xlim=c(0.3,2),main="Posteriors of Intercept",
+       ylim=c(0,20))
+  lines(density(post2[[1]][,1]),lwd=3,col=2)
+  lines(density(post3b[[1]][,1]),lwd=3,col=3)
+  lines(density(post.IM3[[1]][,1]),lwd=4,col=4)
+  legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
+                                                  "Posterior of ZT Counts",
+                                                  "Posterior of Det/Non-Det",
+                                                  "Posterior of Integrated Model3"
+  ))
 
 
 #plot slope
-plot(density(post1c[[1]][,2]),lwd=3,col=1,xlim=c(-5,-1),main="Posteriors of Slope",
-     ylim=c(0,15))
-lines(density(post2[[1]][,2]),lwd=3,col=2)
-lines(density(post3b[[1]][,2]),lwd=3,col=3)
-lines(density(post.IM2[[1]][,2]),lwd=4,col=4)
-legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
-                                                "Posterior of ZT Counts",
-                                                "Posterior of Det/Non-Det",
-                                                "Posterior of Integrated Model2"
-                                                ))
+  plot(density(post1c[[1]][,2]),lwd=3,col=1,xlim=c(-5,-1),main="Posteriors of Slope",
+       ylim=c(0,15))
+  lines(density(post2[[1]][,2]),lwd=3,col=2)
+  lines(density(post3b[[1]][,2]),lwd=3,col=3)
+  lines(density(post.IM3[[1]][,2]),lwd=4,col=4)
+  legend("topright",lwd=3,col=c(1,2,3,4),legend=c("Posterior of Counts",
+                                                  "Posterior of ZT Counts",
+                                                  "Posterior of Det/Non-Det",
+                                                  "Posterior of Integrated Model3"
+                                                  ))
