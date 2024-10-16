@@ -249,21 +249,25 @@ bunny.ignore.det
 # Fit the Bayesian logistic regression model and estimate a slope for the effect of veg (bunny$veg). Examine the traceplots and provide evidence
 # that the posteriors have converged. 
 
-# Compare this posterior distribution slope to your findings from your Bayesian occupancy model slope - either model3.stan or M3. How are the results different?
+# Compare this posterior distribution slope to your findings from your Bayesian occupancy model slope - either model3.stan or M3. Visualize these posteriors
+# on the same plot or side-by-side plots. How are the results different?
 # Think about the issue of ignoring detection probability and what this might mean when investigating ecological effects when not accounting
 # for the observation process?
 
-# If fitting this model in brms, use the bayesplot lot package to plot posterior distributions.
+# If fitting this model in brms, use the bayesplot  package to plot posterior distributions.
 # Note that 'as_draws' is a function in brms to extract posterior samples
 
 ##############
 # Step 2
 
-# Use the JAGS model 'model3.stan' to make a prediction plot of the probability of occupancy (y-axis) and veg (x-axis).
+# Use the JAGS model with site-level covariates ('M3' or 'M4') or 'model3.stan' to make a prediction 
+# plot of the probability of occupancy (y-axis) and veg (x-axis).
 #
-# Make your predictions outside of JAGS and in R. 
+# If using the JAGS model results, make your predictions outside of JAGS and in R. See suggestions below.
 #
-# NOte the range of the Veg covariate
+# If using 'model3.stan' you need figre out how to use the 'predict' function to get what you want.
+#
+# Note the range of the Veg covariate to decide on the range of prediction values
 
 range(bunny$Veg)
 
@@ -272,12 +276,13 @@ range(bunny$Veg)
 x.pred = seq(0,1,by=0.1)
 
 # For each value in x.pred, you want to use your linear model....
-# logit(psi[i]) <- b0+b1*veg[i] 
+# psi[i] <- plogis(b0+b1*veg[i])
 #.... to derive the posterior distribution of psi for each value
 
 # Remember, b0 is a posterior and b1 is a posterior. Combine the linear terms,
-# then backtransform the combination to the probability scale.
+# then backtransform (logit-inverse) the combinations to the probability scale.
 
-# Once you have a probabilty distribution of psi for each value of x.pred, think
-# about how you might plot the full posterior for each value, or summarize the posterior
-# median and 95% credible intervals to then plot
+# Once you have a probability distribution of psi for each value of x.pred, think
+# about how you might plot the full posterior for each value in a meaningful way, or summarize the posterior
+# median and 95% highest posterior density intervals to then plot as lines.
+

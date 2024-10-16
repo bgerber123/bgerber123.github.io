@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[english,activeacute]{babel}
+\usepackage{amsmath}
+
+\title{Bayesian Hierarchical Occupancy Model}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+\section{Base Model 1 (no covariates)}
+
+\Large
+
+We fit a model to our data, where the we detect (1) or not detect (0) our species of interest ($y_{i,j}$) for site $i$ and replicate $j$ as,
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(z_{i} \times p_{i,j})\\
+z[i] \sim&  \text{Bernoulli}(\psi)
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+p \sim& \text{Uniform}(1, 1)\\
+psi \sim& \text{Uniform}(1, 1)\\
+\end{align*}
+
+
+\pagebreak
+
+\subsubsection{JAGS syntax}
+
+\begin{verbatim}
+
+model {
+# Priors
+	psi~dunif(0,1)
+	p~dunif(0,1)
+	
+ # Loop over sites	
+	for(i in 1:n.sites){
+	     z[i] ~ dbern(psi)
+	 # Loop over occasions within sites			
+	 for(j in 1:n.visits){
+		y[i,j] ~ dbern(p*z[i])
+	 }# j loop
+	} #i loop
+}
+
+
+
+\end{verbatim}
+
+
+
+
+
+\subsection{Fixed Effect Intercept and Random Slope (Version 2)}
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \alpha_{0} + (\beta_1 + \beta_{2,j}) \times \text{dist.human}_{i,j}\\
+\beta_{2,j} &\sim \text{Normal}(0, \sigma^{\beta})
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\alpha_{0} \sim& \text{Logistic}(0, 1)\\
+\beta_{1} \sim& \text{Normal}(0, 3)\\
+\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\end{align*}
+
+\pagebreak
+
+\subsubsection{JAGS syntax}
+
+\begin{verbatim}
+
+
+model {
+
+# Priors
+  b0 ~ dlogis(0,1)
+  b1 ~ dlogis(0,1)
+  sigma.b1 ~ dunif(0,5)
+  tau.b1 <- 1/sigma.b1^2
+  
+# Likelihood
+  for (i in 1:N) {
+     y[i] ~ dbern(p[i])
+     logit(p[i]) <- b0 + (b1 + b2[PA[i]])*dist.human[i]
+  } #End loop
+  
+# Random Slope
+  for(j in 1:N.PA){
+    b2[j] ~ dnorm(0,tau.b1)
+  } #End loop
+  
+} #End Model
+
+
+
+\end{verbatim}
+
+\end{document}
