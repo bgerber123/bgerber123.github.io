@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Johannes Signer and John Fieberg">
+<meta name="dcterms.date" content="2024-10-17">
+<title>Calculating home-range overlaps with amt – Brian D. Gerber</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Brian D. Gerber</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../FW680A4/index.html"> 
+<span class="menu-text">FW680A4</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
+</i> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Brian-Gerber-4"> <i class="bi bi-r-square-fill" role="img">
+</i> 
+<span class="menu-text">RG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bgerber123"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:brian.gerber@colostate.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#implementation-in-amt" id="toc-implementation-in-amt" class="nav-link" data-scroll-target="#implementation-in-amt">Implementation in <code>amt</code></a></li>
+  <li>
+<a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+<li><a href="#two-instances" id="toc-two-instances" class="nav-link" data-scroll-target="#two-instances">Two instances</a></li>
+  <li><a href="#instances" id="toc-instances" class="nav-link" data-scroll-target="#instances"><span class="math inline">\(&gt; 2\)</span> instances</a></li>
+  </ul>
+</li>
+  <li><a href="#overlap-between-a-home-range-and-a-simple-feature" id="toc-overlap-between-a-home-range-and-a-simple-feature" class="nav-link" data-scroll-target="#overlap-between-a-home-range-and-a-simple-feature">Overlap between a home range and a simple feature</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#session" id="toc-session" class="nav-link" data-scroll-target="#session">Session</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Calculating home-range overlaps with <code>amt</code>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Johannes Signer and John Fieberg </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 17, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Several different indices have been proposed for measuring home-range overlap. These are reviewed by Fieberg &amp; Kochanny (2005). There are two general approaches used to calculate home-range overlap: 1) calculate the percentage overlap at a given isopleth level (this works for geometric and probabilistic home ranges) or 2) calculate an index of similarity between the two utilization distributions (UD; this only works for probabilistic estimators)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For a discussion of geometric vs.&nbsp;probabilistic estimators see here: https://www.biorxiv.org/content/10.1101/2020.08.19.256859v2</p></div></div></section><section id="implementation-in-amt" class="level2"><h2 class="anchored" data-anchor-id="implementation-in-amt">Implementation in <code>amt</code>
+</h2>
+<p><code>amt</code> currently implements all methods to calculate overlaps that were reviewed by Fieberg and Kochany (2005). These are:</p>
+<ul>
+<li>
+<code>hr</code>: That is the proportion of the home range of instance <span class="math inline">\(i\)</span> that overlaps with the home range of instance <span class="math inline">\(j\)</span>. This measure does not rely on a UD and is directional (i.e., <span class="math inline">\(HR_{i,j} \ne HR_{j,i}\)</span>) and bound between 0 (no overlap) and 1 (complete overlap)</li>
+<li>
+<code>phr</code>: Is the probability of instance <span class="math inline">\(j\)</span> being located in the home range of instance <span class="math inline">\(i\)</span>. <code>phr</code> is also directional and bounded between 0 (no overlap) and 1 (complete overlap)</li>
+<li>
+<code>vi</code>: The volumetric intersection between two UDs.</li>
+<li>
+<code>ba</code>: The Bhattacharyya’s affinity between two UDs.</li>
+<li>
+<code>udoi</code>: A UD overlap index.</li>
+<li>
+<code>hd</code>: Hellinger’s distance between two UDs.</li>
+</ul>
+<p>These overlap indices can be calculated with the function <code>hr_overlap</code>. The type of overlap measure an be controlled with the argument <code>type</code>.</p>
+<p>All of these estimators can be calculated for a given home-range level (i.e., using conditional UDs). Whether or not a conditional overlap is desired or not, can be controlled with the argument <code>conditional</code>. For <code>hr</code>, the argument <code>conditional</code> has no effect and the isopleths used for home-range estimation will always be used for the overlap calculation.</p>
+<p>The function <code><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap()</a></code> can also be provided with a list of home-range estimates in situations when overlap between many different instances are required. Currently, there are three options for calculating overlap among multiple instances: <code>which = "all"</code> calculates overlap for each pair of home ranges, <code>which = "one_to_all"</code> calculates overlap between the first element in the list and all others, and <code>which = "consecutive"</code> will calculate overlap between consecutive elements in the list.</p>
+</section><section id="examples" class="level2"><h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p>First we need to load the required packages:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jmsigner/amt">amt</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidygraph.data-imaginist.com">tidygraph</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggraph.data-imaginist.com">ggraph</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="two-instances" class="level3"><h3 class="anchored" data-anchor-id="two-instances">Two instances</h3>
+<p>We will use tracking data from Fishers from New York State, USA.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">leroy</span> <span class="op">&lt;-</span> <span class="va">amt_fisher</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Leroy"</span><span class="op">)</span></span>
+<span><span class="va">lupe</span> <span class="op">&lt;-</span> <span class="va">amt_fisher</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Lupe"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Create a template raster for the KDE</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/trast.html">make_trast</a></span><span class="op">(</span><span class="va">amt_fisher</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">name</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Leroy"</span>, <span class="st">"Lupe"</span><span class="op">)</span><span class="op">)</span>, res <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And estimate home-ranges for both fishers</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">hr_leroy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/hrest.html">hr_kde</a></span><span class="op">(</span><span class="va">leroy</span>, trast <span class="op">=</span> <span class="va">trast</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.9</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">hr_lupe</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/hrest.html">hr_kde</a></span><span class="op">(</span><span class="va">lupe</span>, trast <span class="op">=</span> <span class="va">trast</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.9</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>hr</code> and <code>phr</code> are directional, this means the order matters. For all other overlap measures the order does not matter.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_leroy</span>, <span class="va">hr_lupe</span>, type <span class="op">=</span> <span class="st">"hr"</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1    0.9   0.309
+2    0.5   0.191</code></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_lupe</span>, <span class="va">hr_leroy</span>, type <span class="op">=</span> <span class="st">"hr"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1    0.9   0.986
+2    0.5   0.574</code></pre>
+</div>
+</div>
+<p>By default <code>conditional = FALSE</code> and the full UD is used.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_leroy</span>, <span class="va">hr_lupe</span>, type <span class="op">=</span> <span class="st">"phr"</span>, conditional <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1      1       1</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_lupe</span>, <span class="va">hr_leroy</span>, type <span class="op">=</span> <span class="st">"phr"</span>, conditional <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1      1   0.736</code></pre>
+</div>
+</div>
+<p>If we set <code>conditional = TRUE</code>, the overlap is measured at home-range levels that were specified during estimation.</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_leroy</span>, <span class="va">hr_lupe</span>, type <span class="op">=</span> <span class="st">"phr"</span>, conditional <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1    0.5   0.580
+2    0.9   0.992</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_lupe</span>, <span class="va">hr_leroy</span>, type <span class="op">=</span> <span class="st">"phr"</span>, conditional <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1    0.5   0.221
+2    0.9   0.401</code></pre>
+</div>
+</div>
+<p>Note, for the remaining overlap measures the order does not matter. Below we show this for the volumnic intersection (<code>type = "vi"</code>) as an example.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_lupe</span>, <span class="va">hr_leroy</span>, type <span class="op">=</span> <span class="st">"vi"</span>, conditional <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1      1   0.439</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">hr_leroy</span>, <span class="va">hr_lupe</span>, type <span class="op">=</span> <span class="st">"vi"</span>, conditional <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  levels overlap
+   &lt;dbl&gt;   &lt;dbl&gt;
+1      1   0.439</code></pre>
+</div>
+</div>
+</section><section id="instances" class="level3"><h3 class="anchored" data-anchor-id="instances">
+<span class="math inline">\(&gt; 2\)</span> instances</h3>
+<p>Lets calculate daily ranges for Lupe and then and then see how different ranges overlap with each other.</p>
+<p>We have to use the same template raster in order to make ranges comparable.</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/trast.html">make_trast</a></span><span class="op">(</span><span class="va">lupe</span>, res <span class="op">=</span> <span class="fl">50</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we add a new column with day and calculate for each day a <code>KDE</code> home range.</p>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">lupe</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>week <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/round_date.html">floor_date</a></span><span class="op">(</span><span class="va">t_</span>, <span class="st">"week"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/nest.html">nest</a></span><span class="op">(</span>data <span class="op">=</span> <span class="op">-</span><span class="va">week</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>kde <span class="op">=</span> <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map</a></span><span class="op">(</span><span class="va">data</span>, <span class="va">hr_kde</span>, trast <span class="op">=</span> <span class="va">trast</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.95</span>, <span class="fl">0.99</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we can use the list column with the home-range estimates to calculate overlap between the different home-ranges. By default <code>which = "consecutive"</code>, this means for each list entry (= home-range estimate) the overlap to the next entry will be calculated.</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">kde</span>, type <span class="op">=</span> <span class="st">"vi"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+   from    to levels overlap
+  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+1     1     2      1  0.0431
+2     2     3      1  0.551 
+3     3     4      1  0.612 </code></pre>
+</div>
+</div>
+<p>This works as well, if we set <code>conditional = TRUE</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">kde</span>, type <span class="op">=</span> <span class="st">"vi"</span>, conditional <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 4
+   from    to levels overlap
+  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+1     1     2   0.5   0     
+2     1     2   0.95  0.0264
+3     1     2   0.99  0.0357
+4     2     3   0.5   0.264 
+5     2     3   0.95  0.528 
+6     2     3   0.99  0.547 
+7     3     4   0.5   0.318 
+8     3     4   0.95  0.592 
+9     3     4   0.99  0.608 </code></pre>
+</div>
+</div>
+<p>Sometimes it can be useful to provide meaningful labels. We can do this with the <code>labels</code> argument.</p>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlaps.html">hr_overlap</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">kde</span>, type <span class="op">=</span> <span class="st">"vi"</span>, labels <span class="op">=</span> <span class="va">dat</span><span class="op">$</span><span class="va">week</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  from       to         levels overlap
+  &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+1 2010-12-12 2010-12-19      1  0.0431
+2 2010-12-19 2010-12-26      1  0.551 
+3 2010-12-26 2011-01-02      1  0.612 </code></pre>
+</div>
+</div>
+<p>Different options exist for the argument <code>which</code>. For example, <code>which = "one_to_all"</code> calculates the overlap between the first and all other home ranges.</p>
+<!--
+Finally, we can calculate the overlap between all elements inside a list (use
+`which = "all"` for this). We will use the `puechcir` from the `adehabitatLT` package to illustrate this. 
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+data("puechabon", package = "adehabitatLT")
+dat <- puechabonsp$relocs |> as.data.frame() |> 
+  make_track(X, Y, id = Name)
+trast <- make_trast(dat, res = 50)
+dat1 <- dat |> nest(data = -id) |> 
+  mutate(kde = map(data, ~ hr_kde(., trast = trast, level = c(0.5, 0.9, 0.99))))
+```
+:::
+
+
+
+
+Now we can calculate the overlaps between animals: 
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+ov2 <- hr_overlap(dat1$kde, type = "hr", labels = dat1$id, which = "all", 
+                  conditional = TRUE) |> 
+  filter(overlap > 0)
+graph <- as_tbl_graph(ov2) |> 
+  mutate(Popularity = centrality_degree(mode = 'in')) 
+
+ggraph(graph, layout = 'stress') + 
+  #geom_edge_fan(aes(col = overlap), show.legend = TRUE, arrow = arrow()) + 
+  geom_edge_arc(aes(col = overlap), arrow = arrow(length = unit(4, 'mm'), type = "closed"), 
+                start_cap = circle(3, 'mm'),
+                end_cap = circle(3, 'mm')) + 
+  geom_node_point(size = 4) + 
+  geom_node_label(aes(label = name), repel = TRUE, alpha = 0.7) +
+  facet_edges(~ levels, ncol = 2) + 
+  theme_light() +
+  scale_edge_color_gradient(low = "blue", high = "red")
+```
+:::
+
+
+
+-->
+</section></section><section id="overlap-between-a-home-range-and-a-simple-feature" class="level2"><h2 class="anchored" data-anchor-id="overlap-between-a-home-range-and-a-simple-feature">Overlap between a home range and a simple feature</h2>
+<p>The function <code>hr_overlap_feature</code> allows to calculate percentage overlap (<span class="math inline">\(HR\)</span> index) between a home. To illustrate this feature, we will use again the data from <code>lupe</code> and calculate the intersection with an arbitrary polygon.</p>
+<div class="cell">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">poly</span> <span class="op">&lt;-</span> <span class="fu">amt</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/bbox.html">bbox</a></span><span class="op">(</span><span class="va">lupe</span>, buffer <span class="op">=</span> <span class="op">-</span><span class="fl">500</span>, sf <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">poly1</span> <span class="op">&lt;-</span> <span class="fu">amt</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/bbox.html">bbox</a></span><span class="op">(</span><span class="va">lupe</span>, sf <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">hr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/hrest.html">hr_mcp</a></span><span class="op">(</span><span class="va">lupe</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_isopleths.html">hr_isopleths</a></span><span class="op">(</span><span class="va">hr</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">poly</span>, fill <span class="op">=</span> <span class="cn">NA</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">poly1</span>, fill <span class="op">=</span> <span class="cn">NA</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="amt_hr_overlap_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlap_feature.html">hr_overlap_feature</a></span><span class="op">(</span><span class="va">hr</span>, <span class="va">poly</span>, direction <span class="op">=</span> <span class="st">"hr_with_feature"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+   from    to overlap
+  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
+1  0.95     1   0.828</code></pre>
+</div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlap_feature.html">hr_overlap_feature</a></span><span class="op">(</span><span class="va">hr</span>, <span class="va">poly1</span>, direction <span class="op">=</span> <span class="st">"hr_with_feature"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+   from    to overlap
+  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
+1  0.95     1    1.00</code></pre>
+</div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlap_feature.html">hr_overlap_feature</a></span><span class="op">(</span><span class="va">hr</span>, <span class="va">poly</span>, direction <span class="op">=</span> <span class="st">"feature_with_hr"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+   from    to overlap
+  &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;
+1     1  0.95   0.854</code></pre>
+</div>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlap_feature.html">hr_overlap_feature</a></span><span class="op">(</span><span class="va">hr</span>, <span class="va">poly1</span>, direction <span class="op">=</span> <span class="st">"feature_with_hr"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+   from    to overlap
+  &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;
+1     1  0.95   0.542</code></pre>
+</div>
+</div>
+<p>The same work with several home-range levels:</p>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">hr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/amt/man/hrest.html">hr_mcp</a></span><span class="op">(</span><span class="va">lupe</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/amt/man/hr_overlap_feature.html">hr_overlap_feature</a></span><span class="op">(</span><span class="va">hr</span>, <span class="va">poly</span>, direction <span class="op">=</span> <span class="st">"hr_with_feature"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+   from    to overlap
+  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
+1  0.5      1   0.828
+2  0.9      1   0.860
+3  0.95     1   0.990</code></pre>
+</div>
+</div>
+</section><section id="references" class="level2"><h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Fieberg, J., &amp; Kochanny, C. O. (2005). Quantifying home‐range overlap: the importance of the utilization distribution. The Journal of Wildlife Management, 69(4), 1346-1359.</li>
+</ul></section><section id="session" class="level2"><h2 class="anchored" data-anchor-id="session">Session</h2>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.4.1 (2024-06-14 ucrt)
+ os       Windows 11 x64 (build 22631)
+ system   x86_64, mingw32
+ ui       RTerm
+ language (EN)
+ collate  English_United States.utf8
+ ctype    English_United States.utf8
+ tz       America/Denver
+ date     2024-10-17
+ pandoc   3.2 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package      * version  date (UTC) lib source
+ amt          * 0.2.2.0  2024-04-01 [1] CRAN (R 4.4.1)
+ backports      1.5.0    2024-05-23 [1] CRAN (R 4.4.0)
+ cachem         1.1.0    2024-05-16 [1] CRAN (R 4.4.1)
+ checkmate      2.3.1    2023-12-04 [1] CRAN (R 4.4.1)
+ class          7.3-22   2023-05-03 [1] CRAN (R 4.4.1)
+ classInt       0.4-10   2023-09-05 [1] CRAN (R 4.4.1)
+ cli            3.6.2    2023-12-11 [1] CRAN (R 4.4.0)
+ codetools      0.2-20   2024-03-31 [1] CRAN (R 4.4.1)
+ colorspace     2.1-0    2023-01-23 [1] CRAN (R 4.4.0)
+ DBI            1.2.3    2024-06-02 [1] CRAN (R 4.4.1)
+ digest         0.6.36   2024-06-23 [1] CRAN (R 4.4.1)
+ dplyr          1.1.4    2023-11-17 [1] CRAN (R 4.4.1)
+ e1071          1.7-14   2023-12-06 [1] CRAN (R 4.4.1)
+ evaluate       0.24.0   2024-06-10 [1] CRAN (R 4.4.1)
+ fansi          1.0.6    2023-12-08 [1] CRAN (R 4.4.0)
+ farver         2.1.2    2024-05-13 [1] CRAN (R 4.4.0)
+ fastmap        1.2.0    2024-05-15 [1] CRAN (R 4.4.1)
+ generics       0.1.3    2022-07-05 [1] CRAN (R 4.4.0)
+ ggforce        0.4.2    2024-02-19 [1] CRAN (R 4.4.1)
+ ggplot2      * 3.5.1    2024-04-23 [1] CRAN (R 4.4.0)
+ ggraph       * 2.2.1    2024-03-07 [1] CRAN (R 4.4.1)
+ ggrepel        0.9.5    2024-01-10 [1] CRAN (R 4.4.1)
+ glue           1.7.0    2024-01-09 [1] CRAN (R 4.4.0)
+ graphlayouts   1.2.0    2024-09-24 [1] CRAN (R 4.4.1)
+ gridExtra      2.3      2017-09-09 [1] CRAN (R 4.4.0)
+ gtable         0.3.5    2024-04-22 [1] CRAN (R 4.4.0)
+ htmltools      0.5.8.1  2024-04-04 [1] CRAN (R 4.4.1)
+ htmlwidgets    1.6.4    2023-12-06 [1] CRAN (R 4.4.1)
+ igraph         2.0.3    2024-03-13 [1] CRAN (R 4.4.1)
+ jsonlite       1.8.8    2023-12-04 [1] CRAN (R 4.4.1)
+ KernSmooth     2.23-24  2024-05-17 [1] CRAN (R 4.4.1)
+ knitr          1.47     2024-05-29 [1] CRAN (R 4.4.1)
+ lattice        0.22-6   2024-03-20 [1] CRAN (R 4.4.1)
+ lifecycle      1.0.4    2023-11-07 [1] CRAN (R 4.4.0)
+ lubridate      1.9.3    2023-09-27 [1] CRAN (R 4.4.0)
+ magrittr       2.0.3    2022-03-30 [1] CRAN (R 4.4.0)
+ MASS           7.3-60.2 2024-04-26 [1] CRAN (R 4.4.1)
+ Matrix         1.7-0    2024-04-26 [1] CRAN (R 4.4.1)
+ memoise        2.0.1    2021-11-26 [1] CRAN (R 4.4.1)
+ munsell        0.5.1    2024-04-01 [1] CRAN (R 4.4.0)
+ pillar         1.9.0    2023-03-22 [1] CRAN (R 4.4.0)
+ pkgconfig      2.0.3    2019-09-22 [1] CRAN (R 4.4.0)
+ polyclip       1.10-6   2023-09-27 [1] CRAN (R 4.4.0)
+ proxy          0.4-27   2022-06-09 [1] CRAN (R 4.4.1)
+ purrr          1.0.2    2023-08-10 [1] CRAN (R 4.4.1)
+ R6             2.5.1    2021-08-19 [1] CRAN (R 4.4.0)
+ rbibutils      2.3      2024-10-04 [1] CRAN (R 4.4.1)
+ Rcpp           1.0.12   2024-01-09 [1] CRAN (R 4.4.0)
+ Rdpack         2.6.1    2024-08-06 [1] CRAN (R 4.4.1)
+ rlang          1.1.4    2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown      2.27     2024-05-17 [1] CRAN (R 4.4.1)
+ rstudioapi     0.16.0   2024-03-24 [1] CRAN (R 4.4.1)
+ scales         1.3.0    2023-11-28 [1] CRAN (R 4.4.0)
+ sessioninfo    1.2.2    2021-12-06 [1] CRAN (R 4.4.1)
+ sf             1.0-16   2024-03-24 [1] CRAN (R 4.4.1)
+ survival       3.6-4    2024-04-24 [1] CRAN (R 4.4.1)
+ terra          1.7-78   2024-05-22 [1] CRAN (R 4.4.0)
+ tibble         3.2.1    2023-03-20 [1] CRAN (R 4.4.0)
+ tidygraph    * 1.3.1    2024-01-30 [1] CRAN (R 4.4.1)
+ tidyr          1.3.1    2024-01-24 [1] CRAN (R 4.4.1)
+ tidyselect     1.2.1    2024-03-11 [1] CRAN (R 4.4.1)
+ timechange     0.3.0    2024-01-18 [1] CRAN (R 4.4.0)
+ tweenr         2.0.3    2024-02-26 [1] CRAN (R 4.4.1)
+ units          0.8-5    2023-11-28 [1] CRAN (R 4.4.1)
+ utf8           1.2.4    2023-10-22 [1] CRAN (R 4.4.0)
+ vctrs          0.6.5    2023-12-01 [1] CRAN (R 4.4.0)
+ viridis        0.6.5    2024-01-29 [1] CRAN (R 4.4.0)
+ viridisLite    0.4.2    2023-05-02 [1] CRAN (R 4.4.0)
+ withr          3.0.0    2024-01-16 [1] CRAN (R 4.4.0)
+ xfun           0.45     2024-06-16 [1] CRAN (R 4.4.1)
+ yaml           2.3.8    2023-12-11 [1] CRAN (R 4.4.0)
+
+ [1] C:/Users/C825033651/AppData/Local/Programs/R/R-4.4.1/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,13 @@
+Discuss basics of animal movement data-
+
+Location data can be collected using surveys within a predetermined frame of reference (i.e., Eulerian sampling) or from animal-borne tracking devices (i.e., Lagrangian sampling). Integration of observations obtained from Eulerian and Lagrangian perspectives can provide insights into animal movement and habitat use.
+
+Tracks. Missing locations.
+
+Types of interests
+      Recursion
+      Home Range- MCP, KDE, dynamic brown bridge, AKDE
+      Speed, Turning Angle
+      Behavioral State- hierarchical movement model with states
+
+Introduce AMT and package - go to code

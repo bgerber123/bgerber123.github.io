@@ -26,9 +26,15 @@ title: ""
 -   Readings for next class:
 
 -   Background Reading (not required):
-     - <a href="/readings/Nathan et al 2008.pdf">Nathan et al 2008</a>
-     - <a href="/readings/Nathan et al. 2022.pdf">Nathan et al. 2022</a>
-     - <a href="/readings/Signer et al 2018.pdf">Signer et al 2018</a>
+     - <a href="/readings/Nathan et al 2008.pdf">Nathan et al 2008 - Foundational bit of science</a>
+     - <a href="/readings/Nathan et al. 2022.pdf">Nathan et al. 2022 -  Big data science</a>
+     - <a href="/readings/Signer et al 2018.pdf">Signer et al 2018 - amt R package </a>
+     - <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12559">Calabrese et al. 2016 - ctmm R packageguide</a>
+     - <a href="https://doi.org/10.1111/2041-210X.13786">Silva et al. 2021 - autocorrelated kernel density (AKDE) home range review</a>
+     - <a href="https://doi.org/10.1111/2041-210X.12995">McClintock et al. 2018 - momentuHMM R package</a>
+
+
+
 
 -   Background Videos (not required):
      - <a href="https://youtu.be/WELTpbB5BuU">Movement Ecology Théo Michelot. February 7, 2022</a>; <a href="https://github.com/eco4cast/Statistical-Methods-Seminar-Series/tree/main/michelot_movement">Code</a>
@@ -36,8 +42,7 @@ title: ""
      
 -   Background Resources (not required):     
      - <a href="https://animove.org/elearning/">Animove Resources</a>
-
-
+     - <a href="https://ctmm-initiative.github.io/ctmm/">Continuous-time movement modeling</a>
 
 
  
@@ -45,13 +50,13 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Downloads: <a href="/classfiles/XXX/XXXX.zip">Files</a>
+-   Downloads: <a href="/classfiles/movement/amt vignettes.zip">Files</a>
 
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("amt","dplyr"))
+install.packages(c("amt","tidygraph","ctmm","ggraph"))
 ```
 
 #### [Assigned]{style="color:red;"}
