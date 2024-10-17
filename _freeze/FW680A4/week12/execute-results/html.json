@@ -1,0 +1,15 @@
+{
+  "hash": "4ce3efbcd287609997b5cb901e74c680",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 12\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### Discuss Paper Assigned by Waverly Davis and Lisa Roerk\n\n##### Discuss Northrup et al. 2022\n\n#### [Assigned]{style=\"color:red;\"}\n -   Readings for next class:\n     - <a href=\"https://docs.google.com/document/d/171sCFawqLIFo472D7Tfhitlrj-sbJ6zDnYtOlbI4ijM/edit?usp=sharing\">A plain language review for modeling animal habitat-selection (draft) </a>\n\nThe assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.\n\n \n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion of draft manuscript**\n\n-   Downloads: <a href=\"/classfiles/habsel/XXX.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"\"))\n```\n:::\n\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n- <a href=\"/readings/XXXX.pdf\">paper by Cat Adams and Bijoya Paul</a>\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

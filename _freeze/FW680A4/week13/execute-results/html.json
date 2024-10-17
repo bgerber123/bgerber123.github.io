@@ -1,0 +1,15 @@
+{
+  "hash": "277b94d3fee3b6070788936529fa5e5e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 14\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### Discuss paper by Cat Adams and Bijoya Paul\n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Downloads: <a href=\"/classfiles/community/comm.files.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"\"))\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

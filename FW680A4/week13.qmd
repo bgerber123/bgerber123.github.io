@@ -1,0 +1,27 @@
+---
+title: ""
+---
+
+## Week 14
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### Discuss paper by Cat Adams and Bijoya Paul
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Downloads: <a href="/classfiles/community/comm.files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c(""))
+```
+
+

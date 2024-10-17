@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title> FW 680A4   Wildlife Ecology Modeling   (Fall 2024)  – Brian D. Gerber</title>
+<title>week13 – Brian D. Gerber</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -38,8 +68,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,16 +94,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Brian D. Gerber</span>
@@ -86,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -107,8 +131,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">FW680A4</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
 </i> 
 <span class="menu-text">Scholar</span></a>
@@ -129,387 +153,44 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Email</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-stuff" id="toc-course-stuff" class="nav-link active" data-scroll-target="#course-stuff">Course Stuff</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+<li>
+<a href="#week-14" id="toc-week-14" class="nav-link active" data-scroll-target="#week-14">Week 14</a>
+  <ul class="collapse">
+<li><a href="#day-1" id="toc-day-1" class="nav-link" data-scroll-target="#day-1">Day 1</a></li>
+  <li><a href="#day-2-lab" id="toc-day-2-lab" class="nav-link" data-scroll-target="#day-2-lab">Day 2 (lab)</a></li>
   </ul>
-</nav>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><center><br>
-FW 680A4 <br> Wildlife Ecology Modeling <br> (Fall 2024)<br>
-</center></h1>
+<main class="content" id="quarto-document-content"><section id="week-14" class="level2"><h2 class="anchored" data-anchor-id="week-14">Week 14</h2>
+<section id="day-1" class="level3"><h3 class="anchored" data-anchor-id="day-1">Day 1</h3>
+<section id="today" class="level4"><h4 class="anchored" data-anchor-id="today"><span style="color:red;">Today</span></h4>
+<section id="discuss-paper-by-cat-adams-and-bijoya-paul" class="level5"><h5 class="anchored" data-anchor-id="discuss-paper-by-cat-adams-and-bijoya-paul">Discuss paper by Cat Adams and Bijoya Paul</h5>
+</section></section></section><section id="day-2-lab" class="level3"><h3 class="anchored" data-anchor-id="day-2-lab">Day 2 (lab)</h3>
+<section id="today-1" class="level4"><h4 class="anchored" data-anchor-id="today-1"><span style="color:red;">Today</span></h4>
+<ul>
+<li><p>Downloads: <a href="../classfiles/community/comm.files.zip">Files</a></p></li>
+<li><p>Install R packages:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># CRAN packages</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="course-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="course-stuff">Course Stuff</h2>
-<title>Schedule</title>
-<style type="text/css">
-
-code.r{
-  font-size: 30px;
-}
-</style>
-
-<a href="../FW680A4/CourseOverview.html">Course Overview</a><p></p>
-<p><strong>Readings</strong>: Come prepared to discuss the assigned reading on the next class after the readings were assigned.</p>
-<ul>
-<li>What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.</span></li>
-</ul>
-<p><strong>Labs</strong>: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated.</p>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 8%">
-<col style="width: 22%">
-<col style="width: 17%">
-<col style="width: 27%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>Day</th>
-<th>Date</th>
-<th>Lecture Topic</th>
-<th>Assignments</th>
-<th>Readings</th>
-<th>Background Materials</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="../FW680A4/week1.html">1</a></td>
-<td>Tu</td>
-<td>20-Aug</td>
-<td>Class Intro</td>
-<td>Discussion Post</td>
-<td>Zitomer et al.&nbsp;2022; Wolcott et al.&nbsp;2019</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>23-Aug</td>
-<td>Big Picture</td>
-<td>Lab 1: Sampling</td>
-<td>Betts et al.&nbsp;2022; Dumelle et al.&nbsp;2021; Williams and Brown 2019</td>
-<td>Shmueli 2010; Arif and MacNeil 2022</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week2.html">2</a></td>
-<td>Tu</td>
-<td>27-Aug</td>
-<td>Probability Functions</td>
-<td>Probability Quiz</td>
-<td>Kery and Kellner Ch. 2.0-2.4</td>
-<td>Hobbs and Hooten Ch.3; Bolker Ch. 4</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>30-Aug</td>
-<td>Probability Functions</td>
-<td>Lab 2: Simulation &amp; Prob. Functions</td>
-<td>Kery and Kellner Ch. 2.5-2.6</td>
-<td>Fieberg Ch. 10; Bolker Ch. 6</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week3.html">3</a></td>
-<td>Tu</td>
-<td>3-Sep</td>
-<td>Likelihood / Optimization</td>
-<td></td>
-<td>Dushoff et al.&nbsp;2019; Fieberg, Ch. 1.10</td>
-<td>Fieberg Ch. 1; Bolker Ch. 7; Zurr et al.&nbsp;Ch. 2</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>6-Sep</td>
-<td>Regression</td>
-<td>Lab 3: Regression</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week4.html">4</a></td>
-<td>Tu</td>
-<td>10-Sep</td>
-<td>GLM I</td>
-<td></td>
-<td>Zurr and Iano, 2016</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>13-Sep</td>
-<td>GLM II</td>
-<td>Lab 4: GLM</td>
-<td>Fieberg, Ch. 8; Tredennick et al.&nbsp;2021</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week5.html">5</a></td>
-<td>Tu</td>
-<td>17-Sep</td>
-<td>Modeling Strategies</td>
-<td></td>
-<td></td>
-<td>Gelman and Hill Ch. 11 and 12</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>20-Sep</td>
-<td>Hierarchical Models / GLMM</td>
-<td>Lab 5: GLMM</td>
-<td>Kery and Kellner Ch. 2.7-2.10</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week6.html">6</a></td>
-<td>Tu</td>
-<td>24-Sep</td>
-<td>Bayesian Inference</td>
-<td></td>
-<td>Ellison 2004</td>
-<td>Hobbs and Hooten Ch.5.;Fieberg Ch. 11 &amp; 12</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>27-Sep</td>
-<td>Bayesian Inference and Computation</td>
-<td>Lab 6: Bayes; <br>Bayes Quiz</td>
-<td></td>
-<td>Kurz, 2023</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week7.html">7</a></td>
-<td>Tu</td>
-<td>1-Oct</td>
-<td>Hierarchical Bayesian</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>4-Oct</td>
-<td>Hierarchical Bayesian</td>
-<td>Lab 7; <br>Nothing to submit</td>
-<td>Widmer et al 2021; Guillera-Arroita et al.&nbsp;2015</td>
-<td>Soley-Guardia et al.&nbsp;2024; Valavi et al.&nbsp;2021</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week8.html">8</a></td>
-<td>Tu</td>
-<td>8-Oct</td>
-<td>Species Distribution Modeling</td>
-<td></td>
-<td>Kery and Schaub Ch 7</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>11-Oct</td>
-<td>Mark Recapture</td>
-<td>Lab 8: CJS</td>
-<td>Royle et al.&nbsp;2018</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week9.html">9</a></td>
-<td>Tu</td>
-<td>15-Oct</td>
-<td>Spatial Capture Recapture</td>
-<td></td>
-<td>Kery and Schaub Ch 13</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>18-Oct</td>
-<td>Hierarchical Bayesian Occupancy</td>
-<td>Lab 9:<br>HB Occu.</td>
-<td>Zipkin and Saunders 2018; Zipkin et al.&nbsp;2021; Powell and Gale Ch 18</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week10.html">10</a></td>
-<td>TU</td>
-<td>22-Oct</td>
-<td>N-Mixture and Integrated Data Models</td>
-<td></td>
-<td>Kery and Kellner Ch20</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>25-Oct</td>
-<td>Integrated Data Models</td>
-<td>Lab 10: ISDM</td>
-<td>Wittemyer et al.&nbsp;2019; Huggler et al.&nbsp;2022</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week11.html">11</a></td>
-<td>Tu</td>
-<td>29-Oct</td>
-<td>Animal Movement</td>
-<td></td>
-<td></td>
-<td>Nathan et al 2008 and 2022; Signer et al 2018; and more</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>1-Nov</td>
-<td>Animal Movement</td>
-<td>Lab 11: AMT; <br>Nothing to submit</td>
-<td>XXXX; Northrup et al.&nbsp;2022</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week11.html">12</a></td>
-<td>Tu</td>
-<td>5-Nov</td>
-<td>Habitat Selection</td>
-<td></td>
-<td>Draft guidance paper</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>8-Nov</td>
-<td>Habitat Selection</td>
-<td>Lab 12: HabSel</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week11.html">13</a></td>
-<td>Tu</td>
-<td>12-Nov</td>
-<td>Community Modeling</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>15-Nov</td>
-<td>Community Modeling</td>
-<td>Lab 13: Community</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week14.html">14</a></td>
-<td>Tu</td>
-<td>19-Nov</td>
-<td>Group Project work</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>22-Nov</td>
-<td>Group Project work</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>15</td>
-<td>Tu</td>
-<td>26-Nov</td>
-<td><span style="color:red">No Class</span></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>29-Nov</td>
-<td><span style="color:red">No Class</span></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../FW680A4/week16.html">16</a></td>
-<td>Tu</td>
-<td>3-Dec</td>
-<td>Present Group Project</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>Fr</td>
-<td>6-Dec</td>
-<td>Present Group Project</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -930,8 +611,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
 </div>   
@@ -943,8 +623,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

@@ -1,0 +1,46 @@
+---
+title: ""
+---
+
+## Week 12
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### Discuss Paper Assigned by Waverly Davis and Lisa Roerk
+
+##### Discuss Northrup et al. 2022
+
+#### [Assigned]{style="color:red;"}
+ -   Readings for next class:
+     - <a href="https://docs.google.com/document/d/171sCFawqLIFo472D7Tfhitlrj-sbJ6zDnYtOlbI4ijM/edit?usp=sharing">A plain language review for modeling animal habitat-selection (draft) </a>
+
+The assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of draft manuscript**
+
+-   Downloads: <a href="/classfiles/habsel/XXX.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c(""))
+```
+
+
+#### [Assigned]{style="color:red;"}
+- <a href="/readings/XXXX.pdf">paper by Cat Adams and Bijoya Paul</a>
+
+
+
+
+
+
+
