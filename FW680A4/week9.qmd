@@ -45,7 +45,7 @@ install.packages(c("secr","sf"))
 
 -   Board work defining the occupancy model hierarchically
 
--   Downloads: <a href="/classfiles/occlab/hbocclab2.zip">Files</a>
+-   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Files</a>
 
 -   Install R packages:
 

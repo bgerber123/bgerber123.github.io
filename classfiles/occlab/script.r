@@ -260,7 +260,7 @@ bunny.ignore.det
 ##############
 # Step 2
 
-# Use the JAGS model with site-level covariates ('M3' or 'M4') or 'model3.stan' to make a prediction 
+# Use the JAGS model with site-level covariates ('M3' or 'M4') or 'model5.stan' to make a prediction 
 # plot of the probability of occupancy (y-axis) and veg (x-axis).
 #
 # If using the JAGS model results, make your predictions outside of JAGS and in R. See suggestions below.

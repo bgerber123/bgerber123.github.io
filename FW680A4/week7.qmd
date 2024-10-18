@@ -49,6 +49,7 @@ install.packages(c("brms","bayesplot"))
 - Background Reading (not required):
   - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
   - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
+  - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>.
 
 
 
