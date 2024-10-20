@@ -159,10 +159,10 @@ library(runjags)
   
   
 # Step 4
-# Use Monte Carlo integration on the sex effect parameter to estimate the probability that the 
-# the effect difference of male survival is less than female survival
-
-# The probability of a sex effect- that male survival is less than female surival
+  # Use Monte Carlo integration on the sex effect parameter to estimate the probability that the 
+  # male survival is less than female survival
+  
+# The probability of a sex effect- that male survival is less than female survival
 # To evaluate this, we want to know if beta1 is negative  
 length(which(beta1<0))/length(beta1)
   

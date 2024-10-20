@@ -110,5 +110,5 @@ library(coda)
 
 # Step 4
 # Use Monte Carlo integration on the sex effect parameter to estimate the probability that the 
-# the effect difference of male survival is less than female survival
+# male survival is less than female survival
 
