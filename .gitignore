@@ -2,6 +2,5 @@
 *.Rhistory
 *.RData
 .Ruserdata
-*.pptx
 /.quarto/
 .DS_Store
