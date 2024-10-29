@@ -1,8 +1,8 @@
 {
-  "hash": "2f5213fd0898a479209025b1f4928fa8",
+  "hash": "95e944ec05b643c66d8d3e03dfd0d176",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 13\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### Discuss paper by Cat Adams and Bijoya Paul\n\n##### Hierarchical Community Occupancy Model\n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n##### Multivariate Community Analyses\n\n-   Downloads: <a href=\"/classfiles/community/comm.files.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"\"))\n```\n:::\n",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n## Week 13\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### Discuss Wright et al 2020 (Cat Adams, Bijoya Paul, Lisa Roerk)\n\n##### Hierarchical Community Occupancy Model\n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n##### Multivariate Community Analyses\n\n-   Downloads: <a href=\"/classfiles/community/comm.files.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"\"))\n```\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

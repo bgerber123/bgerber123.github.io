@@ -576,18 +576,18 @@ in survival between the sexes.</p>
 <div id="step-4" class="section level1">
 <h1>Step 4</h1>
 <p>Use Monte Carlo integration on the sex effect parameter to estimate
-the probability that the the effect difference of male survival is less
-than female survival</p>
-<pre class="r"><code># The probability of a sex effect- that female survival is less than male survival
-# To evaluate this, we want to know if beta1 is negative  
-length(which(beta1&lt;0))/length(beta1)</code></pre>
-<pre><code>## [1] 0.6450667</code></pre>
-<p>The probability that <span class="math inline">\(\beta_1 &lt;
+the probability that the male survival is less than female survival.</p>
+<pre class="r"><code># The probability of a sex effect- that female survival is less than male survival. We can determine this by how many samples are less than zero.
+
+# But, to evaluate weather male survival is less than female survival, we want to know if beta1 is positive, so...
+length(which(beta1&gt;0))/length(beta1)</code></pre>
+<pre><code>## [1] 0.3549333</code></pre>
+<p>The probability that <span class="math inline">\(\beta_1 &gt;
 0\)</span> indicates there is no evidence of a difference. A high
 probability, values near 1, would indicate a statistical clear negative
 effect. However, if we saw probabilities near 0, this would indicate a
-clear statistical positive effect difference between female and male
-survival probability.</p>
+clear statistical difference between female and male survival
+probability.</p>
 <p><br> <br></p>
 </div>
 
