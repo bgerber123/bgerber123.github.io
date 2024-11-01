@@ -1,0 +1,228 @@
+---
+title: "Hierarchical Bayesian Occupancy Lab"
+author: "Brian Gerber"
+date: "2024-10-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Setup Data and Packages
+
+```{r bunny,results='hide',warning=FALSE,error=FALSE,message = FALSE}
+# Libraries
+  library(rjags)
+  library(brms)
+  library(bayesplot)
+  library(ubms)  
+  library(unmarked)  
+
+#Read data
+  bunny=read.csv("detection_nondetection_bunny.csv")
+  bunny.data = cbind(bunny$Observed1,  bunny$Observed2)
+```  
+  
+```{r bunny2}  
+#Look at the data
+  head(bunny)
+```
+
+### Fit Occupancy Models
+
+#### JAGS
+
+```{r M3, cache=TRUE,message=FALSE,results='hide'}
+# Date setup with covaraite
+  data=list(
+    y=bunny.data,
+    n.sites=nrow(bunny.data),
+    n.visits=ncol(bunny.data),
+    veg = bunny$Veg
+  )
+
+
+  params=c("a0","a1","b0","b1")
+
+  inits <- function(){list(z=apply(bunny.data, 1, max), a0=rnorm(1), b0=rnorm(1),a1=rnorm(1), b1=rnorm(1))}
+
+# Settings for MCMC chains
+  nchains<-3
+  niter<-5000
+  nburn<-1000
+  nthin<-1
+
+  jm=jags.model(file="occ.model.cov.JAGS.R", data=data, inits=inits, n.chains=nchains, n.adapt=2000)
+
+# Run the burn-in portion of the model
+  update(jm, n.iter=nburn)
+
+# Sample from the posterior
+  M3 = coda.samples(jm, variable.names=params, n.iter=niter, thin=nthin)
+  #save(M3,file="M3")
+```
+
+#### UBMS/stan
+
+```{r ubms,cache=TRUE,message=FALSE,results='hide'}
+UMF <- unmarkedFrameOccu(y=bunny.data,siteCovs=data.frame(veg = bunny$Veg))
+
+# use R package to fit the same model in stan
+  model5.stan = stan_occu(~veg ~veg, data=UMF, chains=3, iter=5000)
+  #save(model5.stan, file="model5.stan")
+```
+
+
+## Challenge
+
+### Step 1
+
+Ignore detection probability  and fit a Bayesian logistic regression model. Use brm or JAGS to fit the model. Compare this slope to your findings from your Bayesian occupancy model slopes - either model5.stan or M3. How are the results different? Think about the issue of ignoring detection probability and what this might mean for your interpretation of an ecological effect?
+
+```{r challenge data}
+bunny.ignore.det = apply(bunny.data,1,sum)
+bunny.ignore.det[which(bunny.ignore.det==2)]=1
+
+# Now, we have site level observation without replication. A 1 indicates a detection in either column 1 or column 2 or both.
+# A zero is no detection for other observation.
+
+# Fit the Bayesian logistic regression model and estimate a slope for the effect of veg (bunny$veg)
+bunny.ignore.det
+```
+
+#### Logistic Regression with brm
+
+```{r brm fit, cache=TRUE, warning=FALSE,results='hide',message=FALSE}
+#Setup a dataframe with the new occurrence data and veg covariate
+dat = data.frame(y=bunny.ignore.det, veg=bunny$Veg)
+
+# Use brms to fit a logistic regression model
+brm.fit = brm(formula =  y~ veg,  
+              data = dat, 
+              family = bernoulli(link = "logit"),
+              warmup = 2000, 
+              iter = 5000, 
+              chains = 3, 
+              sample_prior = FALSE
+)
+#save(brm.fit,file="brm.fit")
+
+```
+
+Examine posteriors and traceplots
+
+```{r brm plot}
+plot(brm.fit)
+
+#Extract posterior samples
+b_veg = as_draws(brm.fit,variable="b_veg")
+
+#plot posterior samples manually
+#plot(density(b_veg[[1]]$b_veg),lwd=3)
+```
+
+
+#### Logistic Regression with JAGS
+
+```{r JAGS.fit, cache=TRUE}
+
+# Need to include are covaraite
+dat = data.frame(y=bunny.ignore.det, veg=bunny$Veg)
+
+data=list(
+  y=dat$y,
+  n.sites=length(dat$y),
+  veg = dat$veg
+)
+
+
+params=c("b0","b1")
+
+inits <- function(){list(b0=rnorm(1), b1=rnorm(1))}
+
+jm=jags.model(file="logistic.model.cov.JAGS.R", data=data, inits=inits, n.chains=nchains, n.adapt=2000)
+
+# Run the burn-in portion of the model
+update(jm, n.iter=nburn)
+
+# Sample from the posterior
+jags.fit.logistic = coda.samples(jm, variable.names=params, n.iter=niter, thin=nthin)
+
+plot(jags.fit.logistic)
+
+```
+
+#### Take-Home
+
+To really see the issue, we should plot the posterior distributions of the slope of vegetation when accounting for detection and ignoring detection. In the below plots, if we ignore detection probability, we see the effect of veg is negative (top plot). However, when we separate detection and occupancy (model M3 and model5.stan), the effect of veg on occupancy is positive. Our conclusion about the the effect of veg is opposite. The differences of the posteriors within each plot are simply due to not running the MCMC iterations long enogugh and different priors. 
+
+
+```{r plot comparison,echo=FALSE,fig.width=10,fig.height=5}
+
+par(mfrow=c(1,2))
+plot(density(b_veg[[1]]$b_veg,adjust=1.2),lwd=3,main="Slope Coeficient (ignore detection)",ylim=c(0,1.3),xlim=c(-5,5))
+lines(density(jags.fit.logistic[[1]][,2],adjust = 1.2),lwd=3,col=1,lty=4)
+
+
+plot(density(model5.stan@stanfit@sim$samples[[1]]$`beta_state[2]`,adjust=1.2),
+     lwd=3,col=3,main="Slope Coeficient (account for detection)",xlim=c(-5,5))
+lines(density(M3[[1]][,4],adjust=1.2),lwd=3,col=3)
+```
+
+
+### Step 2
+
+Use model5.stan or M3 to make a prediction plot of occupancy (y-axis) and veg (x-axis).
+
+### Using ubms/stan
+
+
+The `predict` function works with ubms to get predictions
+
+```{r ubms.pred,cache=TRUE}
+
+#We can use the predict function to get predictions of the 'state' or occurence probabiltiy
+  preds=predict(model5.stan,submodel="state")
+  
+#Create dataframe and reorder for plotting  
+  preds=data.frame(preds,veg=bunny$Veg)
+  preds=preds[order(preds$veg),]
+
+# plot predictions and 95% credible intervals    
+  plot(preds$veg,preds$Predicted,lwd=4,col=2,type="l",ylim=c(0,1))
+  lines(preds$veg,preds$X2.5.,lwd=4,col=3)
+  lines(preds$veg,preds$X97.5.,lwd=4,col=3)
+```
+
+
+### Using JAGS model
+
+Using Jags, we need to backtransform parameters ourselves. There is no function to do this for us.
+  
+```{r jags.preds,cache=TRUE}  
+  beta0=M3[[1]][,3]
+  beta1=M3[[1]][,4]
+
+# loop over covariate value and get a posterior distribution for each value
+# of veg
+preds.veg= matrix(0, ncol=length(beta1),nrow=length(bunny$Veg))  
+  for( i in 1:length(bunny$Veg)){
+   preds.veg[i,] = beta0+beta1*bunny$Veg[i]  
+  }
+
+dim(preds.veg)
+
+#Get quantiles from prediction posterior distributions
+preds.quantile = apply(preds.veg,1,quantile,probs=c(0.025,0.5,0.975))
+preds.quantile = plogis(preds.quantile)
+
+preds.quantile = data.frame(t(preds.quantile),veg=bunny$Veg)
+head(preds.quantile)
+
+preds.quantile=preds.quantile[order(preds.quantile$veg),]
+plot(preds.quantile$veg,preds.quantile$X50.,lwd=4,col=2,type="l",ylim=c(0,1))
+lines(preds.quantile$veg,preds.quantile$X2.5.,lwd=4,col=3)
+lines(preds.quantile$veg,preds.quantile$X97.5.,lwd=4,col=3)
+
+```

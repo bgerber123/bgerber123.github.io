@@ -152,7 +152,7 @@ Since we setup derived parameters in our JAGS model, we simply need to grab thes
   # Plot posteriors  
   plot(density(post.combined[,3]),lwd=3,col=1,"Annual Survival")
   lines(density(post.combined[,4]),lwd=3,col=2)  
-  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Maale"))
+  legend("topright",lwd=3,col=c(1,2),legend=c("Female","Male"))
 ```
 
 

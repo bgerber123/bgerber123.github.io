@@ -265,7 +265,7 @@ bunny.ignore.det
 #
 # If using the JAGS model results, make your predictions outside of JAGS and in R. See suggestions below.
 #
-# If using 'model3.stan' you need figre out how to use the 'predict' function to get what you want.
+# If using 'model5.stan' you need figure out how to use the 'predict' function to get what you want.
 #
 # Note the range of the Veg covariate to decide on the range of prediction values
 

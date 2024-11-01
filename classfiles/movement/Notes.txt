@@ -5,9 +5,10 @@ Location data can be collected using surveys within a predetermined frame of ref
 Tracks. Missing locations.
 
 Types of interests
-      Recursion
+      Recursion - returns to previously visited area
+      First Passage Time - measures how long it takes an animal to cross a circle of a given radius. A measure of how much time an animal spends in an area - search effort. Think about a patchy environment.
       Home Range- MCP, KDE, dynamic brown bridge, AKDE
       Speed, Turning Angle
       Behavioral State- hierarchical movement model with states
-
+      Site fidelity - 
 Introduce AMT and package - go to code
