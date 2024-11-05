@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[english,activeacute]{babel}
+\usepackage{amsmath}
+
+\title{Habitat Selection}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+\section{Habitat Selection with independent spatial locations}
+
+Habitat selection modeling has a long history. It is also fairly confusing as the terminology and understanding of the statistical modeling has evolved. \\
+
+A common habitat selection model will use animal-borne telemetry location data. We will consider these spatially locations independent, such that consecutive locations do not depend on each other. A major part of this dependence is due to movement constraints of the animal. If the locations are independent, there has been a long enough time between locations that the animal could have accessed any part of its range. The important word here is \textbf{could}, rather than did. Essentially, we are interested in these independent behavioral decisions of where the animal chooses to be located. As part of this type of model, we need to decide on all the locations on a landscape that are available to the animal to choose from. The boundary of this available area is often chosen to be the home range of the individual. It could also be a larger landscape though. \\
+
+The simplest habitat selection model is one where we assume all locations are equally available to the individual animal within a defined area (e.g. home range). In the literature, this is the `Traditional Resource Selection Function'. We want to estimate whether animals are using certain landscape/spatial features in this area more than they are available to the animal (selection) or whether they are using these them less than they are available (avoidance). The statistical framework that combines use, selection, and availability is the weighted distribution formulation of a point process model (Hooten et al. 2017).\\
+
+The components:
+
+\begin{itemize}
+\item $\boldsymbol{\mu}_{i}$ is a 2 x 1 vector of the animal's true geographic coordinate for relocation i
+\item $\textbf{x}(\boldsymbol{\mu}_{i})$ are the environmental/spatial features hypothesized to influence animal selection at relocation $\boldsymbol{\mu}_{i}$.
+\item the function g() is called the selection function and depends on $\boldsymbol{\beta}$
+\item  $\boldsymbol{\beta}$ are the associated selection coefficients associated with $\textbf{x}(\boldsymbol{\mu}_{i})$
+\item the function f() is called the availability function and depends on $\boldsymbol{\theta}$
+\item  $\boldsymbol{\theta}$ are the associated availability coefficients 
+\end{itemize}
+
+To put this together, we can define the probability density function of the locations ($\boldsymbol{\mu}_{i}$) as,
+
+
+\begin{align*}
+[\boldsymbol{\mu}_{i}| \boldsymbol{\beta}, \boldsymbol{\theta}] \equiv &  \frac{g(\textbf{x}(\boldsymbol{\mu}_{i}, \boldsymbol{\beta}))f(\boldsymbol{\mu}_{i},\boldsymbol{\theta})}{\int g(\textbf{x}(\boldsymbol{\mu}, \boldsymbol{\beta}))f(\boldsymbol{\mu},\boldsymbol{\theta})d\boldsymbol{\mu}}.
+\end{align*}
+
+However, we stated that we will make all locations and associated environmental/spatial features equally available to the individual within a defined area (called the support of the point process, $\mathcal{M}$). Therefore, the availability function is uniform and be removed as it would be equivalent to multiplying the selection function for each location $i$ by one. We can then simplify our model to
+
+
+\begin{align*}
+[\boldsymbol{\mu}_{i}| \boldsymbol{\beta}] \equiv &  \frac{g(\textbf{x}(\boldsymbol{\mu}_{i}, \boldsymbol{\beta}))}{\int g(\textbf{x}(\boldsymbol{\mu}, \boldsymbol{\beta}))d\boldsymbol{\mu}}.
+\end{align*}
+
+But what is this g function? Generally, it can be any deterministic mathematical function that has positive support. Specifically though, it is commonly defined as exponential, g() = exp(). Therefore, we can define our final model as,
+
+\begin{align*}
+[\boldsymbol{\mu}_{i}| \boldsymbol{\beta}] \equiv &  \frac{\text{exp}(\textbf{x}'(\boldsymbol{\mu}_{i}) \boldsymbol{\beta})}{\int \text{exp}(\textbf{x}'(\boldsymbol{\mu}) \boldsymbol{\beta})d\boldsymbol{\mu}}.
+\end{align*}
+
+Lastly, lets connect this model across N independent spatial points and define the complete likelihood as,
+
+\begin{align*}
+ \prod_{i=1}^{N}  \frac{\text{exp}(\textbf{x}'(\boldsymbol{\mu}_{i}) \boldsymbol{\beta})}{\int \text{exp}(\textbf{x}'(\boldsymbol{\mu}) \boldsymbol{\beta})d\boldsymbol{\mu}}.
+\end{align*}
+
+
+
+\section{References}
+
+Hooten, M. B., Johnson, D. S., McClintock, B. T., \& Morales, J. M. (2017). Animal movement: statistical models for telemetry data. CRC press.
+
+
+\end{document}
