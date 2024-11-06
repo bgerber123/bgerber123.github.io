@@ -56,11 +56,32 @@ Lastly, lets connect this model across N independent spatial points and define t
  \prod_{i=1}^{N}  \frac{\text{exp}(\textbf{x}'(\boldsymbol{\mu}_{i}) \boldsymbol{\beta})}{\int \text{exp}(\textbf{x}'(\boldsymbol{\mu}) \boldsymbol{\beta})d\boldsymbol{\mu}}.
 \end{align*}
 
+\subsection{How do we fit this model?}
 
+It happens that we can fit this model with logistic regression. \\
+
+The main idea in the logistic regression approach is to convert the individual spatial locations into a binary data set where the observed locations are represented by ones and the available locations are represented by zeros. That is, a background sample is typically taken from the availability distribution f in such a way that it represents a large but finite set of possible locations the individual could have occupied. The environmental covariates ($\textbf{x}_{i}$) at the individual locations ($\boldsymbol{\mu}_{i}$) are associated with each of the ones for i = 1,... N, and similarly, the covariates are recorded for the background sample of M- N locations. The response variable is then specified as $y \equiv (1,.....,1,0,...0)'$ and used in a standard logistic regression with the complete set of covariates. That is, the fitting model becomes $y_{i}\sim \text{Bern}(p_{i})$ where $\text{logit}(p_i) = \textbf{x}'\boldsymbol{\beta}$ for i = 1, ...., m total binary observations.
+
+The background sample (the zeros of length M) is what is providing the approximation of the integral in the above formulas (i.e., denominator). It is important we have enough locations of zeros to make sure this integral is well approximated (Northrup et al. 2013). The two ways we can ensure this are that we obtain many locations in the spatial areas of interest ($\mathcal{M}$) and assign them the response of zero. The second thing we can do is weight our observations in the logistic regression model. In R and in the function glm, we can do this with weight argument. Specifically, we want to a vector that corresponds to $y$, where we assign a 1 for each value of 1 in $y$ and a 1000 (or large number) to each value of zero in $y$. To test whether we have enough of a background sample, we can increase the number of zeros until the estimated coefficients ($\hat{\boldsymbol{\beta}}$) no longer change.
 
 \section{References}
 
-Hooten, M. B., Johnson, D. S., McClintock, B. T., \& Morales, J. M. (2017). Animal movement: statistical models for telemetry data. CRC press.
+\indent\indent  Hooten, M. B., Johnson, D. S., McClintock, B. T., \& Morales, J. M. (2017). Animal movement: statistical models for telemetry data. CRC press.\\
 
+Northrup, J. M., Hooten, M. B., Anderson Jr, C. R., \& Wittemyer, G. (2013). Practical guidance on characterizing availability in resource selection functions under a use–availability design. Ecology, 94(7), 1456-1463.
+
+
+
+\section{Habitat Selection with temporally dependent spatial locations}
+
+Modern tracking technology allows us to collect high frequency relocation data on individuals. Therefore, for many species and relocation intervals (time between telemetry fixes/relocations) what is available to the animal is constrained by how the animal moves (e.g., speed and direction). Ignoring this constraint and assuming the data are independent will lead to psedureplication and thus unreliable inference. As such, we need to build this movement constraint into our habitat selection model, thereby connecting the spatial process model with a movement model. We can depict this model by defining the probability density function of the relocations and the availability distribution in terms of relocations from i-1 to i and the time between these ($\Delta_{i}$). For example, we can generally specify it as,
+
+\begin{align*}
+[\boldsymbol{\mu}_{i}|\boldsymbol{\mu}_{i-1} \boldsymbol{\beta}, \boldsymbol{\theta}] \equiv &  \frac{g(\textbf{x}(\boldsymbol{\mu}_{i}, \boldsymbol{\beta}))f(\boldsymbol{\mu}_{i}|\boldsymbol{\mu}_{i-1},\Delta_{i},\boldsymbol{\theta})}{\int g(\textbf{x}(\boldsymbol{\mu}_{i}, \boldsymbol{\beta}))f(\boldsymbol{\mu}_{i}|\boldsymbol{\mu}_{i-1},\Delta_{i},\boldsymbol{\theta})d\boldsymbol{\mu}}.
+\end{align*}
+
+\subsection{How do we fit this model?}
+
+Commonly, this model is not fit directly, but rather we setup the data to create occurrence (1) and available (0) samples for each step of a movement process. This is a movement-based habitat selection function or a step-selection function. 
 
 \end{document}

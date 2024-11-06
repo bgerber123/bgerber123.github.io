@@ -25,6 +25,7 @@ First we load the required libraries and the relocation data (called `deer`)
 
 ```{r}
 library(amt)
+library(terra)
 data("deer")
 deer
 ```
@@ -34,6 +35,7 @@ Next, we have to get the environmental covariates. A forest layer is included in
 
 ```{r}
 sh_forest <- get_sh_forest()
+plot(sh_forest)
 ```
 
 ## Prepare Data for RSF
@@ -108,6 +110,7 @@ As the next step we have to extract the covariates at point. We can do this with
 ```{r}
 rsf1 <- deer |> random_points() |> 
   extract_covariates(sh_forest) 
+table(rsf1$case_)
 ```
 
 
@@ -118,5 +121,49 @@ Now all pieces are there to fit a RSF. We will use `fit_rsf`, which is just a wr
 ```{r}
 rsf1 |> fit_rsf(case_ ~ forest) |> 
   summary()
+
+```
+## Additional (BDG)
+
+
+### Fit the same model with the glm function
+
+```{r glm}
+  rsf2 = glm(case_~forest, data=rsf1,family=binomial(link="logit"))
+  summary(rsf2)
+
+```
+
+### Plor Predicted Relative Selection
+
+```{r pred}
+  rsf2 = glm(case_~forest, data=rsf1,family=binomial(link="logit"))
+  X=model.matrix(~forest,data = rsf1)
+  
+  preds.link = predict(rsf2,newdata=data.frame(forest = values(sh_forest)),
+                       type="link")
+  relative.prob = exp(preds.link)
+  
+  preds.map = sh_forest
+  values(preds.map) = relative.prob
+  plot(preds.map)
+    
+```
+
+
+
+## This model fitting process is sensitive to the number available locations (0's or 'FALSE')
+
+```{r sensitive}
+
+
+rsf.data1 <- random_points(hr, n = 50, presence = deer) |> 
+  extract_covariates(sh_forest) 
+
+head(rsf.data1)
+table(rsf.data1$case_)
+
+rsf.fit1 = glm(case_~forest, data=rsf.data1,family=binomial(link="logit"))
+summary(rsf.fit1)
 
 ```
