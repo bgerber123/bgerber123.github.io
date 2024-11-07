@@ -1,0 +1,83 @@
+---
+title: "Habitat Selection Availability Sensitivity"
+author: "Brian Gerber"
+date: "2024-11-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting the data ready
+
+```{r,packages,include=FALSE}
+  library(amt)
+  library(terra)
+  library(raster)
+  library(MASS)
+  data("deer")
+
+```
+
+```{r,data}
+#Look at deer data and spatial layers to be used as covariates
+forest.cover = readRDS("sp.layer.forest")
+plot(forest.cover,main="Forest Cover")
+points(deer)
+
+shrub.cover = readRDS("sp.layer.shrub")
+plot(shrub.cover,main="Standaradized Shrub Cover")
+```
+
+
+## Assignment
+
+Conduct a sensitivity analysis to investigate how many available samples are needed for the slope coeficients to be estimated with minimal approximation error. Consider a range of sizes for the available sample between 50 and 500,000. Fit the same model (case_ ~ forest + cover) to each of these datasets. Extract the slope coeficients for the variables 'forest' and 'cover'. Creat an x-y line plot with these estimates (y-axis) and the size of the available sample (x-axis). Determine generally when the coefficient estimates stabilize. A common recommendation in the literature is to used a 1:1 ratio between used locations and available samples. If you had only fit the model with this size of available how off would your estimates be from the correct/converged/well approximated estimates when using a large available sample. 
+
+```{r,sim,cache=TRUE}
+
+# Take a really large sample of available locations (the zeros)
+  rsf.dat.large <- random_points(deer, n = 4000000) |> 
+                   extract_covariates(forest.cover) |>
+                   extract_covariates(shrub.cover) 
+
+# Decide on how to subset the available samples
+  availables = c(50,100,500,1000,10000,100000,1000000,2000000,3000000,4000000)
+
+# Find the indices of where the deer locations are (index.1)  and the available samples (index.0)
+  index.0 = which(rsf.dat.large$case_==0)
+  index.1 = which(rsf.dat.large$case_==1)
+  coef.mat=NULL
+
+# Loop through the numbers of available samples and iteratively grab an increase set of zeros. Combine
+# these zeros with the used locations of deer and then fit the model 
+  for(i in 1:length(availables)){
+    rsf.smaller =  rbind(rsf.dat.large[index.1,],rsf.dat.large[index.0[1:availables[i]],])
+    fit = glm(case_~forest+shrub.cover, data=rsf.smaller,family=binomial(link="logit"))
+    coef.mat=rbind(coef.mat,coef(fit)[c(2,3)])
+  }
+
+knitr::kable(cbind(availables,coef.mat))
+```
+
+
+We can see that the first and second decimal place values converge for both coefficients by 100,000 available samples. 
+
+Next, lets specifically compare the converged estimated coefficients to estimates when using a 1:1 ratio of used:available.
+
+```{r, comparison}
+rsf.dat <- random_points(deer, n = nrow(deer)) |> 
+             extract_covariates(forest.cover) |>
+             extract_covariates(shrub.cover) 
+
+fit = glm(case_~forest+shrub.cover, 
+          data=rsf.dat,
+          family=binomial(link="logit"))
+summary(fit)
+
+# Absolute difference b/w converged and non-converged estimates
+(coef.mat[10,] - coef(fit)[2:3])
+```
+
+We can see that if we had used a 1:1 ratio of used to available, we would have underestimated the effect of forest and overestimated the effect of shrub cover.

@@ -31,12 +31,12 @@ The assigned reading is a draft manuscript that I am looking for feedback. Pleas
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c(""))
+install.packages(c("terra","raster","amt","MASS"))
 ```
 
 
 #### [Assigned]{style="color:red;"}
-- <a href="/readings/Wright et al 2020.pdf">paper by Cat Adams, Bijoya Paul, and Lisa Roerk</a>
+- <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a>
 
 
 
