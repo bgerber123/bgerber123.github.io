@@ -66,8 +66,8 @@ knitr::kable(cbind(availables,coef.mat))
 Let's plot these coefficients by the available sample size
 
 ```{r}
-plot(availables,coef.mat[,1],lwd=3,xlab="Available Sample Size",ylab="Coeficient")
-lines(availables,coef.mat[,1],lwd=3,col=2)
+plot(availables,coef.mat[,1],lwd=3,xlab="Available Sample Size",ylab="Coeficient",type="b")
+lines(availables,coef.mat[,2],lwd=3,col=2,type="b")
 ```
 
 
@@ -179,8 +179,8 @@ First, we know the intercept doesn't mean anything. The effect of forest coeffic
   relative.prob.day = exp(preds.link.day)
 
 # Plot relative intensity of seleciton by forest cover during the day and night  
-  plot(newdata$forest,relative.prob.night,type="l",lwd=3,xlab="Forest Cover",ylab="Relative Intensity of Selection",ylim=c(0,12))
-  lines(newdata$forest,relative.prob.day,type="l",lwd=3,col=2)
+  plot(newdata1$forest,relative.prob.night,type="l",lwd=3,xlab="Forest Cover",ylab="Relative Intensity of Selection",ylim=c(0,12))
+  lines(newdata2$forest,relative.prob.day,type="l",lwd=3,col=2)
   abline(h=1,lwd=3,col=3,lty=3)
   legend("topleft",lwd=3,col=c(1,2,3),legend=c("Night","Day"))
   text(0.9,1.2,"Selection")
