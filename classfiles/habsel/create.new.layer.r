@@ -23,10 +23,11 @@ xy <- xyFromCell(S.aggregate, 1:n)
 d <- as.matrix(dist(xy))		
 Sigma <- exp(-d/10000/phi)
 Sigma <- t(chol(Sigma))
-values(S.aggregate) <- scale(Sigma %*% random.values.matrix )
+values(S.aggregate) <- -1*scale(Sigma %*% random.values.matrix )
 shrub.cover = S.aggregate
 
 plot(shrub.cover, main="Shrub Cover")
+
 saveRDS(shrub.cover,file="sp.layer.shrub")
 
 sh_forest <- aggregate(S, fact=30)

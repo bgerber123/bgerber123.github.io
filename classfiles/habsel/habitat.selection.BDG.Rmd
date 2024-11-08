@@ -17,25 +17,26 @@ knitr::opts_chunk$set(echo = TRUE)
   library(raster)
   library(MASS)
   data("deer")
-
+  forest.cover = readRDS("sp.layer.forest")
+  shrub.cover = readRDS("sp.layer.shrub")
 ```
 
 ```{r,data}
 #Look at deer data and spatial layers to be used as covariates
-forest.cover = readRDS("sp.layer.forest")
-plot(forest.cover,main="Forest Cover")
-points(deer)
 
-shrub.cover = readRDS("sp.layer.shrub")
-plot(shrub.cover,main="Standaradized Shrub Cover")
+  plot(forest.cover,main="Forest Cover")
+  points(deer$x_,deer$y_,col=0)
+
+  plot(shrub.cover,main="Standaradized Shrub Cover")
+  points(deer,col="white")
 ```
 
 
-## Assignment
+## Assignment (Part 1)
 
 Conduct a sensitivity analysis to investigate how many available samples are needed for the slope coeficients to be estimated with minimal approximation error. Consider a range of sizes for the available sample between 50 and 500,000. Fit the same model (case_ ~ forest + cover) to each of these datasets. Extract the slope coeficients for the variables 'forest' and 'cover'. Creat an x-y line plot with these estimates (y-axis) and the size of the available sample (x-axis). Determine generally when the coefficient estimates stabilize. A common recommendation in the literature is to used a 1:1 ratio between used locations and available samples. If you had only fit the model with this size of available how off would your estimates be from the correct/converged/well approximated estimates when using a large available sample. 
 
-```{r,sim,cache=TRUE}
+```{r,sim}
 
 # Take a really large sample of available locations (the zeros)
   rsf.dat.large <- random_points(deer, n = 4000000) |> 
@@ -61,6 +62,15 @@ Conduct a sensitivity analysis to investigate how many available samples are nee
 knitr::kable(cbind(availables,coef.mat))
 ```
 
+Let's plot these coefficients by the available sample size
+
+```{r}
+
+plot(availables,coef.mat[])
+
+
+```
+
 
 We can see that the first and second decimal place values converge for both coefficients by 100,000 available samples. 
 
@@ -81,3 +91,39 @@ summary(fit)
 ```
 
 We can see that if we had used a 1:1 ratio of used to available, we would have underestimated the effect of forest and overestimated the effect of shrub cover.
+
+
+## Assignment (Part 2)
+
+
+### Setup the data
+```{r,message=FALSE}
+  library(amt)
+  data("deer")
+  forest.cover = readRDS("sp.layer.forest")
+  time_of_day(deer)
+  head(deer)
+```
+
+### Available Sample
+
+```{r}
+
+hr <- hr_mcp(deer) |> hr_isopleths() |> 
+  sf::st_buffer(dist =5000)
+
+set.seed(5454)
+
+rsf1 <- random_points(hr, n=20000, presence = deer) |> 
+  extract_covariates(forest.cover)  |> 
+table(rsf1$case_)
+
+plot(rsf1)
+
+```
+
+
+### Fit the Model
+
+
+

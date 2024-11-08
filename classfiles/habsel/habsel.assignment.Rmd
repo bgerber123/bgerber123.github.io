@@ -1,0 +1,36 @@
+---
+title: "Habitat Selection Lab"
+author: "Brian Gerber"
+date: "2024-11-07"
+output: html_document
+---
+
+# Context
+
+When we fit a habitat selection model (commonly called a resource selection function) we are often using convenient and general software/code to approximate the true underlying model. Specifically, we commonly use logistic regression to approximate the spatial point process model we are actually interested in fitting. To make sure our approximation of the point process model is done with minimal approximation error, we need to have a very large available sample (i.e., we need many zeros and their associated environmental covaraites) taken from the area/landscape/home range we are considering available to the individual(s).
+
+## Assignment (Part 1)
+
+Conduct a sensitivity analysis to investigate how large the available sample needs to be for the slope coefficient estimates to stabilize. Essentially, you want to increase the available sample size until the estimated coefficients no longer change. How you create your available sample (e.g., random sampling, systematic sampling) will determine when the estimated coefficients stop changing. The other factor is the error tolerance that you will accept. Lets use an error tolerance of 2 decimal places. Meaning, you want to increase the available sample until the first two decimal places of the estimated coefficients no longer change. 
+
+
+You will need to create several/many datasets with different sizes of the available sample (i.e, the number of zeros). Remember, the number of used locations (1's) is the same for each dataset. Fit the same model (case_ ~ forest + cover) to each of these datasets. Extract the slope coefficients for the variables 'forest' and 'shurb.cover'. Create a table of coefficient estimates along with the size of the available sample used (i.e., columns of 1) Size of available sample, 2) coef for forest, and 3) coef for shrub). Looking at the table, decide on whether the coefficient estimates have stabilized. Make sure to use a wide range of sizes of available samples. If you are unsure if they have converged, keep increasing the available sample size.
+
+Secondly, compare the converged coeficient estimates to a model fit using a 1:1 ratio of used locations to available locations. This is a common recommendation in the literature. If you had only fit the model with this size of available locations, how would your estimates compare to the estimates you get when using a very large available sample (converged estimates)? If there is any difference, this is due to approximation error. State how much error there is and whether it is a meaningful amount. 
+
+### Note
+
+How you setup this sensitivity analysis will affect your ability to get estimates to converge. For example, if you take separate random samples, it might take a very large number (maybe more than a million) to get the estimates to converge. This is because there is no consistency between random draws of available sample. This stochasticity adds some additional variation when estimating. Another option would be to create a very large sample of available locations first and then create smaller subsets of these. 
+
+
+## Assignment (Part 2)
+
+Use the deer data provided in the amt package to fit a new habitat selection model that we have not considered yet. I would like you to fit a model where you hypothesize that selection for the proportion of forest changes depending on the time of day. Specifically, during daytime and nighttime. The idea being that risk changes to the deer depending on the time of day because of changes in predator and human activity. Please fit a model where there is an interaction between time of day (see code below how to get this covariate) and percent of forest cover. Please interpret your findings in terms of the estimated coefficients. If you want to go a bit further, make predictions of the relative intensity of selection for relevant covariate combinations. In terms of the available sample, use a very large available sample, but you do not need to conduct a sensitivity analysis. 
+
+```{r,message=FALSE}
+  library(amt)
+  data("deer")
+  forest.cover = readRDS("sp.layer.forest")
+  time_of_day(deer)
+  head(deer)
+```

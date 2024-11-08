@@ -21,6 +21,7 @@ First we load the required libraries and the relocation data (called `deer`)
 ```{r,packages}
   library(amt)
   library(terra)
+  library(raster)
   data("deer")
   deer
 ```
@@ -34,6 +35,7 @@ Next, we have to get the environmental covariates. A forest layer is included in
   forest.cover = readRDS("sp.layer.forest")
   plot(forest.cover,main="Forest Cover")
   points(deer$x_,deer$y_,col=0)
+  
 ```
 
 Load a second layer. Notice that this layer has been standardized to a mean of 0 and variance and standard deviation of one. 
@@ -42,6 +44,7 @@ Load a second layer. Notice that this layer has been standardized to a mean of 0
   shrub.cover = readRDS("sp.layer.shrub")
   plot(shrub.cover,main="Standaradized Shrub Cover")
   points(deer$x_,deer$y_,col=0)
+  
 ```
 
 ## Prepare Data for RSF
@@ -92,14 +95,22 @@ Of course we are not restricted to the `sf::st_buffer` function. All geometric o
 
 ### Extract covariates
 
-As the next step we have to extract the covariates at point. We can do this with `extract_covariates`.
+As the next step we have to extract the covariates at point. We can do this with `extract_covariates`. Buffer MCP home range by 1000 m.
 
 ```{r}
+
+hr <- hr_mcp(deer) |> hr_isopleths() |> 
+  sf::st_buffer(dist =5000)
+
 set.seed(5454)
-rsf1 <- deer |> random_points(n=20000, presence = deer) |> 
+
+rsf1 <- random_points(hr, n=20000, presence = deer) |> 
   extract_covariates(forest.cover)  |> 
   extract_covariates(shrub.cover) 
 table(rsf1$case_)
+
+plot(rsf1)
+
 ```
 
 
@@ -121,7 +132,7 @@ Fit the same model with the glm function directly
   summary(rsf2)
 ```
 
-Let's next interpret the coefficients. For a full understading, please see
+Let's next interpret the coefficients. For a full understanding, please see
 
 Fieberg, J., Signer, J., Smith, B., & Avgar, T. (2021). A ‘How to’guide for interpreting parameters in habitat‐selection analyses. Journal of Animal Ecology, 90(5), 1027-1043.
 
@@ -165,9 +176,10 @@ Avgar T, Lele SR, Keim JL, Boyce MS. Relative Selection Strength: Quantifying ef
 
 ```
 
-This value indicates that there is a 1.16 increase in relative selection at complete forest cover versus no cover. Not a large difference in relative selection! Also, looking at the statistical clarity, there is not clear evidence that `forest` is selected for or against more than available.
+This value indicates that there is a 4.15 increase in relative selection at complete forest cover versus no cover. 
 
-Next, lets conisder shrub cover relative selection and relative selection strength.
+Next, lets consider shrub cover relative selection and relative selection strength.
+
 ```{r pred2}
 # Here we will create a plot of how relative intensity of selection
 # varies by shrub cover at the mean value of forest cover.
@@ -186,21 +198,11 @@ Next, lets conisder shrub cover relative selection and relative selection streng
   
 plot(newdata$shrub.cover,relative.prob,type="l",lwd=3,xlab="Forest Cover",ylab="Relative Intensity of Selection")
 abline(h=1,lwd=2,lty=3,col=2)
-text(2.5, 1.1,"Selection")
-text(2.5, 0.9,"Avoidance")
+text(2.5, 1.2,"Selection")
+text(2.5, 0.8,"Avoidance")
 ```
 
 
-
-```{r}
-# Let's compare the RSS between a location with very low shrub cover (-3) and very high shrub cover (3) at the mean value of forest cover (0).
-
-#See formula in Avgar et al. 2017, section 2.1
-  exp(coef(rsf2)[2] * mean(values(forest.cover)) + coef(rsf2)[3]*(-3 - 3))
-
-```
-
-An area with very low shrub cover is much more likely to be selected than high shrub cover with a RSS of 2.5.
 
 ```{r pred3}
 # Decide on covariate values to predict to. Here we will use all values from both
@@ -220,23 +222,20 @@ coef(rsf2)
 # plug in the predictions
   preds.map = forest.cover
   values(preds.map) = relative.prob
-  plot(preds.map,main="Relative Probability of Selection")
-    
+  plot(preds.map,main="Relative Probability/Intensity of Selection")
+  plot(hr$geometry,add=TRUE,lwd=3)
 ```
 
-Values below 1 indicate avoidance (use less than available) and values greater than 1 indicate selection (use greater than selection). These values are called the relative intenity of selection or relative probability of selection. 
+Values below 1 indicate avoidance (use less than available) and values greater than 1 indicate selection (use greater than selection). These values are called the relative intensity of selection or relative probability of selection. 
 
 ## This model fitting process is sensitive to the size of the available sample
 
 ```{r sensitive}
 # Draw random available samples (0's) in equal proportion to the number of deer locations
 set.seed(5454)
-rsf.data1 <- random_points(deer, n = nrow(deer), presence = deer) |> 
+rsf.data1 <- random_points(hr, n = nrow(deer), presence = deer) |> 
   extract_covariates(forest.cover)|>
   extract_covariates(shrub.cover) 
-
-head(rsf.data1)
-table(rsf.data1$case_)
 
 rsf.fit1 = glm(case_~forest+shrub.cover, data=rsf.data1,family=binomial(link="logit"))
 summary(rsf.fit1)
@@ -247,4 +246,32 @@ Note that these estimated slope coefficients are not the same as when fitting th
 
 
 
+## Our inference is also sensitive to how we define the avilable sample
+
+Remember, we get to decide on what is available to the animal. We need to be very thoughtful how we do this. Above, we fit our model using an available sample extend of the home-range (MCP) buffered by 5000 m. Here are the estimated coeficients:
+
+```{r}
+  coef(rsf2)
+```
+
+
+Now, lets decrease the buffer of the home range and look at the coeficients. 
+
+```{r}
+hr2 <- hr_mcp(deer) |> hr_isopleths() |> 
+  sf::st_buffer(dist =100)
+
+set.seed(5454)
+
+rsf1 <- random_points(hr2, n=20000, presence = deer) |> 
+  extract_covariates(forest.cover)  |> 
+  extract_covariates(shrub.cover) 
+
+plot(rsf1)
+
+rsf.fit3 = glm(case_~forest+shrub.cover, data=rsf1,family=binomial(link="logit"))
+
+coef(rsf.fit3)
+
+```
 
