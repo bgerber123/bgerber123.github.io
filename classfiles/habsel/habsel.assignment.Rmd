@@ -22,15 +22,71 @@ Secondly, compare the converged coeficient estimates to a model fit using a 1:1 
 
 How you setup this sensitivity analysis will affect your ability to get estimates to converge. For example, if you take separate random samples, it might take a very large number (maybe more than a million) to get the estimates to converge. This is because there is no consistency between random draws of available sample. This stochasticity adds some additional variation when estimating. Another option would be to create a very large sample of available locations first and then create smaller subsets of these. 
 
-
 ## Assignment (Part 2)
 
-Use the deer data provided in the amt package to fit a new habitat selection model that we have not considered yet. I would like you to fit a model where you hypothesize that selection for the proportion of forest changes depending on the time of day. Specifically, during daytime and nighttime. The idea being that risk changes to the deer depending on the time of day because of changes in predator and human activity. Please fit a model where there is an interaction between time of day (see code below how to get this covariate) and percent of forest cover. Please interpret your findings in terms of the estimated coefficients. If you want to go a bit further, make predictions of the relative intensity of selection for relevant covariate combinations. In terms of the available sample, use a very large available sample, but you do not need to conduct a sensitivity analysis. 
+Use the deer data provided in the amt package to fit a new habitat selection model that we have not considered yet. I would like you to fit a model where you hypothesize that selection for the proportion of forest changes depending on the time of day. Specifically, during daytime and nighttime. The idea being that risk changes to the deer depending on the time of day because of changes in predator and human activity. Please fit a model where there is an interaction between time of day (see code below how to get this covariate) and percent of forest cover. Please interpret your findings in terms of the estimated coefficients. If you want to go a bit further, make predictions of the relative intensity of selection for relevant covariate combinations. In terms of the available sample, use a very large available sample, but you do not need to conduct a sensitivity analysis.
 
-```{r,message=FALSE}
+Since time of day is not a spatial variable, it is a bit different to include as a covariate. We have the time of day (day, night) for each used location, but we need to combined two sets of available samples: one with our spatial variables that are defined during the day, and the second with the same spatial variables but that are defined at night.
+
+```{r,packages,include=FALSE}
   library(amt)
+  library(terra)
+  library(raster)
+  library(MASS)
   data("deer")
   forest.cover = readRDS("sp.layer.forest")
-  time_of_day(deer)
+```
+
+
+```{r,message=FALSE}
+ 
+### Setup environment
+# Include time of day variable
+  deer = time_of_day(deer)
   head(deer)
 ```
+
+### Setup available sample
+
+```{r}
+# Create MCP home rnage with 5000 m bufer
+hr <- hr_mcp(deer) |> hr_isopleths() |> 
+  sf::st_buffer(dist =5000)
+
+
+# Draw random available samples
+  set.seed(5454)
+  rsf1 <- random_points(hr, n=20000, presence = deer) |> 
+    extract_covariates(forest.cover)  
+  table(rsf1$case_)
+
+plot(rsf1)
+
+```
+
+### Create data set with time of day
+
+```{r}
+# Find where the used locations are and the available locations
+  index.1=which(rsf1$case_==1)
+  index.0=which(rsf1$case_==0)
+
+# Create a new column for 'time of day', tod
+# Put temporary values
+  rsf1$tod="temp"
+
+#For the used locations, put in the observed time of day
+  rsf1$tod[index.1] = as.character(deer$tod_)
+  
+#For the available samples make these all 'day'  
+  rsf1$tod[index.0] = "day"
+
+#Now, we need to replicate the available sample but for 'night'
+  temp = rsf1[index.0,]
+  temp$tod="night"
+
+#Combine the used locations, available sample with 'day', and the available sample with 'night'  
+  rsf.combined = rbind(rsf1,temp)
+```
+
+The object `rsf.combined` can not be used to fit the model with `forest` and `tod`.

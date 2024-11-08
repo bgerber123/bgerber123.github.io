@@ -92,38 +92,73 @@ summary(fit)
 
 We can see that if we had used a 1:1 ratio of used to available, we would have underestimated the effect of forest and overestimated the effect of shrub cover.
 
-
 ## Assignment (Part 2)
 
-
-### Setup the data
 ```{r,message=FALSE}
-  library(amt)
-  data("deer")
-  forest.cover = readRDS("sp.layer.forest")
-  time_of_day(deer)
+ 
+### Setup environment
+# Include time of day variable
+  deer = time_of_day(deer)
   head(deer)
 ```
 
-### Available Sample
+### Setup available sample
 
 ```{r}
-
+# Create MCP home rnage with 5000 m bufer
 hr <- hr_mcp(deer) |> hr_isopleths() |> 
   sf::st_buffer(dist =5000)
 
-set.seed(5454)
 
-rsf1 <- random_points(hr, n=20000, presence = deer) |> 
-  extract_covariates(forest.cover)  |> 
-table(rsf1$case_)
+# Draw random available samples
+  set.seed(5454)
+  rsf1 <- random_points(hr, n=20000, presence = deer) |> 
+    extract_covariates(forest.cover)  
+  table(rsf1$case_)
 
 plot(rsf1)
 
 ```
+### Create data set with time of day
+
+```{r}
+# find where the used locations are and the available locations
+  index.1=which(rsf1$case_==1)
+  index.0=which(rsf1$case_==0)
+
+# Create a new column for 'time of day', tod
+# Put temporary values
+  rsf1$tod="temp"
+
+#For the used locations, put in the observed time of day
+  rsf1$tod[index.1] = as.character(deer$tod_)
+  
+#For the available samples make these all 'day'  
+  rsf1$tod[index.0] = "day"
+
+#Now, we need to replicate the available sample but for 'night'
+  temp = rsf1[index.0,]
+  temp$tod="night"
+
+#Combine the used locations, available sample with 'day', and the available sample with 'night'  
+  rsf.combined = rbind(rsf1,temp)
+```
 
 
-### Fit the Model
+
+### Fit Model
+
+```{r glm}
+rsf2 = glm(case_~forest*tod, 
+           data=rsf.combined,
+           family=binomial(link="logit"))
+summary(rsf2)
+```
+
+First, we know the intercept doesn't mean anything. The effect of forest coeficient is positive and indicates that selection increases with forest cover during the day time (i.e., not night). The `todnight` covariate indicates selection at a forest cover of zero during the night. Since this coeficient is negative, we know that deer are avoding these areas open areas during the day. Both those coeficients are statistically clear. The interaction is not statistically clear, and thus there is no difference of selection at night for increasing foret cover.
 
 
+### Predictions
+
+newdata = data.frame()
 

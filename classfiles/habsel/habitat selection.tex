@@ -70,10 +70,13 @@ The background sample (the zeros of length M) is what is providing the approxima
 
 We need to be careful when we make predictions of relative intensity of selection after we fit the logistic regression model. This is because we are using code to approximate a different model, i.e., we are not really fitting a logistic regression model. We are fitting a weighted distribution formulation of a point process model with an assumed exponential relationship for the selection function. Therefore, we do not want to blindly use functions in R that would have us use the logit-inverse link function, as this is not a logistic regression. Specifically, to predict values of relative intensity of habitat selection, we want to use the exponential function. We also do not want to use the estimated intercept when making predictions. This sounds rather odd, but the intercept does not have much of a meaning here in this model. It is primarily a function of the ratio of used to available locations. The more available locations then the smaller the intercept will be. This is not a useful parameter. Instead to make predictions, we want to combine the linear terms (without the intercept) and multiply them with the covariates of interest, sum these, and then exponentiate. Mathematically, this would be,
 
+\Large
+
 \begin{align*}
 e^{\textbf{x}'(\boldsymbol{\mu}_{i})\boldsymbol{\beta}}
 \end{align*}
 
+\normalsize
 \subsection{Independent relocations of one or more individual}
 
 
