@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
   library(terra)
   library(raster)
   library(MASS)
+  library(sp)
   data("deer")
   forest.cover = readRDS("sp.layer.forest")
   shrub.cover = readRDS("sp.layer.shrub")
@@ -65,10 +66,8 @@ knitr::kable(cbind(availables,coef.mat))
 Let's plot these coefficients by the available sample size
 
 ```{r}
-
-plot(availables,coef.mat[])
-
-
+plot(availables,coef.mat[,1],lwd=3,xlab="Available Sample Size",ylab="Coeficient")
+lines(availables,coef.mat[,1],lwd=3,col=2)
 ```
 
 
@@ -155,10 +154,37 @@ rsf2 = glm(case_~forest*tod,
 summary(rsf2)
 ```
 
-First, we know the intercept doesn't mean anything. The effect of forest coeficient is positive and indicates that selection increases with forest cover during the day time (i.e., not night). The `todnight` covariate indicates selection at a forest cover of zero during the night. Since this coeficient is negative, we know that deer are avoding these areas open areas during the day. Both those coeficients are statistically clear. The interaction is not statistically clear, and thus there is no difference of selection at night for increasing foret cover.
+First, we know the intercept doesn't mean anything. The effect of forest coefficient is positive and indicates that selection increases with forest cover during the day time (i.e., not night). The `todnight` covariate indicates selection at a forest cover of zero during the night. Since this coefficient is negative, we know that deer are avoiding these open areas during the night. Both those coefficients are statistically clear. The interaction is not statistically clear, and thus there is no statistically clear difference of selection at night versus during the day for increasing forest cover.
 
 
 ### Predictions
 
-newdata = data.frame()
+```{r pred}
+
+# Create dataframes of covariate combinations
+  newdata1 = data.frame(forest = seq(0,1,by=0.1), tod="night")
+  newdata2 = data.frame(forest = seq(0,1,by=0.1), tod="day")
+
+# Make sure the intercept is zero and not included in the predictions  
+  rsf2$coefficients[1] = 0 
+  coef(rsf2)
+
+# Combine linear terms of covariates and coeficients  
+  preds.link.night = predict(rsf2,newdata=newdata1, type="link")
+  preds.link.day = predict(rsf2,newdata=newdata2, type="link")
+
+  
+# Exponentiate linear terms  
+  relative.prob.night = exp(preds.link.night)
+  relative.prob.day = exp(preds.link.day)
+
+# Plot relative intensity of seleciton by forest cover during the day and night  
+  plot(newdata$forest,relative.prob.night,type="l",lwd=3,xlab="Forest Cover",ylab="Relative Intensity of Selection",ylim=c(0,12))
+  lines(newdata$forest,relative.prob.day,type="l",lwd=3,col=2)
+  abline(h=1,lwd=3,col=3,lty=3)
+  legend("topleft",lwd=3,col=c(1,2,3),legend=c("Night","Day"))
+  text(0.9,1.2,"Selection")
+  text(0.9,0.9,"Avoidance")
+
+```
 

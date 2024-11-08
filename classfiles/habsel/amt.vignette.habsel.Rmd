@@ -22,6 +22,7 @@ First we load the required libraries and the relocation data (called `deer`)
   library(amt)
   library(terra)
   library(raster)
+  library(sp)
   data("deer")
   deer
 ```

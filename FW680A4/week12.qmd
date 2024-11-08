@@ -31,7 +31,7 @@ The assigned reading is a draft manuscript that I am looking for feedback. Pleas
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("terra","raster","amt","MASS"))
+install.packages(c("terra","raster","amt","MASS","sp"))
 ```
 
 
