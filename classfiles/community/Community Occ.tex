@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[english,activeacute]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{Community Occupancy Model}
+\author{Brian D. Gerber}
+
+\begin{document}
+
+\maketitle
+\section{Species Richness and Joint Modeling while Accounting for Detection Probability}
+
+
+The core idea of a community occupancy model is to jointly model detection data ($Y$) for species $s$ (total $n$ species observed) at site $i$ with replicate surveys $J$ to estimate the total species richness and share information across species in terms of effects on occurence of each species as,
+
+\begin{align*}
+Y_{s,i} &\sim \text{Bern}(p_{\mu_{s,i}}, J)\\
+p_{\mu_{s,i}} &= p_{i}\times Z_{s,i}\\
+Z_{s,i} &\sim \text{Bern}(\psi_{\mu_{i}})\\
+\psi_{\mu_{i}} &= \psi_{i}\times w_{i}\\
+ w_{i} &\sim \text{Bern}(\omega).
+\end{align*}
+
+
+The parameter $\omega$ is an inclusion probability of species that have not been detected. This parameter governs the latent parameter $w_{i}$ to decide on whether a species should be included as part of the community or nor. Species that are detected are included and species that have not been detected across any sites are included with probability $\omega$. For this to work, the detection data $Y$ needs to include the sampled detection data of observed species along with all zero detections for $n_{0}$ number of species that have not been detected but could have been part of the community. \\
+
+The occupancy and detection parameters for each species ($\psi_{s}$, $p_{s}$, respectively) can still be modeled with a logit-linear model, as is done with single species occpancy models. 
+
+The total species unobserved is summarized as,
+
+\begin{align*}
+\sum w_{n_{0} : (n+n_{0})}.
+\end{align*}
+
+
+\end{document}

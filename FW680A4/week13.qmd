@@ -12,11 +12,17 @@ title: ""
 
 ##### Hierarchical Community Occupancy Model
 
-[Multiple Species-Site Occupancy Model](https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html)
+-   [Statistcal Model](/classfiles/community/Community Occ.pdf)
 
-Applied Hierarchical Modeling in Ecology, Chapter 11
+-   [Bayesian Community Occupancy Model via Stan](https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html)
 
-Hierarchical Modeling and Inference in Ecology, Chapter 12 
+-   For details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.
+
+##### Community Ecology Modeling
+
+-   Species Richness vs Species Diversity?
+
+-   The [vegan R package](https://github.com/vegandevs/vegan?tab=readme-ov-file) has a number of common [community metrics](https://vegandevs.r-universe.dev/vegan/doc/diversity-vegan.pdf).
 
 
 ### Day 2 (lab)
