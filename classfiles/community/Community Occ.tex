@@ -17,7 +17,7 @@
 The core idea of a community occupancy model is to jointly model detection data ($Y$) for species $s$ (total $n$ species observed) at site $i$ with replicate surveys $J$ to estimate the total species richness and share information across species in terms of effects on occurence of each species as,
 
 \begin{align*}
-Y_{s,i} &\sim \text{Bern}(p_{\mu_{s,i}}, J)\\
+Y_{s,i} &\sim \text{Binomial}(p_{\mu_{s,i}}, J)\\
 p_{\mu_{s,i}} &= p_{i}\times Z_{s,i}\\
 Z_{s,i} &\sim \text{Bern}(\psi_{\mu_{i}})\\
 \psi_{\mu_{i}} &= \psi_{i}\times w_{i}\\
