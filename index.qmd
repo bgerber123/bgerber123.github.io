@@ -10,9 +10,9 @@ about:
     - icon: r-square-fill
       text: RG
       href: https://www.researchgate.net/profile/Brian-Gerber-4
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/science_action
+    # - icon: twitter
+    #   text: Twitter
+    #   href: https://twitter.com/science_action
     - icon: github
       text: Github
       href: https://github.com/bgerber123
