@@ -104,21 +104,4 @@ Title:  [A framework to define and estimate animal diel activity](https://www.dr
 
 -   [New OA Publication:]{style="color:red;"} [A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.14035) from the [Global Animal Diel Activity Project](https://diel-project.github.io/). [Download](/publications/Gerber et al 2024 JAE.pdf). We propose a conceptual and modeling framework to connect data and hypotheses to make inference about animal diel phenotypes (e.g., diurnal, nocturnal). The Diel.Niche R package can be found on [Github](https://github.com/diel-project/Diel-Niche-Modeling) and a shiny version can be found [here](https://shiny.celsrs.uri.edu/bgerber/DielNiche/). We also wrote a [blog](https://animalecologyinfocus.com/2024/01/18/defining-and-making-inference-on-the-diel-niche/) about our paper that is intended for a more general audience.
 
-
-#### December, 2023
-
--   [New Publication:]{style="color:red;"} [Forest carnivores living on the edge with invasive predators](https://zslpublications.onlinelibrary.wiley.com/doi/epdf/10.1111/acv.12926) from the ever persistent Erin Wampole. [Download](/publications/Wampole%20et%20al.%202023.pdf). We found free-roaming dogs and cats interact with their surrounding environment (i.e., forest edge) to shape native carnivore species response differently than within interior forest.
-
-#### November, 2023
-
--   Brian heads to the annual Wildlife Society conference to talk about a recent paper in [Animal Conservation](https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1111/acv.12877) about the robustness of optimal decision making in the context of known-unknown meta-population dynamics.
-
--   [New OA Publication:]{style="color:red;"} [Diel activity structures the occurrence of a mammal community in a human-dominated landscape](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.10684) led by Amy Mayer from the University of Rhode Island. We found that mammals shift their use of spatial locations and the time of day they are active at these locations to adapt to landscapes with anthropogenic activity. Data and code can be found on [Zenodo](https://zenodo.org/records/8240192). The methods used to implement this modeling framework are outlined by [Rivera et al. 2022](https://doi.org/10.1086/720714) with code on [Github](https://github.com/bgerber123/multi.state.diel.occupancy.model).
-
-#### September, 2023
-
--   [New Publication:]{style="color:red;"} [Differential impacts of spruce beetle outbreaks on snowshoe hares and red squirrels in the southern Rocky Mountains](https://www.sciencedirect.com/science/article/pii/S037811272300381X) led by Jake Ivan from the Colorado Parks and Wilddife. [Download](/publications/Ivan%20et%20al.%202023.pdf).
-
-#### August, 2023
-
--   Brian starts with the [Colorado Cooperative Fish and Wildlife Research Unit](https://www1.usgs.gov/coopunits/staff/865147) with USGS at Colorado State University. Prior, I was an associate professor at the University of Rhode Island in the Department of Natural Resources Science.
+#### [Past News](news.qmd)
