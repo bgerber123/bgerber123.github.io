@@ -1,0 +1,24 @@
+---
+title: "A ‘how-to’ guide for estimating animal diel activity usinghierarchical models"
+type: "article"
+author: "Fabiola Iannarilli, Brian D. Gerber, John Erb 4, and John R. Fiebegr"
+year: "2024"
+publication: "Journal of Animal Ecology"
+doi: "https://doi.org/10.1111/1365-2656.14213"
+download: "../publications/Iannarilli et al. 2024.pdf"
+toc: false
+categories:
+  - mammal
+  - diel ecology
+  - camera trapping
+  - Bayesian
+  - journal article
+---
+
+## Citation 
+
+> Iannarilli, F., Gerber, B. D., Erb, J., & Fieberg, J. R. (2024). A ‘how-to’ guide for estimating animal diel activity using hierarchical models. Journal of Animal Ecology, 00, 1–13. https://doi.org/10.1111/1365-2656.14213.
+
+## Abstract
+
+Animal diel activity patterns can aid understanding of (a) how species behaviourally adapt to anthropogenic and natural disturbances, (b) mechanisms of species co-existence through temporal partitioning, and (c) community or ecosystem effects of diel activity shifts. Activity patterns often vary spatially, a feature ignored by the kernel density estimators (KDEs) currently used for estimating diel activity. Ignoring this source of heterogeneity may lead to biased estimates of uncertainty and misleading conclusions regarding the drivers of diel activity. Thus, there is a need for more flexible statistical approaches for estimating activity patterns and testing hypotheses regarding their biotic and abiotic drivers. We illustrate how trigonometric terms and cyclic cubic splines combined with hierarchical models can provide a valuable alternative to KDEs. Like KDEs, these models accommodate circular data, but they can also account for site-to-site and other sources of variability, correlation amongst repeated measures, and variable sampling effort. They can also more readily quantify and test hypotheses related to the effects of covariates on activity patterns. Through empirical case studies, we illustrate how hierarchical models can quantify changes in activity levels due to seasonality and in response to biotic and abiotic factors (e.g. anthropogenic stressors and co-occurrence). We also describe frequentist and Bayesian approaches for quantifying site-specific (conditional) and population-averaged (marginal) activity patterns. We provide guidelines and tutorials with detailed step-by-step instructions for fitting and interpreting hierarchical models applied to time-stamped data, such as those recorded by camera traps and audio recorders. We conclude that this approach offers a viable, flexible, and effective alternative to KDEs when modelling animal activity patterns.
