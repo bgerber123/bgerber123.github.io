@@ -89,4 +89,4 @@ plot(rsf1)
   rsf.combined = rbind(rsf1,temp)
 ```
 
-The object `rsf.combined` can not be used to fit the model with `forest` and `tod`.
+The object `rsf.combined` can now be used to fit the model with `forest` and `tod`.

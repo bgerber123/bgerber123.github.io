@@ -1,7 +1,7 @@
 ---
 title: "Habitat Selection Availability Sensitivity"
 author: "Brian Gerber"
-date: "2024-11-06"
+date: "2024-11-25"
 output: html_document
 ---
 
@@ -37,10 +37,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Conduct a sensitivity analysis to investigate how many available samples are needed for the slope coeficients to be estimated with minimal approximation error. Consider a range of sizes for the available sample between 50 and 500,000. Fit the same model (case_ ~ forest + cover) to each of these datasets. Extract the slope coeficients for the variables 'forest' and 'cover'. Creat an x-y line plot with these estimates (y-axis) and the size of the available sample (x-axis). Determine generally when the coefficient estimates stabilize. A common recommendation in the literature is to used a 1:1 ratio between used locations and available samples. If you had only fit the model with this size of available how off would your estimates be from the correct/converged/well approximated estimates when using a large available sample. 
 
-```{r,sim}
+```{r,sim,cache=TRUE}
+
+# Define the home range with MCP and buffer by 5000m
+  hr <- hr_mcp(deer) |> hr_isopleths() |> sf::st_buffer(dist = 5000)
 
 # Take a really large sample of available locations (the zeros)
-  rsf.dat.large <- random_points(deer, n = 4000000) |> 
+  rsf.dat.large <- random_points(hr, n = 4000000, presence = deer) |> 
                    extract_covariates(forest.cover) |>
                    extract_covariates(shrub.cover) 
 
@@ -58,25 +61,28 @@ Conduct a sensitivity analysis to investigate how many available samples are nee
     rsf.smaller =  rbind(rsf.dat.large[index.1,],rsf.dat.large[index.0[1:availables[i]],])
     fit = glm(case_~forest+shrub.cover, data=rsf.smaller,family=binomial(link="logit"))
     coef.mat=rbind(coef.mat,coef(fit)[c(2,3)])
+    remove(fit)
   }
 
-knitr::kable(cbind(availables,coef.mat))
+  remove(rsf.dat.large)
+  
+  knitr::kable(cbind(availables,coef.mat))
 ```
 
 Let's plot these coefficients by the available sample size
 
 ```{r}
-plot(availables,coef.mat[,1],lwd=3,xlab="Available Sample Size",ylab="Coeficient",type="b")
+plot(availables,coef.mat[,1],lwd=3,xlab="Available Sample Size",ylab="Coeficient",type="b",ylim=c(-1,4))
 lines(availables,coef.mat[,2],lwd=3,col=2,type="b")
 ```
 
 
-We can see that the first and second decimal place values converge for both coefficients by 100,000 available samples. 
+We can see that the first and second decimal place values converge for both coefficients by 2,000,000 available samples. 
 
 Next, lets specifically compare the converged estimated coefficients to estimates when using a 1:1 ratio of used:available.
 
 ```{r, comparison}
-rsf.dat <- random_points(deer, n = nrow(deer)) |> 
+rsf.dat <- random_points(hr, n = nrow(deer), presence = deer) |> 
              extract_covariates(forest.cover) |>
              extract_covariates(shrub.cover) 
 
@@ -183,8 +189,8 @@ First, we know the intercept doesn't mean anything. The effect of forest coeffic
   lines(newdata2$forest,relative.prob.day,type="l",lwd=3,col=2)
   abline(h=1,lwd=3,col=3,lty=3)
   legend("topleft",lwd=3,col=c(1,2,3),legend=c("Night","Day"))
-  text(0.9,1.2,"Selection")
-  text(0.9,0.9,"Avoidance")
+  text(0.9,1.4,"Selection")
+  text(0.9,0.7,"Avoidance")
 
 ```
 
