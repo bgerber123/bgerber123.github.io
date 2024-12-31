@@ -25,6 +25,17 @@ about:
 :::
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P8D1WYLLZX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P8D1WYLLZX');
+</script>
+
+
 # Who and What
 
 I am a research scientist with the United States Geological Survey [(USGS)](https://www.usgs.gov/), Assistant Unit Leader at the [Colorado Cooperative Fish and Wildlife Research Unit](https://www1.usgs.gov/coopunits/unit/Colorado), and an Associate Professor in the [Department of Fish, Wildlife, and Conservation Biology](https://warnercnr.colostate.edu/fwcb/) and a faculty member of the [Graduate Degree Program in Ecology](https://ecology.colostate.edu/) at [Colorado State University](https://www.colostate.edu/).
