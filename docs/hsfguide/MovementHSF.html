@@ -9,9 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Brian D. Gerber" />
+<meta name="author" content="Brian D. Gerber, Casey Setash, Jacob S. Ivan. and Joseph M. Northrup" />
 
-<meta name="date" content="2024-12-28" />
 
 <title>Movement-based Habitat Selection   Guidance</title>
 
@@ -1569,8 +1568,9 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Movement-based Habitat Selection <br>
 Guidance</h1>
-<h4 class="author">Brian D. Gerber</h4>
-<h4 class="date">2024-12-28</h4>
+<h4 class="author">Brian D. Gerber, Casey Setash, Jacob S. Ivan. and
+Joseph M. Northrup</h4>
+<h4 class="date">2024-1-3</h4>
 
 </div>
 
@@ -1586,13 +1586,6 @@ pre {
 font-size: 16px
 }
 </style>
-<!-- ```{css, echo=FALSE} -->
-<!-- .watch-out { -->
-<!--   background-color: lightblue; -->
-<!--   border: 3px solid gray; -->
-<!--   font-weight: bold; -->
-<!-- } -->
-<!-- ``` -->
 <div id="introduction" class="section level2" number="1">
 <h2><span class="header-section-number">1</span> Introduction</h2>
 <p>This vignette is associated with the manuscript titled, ‘A plain
@@ -1630,19 +1623,19 @@ an object containing spatial covariates.</p>
   library(grateful)
 
 # Source simulation function
-  source(&quot;sim.ind.movement.hsf.r&quot;)
+  source(&quot;./functions/sim.ind.movement.hsf.r&quot;)
 
 # Source bootstrapping function
-  source(&quot;mean_ci_boot.r&quot;)
+  source(&quot;./functions/mean_ci_boot.r&quot;)
 
 # Load spatial covariates stored in a save R object
-  load(&quot;Covs&quot;)</code></pre>
+  load(&quot;./data/Covs&quot;)</code></pre>
 </div>
 <div id="simulate-data" class="section level3" number="2.2">
 <h3><span class="header-section-number">2.2</span> Simulate data</h3>
 <p>We will consider a habitat selection analysis of individuals along a
 movement track within a landscape (e.g., fourth-order of selection).
-Individual’s effects are assumed to come from a distribution of effects
+Individuals’ effects are assumed to come from a distribution of effects
 that can be characterized by a mean and standard deviation (i.e., random
 effect).</p>
 <pre class="r fold-hide"><code># Number of Sampled individuals (e.g., tracked via GPS telemetry)
@@ -1776,7 +1769,7 @@ the file with the same name.</p>
                                )</code></pre>
 <p>Let’s look at one individual’s data. The <code>sims</code> object has
 two elements, one for x-y used locations )(<code>locs</code>) and one
-for the comiled data we will use to fit models (<code>indiv</code>).
+for the compiled data we will use to fit models (<code>indiv</code>).
 Within each of these lists are lists for each individual, one to
 <code>n.indiv</code>).</p>
 <pre class="r"><code>  names(sims)</code></pre>
@@ -1813,11 +1806,10 @@ corresponding spatial variables, which we have called
 <code>dist.dev</code>, <code>forest</code>, and <code>shrub</code>. Each
 covariate has been standardized to have a mean of 0 and standard
 deviation of 1 (also called Normalizing). Note that we have a large
-available available sample matched with each used location. This is
-correct. We need a large available sample (the 0’s) for each used
-location to approximate the true underlying spatio-temporal habitat
-selection model (specified via a weighted distribution; see Equation 1
-of <a href="https://doi.org/10.1111/2041-210X.14248">Michelot et
+available sample matched with each used location. This is correct. We
+need a large available sample (the 0’s) for each used location to
+approximate the true underlying spatio-temporal habitat selection model
+(specified via a weighted distribution; see Equation 1 of <a href="https://doi.org/10.1111/2041-210X.14248">Michelot et
 al. 2024</a>).</p>
 <p>Let’s look at one individual’s tracks on top of the true HSF.</p>
 <pre class="r fold-hide"><code>#Plot the true HSF with locations for individual k
@@ -1950,24 +1942,25 @@ includes the most important variables for the species and for your
 question that you want to consider so that estimated effects and
 measures of uncertainty are reliable (<a href="https://doi.org/10.32942/X2Z01P">Bolker 2023</a>, <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.3336">Tredennick
 et al. 2021</a>).</p>
-<p>The data used to fit a movement-based HSF model is often individual’s
-location is sampled at a high-fix rate, relative to the animal’s speed.
-We curate our habitat selection data based on the movement process
-(e.g., step lengths and turning angles). In the above, we have simulated
-data with spatial locations at a standardized rate of movement and unit
-of time between movements. It is common for real-world telemetry data to
+<p>The individual’s location data used to fit a movement-based HSF model
+is often sampled at a high-fix rate, relative to the animal’s speed. We
+curate our habitat selection data based on the movement process (e.g.,
+step lengths and turning angles). In the above, we have simulated data
+with spatial locations at a standardized rate of movement and unit of
+time between movements. It is common for real-world telemetry data to
 have inconsistent times between consecutive spatial locations. It is
 important to standardize this time difference, otherwise the movement
 process parameters won’t be meaningful. For example, a time difference
 of 30 minutes and 60 minutes are likely to produce different step
-lengths and thus summarizing the what is available on each used location
+lengths and thus summarizing what is available on each used location
 will be compromised.</p>
 <p>One way to standardize the time differences is by designing the data
 setup such that relocations are specified into tracks based on a
 threshold tolerance of allowable time between consecutive spatial
-locations (e.g., done in the R package amt; <a href="https://doi.org/10.1002/ece3.4823">Signer et al. 2019</a>).
-Another way is to fit a continuous time movement model to then predict
-locations at a standarized interval (e.g., <a href="https://doi.org/10.1111/gcb.13037">Northrup et al. 2018</a> and <a href="https://doi.org/10.1890/07-1032.1">Johnson et al. 2008</a>)</p>
+locations (e.g., done in the R package amt; <a href="https://doi.org/10.1002/ece3.4823">Signer et al. 2019</a>). In
+other words, resampling the GPS locations at regular intervals. Another
+way is to fit a continuous time movement model to then predict locations
+at a standarized interval (e.g., <a href="https://doi.org/10.1111/gcb.13037">Northrup et al. 2018</a> and <a href="https://doi.org/10.1890/07-1032.1">Johnson et al. 2008</a>)</p>
 </div>
 <div id="what-are-habitat-selection-functions-used-for" class="section level3" number="3.7">
 <h3><span class="header-section-number">3.7</span> What are
@@ -2114,7 +2107,7 @@ We can see what the function is doing:</p>
 ##     }
 ##     m
 ## }
-## &lt;bytecode: 0x000001d6ad0a9d90&gt;
+## &lt;bytecode: 0x0000016eab540cf0&gt;
 ## &lt;environment: namespace:amt&gt;</code></pre>
 <p>Now lets use these functions to estimate the same coefficients as we
 did with <code>clogit</code>:</p>
@@ -2141,9 +2134,9 @@ did with <code>clogit</code>:</p>
 ## -0.7831639 -0.4274160  0.8417028</code></pre>
 <p>We can see the estimated coefficients are all the same.</p>
 </div>
-<div id="poisson-model-equivalnce-to-the-conditional-logistic-model" class="section level5" number="3.7.1.2">
+<div id="poisson-model-equivalence-to-the-conditional-logistic-model" class="section level5" number="3.7.1.2">
 <h5><span class="header-section-number">3.7.1.2</span> <strong>Poisson
-model equivalnce to the conditional logistic model</strong></h5>
+model equivalence to the conditional logistic model</strong></h5>
 <p><a href="https://doi.org/10.1111/1365-2656.13087">Muff et
 al. 2019</a> demonstrated the equivalence between the conditional
 logistic regression model and Poisson regression model with
@@ -2159,7 +2152,7 @@ large value.</p>
     model1.tmb = glmmTMB(status ~ dist.dev + forest + 
                                   shrub + strata(strata), 
                          data = indiv.data1,
-                         family=poisson
+                         family = poisson
                          )
 
 # Or using a random effect with fixed variance
@@ -2385,7 +2378,7 @@ SSF?</h3>
 simultaneously trying to account for two important assumptions. First,
 we are limiting what is available to the animal at each used location by
 defining the availability as around this area and informed by the
-movement parameters of step-length (how far is the animal likely to do)
+movement parameters of step-length (how far is the animal likely to go)
 and step-length (what direction is the animal likely to go). Second, we
 are defining our data setup to deal with the fine-scale sequential
 dependency of consecutive relocations and minimize issues of
@@ -2701,8 +2694,8 @@ plotCI(c(1,1,1),y=pool.effect$estimate[2:4],
 left are each individual’s estimates (colored the same). By ignoring
 individual variation, we are a much too confident in our estimates of
 uncertainty and are ignoring a lot of clear variation by individual. The
-pooled estimates certainty is do to pseudoreplication - the treating a
-sub-nuit (each location) as are main unit of replication. Our true unit
+pooled estimate’s certainty is do to pseudoreplication - the treating a
+sub-unit (each location) as are main unit of replication. Our true unit
 of replication is the individual.</p>
 <p>Since our sample sizes for each individual are equal, we see that the
 pooled estimates generally relate to the average of each estimate across
@@ -2715,8 +2708,7 @@ disproportionately influence the pooled estimates.</p>
 can be found at <a href="https://figshare.com/articles/dataset/Datasets_and_Code_zip/11910831">figshare</a>.</p>
 <p>You can also find an implementation of these methods to calculate the
 number of used locations to determine statistical clarity of a
-hypothesized spatial effect in the <code>TraditionalHSF.Rmd</code>
-file.</p>
+hypothesized spatial effect in the [Traditional HSF example] (<a href="https://bgerber123.github.io/hsfguide/TraditionalHSF.html#311_Individuals" class="uri">https://bgerber123.github.io/hsfguide/TraditionalHSF.html#311_Individuals</a>)</p>
 </div>
 </div>
 <div id="population-inference" class="section level3" number="3.12">
@@ -2906,7 +2898,7 @@ and slopes model</h4>
   options(warn=0)</code></pre>
 <p>Let’s look at the results. Here, we have the population-level
 (across) individual-level means. So, generally, we see that at this
-level the estimated coefcieents are negative, near zero, and positive
+level the estimated coefficients are negative, near zero, and positive
 for <code>dist.dev</code>, <code>forest</code>, and <code>shrub</code>,
 respectively.</p>
 <pre class="r"><code>  fixef(re_int_slopes)</code></pre>
@@ -3027,7 +3019,7 @@ highest standard deviation of 1`.</p>
 forest is not statistically clearly different than zero. Thus, at the
 population level, percent forest is being selected in proportion to what
 is available to each individual. Let’s dive into this a bit more. Let’s
-plot the individual estimated along with the population-level
+plot the individual estimates along with the population-level
 estimate.</p>
 <pre class="r"><code>  indiv.coef.popModel = broom.mixed::tidy(re_int_slopes, effects = &quot;ran_vals&quot;, conf.int = TRUE)
   index=which(indiv.coef.popModel$term==&quot;forest&quot;)
