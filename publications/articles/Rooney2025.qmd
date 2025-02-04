@@ -1,0 +1,40 @@
+---
+title: "SNAPSHOT USA 2019–2023: The First Five Years of Data From a Coordinated Camera Trap Survey of the United States"
+type: "article"
+author: "Rooney, B., Kays, R., Cove, M.V., Jensen, A., Goldstein, B.R., Pate, C., Castiblanco, P et al."
+year: "2025"
+publication: "Global Ecology and Biogeography"
+doi: "https://doi.org/10.1111/geb.13941"
+download: "../publications/Rooney et al. 2025.pdf"
+toc: false
+categories:
+  - data
+  - camera trapping
+  - mammal
+  - journal article
+---
+
+## Citation 
+
+> Rooney et al. (2025). SNAPSHOT USA 2019–2023: The First Five Years of Data From a Coordinated Camera Trap Survey of the United States. *Global Ecology and Biogeography*, 34, e13941, https://doi.org/10.1111/geb.13941.
+
+
+## Abstract
+
+Motivation
+SNAPSHOT USA is an annual, multicontributor camera trap survey of mammals across the United States. The growing SNAPSHOT USA dataset is intended for tracking the spatial and temporal responses of mammal populations to changes in land use, land cover and climate. These data will be useful for exploring the drivers of spatial and temporal changes in relative abundance and distribution, as well as the impacts of species interactions on daily activity patterns.
+
+Main Types of Variables Contained
+SNAPSHOT USA 2019–2023 contains 987,979 records of camera trap image sequence data and 9694 records of camera trap deployment metadata.
+
+Spatial Location and Grain
+Data were collected across the United States of America in all 50 states, 12 ecoregions and many ecosystems.
+
+Time Period and Grain
+Data were collected between 1st August and 29th December each year from 2019 to 2023.
+
+Major Taxa and Level of Measurement
+The dataset includes a wide range of taxa but is primarily focused on medium to large mammals.
+
+Software Format
+SNAPSHOT USA 2019–2023 comprises two .csv files. The original data can be found within the SNAPSHOT USA Initiative in the Wildlife Insights platform.
