@@ -3,7 +3,7 @@ format: html
 title: "Lab"
 ---
 
-# Current
+## <span style="color:#414487FF">Current</span>
 
 - **Dr. Michael Peyton**, Postdoctoral Researcher. Research focused on evaluating study design tradeoffs focused on terrestrial indirect effects (predator --> prey--> mountain shrub communities). 
 
@@ -13,7 +13,7 @@ title: "Lab"
 
 - **Le Tan Quy**, MS Candidate. Researching the spatial ecology of the Silver-backed chevrotain (*Tragulus versicolor*)
 
-# Former
+## <span style="color:#414487FF">Former</span>
 
 - **Dr. Edwige Bellier**, Postdoctoral Researcher. <br>
 Developed hierarchical Bayesian stochastic population reconstruction models to learn about fisher and white-tailed deer population demography. Currently working on evaluating the robustness of spatially explicit encounter models to estimate the population size of New England Cottontails.
