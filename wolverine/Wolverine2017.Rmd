@@ -31,7 +31,7 @@ load("./outputs/sp.occ2017.2")
 ## **2017 Survey**
 
 - The number of sampled cells: `r length(unique(visitData2017$GRID_ID))`
-- The number of cells in the sampling frame cells: `r length(unique(habData2017$GRID_ID))`
+- The number of cells in the sampling frame: `r length(unique(habData2017$GRID_ID))`
 - The total number of cells with wolverine detections: `r sum(as.integer(as.character(detections2017$detections)))`
 
 ![](./plots/plot.locs.2017.states.png)
