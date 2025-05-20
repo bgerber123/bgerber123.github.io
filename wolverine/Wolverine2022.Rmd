@@ -1,0 +1,131 @@
+---
+title: "Wolverine 2022 Modeling"
+author: "Brian D. Gerber"
+date: "2025-05-20"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+
+```{r setup, include=FALSE,cache=FALSE}
+  knitr::opts_chunk$set(echo = TRUE)
+  load("./outputs/wolv2022.spatial.data")
+  load("./outputs/sp.occ2022.gr.hab")
+  fitted = sp.occ2022.gr.hab
+```
+
+## **2022 Survey**
+
+- The number of sampled cells: `r length(unique(visitData2022$GRID_ID))`
+- The number of cells in the sampling frame: `r length(unique(habData2022$GRID_ID))`
+- The total number of cells with wolverine detections: `r sum(as.integer(as.character(detections2022$detections)))`
+
+![](./plots/plot.locs.2022.states.png)
+
+## **Spatial Modeling (original)**
+
+## **Spatial Modeling (2025)**
+
+The 2025 wolverine detection / non-detection data were fit using a Bayesian spatial occupancy model (Johnson et al. 2013) via the `stocc` R package.
+
+The spatial process model was fit using restricted spatial regression and a threshold of 20,000 m.
+
+
+Here is a plot of the occupancy intercept and slope coefficent for the Copelan_Inman habitat variable; they are both well converged. 
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$gamma[,1],type='l',main="Occupancy Intercept")
+plot(density(fitted$gamma[,1]),main="Occupancy Intercept")
+```
+
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$gamma[,2],type='l',main="Occupancy Coefficient")
+plot(density(fitted$gamma[,2]),main="Occupancy Coefficient")
+```
+
+The mean and 95% CI's of the occupancy slope coefficient for the Copeland_Inman habitat variables are
+
+```{r,echo=FALSE}
+quantile(fitted$gamma[,2],probs=c(0.025,0.5,0.975))
+```
+
+The probability this effect is positive is `r round(length(which(fitted$gamma[,2]>0))/length(fitted$gamma[,2]),digits=2)`
+
+
+Here is a plot of the spatial variance parameter, well converged and at a realistic value
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$tau[,1],type='l',main="Spatial Variance Parameter")
+plot(density(fitted$tau[,1]),main="Spatial Variance Parameter")
+```
+
+This parameter leads to more realistic site-level deviations on the probit scale.
+
+```{r, fig.height=4,echo=FALSE}
+hist(fitted$occupancy.df$eta.est,main="eta values for each site")
+```
+
+Here is the detection probability parameter.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$beta,type='l',main="Detection Coefficient (Probit scale)")
+plot(density(fitted$beta),type='l',main="Detection Coefficient (Probit scale)")
+```
+
+
+## **Prediction Plots**
+
+#### *Fitted Model (2022 survey)*
+
+![](./plots/plot.wolverine.2022.png)
+
+In this model, we can see spatial variation in occurrence by neighboring cells. This is because the spatial variation is being appropriately estimated. 
+
+### Fitted model with State Boundaries
+
+![](./plots/plot.wolverine.2022.state.det.png)
+
+### State Occupancy
+
+Here are the posterior distributions of the number of occupied sites by state (left plot) and the probability a cell is occupied by state (right plot).
+
+![](./plots/plot.wolverine.2022.occupied.states.png)
+
+
+#### **Model Results (2022)**
+
+```{r,echo=FALSE}
+results=data.frame(State=c("ID","MT","WA","WY","UT","CO","OR"),
+                       Cells = c(199,188,93,164,48,45,33),
+                       Mean.Occupied.cells = c(77,34,14,52,0,0,0)
+                       )
+
+
+knitr::kable(results,align=c("c","c","c"))
+```
+
+
+
+
+## References
+
+Johnson, D. S., Conn, P. B., Hooten, M. B., Ray, J. C., \& Pond, B. A. (2013). Spatial occupancy models for large data sets. Ecology, 94, 801-808.
