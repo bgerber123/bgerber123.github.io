@@ -1,0 +1,192 @@
+---
+title: "Wolverine 2017 Modeling Update (2025)"
+author: "Brian D. Gerber"
+date: "2025-05-20"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+
+```{r setup, include=FALSE,cache=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+load("./outputs/wolv2017.spatial.data")
+load("./outputs/icar20kHab.RData")
+load("./outputs/sp.occ2017.2")
+```
+
+## **2017 Survey**
+
+- The number of sampled cells: `r length(unique(visitData2017$GRID_ID))`
+- The number of cells in the sampling frame cells: `r length(unique(habData2017$GRID_ID))`
+- The total number of cells with wolverine detections: `r sum(as.integer(as.character(detections2017$detections)))`
+
+![](./plots/plot.locs.2017.states.png)
+
+## **Spatial Modeling (original)**
+
+The 2017 wolverine detection / non-detection data were fit using a Bayesian spatial occupancy model (Johnson et al. 2013) via the `stocc` R package.
+
+The original spatial occupancy model fit to these data and used in the first wolverine manuscript (Lukacs et al. 2020) had two concerning issues.
+
+First, the Markov-chain of the occupancy intercept (on probit-scale) parameter showed high autocorrelation and general lack of convergence (i.e, inference from the posterior summaries are unreliable). 
+
+The plot below shows the Markov chain Monte carlo iterations sequence (left) and the same values as the probability density of the posterior distribution (left). 
+
+```{r fit.gamma, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fit$gamma[,1],type='l',main="Occupancy Intercept")
+plot(density(fit$gamma[,1]),main="Occupancy Intercept")
+```
+
+I believe the cause of this lack of convergence is because the model was fit as an intrinsic conditional autoregressive (ICAR) model.
+
+The second issue was that the spatial variance parameter posterior distribution is centered around an extremely large value. This parameter should generally be quite small (e.g. 0.1).
+
+```{r fit.tau, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fit$tau[,1],type='l',main="Spatial Variance Parameter")
+plot(density(fit$tau[,1]),main="Spatial Variance Parameter")
+```
+
+This is concerning because the occupancy probability for each site is altered by a realization from a Normal distribution with this parameter.  The estimated site-level deviations should be generally small, but in this case they are very large. Below is a histogram of all the site-level deviations (on probit scale) from this parameter.
+
+```{r, fig.height=4,echo=FALSE}
+hist(fit$occupancy.df$eta.est)
+```
+
+I believe the cause of this is due to the prior probability distribution put on the spatial variance parameter. 
+
+## **Spatial Modeling (new)**
+
+To refit this data, instead of using ICAR, I used restricted spatial regression (RSR) which approximates ICAR and has a higher reliability in model convergence because it reduces spatial confounding between the spatial process and covariate effects.
+
+Here is a plot of the occupancy intercept, well converged. 
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.2$gamma[,1],type='l',main="Occupancy Intercept")
+plot(density(sp.occ2017.2$gamma[,1]),main="Occupancy Intercept")
+```
+
+Here is a plot of the spatial variance parameter, well converged and at a realistic value
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.2$tau[,1],type='l',main="Spatial Variance Parameter")
+plot(density(sp.occ2017.2$tau[,1]),main="Spatial Variance Parameter")
+```
+
+This parmater leads to more realistic site-level deviations on the probit scale.
+
+```{r, fig.height=4,echo=FALSE}
+hist(sp.occ2017.2$occupancy.df$eta.est,main="eta values for each site")
+```
+
+For completeness, the other parameters being estimated in the spatial occupancy model are the detection probability (on probit scale) and the occupancy coefficient for the Copeland_Inman habitat variable. They are also well converged.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.2$beta,type='l',main="Detection Coefficient (Probit scale)")
+plot(density(sp.occ2017.2$beta),type='l',main="Detection Coefficient (Probit scale)")
+```
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.2$gamma[,2],type='l',main="Occupancy Slope \nCoefficient (Probit scale)")
+plot(density(sp.occ2017.2$gamma[,2]),type='l',main="Occupancy Slope \nCoefficient (Probit scale)")
+```
+
+The mean and 95% CI's of the occupancy slope coefficient for the Copeland_Inman habitat variables are
+
+```{r,echo=FALSE}
+quantile(sp.occ2017.2$gamma[,2],probs=c(0.025,0.5,0.975))
+```
+
+The probability this effect is positive is `r round(length(which(sp.occ2017.2$gamma[,2]>0))/length(sp.occ2017.2$gamma[,2]),digits=2)`
+
+## **Prediction Plots**
+
+#### *Original Model*
+
+![](./plots/testing/wolverine2017.predictions.original.model.png){ width=60% }
+
+The spatial threshold setup in the ICAR model was 20,000 m, which means that only the neighboring cells should affect each other via this process. However, we don't see noticable spatial variation within each block of cells. 
+
+#### *New Model*
+
+![](./plots/plot.wolverine.2017.png)
+
+In the new model, we can see more spatial variation in occurrence by neighboring cells. This is because the spatial variation is being more appropriately estimated. 
+
+### New Model with State Boundaries
+![](./plots/plot.wolverine.2017.state.det.png)
+
+### New Model State Occupancy
+
+Here are the posterior distibutions of the number of occupied sites by state (left plot) and the probability a cell is occupied by state (right plot).
+
+![](./plots/plot.wolverine.2017.occupied.states.png)
+
+#### **Original Manuscript Results (2017)**
+
+```{r,echo=FALSE}
+old.results=data.frame(State=c("ID","MT","WA","WY"),
+                       Cells = c(189,194,93,157),
+                       Mean.Occupied.cells = c(87,117,40,24)
+                       )
+
+
+knitr::kable(old.results,align=c("c","c","c"))
+```
+
+
+#### **New Model Results (2017)**
+
+```{r,echo=FALSE}
+old.results=data.frame(State=c("ID","MT","WA","WY"),
+                       Cells = c(199,188,93,153),
+                       Mean.Occupied.cells = c(88,90,49,32)
+                       )
+
+
+knitr::kable(old.results,align=c("c","c","c"))
+```
+
+
+
+## **Changes from the first manuscript**
+
+*Data Changes*
+
+- Additional surveyed cells in Washington; all non-detections
+
+- Counts of cells by site. Manuscript used field definitions of what state was assigned to a site. Now using GIS definitions (centroid of cell).
+
+*Model Changes*
+
+-  ICAR changed to RSR. Improves model convergence
+
+- More diffuse prior probability distribution on spatial variance parameter.
+
+
+
+## References
+
+Lukacs, P.M., Evans Mack, D., Inman, R., Gude, J.A., Ivan, J.S., Lanka, R.P., Lewis, J.C., Long, R.A., Sallabanks, R., Walker, Z., Courville, S., Jackson, S., Kahn, R., Schwartz, M.K., Torbit, S.C., Waller, J.S. and Carroll, K. (2020), Wolverine Occupancy, Spatial Distribution, and Monitoring Design. Journal of Wildife Management, 84: 841-851. https://doi.org/10.1002/jwmg.21856
+
+
+Johnson, D. S., Conn, P. B., Hooten, M. B., Ray, J. C., \& Pond, B. A. (2013). Spatial occupancy models for large data sets. Ecology, 94, 801-808.
