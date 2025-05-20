@@ -36,8 +36,6 @@ output: html_document
 
 ![](./plots/plot.locs.2022.states.png)
 
-## **Spatial Modeling (original)**
-
 ## **Spatial Modeling (2025)**
 
 The 2025 wolverine detection / non-detection data were fit using a Bayesian spatial occupancy model (Johnson et al. 2013) via the `stocc` R package.
