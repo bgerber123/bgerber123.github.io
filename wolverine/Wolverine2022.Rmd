@@ -43,19 +43,32 @@ The 2025 wolverine detection / non-detection data were fit using a Bayesian spat
 The spatial process model was fit using restricted spatial regression and a threshold of 20,000 m.
 
 
-Here is a plot of the occupancy intercept and slope coefficent for the Copelan_Inman habitat variable; they are both well converged. 
+Here is a plot of the occupancy partial intercepts for the different mountain ranges (Grouping1 variable) and slope coefficent for the Copelan_Inman habitat variable; they are all well converged. 
 
-```{r, fig.height=4,echo=FALSE}
-par(mfrow=c(1,2))
-plot(fitted$gamma[,1],type='l',main="Occupancy Intercept")
-plot(density(fitted$gamma[,1]),main="Occupancy Intercept")
+```{r, fig.height=12,echo=FALSE}
+par(mfrow=c(5,2))
+plot(fitted$gamma[,1],type='l',main="Occupancy Partial Intercept \n North Cascades")
+plot(density(fitted$gamma[,1]),main="Occupancy Partial Intercept \n North Cascades")
+
+plot(fitted$gamma[,2],type='l',main="Occupancy Partial Intercept \n Northern Rockies")
+plot(density(fitted$gamma[,2]),main="Occupancy Partial Intercept \n Northern Rockies")
+
+plot(fitted$gamma[,3],type='l',main="Occupancy Partial Intercept \n South Cascades")
+plot(density(fitted$gamma[,3]),main="Occupancy Partial Intercept \n South Cascades")
+
+plot(fitted$gamma[,4],type='l',main="Occupancy Partial Intercept \n Southern Rockies")
+plot(density(fitted$gamma[,4]),main="Occupancy Partial Intercept \n Southern Rockies")
+
+plot(fitted$gamma[,5],type='l',main="Occupancy Partial Intercept \n Uintas")
+plot(density(fitted$gamma[,5]),main="Occupancy Partial Intercept \n Uintas")
+
 ```
 
 
 ```{r, fig.height=4,echo=FALSE}
 par(mfrow=c(1,2))
-plot(fitted$gamma[,2],type='l',main="Occupancy Coefficient")
-plot(density(fitted$gamma[,2]),main="Occupancy Coefficient")
+plot(fitted$gamma[,6],type='l',main="Occupancy Coefficient")
+plot(density(fitted$gamma[,6]),main="Occupancy Coefficient")
 ```
 
 The mean and 95% CI's of the occupancy slope coefficient for the Copeland_Inman habitat variables are

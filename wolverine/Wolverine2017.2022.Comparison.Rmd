@@ -1,0 +1,208 @@
+---
+title: "Wolverine 2017 to 2022 Comparison"
+author: "Brian D. Gerber"
+date: "2025-05-20"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+```{r setup, include=FALSE,cache=FALSE}
+  knitr::opts_chunk$set(echo = TRUE)
+  load("./outputs/wolv2017.spatial.data")
+  load("./outputs/wolv2022.spatial.data")
+  load("./outputs/compar.2017.2022.samplingframe.RData")
+```
+
+
+There are two ways we can make comparisons between the spatial occupancy results fitted to survey 1 (2017) and survey 2 (2022). First, we can compare occupancy predictions for the entire sampling frame that is shared b/w the two surveys, or we can compare only at the sites/cells that were surveyed in both surveys.
+
+<br>
+<br>
+
+## Compare State Detections
+
+The total number of detections by state from 2017 are (not limited to shared survey sites b/w years)
+
+```{r,echo=FALSE}
+a=table(detections2017$detections,detections2017$STATE)
+knitr::kable(a,
+      format = "html", table.attr = "style='width:60%;'")
+```
+
+<br>
+<br>
+
+The number of detections by state from 2022 are (not limited to shared survey sites b/w years)
+
+```{r,echo=FALSE}
+b = table(detections2022$detections,detections2022$STATE)
+knitr::kable(b,
+      format = "html", table.attr = "style='width:60%;'")
+```
+
+<br>
+<br>
+
+
+The naive occupancy by state for 2017 is
+
+```{r,echo=FALSE}
+a2=a[2,]/apply(a,2,sum)
+knitr::kable(a2, digits = 3,
+      format = "html", table.attr = "style='width:60%;'")
+```
+
+<br>
+<br>
+
+
+The naive occupancy by state for 2022 is
+
+```{r,echo=FALSE}
+b2=b[2,]/apply(b,2,sum)
+knitr::kable(b2,digits = 3,
+      format = "html", table.attr = "style='width:60%;'")
+```
+
+<br>
+<br>
+
+
+## **Sampling Frame Comparison**
+
+Below I summed the latent state occupancy for all sites/cells within the shared sampling frame to derive a probability distribution of the total number of occupied sites (left plot) and the overall probability of occupancy (right plot) for each survey.
+
+![](./plots/plot.2017.2022.same.sampling.frame.comparison.png)
+
+The probability of a decrease in total occupancy (from shared sampling frame) is `r round(length(which(diff.sum.z<0))/length(diff.sum.z),digits=2)`.
+
+The derived posterior probability distribution for the difference in number of occupied cells between 2022 and 2017 is shown below.
+
+```{r,echo=FALSE}
+plot(density(diff.sum.z),lwd=3,col=1,xlab="Difference in Occupied Sites",main="Comparison of occupancy results b/w 2022 and 2017")
+```
+
+The posterior quantities for the difference in the number of cells is
+```{r,echo=FALSE}
+knitr::kable(quantile(diff.sum.z,probs=c(0.025,0.50,0.975)),
+             format = "html", table.attr = "style='width:40%;'")
+```
+
+<br>
+<br>
+
+
+### *State Comparison*
+
+Next, we can compare the posterior distribution of the probability of occupancy between the two surveys by state.
+
+![](./plots/plot.state.comparison.sampling.frame.2017.2022.png)
+
+The posterior quantities of the probability of occupancy for each state are
+
+```{r,echo=FALSE}
+df.state = rbind(quantile(WY.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(MT.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(ID.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(WA.plot$Occupied.Sites,probs=c(0.025,0.5,0.975))
+)
+
+rownames(df.state)=c("WY","MT","ID","WA")
+
+knitr::kable(df.state,
+             format = "html", table.attr = "style='width:40%;'")
+```
+
+<br>
+<br>
+
+
+### *Site Prediction Differences*
+
+Here is the mean difference in probability of occupancy between sites in 2022 and 2017.
+
+![](./plots/plot.occ.diff.comparison.sampling.frame.2017.2022.png)
+
+<br>
+<br>
+
+## **Surveyed Site Only Comparison**
+
+```{r,echo=FALSE}
+load("./outputs/compar.2017.2022.surveyed.site.RData")
+```
+
+Below I summed the latent state occupancy for all sites/cells within the shared sampling frame to derive a probability distribution of the total number of occupied sites (left plot) and the overall probability of occupancy (right plot) for each survey.
+
+![](./plots/plot.2017.2022.same.sites.comparison.png)
+
+The probability of a decrease in total occupancy (from shared sampling frame) is `r round(length(which(diff.sum.z<0))/length(diff.sum.z),digits=2)``.
+
+The derived posterior probability distribution for the difference in number of occupied cells between 2022 and 2017 is shown below.
+
+```{r,echo=FALSE}
+plot(density(diff.sum.z,bw=1.2),lwd=3,col=1,xlab="Difference in number of sites",main="Comparison of occupancy results b/w 2022 and 2017")
+```
+
+<br>
+<br>
+
+
+The posterior quantities for the number of cells is
+
+```{r,echo=FALSE}
+knitr::kable(quantile(diff.sum.z,probs=c(0.025,0.50,0.975)),
+             format = "html", table.attr = "style='width:40%;'")
+```
+
+<br>
+<br>
+
+
+### *State Comparison*
+
+Next, we can compare the posterior distribution of the probability of occupancy between the two surveys by state.
+
+![](./plots/plot.state.comparison.sites.2017.2022.png)
+
+The posterior quantities of the probability of occupancy for each state are
+
+```{r,echo=FALSE}
+df.state = rbind(quantile(WY.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(MT.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(ID.plot$Occupied.Sites,probs=c(0.025,0.5,0.975)),
+      quantile(WA.plot$Occupied.Sites,probs=c(0.025,0.5,0.975))
+)
+
+rownames(df.state)=c("WY","MT","ID","WA")
+
+knitr::kable(df.state,
+             format = "html", table.attr = "style='width:40%;'")
+```
+
+<br>
+<br>
+
+
+### *Site Prediction Differences*
+
+![](./plots/plot.occ.diff.comparison.sites.2017.2022.png)
+
+
+
+
+
