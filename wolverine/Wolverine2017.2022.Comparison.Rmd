@@ -66,6 +66,7 @@ knitr::kable(a2, digits = 3,
 
 The naive occupancy by state for 2022 is
 
+
 ```{r,echo=FALSE}
 b2=b[2,]/apply(b,2,sum)
 knitr::kable(b2,digits = 3,
@@ -86,7 +87,7 @@ There are two ways we can make comparisons between the spatial occupancy results
 
 ### **Sampling Frame Comparison**
 
-Below I summed the latent state occupancy for all sites/cells within the shared sampling frame to derive a probability distribution of the total number of occupied sites (left plot) and the overall probability of occupancy (right plot) for each survey.
+Below I summed the latent state occupancy (z) for all sites/cells within the shared sampling frame to derive a probability distribution of the total number of occupied sites (left plot) and the overall probability of occupancy (right plot) for each survey.
 
 ![](./plots/plot.2017.2022.same.sampling.frame.comparison.png)
 
