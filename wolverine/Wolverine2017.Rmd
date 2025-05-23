@@ -162,9 +162,11 @@ What we are seeing is the influence of the spatial process in the model. How far
 
 ![](../plots/total.occ.2017.png)
 
+
 ### New Model State Occupancy
 
 Here are the posterior distributions of the number of occupied sites by state (left plot) and the overall probability of occupancy by state (right plot).
+
 
 ![](../plots/plot.wolverine.2017.occupied.states.png)
 
