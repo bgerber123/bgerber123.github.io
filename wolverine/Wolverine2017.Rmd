@@ -24,7 +24,7 @@ output:
 
 ## **Context**
 
-The spatial occupancy was refit to the 2017 wolverine survey data. This was done for two primary reasons:
+The spatial occupancy model was refit to the 2017 wolverine survey data. This was done for two primary reasons:
 
 1. There were some organizational changes need to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. For details, see `Motivation for and changes to data`.
 
