@@ -216,7 +216,7 @@ knitr::kable(compare.results,align=c("c","c","c","c"))
 
 - Counts of cells by state. The first manuscript used field definitions of what state was assigned to a site. Now using GIS definitions (centroid of cell).
 
-- Habitat covariate changed from Copland to Copland_Inman.
+- Habitat covariate changed from Copeland to Copeland_Inman.
 
 *Model Changes*
 

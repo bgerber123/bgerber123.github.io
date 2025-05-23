@@ -38,7 +38,7 @@ The spatial occupancy model was refit to the 2022 wolverine survey data. This wa
 
 2. There were data changes
   - Additional surveyed cells in Washington; all non-detections
-  - Added the Copland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
+  - Added the Copeland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
 
 3. Based on findings from refitting the spatial occupancy model to the 2017 survey data, this model needed to be refit.
     - Used restricted spatial regression (RSR) rather than ICAR
@@ -64,7 +64,7 @@ The 2022 wolverine detection / non-detection data were fit using a Bayesian spat
 The spatial process model was fit using restricted spatial regression (RSR) and a threshold of 20,000 m; this forces the spatial process to only affect neighboring cells.
 
 
-Here is a plot of the occupancy partial intercepts for the different mountain ranges (Grouping1 variable) and slope coefficient for the Copelan_Inman habitat variable; they are all well converged. 
+Here is a plot of the occupancy partial intercepts for the different mountain ranges (Grouping1 variable) and slope coefficient for the Copeland_Inman habitat variable; they are all well converged. 
 
 ```{r, fig.height=12,echo=FALSE}
 par(mfrow=c(5,2))
