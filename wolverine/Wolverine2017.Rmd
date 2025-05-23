@@ -26,7 +26,7 @@ output:
 
 The spatial occupancy model was refit to the 2017 wolverine survey data. This was done for two primary reasons:
 
-1. There were some organizational changes need to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. For details, see `Motivation for and changes to data`.
+1. There were some organizational changes needed to data input files to make direct comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. For details, see `Motivation for and changes to data`.
 
 2. There were two concerning elements in the fitted spatial occupancy model using the 2017 survey and subsequently used in the first wolverine manuscript (Lukacs et al. 2020).
 
@@ -137,14 +137,17 @@ The probability this effect is positive is `r round(length(which(sp.occ2017.2$ga
 
 The below figure reproduces the exact results displayed in Lukacs et al. 2020 Figure 4a.
 
-The spatial threshold setup in the ICAR model was 20,000 m, which means that only the neighboring cells should affect each other via this spatial process. However, we don't see noticeable spatial variation within each block of cells. This is due to the spatial variance parameter being estimated much too high.
+The spatial threshold setup in the ICAR model was 20,000 m, which means that only the neighboring cells should affect each other via this spatial process. However, we don't see noticeable spatial variation within each block of cells; for example all the cells in greater Yellowstone ecosystem are the same color (similar occupancy values), regardless of whether there were detections or not. This is due to the spatial variance parameter being estimated much too high.
 
 ![](../plots/testing/wolverine2017.predictions.original.model.png){ width=60% }
 
 
 #### *New Model*
 
-In the refit model, we can see more spatial variation in occurrence by neighboring cells. This is because the spatial variation is being more appropriately estimated. 
+In the refit model, we can see more spatial variation in occurrence by neighboring cells. Notice there are hot spots of occurrence surroundings cells with detections and cold spots where there is a collection of non-detections. This is because the spatial variation is being more appropriately estimated. 
+
+What we are seeing is the influence of the spatial process in the model. How far this spatial effect extends is really important. The model in the 2020 manuscript and this model **use a threshold of effect of 20 km**, such that at most one cell is influencing the four most immediate and nearest cells. If this was not previously discussed, it should be so now. <span style="color:red">Does 20 km seem reasonable given Wolverine movements and the size of the cell?</span> Note that the diagonal cells from a center cell are not being influenced at this distance.  
+
 
 ![](../plots/plot.wolverine.2017.png)
 

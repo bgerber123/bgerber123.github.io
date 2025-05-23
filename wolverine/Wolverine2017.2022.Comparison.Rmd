@@ -36,7 +36,7 @@ Our goal is to make a direct comparison in predicted wolverine occupancy from th
 
 In the draft, occupancy differences are estimated from a non-spatial occupancy. This approach is in contradiction to the utility of the spatial occupancy model, which is primarily aimed at predicting occurrence, leveraging the spatial patterns of detections and non-detections. The non-spatial model (w/o really good covariates) would have a higher likelihood of predicting wolverine occurrence in areas there are no detections.
 
-Here, we estimate changes in occupancy between 2017 and 2022 by matching up the predicted realized occupancy site by site from the fitted spatial occupancy models for 2017 and 2022. This provides a direct comparison from two purposeful predictive models. Below we will do this two ways: 1) comparing occupancy predictions for the entire sampling frame that is shared b/w the two surveys and 2) comparing only at the cells that were surveyed in both surveys. The first way leverages the power of the statical model and predictions, while the second way is more conservative and focused only where there is data. The results of these two ways are separted into separate sections. 
+Here, we estimate changes in occupancy between 2017 and 2022 by matching up the predicted realized occupancy site by site from the fitted spatial occupancy models for 2017 and 2022. This provides a direct comparison from two purposeful predictive models. Below we will do this two ways: 1) comparing occupancy predictions for the entire sampling frame that is shared b/w the two surveys and 2) comparing only at the cells that were surveyed in both surveys. The first way leverages the power of the statistical model and predictions, while the second way is more conservative and focused only where there is data. The results of these two ways are separated into separate sections. 
 
 
 
@@ -60,7 +60,7 @@ knitr::kable(a,
 ```{r,echo=FALSE}
 b = table(detections2022$detections,detections2022$STATE)
 knitr::kable(b,
-      format = "html", table.attr = "style='width:60%;'")
+      format = "html", table.attr = "style='width:80%;'")
 ```
 
 <br>
@@ -148,12 +148,10 @@ df.state = rbind(aggregate(WY.plot$Occupied.Sites,
                            )
 )
 
-
-
 df.state = data.frame(Survey=df.state$Survey,
                       State = c(rep("WY",2),rep("MT",2),rep("ID",2),rep("WA",2)),
                       df.state=df.state$x)
-colnames(df.state)=c("Survey","State","2.5%","50%","97.5%")
+colnames(df.state) = c("Survey","State","2.5%","50%","97.5%")
 
 knitr::kable(df.state,
              format = "html", table.attr = "style='width:60%;'")

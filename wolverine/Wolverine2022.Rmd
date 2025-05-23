@@ -34,9 +34,8 @@ output:
 
 The spatial occupancy model was refit to the 2022 wolverine survey data. This was done for two primary reasons:
 
-1. There were some organizational changes need to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. For details, see `Motivation for and changes to data`.
+1. There were some organizational changes needed to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. For details, see `Motivation for and changes to data`.
 
-2. There were data changes
   - Additional surveyed cells in Washington; all non-detections
   - Added the Copeland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
 
@@ -134,7 +133,9 @@ plot(density(fitted$beta),type='l',main="Detection Coefficient (Probit scale)")
 
 ![](../plots/plot.wolverine.2022.png)
 
-In this model, we can see spatial variation in occurrence by neighboring cells. This is because the spatial variation is being appropriately estimated. 
+In this model, we can see spatial variation in occurrence by neighboring cells. Notice there are hot spots of occurrence surroundings cells with detections and cold spots where there is a collection of non-detections. This is because the spatial variation is being more appropriately estimated. 
+
+What we are seeing is the influence of the spatial process in the model. How far this spatial effect extends is really important. The model in the 2020 manuscript and this model **use a threshold of effect of 20 km**, such that at most one cell is influencing the four most immediate and nearest cells. If this was not previously discussed, it should be so now. <span style="color:red">Does 20 km seem reasonable given wolverine movements and the size of the cell?</span> Note that the diagonal cells from a center cell are not being influenced at this distance. 
 
 ### Fitted model with State Boundaries
 
