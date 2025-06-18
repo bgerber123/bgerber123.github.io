@@ -3,6 +3,16 @@ title: Habitat Selection Guidance
 format: html
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YCZ0V3XHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YCZ0V3XHT');
+</script>
+
 This work is affiliated with the manuscript titled: **A plain language review and guidance for modeling animal habitat-selection**.
 
 The code from the Github repository [Habitat-Selection-Guidance](https://github.com/bgerber123/Habitat-Selection-Guidance/) includes two R markdown files. The compiled HTML files can be accessed here.
