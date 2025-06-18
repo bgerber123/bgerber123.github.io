@@ -4,13 +4,13 @@ format: html
 ---
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YCZ0V3XHT"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKZX8NT15C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-4YCZ0V3XHT');
+  gtag('config', 'G-GKZX8NT15C');
 </script>
 
 This work is affiliated with the manuscript titled: **A plain language review and guidance for modeling animal habitat-selection**.
