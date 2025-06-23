@@ -15,12 +15,12 @@ format: html
 
 This work is affiliated with the manuscript titled: **A plain language review and guidance for modeling animal habitat-selection**.
 
-The code from the Github repository [Habitat-Selection-Guidance](https://github.com/bgerber123/Habitat-Selection-Guidance/) includes two R markdown files. The compiled HTML files can be accessed here.
+The code from the Github repository [Habitat-Selection-Guidance](https://github.com/bgerber123/Habitat-Selection-Guidance/) includes two R markdown files. The compiled HTML files can be accessed here:
 
 
-[Traditional HSF](TraditionalHSF.html)
+1. [Traditional HSF](TraditionalHSF.html)
   
-[Movement-based HSF](MovementHSF.html)
+2. [Movement-based HSF](MovementHSF.html)
 
 
 <span style="color:deeppink">If these vignettes provide some utility to you in your research or learning, please let us know with a quick and simple email ([brian.gerber\@colostate.edu](mailto:brian.gerber@colostate.edu){.email}) or with a star on the GitHub Repository.</span>
