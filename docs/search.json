@@ -8348,7 +8348,7 @@
     "href": "hsfguide/index.html",
     "title": "Habitat Selection Guidance",
     "section": "",
-    "text": "This work is affiliated with the manuscript titled: A plain language review and guidance for modeling animal habitat-selection.\nThe code from the Github repository Habitat-Selection-Guidance includes two R markdown files. The compiled HTML files can be accessed here:\n\nTraditional HSF\nMovement-based HSF\n\nIf these vignettes provide some utility to you in your research or learning, please let us know with a quick and simple email (brian.gerber@colostate.edu) or with a star on the GitHub Repository."
+    "text": "This work is affiliated with the manuscript titled: A plain language review and guidance for modeling animal habitat-selection.\nThe code associated with this manuscript is available in the GitHub repository Habitat-Selection-Guidance, which includes two R markdown files. The compiled HTML files can be accessed here:\n\nTraditional HSF\nMovement-based HSF\n\nIf these vignettes provide some utility to you in your research or learning, please let us know with a quick and simple email (brian.gerber@colostate.edu) or with a star on the GitHub Repository."
   },
   {
     "objectID": "publications/articles/Rooney2025.html",
