@@ -1,0 +1,328 @@
+---
+title: "Coding and Mathematical Definitions"
+author: "Brian D. Gerber"
+date: "December 10, 2024"
+output: pdf_document
+header-includes:
+   - \usepackage{calc,amsmath,tikz}
+   - \usetikzlibrary{matrix,calc}
+---
+
+```{r setup, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+\vspace{12pt}
+\begin{center}\textbf{\LARGE Definitions of R Code} \end{center}
+\vspace{12pt}
+
+\textbf{\large R script}
+
+the lines of code and comments that you are writing (filename.R).  
+\vspace{12pt}
+
+\textbf{\large R project}
+
+your R script, any variables you have created, and your current R environment (filename.Rproj).  
+\vspace{12pt}
+
+\textbf{\large R package}
+
+a set of functions/code that you can load into your script (examples - dplyr, sp).  
+\vspace{12pt}
+
+\textbf{\large R Comment}: does not run as code, starts with #. You use comments to explain what your code is doing in plain langauge.  
+\vspace{12pt}
+
+\textbf{\large Object or Variable}
+
+a unit of information that is stored in the workspace (computer memory) and can be recalled or manipulated. 'a' is an object. Specifically, a vector of length 3.  
+
+```{r include=TRUE, tidy=TRUE,results='asis'}
+a = c(3,2,1)
+```
+\ \
+\textbf{\large Element}
+
+a piece of information within an object. The 1st element of a is...
+
+```{r include=TRUE, tidy=TRUE, eval=TRUE,results='asis'}
+a[1]
+```
+\ \
+\vspace{12pt}
+
+\textbf{\large Function}
+
+a command to take inputs (objects or elements) and manipulates it to provide an output, which can be saved as a new object.
+```{r include=TRUE, tidy=TRUE, eval=TRUE,results='asis'}
+fun.text=function(x){paste("Your input variable is ",x,sep="")}
+
+fun.text(4)
+fun.text("INPUT")
+```
+\ \
+\vspace{12pt}
+
+\textbf{\large Argument}
+
+a specific command within a function. Many functional arguments are preset and do not need to be explitly stated.
+
+```{r include=TRUE, tidy=TRUE, eval=TRUE,results='asis'}
+x=c(1,2,3,NA)
+mean(x)
+
+#na.rm is an argument of the function mean to ignore the missing value. Its preset is FALSE. If you
+#have na's you need to change the argument to 'TRUE'.
+mean(x, na.rm=TRUE)
+
+```
+
+\vspace{12pt}
+
+
+
+\begin{center}\textbf{\LARGE Types of R Objects and Mathematical Notation} \end{center}
+\vspace{12pt}
+
+\textbf{\large Vector}
+
+1 row, many columns OR 1 column many rows. Can be numbers of characters.
+
+```{r include=TRUE, tidy=TRUE, eval=TRUE,results='asis'}
+v=c(4,1,3)
+is.vector(v)
+length(v)
+```
+
+Math notation (capitalized & lower case):
+$\vec{v}$ \ or \ $\textbf{v}$
+
+\ \
+
+\begin{align}
+  \textbf{v} &= \begin{bmatrix}
+           4 &
+           1 &
+           3
+\end{bmatrix}
+\end{align}
+
+\vspace{12pt}
+
+\textbf{\large Matrix}
+
+Generalization of vectors. Can have 1 or more rows and columns. Only numbers.
+
+```{r include=TRUE, tidy=TRUE,eval=TRUE}
+
+M=matrix(1:10,nrow=2)
+M
+dim(M)
+is.vector(M)
+is.matrix(M)
+```
+
+Math notation (capitalized & upper case):
+$\textbf{M}$
+
+\ \
+
+\begin{align}
+  \textbf{M} &= \begin{bmatrix}
+           1 & 3 & 5 & 7 & 9 \\
+           2 & 4 & 6 & 8 & 10
+\end{bmatrix}
+\end{align}
+
+\ \
+
+\vspace{12pt}
+
+\textbf{\large Array}
+
+Generalization of matrices. Can be n dimensional. Only numbers.
+
+```{r include=TRUE, tidy=TRUE,eval=TRUE}
+
+arr=array(1:100,dim=c(3,4,3))
+arr
+dim(arr)
+is.vector(arr)
+is.matrix(arr)
+is.array(arr)
+```
+
+\begin{tikzpicture}[every node/.style={anchor=north east,fill=white,minimum width=1.4cm,minimum height=7mm}]
+\matrix (mA) [draw,matrix of math nodes]
+{
+25 & 28 & 31 & 34 \\
+26 & 29 & 32 & 35 \\
+27 & 30 & 33 & 36 \\
+};
+
+\matrix (mB) [draw,matrix of math nodes] at ($(mA.south west)+(1.5,0.7)$)
+{
+13 & 16 & 19 & 22 \\
+14 & 17 & 20 & 23 \\
+15 & 18 & 21 & 24 \\
+ \\
+};
+
+\matrix (mC) [draw,matrix of math nodes] at ($(mB.south west)+(1.5,0.7)$)
+{
+1 & 4 & 7 & 10 \\
+2 & 5 & 8 & 11 \\
+3 & 6 & 9 & 12 \\
+};
+
+\draw[dashed](mA.north east)--(mC.north east);
+\draw[dashed](mA.north west)--(mC.north west);
+\draw[dashed](mA.south east)--(mC.south east);
+\end{tikzpicture}
+
+
+\ \
+
+\vspace{12pt}
+
+\textbf{\large List}
+
+Can store any type of objects together.
+
+```{r include=TRUE, tidy=TRUE,eval=TRUE}
+list1=vector("list",2)
+list1[[1]]=v
+list1[[2]]=M
+list1[[3]]=arr
+
+is.list(list1)
+length(list1)
+list1[[1]]
+```
+
+\vspace{12pt}
+
+\begin{center}\textbf{\LARGE Important Functions} \end{center}
+
+\textbf{\large For Loop} 
+
+To do a task many times. Simple, but inefficient
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+#First, create a large matrix
+x <- matrix(rnorm(400*4000), ncol=400)
+
+#Second, create a vector to store results
+mx <- rep(NA, nrow(x))
+
+#Third, for each row of the matrix, find the maximum value and store it in mx using 
+#a loop. We will do this from index 1 to the max number of rows (nrow(x)). We will 
+#iterate using index i.
+
+for(i in 1:nrow(x)){
+  mx[i] <- max(x[i,])
+}
+
+```
+
+\vspace{12pt}
+
+\textbf{\large ifelse}
+
+used to return an output based on specified conditions
+
+```{r echo=TRUE, eval=FALSE,include=TRUE, tidy=FALSE}
+# Syntax:
+If (test_expression) {
+  Statement 
+}
+
+```
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+
+# Example:
+a = c(5,7,2,9)
+ifelse(a %% 2 == 0,"even","odd")
+
+#OR
+
+x <- 5
+if(x > 0){
+  print("Positive number")
+}
+```
+
+\vspace{12pt}
+
+\textbf{\large apply} 
+
+To do a task many times using vectorization. Much faster then a for loop.
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+x <- matrix(rnorm(400*4000), ncol=400)
+
+# The 1 indicates to the function 'max' on the rows of the object 'x'. A 2 would 
+# make this function should be applied to each column of the object 'x'.
+mx2 <- apply(x, 1, max)
+
+```
+
+Another Example
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+
+dataTable <- cbind(x1 = 1, x2 = (c(4:0, 2:6)))
+dataTable
+
+# Sum each of the rows of the data table
+apply(dataTable, MARGIN = 1, FUN = sum)  
+
+
+# Now sum the columns
+apply(dataTable, MARGIN = 2, FUN = sum)
+
+```
+
+\vspace{12pt}
+
+\textbf{\large lapply}
+
+To do a task many times using vectorization for each list element.
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+list1 <- list(1:20, 1:5, 1:100)
+listOutput <- lapply(list1, FUN = quantile, probs = c(0.025, 0.975))
+listOutput
+is.list(listOutput) 
+```
+
+
+\textbf{\large sapply} 
+
+takes lists, vectors or data frames as input and gives output in vector or matrix.
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+listOutput2 <- sapply(list1, FUN = quantile, probs = c(0.025, 0.975))
+listOutput2 
+is.list(listOutput2) 
+is.matrix(listOutput2) 
+
+```
+\vspace{12pt}
+
+\textbf{\large mapply}
+
+allows you to apply a function to elements of a matrix.
+
+```{r include=TRUE, tidy=FALSE,eval=TRUE}
+l1 <- list(a = c(1:10), b = c(11:20))
+l2 <- list(c = c(80:89), d = c(90:99))
+
+# sum the corresponding elements of l1 and l2
+mapply(sum, l1$a, l1$b, l2$c, l2$d)
+
+```
+
+\vspace{12pt}

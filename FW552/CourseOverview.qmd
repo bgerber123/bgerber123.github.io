@@ -1,0 +1,109 @@
+---
+title: <center>FW 552 <br> Applied Sampling for Wildlife/Fish Studies <br> (Fall 2025)</center>
+format:
+  html: 
+    theme: default
+    fontsize: 1.1em
+    linestretch: 1.2
+---
+
+
+# Course Overview
+
+## Instructor
+
+**Name**:  [Brian D. Gerber](https://bgerber123.github.io/)
+
+**Position/Affiliation** Research Scientist and Assistant Unit Leader at U.S. Geological Survey, [Colorado Cooperative Research Unit](https://warnercnr.colostate.edu/fwcb/cooperative-fish-wildlife-research-unit/) and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University. 
+
+**Office:**  202A Wagar, Colorado Cooperative Research Unit
+
+**Email:** brian.gerber@colostate.edu
+
+**Office Hours:** We 1:00pm - 2:00pm and by appointment
+
+## Course Information
+
+**Course Number:** FW 552 
+
+**Fall 2024:** Mo/We 3pm - 4:15
+
+**Credits:** 3
+
+**Websites:**  [bgerber123.github.io/FW552/](/FW552/index.qmd) (lecture and lab materials) and [Canvas](https://colostate.instructure.com/) (Quizzes, Discussion, Lab Submissions, and Grading).
+
+**Schedule:** [Subject to Change](/FW552/schedule.qmd)
+
+**Prerequisites:**  A basic undergraduate statistics course is required (e.g. CSU's Stat 301 `Introduction to Applied Statistical Methods`. 
+
+**Text and Readings:** Primarily we will use [Thompson (2012). Sampling. Third Addition](/readings552/Sampling - 2012 - Thompson.pdf). All lecture and course materials will be provided. 
+
+**Computing:** A computer will be necessary to work on coding assignments.
+
+
+## Course Description
+
+This course covers the core concepts of sampling design, including survey sampling theory and techniques, which provide a foundation for designing and interpreting fish and wildlife studies. After students learn concepts and issues in the application of sampling designs used in fish, wildlife and conservation biology.
+
+## Course Learning Objectives
+
+Upon successful completion of this course students will: 
+
+- Identify different types of sampling designs and understand when to apply them
+
+- Understand statistical estimators and their properties
+
+- Frame a sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.  
+
+- Use newly acquired sampling knowledge and analyses to solve problems in fish and wildlife conservation and management.
+
+- Be able to use fundamental code practices in the R programming language.  
+
+
+## Assessment
+
+Assessment Components  | Percentage of Grade
+--------------------   | -------------------
+Course Engagement      | 10%
+Assignments            | 25%
+Quizzes                | 25%
+Tests                  | 20%
+Project                | 20%
+ 
+Table 1: Grade breakdown by graded components
+
+<br>
+
+<br>
+
+
+ Letter Grade         | Percentage Range
+--------------------  | -------------------
+A+                    | 100.00 to 96.67
+A                     | 96.67 to 93.33
+A-                    | 93.33 to 90.00
+B+                    | 90.00 to 86.67
+B                     | 86.67 to 83.33
+B-                    | 83.33 to 80.00
+C+                    | 80.00 to 76.67
+C                     | 76.67 to 70.00
+D                     | 70.00 to 60.00
+F                     | 60.00 to 00.00
+
+Table 1: Grade scheme from [CSU](https://canvas.colostate.edu/grading-schemes/)
+
+
+## Student Experiences and Pedagogical Techniques
+
+**In-class lectures:** Class periods will often include a lecture that which will incorporate instructor-led questions and short discussions.
+
+**In-class student-led discussions:** Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others. 
+
+**Out-of-class  assignments:** Assignments will be common and help guide learning and provide feedback to the instructor.
+
+**Out-of-class reading:** Come prepared to class by having read and thought about the assigned readings; check the website for discussion points.
+
+**Out-of-class quizzes:** Quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation. 
+
+**Group project:** A group project will be used as a final assessment of the student's integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation.
+

@@ -1,0 +1,69 @@
+---
+title: ""
+---
+
+## Week 6
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+
+-   Lecture: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
+
+-   Lecture Code: <a href="/FW680A4/bayesian.R">bayesian.R</a>
+
+#### [Assigned]{style="color:red;"}
+
+  - <a href="/readings/Ellison 2004.pdf"> Ellison 2004</a>.
+
+- Background Reading (not required):
+  - <a href="/readings/Hobbs_and_Hooten Ch5.pdf"> Hobbs and Hooten Ch5</a>.
+  - <a href="https://fw8051statistics4ecologists.netlify.app/bayes"> Fieberg Chapter 11</a>.
+  - <a href="https://fw8051statistics4ecologists.netlify.app/a-brief-introduction-to-mcmc-sampling-and-jags"> Fieberg Chapter 12</a>.
+
+
+
+
+<!-- #### [Assigned]{style="color:red;"} -->
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
+
+
+
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-    Lecture: Continue with: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
+
+-   Downloads: <a href="/classfiles/bayeslab/week6filesSept27.zip">Files (9/27)</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("rjags","bayesplot","rstanarm"))
+```
+
+- Install External Software Program [JAGS](https://sourceforge.net/projects/mcmc-jags/files/)
+
+#### [Assigned]{style="color:red;"}
+
+- [Bayes Quiz on Canvas](https://colostate.instructure.com/courses/193678/quizzes)
+
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
+
+
+- Background Reading (not required): 
+  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
+
+
+
+
+

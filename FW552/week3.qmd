@@ -1,0 +1,52 @@
+---
+title: ""
+---
+
+## Week 3
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: <a href="/FW680A4/likelihood.qmd">Likelihood and Optimization</a>
+
+-   Lecture Code: <a href="/FW680A4/likelihood.R">Likelihood.R</a>
+
+#### [Assigned]{style="color:red;"}
+
+-   Readings for next class: 
+    - <a href="/readings/Dushoff et al. 2019.pdf">Dushoff et al. 2019</a>
+    - <a href="https://statistics4ecologists-v2.netlify.app/linreg#hypothesis-tests-and-p-values">Fieberg, Chapter 1.10</a>
+
+- Background Reading (not required): 
+  - [Fieberg, Ch. 1](https://statistics4ecologists-v2.netlify.app/linreg) 
+  - [Bolker Ch. 7](/readings/Bolker 2007 Chapter 7.pdf) 
+  - [Zurr Ch. 2](/readings/Zurr et al Chapter 2.pdf)
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: <a href="/FW680A4/regression.qmd">Regression</a>
+
+-   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+  install.packages(c("marginaleffects","ggResidpanel"))
+```
+
+##### **In Class Discussion Questions for Duscoff et al.2019**
+
+-   What is biological significance and statistical significance?
+-   What is a p-value and what are the issues with null hypothesis testing?
+
+
+
+
+
+
+

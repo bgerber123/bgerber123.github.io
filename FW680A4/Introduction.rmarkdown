@@ -1,0 +1,644 @@
+---
+title: <span style="color:white">Wildlife Ecology Modeling</span>
+title-slide-attributes:
+  data-background-image: /img/background1.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+
+
+
+
+## [Class Stuff]{style="color:#078BCD;"}{.scrollable}
+
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+
+
+-   **Instructor:** Brian Gerber
+
+-   **Classroom**: NR 243
+
+    -   Lecture/Lab/Discussion
+
+- **When**: Tu 11am - 12:15pm and Fr 10am - 1pm
+
+. . .
+
+-   **My Office**: 202A Wagar, Colorado Cooperative Research Unit
+
+    -   Office hours: TU 1:30pm - 2:30pm and by appointment
+
+    -   brian.gerber@colostate.edu
+
+. . .
+
+
+-   **Computers**: Bring laptop to class
+
+    -   Software/R Packages should be installed prior to lab (posted on website)
+
+-   **Registration**: 
+
+    -   680A4	001 (CRN 77149) and 680A4	L01 (CRN 77150)
+
+
+## [What is this course?]{style="color:#078BCD;"}
+
+A mix of...
+
+- statistics
+- modeling
+- coding
+- math / notation
+- science philosophy
+- wildlife ecology and conservation
+
+
+##  [Assessment]{style="color:#078BCD;"}
+
+Assessment Components  | Percentage of Grade
+--------------------   | -------------------
+Course Engagement      | 10%
+Lab Assignments        | 40%
+Discussions            | 10%
+Quizzes                | 10%
+Project                | 30%
+
+## [Project]{style="color:#078BCD;"}
+
+1) independent or group research project - highlighting a modeling application, data/code transparency, and communication of results
+
+2) group development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation
+
+
+
+## [Course Learning Objectives]{style="color:#078BCD;"}
+
+Upon successful completion of this course students will be able to:
+
+::: incremental 
+
+- think 'statistically'</span>
+
+- read quantitative ecology literature
+
+- write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation
+
+- communicate statistical approaches and results
+
+:::
+
+
+## [Why is this class useful?]{style="color:#078BCD;"} {.scrollable}
+
+-   Able to read modern ecological literature
+
+
+-   Understand what you are doing when using data and models; **coding/statistics/modeling are related but not the same**
+
+
+-   Statistical modeling and coding skills are highly marketable
+
+
+-   Taking control of your analyses
+
+
+-   Collaborate with colleagues/statisticians
+
+## [Software]{style="color:#078BCD;"}
+
+![](/img/logosR.png)
+
+
+## [Why learn to code?]{style="color:#078BCD;"}
+
+::: fragment
+-   efficiency
+-   transparency
+-   flexibility in application
+-   shareable
+-   marketable skill
+-   needed for publications
+:::
+
+
+## [Why use R?]{style="color:#078BCD;"}
+
+::: fragment
+-   open-source and free
+-   small total user base / large in ecology and statistics
+-   find help online, e.g., [stack**overflow**](https://stackoverflow.com/)
+-   data management
+-   statistics
+-   plotting / graphics
+:::
+
+## [Why use RStudio?]{style="color:#078BCD;"}
+
+-   Makes using R easier
+-   [Projects (file mgmt)](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+-   [R Shiny](https://www.rstudio.com/products/shiny/): Interactive online apps
+-   [R Markdown](https://rmarkdown.rstudio.com/): Interactive documents
+-   [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html): interactive articles, websites, blog, ...
+-   [Posit](https://posit.co/) - Certified B corp
+
+
+
+## [Type of Modeling]{style="color:#078BCD;"}
+
+- parametric
+
+- probabilistic
+
+- generative
+
+- inferential and/or predictive
+
+## [Statistics in the Modern Age]{style="color:#078BCD;"}
+
+. . .
+
+
+
+```{=html}
+<center><span style="color:#FF0000";><em>
+"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good
+statistical thinking have not changed, but their implementation has."</em></span> <br><span>- Cox and Efron, Sci. Adv. 2017;3: e1700768.</span></center>
+```
+
+
+ 
+
+
+
+## [Coding in the Modern Age]{style="color:#078BCD;"}
+
+- Software changes all the time
+
+- Code will become obsolete  
+
+- Base R functions change slower than packages
+
+- Document/Annotate code and publish it online
+
+- File management is important; use sub-folders
+
+<!-- ## [File management]{style="color:#078BCD;"} -->
+
+<!-- **Project Folder** -->
+
+<!-- *Subfolders:* -->
+
+<!--   - data -->
+<!--   - outputs -->
+<!--   - plots -->
+<!--   - R -->
+
+## [A Graduate Student's Dilemma ]{style="color:#078BCD"}{.smaller}
+
+**You need to know....**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- field techniques
+- logistics / planning
+- people/advisor management
+- institutional bureaucracy
+- ecological theory
+- wildlife mgmt principles
+- conservation biology principles
+- study design
+- data management
+:::
+
+::: {.column width="50%"}
+- public speaking
+- independent and team work
+- graphic/visual arts
+- 'the literature'
+- the job market
+- how to write a manuscript/thesis
+- writing/sharing coding
+- statistical modeling
+- ...
+:::
+
+::::
+
+## [Learning]{style="color:#078BCD;"}
+
+![](/img/learning.graph.png){fig-align="center" width=50%}
+
+
+:::: {style="text-align: center;"}
+
+*I do not know where you are starting*
+
+::::
+
+
+## [Our Aim]{style="color:#078BCD"}
+
+#### What model did you fit? Why? How?
+
+::: {.r-stack}
+![](/img/modeling.knowledge0.png){.fragment height="580"}
+
+![](/img/modeling.knowledge.png){.fragment height="580"}
+:::
+
+
+
+## [Think Statistically]{style="color:#078BCD"}
+
+### Know...
+
+::: {.incremental}
+
+- your objective in fitting a model
+
+- the model and its properties (not just the name)
+
+- how to interpret ALL the parameters
+
+- how the parameters are being optimized
+
+- and have justification for modeling decisions
+  - requires reading literature
+  - requires evaluating assumptions yourself
+:::
+
+## [Why is statistics and ecological modeling so difficult?]{style="color:#078BCD"}
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me.png)
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me2.png)
+
+
+
+
+
+## [Science Practice]{style="color:#078BCD"}
+
+:::: {style="text-align: center;"}
+**I am a pragmatist**
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are many ways to do ***great*** science
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are more ways to do ***meh*** science
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+Disciplines have conventions
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+There are foundations of scientific and statistical learning
+::::
+
+. . .
+
+
+:::: {style="text-align: center;"}
+Know the *why* of your decisions
+::::
+
+. . .
+
+:::: {style="text-align: center;"}
+**Ask lots of questions to everybody all the time**
+::::
+
+
+## [Teaching Philosophy]{style="color:#078BCD"}
+
+::: incremental
+-   Learning is a choice (in every movement)
+
+-   An inclusive environment is paramount for learning
+
+-   Communication is key
+
+-   Everyone has something to teach and something to learn
+
+-   Struggle is good. Solving problems leads to learning
+
+-   BUT....
+:::
+
+
+<!-- ## And you... -->
+
+<!-- <span style="color:#078BCD"> -->
+
+<!-- <ul> -->
+
+<!-- <li>What is your name?</li> -->
+
+<!-- <li>What is your program/project/field of study?</li> -->
+
+<!-- <li>Why do you want to learn more about 'quantitative techniques'?</li> -->
+
+<!-- <li>What is your first emotion when you hear **statistics**, **math**, or **coding**?</li> -->
+
+<!-- </ul> -->
+
+<!-- </span> -->
+
+
+## [Website]{style="color:#078BCD"}
+
+<a href="https://bgerber123.github.io/FW680A4/index.html">https://bgerber123.github.io/FW680A4/index.html</a>
+
+
+## 
+
+###  [Class Questions]{style="color:#078BCD;"}
+
+![](/img/question.png){fig-align="center" width="200"}
+
+
+## [RStudio]{style="color:green;"}
+
+What does each panel do?
+
+![](/img/rstudio.png){width="95%" fig-align="center"}
+
+
+## [The language of R]{style="color:green;"}
+
+. . .
+
+### [**Objects**]{style="color:blue;"}
+
+A storage place for information; stored in the "Environment"
+
+<br>
+
+::: fragment
+*'Attributes'* describes the structure or information of the object
+:::
+
+## [The language of R]{style="color:green;"}
+
+### [**Objects**]{style="color:blue;"}
+
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+# y is an 'object' that is assigned the value 3
+y = 3
+y
+```
+
+
+
+
+## [The language of R]{style="color:green;"}
+
+::: columns
+::: {.column width="50%"}
+
+### [**Values**]{style="color:blue;"}
+
+- numeric
+- integer
+- character
+- factor
+:::
+
+::: {.column width="50%"}
+###  [**Objects**]{style="color:blue;"}
+
+- vector
+- matrix
+- array
+- list
+- dataframe
+- S3, S4, S5, and beyond 
+:::
+:::
+
+
+## [The language of R]{style="color:green;"}
+
+### [**Functions**]{style="color:blue;"}
+
+'does stuff'; creates or manipulates objects
+
+::: fragment
+*'Arguments'* are the types of things a function is asking for; the inputs
+:::
+
+## [The language of R]{style="color:green;"}
+
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}([argument1]{style="color:purple;"} = input1, [argument1]{style="color:purple;"} = input2)
+
+<br>
+
+. . .
+
+[**object**]{style="color:orange;"} = [function]{style="color:blue;"}(input1, input2)
+
+
+<br>
+
+. . .
+
+[**this**]{style="color:orange;"} = [sign]{style="color:blue;"}([x]{style="color:purple;"} = -5)
+
+<br>
+
+::: fragment
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+sign(-5)
+sign(5)
+```
+
+
+:::
+
+## [Some useful functions]{style="color:green;"}
+for loops
+
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+save.this=c()
+for(i in 1:10){
+  save.this[i] =  1-i
+}
+```
+
+
+
+## [Some useful functions]{style="color:green;"}
+
+Create your own function
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+my.mean.func = function(x){
+                           sum(x)/length(x)
+                          }
+
+my.mean.func(
+             c(5,4,7,2,7,1)
+             )
+
+```
+
+
+
+## [Some useful functions]{style="color:green;"}
+
+apply/sapply/lapply/vapply
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+mat= matrix(rnorm(100),nrow=10, ncol=10)
+
+apply(mat, 2, FUN=median)
+```
+
+
+::: {.fragment}
+
+
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+
+apply(mat, 2, FUN=function(x){
+  
+  length(which(x>1))/length(x)
+  
+})
+```
+
+
+
+:::
+
+
+
+## [Code Organization]{style="color:green;"}
+
+::: incremental
+-   Hierarchical code organization
+
+    -   code structure using indenting
+    -   top --\> bottom execution
+:::
+
+. . .
+
+**Help! My code doesn't work**...
+
+
+
+```{r, echo = TRUE}
+#| echo: TRUE
+#| eval: FALSE
+                cor.sp.route.cor=vector("list",n.species)
+cor.sp=rep(NA,n.species)
+            for(s in 1:n.species){
+route=new.cov.species.long.scaled[[s]]$routeID
+cor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])
+    for(i in 1:nroutes){
+temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
+  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]
+  if(length(temp1)>5){
+  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
+  }}}
+
+```
+
+
+
+## [Better...]{style="color:green;"}
+
+
+
+```{r, echo = TRUE}
+#| echo: TRUE
+#| eval: FALSE
+
+# Create Storage objects
+  cor.sp.route.cor=vector("list",n.species)
+  cor.sp=rep(NA,n.species)
+
+#loop over species    
+  for(s in 1:n.species)
+    {
+      route=new.cov.species.long.scaled[[s]]$routeID
+                        
+      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],
+                      patch.count20.species.scaled.mat.center.route[s,]
+                      )
+        # loop over species and routes                    
+        for(i in 1:nroutes)
+          {
+            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
+            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]
+            if(length(temp1)>5){
+                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
+                                } #End if statement
+          } #End routes loop
+                       
+    } #End species loop
+
+```
+
+
+
+## 
+
+![](/img/question.png){fig-align="center" width="300"}
+

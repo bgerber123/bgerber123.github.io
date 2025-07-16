@@ -2342,21 +2342,21 @@
     "href": "FW680A4/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\n\n\n\n\nAssigned Readings:\n\nBetts et al. 2022\nDumelle et al 2021. Only sections 1 to 1.1.2.\nWilliams and Brown 2019. Only sections 1 and 2.\n\nBackground Reading (not required):\n\nShmueli 2010.\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW680A4/week1.html#week-1",
     "href": "FW680A4/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\n\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\n\n\n\n\nAssigned Readings:\n\nBetts et al. 2022\nDumelle et al 2021. Only sections 1 to 1.1.2.\nWilliams and Brown 2019. Only sections 1 and 2.\n\nBackground Reading (not required):\n\nShmueli 2010.\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW680A4/Introduction.html#class-stuff",
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
-    "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
+    "section": "",
+    "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
@@ -2468,7 +2468,7 @@
     "href": "FW680A4/Introduction.html#learning",
     "title": "Wildlife Ecology Modeling",
     "section": "Learning",
-    "text": "Learning\n\n\nI do not know where you are starting"
+    "text": "Learning\n\n\n\n\n\nI do not know where you are starting"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-and-coding",
@@ -2559,7 +2559,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+    "text": "The language of R\n. . .\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-1",
@@ -2615,7 +2615,7 @@
     "href": "FW680A4/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\n\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
   },
   {
     "objectID": "FW680A4/Introduction.html#type-of-modeling",
@@ -2636,7 +2636,7 @@
     "href": "FW680A4/Introduction.html#assessment",
     "title": "Wildlife Ecology Modeling",
     "section": "Assessment",
-    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nDiscussions\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
+    "text": "Assessment\n\n\nAssessment Components\nPercentage of Grade\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nDiscussions\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
   },
   {
     "objectID": "FW680A4/Introduction.html#project-1",
@@ -2657,7 +2657,7 @@
     "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in the Modern Age",
-    "text": "Statistics in the Modern Age\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
+    "text": "Statistics in the Modern Age\n. . .\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
   },
   {
     "objectID": "FW680A4/Introduction.html#software",
@@ -2678,14 +2678,14 @@
     "href": "FW680A4/Introduction.html#why-use-r",
     "title": "Wildlife Ecology Modeling",
     "section": "Why use R?",
-    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\n\ndata management\nstatistics\nplotting / graphics"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-use-rstudio",
     "href": "FW680A4/Introduction.html#why-use-rstudio",
     "title": "Wildlife Ecology Modeling",
     "section": "Why use RStudio?",
-    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\n\nR Shiny: Interactive online apps\n\nR Markdown: Interactive documents\n\nQuarto: interactive articles, websites, blog, …\n\nPosit - Certified B corp"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-aim-1",
@@ -2699,7 +2699,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r-4",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
+    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n. . .\nobject = function(input1, input2)\n\n. . .\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
   },
   {
     "objectID": "FW680A4/week2.html",
@@ -2972,7 +2972,7 @@
     "href": "FW680A4/Introduction.html",
     "title": "Wildlife Ecology Modeling",
     "section": "",
-    "text": "Me: Brian Gerber\nClassroom: here, TuThu???\n\nLecture/Lab/Discussion\n\n\n. . .\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: XXXXX\nbrian.gerber@colostate.edu\n\n\n. . .\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)"
+    "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
   },
   {
     "objectID": "FW680A4/schedule.html#course-stuff-fw680a4",
@@ -3161,7 +3161,7 @@
     "href": "FW680A4/Introduction.html#science-practice",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Practice",
-    "text": "Science Practice\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Practice\n\nI am a pragmatist\n\n. . .\n\nThere are many ways to do great science\n\n. . .\n\nThere are more ways to do meh science\n\n. . .\n\nDisciplines have conventions\n\n. . .\n\nThere are foundations of scientific and statistical learning\n\n. . .\n\nKnow the why of your decisions\n\n. . .\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW680A4/Introduction.html#section",
@@ -3182,7 +3182,7 @@
     "href": "FW680A4/Introduction.html#code-organization",
     "title": "Wildlife Ecology Modeling",
     "section": "Code Organization",
-    "text": "Code Organization\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
+    "text": "Code Organization\n\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\n. . .\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
   },
   {
     "objectID": "FW680A4/Introduction.html#better",
@@ -8489,5 +8489,1111 @@
     "title": "High individual variability in space use by translocated, imperiled New England cottontail (Sylvilagus transitionalis)",
     "section": "Abstract",
     "text": "Abstract\nTranslocations are an established element of restoration plans for threatened species, but success in establishing new populations is often limited, highlighting the need for careful evaluation of translocation efforts. Variation among individuals may contribute to poorly placed translocations, particularly when there is variation in the spatial ecology of target species. As a test of this we investigated the spatial ecology of imperiled New England cottontail (Sylvilagus transitionalis Bangs, 1895) in Rhode Island, USA. We combined telemetry data with remotely-sensed vegetation data to evaluate the home ranges, resource selection, and survival of translocated cottontails at three sites, including one where we also tracked resident cottontails. Despite instances of alignment among individuals, we found a wide span of home range estimates and high individual variability on resource selection. Both of these results suggest that population-level inferences of translocated individuals may fail to capture important aspects of animal ecology at the individual level. Further, we found lower survival compared to residents at one of our sites and literature values for other resident populations. Our results suggest that there are benefits to considering variation among individuals when designing management plans to support translocations."
+  },
+  {
+    "objectID": "FW552/index.html",
+    "href": "FW552/index.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\n\nWeek 3 (Sep 8, 9)\n\n\n\nWeek 4 (Sep 15, 17)\n\n\n\nWeek 5 (Sep 22, 24)\n\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15)\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 22, 25)\n\n\n\nWeek 11 (Oct 27, OCt 29)\n\n\n\nWeek 12 (Nov 3, 5)\n\n\n\nWeek 13 (Nov 10, 12)\n\n\n\nWeek 14 (Nov 17, 19)\n\n\nWeek 15 (Nov 24, 26): No Classes\n\n\n\nWeek 16 (Dec 1, 3)\n\n\n\nWeek 17 (Dec 8, 10)\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+  },
+  {
+    "objectID": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
+    "href": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Course Overview\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\n\nWeek 3 (Sep 8, 9)\n\n\n\nWeek 4 (Sep 15, 17)\n\n\n\nWeek 5 (Sep 22, 24)\n\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15)\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 22, 25)\n\n\n\nWeek 11 (Oct 27, OCt 29)\n\n\n\nWeek 12 (Nov 3, 5)\n\n\n\nWeek 13 (Nov 10, 12)\n\n\n\nWeek 14 (Nov 17, 19)\n\n\nWeek 15 (Nov 24, 26): No Classes\n\n\n\nWeek 16 (Dec 1, 3)\n\n\n\nWeek 17 (Dec 8, 10)\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+  },
+  {
+    "objectID": "FW552/index.html#assigned-groups",
+    "href": "FW552/index.html#assigned-groups",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Species Distribution Model (10/8): Libby Mojica, Travis Rainey\nMark Recapture (10/11): Alex Badeaux, Noel Clark, Elke Tukker\nN mixture or Integrated Data Models (10/25): Sarah Gaulke, Sean Ingram\nAnimal Movement (10/29): Jeremy Alder, Becca Windell\nHabitat Selection (11/5): Waverly Davis, Lisa Roerk\nCommunity Modeling (11/12): Cat Adams, Bijoya Paul"
+  },
+  {
+    "objectID": "FW552/week1.html",
+    "href": "FW552/week1.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+  },
+  {
+    "objectID": "FW552/week1.html#week-1",
+    "href": "FW552/week1.html#week-1",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+  },
+  {
+    "objectID": "FW552/CourseOverview.html",
+    "href": "FW552/CourseOverview.html",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Name: Brian D. Gerber\nPosition/Affiliation Research Scientist and Assistant Unit Leader at U.S. Geological Survey, Colorado Cooperative Research Unit and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University.\nOffice: 202A Wagar, Colorado Cooperative Research Unit\nEmail: brian.gerber@colostate.edu\nOffice Hours: We 1:00pm - 2:00pm and by appointment\n\n\n\nCourse Number: FW 552\nFall 2024: Mo/We 3pm - 4:15\nCredits: 3\nWebsites: bgerber123.github.io/FW552/ (lecture and lab materials) and Canvas (Quizzes, Discussion, Lab Submissions, and Grading).\nSchedule: Subject to Change\nPrerequisites: A basic undergraduate statistics course is required (e.g. CSU’s Stat 301 Introduction to Applied Statistical Methods.\nText and Readings: Primarily we will use Thompson (2012). Sampling. Third Addition. All lecture and course materials will be provided.\nComputing: A computer will be necessary to work on coding assignments.\n\n\n\nThis course covers the core concepts of sampling design, including survey sampling theory and techniques, which provide a foundation for designing and interpreting fish and wildlife studies. After students learn concepts and issues in the application of sampling designs used in fish, wildlife and conservation biology.\n\n\n\nUpon successful completion of this course students will:\n\nIdentify different types of sampling designs and understand when to apply them\nUnderstand statistical estimators and their properties\nFrame a sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.\nUse newly acquired sampling knowledge and analyses to solve problems in fish and wildlife conservation and management.\nBe able to use fundamental code practices in the R programming language.\n\n\n\n\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nAssignments\n25%\n\n\nQuizzes\n25%\n\n\nTests\n20%\n\n\nProject\n20%\n\n\n\nTable 1: Grade breakdown by graded components\n\n\n\n\n\nLetter Grade\nPercentage Range\n\n\n\n\nA+\n100.00 to 96.67\n\n\nA\n96.67 to 93.33\n\n\nA-\n93.33 to 90.00\n\n\nB+\n90.00 to 86.67\n\n\nB\n86.67 to 83.33\n\n\nB-\n83.33 to 80.00\n\n\nC+\n80.00 to 76.67\n\n\nC\n76.67 to 70.00\n\n\nD\n70.00 to 60.00\n\n\nF\n60.00 to 00.00\n\n\n\nTable 1: Grade scheme from CSU\n\n\n\nIn-class lectures: Class periods will often include a lecture that which will incorporate instructor-led questions and short discussions.\nIn-class student-led discussions: Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others.\nOut-of-class assignments: Assignments will be common and help guide learning and provide feedback to the instructor.\nOut-of-class reading: Come prepared to class by having read and thought about the assigned readings; check the website for discussion points.\nOut-of-class quizzes: Quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation.\nGroup project: A group project will be used as a final assessment of the student’s integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#instructor",
+    "href": "FW552/CourseOverview.html#instructor",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Name: Brian D. Gerber\nPosition/Affiliation Research Scientist and Assistant Unit Leader at U.S. Geological Survey, Colorado Cooperative Research Unit and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University.\nOffice: 202A Wagar, Colorado Cooperative Research Unit\nEmail: brian.gerber@colostate.edu\nOffice Hours: We 1:00pm - 2:00pm and by appointment"
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#course-information",
+    "href": "FW552/CourseOverview.html#course-information",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Course Number: FW 552\nFall 2024: Mo/We 3pm - 4:15\nCredits: 3\nWebsites: bgerber123.github.io/FW552/ (lecture and lab materials) and Canvas (Quizzes, Discussion, Lab Submissions, and Grading).\nSchedule: Subject to Change\nPrerequisites: A basic undergraduate statistics course is required (e.g. CSU’s Stat 301 Introduction to Applied Statistical Methods.\nText and Readings: Primarily we will use Thompson (2012). Sampling. Third Addition. All lecture and course materials will be provided.\nComputing: A computer will be necessary to work on coding assignments."
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#course-description",
+    "href": "FW552/CourseOverview.html#course-description",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "This course covers the core concepts of sampling design, including survey sampling theory and techniques, which provide a foundation for designing and interpreting fish and wildlife studies. After students learn concepts and issues in the application of sampling designs used in fish, wildlife and conservation biology."
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#course-learning-objectives",
+    "href": "FW552/CourseOverview.html#course-learning-objectives",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Upon successful completion of this course students will:\n\nIdentify different types of sampling designs and understand when to apply them\nUnderstand statistical estimators and their properties\nFrame a sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.\nUse newly acquired sampling knowledge and analyses to solve problems in fish and wildlife conservation and management.\nBe able to use fundamental code practices in the R programming language."
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#assessment",
+    "href": "FW552/CourseOverview.html#assessment",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Assessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nAssignments\n25%\n\n\nQuizzes\n25%\n\n\nTests\n20%\n\n\nProject\n20%\n\n\n\nTable 1: Grade breakdown by graded components\n\n\n\n\n\nLetter Grade\nPercentage Range\n\n\n\n\nA+\n100.00 to 96.67\n\n\nA\n96.67 to 93.33\n\n\nA-\n93.33 to 90.00\n\n\nB+\n90.00 to 86.67\n\n\nB\n86.67 to 83.33\n\n\nB-\n83.33 to 80.00\n\n\nC+\n80.00 to 76.67\n\n\nC\n76.67 to 70.00\n\n\nD\n70.00 to 60.00\n\n\nF\n60.00 to 00.00\n\n\n\nTable 1: Grade scheme from CSU"
+  },
+  {
+    "objectID": "FW552/CourseOverview.html#student-experiences-and-pedagogical-techniques",
+    "href": "FW552/CourseOverview.html#student-experiences-and-pedagogical-techniques",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "In-class lectures: Class periods will often include a lecture that which will incorporate instructor-led questions and short discussions.\nIn-class student-led discussions: Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others.\nOut-of-class assignments: Assignments will be common and help guide learning and provide feedback to the instructor.\nOut-of-class reading: Come prepared to class by having read and thought about the assigned readings; check the website for discussion points.\nOut-of-class quizzes: Quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation.\nGroup project: A group project will be used as a final assessment of the student’s integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation."
+  },
+  {
+    "objectID": "FW552/week9.html",
+    "href": "FW552/week9.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nKery and Schaub Ch13 (sections 13.1 to 13.4)\n\n\n\n\n\nBoard work defining the occupancy model hierarchically\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+  },
+  {
+    "objectID": "FW552/week9.html#week-9",
+    "href": "FW552/week9.html#week-9",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nKery and Schaub Ch13 (sections 13.1 to 13.4)\n\n\n\n\n\nBoard work defining the occupancy model hierarchically\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+  },
+  {
+    "objectID": "FW552/week7.html",
+    "href": "FW552/week7.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nStatistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\nNo lab to turn in next week.\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods).\n\n Moudry et al. 2024 (data considerations)."
+  },
+  {
+    "objectID": "FW552/week7.html#week-7",
+    "href": "FW552/week7.html#week-7",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nStatistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\nNo lab to turn in next week.\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nWidmer et al 2021\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods).\n\n Moudry et al. 2024 (data considerations)."
+  },
+  {
+    "objectID": "FW552/week5.html",
+    "href": "FW552/week5.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+  },
+  {
+    "objectID": "FW552/week5.html#week-5",
+    "href": "FW552/week5.html#week-5",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+  },
+  {
+    "objectID": "FW552/week3.html",
+    "href": "FW552/week3.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+  },
+  {
+    "objectID": "FW552/week3.html#week-3",
+    "href": "FW552/week3.html#week-3",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+  },
+  {
+    "objectID": "FW552/week16.html",
+    "href": "FW552/week16.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Noel Clark\nLibby Mojica\nSean Ingram\nAlex Badeaux\n\n\n\n\n\n\n\n\n\n\n\nTravis Rainey\nBijoya Paul\nWaverly Davis\nLisa Roerk\nBecca Windell\nSarah Gaulke\nCat Adams\nJeremy Alder\nElke Tukker\n\n\n\n\n\nRelative to where you were before the class started,\n\n\nrank your knowledge of statistics in wildlife ecology\nrank your comfort with statistics in wildlife ecology\nrank your interest with statistics in wildlife ecology\nrank your coding knowledge\n\n\nWhat is one thing you learned that was useful to you?\nWhat is something you would like to dive more into?\nRank the course difficulty relative to other graduate-level classes?\nRank the work load relative to other 3 credit graduate-level classes?\nRegarding class organization, what do you recommend changing?\nRegarding any aspect of the class, what do you think could be changed to improve your experience?"
+  },
+  {
+    "objectID": "FW552/week16.html#week-16",
+    "href": "FW552/week16.html#week-16",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Noel Clark\nLibby Mojica\nSean Ingram\nAlex Badeaux\n\n\n\n\n\n\n\n\n\n\n\nTravis Rainey\nBijoya Paul\nWaverly Davis\nLisa Roerk\nBecca Windell\nSarah Gaulke\nCat Adams\nJeremy Alder\nElke Tukker\n\n\n\n\n\nRelative to where you were before the class started,\n\n\nrank your knowledge of statistics in wildlife ecology\nrank your comfort with statistics in wildlife ecology\nrank your interest with statistics in wildlife ecology\nrank your coding knowledge\n\n\nWhat is one thing you learned that was useful to you?\nWhat is something you would like to dive more into?\nRank the course difficulty relative to other graduate-level classes?\nRank the work load relative to other 3 credit graduate-level classes?\nRegarding class organization, what do you recommend changing?\nRegarding any aspect of the class, what do you think could be changed to improve your experience?"
+  },
+  {
+    "objectID": "FW552/week13.html",
+    "href": "FW552/week13.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Statistcal Model\nBayesian Community Occupancy Model via Stan\nFor details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.\n\n\n\n\n\nSpecies Richness vs Species Diversity?\nThe vegan R package has a number of common community metrics.\n\n\n\n\n\n\n\n\n\n\nNo class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project."
+  },
+  {
+    "objectID": "FW552/week13.html#week-13",
+    "href": "FW552/week13.html#week-13",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Statistcal Model\nBayesian Community Occupancy Model via Stan\nFor details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.\n\n\n\n\n\nSpecies Richness vs Species Diversity?\nThe vegan R package has a number of common community metrics.\n\n\n\n\n\n\n\n\n\n\nNo class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project."
+  },
+  {
+    "objectID": "FW552/week11.html",
+    "href": "FW552/week11.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Readings for next class:\n\nBackground Reading (not required):\n\nNathan et al 2008 - Foundational bit of science\nNathan et al. 2022 - Big data science\nSigner et al 2018 - amt R package \nCalabrese et al. 2016 - ctmm R packageguide\nSilva et al. 2021 - autocorrelated kernel density (AKDE) home range review\nMcClintock et al. 2018 - momentuHMM R package\n\n\n\nBackground Videos (not required):\n\n\nMovement Ecology Théo Michelot. February 7, 2022; Code\n\nIntro. Animal Movement Ecology - Josh Cullen\n\n\n\nBackground Resources (not required):\n\nAnimove Resources\nContinuous-time movement modeling\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"amt\",\"tidygraph\",\"ctmm\",\"ggraph\"))\n\n\n\nReadings for next class:\n\n Smith et al. 2022.pdf\nNorthrup et al. 2022 (Intro through ‘How are selection functions fit?’)"
+  },
+  {
+    "objectID": "FW552/week11.html#week-11",
+    "href": "FW552/week11.html#week-11",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Readings for next class:\n\nBackground Reading (not required):\n\nNathan et al 2008 - Foundational bit of science\nNathan et al. 2022 - Big data science\nSigner et al 2018 - amt R package \nCalabrese et al. 2016 - ctmm R packageguide\nSilva et al. 2021 - autocorrelated kernel density (AKDE) home range review\nMcClintock et al. 2018 - momentuHMM R package\n\n\n\nBackground Videos (not required):\n\n\nMovement Ecology Théo Michelot. February 7, 2022; Code\n\nIntro. Animal Movement Ecology - Josh Cullen\n\n\n\nBackground Resources (not required):\n\nAnimove Resources\nContinuous-time movement modeling\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"amt\",\"tidygraph\",\"ctmm\",\"ggraph\"))\n\n\n\nReadings for next class:\n\n Smith et al. 2022.pdf\nNorthrup et al. 2022 (Intro through ‘How are selection functions fit?’)"
+  },
+  {
+    "objectID": "FW552/schedule.html",
+    "href": "FW552/schedule.html",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Schedule\n\n\nCourse Overview\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
+  },
+  {
+    "objectID": "FW552/schedule.html#course-stuff",
+    "href": "FW552/schedule.html#course-stuff",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "",
+    "text": "Schedule\n\n\nCourse Overview\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated."
+  },
+  {
+    "objectID": "FW552/schedule.html#schedule",
+    "href": "FW552/schedule.html#schedule",
+    "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nInstall R and RStudio. Discussion Post\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nQuiz 1\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\n\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+  },
+  {
+    "objectID": "FW552/Introduction.html",
+    "href": "FW552/Introduction.html",
+    "title": "Wildlife Ecology Modeling",
+    "section": "",
+    "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
+  },
+  {
+    "objectID": "FW552/Introduction.html#class-stuff",
+    "href": "FW552/Introduction.html#class-stuff",
+    "title": "FW552 Applied Sampling",
+    "section": "Class Stuff",
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: Engineering E102\n\nLecture/Discussion/Problem Solving\n\nWhen: Mo/We 3 - 4:15pm\n\n\n\nMy Office: 202A Wagar, Cooperative Research Unit\n\nOffice hours: We 1pm - 2pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Assignments will often require a computer"
+  },
+  {
+    "objectID": "FW552/Introduction.html#what-is-this-course",
+    "href": "FW552/Introduction.html#what-is-this-course",
+    "title": "FW552 Applied Sampling",
+    "section": "What is this course?",
+    "text": "What is this course?\nPrimarily:\n\nconnecting things we care about (fish/wildlife/habitat) with sampling principles"
+  },
+  {
+    "objectID": "FW552/Introduction.html#assessment",
+    "href": "FW552/Introduction.html#assessment",
+    "title": "FW552 Applied Sampling",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nAssignments\n25%\n\n\nQuizzes\n25%\n\n\nTests\n20%\n\n\nProject\n20%"
+  },
+  {
+    "objectID": "FW552/Introduction.html#project",
+    "href": "FW552/Introduction.html#project",
+    "title": "FW552 Applied Sampling",
+    "section": "Project",
+    "text": "Project\n????"
+  },
+  {
+    "objectID": "FW552/Introduction.html#course-learning-objectives",
+    "href": "FW552/Introduction.html#course-learning-objectives",
+    "title": "FW552 Applied Sampling",
+    "section": "Course Learning Objectives",
+    "text": "Course Learning Objectives\nUpon successful completion of this course students will be able to:\n\n\nIdentify different types of sampling designs and understand when to apply them\nUnderstand statistical estimators and their properties\nFrame a fish and wildlife sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.\nBe able to use fundamental code practices in the R programming language."
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-is-this-class-useful",
+    "href": "FW552/Introduction.html#why-is-this-class-useful",
+    "title": "FW552 Applied Sampling",
+    "section": "Why is this class useful?",
+    "text": "Why is this class useful?\n\nFundamental to scientific learning\nHave options in designing an empirical study\nInterpret and frame learning when reading the literature\nCollaborate with colleagues/statisticians"
+  },
+  {
+    "objectID": "FW552/Introduction.html#software",
+    "href": "FW552/Introduction.html#software",
+    "title": "FW552 Applied Sampling",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-learn-to-code",
+    "href": "FW552/Introduction.html#why-learn-to-code",
+    "title": "FW552 Applied Sampling",
+    "section": "Why learn to code?",
+    "text": "Why learn to code?\n\n\nefficiency\ntransparency\nflexibility in application\nshareable\nmarketable skill\nneeded for publications"
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-use-r",
+    "href": "FW552/Introduction.html#why-use-r",
+    "title": "FW552 Applied Sampling",
+    "section": "Why use R?",
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-use-rstudio",
+    "href": "FW552/Introduction.html#why-use-rstudio",
+    "title": "FW552 Applied Sampling",
+    "section": "Why use RStudio?",
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
+  },
+  {
+    "objectID": "FW552/Introduction.html#type-of-modeling",
+    "href": "FW552/Introduction.html#type-of-modeling",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Type of Modeling",
+    "text": "Type of Modeling\n\nparametric\nprobabilistic\ngenerative\ninferential and/or predictive"
+  },
+  {
+    "objectID": "FW552/Introduction.html#statistics-in-the-modern-age",
+    "href": "FW552/Introduction.html#statistics-in-the-modern-age",
+    "title": "FW552 Applied Sampling",
+    "section": "Statistics in the Modern Age",
+    "text": "Statistics in the Modern Age\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
+  },
+  {
+    "objectID": "FW552/Introduction.html#coding-in-the-modern-age",
+    "href": "FW552/Introduction.html#coding-in-the-modern-age",
+    "title": "FW552 Applied Sampling",
+    "section": "Coding in the Modern Age",
+    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower than packages\nDocument/Annotate code and publish it online\nFile management is important!"
+  },
+  {
+    "objectID": "FW552/Introduction.html#a-graduate-students-dilemma",
+    "href": "FW552/Introduction.html#a-graduate-students-dilemma",
+    "title": "Wildlife Ecology Modeling",
+    "section": "A Graduate Student’s Dilemma",
+    "text": "A Graduate Student’s Dilemma\nYou need to know….\n\n\n\nfield techniques\nlogistics / planning\npeople/advisor management\ninstitutional bureaucracy\necological theory\nwildlife mgmt principles\nconservation biology principles\nstudy design\ndata management\n\n\n\npublic speaking\nindependent and team work\ngraphic/visual arts\n‘the literature’\nthe job market\nhow to write a manuscript/thesis\nwriting/sharing coding\nstatistical modeling\n…"
+  },
+  {
+    "objectID": "FW552/Introduction.html#learning",
+    "href": "FW552/Introduction.html#learning",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Learning",
+    "text": "Learning\n\n\n\n\n\nI do not know where you are starting"
+  },
+  {
+    "objectID": "FW552/Introduction.html#our-aim",
+    "href": "FW552/Introduction.html#our-aim",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Our Aim",
+    "text": "Our Aim\nWhat model did you fit? Why? How?"
+  },
+  {
+    "objectID": "FW552/Introduction.html#think-statistically",
+    "href": "FW552/Introduction.html#think-statistically",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Think Statistically",
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\n\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
+    "href": "FW552/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
+    "title": "FW552 Applied Sampling",
+    "section": "Why is statistics and ecological modeling so difficult?",
+    "text": "Why is statistics and ecological modeling so difficult?"
+  },
+  {
+    "objectID": "FW552/Introduction.html#my-background",
+    "href": "FW552/Introduction.html#my-background",
+    "title": "FW552 Applied Sampling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW552/Introduction.html#my-background-1",
+    "href": "FW552/Introduction.html#my-background-1",
+    "title": "Applied Sampling",
+    "section": "My Background",
+    "text": "My Background"
+  },
+  {
+    "objectID": "FW552/Introduction.html#science-practice",
+    "href": "FW552/Introduction.html#science-practice",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Science Practice",
+    "text": "Science Practice\n\nI am a pragmatist\n\n. . .\n\nThere are many ways to do great science\n\n. . .\n\nThere are more ways to do meh science\n\n. . .\n\nDisciplines have conventions\n\n. . .\n\nThere are foundations of scientific and statistical learning\n\n. . .\n\nKnow the why of your decisions\n\n. . .\n\nAsk lots of questions to everybody all the time"
+  },
+  {
+    "objectID": "FW552/Introduction.html#teaching-philosophy",
+    "href": "FW552/Introduction.html#teaching-philosophy",
+    "title": "FW552 Applied Sampling",
+    "section": "Teaching Philosophy",
+    "text": "Teaching Philosophy\n\nLearning is a choice (in every moment)\nAn inclusive environment is paramount for learning\nCommunication is everything\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning. But…."
+  },
+  {
+    "objectID": "FW552/Introduction.html#website",
+    "href": "FW552/Introduction.html#website",
+    "title": "FW552 Applied Sampling",
+    "section": "Website",
+    "text": "Website\nMost Material\nhttps://bgerber123.github.io/FW552/\n\nQuizzes and Assignments\nhttps://canvas.colostate.edu/"
+  },
+  {
+    "objectID": "FW552/Introduction.html#section",
+    "href": "FW552/Introduction.html#section",
+    "title": "FW552 Applied Sampling",
+    "section": "",
+    "text": "Words Matter"
+  },
+  {
+    "objectID": "FW552/Introduction.html#rstudio",
+    "href": "FW552/Introduction.html#rstudio",
+    "title": "Applied Sampling",
+    "section": "RStudio",
+    "text": "RStudio\nWhat does each panel do?"
+  },
+  {
+    "objectID": "FW552/Introduction.html#the-language-of-r",
+    "href": "FW552/Introduction.html#the-language-of-r",
+    "title": "Applied Sampling",
+    "section": "The language of R",
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+  },
+  {
+    "objectID": "FW552/Introduction.html#the-language-of-r-1",
+    "href": "FW552/Introduction.html#the-language-of-r-1",
+    "title": "Applied Sampling",
+    "section": "The language of R",
+    "text": "The language of R\nObjects\n\n# y is an 'object' that is assigned the value 3\ny = 3\ny\n\n[1] 3"
+  },
+  {
+    "objectID": "FW552/Introduction.html#the-language-of-r-2",
+    "href": "FW552/Introduction.html#the-language-of-r-2",
+    "title": "Applied Sampling",
+    "section": "The language of R",
+    "text": "The language of R\n\n\nValues\n\nnumeric\ninteger\ncharacter\nfactor\n\n\nObjects\n\nvector\nmatrix\narray\nlist\ndataframe\nS3, S4, S5, and beyond"
+  },
+  {
+    "objectID": "FW552/Introduction.html#the-language-of-r-3",
+    "href": "FW552/Introduction.html#the-language-of-r-3",
+    "title": "Applied Sampling",
+    "section": "The language of R",
+    "text": "The language of R\nFunctions\n‘does stuff’; creates or manipulates objects\n\n‘Arguments’ are the types of things a function is asking for; the inputs"
+  },
+  {
+    "objectID": "FW552/Introduction.html#the-language-of-r-4",
+    "href": "FW552/Introduction.html#the-language-of-r-4",
+    "title": "Applied Sampling",
+    "section": "The language of R",
+    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW552/Introduction.html#some-useful-functions",
+    "href": "FW552/Introduction.html#some-useful-functions",
+    "title": "Applied Sampling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\nfor loops\n\nsave.this=c()\nfor(i in 1:10){\n  save.this[i] =  1-i\n}"
+  },
+  {
+    "objectID": "FW552/Introduction.html#some-useful-functions-1",
+    "href": "FW552/Introduction.html#some-useful-functions-1",
+    "title": "Applied Sampling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\nCreate your own function\n\nmy.mean.func = function(x){\n                           sum(x)/length(x)\n                          }\n\nmy.mean.func(\n             c(5,4,7,2,7,1)\n             )\n\n[1] 4.333333"
+  },
+  {
+    "objectID": "FW552/Introduction.html#some-useful-functions-2",
+    "href": "FW552/Introduction.html#some-useful-functions-2",
+    "title": "Applied Sampling",
+    "section": "Some useful functions",
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.12204516 -0.15106716 -0.41753012  0.30787093 -0.71989564  0.23465275\n [7] -0.27924590  0.04498868 -0.05842172  0.49578825\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.2 0.2 0.2 0.1 0.4 0.2 0.3 0.0 0.3"
+  },
+  {
+    "objectID": "FW552/Introduction.html#code-organization",
+    "href": "FW552/Introduction.html#code-organization",
+    "title": "Applied Sampling",
+    "section": "Code Organization",
+    "text": "Code Organization\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
+  },
+  {
+    "objectID": "FW552/Introduction.html#better",
+    "href": "FW552/Introduction.html#better",
+    "title": "Applied Sampling",
+    "section": "Better…",
+    "text": "Better…\n\n# Create Storage objects\n  cor.sp.route.cor=vector(\"list\",n.species)\n  cor.sp=rep(NA,n.species)\n\n#loop over species    \n  for(s in 1:n.species)\n    {\n      route=new.cov.species.long.scaled[[s]]$routeID\n                        \n      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],\n                      patch.count20.species.scaled.mat.center.route[s,]\n                      )\n        # loop over species and routes                    \n        for(i in 1:nroutes)\n          {\n            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n            if(length(temp1)&gt;5){\n                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n                                } #End if statement\n          } #End routes loop\n                       \n    } #End species loop"
+  },
+  {
+    "objectID": "FW552/Definitions.html",
+    "href": "FW552/Definitions.html",
+    "title": "Coding and Mathematical Definitions",
+    "section": "",
+    "text": "the lines of code and comments that you are writing (filename.R).\n\nyour R script, any variables you have created, and your current R environment (filename.Rproj).\n\na set of functions/code that you can load into your script (examples - dplyr, sp).\n: does not run as code, starts with #. You use comments to explain what your code is doing in plain langauge.\n\na unit of information that is stored in the workspace (computer memory) and can be recalled or manipulated. ‘a’ is an object. Specifically, a vector of length 3.\na = c(3, 2, 1)\n \na piece of information within an object. The 1st element of a is…\na[1]\n[1] 3\n \n\na command to take inputs (objects or elements) and manipulates it to provide an output, which can be saved as a new object.\nfun.text = function(x) {\n    paste(\"Your input variable is \", x, sep = \"\")\n}\n\nfun.text(4)\n[1] “Your input variable is 4”\nfun.text(\"INPUT\")\n[1] “Your input variable is INPUT”\n \n\na specific command within a function. Many functional arguments are preset and do not need to be explitly stated.\nx = c(1, 2, 3, NA)\nmean(x)\n[1] NA\n# na.rm is an argument of the function mean to ignore the missing value. Its\n# preset is FALSE. If you have na's you need to change the argument to 'TRUE'.\nmean(x, na.rm = TRUE)\n[1] 2\n\n1 row, many columns OR 1 column many rows. Can be numbers of characters.\nv = c(4, 1, 3)\nis.vector(v)\n[1] TRUE\nlength(v)\n[1] 3\nMath notation (capitalized & lower case): \\(\\vec{v}\\)  or  \\(\\textbf{v}\\)\n \n\\[\\begin{align}\n  \\textbf{v} &= \\begin{bmatrix}\n           4 &\n           1 &\n           3\n\\end{bmatrix}\n\\end{align}\\]\n\nGeneralization of vectors. Can have 1 or more rows and columns. Only numbers.\n\nM = matrix(1:10, nrow = 2)\nM\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    3    5    7    9\n[2,]    2    4    6    8   10\n\ndim(M)\n\n[1] 2 5\n\nis.vector(M)\n\n[1] FALSE\n\nis.matrix(M)\n\n[1] TRUE\n\n\nMath notation (capitalized & upper case): \\(\\textbf{M}\\)\n \n\\[\\begin{align}\n  \\textbf{M} &= \\begin{bmatrix}\n           1 & 3 & 5 & 7 & 9 \\\\\n           2 & 4 & 6 & 8 & 10\n\\end{bmatrix}\n\\end{align}\\]\n \n\nGeneralization of matrices. Can be n dimensional. Only numbers.\n\narr = array(1:100, dim = c(3, 4, 3))\narr\n\n, , 1\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12\n\n, , 2\n\n     [,1] [,2] [,3] [,4]\n[1,]   13   16   19   22\n[2,]   14   17   20   23\n[3,]   15   18   21   24\n\n, , 3\n\n     [,1] [,2] [,3] [,4]\n[1,]   25   28   31   34\n[2,]   26   29   32   35\n[3,]   27   30   33   36\n\ndim(arr)\n\n[1] 3 4 3\n\nis.vector(arr)\n\n[1] FALSE\n\nis.matrix(arr)\n\n[1] FALSE\n\nis.array(arr)\n\n[1] TRUE\n\n\n \n\nCan store any type of objects together.\n\nlist1 = vector(\"list\", 2)\nlist1[[1]] = v\nlist1[[2]] = M\nlist1[[3]] = arr\n\nis.list(list1)\n\n[1] TRUE\n\nlength(list1)\n\n[1] 3\n\nlist1[[1]]\n\n[1] 4 1 3\n\n\n\nTo do a task many times. Simple, but inefficient\n\n#First, create a large matrix\nx &lt;- matrix(rnorm(400*4000), ncol=400)\n\n#Second, create a vector to store results\nmx &lt;- rep(NA, nrow(x))\n\n#Third, for each row of the matrix, find the maximum value and store it in mx using \n#a loop. We will do this from index 1 to the max number of rows (nrow(x)). We will \n#iterate using index i.\n\nfor(i in 1:nrow(x)){\n  mx[i] &lt;- max(x[i,])\n}\n\n\nused to return an output based on specified conditions\n\n# Syntax:\nIf (test_expression) {\n  Statement \n}\n\n\n# Example:\na = c(5,7,2,9)\nifelse(a %% 2 == 0,\"even\",\"odd\")\n\n[1] \"odd\"  \"odd\"  \"even\" \"odd\" \n\n#OR\n\nx &lt;- 5\nif(x &gt; 0){\n  print(\"Positive number\")\n}\n\n[1] \"Positive number\"\n\n\n\nTo do a task many times using vectorization. Much faster then a for loop.\n\nx &lt;- matrix(rnorm(400*4000), ncol=400)\n\n# The 1 indicates to the function 'max' on the rows of the object 'x'. A 2 would \n# make this function should be applied to each column of the object 'x'.\nmx2 &lt;- apply(x, 1, max)\n\nAnother Example\n\ndataTable &lt;- cbind(x1 = 1, x2 = (c(4:0, 2:6)))\ndataTable\n\n      x1 x2\n [1,]  1  4\n [2,]  1  3\n [3,]  1  2\n [4,]  1  1\n [5,]  1  0\n [6,]  1  2\n [7,]  1  3\n [8,]  1  4\n [9,]  1  5\n[10,]  1  6\n\n# Sum each of the rows of the data table\napply(dataTable, MARGIN = 1, FUN = sum)  \n\n [1] 5 4 3 2 1 3 4 5 6 7\n\n# Now sum the columns\napply(dataTable, MARGIN = 2, FUN = sum)\n\nx1 x2 \n10 30 \n\n\n\nTo do a task many times using vectorization for each list element.\n\nlist1 &lt;- list(1:20, 1:5, 1:100)\nlistOutput &lt;- lapply(list1, FUN = quantile, probs = c(0.025, 0.975))\nlistOutput\n\n[[1]]\n  2.5%  97.5% \n 1.475 19.525 \n\n[[2]]\n 2.5% 97.5% \n  1.1   4.9 \n\n[[3]]\n  2.5%  97.5% \n 3.475 97.525 \n\nis.list(listOutput) \n\n[1] TRUE\n\n\n\ntakes lists, vectors or data frames as input and gives output in vector or matrix.\n\nlistOutput2 &lt;- sapply(list1, FUN = quantile, probs = c(0.025, 0.975))\nlistOutput2 \n\n        [,1] [,2]   [,3]\n2.5%   1.475  1.1  3.475\n97.5% 19.525  4.9 97.525\n\nis.list(listOutput2) \n\n[1] FALSE\n\nis.matrix(listOutput2) \n\n[1] TRUE\n\n\n\nallows you to apply a function to elements of a matrix.\n\nl1 &lt;- list(a = c(1:10), b = c(11:20))\nl2 &lt;- list(c = c(80:89), d = c(90:99))\n\n# sum the corresponding elements of l1 and l2\nmapply(sum, l1$a, l1$b, l2$c, l2$d)\n\n [1] 182 186 190 194 198 202 206 210 214 218"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html",
+    "href": "FW552/Rknowledge.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "We will regularly use the R programming language to manipulate data and objects, create figures, and use functions.\n\nI expect students to know some fundamentals of base R.\n\nI am not expecting advanced knowledge of highly specialized and efficient programming.\n\nMore so, I don’t want learning base R to be an impediment of understanding what we are trying to accomplish."
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#fw-680a4-wildlife-ecology-modeling",
+    "href": "FW552/Rknowledge.html#fw-680a4-wildlife-ecology-modeling",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "We will regularly use the R programming language to manipulate data and objects, create figures, and use functions.\n\nI expect students to know some fundamentals of base R.\n\nI am not expecting advanced knowledge of highly specialized and efficient programming.\n\nMore so, I don’t want learning base R to be an impediment of understanding what we are trying to accomplish."
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#objects",
+    "href": "FW552/Rknowledge.html#objects",
+    "title": "Brian D. Gerber",
+    "section": "Objects",
+    "text": "Objects\nSome things I expect students to know\n\nwhat an object  is\n\nhow to subset and manipulate different types of objects\n\nvectors, lists, matrices, dataframes, etc.\n\n\n\nE.g…..\n\n\n# A vector of integers stored as an object...\n\nvec = seq(1, 10)\n\nvec\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n# A Matrix...\n\nmat = matrix(vec, nrow = 2, ncol = 5)\n\nmat[2, ]\n\n[1]  2  4  6  8 10\n\n# A list\n\nmy.list = list(vec, mat)\n\nmy.list[[2]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    3    5    7    9\n[2,]    2    4    6    8   10"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#access",
+    "href": "FW552/Rknowledge.html#access",
+    "title": "Brian D. Gerber",
+    "section": "Access",
+    "text": "Access\nAccessing a dataframe\nE.g…..\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#access-1",
+    "href": "FW552/Rknowledge.html#access-1",
+    "title": "Brian D. Gerber",
+    "section": "Access",
+    "text": "Access\nAccessing a dataframe\nE.g…..\n\nmtcars$mpg\n\n [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4\n[16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7\n[31] 15.0 21.4\n\nmtcars[, 1]\n\n [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4\n[16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7\n[31] 15.0 21.4\n\nmtcars[\"mpg\"]\n\n                     mpg\nMazda RX4           21.0\nMazda RX4 Wag       21.0\nDatsun 710          22.8\nHornet 4 Drive      21.4\nHornet Sportabout   18.7\nValiant             18.1\nDuster 360          14.3\nMerc 240D           24.4\nMerc 230            22.8\nMerc 280            19.2\nMerc 280C           17.8\nMerc 450SE          16.4\nMerc 450SL          17.3\nMerc 450SLC         15.2\nCadillac Fleetwood  10.4\nLincoln Continental 10.4\nChrysler Imperial   14.7\nFiat 128            32.4\nHonda Civic         30.4\nToyota Corolla      33.9\nToyota Corona       21.5\nDodge Challenger    15.5\nAMC Javelin         15.2\nCamaro Z28          13.3\nPontiac Firebird    19.2\nFiat X1-9           27.3\nPorsche 914-2       26.0\nLotus Europa        30.4\nFord Pantera L      15.8\nFerrari Dino        19.7\nMaserati Bora       15.0\nVolvo 142E          21.4"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#indexing",
+    "href": "FW552/Rknowledge.html#indexing",
+    "title": "Brian D. Gerber",
+    "section": "Indexing",
+    "text": "Indexing\nIndexing a dataframe\nE.g…..\n\n# find the location of certain values\n\nwhich(mtcars$mpg &gt; 20)\n\n [1]  1  2  3  4  8  9 18 19 20 21 26 27 28 32\n\n# manipulating those elements\n\nmtcars$mpg[which(mtcars$mpg &gt; 20)] = NA\nmtcars$mpg\n\n [1]   NA   NA   NA   NA 18.7 18.1 14.3   NA   NA 19.2 17.8 16.4 17.3 15.2 10.4\n[16] 10.4 14.7   NA   NA   NA   NA 15.5 15.2 13.3 19.2   NA   NA   NA 15.8 19.7\n[31] 15.0   NA"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#function",
+    "href": "FW552/Rknowledge.html#function",
+    "title": "Brian D. Gerber",
+    "section": "function",
+    "text": "function\nWhat a function  is\n\nhow to specify attributes of a function\nhow to wrap functions\n\nE.g…..\n\n\n# Specifying attributes of a function\n\nmean(mtcars$mpg, na.rm = TRUE)\n\n[1] 15.9"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#function-1",
+    "href": "FW552/Rknowledge.html#function-1",
+    "title": "Brian D. Gerber",
+    "section": "function",
+    "text": "function\nE.g…..\n\n# Wrapping functions\n\nsim = rnorm(10, mean = mean(mtcars$mpg, na.rm = TRUE), sd = sd(mtcars$mpg, na.rm = TRUE))\n\nsim\n\n [1] 16.61516 18.56213 17.58267 15.72596 14.23371 16.84377 16.18781 16.29221\n [9] 14.45965 16.95255"
+  },
+  {
+    "objectID": "FW552/Rknowledge.html#last",
+    "href": "FW552/Rknowledge.html#last",
+    "title": "Brian D. Gerber",
+    "section": "Last",
+    "text": "Last\nEveryone codes differently.\n\nYou may use tidy over base R. That is fine.\n\nIf you are concerned about coding, talk to Brian (202A Wagar)\n\nIf you need resources for learning R, please go here and click on the tab Learning R."
+  },
+  {
+    "objectID": "FW552/week10.html",
+    "href": "FW552/week10.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture (updated) \nIPM Script \n\n\nReadings for next class:\n\nMcCaffery et al. 2016 \nKery and Kellner ch20 (section 20.1) \n\n\nBackground Reading (not required):\n\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Huggler et al. 2022 \n Wittemyer et al. 2019"
+  },
+  {
+    "objectID": "FW552/week10.html#week-10",
+    "href": "FW552/week10.html#week-10",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture (updated) \nIPM Script \n\n\nReadings for next class:\n\nMcCaffery et al. 2016 \nKery and Kellner ch20 (section 20.1) \n\n\nBackground Reading (not required):\n\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Huggler et al. 2022 \n Wittemyer et al. 2019"
+  },
+  {
+    "objectID": "FW552/week12.html",
+    "href": "FW552/week12.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Readings for next class:\n\nA plain language review for modeling animal habitat-selection (draft) \n\n\n\nThe assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"terra\",\"raster\",\"amt\",\"MASS\",\"sp\"))\n\n\n\nWright et al 2020"
+  },
+  {
+    "objectID": "FW552/week12.html#week-12",
+    "href": "FW552/week12.html#week-12",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Readings for next class:\n\nA plain language review for modeling animal habitat-selection (draft) \n\n\n\nThe assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"terra\",\"raster\",\"amt\",\"MASS\",\"sp\"))\n\n\n\nWright et al 2020"
+  },
+  {
+    "objectID": "FW552/week2.html",
+    "href": "FW552/week2.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+  },
+  {
+    "objectID": "FW552/week2.html#week-2",
+    "href": "FW552/week2.html#week-2",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+  },
+  {
+    "objectID": "FW552/week4.html",
+    "href": "FW552/week4.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
+  },
+  {
+    "objectID": "FW552/week4.html#week-4",
+    "href": "FW552/week4.html#week-4",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
+  },
+  {
+    "objectID": "FW552/week6.html",
+    "href": "FW552/week6.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+  },
+  {
+    "objectID": "FW552/week6.html#week-6",
+    "href": "FW552/week6.html#week-6",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+  },
+  {
+    "objectID": "FW552/week8.html",
+    "href": "FW552/week8.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "What was the objective of the modeling, and how do you feel the authors did in addressing the objective?\nHow did the authors address potential problems that come from using presence-only data (e.g., spatial autocorrelation, pseudo-absences)? Was this effort adequate?\nWhat other aspects of ecological processes are not addressed by the objectives? Could these have been incorporated in this study?\nWere their any findings you found particularly important? Anything that stood out to you, good or bad, in the methodology or interpretation?\nIs the study area and scale of analysis relevant to each of the 4 salamanders?\nAre the prediction maps useful or relevant for salamander conservation?\n\n\n\n\nWhat is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class:\n\nWildman et al 2024\nKery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011"
+  },
+  {
+    "objectID": "FW552/week8.html#week-8",
+    "href": "FW552/week8.html#week-8",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "What was the objective of the modeling, and how do you feel the authors did in addressing the objective?\nHow did the authors address potential problems that come from using presence-only data (e.g., spatial autocorrelation, pseudo-absences)? Was this effort adequate?\nWhat other aspects of ecological processes are not addressed by the objectives? Could these have been incorporated in this study?\nWere their any findings you found particularly important? Anything that stood out to you, good or bad, in the methodology or interpretation?\nIs the study area and scale of analysis relevant to each of the 4 salamanders?\nAre the prediction maps useful or relevant for salamander conservation?\n\n\n\n\nWhat is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?\nWhat is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\n\nReadings for next class:\n\nWildman et al 2024\nKery and Schaub Ch 7 (sections 7.1-7.3)\n\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\nRoyle et al. 2018\n\n\nBackground Reading (not required):\n\nBorchers and Marques 2017\nRoyle et al 2011"
+  },
+  {
+    "objectID": "FW552/Introduction.html#what-is-this-course-1",
+    "href": "FW552/Introduction.html#what-is-this-course-1",
+    "title": "FW552 Applied Sampling",
+    "section": "What is this course?",
+    "text": "What is this course?\nA mix of…\n\nSampling principles\nDesign-based inference\nMath / notation\nR coding"
+  },
+  {
+    "objectID": "FW552/Introduction.html#class-intructions",
+    "href": "FW552/Introduction.html#class-intructions",
+    "title": "FW552 Applied Sampling",
+    "section": "Class Intructions",
+    "text": "Class Intructions\n\nName and background\nMotivation for taking this course?\nExperience with the R programming language\nOne vision of an idea job, research project, study animal, study location,…"
+  },
+  {
+    "objectID": "FW552/Introduction.html#why-do-we-need-sampling-and-statistics-in-ecology",
+    "href": "FW552/Introduction.html#why-do-we-need-sampling-and-statistics-in-ecology",
+    "title": "FW552 Applied Sampling",
+    "section": "Why do we need sampling and statistics in ecology?",
+    "text": "Why do we need sampling and statistics in ecology?"
+  },
+  {
+    "objectID": "FW552/Introduction.html#what-is-this-course-2",
+    "href": "FW552/Introduction.html#what-is-this-course-2",
+    "title": "FW552 Applied Sampling",
+    "section": "What is this course?",
+    "text": "What is this course?\nImportant Concepts and Terminology\nFor example,\n\nInference\nSampling distribution\nSampling variation\nSampling Bias\nSample size\nParametric bias and variance"
+  },
+  {
+    "objectID": "classfiles552/Name_HW1_template.html",
+    "href": "classfiles552/Name_HW1_template.html",
+    "title": "Homework #",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+  },
+  {
+    "objectID": "classfiles552/Name_HW1_template.html#homework-1",
+    "href": "classfiles552/Name_HW1_template.html#homework-1",
+    "title": "Homework #",
+    "section": "",
+    "text": "This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+  },
+  {
+    "objectID": "classfiles552/Name_HW1_template.html#including-plots",
+    "href": "classfiles552/Name_HW1_template.html#including-plots",
+    "title": "Homework #",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
+  },
+  {
+    "objectID": "FW552/Introduction.html#sampling",
+    "href": "FW552/Introduction.html#sampling",
+    "title": "FW552 Applied Sampling",
+    "section": "Sampling",
+    "text": "Sampling\nThe process of selecting a representative part of the population for the purpose of determining characteristics of the target population.\n\nWhy do we need to sample?\n\n\n\nlogistically/physically prohibitive\nfiscally prohibitive / waste of time and money\ntimeliness\nsampling may be destructive"
+  },
+  {
+    "objectID": "FW552/Introduction.html#not-sampling",
+    "href": "FW552/Introduction.html#not-sampling",
+    "title": "FW552 Applied Sampling",
+    "section": "Not Sampling",
+    "text": "Not Sampling\nPiping plovers nesting at Watch Hill, RI\n\n\nCensus: a complete enumeration of a target population"
+  },
+  {
+    "objectID": "FW552/Introduction.html#sampling-1",
+    "href": "FW552/Introduction.html#sampling-1",
+    "title": "FW552 Applied Sampling",
+    "section": "Sampling",
+    "text": "Sampling\nThe process of selecting a representative part of the population for the purpose of deremining characteristics of the target population.\nWhy do we need to sample?\n\nlogistically/physically prohibitive\nfiscally prohibitive / waste of time and money\ntimeliness\nsampling may be destructive"
+  },
+  {
+    "objectID": "FW552/Introduction.html#central-paradox-of-sampling",
+    "href": "FW552/Introduction.html#central-paradox-of-sampling",
+    "title": "FW552 Applied Sampling",
+    "section": "Central paradox of sampling",
+    "text": "Central paradox of sampling\n\nImpossible to know whether a sample is ‘good’ (i.e., representative of the target)\nThe sample itself cannot tell us - only the process\nGiven exact same sample, we treat it differently depending on how it was selected.\nA sample from a reliable process has credentials"
+  },
+  {
+    "objectID": "FW552/Introduction.html#a-sample",
+    "href": "FW552/Introduction.html#a-sample",
+    "title": "FW552 Applied Sampling",
+    "section": "A ‘Sample’",
+    "text": "A ‘Sample’\nBrook trout habitat in rivers of Massachusetts\n\n\n\nA finite part of a target population whose properties are studied to gain information about the whole (i.e., to infer or gain inference)."
+  },
+  {
+    "objectID": "FW552/Introduction.html#sampling-experiences",
+    "href": "FW552/Introduction.html#sampling-experiences",
+    "title": "FW552 Applied Sampling",
+    "section": "Sampling Experiences",
+    "text": "Sampling Experiences"
+  },
+  {
+    "objectID": "FW552/Introduction.html#a-sample-1",
+    "href": "FW552/Introduction.html#a-sample-1",
+    "title": "FW552 Applied Sampling",
+    "section": "A ‘Sample’",
+    "text": "A ‘Sample’\nBrook trout habitat in rivers of Massachusetts\n\nA selection of rivers (sample) to measure habitat characteristics (e.g. gravel beds) to be used to infer about habitat in all of the state."
+  },
+  {
+    "objectID": "FW552/Sampling.html",
+    "href": "FW552/Sampling.html",
+    "title": "Sampling",
+    "section": "",
+    "text": "Experimental Design:\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\nSampling Design: The process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
+  },
+  {
+    "objectID": "FW552/Sampling.html#design-vs.-sampling",
+    "href": "FW552/Sampling.html#design-vs.-sampling",
+    "title": "Sampling I",
+    "section": "Design vs. Sampling",
+    "text": "Design vs. Sampling\n\nWhat is it called to use characteristics of sa mple to describe a ‘population’?"
+  },
+  {
+    "objectID": "FW552/Sampling.html#common-sample-units",
+    "href": "FW552/Sampling.html#common-sample-units",
+    "title": "Sampling I",
+    "section": "Common Sample Units",
+    "text": "Common Sample Units\n\n\nplots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established thourghout a population\ntransects - straight-line segments\nindividual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-and-statistics",
+    "href": "FW552/Sampling.html#sampling-and-statistics",
+    "title": "Sampling I",
+    "section": "Sampling and Statistics",
+    "text": "Sampling and Statistics\nWhat is a statistic?\n\nAn estimate of a population parameter from a sample\n\n\\[\\mu =\\left(\\sum_{i=1}^{N}y_{i}\\right)\\times \\frac{1}{N} = 4\\]\n\\[\\hat{\\mu} = \\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n} = 4.1\\]\n\\(\\mu\\) is a population parameter (measure of central tendency) \\(4\\) is the value of the population parameter \\(n\\) is a sample parameter (size of sample) \\(N\\) is a population parameter (size of all possible sample units)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter from the estimator (mathematical rule for calculation) \\(4.1\\) is a statistic (specific value)"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-and-bias",
+    "href": "FW552/Sampling.html#sampling-error-and-bias",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias\nTarget Population: Weight of all black bears in a region"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-and-bias-1",
+    "href": "FW552/Sampling.html#sampling-error-and-bias-1",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias\nSample Population: Weight of harvested black bears in a region that allows food provisioning"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-and-bias-2",
+    "href": "FW552/Sampling.html#sampling-error-and-bias-2",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error",
+    "href": "FW552/Sampling.html#sampling-error",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\n\nSampling Error\n\nThe difference b/w a sample statistic (specific value) and the true population value\n4.1 - 4 = 0.1 sampling error\nDue solely to incomplete enumeration of the population (chance)\nProtection against this is large sample size"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-1",
+    "href": "FW552/Sampling.html#sampling-error-1",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\nExtract population parameters / No Sample Bias\n\n#Population mean\n  pop.mu.weights = mean(pop.weights)\n#Population standard deviation\n  pop.sd.weights = sd(pop.weights)\n# Sample Size  \n  N = length(pop.weights)"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-bias",
+    "href": "FW552/Sampling.html#sampling-bias",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\n\nSampling Bias\n\nSystematic tendency of selecting certain sample units / makes the sample unrepresentative to the target population\nExamples in fish/wildlife??"
+  },
+  {
+    "objectID": "FW552/Sampling.html#biased-estimator",
+    "href": "FW552/Sampling.html#biased-estimator",
+    "title": "Sampling I",
+    "section": "Biased Estimator",
+    "text": "Biased Estimator\nWe sample all bears but use a different estimator for the population mean\n\\[\n\\hat{\\mu} = \\left(\\sum_{i=1}^{n}\\frac{(y_{i})^{0.91}}{1.3}\\right)\\times \\frac{1}{n^{1/2}}\n\\]"
+  },
+  {
+    "objectID": "FW552/Sampling1.html",
+    "href": "FW552/Sampling1.html",
+    "title": "Sampling I",
+    "section": "",
+    "text": "What is it called to use characteristics of sample to describe a ‘population’?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#quarto",
+    "href": "FW552/Sampling1.html#quarto",
+    "title": "Sampling",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#running-code",
+    "href": "FW552/Sampling1.html#running-code",
+    "title": "Sampling",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "FW552/Sampling.html#sample-unit",
+    "href": "FW552/Sampling.html#sample-unit",
+    "title": "Sampling I",
+    "section": "Sample Unit",
+    "text": "Sample Unit\n\n\nA sample:\n\\(\\textbf{y} = [1, 6, 3, 5]\\)\n\nA sample unit:\n\\(y_{2} =6\\)\n\nSample size:\n\\(n = 4\\)"
+  },
+  {
+    "objectID": "FW552/Sampling.html#design-vs.-sampling-1",
+    "href": "FW552/Sampling.html#design-vs.-sampling-1",
+    "title": "Sampling I",
+    "section": "Design vs. Sampling",
+    "text": "Design vs. Sampling\n\n\nExperimental Design:\n\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\n\nSampling Design: The process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
+  },
+  {
+    "objectID": "FW552/Sampling.html#sample-language",
+    "href": "FW552/Sampling.html#sample-language",
+    "title": "Sampling I",
+    "section": "Sample Language",
+    "text": "Sample Language\n\n\nA sample:\n\\(\\textbf{y} = [1, 6, 3, 5, 2, 1]\\)\n\nA sample unit:\n\\(y_{2} =6\\)\n\nSample size:\n\\(n = 6\\)"
+  },
+  {
+    "objectID": "FW552/Sampling.html#more-language",
+    "href": "FW552/Sampling.html#more-language",
+    "title": "Sampling I",
+    "section": "More Language",
+    "text": "More Language\nWhat is a statistic?\n\n\nAn estimate of a population parameter from a sample\n\n\n\n\\[\\mu =\\left(\\sum_{i=1}^{N}y_{i}\\right)\\times \\frac{1}{N} = 4\\]\n\n\\(\\mu\\) is a population parameter (measure of central tendency)\n\\(N\\) is a population parameter (size of all possible sample units)\n\\(4\\) is the value of the population parameter"
+  },
+  {
+    "objectID": "FW552/Sampling.html#more-language-1",
+    "href": "FW552/Sampling.html#more-language-1",
+    "title": "Sampling I",
+    "section": "More Language",
+    "text": "More Language\n\\[\\hat{\\mu} = \\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n} = 4.1\\]\n\n\n\\(n\\) is a sample parameter (size of sample)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter from the estimator (mathematical rule for calculation)\n4.1 is a statistic (specific value)"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-2",
+    "href": "FW552/Sampling.html#sampling-error-2",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\nSampling Error\n\n# Sample Size\n  n = 50\n\n# Sample and estimate mean one time\n  sample.1 = mean(sample(pop.weights,n))\n\n\n# Calculate Sampling Error\n  sample.1 - pop.mu.weights\n\n[1] 19.73209\n\n\nIs this a problem?"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-bias-1",
+    "href": "FW552/Sampling.html#sampling-bias-1",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\nWe only sample harvest bears with food supplementation\n\nExpected Bias\n\n\n[1] 70.71101"
+  },
+  {
+    "objectID": "FW552/Sampling.html#sampling-error-3",
+    "href": "FW552/Sampling.html#sampling-error-3",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\nCalculate many many sample means"
+  },
+  {
+    "objectID": "FW552/Sampling.html#biased-estimator-1",
+    "href": "FW552/Sampling.html#biased-estimator-1",
+    "title": "Sampling I",
+    "section": "Biased Estimator",
+    "text": "Biased Estimator\n\nExpected Bias\n\n\n[1] 215.137"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample",
+    "href": "FW552/Sampling1.html#population-and-sample",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\n\n\nWhat is it called to use characteristics of sample to describe a ‘population’?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#design--vs-model-based-infernce",
+    "href": "FW552/Sampling1.html#design--vs-model-based-infernce",
+    "title": "Sampling I",
+    "section": "Design- vs Model-based Infernce",
+    "text": "Design- vs Model-based Infernce\nWhat are important differences according to Thompson and Hankin et al.?\nBenefits or costs of either?\n\nImportant Considerations\n\nrandomness\nfixed"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#design--vs-model-based-infernce-1",
+    "href": "FW552/Sampling1.html#design--vs-model-based-infernce-1",
+    "title": "Sampling I",
+    "section": "Design- vs Model-based Infernce",
+    "text": "Design- vs Model-based Infernce"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#design-vs.-sampling",
+    "href": "FW552/Sampling1.html#design-vs.-sampling",
+    "title": "Sampling I",
+    "section": "Design vs. Sampling",
+    "text": "Design vs. Sampling\n\nExperimental Design:\n\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\n\nSampling Design:\n\nThe process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sample-language",
+    "href": "FW552/Sampling1.html#sample-language",
+    "title": "Sampling I",
+    "section": "Sample Language",
+    "text": "Sample Language\n\n\nA sample (height in inches):\n\\(\\textbf{y} = [69, 54, 72, 61, 58, 71]\\)\n\nA sample unit:\n\\(y_{2} =54\\)\n\nSample size:\n\\(n = 6\\)"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#common-sample-units",
+    "href": "FW552/Sampling1.html#common-sample-units",
+    "title": "Sampling I",
+    "section": "Common Sample Units",
+    "text": "Common Sample Units\n\n\nplots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established thourghout a population\ntransects - straight-line segments\nindividual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#more-language",
+    "href": "FW552/Sampling1.html#more-language",
+    "title": "Sampling I",
+    "section": "More Language",
+    "text": "More Language\nWhat is a statistic?\n\n\nAn estimate of a population parameter from a sample\n\n\n\n\\[\\hat{\\mu} = \\left(\\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n}\\right) = 4.1\\]\n\n\\(n\\) is a sample parameter (size of sample)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter (\\(\\mu\\)) from the estimator (mathematical rule for calculation)\n4.1 is a statistic (specific value)"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#more-language-1",
+    "href": "FW552/Sampling1.html#more-language-1",
+    "title": "Sampling I",
+    "section": "More Language",
+    "text": "More Language\n\\[\\mu =\\left(\\sum_{i=1}^{N}y_{i}\\right)\\times \\frac{1}{N} = 4\\]\n\n\\(\\mu\\) is a population parameter (measure of central tendency)\n\\(N\\) is a population parameter (size of all possible sample units)\n\\(4\\) is the value of the population parameter"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error",
+    "href": "FW552/Sampling1.html#sampling-error",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\n\nSampling Error\n\nThe difference b/w a sample statistic (specific value) and the true value of a population paramter\n4.1 - 4 = 0.1 sampling error\nDue solely to incomplete enumeration of the population (chance)\nProtection against this is large sample size"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-bias",
+    "href": "FW552/Sampling1.html#sampling-bias",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\n\nSampling Bias\n\nSystematic tendency of selecting certain sample units; makes the samples unrepresentative to the target population\nExamples in fish/wildlife??"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-and-bias",
+    "href": "FW552/Sampling1.html#sampling-error-and-bias",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-and-bias-1",
+    "href": "FW552/Sampling1.html#sampling-error-and-bias-1",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-and-bias-2",
+    "href": "FW552/Sampling1.html#sampling-error-and-bias-2",
+    "title": "Sampling I",
+    "section": "Sampling Error and Bias",
+    "text": "Sampling Error and Bias"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-1",
+    "href": "FW552/Sampling1.html#sampling-error-1",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\nVector of bear weights\n\n  pop.weights[1:5]\n\n[1] 543.55183  70.43038 343.21377 143.64493 268.94786\n\n\n\n\n# Sample Size\n  n = 50\n\n# Sample and estimate mean one time\n  sample.1 = mean(\n                  sample(pop.weights,\n                         n,\n                         replace = FALSE\n                         )\n                  )\n\n# Calculate Sampling Error\n  sample.1 - pop.mu.weights\n\n[1] 7.645556\n\n\n\n\n\nIs this a problem?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-2",
+    "href": "FW552/Sampling1.html#sampling-error-2",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\n\n# Sample Size\n  n = 50\n\n# Sample and estimate mean one time\n  sample.1 = mean(sample(pop.weights,\n                         n,\n                         replace = FALSE)\n                  )\n\n\n# Calculate Sampling Error\n  sample.1 - pop.mu.weights\n\n[1] 7.645556\n\n\n\nIs this a problem?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-error-3",
+    "href": "FW552/Sampling1.html#sampling-error-3",
+    "title": "Sampling I",
+    "section": "Sampling Error",
+    "text": "Sampling Error\nCalculate many many sample means"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-bias-1",
+    "href": "FW552/Sampling1.html#sampling-bias-1",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\nWe should be very interested in the characteristics of the sampling distribution and error.\n\n\nExpected Bias = average sample mean - population mean"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#biased-estimator",
+    "href": "FW552/Sampling1.html#biased-estimator",
+    "title": "Sampling I",
+    "section": "Biased Estimator",
+    "text": "Biased Estimator\nWe sample all bears but use a different estimator for the population mean\n\\[\n\\hat{\\mu} = \\left(\\sum_{i=1}^{n}\\frac{(y_{i})^{0.91}}{1.3}\\right)\\times \\frac{1}{n^{1/2}}\n\\]"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#biased-estimator-1",
+    "href": "FW552/Sampling1.html#biased-estimator-1",
+    "title": "Sampling I",
+    "section": "Biased Estimator",
+    "text": "Biased Estimator\n\nExpected Bias = 215.14"
+  },
+  {
+    "objectID": "FW552/Introduction.html#questions-for-you",
+    "href": "FW552/Introduction.html#questions-for-you",
+    "title": "FW552 Applied Sampling",
+    "section": "Questions for you…",
+    "text": "Questions for you…\n\nName and short background\nMotivation for taking this course?\nExperience with the R programming language\nOne vision of an ideal job, research project, study animal, or study location."
+  },
+  {
+    "objectID": "FW552/Introduction.html#vocabulary",
+    "href": "FW552/Introduction.html#vocabulary",
+    "title": "FW552 Applied Sampling",
+    "section": "Vocabulary",
+    "text": "Vocabulary\nWords Matter"
+  },
+  {
+    "objectID": "FW552/Introduction.html#experiences",
+    "href": "FW552/Introduction.html#experiences",
+    "title": "FW552 Applied Sampling",
+    "section": "Experiences",
+    "text": "Experiences\nHow have you used sampling?"
+  },
+  {
+    "objectID": "FW552/Introduction.html#section-1",
+    "href": "FW552/Introduction.html#section-1",
+    "title": "FW552 Applied Sampling",
+    "section": "",
+    "text": "Questions"
+  },
+  {
+    "objectID": "FW552/Introduction.html#how-have-you-used-sampling",
+    "href": "FW552/Introduction.html#how-have-you-used-sampling",
+    "title": "FW552 Applied Sampling",
+    "section": "How have you used sampling?",
+    "text": "How have you used sampling?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#malicious-sampling-bias",
+    "href": "FW552/Sampling1.html#malicious-sampling-bias",
+    "title": "Sampling I",
+    "section": "Malicious Sampling Bias",
+    "text": "Malicious Sampling Bias\nSample fish in streams.\n200 streams to choose to sample. Called what?\nLet’s consider a situation where we don’t take an equal probability sample"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation",
+    "href": "FW552/Sampling1.html#sampling-variation",
+    "title": "Sampling I",
+    "section": "Sampling Variation",
+    "text": "Sampling Variation\nCalculate many many sample means\n\n# Create function to sample 50 units and take the mean\nsample.mean.fn = function(target,n){\n                                    mean(\n                                         sample(target,n)\n                                         )\n                                   }\n#Repeat the above function 20000 times\n  set.seed(54343)\n  mu.hat=replicate(20000,\n                   sample.mean.fn(pop.weights,n)\n                   )"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation-1",
+    "href": "FW552/Sampling1.html#sampling-variation-1",
+    "title": "Sampling I",
+    "section": "Sampling Variation",
+    "text": "Sampling Variation"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation-and-error",
+    "href": "FW552/Sampling1.html#sampling-variation-and-error",
+    "title": "Sampling I",
+    "section": "Sampling Variation and Error",
+    "text": "Sampling Variation and Error\nTarget Population: Weight of all black bears in a region\n\n\nHow would you describe a sampling frame relevant to this target population?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation-vs-error",
+    "href": "FW552/Sampling1.html#sampling-variation-vs-error",
+    "title": "Sampling I",
+    "section": "Sampling Variation vs Error",
+    "text": "Sampling Variation vs Error\nSampling variation is the process and sampling error is an outcome.\nThe differences between samples (sampling variation) lead to differences between sample statistics and population parameters (sampling error)."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-bias-2",
+    "href": "FW552/Sampling1.html#sampling-bias-2",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\nSample Population: Weight of harvested black bears in a region that allows food provisioning"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation-and-error-1",
+    "href": "FW552/Sampling1.html#sampling-variation-and-error-1",
+    "title": "Sampling I",
+    "section": "Sampling Variation and Error",
+    "text": "Sampling Variation and Error"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-bias-3",
+    "href": "FW552/Sampling1.html#sampling-bias-3",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\nWe only sample harvested bears with food supplementation\n\n\nExpected Bias = 71.26"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-variation-2",
+    "href": "FW552/Sampling1.html#sampling-variation-2",
+    "title": "Sampling I",
+    "section": "Sampling Variation",
+    "text": "Sampling Variation\nWe can summarize the sampling variation into a probability\n\n\nFor n = 50, how likely is it that I’ll be within 10% of the true population parameter?\n\nlower=pop.mu.weights - pop.mu.weights*0.10\nupper=pop.mu.weights + pop.mu.weights*0.10\n\nlength(which(mu.hat&gt;lower & mu.hat&lt;upper)) / length(mu.hat)\n\n[1] 0.97335"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#sampling-bias-4",
+    "href": "FW552/Sampling1.html#sampling-bias-4",
+    "title": "Sampling I",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\nRelative Expected Bias = \\(\\frac{E(\\hat{\\mu})-\\mu}{\\mu}\\)\nRelative Expected Bias = 0.23"
   }
 ]

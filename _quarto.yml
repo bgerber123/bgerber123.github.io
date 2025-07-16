@@ -24,6 +24,8 @@ website:
         href: cv/index.qmd
       - text: "FW680A4"
         href: FW680A4/index.qmd
+      - text: "FW552"
+        href: FW552/index.qmd
 
 
     # your social media handles

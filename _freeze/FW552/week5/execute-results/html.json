@@ -1,0 +1,15 @@
+{
+  "hash": "f5428c7080fff04a77778eb411edde89",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n\n## Week 5\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n##### **In Class Discussion Questions for Fieberg, Ch. 8 and Tredennick et al. 2021**\n\n- Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\n\n- What is stepwise selection? How does it perform?\n\n- Why fit only one model? Drawbacks? How to decide on how many variables?\n\n- What is AIC? \n\n- What is Regularization using penalization?\n\n- \"Model selection is the Black Hole of Statistics\". What do you think?\n\n- Covariate selection vs. model selection?\n\n##### **In-Class Group Questions**\n\n<a href=\"/classfiles/variableCombs/VariableCombs.Rmd\">Variable Combinations</a>\n\n#### [Assigned]{style=\"color:red;\"}\n\n- Background Reading (not required):\n  - <a href=\"/readings/Gelman and Hill Chapters 11 and 12.pdf\"> Gelman and Hill Ch. 11 and 12</a>.\n\n\n\n\n<!-- #### [Assigned]{style=\"color:red;\"} -->\n\n<!-- -   Readings for next class:  -->\n<!--     - <a href=\"/readings/Zurr and Iano 2016.pdf\">Zurr and Iano, 2016</a> -->\n\n\n\n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Lecture: <a href=\"/FW680A4/hierarchical.qmd\">Hierarchical Models</a>\n\n-   Downloads: <a href=\"/classfiles/glmmlab/week5files.zip\">Files</a>\n\n-   Install R packages:\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n```\n:::\n\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n\n  - <a href=\"/readings/Kery and Kellner Chapter 2.pdf\"> Kery and Kellner Ch. 2, sections 2.7-2.10</a>.\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

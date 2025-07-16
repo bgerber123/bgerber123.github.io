@@ -1,0 +1,55 @@
+---
+title: ""
+---
+
+## Week 7
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+-   Please bring your laptop today
+
+-   Board work for statistical notation and JAGS syntax for Bayesian generalized linear models
+
+#### [Assigned]{style="color:red;"}
+ 
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Discuss Project
+
+- <a href="/classfiles/hbayes/Bayesian non hierarchical model.pdf">Statistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits</a>
+
+-   Board work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models
+
+-   Fit models specified in the previous class
+
+-   No lab to turn in next week.
+
+-   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
+
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("brms","bayesplot"))
+```
+
+
+#### [Assigned]{style="color:red;"}
+
+-   Readings for next class:
+    -   <a href="/readings/Widmer et al 2021.pdf">Widmer et al 2021</a>
+    -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a>
+
+- Background Reading (not required):
+  - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
+  - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
+  - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>.
+
+
+

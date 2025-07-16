@@ -1,0 +1,15 @@
+{
+  "hash": "4117c9a4b01ef384c96862480d051414",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\n---\n\n\n\n\n## Week 4\n\n### Day 1\n\n#### [Today]{style=\"color:red;\"}\n\n-   Lecture: <a href=\"/FW680A4/glm1.qmd\">Generalized Linear Models I</a>\n\n-   Lecture Code: <a href=\"/FW680A4/glm1.R\">GLM1.R</a>\n\n-   Install R packages:\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n```\n:::\n\n\n\n\n#### [Assigned]{style=\"color:red;\"}\n\n-   Readings for next class: \n    - <a href=\"/readings/Zurr and Iano 2016.pdf\">Zurr and Iano, 2016</a>\n\n- Background Reading (not required): \n  - <a href=\"/readings/Zurr et al Chapter 9.pdf\"> Zurr et al Chapter 9</a>. \n\n\n\n\n### Day 2 (lab)\n\n#### [Today]{style=\"color:red;\"}\n\n-   Discuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\n\n-   Lecture: <a href=\"/FW680A4/glm2.qmd\">Generalized Linear Models II</a>\n\n-   Downloads: <a href=\"/classfiles/glmlab/week4files1.zip\">Files</a>\n\n\n#### [Assigned]{style=\"color:red;\"}\n\n-   Readings for next class: \n    - <a href=\"https://statistics4ecologists-v2.netlify.app/mmi#mmi\">Fieberg, Ch. 8</a>\n    - <a href=\"/readings/Tredennick et al. 2021.pdf\">Tredennick et al. 2021</a>\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

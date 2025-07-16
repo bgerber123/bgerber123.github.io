@@ -1,0 +1,54 @@
+---
+title: ""
+---
+
+## Week 4
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+-   Lecture: <a href="/FW680A4/glm1.qmd">Generalized Linear Models I</a>
+
+-   Lecture Code: <a href="/FW680A4/glm1.R">GLM1.R</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("equatiomatic","brglm"))
+```
+
+#### [Assigned]{style="color:red;"}
+
+-   Readings for next class: 
+    - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a>
+
+- Background Reading (not required): 
+  - <a href="/readings/Zurr et al Chapter 9.pdf"> Zurr et al Chapter 9</a>. 
+
+
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Discuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic
+
+-   Lecture: <a href="/FW680A4/glm2.qmd">Generalized Linear Models II</a>
+
+-   Downloads: <a href="/classfiles/glmlab/week4files1.zip">Files</a>
+
+
+#### [Assigned]{style="color:red;"}
+
+-   Readings for next class: 
+    - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a>
+    - <a href="/readings/Tredennick et al. 2021.pdf">Tredennick et al. 2021</a>
+
+
+
+
+
+

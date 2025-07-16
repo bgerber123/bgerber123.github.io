@@ -1,0 +1,68 @@
+---
+title: <center>FW 552 <br> Applied Sampling for Wildlife/Fish Studies <br> (Fall 2025)</center>
+format:
+  html: 
+    theme: default
+    fontsize: 1.1em
+    linestretch: 1.2
+---
+## Course Stuff
+```{=html}
+<title>Schedule</title>
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+
+<a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
+```
+
+**Book**: We will be using quite a bit of [Thompson. 2012. Sampling. Third Edition.](Sampling - 2012 - Thompson.pdf).
+
+**Readings**: Come prepared to discuss the assigned reading on the next class after the readings were assigned. 
+
+- What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
+
+**Assignments**: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated.
+
+
+
+  
+
+## Schedule 
+
+Week                                  |	Day|	Date       | 	In Class Topic                         | Assignments       |	   Readings                                                
+-                                     | -- | -----         |----                  | ----  |----                                  
+<a href="/FW680A4/week1.qmd">1</a>    | Mo | 25-Aug	     | Introduction                            | Install [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/). Discussion Post                         | Hankin Ch. 2; Gerber et al. 2012                    
+&nbsp;                                |	We | 27-Aug	     | Paper Discussion / R and RMarkdown      |  Quiz 1           | Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3
+<a href="/FW680A4/week2.qmd">2</a>    |	Mo | 1-Sep	     | <span style="color:red">No Class</span> |                   |                                     
+&nbsp;                                | We | 3-Sep	     | Sampling I                              |                   | Boyd et al. 2023 and Thompson Ch. 2
+<a href="/FW680A4/week3.qmd">3</a>    |	Mo | 3-Sep	     | Big Data Paradox / SRS                  |                   |                                   
+&nbsp;                                |	We | 8-Sep	 |                                         |                   |                                      
+<a href="/FW680A4/week4.qmd">4</a>    |	Mo | 10-Sep	 |                                         |                   |                                  
+&nbsp;                                |	We | 15-Sep	 |                                         |                   |                                  
+<a href="/FW680A4/week5.qmd">5</a>    |	Mo | 17-Sep	 |                                         |                   |                                   
+&nbsp;                                |	We | 22-Sep	 |                                         |                   |                                  
+<a href="/FW680A4/week6.qmd">6</a>    |	Mo | 24-Sep	 |                                         |                   |                                   
+&nbsp;                                |	We | 27-Sep	 |                                         |                   |                                    
+<a href="/FW680A4/week7.qmd">7</a>    |	Mo | 29-Sep	 |                                         |                   |                                  
+&nbsp;                                |	We | 1-Oct	 |                                         |                   |                                   
+<a href="/FW680A4/week8.qmd">8</a>    |	Mo | 6-Oct	 |                                         |                   |                                                       &nbsp;                                |	We | 8-Oct	 |                                         |                   |                          
+<a href="/FW680A4/week9.qmd">9</a>    |	Mo | 13-Oct	 |                                         |                   |                                                        &nbsp;                                |	We | 15-Oct	 |                                         |                   |                          
+<a href="/FW680A4/week10.qmd">10</a>  | Mo | 20-Oct  |                                         |                   |                                                        &nbsp;                                | We | 22-Oct	 |                                         |                   |                          
+<a href="/FW680A4/week11.qmd">11</a>  | Mo | 27-Oct	 |                                         |                   |                                     
+&nbsp;                                | We | 29-Oct	 |                                         |                   |                                  
+<a href="/FW680A4/week12.qmd">12</a>  | Mo | 3-5Nov	 |                                         |                   |                                                
+&nbsp;                                | We | 5-Nov	 |                                         |                   |                                                
+<a href="/FW680A4/week13.qmd">13</a>  | Mo | 10-Nov	 |                                         |                   |                                                
+&nbsp;                                | We | 12-Nov	 |                                         |                   |                                                
+<a href="/FW680A4/week14.qmd">14</a>  | Mo | 17-Nov	 |                                         |                   |                                              
+&nbsp;                                | We | 19-Nov	 |                                         |                   |                                                
+15                                    | Mo | 24-Nov	 | <span style="color:red">No Class</span> |                   |                                                
+&nbsp;                                | We | 26-Nov	 | <span style="color:red">No Class</span> |                   |                                                
+<a href="/FW680A4/week16.qmd">16</a>  | Mo | 1-Dec	 |                                         |                   |                                                
+&nbsp;                                | We | 3-Dec	 |                                         |                   |                                                 
+<a href="/FW680A4/week17.qmd">17</a>  | Mo | 8-Dec	 |                                         |                   |                                                
+&nbsp;                                | We | 10-Dec	 |                                         |                   |                                                

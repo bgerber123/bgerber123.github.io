@@ -1,0 +1,35 @@
+---
+title: ""
+---
+
+## Week 13
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### Discuss Wright et al 2020 co-led by Cat Adams, Bijoya Paul, Lisa Roerk
+
+##### Hierarchical Community Occupancy Model
+
+-   [Statistcal Model](/classfiles/community/Community Occ Model.pdf)
+
+-   [Bayesian Community Occupancy Model via Stan](https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html)
+
+-   For details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.
+
+##### Community Ecology Modeling
+
+-   Species Richness vs Species Diversity?
+
+-   The [vegan R package](https://github.com/vegandevs/vegan?tab=readme-ov-file) has a number of common [community metrics](https://vegandevs.r-universe.dev/vegan/doc/diversity-vegan.pdf).
+
+
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+##### ~~Multivariate Community Analyses~~
+
+**No class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project.**
+

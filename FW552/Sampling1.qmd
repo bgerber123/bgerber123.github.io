@@ -1,0 +1,397 @@
+---
+title: <span style="color:white">Sampling I</span>
+title-slide-attributes:
+  data-background-image: /img/background1.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+---
+
+## [Population and Sample]{style="color:#078BCD;"}
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+![](../img/sample.png)
+
+What is it called to use characteristics of sample to describe a 'population'?
+
+## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
+
+What are important differences according to Thompson and Hankin et al.?
+
+Benefits or costs of either?
+
+. . .
+
+**Important Considerations**
+
+- randomness
+- fixed
+
+## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
+
+![](../img/forest.png)
+
+
+## [Design vs. Sampling]{style="color:#078BCD;"}
+
+
+-   **Experimental Design:**
+    - Deliberately perturbing a part of a 'population' to compare it's effect to a part that was not perturbed
+
+-   **Sampling Design**: 
+    - The process of obtaining a representative sample to characterize a 'population' w/o necessarily perturbing it.
+
+
+
+## [Sample Language]{style="color:#078BCD;"}
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+A sample (height in inches):
+
+$\textbf{y} = [69, 54, 72, 61, 58, 71]$
+
+<br>
+
+A sample unit:
+
+$y_{2} =54$ 
+
+<br>
+
+Sample size:
+
+$n = 6$ 
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+<br>
+<br>
+<br>
+![](../img/census.sample.unit.png){fig-align="center" width="2200"}
+
+:::
+
+::::
+
+
+
+
+## [Common Sample Units]{style="color:#078BCD;"}
+
+. . .
+
+- plots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.
+- points - measurements are taken from a set of points established thourghout a population
+- transects - straight-line segments 
+- individual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit
+
+## [More Language]{style="color:#078BCD;"}
+
+**What is a statistic?**
+
+. . .
+
+- An estimate of a population parameter from a sample
+
+. . .
+
+$$\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 4.1$$
+
+- $n$ is a sample parameter (size of sample) 
+- $\hat{\mu}$ is an estimate of a population parameter ($\mu$) from the estimator (mathematical rule for calculation) 
+- 4.1 is a statistic (specific value)
+
+
+
+## [More Language]{style="color:#078BCD;"}
+
+$$\mu =\left(\sum_{i=1}^{N}y_{i}\right)\times \frac{1}{N} = 4$$
+
+- $\mu$ is a population parameter (measure of central tendency)
+- $N$ is a population parameter (size of all possible sample units) 
+- $4$ is the value of the population parameter
+
+
+## [Sampling Error]{style="color:#078BCD;"}
+
+- **Sampling Error**
+    - The difference b/w a sample statistic (specific value) and the true value of a population paramter
+    - 4.1 - 4 = 0.1 sampling error
+    - Due solely to incomplete enumeration of the population (chance)
+    - Protection against this is large sample size
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+-  **Sampling Bias**
+    - Systematic tendency of selecting certain sample units; makes the samples *unrepresentative* to the target population
+    - Examples in fish/wildlife??
+  
+  
+## [Sampling Variation and Error]{style="color:#078BCD;"}
+
+**Target Population:** Weight of all black bears in a region
+
+![](../img/bear.png){fig-align="center" width="600"}
+
+. . .
+
+How would you describe a *sampling frame* relevant to this target population?
+
+## [Sampling Variation and Error]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+
+# Create 'truth'
+  set.seed(3433)
+  pop.weights = rnorm(n = 500, mean = 300, sd = 100)
+
+#Population mean
+  pop.mu.weights = mean(pop.weights)
+
+#Population standard deviation
+  pop.sd.weights = sd(pop.weights)
+  
+# Sample Size  
+  N = length(pop.weights)
+
+# histogram    
+  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,700),xlab="Bear Weight")  
+```
+
+## [Sampling Error]{style="color:#078BCD;"}
+
+Vector of bear weights
+
+```{r,echo=TRUE}
+  pop.weights[1:5]
+```
+
+. . .
+
+```{r,echo=TRUE}
+# Sample Size
+  n = 50
+
+# Sample and estimate mean one time
+  sample.1 = mean(
+                  sample(pop.weights,
+                         n,
+                         replace = FALSE
+                         )
+                  )
+
+# Calculate Sampling Error
+  sample.1 - pop.mu.weights
+```
+
+. . .
+
+:::{.r-stack}
+**Is this a problem?**
+:::
+
+
+## [Sampling Variation vs Error]{style="color:#078BCD;"}
+
+Sampling variation is the process and sampling error is an outcome.
+
+The differences between samples (sampling variation) lead to differences between sample statistics and population parameters (sampling error). 
+
+
+## [Sampling Variation]{style="color:#078BCD;"}
+
+Calculate many many sample means
+
+```{r, echo=TRUE}
+# Create function to sample 50 units and take the mean
+sample.mean.fn = function(target,n){
+                                    mean(
+                                         sample(target,n)
+                                         )
+                                   }
+#Repeat the above function 20000 times
+  set.seed(54343)
+  mu.hat=replicate(20000,
+                   sample.mean.fn(pop.weights,n)
+                   )
+
+```
+
+## [Sampling Variation]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+par(mfrow=c(1,2))
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380))
+abline(v=pop.mu.weights,lwd=3,col=2)
+legend("topright",legend=c("Population Mean"),lwd=2,col=2,cex=0.8)
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
+```
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+We should be very interested in the characteristics of the sampling distribution and error.
+
+<br>
+
+. . .
+
+Expected Bias = average sample mean - population mean
+
+## [Sampling Variation]{style="color:#078BCD;"}
+
+We can summarize the sampling variation into a probability 
+
+<br>
+
+. . .
+
+For n = 50, how likely is it that I'll be within 10% of the true population parameter?
+
+```{r, echo=TRUE}
+lower=pop.mu.weights - pop.mu.weights*0.10
+upper=pop.mu.weights + pop.mu.weights*0.10
+
+length(which(mu.hat>lower & mu.hat<upper)) / length(mu.hat)
+
+```
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+**Sample Population:** Weight of harvested black bears in a region that allows food provisioning
+
+![](../img/beardonut.png){fig-align="center" width="400"}
+
+## [Sampling Error and Bias]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+  sample.pop.weights = pop.weights[which(pop.weights>300)]
+
+par(mfrow=c(1,2))
+  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,500),xlab="Bear Weight")
+  hist(sample.pop.weights, main = "Sample Population",col=2,freq=TRUE,xlim=c(0,500),xlab="Bear Weight")
+```
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+We only sample harvested bears with food supplementation
+
+```{r, echo=FALSE}
+#Repeat the above function 20000 times
+set.seed(54343)
+mu.hat=replicate(20000,sample.mean.fn(sample.pop.weights,n))
+par(mfrow=c(1,2))
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",
+     xlim=c(200,400))
+abline(v=pop.mu.weights,lwd=3,col=2)
+legend("topleft",legend=c("Population Mean"),lwd=2,col=2)
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Bias for n = 50")
+```
+
+. . .
+
+Expected Bias =  `r round(mean(mu.hat)- pop.mu.weights,digits=2)`
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+Relative Expected Bias = $\frac{E(\hat{\mu})-\mu}{\mu}$
+
+Relative Expected Bias = `r round((mean(mu.hat)- pop.mu.weights)/pop.mu.weights,digits=2)`
+
+## [Biased Estimator]{style="color:#078BCD;"}
+
+We sample all bears but use a different estimator for the population mean
+
+$$
+\hat{\mu} = \left(\sum_{i=1}^{n}\frac{(y_{i})^{0.91}}{1.3}\right)\times \frac{1}{n^{1/2}} 
+$$
+
+## [Biased Estimator]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+#Repeat the above function 20000 times
+biased.sample.mean.fn = function(x,n){
+                                  temp=sample(x,n)
+                                  sum(temp^0.91/1.3)/length(temp)^(1/2)
+}
+set.seed(54343)
+mu.hat=replicate(20000,biased.sample.mean.fn(pop.mu.weights,n))
+par(mfrow=c(1,2))
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",
+     xlim=c(0,2000))
+abline(v=pop.mu.weights,lwd=3,col=2)
+legend("topright",legend=c("Population Mean"),lwd=2,col=2)
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Bias for n = 50")
+```
+
+Expected Bias =  `r round(mean(mu.hat)- pop.mu.weights,digits=2)`
+
+
+## [Malicious Sampling Bias]{style="color:#078BCD;"}
+
+Sample fish in streams.
+
+200 streams to choose to sample. Called what?
+
+```{r, echo=FALSE}
+  N = 200 # number of streams
+  prob.occ=0.5  #true prob. of fish occupancy for each stream
+  n.occu=prob.occ*N
+  sites=1:N
+
+# Decide on a fixed number of sites that are occupied wiht
+# expect probability prob.occ
+  set.seed(5454)
+  occ.sites = sample(sites,n.occu,replace=FALSE)
+  
+  
+# Crate dataframe of samples sites
+  truth = data.frame(sites=sites,
+                    occu = 0)
+  truth$occu[occ.sites]=1
+```
+
+Let's consider a situation where we don't take an equal probability sample
+
+
+
+# Probability of sampling an occupied cell
+  
+```{r}
+p.sample.occ=1.1/N
+
+  p.sampling.unocc = (1-(p.sample.occ*n.occu))/(N-n.occu)
+
+#overall probability of selecting an occupied site
+  p.sample.occ*n.occu
+
+#overall probability of selecting an occupied site
+  p.sampling.unocc*(N-n.occu)
+
+#Proportional difference of sample site being selected based on it being occupied or not
+#22% higher for occupied site
+    p.sample.occ/p.sampling.unocc
+
+    truth$prob.sample=truth$occu
+    truth$prob.sample[which(truth$occu==1)]=p.sample.occ
+    truth$prob.sample[which(truth$occu==0)]=p.sampling.unocc
+
+
+#Now simulate many samples and get proportion of occupied sites
+# How many sites will we sample  
+  n=60
+```

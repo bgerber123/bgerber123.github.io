@@ -1,0 +1,55 @@
+---
+title: ""
+---
+
+## Week 10
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### Lecture by Dr. Casey Setash of Colorado Parks of Wildlife 
+
+- <a href="/classfiles/IMlab/Nmixdataintegration.pptx">Lecture (updated) </a>
+
+- <a href="/classfiles/IMlab/ipm_script.R">IPM Script </a>
+
+
+#### [Assigned]{style="color:red;"}
+ -   Readings for next class:
+     - <a href="/readings/McCaffery et al. 2016.pdf">McCaffery et al. 2016 </a>
+     - <a href="/readings/Kery and Kellner ch20.pdf">Kery and Kellner ch20 (section 20.1) </a>
+
+- Background Reading (not required):
+  - <a href="/readings/Kery et al 2018.pdf">Kery 2018</a>
+  - <a href="/readings/Link et al 2018.pdf">Link et al 2018</a>
+  - <a href="/readings/Barker et al 2018.pdf">Barker et al 2018</a>
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of McCaffery et al. 2016, led by Sarah Gaulke and Sean Ingram**
+
+-   Downloads: <a href="/classfiles/IMlab/IMLab.files.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("VGAM"))
+```
+
+
+#### [Assigned]{style="color:red;"}
+- Readings for next class:
+  - <a href="/readings/Huggler et al. 2022.pdf"> Huggler et al. 2022 </a>
+  - <a href="/readings/Wittemyer et al. 2019.pdf"> Wittemyer et al. 2019 </a>
+
+
+
+
+
+
+

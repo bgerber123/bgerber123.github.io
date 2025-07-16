@@ -1,0 +1,71 @@
+---
+title: ""
+---
+
+## Week 11
+
+### Day 1
+
+#### [Today]{style="color:red;"}
+
+##### **In Class Discussion of Huggler et al. 2022, led by Jeremy Alder and Becca Windell**
+
+##### **In Class Discussion of Wittemyer et al. 2019.pdf**
+
+
+<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("brms","bayesplot")) -->
+<!-- ``` -->
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+
+-   Background Reading (not required):
+     - <a href="/readings/Nathan et al 2008.pdf">Nathan et al 2008 - Foundational bit of science</a>
+     - <a href="/readings/Nathan et al. 2022.pdf">Nathan et al. 2022 -  Big data science</a>
+     - <a href="/readings/Signer et al 2018.pdf">Signer et al 2018 - amt R package </a>
+     - <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12559">Calabrese et al. 2016 - ctmm R packageguide</a>
+     - <a href="https://doi.org/10.1111/2041-210X.13786">Silva et al. 2021 - autocorrelated kernel density (AKDE) home range review</a>
+     - <a href="https://doi.org/10.1111/2041-210X.12995">McClintock et al. 2018 - momentuHMM R package</a>
+
+
+
+
+-   Background Videos (not required):
+     - <a href="https://youtu.be/WELTpbB5BuU">Movement Ecology Théo Michelot. February 7, 2022</a>; <a href="https://github.com/eco4cast/Statistical-Methods-Seminar-Series/tree/main/michelot_movement">Code</a>
+     - <a href="https://www.youtube.com/playlist?list=PLnKBE9qOev54122QkFKB_nFo3pDEPMIDZ">Intro. Animal Movement Ecology - Josh Cullen</a>
+     
+-   Background Resources (not required):     
+     - <a href="https://animove.org/elearning/">Animove Resources</a>
+     - <a href="https://ctmm-initiative.github.io/ctmm/">Continuous-time movement modeling</a>
+
+
+ 
+### Day 2 (lab)
+
+#### [Today]{style="color:red;"}
+
+-   Downloads: <a href="/classfiles/movement/amt.vignettes.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("amt","tidygraph","ctmm","ggraph"))
+```
+
+#### [Assigned]{style="color:red;"}
+-   Readings for next class: 
+    - <a href="/readings/Smith et al. 2022.pdf"> Smith et al. 2022.pdf</a>
+    - <a href="/readings/Northrup et al. 2022.pdf">Northrup et al. 2022 (Intro through 'How are selection functions fit?')</a>
+
+
+
+
+
+

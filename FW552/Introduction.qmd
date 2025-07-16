@@ -1,0 +1,338 @@
+---
+title: <span style="color:white">FW552 <br>Applied Sampling</span>
+title-slide-attributes:
+  data-background-image: /img/backgroundfish.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+## [Class Stuff]{style="color:#078BCD;"}
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+-   **Instructor:** Brian Gerber
+
+-   **Classroom**: Engineering E102
+
+    -   Lecture/Discussion/Problem Solving
+
+- **When**: Mo/We 3 - 4:15pm
+
+. . .
+
+-   **My Office**: 202A Wagar, Cooperative Research Unit
+
+    -   Office hours: We 1pm - 2pm and by appointment
+
+    -   brian.gerber@colostate.edu
+
+. . .
+
+
+-   **Computers**: Assignments will often require a computer
+
+## [My Background]{style="color:#078BCD"}
+
+![](/img/me2.png)
+
+## [What is this course?]{style="color:#078BCD;"}
+
+Primarily:
+
+- connecting things we care about (fish/wildlife/habitat) with sampling principles
+
+![](../img/fieldtechniques.png)
+
+
+## [What is this course?]{style="color:#078BCD;"}
+
+A mix of...
+
+- Sampling principles
+- Design-based inference
+- Math / notation
+- R coding
+
+## [What is this course?]{style="color:#078BCD;"}
+
+**Important Concepts and Terminology** 
+
+**For example,**
+
+- Inference
+
+- Sampling distribution
+
+- Sampling variation
+
+- Sampling Bias
+
+- Sample size
+
+- Parametric bias and variance
+
+
+## [Questions for you...]{style="color:#078BCD;"}
+
+- Name and short background
+
+- Motivation for taking this course?
+
+- Experience with the R programming language
+
+- One vision of an ideal job, research project, study animal, or study location.
+
+
+
+##  [Assessment]{style="color:#078BCD;"}
+
+Assessment Components  | Percentage of Grade
+--------------------   | -------------------
+Course Engagement      | 10%
+Assignments            | 25%
+Quizzes                | 25%
+Tests                  | 20%
+Project                | 20%
+
+## [Project]{style="color:#078BCD;"}
+
+????
+
+<!-- 1) independent or group research project - highlighting a modeling application, data/code transparency, and communication of results -->
+
+<!-- 2) group development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation -->
+
+
+
+## [Course Learning Objectives]{style="color:#078BCD;"}
+
+Upon successful completion of this course students will be able to:
+
+::: incremental 
+
+- Identify different types of sampling designs and understand when to apply them
+
+- Understand statistical estimators and their properties
+
+- Frame a fish and wildlife sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.  
+
+- Be able to use fundamental code practices in the R programming language.  
+
+:::
+
+
+## [Why is this class useful?]{style="color:#078BCD;"} {.scrollable}
+
+-   Fundamental to scientific learning
+
+
+-   Have options in designing an empirical study
+
+
+-   Interpret and frame learning when reading the literature
+
+
+-   Collaborate with colleagues/statisticians
+
+## [Software]{style="color:#078BCD;"}
+
+![](/img/logosR.png)
+
+
+## [Why learn to code?]{style="color:#078BCD;"}
+
+::: fragment
+-   efficiency
+-   transparency
+-   flexibility in application
+-   shareable
+-   marketable skill
+-   needed for publications
+:::
+
+
+## [Why use R?]{style="color:#078BCD;"}
+
+::: fragment
+-   open-source and free
+-   small total user base / large in ecology and statistics
+-   find help online, e.g., [stack**overflow**](https://stackoverflow.com/)
+-   data management
+-   statistics
+-   plotting / graphics
+:::
+
+## [Why use RStudio?]{style="color:#078BCD;"}
+
+-   Makes using R easier
+-   [Projects (file mgmt)](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)
+-   [R Shiny](https://www.rstudio.com/products/shiny/): Interactive online apps
+-   [R Markdown](https://rmarkdown.rstudio.com/): Interactive documents
+-   [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html): interactive articles, websites, blog, ...
+-   [Posit](https://posit.co/) - Certified B corp
+
+
+
+## [Statistics in the Modern Age]{style="color:#078BCD;"}
+
+. . .
+
+```{=html}
+<center><span style="color:#FF0000";><em>
+"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good
+statistical thinking have not changed, but their implementation has."</em></span> <br><span>- Cox and Efron, Sci. Adv. 2017;3: e1700768.</span></center>
+```
+ 
+
+
+
+## [Coding in the Modern Age]{style="color:#078BCD;"}
+
+- Software changes all the time
+
+- Code will become obsolete  
+
+- Base R functions change slower than packages
+
+- Document/Annotate code and publish it online
+
+- File management is important!
+
+<!-- ## [File management]{style="color:#078BCD;"} -->
+
+<!-- **Project Folder** -->
+
+<!-- *Subfolders:* -->
+
+<!--   - data -->
+<!--   - outputs -->
+<!--   - plots -->
+<!--   - R -->
+
+
+
+<!-- ## [My Background]{style="color:#078BCD"} -->
+
+<!-- ![](/img/me.png) -->
+
+
+
+
+## [Teaching Philosophy]{style="color:#078BCD"}
+
+-   Learning is a choice (in every moment)
+
+-   An inclusive environment is paramount for learning
+
+-   Communication is everything
+
+-   Everyone has something to teach and something to learn
+
+-   Struggle is good. Solving problems leads to learning. But....
+
+
+## []{style="color:#078BCD"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{=html}
+<center><span style="color:#FF0000";><p style="font-size:100px">Words Matter</p><em></em></p></span></center>
+```
+
+
+## [Website]{style="color:#078BCD"}
+
+#### Most Material
+
+<a href="https://bgerber123.github.io/FW552/index.html">https://bgerber123.github.io/FW552/</a>
+
+<br>
+
+#### Quizzes and Assignments
+
+<a href="https://canvas.colostate.edu/">https://canvas.colostate.edu/</a>
+
+
+## 
+
+###  [Questions]{style="color:#078BCD;"}
+
+![](/img/question.png){fig-align="center" width="200"}
+
+## [A 'Sample']{style="color:#078BCD;"}
+
+**Brook trout habitat in rivers of Massachusetts**
+
+<!-- ![](../img/prairie.png){width="600"} -->
+![](../img/streamsMA.png){width="800"}
+
+
+. . .
+
+A finite part of a *target population* whose properties are studied to gain information about the whole (i.e., to infer or gain inference).
+
+## [A 'Sample']{style="color:#078BCD;"}
+
+**Brook trout habitat in rivers of Massachusetts**
+
+
+![](../img/streamsMA.png){width="800"}
+
+
+A selection of rivers (*sample*) to measure habitat characteristics (e.g. gravel beds) to be used to infer about habitat in all of the state.
+
+
+
+## [Not Sampling]{style="color:#078BCD;"}
+
+**Piping plovers nesting at Watch Hill, RI**
+
+![](../img/watchhill.png){width="500"}
+
+. . .
+
+**Census:** a complete enumeration of a target population
+
+## [Sampling]{style="color:#078BCD;"}
+
+The process of selecting a representative part of the population for the purpose of determining characteristics of the target population.
+
+. . .
+
+**Why do we need to sample?**
+
+. . .
+
+- logistically/physically prohibitive
+- fiscally prohibitive / waste of time and money
+- timeliness
+- sampling may be destructive
+
+
+## [Central paradox of sampling]{style="color:#078BCD"}
+
+- Impossible to know whether a sample is 'good' (i.e., representative of the target)
+
+- The sample itself cannot tell us - only the process
+
+- Given exact same sample, we treat it differently depending on how it was selected.
+
+- A sample from a *reliable process* has credentials
+
+## [How have you used sampling?]{style="color:#078BCD;"}
+
+
+
