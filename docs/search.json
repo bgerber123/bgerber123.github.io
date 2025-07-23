@@ -8460,7 +8460,7 @@
     "href": "wolverine/index.html",
     "title": "Wolverine",
     "section": "",
-    "text": "Please look over the four summary websites below in order from top to bottom. Bring questions for Brian and Jake at our next meeting!\nSummary of and motivation for 2017/2022 Data Changes\nWAFWA Wolverine 2017 Results\nWAFWA Wolverine 2022 Results\nWAFWA Wolverine 2017.2022 Comparison"
+    "text": "Please look over the four summary websites below in order from top to bottom. Bring questions for Brian and Jake at our next meeting!\n\nNew\nInvestigating effect of bait vs lure\n\n\nPrevious\nSummary of and motivation for 2017/2022 Data Changes\nWAFWA Wolverine 2017 Results\nWAFWA Wolverine 2022 Results\nWAFWA Wolverine 2017.2022 Comparison"
   },
   {
     "objectID": "wolverine/Motivation.for.Changes.html",
@@ -8516,14 +8516,14 @@
     "href": "FW552/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nCanvas Quiz 1\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
   },
   {
     "objectID": "FW552/week1.html#week-1",
     "href": "FW552/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+    "text": "Lecture: Introduction\n\n\n\n\n\nDiscussion Post on Canvas\nReadings for next class:\n\nHankin Chapter 2\nGerber et al. 2012.pdf\n\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\nPlease bring a laptop with R and RStudio installed.\nLecture: Big Picture\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\n\nCanvas Quiz 1\nReadings for next class:\n\nHankin Chapter 1  (sections 1.1 and 1.5)\nThompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
   },
   {
     "objectID": "FW552/CourseOverview.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nInstall R and RStudio. Discussion Post\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nQuiz 1\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\n\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nInstall R and RStudio. Discussion Post\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nQuiz 1\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nQuiz 2; pick paper and describe the target population\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9048,14 +9048,14 @@
     "href": "FW552/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nCanvas Quiz 2\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
   },
   {
     "objectID": "FW552/week2.html#week-2",
     "href": "FW552/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nCanvas Quiz 2\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
   },
   {
     "objectID": "FW552/week4.html",
@@ -9362,15 +9362,15 @@
     "objectID": "FW552/Sampling1.html#population-and-sample",
     "href": "FW552/Sampling1.html#population-and-sample",
     "title": "Sampling I",
-    "section": "Population and Sample",
-    "text": "Population and Sample\n\n\nWhat is it called to use characteristics of sample to describe a ‘population’?"
+    "section": "",
+    "text": "What is it called to use characteristics of sample to describe a ‘population’?"
   },
   {
     "objectID": "FW552/Sampling1.html#design--vs-model-based-infernce",
     "href": "FW552/Sampling1.html#design--vs-model-based-infernce",
     "title": "Sampling I",
     "section": "Design- vs Model-based Infernce",
-    "text": "Design- vs Model-based Infernce\nWhat are important differences according to Thompson and Hankin et al.?\nBenefits or costs of either?\n\nImportant Considerations\n\nrandomness\nfixed"
+    "text": "Design- vs Model-based Infernce\nWhat are important differences according to Thompson and Hankin et al.?\nBenefits or costs of either?\n. . .\nImportant Considerations\n\nrandomness\nfixed\nundefinable infinite superpoulation vs. real target population"
   },
   {
     "objectID": "FW552/Sampling1.html#design--vs-model-based-infernce-1",
@@ -9384,7 +9384,7 @@
     "href": "FW552/Sampling1.html#design-vs.-sampling",
     "title": "Sampling I",
     "section": "Design vs. Sampling",
-    "text": "Design vs. Sampling\n\nExperimental Design:\n\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\n\nSampling Design:\n\nThe process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
+    "text": "Design vs. Sampling\n\n\nExperimental Design:\n\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\n\n\n\nSampling Design:\n\nThe process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
   },
   {
     "objectID": "FW552/Sampling1.html#sample-language",
@@ -9398,35 +9398,35 @@
     "href": "FW552/Sampling1.html#common-sample-units",
     "title": "Sampling I",
     "section": "Common Sample Units",
-    "text": "Common Sample Units\n\n\nplots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established thourghout a population\ntransects - straight-line segments\nindividual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit"
+    "text": "Common Sample Units\n. . .\n\nplots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established thourghout a population\ntransects - straight-line segments\nindividual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit"
   },
   {
     "objectID": "FW552/Sampling1.html#more-language",
     "href": "FW552/Sampling1.html#more-language",
     "title": "Sampling I",
     "section": "More Language",
-    "text": "More Language\nWhat is a statistic?\n\n\nAn estimate of a population parameter from a sample\n\n\n\n\\[\\hat{\\mu} = \\left(\\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n}\\right) = 4.1\\]\n\n\\(n\\) is a sample parameter (size of sample)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter (\\(\\mu\\)) from the estimator (mathematical rule for calculation)\n4.1 is a statistic (specific value)"
+    "text": "More Language\nWhat is a statistic?\n. . .\n\nAn estimate of a population parameter from a sample\n\n. . .\n\\[\\hat{\\mu} = \\left(\\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n}\\right) = 4.1\\]\n\n\n\\(n\\) is a sample parameter (size of sample)\n\n\\(\\hat{\\mu}\\) is an estimate of a population parameter (\\(\\mu\\)) from the estimator (mathematical rule for calculation)\n4.1 is a statistic (specific value)"
   },
   {
     "objectID": "FW552/Sampling1.html#more-language-1",
     "href": "FW552/Sampling1.html#more-language-1",
     "title": "Sampling I",
     "section": "More Language",
-    "text": "More Language\n\\[\\mu =\\left(\\sum_{i=1}^{N}y_{i}\\right)\\times \\frac{1}{N} = 4\\]\n\n\\(\\mu\\) is a population parameter (measure of central tendency)\n\\(N\\) is a population parameter (size of all possible sample units)\n\\(4\\) is the value of the population parameter"
+    "text": "More Language\n\\[\\mu =\\left(\\sum_{i=1}^{N}y_{i}\\right)\\times \\frac{1}{N} = 4\\]\n\n\n\\(\\mu\\) is a population parameter (measure of central tendency)\n\n\\(N\\) is a population parameter (size of all possible sample units)\n\n\\(4\\) is the value of the population parameter"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-error",
     "href": "FW552/Sampling1.html#sampling-error",
     "title": "Sampling I",
     "section": "Sampling Error",
-    "text": "Sampling Error\n\nSampling Error\n\nThe difference b/w a sample statistic (specific value) and the true value of a population paramter\n4.1 - 4 = 0.1 sampling error\nDue solely to incomplete enumeration of the population (chance)\nProtection against this is large sample size"
+    "text": "Sampling Error\n\n\nSampling Error\n\nThe difference b/w a sample statistic (specific value) and the true value of a population paramter\n4.1 - 4 = 0.1 sampling error\nDue solely to incomplete enumeration of the population (chance)\nProtection against this is large sample size"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-bias",
     "href": "FW552/Sampling1.html#sampling-bias",
     "title": "Sampling I",
     "section": "Sampling Bias",
-    "text": "Sampling Bias\n\nSampling Bias\n\nSystematic tendency of selecting certain sample units; makes the samples unrepresentative to the target population\nExamples in fish/wildlife??"
+    "text": "Sampling Bias\n\n\nSampling Bias\n\nSystematic tendency of selecting certain sample units; makes the samples unrepresentative to the target population\nExamples in fish/wildlife??"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-error-and-bias",
@@ -9454,7 +9454,7 @@
     "href": "FW552/Sampling1.html#sampling-error-1",
     "title": "Sampling I",
     "section": "Sampling Error",
-    "text": "Sampling Error\nVector of bear weights\n\n  pop.weights[1:5]\n\n[1] 543.55183  70.43038 343.21377 143.64493 268.94786\n\n\n\n\n# Sample Size\n  n = 50\n\n# Sample and estimate mean one time\n  sample.1 = mean(\n                  sample(pop.weights,\n                         n,\n                         replace = FALSE\n                         )\n                  )\n\n# Calculate Sampling Error\n  sample.1 - pop.mu.weights\n\n[1] 7.645556\n\n\n\n\n\nIs this a problem?"
+    "text": "Sampling Error\nVector of bear weights\n\n  pop.weights[1:5]\n\n[1] 543.55183  70.43038 343.21377 143.64493 268.94786\n\n\n. . .\n\n# Sample Size\n  n = 50\n\n# Sample and estimate mean one time\n  sample.1 = mean(\n                  sample(pop.weights,\n                         n,\n                         replace = FALSE\n                         )\n                  )\n\n# Calculate Sampling Error\n  sample.1 - pop.mu.weights\n\n[1] 7.645556\n\n\n. . .\n\nIs this a problem?"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-error-2",
@@ -9475,7 +9475,7 @@
     "href": "FW552/Sampling1.html#sampling-bias-1",
     "title": "Sampling I",
     "section": "Sampling Bias",
-    "text": "Sampling Bias\nWe should be very interested in the characteristics of the sampling distribution and error.\n\n\nExpected Bias = average sample mean - population mean"
+    "text": "Sampling Bias\nWe should be very interested in the characteristics of the sampling distribution and error.\n\n. . .\nExpected Bias = average sample mean - population mean"
   },
   {
     "objectID": "FW552/Sampling1.html#biased-estimator",
@@ -9489,7 +9489,7 @@
     "href": "FW552/Sampling1.html#biased-estimator-1",
     "title": "Sampling I",
     "section": "Biased Estimator",
-    "text": "Biased Estimator\n\nExpected Bias = 215.14"
+    "text": "Biased Estimator\n\n\n\n\n\n\n\n\nExpected Bias = 215.14"
   },
   {
     "objectID": "FW552/Introduction.html#questions-for-you",
@@ -9552,7 +9552,7 @@
     "href": "FW552/Sampling1.html#sampling-variation-and-error",
     "title": "Sampling I",
     "section": "Sampling Variation and Error",
-    "text": "Sampling Variation and Error\nTarget Population: Weight of all black bears in a region\n\n\nHow would you describe a sampling frame relevant to this target population?"
+    "text": "Sampling Variation and Error\nTarget Population: Weight of all black bears in a region\n\n\n\n\n. . .\nHow would you describe a sampling frame relevant to this target population?"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-variation-vs-error",
@@ -9580,14 +9580,14 @@
     "href": "FW552/Sampling1.html#sampling-bias-3",
     "title": "Sampling I",
     "section": "Sampling Bias",
-    "text": "Sampling Bias\nWe only sample harvested bears with food supplementation\n\n\nExpected Bias = 71.26"
+    "text": "Sampling Bias\nWe only sample harvested bears with food supplementation\n\n\n\n\n\n\n\n\n. . .\nExpected Bias = 71.26"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-variation-2",
     "href": "FW552/Sampling1.html#sampling-variation-2",
     "title": "Sampling I",
     "section": "Sampling Variation",
-    "text": "Sampling Variation\nWe can summarize the sampling variation into a probability\n\n\nFor n = 50, how likely is it that I’ll be within 10% of the true population parameter?\n\nlower=pop.mu.weights - pop.mu.weights*0.10\nupper=pop.mu.weights + pop.mu.weights*0.10\n\nlength(which(mu.hat&gt;lower & mu.hat&lt;upper)) / length(mu.hat)\n\n[1] 0.97335"
+    "text": "Sampling Variation\nWe can summarize the sampling variation into a probability\n\n. . .\nFor n = 50, how likely is it that I’ll be within 10% of the true population parameter?\n\nlower=pop.mu.weights - pop.mu.weights*0.10\nupper=pop.mu.weights + pop.mu.weights*0.10\n\nlength(which(mu.hat&gt;lower & mu.hat&lt;upper)) / length(mu.hat)\n\n[1] 0.97335"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-bias-4",
@@ -9595,5 +9595,54 @@
     "title": "Sampling I",
     "section": "Sampling Bias",
     "text": "Sampling Bias\nRelative Expected Bias = \\(\\frac{E(\\hat{\\mu})-\\mu}{\\mu}\\)\nRelative Expected Bias = 0.23"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample-1",
+    "href": "FW552/Sampling1.html#population-and-sample-1",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\n\nIs it important to know what your target population is?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#subtle-sampling-bias",
+    "href": "FW552/Sampling1.html#subtle-sampling-bias",
+    "title": "Sampling I",
+    "section": "Subtle Sampling Bias",
+    "text": "Subtle Sampling Bias\nSample fish in streams.\n200 streams to choose to sample. Called what?\nLet’s consider a situation where we don’t take an equal probability sample"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#probability-of-sampling-an-occupied-cell",
+    "href": "FW552/Sampling1.html#probability-of-sampling-an-occupied-cell",
+    "title": "Sampling I",
+    "section": "Probability of sampling an occupied cell",
+    "text": "Probability of sampling an occupied cell\n\n\n[1] 0.55\n\n\n[1] 0.45\n\n\n[1] 1.222222\n\n\n\n\n\n  |                                                         \n  |                                                   |   0%\n  |                                                         \n  |..                                                 |   4%                   \n  |                                                         \n  |....                                               |   8% [unnamed-chunk-25]\n  |                                                         \n  |......                                             |  12%                   \n  |                                                         \n  |........                                           |  17% [unnamed-chunk-26]\n  |                                                         \n  |...........                                        |  21%                   \n  |                                                         \n  |.............                                      |  25% [unnamed-chunk-27]\n  |                                                         \n  |...............                                    |  29%                   \n  |                                                         \n  |.................                                  |  33% [unnamed-chunk-28]\n  |                                                         \n  |...................                                |  38%                   \n  |                                                         \n  |.....................                              |  42% [unnamed-chunk-29]\n  |                                                         \n  |.......................                            |  46%                   \n  |                                                         \n  |..........................                         |  50% [unnamed-chunk-30]\n  |                                                         \n  |............................                       |  54%                   \n  |                                                         \n  |..............................                     |  58% [unnamed-chunk-31]\n  |                                                         \n  |................................                   |  62%                   \n  |                                                         \n  |..................................                 |  67% [unnamed-chunk-32]\n  |                                                         \n  |....................................               |  71%                   \n  |                                                         \n  |......................................             |  75% [unnamed-chunk-33]\n  |                                                         \n  |........................................           |  79%                   \n  |                                                         \n  |..........................................         |  83% [unnamed-chunk-34]\n  |                                                         \n  |.............................................      |  88%                   \n  |                                                         \n  |...............................................    |  92% [unnamed-chunk-35]\n  |                                                         \n  |.................................................  |  96%                   \n  |                                                         \n  |...................................................| 100% [unnamed-chunk-36]\n                                                                                                             \n\n\n[1] \"../FW552/Sampling1.r\""
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample-2",
+    "href": "FW552/Sampling1.html#population-and-sample-2",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\n\n\nIs your target population connected to your study objective?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample-3",
+    "href": "FW552/Sampling1.html#population-and-sample-3",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\nTitleMuskrat occurrence in Rhode Island shows little evidence of land use change driving declines\nClear target population and connected to study objective"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample-4",
+    "href": "FW552/Sampling1.html#population-and-sample-4",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\nTitleChanges in species composition and community structure during plant–pollinator community assembly\n\nThe study sites (N=32) were located in the Central Valley of California\nagricultural landscape composed primarily of conventionally managed monoculture crop fields\nthree different experimental treatments:\n\nhedgerows with native species recently planted\nmature hedgerows with native species planted 10 years\nunrestored hedgerows (no restoration intervention)."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#population-and-sample-5",
+    "href": "FW552/Sampling1.html#population-and-sample-5",
+    "title": "Sampling I",
+    "section": "Population and Sample",
+    "text": "Population and Sample\nTitleMuskrat occurrence in Rhode Island shows little evidence of land use change driving declines\n\n. . ."
   }
 ]

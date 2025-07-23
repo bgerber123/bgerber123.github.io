@@ -1,0 +1,881 @@
+---
+title: "Considering the effect of Bait vs. Lure on Wolverine Occupancy and Detection"
+author: "Brian D. Gerber and Jacob S. Ivan"
+date: "2025-07-22"
+output:     
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+# **Context**
+
+In the 2017 and 2022 WAFWA wolverine surveys, camera sites included either bait or a scent lure.
+
+We are interested in understanding the  effects of bait and lure in detecting wolverine at a site. 
+
+This includes:
+
+- how detection probability could be different at occupied sites when using bait vs lure and 
+- whether there is an effect of detecting wolverine at all at a site using lure; i.e., a wolverine is present but may go undetected using lure but will be detected using bait. 
+
+We can investigate the second part by evaluating whether baited sites in 2017 that had detections are more likely to be undetected in 2022 when using lure compared to sites that were baited in both years. We unfortunately can't use the reverse logic of comparing lure sites in 2017 that did not detect wolverine because no lure sites were then later baited. The assumption in this investigation is that wolverine occupancy is unlikely to change in a 5 year period and that changes are due to detection method. It is possible there is a bait/lure effect only, only real changes in occupancy, or both. 
+
+```{r load.data,echo=FALSE,warning=FALSE,results='hide', message=FALSE}
+# Load Packages
+  library(unmarked)
+  library(ubms)
+  library(ggplot2)
+  library(ggnewscale)
+  library(ggpubr)
+  library(sf)
+  library(USA.state.boundaries)
+
+# Load survey data
+  visitData2017 = read.csv("../data/visitDataWolv2017_07-16-25.csv")
+  visitData2022 = read.csv("../data/visitDataWolv2022_07-16-25.csv")
+  habData2017 = read.csv("../data/habDataWolv2017_07-16-25.csv")
+  habData2022 = read.csv("../data/habDataWolv2022_07-16-25.csv")
+```
+
+# **Spatial Distribution**
+
+```{r plot of bait sites, echo=FALSE}
+  boundary=st_transform(state_boundaries_wgs84,crs=5070)
+  these.states=boundary['NAME']$NAME%in%c("Montana","Wyoming","Washington","Idaho")
+  lim.states=boundary['NAME'][these.states,]
+
+  #plot first    
+  state.plot=  ggplot(lim.states) +
+    geom_sf(aes()) #+
+  
+  
+  plot.bait.2017.state =  state.plot + new_scale_colour()+
+    geom_point(data = habData2017, 
+               aes(x = Albers_X, 
+                   y = Albers_Y,
+                   colour = SiteType2017),
+               shape = 15, size = 1) +
+    scale_colour_manual(values = c("grey","red", "black"))+
+    ggtitle("Bait/Lure 2017")
+  
+  plot.bait.2017.state
+
+# Now 2022
+  boundary=st_transform(state_boundaries_wgs84,crs=5070)
+    these.states=boundary['NAME']$NAME%in%c("Montana","Wyoming","Washington","Idaho","Oregon","Utah","Colorado")
+  lim.states=boundary['NAME'][these.states,]
+    #plot first    
+  state.plot=  ggplot(lim.states) +
+    geom_sf(aes()) #+
+ plot.bait.2022.state =  state.plot + new_scale_colour()+
+    geom_point(data = habData2022, 
+               aes(x = Albers_X, 
+                   y = Albers_Y,
+                   colour = SiteType2022),
+               shape = 15, size = 1) +
+    scale_colour_manual(values = c("grey","red","orange", "black"))+
+    ggtitle("Bait/Lure 2022")
+  
+  plot.bait.2022.state
+  
+#  ggarrange(plot.bait.2017.state,plot.bait.2022.state,ncol=1)  
+  
+```
+
+**Summary:** Sites that got bait or lure were not randomly assigned. There could be some correlating factor of site differences that is not really due to detection method. For example, sites with difficulty accessibility in 2017 often used lure. Also, in 2022 the sites with wolverines present and had plenty of baited sites were only Idaho and Wyoming. Need to think about both concerns when evaluating the effect of detection method.   
+
+
+# **Data Mgmt**
+
+For 2022, there are 2 sites (1 in UT and 1 in ID) that have missing values for the bait/lure covariate. These need to be fixed. For now, I will treat them as `Lure` sites. Their `GRID_ID` are 9374 and 13192.
+
+Second, there are 12 sites labeled as `Bait_Lure` (primarily in Utah, but also some in Oregon), indicating both were used. I will treat these as `Bait` sites. There are no wolverines detected in these states and they are only surveyed in 2022, so not an issue for this investigation. 
+
+
+```{r,data.mgmt,echo=FALSE}
+# unique(visitData2022$SiteType2022)
+# visitData2022$STATE[which(visitData2022$SiteType2022=="")]
+  
+# Need to confirm, but for now we will change these missing and other to Bait sites  
+  index=which(visitData2022$SiteType2022=="")
+  visitData2022$SiteType2022[index]="Lure"
+  
+  index=which(visitData2022$SiteType2022=="Bait_Lure")
+  visitData2022$SiteType2022[index]="Bait"
+```
+
+# **Covariate Comparison**
+
+Comparisons of the availble spatial covariates by year between sites with bait or lure. 
+
+### *2017:*
+
+```{r, echo=FALSE}
+# Need to look at whether bait/lure sites are differeny by other covaraites  
+  one=ggplot(visitData2017, aes(x=SiteType2017, y=propCopelandInman )) + 
+    geom_boxplot()  
+  two=ggplot(visitData2017, aes(x=SiteType2017, y=ClusterCount   )) + 
+    geom_boxplot()  
+  three=ggplot(visitData2017, aes(x=SiteType2017, y=meanNDVI_2017    )) + 
+    geom_boxplot()  
+four = ggplot(visitData2017, aes(x=SiteType2017, y=meanHumanMod_2021    )) +     geom_boxplot()  
+  
+  ggarrange(one,two,three,four,ncol=2,nrow = 2)
+```
+
+### *2022:*
+
+```{r, echo=FALSE}
+# Need to look at whether bait/lure sites are differeny by other covaraites  
+  one=ggplot(visitData2022, aes(x=SiteType2022, y=propCopelandInman)) +    geom_boxplot()  
+  two=ggplot(visitData2022, aes(x=SiteType2022, y=meanMayDepth_2022)) +   geom_boxplot()  
+  three=ggplot(visitData2022, aes(x=SiteType2022, y=SDMayDepth_2022)) + geom_boxplot()  
+  four=ggplot(visitData2022, aes(x=SiteType2022, y=ClusterCount)) +   geom_boxplot()  
+  five=ggplot(visitData2022, aes(x=SiteType2022, y=meanNDVI_2022)) +   geom_boxplot()  
+  
+  six=ggplot(visitData2022, aes(x=SiteType2022, y=propBurned2016_2021)) +   geom_boxplot()
+  
+  seven=ggplot(visitData2022, aes(x=SiteType2022, y=propBurned2001_2015)) +   geom_boxplot()
+  
+  eight = ggplot(visitData2022, aes(x=SiteType2022, y=meanHumanMod_2021)) +   geom_boxplot()  
+  
+  ggarrange(one,two,three,four,five,six,seven,eight,ncol=4,nrow = 2)
+```
+
+
+**Summary:*</span>** The differences b/w lure and bait sites are not overwhelming in any of these covariates. In 2017, sites with lure had a higher range and upper 75% quantile in `ClusterCount`, meaning the sites were more connected than bait sites. This might be related to these sites being more inaccessible. 
+
+# **Data Summary**
+
+### <span style="color:red">Number of sampled sites</span>
+
+*2017:*
+
+```{r,echo=FALSE}
+
+temp=data.frame(table(visitData2017$SiteType2017[match(unique(visitData2017$GRID_ID), visitData2017$GRID_ID)]),
+table(visitData2022$SiteType2022[match(unique(visitData2022$GRID_ID), visitData2022$GRID_ID)]))
+
+temp=temp[,-3]
+colnames(temp)=c("Site.Type","2017.Count","2022.Count")
+
+
+knitr::kable(temp,format = "html",table.attr = "style='width:50%;'")
+```
+
+<br>
+
+<!-- *2022:* -->
+
+<!-- ```{r,echo=FALSE} -->
+<!-- #  knitr::kable(table(visitData2022$SiteType2022[match(unique(visitData2022$GRID_ID), #visitData2022$GRID_ID)]),format = "html",table.attr = "style='width:30%;'") -->
+<!-- ``` -->
+
+**Summary:** 2017 was mostly baited sites and 2022 was mostly lure sites.
+
+
+###  <span style="color:red">Number of sampled sites by state</span>
+
+*2017:*
+
+```{r,echo=FALSE}
+knitr::kable(table(visitData2017$SiteType2017[match(unique(visitData2017$GRID_ID), visitData2017$GRID_ID)],
+      visitData2017$STATE[match(unique(visitData2017$GRID_ID), visitData2017$GRID_ID)]
+),format = "html",table.attr = "style='width:50%;'")
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+knitr::kable(table(visitData2022$SiteType2022[match(unique(visitData2022$GRID_ID), visitData2022$GRID_ID)],
+      visitData2022$STATE[match(unique(visitData2022$GRID_ID), visitData2022$GRID_ID)]
+),format = "html",table.attr = "style='width:100%;'")
+```
+
+<br>
+
+**Summary**: MT and WA (which have wolverines) have no baited sites; ID and WY have a good number of baited sites in both years and have wolverines.
+
+
+
+### <span style="color:red">Count of all detections/non-detections</span>
+
+These are counts summarizing for all sampling occasions.
+
+*2017:*
+
+```{r,echo=FALSE}
+  knitr::kable(table(visitData2017$SiteType2017,visitData2017$eh),format = "html",table.attr = "style='width:30%;'")
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+  knitr::kable(table(visitData2022$SiteType2022,visitData2022$eh),format = "html",table.attr = "style='width:30%;'")
+```
+
+<br>
+
+**Summary**: 2017 detections mostly occured at baited sites (99 vs 13), but also there were more of these type sites. 2022 detections were more often at baited sites (75 vs 30), when there were less baited sites.</span>
+
+### <span style="color:red">Trap success </span>
+
+Count of detections/count of sampling occasions
+
+*2017:*
+
+```{r,echo=FALSE}
+  temp=data.frame(table(visitData2017$SiteType2017,visitData2017$eh))
+  temp=temp[3:4,c(1,3)]
+  temp$prop = temp[,2]/c(table(visitData2017$SiteType2017))
+  colnames(temp)=c("Site.Type","Count.Detections","Trap Success")
+  rownames(temp)=NULL
+ knitr::kable(temp,format = "html",table.attr = "style='width:50%;'",align = "c",digits=3)
+
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+  temp=data.frame(table(visitData2022$SiteType2022,visitData2022$eh))
+  temp=temp[3:4,c(1,3)]
+  temp$prop = temp[,2]/c(table(visitData2022$SiteType2022))
+  colnames(temp)=c("Site.Type","Count.Detections","Trap Success")
+  rownames(temp)=NULL
+  knitr::kable(temp,format = "html",table.attr = "style='width:50%;'",align = "c",digits=3)
+
+```
+
+<br>
+
+**Summary**: After correcting the count of detections by the number of sampling occassions (per bait/lure) we see that we get a higher trap success at bait sites compared to lure sites in both years.</span>
+
+
+
+### <span style="color:red">Count of detections by State</span>
+
+*2017:*
+
+```{r,echo=FALSE}
+  knitr::kable(table(visitData2017$SiteType2017[which(visitData2017$eh==1)],visitData2017$STATE[which(visitData2017$eh==1)]),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+  knitr::kable(table(visitData2022$SiteType2022[which(visitData2022$eh==1)],visitData2022$STATE[which(visitData2022$eh==1)]),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+
+```{r long.format, echo=FALSE, results='hide'}
+##############################################################################  
+# Need to investigate if cells in 2017 that detected wolverine with bait
+# were undetetected in 2022 with lure
+# first convert to long format
+
+# 2017 long format  
+  GRID_ID.2017=unique(visitData2017$GRID_ID)
+  visit.2017.data.wide=data.frame(matrix(NA, nrow=length(GRID_ID.2017),ncol=10))
+  
+  for(i in 1:length(GRID_ID.2017)){
+    index=which(visitData2017$GRID_ID==GRID_ID.2017[i])
+    visit.2017.data.wide[i,visitData2017$occ[index]]=visitData2017$eh[index]
+    visit.2017.data.wide[i,5]=visitData2017$GRID_ID[index[1]]
+    visit.2017.data.wide[i,6]=visitData2017$SiteType2017[index[1]]
+    visit.2017.data.wide[i,7]=visitData2017$STATE[index[1]]
+    visit.2017.data.wide[i,8]=visitData2017$Grouping1[index[1]]
+    visit.2017.data.wide[i,9]=visitData2017$Albers_X[index[1]]
+    visit.2017.data.wide[i,10]=visitData2017$Albers_Y[index[1]]
+  }
+  
+  #head(visit.2017.data.wide)
+  colnames(visit.2017.data.wide)= c("Occ1","Occ2","Occ3","Occ4","GRID_ID","SiteType2017","State","Grouping1","Albers_X","Albers_Y")
+  
+  #Craete column for 1 detection
+  visit.2017.data.wide$detect1 = apply(visit.2017.data.wide[,1:4],1,sum)
+  visit.2017.data.wide$detect1[visit.2017.data.wide$detect1 > 0] <- 1 
+  
+# 2022 long format    
+  GRID_ID.2022=unique(visitData2022$GRID_ID)
+  visit.2022.data.wide=data.frame(matrix(NA, nrow=length(GRID_ID.2022),ncol=10))
+  
+  for(i in 1:length(GRID_ID.2022)){
+    index=which(visitData2022$GRID_ID==GRID_ID.2022[i])
+    visit.2022.data.wide[i,visitData2022$occ[index]]=visitData2022$eh[index]
+    visit.2022.data.wide[i,5]=visitData2022$GRID_ID[index[1]]
+    visit.2022.data.wide[i,6]=visitData2022$SiteType2022[index[1]]
+    visit.2022.data.wide[i,7]=visitData2022$STATE[index[1]]
+    visit.2022.data.wide[i,8]=visitData2022$Grouping1[index[1]]
+    visit.2022.data.wide[i,9]=visitData2022$Albers_X[index[1]]
+    visit.2022.data.wide[i,10]=visitData2022$Albers_Y[index[1]]
+  }
+  
+ # head(visit.2022.data.wide)
+  colnames(visit.2022.data.wide)= c("Occ1","Occ2","Occ3","Occ4","GRID_ID","SiteType2022","State","Grouping1","Albers_X","Albers_Y")
+  
+  #Craete column for 1 detection
+  visit.2022.data.wide$detect1 = apply(visit.2022.data.wide[,1:4],1,sum)
+  visit.2022.data.wide$detect1[visit.2022.data.wide$detect1 > 0] <- 1 
+  
+##############################################################################  
+# Summary of sites lost detections and gained detections  - shared GRID_ID b/w two surveys only
+#  comb=dplyr::left_join(visit.2017.data.wide,visit.2022.data.wide,by="GRID_ID")
+#  head(comb)  
+#  dim(comb)  #18
+#  table(comb$detect1.y-comb$detect1.x)
+  #30 sites lost, 126 stayed the same, 21 sites gained
+##############################################################################  
+```
+
+### <span style="color:red">Count of sites with detections</span>
+
+Sum of sites with at least one detection by Bait/Lure.
+
+
+*2017:*
+
+
+```{r,echo=FALSE}
+  knitr::kable(table(visit.2017.data.wide$SiteType2017[which(visit.2017.data.wide$detect1==1)],visit.2017.data.wide$State[which(visit.2017.data.wide$detect1==1)]),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+    knitr::kable(table(visit.2022.data.wide$SiteType2022[which(visit.2022.data.wide$detect1==1)],visit.2022.data.wide$State[which(visit.2022.data.wide$detect1==1)]),format = "html",table.attr = "style='width:50%;'",align = "c")
+
+```
+
+### <span style="color:red">Naive Site Occupancy</span>
+
+*2017:*
+
+```{r,echo=FALSE}
+  naive.occ.2017.bait = data.frame(table(visit.2017.data.wide$detect1,visit.2017.data.wide$SiteType2017))
+  naive.occ.2017.bait$total = c(141,141,43,43)
+  
+  naive.occ.2017.bait$prop = naive.occ.2017.bait$Freq/naive.occ.2017.bait$total
+  colnames(naive.occ.2017.bait)=c("Detection","Site.Type","Count.Occupied","Total","Prop.Occupied.Naive")
+  knitr::kable(naive.occ.2017.bait)
+  
+```
+
+<br>
+
+*2022:*
+
+```{r,echo=FALSE}
+
+  naive.occ.2022.bait = data.frame(table(visit.2022.data.wide$detect1,visit.2022.data.wide$SiteType2022))
+  naive.occ.2022.bait$total = c(63,63,167,167)
+  naive.occ.2022.bait$prop = naive.occ.2022.bait$Freq/naive.occ.2022.bait$total
+  colnames(naive.occ.2022.bait)=c("Detection","Site.Type","Count.Occupied","Total","Prop.Occupied.Naive")
+  knitr::kable(naive.occ.2022.bait)
+```
+
+
+**Summary**: Naive occupancy of baited sites in 2017 is higher (0.34) than lure sites in (0.14). Naive occupancy of baited sites in 2022 is higher (0.44) than lure sited in (0.10).
+
+
+### <span style="color:red">Naive Site Occupancy for WY and ID</span>
+
+WY and ID are the only states with a good number of baited sites in both years.
+
+
+*2017:*
+
+```{r,echo=FALSE}
+index=which(visit.2017.data.wide$State=="Wyoming" | visit.2017.data.wide$State=="Idaho" )
+
+temp= data.frame(table(visit.2017.data.wide$SiteType2017[index],
+                       visit.2017.data.wide$State[index],
+      visit.2017.data.wide$detect1[index]))
+
+temp=temp[5:8,]
+temp$naive.occ= temp[,4] /c(48,11,32,19)
+temp=temp[,-3]
+colnames(temp)=c("Site.Type","State","Count.Occ.Sites","Naive.Occ")
+knitr::kable(temp)
+
+```
+
+<br>
+
+*2022*
+
+```{r,echo=FALSE}
+
+index=which(visit.2022.data.wide$State=="Wyoming" | visit.2022.data.wide$State=="Idaho" )
+
+temp= data.frame(table(visit.2022.data.wide$SiteType2022[index],
+                       visit.2022.data.wide$State[index],
+      visit.2022.data.wide$detect1[index]))
+
+temp=temp[5:8,]
+temp$naive.occ= temp[,4] /c(22,38,26,25)
+temp=temp[,-3]
+colnames(temp)=c("Site.Type","State","Count.Occ.Sites","Naive.Occ")
+ knitr::kable(temp)
+
+```
+
+**Summary**: In both states and in both years, naive occupancy is higher at baited sites than lure sites. Notice especially that naive occupancy at baited sites increase from 2017 to 2022. This will pertain to understanding one of the results in the dynamic occupancy model below. 
+
+### <span style="color:red">Number of sampled sites by detection method</span>
+
+Summary of the shared sites in both surveys (2017, 2022) and how the detection method (Bait, Lure) changed. BaitBait indicates bait at a sites was in 2017 and 2022, while BaitLure indicates bait was used in 2017 and then changed to lure in 2022. 
+
+```{r,echo=FALSE}
+
+this=dplyr::left_join(visit.2017.data.wide,visit.2022.data.wide,by="GRID_ID")
+
+#which(is.na(this$detect1.x))
+rem.index=which(is.na(this$detect1.y))
+this=this[-rem.index,]
+det.change=paste0(this$SiteType2017,this$SiteType2022)
+knitr::kable(table(this$State.x,det.change),format = "html",table.attr = "style='width:50%;'",align = "c")
+
+```
+
+
+### <span style="color:red">Change in site detection (2022-2017) for MT and WA</span>
+
+Idaho, Montana, and Washington had a lot of bait sites in 2017 that then used lure in 2022 (25, 41 and 18, respectively). If lure decreases the chance of a site getting a wolverine detection in an "assumed occupied site", these are the two states that would see the biggest change. 
+
+We will summarize the number of sites change in naive occupancy status by whether they were baited in 2017 and then used lure (BaitLure) or used lure in both years (LureLure).
+
+```{r,echo=FALSE}
+
+this=dplyr::left_join(visit.2017.data.wide,visit.2022.data.wide,by="GRID_ID")
+index=which(this$State.x=="Montana" | this$State.x=="Washington" | this$State.x=="Idaho" )
+
+this=this[index,]
+
+this=this[-which(is.na(this$detect1.y)),]
+
+this2= data.frame(change=this$detect1.y- this$detect1.x,
+      site=paste0(this$SiteType2017,this$SiteType2022)
+     )
+
+knitr::kable(table(this2$change,this2$site),format = "html",table.attr = "style='width:50%;'",align = "c")
+
+```
+
+<br>
+
+A `-1` indicates a site that had no detection in 2022 and a detection in 2017
+
+A `0` indicates a site did not change detection status b/w years; either detections in both years or no detections in both years
+
+A `1` indicates a site that had a detection in 2022 and no detection in 2017
+
+**This is for Idaho, Washington and Montana only:**
+
+- Bait-Lure sites: 20 sites were lost (detection-->no detection), while 4 were gained; 60 unchanged
+- Bait-Bait sites: 4 sites were lost, while 6 was gained; so some dynamics going on
+- Lure-Bait sites: 4 sites were lost and 2 were gained; 18 unchanged
+
+**Summary:** A disproportionately high number of sites that had a detection in 2017 had no detection in 2022 when the site went from bait to lure; also though, 60 sites went unchanged going from bait to lure. That is good, but includes both sites with no detections as well as sites with detections in both years.
+
+Getting more specific, lets condition on sites with bait in 2017 and a wolverine detection (removes the issue of both sites having no detections, as in the above). This is then those sites in 2022:
+
+```{r echo=FALSE}
+index=which(this$SiteType2017=="Bait" & this$detect1.x==1)
+knitr::kable(table(this[index,]$SiteType2022,this[index,]$detect1.y),,format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+<br>
+
+**Summary**: 20 sites with previous detections with bait went with no detections with Lure (0.77 loss). Compare that to the number of sites with bait in 2022 that had a detection (0.73 stayed the same). 6 sites had detections when changing to lure (0.33 stayed the same). Twice as likely of losing a site detection when changing to lure from bait. 
+
+
+### <span style="color:red">Changes from 2017 to 2022 (all states)</span>
+
+If a site was baited in 2017 and had a detection then this is whether there was a detection (1) or not (0) at bait/lure sites in 2022.
+
+```{r, echo=FALSE}
+#These are the sites that had detections in 2017 with bait  
+  index=which(visit.2017.data.wide$detect1==1 & visit.2017.data.wide$SiteType2017=="Bait")
+  these=na.omit(match(visit.2017.data.wide$GRID_ID[index],visit.2022.data.wide$GRID_ID))
+
+  knitr::kable(table(visit.2022.data.wide$detect1[these],
+        visit.2022.data.wide$SiteType2022[these]),format = "html",table.attr = "style='width:30%;'"
+  )
+```  
+
+ - If detected with bait in 2017: 15/21 (0.71) sites had detections with bait in 2022
+ - If detected with bait in 2017:  6/26 (0.23) sites had detections with lure in 2022
+
+
+If a site used lure in 2017 and had a detection then this is whether there was a detection (1) or not (0) at bait/lure sites in 2022.
+
+```{r,echo=FALSE}
+  index=which(visit.2017.data.wide$detect1==1 & visit.2017.data.wide$SiteType2017=="Lure")
+  these=match(visit.2017.data.wide$GRID_ID[index], visit.2022.data.wide$GRID_ID)
+  
+  knitr::kable(table(visit.2022.data.wide$detect1[these],
+        visit.2022.data.wide$SiteType2022[these]
+  ),format = "html",table.attr = "style='width:30%;'")
+```
+
+  - If detected with lure in 2017: 2 sites had detections with lure out of 6 (0.333)
+
+
+```{r,echo=FALSE,results='hide'}
+
+#These are the sites that had no detections in 2017 
+  index=which(visit.2017.data.wide$detect1==0)
+  these=match(visit.2017.data.wide$GRID_ID[index], visit.2022.data.wide$GRID_ID)
+  
+  table(visit.2022.data.wide$detect1[these],
+        visit.2022.data.wide$SiteType2022[these]
+  )
+  
+  # If no detection in 2017. 13 of 27 detections with Bait in 2022
+  # If no detection in 2017. 8 of 97  detections with Lure in 2022
+  
+########    
+
+# These are the sites that had detections in 2017 with bait or lure
+  index=which(visit.2017.data.wide$detect1==1)
+  these=match(visit.2017.data.wide$GRID_ID[index], visit.2022.data.wide$GRID_ID)
+
+  table(visit.2022.data.wide$detect1[these],
+        visit.2022.data.wide$SiteType2022[these]
+  )  
+# given detection in 2017,   15 / 21 baited sites got a detection
+# given detection in 2017,   8 / 32 lure sites got a detection
+  
+  
+########      
+#These are the sites that had no detections in 2017 with Lure
+  index=which(visit.2017.data.wide$detect1==0 & visit.2017.data.wide$SiteType2017=="Lure")
+  these=match(visit.2017.data.wide$GRID_ID[index], visit.2022.data.wide$GRID_ID)
+  
+  
+  table(visit.2022.data.wide$detect1[these],
+        visit.2022.data.wide$SiteType2022[these]
+  )
+  
+  #Sites with Lure in 2017 were only used with Lure in 2022. Small increase in detections - 4/37
+  
+```  
+
+### <span style="color:red">Some Summary Notes</span>
+  
+ - No sites with Lure in 2017 were then baited in 2022; thus can only asses if baited sites in 2017 that in 2022 had lure and went from detected to not-detected
+  - If using bait in both year, more likely (two-three times) to get a site detection than if changing to lure in the second year. 
+ - Issue that there is a spatial bias towards certain states with bait/lure. 
+ - Issue that there was no randomization of bait/lure. 
+  
+# **Dynamic Occupancy Model**
+
+Here, I put the two surveys together for the shared sites only (177 sites). The model allows us to asses if bait/lure sites are different (initial occupancy, detection) and whether changes in occupancy (colonization, extirpation) are different if going from Bait-Bait, Bait-Lure, or Lure-Lure.
+
+```{r unmarked,echo=FALSE, results='hide',warning=FALSE}
+  
+########################################################
+# Get same sites in 2017 and 2022- combined detection data  
+# Crate unmakredd framework for dynamic occ model  
+  these=match(visit.2017.data.wide$GRID_ID,visit.2022.data.wide$GRID_ID)
+  remove.na=which(is.na(these))
+  these=na.omit(these)
+  det.2017.2022=cbind(visit.2017.data.wide[-remove.na,1:4],visit.2022.data.wide[these,1:4])
+  dim(det.2017.2022)
+ 
+# plot shared sites
+  dat.plot = dplyr::left_join(visit.2017.data.wide[-remove.na,],visit.2022.data.wide[these,],by="GRID_ID")
+  
+    #plot first    
+  state.plot=  ggplot(lim.states) +
+    geom_sf(aes()) #+
+  
+  
+  plot.state.shared =  state.plot + new_scale_colour()+
+    geom_point(data = dat.plot, 
+               aes(x = Albers_X.x, 
+                   y = Albers_Y.x),
+               shape = 15, size = 1) +
+    scale_colour_manual(values = c("black"))+
+    ggtitle("Shared Sample site 2017/2022")
+
+  
+# Create covariates
+  
+  yearly.site.covs <- list( bait =data.frame(cbind(visit.2017.data.wide$SiteType2017[-remove.na],
+                                                   visit.2022.data.wide$SiteType2022[these]
+  ))) 
+
+  states=cbind(visit.2017.data.wide$State[-remove.na],
+                   visit.2022.data.wide$State[these]
+                )
+  Grouping1=cbind(visit.2017.data.wide$Grouping1[-remove.na],
+               visit.2022.data.wide$Grouping1[these]
+  )
+  Grouping1=factor(Grouping1[,1])
+  Grouping1=relevel(Grouping1,ref="NorthernRockies")
+  site.covs <- data.frame(bait1=visit.2017.data.wide$SiteType2017[-remove.na],
+                    baitTrans=paste0(yearly.site.covs$bait[,1],yearly.site.covs$bait[,2]),
+                    states=states[,1],
+                    Grouping1=Grouping1
+                    )
+  obsCovs= list(bait.obs= cbind(  matrix(rep(visit.2017.data.wide$SiteType2017[-remove.na],4),ncol=4),
+                                  matrix(rep(visit.2022.data.wide$SiteType2022[these],4),ncol=4)
+                                ))
+  
+  
+  
+# Cream unmarked framework  
+  umf <- unmarkedMultFrame(y=det.2017.2022, siteCovs= site.covs, #yearlySiteCovs=yearly.site.covs,  
+                           obsCovs=obsCovs, numPrimary=2) 
+  
+# fit bait model  
+ #m.bait <- colext(~bait1, ~baitTrans, ~baitTrans, ~bait.obs, umf) 
+ #m.bait
+ 
+# Same bait model but in ubms
+   m.bait.bayes <- stan_colext(~bait1, ~baitTrans, ~baitTrans, ~bait.obs, umf,chains=1)
+
+ 
+ #m.alt <- stan_colext(~bait1+states, ~baitTrans+states, ~baitTrans+states, ~bait.obs+states, umf,chains=1) # fit a model fm
+ #m.alt  
+```
+<!-- Probabilty shold plot the shared sampling from for both years -->
+
+## Map of shared sample sites
+
+```{r,echo=FALSE}
+plot.state.shared
+```
+
+## Model Summary:
+
+```{r echo=FALSE}
+m.bait.bayes
+```
+
+## Model Interpretation:
+
+- *Initial Occupancy (2017)*: sites using lure have lower occupancy (effect difference of lure from bait: -1.072)
+
+- *Colonization*: whether an unoccupied site in 2017 becomes occupied in 2022 differs based on the bait/lure transition. Colonziation is highest from Bait-Bait (intercept) and much lower for Bait-Lure (-2.23) and Lure-Lure (-1.79).
+
+- *Extirpation*: whether an occupied site in 2017 becomes unoccupied in 2017 differs based on the bait/lure transition. Extirpation is lowest from Bait-Bait (intercept) and much higher for Bait-Lure (1.68) and Lure-Lure (0.82).
+
+- *Detection*: whether a wolverine is detected at a site that is occupied; detection is higher at sites with bait compared to lure.
+
+
+## Model Probability Predictions
+
+### *Initial Occupancy (2017):*
+
+```{r echo=FALSE}
+   newdata=data.frame(bait1=c("Bait","Lure"))
+   pred=predict(m.bait.bayes,submodel="state",newdata=newdata)
+   psi1=cbind(newdata,pred)
+   colnames(psi1)[1]="Site.Type"
+   knitr::kable(psi1,digits=3)
+```
+
+**Summary:** Occupancy probability in 2017 is lower at sites that used lure. This is after accounting for the lower detection probability due to lure. It is irrelevant that more sites in 2017 used bait as we are scaling by how many there are of each site type (bait or lure).
+
+### <span style="color:red">Colonization of Site in 2022 that was not Occupied in 2017:</span>
+
+```{r echo=FALSE}
+   newdata=data.frame(baitTrans=c("BaitBait","BaitLure","LureLure"))
+   pred=predict(m.bait.bayes,submodel="col",newdata=newdata)
+   col=cbind(newdata,pred)
+   colnames(col)[1]="Site.Type"
+   knitr::kable(col,digits=3)
+```   
+
+**Summary:** I don't think we can assume there aren't true changes in occupancy happening, but those changes are exacerbated because of changes in detection method (bait-->lure). Bait--> Bait sites have a high probability of colonization. This change is not due to detection method. However, there is a much lower probability of colonization from a site that changes from bait to lure, indicating an effect of detection method. This colonization is not really different than Lure-->Lure. 
+
+Basically, if you use lure at a site that was previously unoccupied, you are not likely to have the site become colonized. This is not true when using bait. Why should a baited site in both years go from unoccupied to occupied? This seems like a real dynamic change. Why is colonization for LureLure, so low? It could be these sites are inherently different than bait sites because they are inaccessible and maybe that means something also a wolverine. 
+
+### <span style="color:red">Extirpation of Site in 2022 that was occupied in 2017</span>
+
+```{r echo=FALSE}
+   newdata=data.frame(baitTrans=c("BaitBait","BaitLure","LureLure"))
+   pred=predict(m.bait.bayes,submodel="ext",newdata=newdata)
+   ext=cbind(newdata,pred)
+   colnames(ext)[1]="Site.Type"
+   knitr::kable(ext,digits=3)
+
+```
+
+**Summary**  Again, I don't think we can assume there aren't true changes in occupancy happening, but those changes are exacerbated because of changes in detection method (bait-->lure). Bait-->Bait sites have a lower probability of extirpation. But, it's not zero, so some dynamic changes irrespective of detection method. Bait-->Lure extirpation probability is higher. The difference between the two may be the detection method. There is high uncertainty in extirpation probability for Lure-->Lure, making it hard to interpret.
+
+Basically, if you use bait at a site that previously used bait and was previously occupied, there is a chance of extirpation, but it's lower (by half) than if you changed to lure. Note the similar probabilities of colonization and extirpation for bait-->bait sites; they basically cancel each other out. We will see this below in the precicted occupancy by year. 
+
+If you use lure at a site that was previously occupied and used bait previously, you have a high probability of extirpation. This bump in probability beyond Bait-->Bait is likely a detection method. 
+
+###  <span style="color:red">Detection Probability of an Occupied Site:</span>
+
+```{r echo=FALSE}
+   newdata=data.frame(bait.obs=c("Bait","Lure"))
+   pred=predict(m.bait.bayes,submodel="det",newdata=newdata)
+   det=cbind(newdata,pred)
+   colnames(det)[1]="Site.Type"
+   knitr::kable(det,digits=3)
+```
+
+Let's convert these per occasion probabilities to the probability of detecting a wolverine at least once at an occupied site (p*)....
+
+```{r echo=FALSE}
+1-((1-det$Predicted)^4)
+```
+
+<br>
+
+**Summary:** The probability of detecting a wolverine at an occupied site is really high, but definitely lower at sites using lure. This translates into a slighly lower p*, which will effect occupancy uncertainty somewhat, but is not that bad. More important is that this difference doesn't seem as large as the difference in which sites detect wolverines at all; we can look at this better with predicting occupancy (next, below). 
+
+
+###  <span style="color:red">Predicted Site Occupancy for 2017 and 2022:</span>
+
+Predict occupancy from the dynamic parameters and compare across the two years how occupancy changes depending on the detection method. 
+
+```{r echo=FALSE}
+# knitr::kable(data.frame(type=c("BaitBait","BaitLure","LureLure"),
+#              psi.equil=col$Predicted/(col$Predicted+ext$Predicted)),digits=3,format = "html",table.attr = "style='width:30%;'")
+
+# calculate yearly occupancy
+
+#Baited site to Baited Site
+BB=psi1$Predicted[1]*(1-ext$Predicted[1])+(1-psi1$Predicted[1])*col$Predicted[1]
+             
+#Baited site to Lure Site
+BL=psi1$Predicted[1]*(1-ext$Predicted[2])+(1-psi1$Predicted[1])*col$Predicted[2]
+
+#Lure site to Lure Site
+LL=psi1$Predicted[2]*(1-ext$Predicted[3])+(1-psi1$Predicted[2])*col$Predicted[3]
+```
+
+*Occupancy at site with bait both surveys (2017,2022)*
+
+```{r echo=FALSE}
+c(psi1$Predicted[1],BB)
+```
+
+There is an increase in occupancy!
+
+*Occupancy at site with bait (2017) and then lure (2022)*
+
+```{r echo=FALSE}
+c(psi1$Predicted[1],BL)
+```
+
+There is a decrease in occupancy.
+
+*Occupancy at site with lure (2017) and then lure (2022)*
+
+```{r echo=FALSE}
+c(psi1$Predicted[2],LL)
+```
+
+Occupancy is basically the same.
+
+<br>
+
+<span style="color:purple">Summary: My major takeaway is that there are dynamics going on at all sites, probably due to wolverines moving around and sampling variation. However, there seems to also be an effect of detection method. Sites with bait in both years have a moderate increase in mean occupancy, while when changing to lure from bait, occupancy decreases. We would expect no change in a site that uses lure in both years and that is exactly what we see. 
+
+The fundamental question because bait/lure site designations were not randomized, is what is different between these bait sites and lure sites in 2017? Regardless of those differences though, a baited site that then used lure should not be different than a baited site in both years, unless the detection method is causing a change on detecting wolverines at all at those sites. 
+</span>
+
+# **Examine Bait --> Lure Data by State**
+
+```{r echo=FALSE,results='hide'}
+################################### 
+# Combine a different way to look at transition from Bait --> Lure and Bait--> Bait 
+   
+ index=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Lure")
+ index2=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Bait")
+ #det.2017.2022[index,]
+ 
+  look=  data.frame(cbind(apply(det.2017.2022[index,1:4],1,sum),
+   apply(det.2017.2022[index,5:8],1,sum),
+    states[index,1])
+   )
+
+#  look 
+  look$X1[which(look$X1>0)]=1
+  look$X2[which(look$X2>0)]=1
+  dim(look)
+```
+
+
+```{r echo=FALSE}
+  test=cbind(as.integer(look$X2)-as.integer(look$X1),
+      look$X3)
+  knitr::kable(table(test[,1],test[,2]))
+
+```
+
+A `-1` indicates a site that had no detection in 2022 and a detection in 2017
+
+A `0` indicates a site that had no detection in 2022 and no detection in 2017
+
+A `1` indicates a site that had a detection in 2022 and no detection in 2017
+
+This is only for bait (2017) and then lure (2022) cells sites
+ 
+ - lost 2 but gained 2 in ID
+ 
+ - lost 12 and gained 1 in MT
+ 
+ - lost 6 and gained 1 in WA
+ 
+ - lost none and gained none in WY
+ 
+
+```{r,echo=FALSE}
+
+#Now look at Lure to Lure
+look=  data.frame(cbind(apply(det.2017.2022[index2,1:4],1,sum),
+                        apply(det.2017.2022[index2,5:8],1,sum),
+                        states[index2,1])
+)
+
+#look 
+
+look$X1[which(look$X1>0)]=1
+look$X2[which(look$X2>0)]=1
+
+test=cbind(as.integer(look$X2)-as.integer(look$X1),
+           look$X3)
+table(test[,1],test[,2])
+
+```
+
+
+For lure-lure sites
+
+- Lost 4 sites in ID and gained 6
+
+- Lots 2 sites in WY and gained 7
+

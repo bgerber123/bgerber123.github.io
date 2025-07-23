@@ -22,6 +22,48 @@ code.r{
 
 What is it called to use characteristics of sample to describe a 'population'?
 
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+![](../img/sample.png)
+
+Is it important to know what your target population is?
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+![](../img/sample.png)
+
+<br>
+
+Is your target population connected to your study objective?
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+<b>Title</b>Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines
+
+**Clear target population and connected to study objective**
+
+![](../img/muskratRI.png)
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+<b>Title</b>Changes in species composition and community structure during plant–pollinator community assembly
+
+- The study sites (N=32) were located in the Central Valley of California 
+- agricultural landscape composed primarily of conventionally managed monoculture crop fields
+- three different experimental treatments: 
+    - hedgerows with native species recently planted
+    - mature hedgerows with native species planted 10 years
+    - unrestored hedgerows (no restoration intervention). 
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+<b>Title</b>Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines
+
+![](../img/muskratRI.png)
+
+. . .
+
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
 What are important differences according to Thompson and Hankin et al.?
@@ -34,11 +76,15 @@ Benefits or costs of either?
 
 - randomness
 - fixed
+- undefinable infinite superpoulation vs. real target population
+
+## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
+
+![](../img/designModel.png){fig-align="center"}
 
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
 ![](../img/forest.png)
-
 
 ## [Design vs. Sampling]{style="color:#078BCD;"}
 
@@ -335,63 +381,13 @@ hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50
      xlim=c(0,2000))
 abline(v=pop.mu.weights,lwd=3,col=2)
 legend("topright",legend=c("Population Mean"),lwd=2,col=2)
-hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Bias for n = 50")
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
 ```
 
 Expected Bias =  `r round(mean(mu.hat)- pop.mu.weights,digits=2)`
 
 
-## [Malicious Sampling Bias]{style="color:#078BCD;"}
-
-Sample fish in streams.
-
-200 streams to choose to sample. Called what?
-
-```{r, echo=FALSE}
-  N = 200 # number of streams
-  prob.occ=0.5  #true prob. of fish occupancy for each stream
-  n.occu=prob.occ*N
-  sites=1:N
-
-# Decide on a fixed number of sites that are occupied wiht
-# expect probability prob.occ
-  set.seed(5454)
-  occ.sites = sample(sites,n.occu,replace=FALSE)
-  
-  
-# Crate dataframe of samples sites
-  truth = data.frame(sites=sites,
-                    occu = 0)
-  truth$occu[occ.sites]=1
-```
-
-Let's consider a situation where we don't take an equal probability sample
-
-
-
-# Probability of sampling an occupied cell
-  
-```{r}
-p.sample.occ=1.1/N
-
-  p.sampling.unocc = (1-(p.sample.occ*n.occu))/(N-n.occu)
-
-#overall probability of selecting an occupied site
-  p.sample.occ*n.occu
-
-#overall probability of selecting an occupied site
-  p.sampling.unocc*(N-n.occu)
-
-#Proportional difference of sample site being selected based on it being occupied or not
-#22% higher for occupied site
-    p.sample.occ/p.sampling.unocc
-
-    truth$prob.sample=truth$occu
-    truth$prob.sample[which(truth$occu==1)]=p.sample.occ
-    truth$prob.sample[which(truth$occu==0)]=p.sampling.unocc
-
-
-#Now simulate many samples and get proportion of occupied sites
-# How many sites will we sample  
-  n=60
+```{r,echo=FALSE}
+#Output code into R file
+knitr::purl(input="../FW552/Sampling1.qmd",output="../FW552/Sampling1.r")
 ```
