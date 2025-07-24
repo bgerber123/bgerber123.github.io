@@ -586,16 +586,6 @@ If a site used lure in 2017 and had a detection then this is whether there was a
   
 ```  
 
-### <span style="color:red">Some Summary Notes</span>
-  
- - No sites with Lure in 2017 were then baited in 2022; thus can only asses if baited sites in 2017 that in 2022 had lure and went from detected to not-detected
-  - If using bait in both year, more likely (two-three times) to get a site detection than if changing to lure in the second year. 
- - Issue that there is a spatial bias towards certain states with bait/lure. 
- - Issue that there was no randomization of bait/lure. 
-  
-# **Dynamic Occupancy Model**
-
-Here, I put the two surveys together for the shared sites only (177 sites). The model allows us to asses if bait/lure sites are different (initial occupancy, detection) and whether changes in occupancy (colonization, extirpation) are different if going from Bait-Bait, Bait-Lure, or Lure-Lure.
 
 ```{r unmarked,echo=FALSE, results='hide',warning=FALSE}
   
@@ -665,7 +655,91 @@ Here, I put the two surveys together for the shared sites only (177 sites). The 
  #m.alt <- stan_colext(~bait1+states, ~baitTrans+states, ~baitTrans+states, ~bait.obs+states, umf,chains=1) # fit a model fm
  #m.alt  
 ```
-<!-- Probabilty shold plot the shared sampling from for both years -->
+
+
+### <span style="color:red"> Examine Bait --> Lure Data by State</span>
+
+```{r echo=FALSE,results='hide'}
+################################### 
+# Combine a different way to look at transition from Bait --> Lure and Bait--> Bait 
+   
+ index=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Lure")
+ index2=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Bait")
+ #det.2017.2022[index,]
+ 
+  look=  data.frame(cbind(apply(det.2017.2022[index,1:4],1,sum),
+   apply(det.2017.2022[index,5:8],1,sum),
+    states[index,1])
+   )
+
+#  look 
+  look$X1[which(look$X1>0)]=1
+  look$X2[which(look$X2>0)]=1
+  dim(look)
+```
+
+
+```{r echo=FALSE}
+  test=cbind(as.integer(look$X2)-as.integer(look$X1),
+      look$X3)
+  knitr::kable(table(test[,1],test[,2]))
+
+```
+
+A `-1` indicates a site that had no detection in 2022 and a detection in 2017
+
+A `0` indicates a site that had no detection in 2022 and no detection in 2017
+
+A `1` indicates a site that had a detection in 2022 and no detection in 2017
+
+This is only for bait (2017) and then lure (2022) cells sites
+ 
+ - lost 2 but gained 2 in ID
+ 
+ - lost 12 and gained 1 in MT
+ 
+ - lost 6 and gained 1 in WA
+ 
+ - lost none and gained none in WY
+ 
+
+```{r,echo=FALSE}
+
+#Now look at Lure to Lure
+look=  data.frame(cbind(apply(det.2017.2022[index2,1:4],1,sum),
+                        apply(det.2017.2022[index2,5:8],1,sum),
+                        states[index2,1])
+)
+
+#look 
+
+look$X1[which(look$X1>0)]=1
+look$X2[which(look$X2>0)]=1
+
+test=cbind(as.integer(look$X2)-as.integer(look$X1),
+           look$X3)
+table(test[,1],test[,2])
+
+```
+
+
+For lure-lure sites
+
+- Lost 4 sites in ID and gained 6
+
+- Lots 2 sites in WY and gained 7
+
+### <span style="color:red">Some Summary Notes</span>
+  
+ - No sites with Lure in 2017 were then baited in 2022; thus can only asses if baited sites in 2017 that in 2022 had lure and went from detected to not-detected
+  - If using bait in both year, more likely (two-three times) to get a site detection than if changing to lure in the second year. 
+ - Issue that there is a spatial bias towards certain states with bait/lure. 
+ - Issue that there was no randomization of bait/lure. 
+  
+# **Dynamic Occupancy Model**
+
+Here, I put the two surveys together for the shared sites only (177 sites). The model allows us to asses if bait/lure sites are different (initial occupancy, detection) and whether changes in occupancy (colonization, extirpation) are different if going from Bait-Bait, Bait-Lure, or Lure-Lure.
+
 
 ## Map of shared sample sites
 
@@ -802,80 +876,11 @@ Occupancy is basically the same.
 
 <br>
 
-<span style="color:purple">Summary: My major takeaway is that there are dynamics going on at all sites, probably due to wolverines moving around and sampling variation. However, there seems to also be an effect of detection method. Sites with bait in both years have a moderate increase in mean occupancy, while when changing to lure from bait, occupancy decreases. We would expect no change in a site that uses lure in both years and that is exactly what we see. 
+<span style="color:purple">Summary: My major takeaway is that there are dynamics going on at all sites, probably due to wolverines moving around and sampling variation. However, there seems to also be an effect of detection method. Sites with bait in both years have a moderate increase in mean occupancy, while when changing to lure from bait, occupancy decreases. We would expect no change in a site that uses lure in both years and that is exactly what we see. </span>
 
-The fundamental question because bait/lure site designations were not randomized, is what is different between these bait sites and lure sites in 2017? Regardless of those differences though, a baited site that then used lure should not be different than a baited site in both years, unless the detection method is causing a change on detecting wolverines at all at those sites. 
-</span>
+<span style="color:purple">The fundamental question because bait/lure site designations were not randomized, is what is different between these bait sites and lure sites in 2017? Regardless of those differences though, a baited site that then used lure should not be different than a baited site in both years, unless the detection method is causing a change on detecting wolverines at all at those sites.</span>
 
-# **Examine Bait --> Lure Data by State**
-
-```{r echo=FALSE,results='hide'}
-################################### 
-# Combine a different way to look at transition from Bait --> Lure and Bait--> Bait 
-   
- index=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Lure")
- index2=which(yearly.site.covs$bait$X1=="Bait" &yearly.site.covs$bait$X2=="Bait")
- #det.2017.2022[index,]
- 
-  look=  data.frame(cbind(apply(det.2017.2022[index,1:4],1,sum),
-   apply(det.2017.2022[index,5:8],1,sum),
-    states[index,1])
-   )
-
-#  look 
-  look$X1[which(look$X1>0)]=1
-  look$X2[which(look$X2>0)]=1
-  dim(look)
-```
+<span style="color:purple">When we are examining BaitBait sites, we are only examining sites in Wyoming and Idaho. When we are examining BaitLure sites, we are looking at sites from Idaho, Montana, Washington, and Wyoming. Should we expect different dynamic parameters (by BaitBait, BaitLure) because of the locations of these two samples? </span>
 
 
-```{r echo=FALSE}
-  test=cbind(as.integer(look$X2)-as.integer(look$X1),
-      look$X3)
-  knitr::kable(table(test[,1],test[,2]))
-
-```
-
-A `-1` indicates a site that had no detection in 2022 and a detection in 2017
-
-A `0` indicates a site that had no detection in 2022 and no detection in 2017
-
-A `1` indicates a site that had a detection in 2022 and no detection in 2017
-
-This is only for bait (2017) and then lure (2022) cells sites
- 
- - lost 2 but gained 2 in ID
- 
- - lost 12 and gained 1 in MT
- 
- - lost 6 and gained 1 in WA
- 
- - lost none and gained none in WY
- 
-
-```{r,echo=FALSE}
-
-#Now look at Lure to Lure
-look=  data.frame(cbind(apply(det.2017.2022[index2,1:4],1,sum),
-                        apply(det.2017.2022[index2,5:8],1,sum),
-                        states[index2,1])
-)
-
-#look 
-
-look$X1[which(look$X1>0)]=1
-look$X2[which(look$X2>0)]=1
-
-test=cbind(as.integer(look$X2)-as.integer(look$X1),
-           look$X3)
-table(test[,1],test[,2])
-
-```
-
-
-For lure-lure sites
-
-- Lost 4 sites in ID and gained 6
-
-- Lots 2 sites in WY and gained 7
 
