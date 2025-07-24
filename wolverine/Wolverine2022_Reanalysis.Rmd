@@ -1,0 +1,203 @@
+---
+title: "Wolverine 2022 Modeling Update"
+author: "Brian D. Gerber and Jacob S. Ivan"
+date: "2025-07-24"
+output:     
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+```{r setup, include=FALSE,cache=FALSE}
+  knitr::opts_chunk$set(echo = TRUE)
+  load("../outputs/wolv2022.spatial.data")
+  load("../outputs/sp.occ2022.gr.hab.bait")
+  fitted = sp.occ2022.gr.hab.bait
+```
+
+## **Context**
+
+The spatial occupancy model was refit to the 2022 wolverine survey data:
+
+1. There were some organizational changes needed to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. 
+
+  - Additional surveyed cells in Washington; all non-detections
+  - Added the Copeland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
+  - Added bait/lure covariate on detection probability
+
+3. Based on findings from refitting the spatial occupancy model to the 2017 survey data, this model needed to be refit using 
+    - Used restricted spatial regression (RSR) rather than ICAR
+    - More generalized prior probability distribution on the spatial variance parameter.
+    - Added an occupancy covariate to separate occurrence probability by mountain range; this allowed CO, UT, and OR to properly estimate an occupancy at / near zero (which makes sense since there were no detections).
+    
+    
+
+## **2022 Survey**
+
+### Summary Information
+
+- The number of sampled cells: `r length(unique(visitData2022$GRID_ID))`
+- The number of cells in the sampling frame: `r length(unique(habData2022$GRID_ID))`
+- The total number of cells with wolverine detections: `r sum(as.integer(as.character(detections2022$detections)))`
+
+
+![](../plots/plot.locs.2022.states.png)
+
+## **Updated Spatial Modeling**
+
+The 2022 wolverine detection / non-detection data were fit using a Bayesian spatial occupancy model (Johnson et al. 2013) via the `stocc` R package.
+
+The spatial process model was fit using restricted spatial regression (RSR) and a threshold of 23,000 m; this forces the spatial process to only affect neighboring cells.
+
+Here is a plot of the occupancy partial intercepts for the different mountain ranges (Grouping1 variable) and slope coefficient for the Copeland_Inman habitat variable; they are all well converged. 
+
+```{r, fig.height=12,echo=FALSE}
+par(mfrow=c(6,2))
+plot(fitted$gamma[,1],type='l',main="Occupancy Partial Intercept \n North Cascades")
+plot(density(fitted$gamma[,1]),main="Occupancy Partial Intercept \n North Cascades")
+
+plot(fitted$gamma[,2],type='l',main="Occupancy Partial Intercept \n Northern Rockies")
+plot(density(fitted$gamma[,2]),main="Occupancy Partial Intercept \n Northern Rockies")
+
+plot(fitted$gamma[,3],type='l',main="Occupancy Partial Intercept \n South Cascades")
+plot(density(fitted$gamma[,3]),main="Occupancy Partial Intercept \n South Cascades")
+
+plot(fitted$gamma[,4],type='l',main="Occupancy Partial Intercept \n Southern Rockies")
+plot(density(fitted$gamma[,4]),main="Occupancy Partial Intercept \n Southern Rockies")
+
+plot(fitted$gamma[,5],type='l',main="Occupancy Partial Intercept \n Uintas")
+plot(density(fitted$gamma[,5]),main="Occupancy Partial Intercept \n Uintas")
+
+plot(fitted$gamma[,6],type='l',main="Occupancy CopelandInmand covariate")
+plot(density(fitted$gamma[,6]),main="Occupancy CopelandInmand covariate")
+
+
+```
+
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$gamma[,6],type='l',main="Occupancy Coefficient")
+plot(density(fitted$gamma[,6]),main="Occupancy Coefficient")
+```
+
+The median and 95% CI's of the occupancy slope coefficient for the Copeland_Inman habitat variables are
+
+```{r,echo=FALSE}
+quantile(fitted$gamma[,6],probs=c(0.025,0.5,0.975))
+```
+
+The probability this effect is positive is `r round(length(which(fitted$gamma[,6]>0))/length(fitted$gamma[,6]),digits=2)`
+
+
+Here is a plot of the spatial variance parameter, well converged and at a realistic value.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(fitted$tau[,1],type='l',main="Spatial Variance Parameter")
+plot(density(fitted$tau[,1]),main="Spatial Variance Parameter")
+```
+
+Here is the detection probability parameter.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(2,2))
+plot(fitted$beta[,1],type='l',main="Detection Intercept (bait)")
+plot(density(fitted$beta[,1]),type='l',main="Detection Intercept (bait)")
+
+
+plot(fitted$beta[,2],type='l',main="Detection Effect of Lure")
+plot(density(fitted$beta[,2]),type='l',main="Detection Effect of Lure")
+
+```
+
+The probability of an effect of lure from bait: `r length(which(fitted$beta[,2]<0))/nrow(fitted$beta)`
+
+
+The probability of detection for bait and lure:
+
+```{r echo=FALSE}
+p.bait = plogis(fitted$beta[,1])
+p.lure = plogis(fitted$beta[,1]+fitted$beta[,2])
+
+det.plot= data.frame(samples=c(p.bait,p.lure),type=c(rep("Bait",nrow(fitted$beta)),
+                                                     rep("Lure",nrow(fitted$beta)))
+)
+library(ggplot2)
+ggplot(det.plot, aes(x = samples, color = type, fill=type)) +
+  geom_density(alpha = 0.5)+theme_minimal()
+
+```
+
+The probability of detecting a wolverine at least once at a site over four one-month occasions:
+
+```{r echo=FALSE}
+p.bait = 1-(1-p.bait)^4
+p.lure = 1-(1-p.lure)^4
+
+det.plot= data.frame(samples=c(p.bait,p.lure),type=c(rep("Bait",nrow(fitted$beta)),
+                                                     rep("Lure",nrow(fitted$beta)))
+)
+
+ggplot(det.plot, aes(x = samples, color = type, fill=type)) +
+  geom_density(alpha = 0.5)+theme_minimal()
+
+```
+
+
+## **Prediction Plots**
+
+### Updated Model Overall Occurence
+
+![](../plots/total.occ.2022.png)
+
+#### *Updated Fitted Model (2022 survey)*
+
+![](../plots/plot.wolverine.2022.png)
+
+### Updated Fitted model with State Boundaries
+
+![](../plots/plot.wolverine.2022.state.det.png)
+
+### Updated State Occupancy
+
+Here are the posterior distributions of the number of occupied sites by state (left plot) and the probability a cell is occupied by state (right plot).
+
+![](../plots/plot.wolverine.2022.occupied.states.png)
+
+### Number of sites Occupied
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Utah","Colorado","Wyoming","Idaho","Oregon", "Montana","Washington"),
+          "2.5%" =c(0,0,44,73,0,42,10),
+          "50%" =c(0,0,58,89,0,67,26),
+          "97.5%" =c(1,1,75,112,1,102,53)),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+### Probability of Occupancy
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Utah","Colorado","Wyoming","Idaho","Oregon", "Montana","Washington"),
+          "2.5%" =c(0.00,0.00,0.27,0.37,0.00,0.22,0.11),
+          "50%" =c(0.00,0.00,0.35,0.45,0.00,0.36,0.28),
+          "97.5%" =c(0.01,0.01,0.46,0.56,0.09,0.54,0.57)),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+
+
+Johnson, D. S., Conn, P. B., Hooten, M. B., Ray, J. C., \& Pond, B. A. (2013). Spatial occupancy models for large data sets. Ecology, 94, 801-808.

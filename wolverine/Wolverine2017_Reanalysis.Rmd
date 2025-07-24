@@ -1,0 +1,201 @@
+---
+title: "Wolverine 2017 Modeling Update"
+author: "Brian D. Gerber and Jacob S. Ivan"
+date: "2025-07-24"
+output:     
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+## **Context**
+
+The spatial occupancy model was refit to the 2017 wolverine survey data. Here are the major changes:
+
+1. There were some organizational changes needed to data input files to make direct comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. 
+
+2. There were two concerning elements in the fitted spatial occupancy used in Lukacs et al. 2020. The type of model was changed from intrinsic conditional autoregressive to restricted spatial regression. Plus, the prior on the spatial effect was changed to ensure the parameter converged to a realistic value that was properly converged. 
+
+3. The predicted habitat covariate used to model occupancy in Lukacs et al. 2020 was from the Copeland model. The Copeland_Inman habitat predictions used for the sampling frame was used here instead. 
+
+4. The spatial effect threshold was changed from 20000 m to 23000 m so that the neighborhood being affected includes the diagonal cells. 
+
+5. The effect of bait vs lure was included on the detection probability parameter. 
+
+6. In Lukacs et al. 2020,  sites were assigned to a state based on who collected the data in the field and not what state the site was actually in. Here, we have updated to to use the state designation of the site. 
+
+```{r setup, include=FALSE,cache=TRUE}
+  knitr::opts_chunk$set(echo = TRUE)
+  load("../outputs/wolv2017.spatial.data")
+  load("../outputs/sp.occ2017.3")
+```
+
+## **2017 Survey**
+
+### Summary Information
+
+- The number of sampled cells: `r length(unique(visitData2017$GRID_ID))`
+- The number of cells in the sampling frame: `r length(unique(habData2017$GRID_ID))`
+- The total number of cells with wolverine detections: `r sum(as.integer(as.character(detections2017$detections)))`
+
+![](../plots/plot.locs.2017.states.png)
+
+
+## **Updated Spatial Modeling**
+
+The left-sided plots are traceplots of the posterior distributions of a given parameter; the right-sided plot is the probabilty density of posterior distribution.
+
+Here is a plot of the occupancy intercept; it is well converged. 
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.3$gamma[,1],type='l',main="Occupancy Intercept\n (probit-scale)")
+plot(density(sp.occ2017.3$gamma[,1]),main="Occupancy Intercept\n (probit-scale)")
+```
+
+Here is a plot of the effect of the habitat predictions covariate (Copeland_Inman predictions); it is well converged. 
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.3$gamma[,2],type='l',main="Occupancy Habitat effect\n (probit-scale)")
+plot(density(sp.occ2017.3$gamma[,2]),main="Occupancy Habitat effect\n (probit-scale)")
+```
+
+The probability that this is a positive effect is: `r length(which(sp.occ2017.3$gamma[,2]>0))/nrow(sp.occ2017.3$gamma)`
+
+Here is a plot of the detection probability intercept; it is well converged.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.3$beta[,1],type='l',main="Detection Intercept (Bait)\n (probit-scale)")
+plot(density(sp.occ2017.3$beta[,1]),main="Detection Intercept (Bait)\n (probit-scale)")
+```
+
+Here is a plot of the effect of lure (from bait) on detection probability; it is well converged.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.3$beta[,2],type='l',main="Detection Effect (Lure)\n (probit-scale)")
+plot(density(sp.occ2017.3$beta[,2]),main="Detection Effect (Lure)\n (probit-scale)")
+```
+
+Given a site is occupied, the probability lure has a lower detection probabilty compared to bait sites: `r length(which(sp.occ2017.3$beta[,2]<0))/nrow(sp.occ2017.3$beta)`
+
+
+The probability of detection for bait and lure:
+
+```{r echo=FALSE}
+p.bait = plogis(sp.occ2017.3$beta[,1])
+p.lure = plogis(sp.occ2017.3$beta[,1]+sp.occ2017.3$beta[,2])
+
+det.plot= data.frame(samples=c(p.bait,p.lure),type=c(rep("Bait",nrow(sp.occ2017.3$beta)),
+                                                     rep("Lure",nrow(sp.occ2017.3$beta)))
+)
+library(ggplot2)
+ggplot(det.plot, aes(x = samples, color = type, fill=type)) +
+  geom_density(alpha = 0.5)+theme_minimal()
+
+```
+
+The probability of detecting a wolverine at least once at a site over four one-month occasions:
+
+```{r echo=FALSE}
+p.bait = 1-(1-p.bait)^4
+p.lure = 1-(1-p.lure)^4
+
+det.plot= data.frame(samples=c(p.bait,p.lure),type=c(rep("Bait",nrow(sp.occ2017.3$beta)),
+                                                     rep("Lure",nrow(sp.occ2017.3$beta)))
+)
+
+ggplot(det.plot, aes(x = samples, color = type, fill=type)) +
+  geom_density(alpha = 0.5)+theme_minimal()
+
+```
+
+
+Here is a plot of the spatial variance parameter; it is well converged and at a realistic value.
+
+```{r, fig.height=4,echo=FALSE}
+par(mfrow=c(1,2))
+plot(sp.occ2017.3$tau[,1],type='l',main="Spatial Variance Parameter")
+plot(density(sp.occ2017.3$tau[,1]),main="Spatial Variance Parameter")
+```
+
+
+## **Prediction Plots**
+
+
+![](../plots/plot.wolverine.2017.png)
+
+![](../plots/plot.wolverine.2017.state.det.png)
+
+### Updated Model Overall Occurence
+
+
+![](../plots/total.occ.2017.png)
+
+
+### Updated Model State Occupancy
+
+Here are the posterior distributions of the number of occupied sites by state (left plot) and the overall probability of occupancy by state (right plot).
+
+
+![](../plots/plot.wolverine.2017.occupied.states.png)
+
+### Number of sites Occupied - Updated
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Wyoming","Idaho", "Montana","Washington"),
+          "2.5%" =c(23,69,85,34),
+          "50%" =c(39,88,104,49),
+          "97.5%" =c(59,110,124,67)),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+### Number of sites Occupied - Lukacs et al. 2020
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Wyoming","Idaho", "Montana","Washington"),
+          "2.5%" =c(11,65,85,21), 
+          "50%" =c(24,87,117,40),
+          "97.5%" =c(41,112,132,62)
+          ),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+
+### Probability of Occupancy - Updated
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Wyoming","Idaho","Montana","Washington"),
+          "2.5%" =c(0.15,0.35,0.45,0.37),
+          "50%" =c(0.25,0.44,0.55,0.53),
+          "97.5%" =c(0.39,0.55,0.66,0.72)),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+
+### Probability of Occupancy - Lukacs et al. 2020
+
+```{r echo=FALSE}
+knitr::kable(data.frame(State=c("Wyoming","Idaho","Montana","Washington"),
+          "2.5%" =c(0.07	,0.34,0.44,0.23	),		  				
+          "50%" =c( 0.15  ,0.46,0.60,0.43),
+          "97.5%" =c(0.26 ,0.59,0.68,0.67)
+          ),format = "html",table.attr = "style='width:50%;'",align = "c")
+```
+
+## **References**
+
+Lukacs, P.M., Evans Mack, D., Inman, R., Gude, J.A., Ivan, J.S., Lanka, R.P., Lewis, J.C., Long, R.A., Sallabanks, R., Walker, Z., Courville, S., Jackson, S., Kahn, R., Schwartz, M.K., Torbit, S.C., Waller, J.S. and Carroll, K. (2020), Wolverine Occupancy, Spatial Distribution, and Monitoring Design. Journal of Wildife Management, 84: 841-851. https://doi.org/10.1002/jwmg.21856
