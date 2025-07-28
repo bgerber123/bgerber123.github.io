@@ -1,0 +1,209 @@
+---
+title: "Wolverine 2022 Inference"
+author: "Brian D. Gerber and Jacob S. Ivan"
+date: "2025-07-28"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE, results='hide',message=FALSE, echo=FALSE}
+library(ubms)
+library(unmarked)
+```
+
+## **Inference**
+
+To investigate spatial factors affecting wolverine occupancy, we will use non-spatial Bayesian single-season occupancy models (via the R package UBMS and Unmarked). These models are more straightforward to interpret as there is no trading off between the spatial covariates of interest and a generalized spatial neighborhood process (used in the spatial occupancy model); the spatial occupancy models is intended for prediction, rather than inference.
+
+To consider the spatial variables that influence wolverines occurence, we should only consider areas that have wolverines (Montana, Washington, Wyoming, Idaho). The states that do not have wolverines (or detected wolverines; Colorado, Utah, Oregon) do not help us understand the spatial factors because there are no wolverines available to select a certain site and not another site. Therefore, this analysis is limited to the 4-state sampling frame.
+
+
+## **Covariates** 
+
+These variables were derived by Jake Ivan and confirmed to be accurate. 
+
+- *propBurned2016_2021*: The mean proportion a cell was burned between 2016 and 2021. Increasing values are hypothesized to decrease occupancy; recent fires potentially decrease food/cover. 
+
+- *propBurned2001_2015*: The mean proportion a cell was burned between 2001 and 2015. Increasing values are hypothesized to increase occupancy; old fires potentially increase food/cover.
+
+- *propBurned2001_2021*: The mean proportion a cell was burned between 2001 and 2021. Mixes recent and old fires. Probably do not use.
+
+- *meanHumanMod_2021*: The mean measure of human modification from Dave Theolbald.
+
+- *meanNDVI_2022*: The mean NDVI by cell over years X-X. 
+
+- *propCopelandInman*: Predicted potential habitat from CoplelandInman model. Increasing values are hypothesized to increase occupancy. Used to define the sampling frame. 
+
+- *ClusterCount*: Predicted connectivity of cells (function in ArcGIS); ask Jake. Increasing values are hypothesized to increase occupancy, probably up to some point. 
+
+- *SDMayDepth2022*: Standard deviation of snow depth in May. Decreasing values are hypothesized to increase occupancy (more consistency at low values).  
+
+- *MeanMayDepth2022*: Mean snow depth in May. Increasing values are hypothesized to increase occupancy, up to some point.
+
+- *SDMaySWE2022*: Standard deviation of snow water equivalent in May. Decreasing values are hypothesized to increase occupancy (more consistency at low values). 
+
+- *MeanMaySWE2022*: Mean snow water equivalent in May. Increasing values are hypothesized to increase occupancy, up to some point.
+
+
+### *Spatial Plots*
+
+![](../plots/plot.2022.covaraites.png){width=1000}
+
+### *Covariate Correlations*
+
+![](../plots/corrplot.variables.2022.png){width=1000}
+
+**Noted High Pairwise Correlations**
+
+*Preferred covariates in bold:*
+
+- propBurned2001_2021 and **propBurned2016_2021**
+
+- propCopelandInman and **meanHumanMod_2021** ; medium correlation.
+
+- propCopelandInman and **ClusterCount and snow measures**
+
+- All snow measures are correlated. Use **MeanMayDepth2022**.
+
+
+## **Models**
+
+We considered three models. In each, the variables hypothesized to effect occupancy varied (see below; general summary of the model and model syntax) while detection probability was always hypothesized to be effected by whether a site had bait or lure.
+
+We will compare models using the expected log pointwise predictive density (elpd; lower is better; Vehtari et al. 2016). 
+
+
+
+-  **Model 1:** Human Modification*Habitat Connectivity
+      - meanHumanMod_2021*ClusterCount
+  
+-  **Model 2:** Environmental model (NDVI with quadratic, burn, and Snow with quadratic)
+      - meanNDVI_2022 + I(meanNDVI_2022^2) + propBurned2016_2021 + propBurned2001_2015 + meanMayDepth_2022 + I(meanMayDepth_2022^2)
+
+-  **Model 3:** Simple Environmental and Human Modification with Connectivity
+      - meanHumanMod_2021 + ClusterCount + meanNDVI_2022 + propBurned2016_2021 + propBurned2001_2015 + meanMayDepth_2022
+
+
+## **Results**
+
+### *Model Comparison*
+
+Model 3 was most supported, as measured by expected log-poinwise predicted density (elpd). However, there isn't that much difference among models, especically when considering the variation (se_diff).
+
+```{r,echo=FALSE}
+# Models to consider
+  load("../outputs/fit.m2")
+  load("../outputs/fit.m3")
+  load("../outputs/fit.m4")
+
+  mods <- ubms::fitList(Model1 = fit.m2,Mode2= fit.m3,
+                        Model3 =fit.m4)
+  knitr::kable(round(modSel(mods), 3),format = "html",table.attr = "style='width:50%;'",align = "c",digits=3)
+```
+
+
+### *MCMC Convergence*
+
+```{r, echo=FALSE, fig.width=12}
+traceplot(fit.m4, pars=c("beta_state", "beta_det"))
+```
+
+All parameter from the most supported model have convereged. 
+
+
+### *Goodness of fit*
+
+```{r, echo=FALSE}
+ # Goodness of fit - by zeros
+   sim_y <- posterior_predict(fit.m4, "y", draws=1000)
+#   
+ # Rows are simulations and columns are sites by observations 
+   prop1 <- apply(sim_y, 1, function(x) mean(x==1, na.rm=TRUE))
+   actual_prop1 <- mean(getY(fit.m4) == 1, na.rm=TRUE)
+#   
+   #Compare
+   hist(prop1, col='gray',main="Simulated Proportion of Detections \nfrom Supported Model")
+   abline(v=actual_prop1, col='red', lwd=2)
+  legend("topright",legend=c("Observed Prop. of Detections"),lwd=2, col=2)
+```
+
+No departure of model fit using this test statistic.
+
+### *Model Summary*
+
+```{r, echo=FALSE}
+fit.m4
+```
+
+### *Probability of Support*
+
+```{r, echo=FALSE}
+sims=data.frame(fit.m4@stanfit@sim$samples)
+#colnames(sims)
+sims= sims[,1:9]
+n.mcmc=nrow(sims)
+prob.positive=data.frame(apply(sims,2,FUN=function(x){length(which(x>0))/n.mcmc}))
+colnames(prob.positive)="Probability>0"
+rownames(prob.positive) = c("Occ.Intercept","Occ.meanHumanMod_2012","Occ.ClusterCount","Occ.meanNDVI2022",
+                         "Occ.PropBurned2016-2021","Occ.PropBurned2001-2015","Occ_MeanMayDepth",
+                         "Det.Intercept","Det.SiteType")
+knitr::kable(prob.positive,format = "html",table.attr = "style='width:25%;'",align = "c",digits=2)
+```
+
+<br>
+
+A probability near 1 indicates a strong support for a positive effect. 
+
+A probability near 0 indicates a strong support for a negative effect. 
+
+Probabilities between 0.1 and 0.9 indicate mild or no statistical support.
+
+
+### *Marginal Effect Plots*
+
+```{r, echo=FALSE, fig.width=12}
+plot_effects(fit.m4, "state")
+```
+
+Note that the x-axes vary, based on the standardization of the variable. 
+
+<br>
+
+```{r, echo=FALSE, fig.width=8}
+plot_effects(fit.m4, "det")
+```
+
+## **Summary**
+
+- There is clear statistical support that increasing connectivity (`ClusterCount`) leads to increase wolverine occupancy. 
+
+- There is clear statistical support that increasing `meanNDVI_2022` leads to decreasing wolverine occupancy. 
+
+- There is clear statistical support that increasing old fires  (`PropBurned2001-2015`) leads to increasing wolverine occupancy. 
+
+- There is clear statistical support that lure decreases the probability of detection at an occupied site relative to bait sites. 
+
+
+## **References**
+
+Vehtari, A., Gelman, A., and Gabry, J. (2017). Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC. Statistics and Computing. 27(5), 1413--1432. doi:10.1007/s11222-016-9696-4 
+
+<br>
