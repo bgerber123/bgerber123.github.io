@@ -36,11 +36,13 @@ The spatial occupancy model was refit to the 2022 wolverine survey data:
 
 1. There were some organizational changes needed to data input files to make proper comparisons from wolverine occupancy  model results from the 2017 and 2022 surveys. 
 
-  - Additional surveyed cells in Washington; all non-detections
-  - Added the Copeland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
-  - Added bait/lure covariate on detection probability
+2. Additional surveyed cells in Washington; all non-detections
 
-3. Based on findings from refitting the spatial occupancy model to the 2017 survey data, this model needed to be refit using 
+3.  Added the Copeland_Inman habitat covariate on occupancy to make it similar to the model fit to the 2017 survey data.
+
+4. Added bait/lure covariate on detection probability
+
+5. Based on findings from refitting the spatial occupancy model to the 2017 survey data, this model needed to be refit using 
     - Used restricted spatial regression (RSR) rather than ICAR
     - More generalized prior probability distribution on the spatial variance parameter.
     - Added an occupancy covariate to separate occurrence probability by mountain range; this allowed CO, UT, and OR to properly estimate an occupancy at / near zero (which makes sense since there were no detections).

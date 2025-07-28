@@ -2,7 +2,10 @@
 title: "Wolverine 2022 Inference"
 author: "Brian D. Gerber and Jacob S. Ivan"
 date: "2025-07-28"
-output: html_document
+output: 
+    html_document:
+      toc: true
+      toc_float: true
 ---
 
 <style type="text/css">
