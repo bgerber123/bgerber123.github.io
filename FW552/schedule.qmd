@@ -16,7 +16,7 @@ code.r{
 }
 </style>
 
-<a href="/FW680A4/CourseOverview.qmd">Course Overview</a></p>
+<a href="/FW552/Syllabus.qmd">Syllabus</a></p>
 ```
 
 **Book**: We will be using quite a bit of [Thompson. 2012. Sampling. Third Edition.](Sampling - 2012 - Thompson.pdf).
@@ -25,7 +25,7 @@ code.r{
 
 - What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
 
-**Assignments**: are started in class on the day they are listed under and any relevant lab assignment is due one week later, unless otherwise stated.
+**Assignments**: are assigned on the day they are listed under and are due .....
 
 
 
@@ -35,8 +35,8 @@ code.r{
 
 Week                                  |	Day|	Date       | 	In Class Topic                         | Assignments       |	   Readings                                                
 -                                     | -- | -----         |----                  | ----  |----                                  
-<a href="/FW680A4/week1.qmd">1</a>    | Mo | 25-Aug	     | Introduction                            | Install [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/).    Discussion Post                         | Hankin Ch. 2; Gerber et al. 2012                    
-&nbsp;                                |	We | 27-Aug	     | Paper Discussion / R and RMarkdown      |  Quiz 1           | Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3
+<a href="/FW680A4/week1.qmd">1</a>    | Mo | 25-Aug	     | Introduction                            | Install [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/).   |  Hankin Ch. 2; Gerber et al. 2012                    
+&nbsp;                                |	We | 27-Aug	     | Paper Discussion / R and RMarkdown      |  R Fundamentals   | Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3
 <a href="/FW680A4/week2.qmd">2</a>    |	Mo | 1-Sep	     | <span style="color:red">No Class</span> |                   |                                     
 &nbsp;                                | We | 3-Sep	     | Sampling I                              | Quiz 2; pick paper and describe the target population  | Boyd et al. 2023 and Thompson Ch. 2
 <a href="/FW680A4/week3.qmd">3</a>    |	Mo | 3-Sep	     | Big Data Paradox / SRS              |                   |                                   

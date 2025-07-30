@@ -2,7 +2,7 @@
 
 # Create 'truth'
   set.seed(3433)
-  pop.weights = rnorm(n = 500, mean = 300, sd = 100)
+  pop.weights = rnorm(n = 500, mean = 300, sd = 50)
 
 #Population mean
   pop.mu.weights = mean(pop.weights)
@@ -14,7 +14,7 @@
   N = length(pop.weights)
 
 # histogram    
-  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,700),xlab="Bear Weight")  
+  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,700),xlab="Bear Weight (lbs)")  
 
 
 ## ----echo=TRUE----------------------------------------------------------------
@@ -46,26 +46,64 @@ sample.mean.fn = function(target,n){
                                    }
 #Repeat the above function 20000 times
   set.seed(54343)
-  mu.hat=replicate(20000,
-                   sample.mean.fn(pop.weights,n)
-                   )
+  mu.hat = replicate(20000,
+                     sample.mean.fn(pop.weights,n)
+                     )
 
 
 
 ## ----echo=FALSE---------------------------------------------------------------
 par(mfrow=c(1,2))
-hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380))
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
 abline(v=pop.mu.weights,lwd=3,col=2)
 legend("topright",legend=c("Population Mean"),lwd=2,col=2,cex=0.8)
-hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50",
+     xlab=expression(hat(mu)- mu))
+
+
+## ----echo=FALSE---------------------------------------------------------------
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
+abline(v=pop.mu.weights,lwd=3,col=2)
+
+
+## ----echo=FALSE---------------------------------------------------------------
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
+abline(v=pop.mu.weights,lwd=3,col=2)
 
 
 ## ----echo=TRUE----------------------------------------------------------------
-lower=pop.mu.weights - pop.mu.weights*0.10
-upper=pop.mu.weights + pop.mu.weights*0.10
+lower = pop.mu.weights - pop.mu.weights*0.05
+upper = pop.mu.weights + pop.mu.weights*0.05
 
-length(which(mu.hat>lower & mu.hat<upper)) / length(mu.hat)
+length(which(mu.hat > lower & mu.hat < upper)) / length(mu.hat)
 
+
+
+## ----echo=FALSE---------------------------------------------------------------
+par(mfrow=c(2,2))
+curve(dnorm(x, 300, 10),lwd=3,xlim=c(150,450),main="Unbiased & Accurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 295, 10),lwd=3,xlim=c(150,450),main="Biased & Accurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 290, 10),lwd=3,xlim=c(150,450),main="Biased & Inaccurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 270, 10),lwd=3,xlim=c(150,450),main="Biased & Inaccurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+
+## ----echo=FALSE---------------------------------------------------------------
+par(mfrow=c(1,1))
+curve(dnorm(x, 300, 50),lwd=3,xlim=c(150,450),ylim=c(0,0.04),xlab="Bear Weight (lbs)")
+curve(dnorm(x, 310, 10),lwd=3,add=TRUE,col=3)
+legend("topright",lwd=3,col=c(1,3),legend=c("Unbiased/Accurate/Imprecise",
+                                            "Biased/Accurate/Precise"))
+abline(v=300,lwd=3,col=2)
 
 
 ## ----echo=FALSE---------------------------------------------------------------
@@ -104,50 +142,7 @@ legend("topright",legend=c("Population Mean"),lwd=2,col=2)
 hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
 
 
-## ----echo=FALSE---------------------------------------------------------------
-  N = 200 # number of streams
-  prob.occ=0.5  #true prob. of fish occupancy for each stream
-  n.occu=prob.occ*N
-  sites=1:N
-
-# Decide on a fixed number of sites that are occupied wiht
-# expect probability prob.occ
-  set.seed(5454)
-  occ.sites = sample(sites,n.occu,replace=FALSE)
-  
-  
-# Crate dataframe of samples sites
-  truth = data.frame(sites=sites,
-                    occu = 0)
-  truth$occu[occ.sites]=1
-
-
-## -----------------------------------------------------------------------------
-p.sample.occ=1.1/N
-
-  p.sampling.unocc = (1-(p.sample.occ*n.occu))/(N-n.occu)
-
-#overall probability of selecting an occupied site
-  p.sample.occ*n.occu
-
-#overall probability of selecting an occupied site
-  p.sampling.unocc*(N-n.occu)
-
-#Proportional difference of sample site being selected based on it being occupied or not
-#22% higher for occupied site
-    p.sample.occ/p.sampling.unocc
-
-    truth$prob.sample=truth$occu
-    truth$prob.sample[which(truth$occu==1)]=p.sample.occ
-    truth$prob.sample[which(truth$occu==0)]=p.sampling.unocc
-
-
-#Now simulate many samples and get proportion of occupied sites
-# How many sites will we sample  
-  n=60
-
-
-## ----echo=FALSE---------------------------------------------------------------
+## ----echo=FALSE, results='hide'-----------------------------------------------
 #Output code into R file
 knitr::purl(input="../FW552/Sampling1.qmd",output="../FW552/Sampling1.r")
 

@@ -20,49 +20,192 @@ code.r{
 
 ![](../img/sample.png)
 
-What is it called to use characteristics of sample to describe a 'population'?
+. . .
+
+Define 1) census, 2) sample, and 3) sampling?
 
 
-## [Population and Sample]{style="color:#078BCD;"}
-
-![](../img/sample.png)
-
-Is it important to know what your target population is?
 
 ## [Population and Sample]{style="color:#078BCD;"}
 
 ![](../img/sample.png)
 
-<br>
+To use a sample to describe a 'population' is called what?
 
-Is your target population connected to your study objective?
 
-## [Population and Sample]{style="color:#078BCD;"}
+## [Definitions]{style="color:#078BCD;"}{.scrollable}
 
-<b>Title</b>Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines
 
-**Clear target population and connected to study objective**
+- **Census?**
+    - Complete enumeration of the population (i.e., the whole)
 
-![](../img/muskratRI.png)
+- **What is a sample?**
+    - The act, process, or technique of selecting a representative part of a population for the purpose of determining parameters or characteristics of the whole
+population 
 
-## [Population and Sample]{style="color:#078BCD;"}
 
-<b>Title</b>Changes in species composition and community structure during plant–pollinator community assembly
+- **What is sampling?**
+    - Selection of a part of a population to be used to estimate characteristics of the population
+    - To make inference about the population from a part, i.e., the sample.
 
-- The study sites (N=32) were located in the Central Valley of California 
-- agricultural landscape composed primarily of conventionally managed monoculture crop fields
-- three different experimental treatments: 
-    - hedgerows with native species recently planted
-    - mature hedgerows with native species planted 10 years
-    - unrestored hedgerows (no restoration intervention). 
+## [Sampling Types]{style="color:#078BCD;"}
 
-## [Population and Sample]{style="color:#078BCD;"}
+- [Convenient sampling]{style="color:cornflowerblue"} - results when most convenient units are chosen
+- [Judgment sampling]{style="color:cornflowerblue"} - obtained at the discretion of someone who is familiar with the characteristics of the population
+- [Probability sampling]{style="color:cornflowerblue"} - based on a designed process that the probability a unitm is selected is known 
 
-<b>Title</b>Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines
+## [Central paradox of Sampling]{style="color:#078BCD;"}
 
-![](../img/muskratRI.png)
+- Impossible to know from a sample whether it is representative
+
+- We rely on the process, not the outcome.
+
+## [Why Sample?]{style="color:#078BCD;"}
+
+1) Large populations are physically prohibitive to census
+2) Fiscally prohibitive to census
+3) Timeliness
+4) Observing might be destructive. For example?
+
+
+## [Common Sample Units]{style="color:#078BCD;"}
 
 . . .
+
+- [plots/quadrats]{style="color:cornflowerblue"} - small area to measure/count plants, seeds, insects, etc.
+- [points]{style="color:cornflowerblue"} - measurements are taken from a set of points established throughout a population
+- [transects]{style="color:cornflowerblue"} - straight-line segments 
+- [individual organisms]{style="color:cornflowerblue"} - the organism is the sample unit or the organism defines the location of the sample unit
+
+
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+::: {.r-fit-text}
+ - Trees of sufficient size for spotted owls to use for nesting
+ - House characteristics that northern flickers most often damage
+ - Survival of rainbow trout in the presence of whirling disease
+ - Surveys, e.g., number of people that
+    - bird watch
+    - hunt or fish
+    - think wolves should live in Colorado
+
+
+:::
+
+:::
+
+::: {.column width="40%"}
+
+![](../img/owl.trout.png){fig-align="center" width="250"}
+
+:::
+
+::::
+
+
+
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+::: {.r-fit-text}
+
+ - Trees of sufficient size for spotted owls to use for nesting
+ - House characteristics that northern flickers most often damage
+ - Survival of rainbow trout in the presence of whirling disease
+ - Surveys, e.g., number of people that
+    - bird watch
+    - hunt or fish
+    - think wolves should live in Colorado
+
+:::
+
+[Often a spatial/temporal context to our target population
+]{style="color:red;"}
+
+:::
+
+::: {.column width="40%"}
+
+![](../img/owl.trout.png){fig-align="center" width="250"}
+
+:::
+
+::::
+
+
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+
+<b>Title:</b> Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines
+
+<!-- **Clear target population and sample** -->
+
+
+![](../img/muskratRI.png)
+
+## [Population and Sample]{style="color:#078BCD;"}
+
+
+
+<b>Title:</b> Land cover attributes affect the distribution of rooting damage by wild pigs (Sus scrofa)
+
+::: {.r-fit-text}
+
+- Surveys within 1) The Savannah River Site (green) 2)  Newberry County (blue), 3) Hampton County (red)
+- "We generated 9 random points to act as the center of respective 200-ha survey grids".
+- "Properties were primarily composed of mixed agricultural-forested cover".
+
+:::
+
+![](../img/rooting.SC.png) 
+
+## [Thinking Backwards]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+People often think backwards from what data they have to identify the Population.
+
+::: {.r-fit-text}
+
+E.g., Nesting shorebirds are censused each summer at a handful of beaches.
+
+Can we use these sites as samples to apply to all beaches in the area?
+
+:::
+
+:::
+
+::: {.column width="40%"}
+
+![](../img/RI.beaches.png){fig-align="center" width="400"}
+
+:::
+
+::::
+
+## [Design vs. Sampling]{style="color:#078BCD;"}
+
+. . .
+
+-   **Experimental Design:**
+    - Deliberately perturbing a part of a 'population' to compare it's effect to a part that was not perturbed
+
+-   **Sampling Design**: 
+    - The process of obtaining a representative sample to characterize a 'population' w/o necessarily perturbing it.
+
+
 
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
@@ -86,14 +229,6 @@ Benefits or costs of either?
 
 ![](../img/forest.png)
 
-## [Design vs. Sampling]{style="color:#078BCD;"}
-
-
--   **Experimental Design:**
-    - Deliberately perturbing a part of a 'population' to compare it's effect to a part that was not perturbed
-
--   **Sampling Design**: 
-    - The process of obtaining a representative sample to characterize a 'population' w/o necessarily perturbing it.
 
 
 
@@ -137,14 +272,6 @@ $n = 6$
 
 
 
-## [Common Sample Units]{style="color:#078BCD;"}
-
-. . .
-
-- plots/quadrats - small geographic area to measure/count plants, seeds, insects, etc.
-- points - measurements are taken from a set of points established thourghout a population
-- transects - straight-line segments 
-- individual organisms - the ornganism is the sample unit or the organism defines the location of the sample unit
 
 ## [More Language]{style="color:#078BCD;"}
 
@@ -156,38 +283,32 @@ $n = 6$
 
 . . .
 
-$$\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 4.1$$
+$$\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 57.7$$
 
 - $n$ is a sample parameter (size of sample) 
 - $\hat{\mu}$ is an estimate of a population parameter ($\mu$) from the estimator (mathematical rule for calculation) 
-- 4.1 is a statistic (specific value)
+- 57.7 is a statistic (specific value)
 
 
 
 ## [More Language]{style="color:#078BCD;"}
 
-$$\mu =\left(\sum_{i=1}^{N}y_{i}\right)\times \frac{1}{N} = 4$$
+$$\mu =\left(\sum_{i=1}^{N}y_{i}\right)\times \frac{1}{N} = 54$$
 
 - $\mu$ is a population parameter (measure of central tendency)
 - $N$ is a population parameter (size of all possible sample units) 
-- $4$ is the value of the population parameter
+- $54$ is the value of the population parameter
 
 
 ## [Sampling Error]{style="color:#078BCD;"}
 
 - **Sampling Error**
     - The difference b/w a sample statistic (specific value) and the true value of a population paramter
-    - 4.1 - 4 = 0.1 sampling error
+    - 57.7 - 54 = 3.3 (inches) sampling error
     - Due solely to incomplete enumeration of the population (chance)
     - Protection against this is large sample size
 
-## [Sampling Bias]{style="color:#078BCD;"}
 
--  **Sampling Bias**
-    - Systematic tendency of selecting certain sample units; makes the samples *unrepresentative* to the target population
-    - Examples in fish/wildlife??
-  
-  
 ## [Sampling Variation and Error]{style="color:#078BCD;"}
 
 **Target Population:** Weight of all black bears in a region
@@ -204,7 +325,7 @@ How would you describe a *sampling frame* relevant to this target population?
 
 # Create 'truth'
   set.seed(3433)
-  pop.weights = rnorm(n = 500, mean = 300, sd = 100)
+  pop.weights = rnorm(n = 500, mean = 300, sd = 50)
 
 #Population mean
   pop.mu.weights = mean(pop.weights)
@@ -216,7 +337,7 @@ How would you describe a *sampling frame* relevant to this target population?
   N = length(pop.weights)
 
 # histogram    
-  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,700),xlab="Bear Weight")  
+  hist(pop.weights, main = "Total Population (N = 500)",freq=TRUE,xlim=c(0,700),xlab="Bear Weight (lbs)")  
 ```
 
 ## [Sampling Error]{style="color:#078BCD;"}
@@ -256,6 +377,8 @@ Vector of bear weights
 
 Sampling variation is the process and sampling error is an outcome.
 
+<br>
+
 The differences between samples (sampling variation) lead to differences between sample statistics and population parameters (sampling error). 
 
 
@@ -272,9 +395,9 @@ sample.mean.fn = function(target,n){
                                    }
 #Repeat the above function 20000 times
   set.seed(54343)
-  mu.hat=replicate(20000,
-                   sample.mean.fn(pop.weights,n)
-                   )
+  mu.hat = replicate(20000,
+                     sample.mean.fn(pop.weights,n)
+                     )
 
 ```
 
@@ -282,25 +405,55 @@ sample.mean.fn = function(target,n){
 
 ```{r, echo=FALSE}
 par(mfrow=c(1,2))
-hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380))
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
 abline(v=pop.mu.weights,lwd=3,col=2)
 legend("topright",legend=c("Population Mean"),lwd=2,col=2,cex=0.8)
-hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
+hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50",
+     xlab=expression(hat(mu)- mu))
 ```
 
-## [Sampling Bias]{style="color:#078BCD;"}
+## [Estimator Bias]{style="color:#078BCD;"}
 
-We should be very interested in the characteristics of the sampling distribution and error.
+<!-- We should be very interested in the characteristics of the sampling distribution and error. -->
 
-<br>
+Expected Bias (of the estimator) = average sample mean - population mean
 
 . . .
 
-Expected Bias = average sample mean - population mean
+$$
+\text{Bias}(\hat{\mu},\mu) = \bar{\hat{\mu}} - \mu \\
+\text{Bias}(\hat{\mu},\mu) = E[\hat\mu] - \mu \\
+\text{Bias}(\hat{\mu},\mu) = \left(\int_{x} g(x)p(x|\mu)dx\right) - \mu
+$$
+
+Expectations are an "average" taken over all possible samples of size n.
 
 ## [Sampling Variation]{style="color:#078BCD;"}
 
-We can summarize the sampling variation into a probability 
+```{r, echo=FALSE}
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
+abline(v=pop.mu.weights,lwd=3,col=2)
+```
+
+[Is our estimator biased?]{style="color:cornflowerblue"}
+
+
+## [Precision]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+hist(mu.hat,breaks=40,main = "Sampling Distribution \n of Sample Mean for n = 50",xlim=c(240,380),
+     xlab=expression(hat(mu)))
+abline(v=pop.mu.weights,lwd=3,col=2)
+```
+
+[How close are repeated measures to each other?]{style="color:cornflowerblue"}
+
+
+## [Probability]{style="color:#078BCD;"}
+
+[We can also summarize the sampling variation into a probability]{style="color:cornflowerblue"}
 
 <br>
 
@@ -309,12 +462,53 @@ We can summarize the sampling variation into a probability
 For n = 50, how likely is it that I'll be within 10% of the true population parameter?
 
 ```{r, echo=TRUE}
-lower=pop.mu.weights - pop.mu.weights*0.10
-upper=pop.mu.weights + pop.mu.weights*0.10
+lower = pop.mu.weights - pop.mu.weights*0.05
+upper = pop.mu.weights + pop.mu.weights*0.05
 
-length(which(mu.hat>lower & mu.hat<upper)) / length(mu.hat)
+length(which(mu.hat > lower & mu.hat < upper)) / length(mu.hat)
 
 ```
+
+## [Accuracy]{style="color:#078BCD;"}
+
+[Typically a measure of how close the average sample value is to truth]{style="color:cornflowerblue"}
+
+```{r echo=FALSE}
+par(mfrow=c(2,2))
+curve(dnorm(x, 300, 10),lwd=3,xlim=c(150,450),main="Unbiased & Accurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 295, 10),lwd=3,xlim=c(150,450),main="Biased & Accurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 290, 10),lwd=3,xlim=c(150,450),main="Biased & Inaccurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+
+curve(dnorm(x, 270, 10),lwd=3,xlim=c(150,450),main="Biased & Inaccurate",xlab="Bear Weight (lbs)")
+abline(v=300,lwd=3,col=2)
+```
+
+
+## [Sampling Variation]{style="color:#078BCD;"}
+
+[Which sampling distribution would you prefer?]{style="color:cornflowerblue"}
+
+```{r echo=FALSE}
+par(mfrow=c(1,1))
+curve(dnorm(x, 300, 50),lwd=3,xlim=c(150,450),ylim=c(0,0.04),xlab="Bear Weight (lbs)")
+curve(dnorm(x, 310, 10),lwd=3,add=TRUE,col=3)
+legend("topright",lwd=3,col=c(1,3),legend=c("Unbiased/Accurate/Imprecise",
+                                            "Biased/Accurate/Precise"))
+abline(v=300,lwd=3,col=2)
+```
+
+
+## [Sampling Bias]{style="color:#078BCD;"}
+
+-  **Sampling Bias**
+    - Systematic tendency of selecting certain sample units; makes the samples *unrepresentative* to the target population
+    - Examples in fish/wildlife??
+
 
 ## [Sampling Bias]{style="color:#078BCD;"}
 
@@ -352,6 +546,8 @@ hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Bias for n = 50")
 
 Expected Bias =  `r round(mean(mu.hat)- pop.mu.weights,digits=2)`
 
+
+
 ## [Sampling Bias]{style="color:#078BCD;"}
 
 Relative Expected Bias = $\frac{E(\hat{\mu})-\mu}{\mu}$
@@ -365,6 +561,7 @@ We sample all bears but use a different estimator for the population mean
 $$
 \hat{\mu} = \left(\sum_{i=1}^{n}\frac{(y_{i})^{0.91}}{1.3}\right)\times \frac{1}{n^{1/2}} 
 $$
+
 
 ## [Biased Estimator]{style="color:#078BCD;"}
 
@@ -386,8 +583,26 @@ hist(mu.hat-pop.mu.weights,breaks=40,main = "Sampling Error for n = 50")
 
 Expected Bias =  `r round(mean(mu.hat)- pop.mu.weights,digits=2)`
 
-
-```{r,echo=FALSE}
+```{r,echo=FALSE, results='hide'}
 #Output code into R file
 knitr::purl(input="../FW552/Sampling1.qmd",output="../FW552/Sampling1.r")
 ```
+
+
+## [Measurement Error]{style="color:#078BCD;"}
+
+This is not sampling error. 
+
+![](../img/bear.scale.png)
+
+## [Measurement Error]{style="color:#078BCD;"}
+
+Inaccurate measurements due to malfunctioning instruments or poor procedures or
+by-product of sampling plan
+
+E.g., The intervewier effect
+  - In Aspen, CO, human black bear conflicts tend to be under-reported
+  - In New Jersey, they tend to be over-reported
+  - Depends on social constructs and attitudes towards wildlife
+  
+  

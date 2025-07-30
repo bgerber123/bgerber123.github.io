@@ -1,0 +1,70 @@
+---
+title: "Homework #"
+author: "Your Name"
+date: "Date"
+output: html_document
+---
+
+## Homework Assignment Name
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+pre.r { /* Targets R code blocks */
+      font-size: 12pt;
+    }
+    code { /* Targets inline code */
+      font-size: 12pt;
+    }
+
+</style>
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. For assignments, I will ask you for the Rmd file and the knitted HTML, along with any other files that are external to the Rmd file and loaded; this allows me to execute your code if need be.
+
+You can embed an R code chunk like this:
+
+```{r sample1}
+# Create an object called 'values' that consists of the integers from 1 to 1000
+  values =  seq(1,1000)
+
+# Set the seed for a random number generator and sample (size of 10) from the object 'values'
+  set.seed(432432)
+  s1 = sample(values, size = 10, replace = FALSE)
+  s1
+```
+
+
+```{r sample2}
+# Create an object called 'normal.values' that come from a Normal Distribution
+# with a mean of 100 and standard deviation of 10 (sample size of 50)
+  set.seed(4324321)
+  normal.values =  rnorm(50, mean = 100, sd = 10)
+
+  normal.values
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE, fig.height=8}
+  par(mfrow=c(2,1))
+  hist(normal.values)
+  
+  plot(density(normal.values),
+       lwd = 3
+       )
+  
+  curve(dnorm(x, 100,10),
+        add = TRUE,
+        col = 2,
+        lwd = 4
+        )
+```
+
+Note that the `echo = FALSE` argument was added to the code chunk so that the code text is not printed in the output file.
+
+<br>

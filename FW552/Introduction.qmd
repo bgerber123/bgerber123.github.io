@@ -38,7 +38,7 @@ code.r{
 . . .
 
 
--   **Computers**: Assignments will often require a computer
+-   **Computers**: Assignments will often require a computer (R programming)
 
 ## [My Background]{style="color:#078BCD"}
 
@@ -46,16 +46,23 @@ code.r{
 
 ## [What is this course?]{style="color:#078BCD;"}
 
-Primarily:
+**Primarily**:
 
 - connecting things we care about (fish/wildlife/habitat) with sampling principles
 
 ![](../img/fieldtechniques.png)
 
+## [What is this course?]{style="color:#078BCD;"}
+
+**Main Objective**:
+
+- to learn to think from a *sampling perspective* rather than a field logistics or field techniques perspective.
+
+![](../img/fieldtechniques.png)
 
 ## [What is this course?]{style="color:#078BCD;"}
 
-A mix of...
+**A mix of...**
 
 - Sampling principles
 - Design-based inference
@@ -64,9 +71,7 @@ A mix of...
 
 ## [What is this course?]{style="color:#078BCD;"}
 
-**Important Concepts and Terminology** 
-
-**For example,**
+**Some Important Concepts and Terminology** 
 
 - Inference
 
@@ -78,7 +83,7 @@ A mix of...
 
 - Sample size
 
-- Parametric bias and variance
+- Estimator bias and variance
 
 
 ## [Questions for you...]{style="color:#078BCD;"}
@@ -101,23 +106,23 @@ Course Engagement      | 10%
 Assignments            | 25%
 Quizzes                | 25%
 Tests                  | 20%
-Project                | 20%
+Presentation           | 20%
 
 ## [Project]{style="color:#078BCD;"}
 
-????
+An oral presentation on a topic of choice that focuses on the ideas of sampling
 
-<!-- 1) independent or group research project - highlighting a modeling application, data/code transparency, and communication of results -->
-
-<!-- 2) group development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation -->
+- how to improve a current project
+- designing a future study
+- evaluating evaluating sampling options in terms of bias/precision/cost/etc.  
 
 
 
 ## [Course Learning Objectives]{style="color:#078BCD;"}
 
-Upon successful completion of this course students will be able to:
+<!-- Upon successful completion of this course students will be able to: -->
 
-::: incremental 
+<!-- ::: incremental  -->
 
 - Identify different types of sampling designs and understand when to apply them
 
@@ -127,21 +132,18 @@ Upon successful completion of this course students will be able to:
 
 - Be able to use fundamental code practices in the R programming language.  
 
-:::
+<!-- ::: -->
 
 
 ## [Why is this class useful?]{style="color:#078BCD;"} {.scrollable}
 
 -   Fundamental to scientific learning
 
+-   Thinking from a sampling perspective is a super power!
 
--   Have options in designing an empirical study
-
+-   Have options in being efficient in your study's
 
 -   Interpret and frame learning when reading the literature
-
-
--   Collaborate with colleagues/statisticians
 
 ## [Software]{style="color:#078BCD;"}
 
@@ -195,17 +197,17 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 
 
-## [Coding in the Modern Age]{style="color:#078BCD;"}
+<!-- ## [Coding in the Modern Age]{style="color:#078BCD;"} -->
 
-- Software changes all the time
+<!-- - Software changes all the time -->
 
-- Code will become obsolete  
+<!-- - Code will become obsolete   -->
 
-- Base R functions change slower than packages
+<!-- - Base R functions change slower than packages -->
 
-- Document/Annotate code and publish it online
+<!-- - Document/Annotate code and publish it online -->
 
-- File management is important!
+<!-- - File management is important! -->
 
 <!-- ## [File management]{style="color:#078BCD;"} -->
 
@@ -266,9 +268,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <a href="https://canvas.colostate.edu/">https://canvas.colostate.edu/</a>
 
 
-## 
-
-###  [Questions]{style="color:#078BCD;"}
+## [Questions]{style="color:#078BCD;"}
 
 ![](/img/question.png){fig-align="center" width="200"}
 
@@ -277,7 +277,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 **Brook trout habitat in rivers of Massachusetts**
 
 <!-- ![](../img/prairie.png){width="600"} -->
-![](../img/streamsMA.png){width="800"}
+![](../img/streamsMA.png){width="1000"}
 
 
 . . .
