@@ -8516,14 +8516,14 @@
     "href": "FW552/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\n\n\nRead Hankin Chapter 2\nRead Gerber et al. 2012\nDiscussion Post on Canvas\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\nLecture: Intro to R; Download R code\nMarkdown: Name_HW_template.Rmd\n\n\n\n\n\n\nWalk through Three scripts on R Fundamentals . For additional help, see links under the Learning tab on class website.\nRead Hankin Chapter 1 (sections 1.0. 1.1, and 1.5)\nRead Thompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+    "text": "Lecture: Introduction\n\n\n\n\n\nRead Hankin Chapter 2\nRead Gerber et al. 2012\nDiscussion Post on Canvas\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\nIn Class Discussion Questions of Gerber et al. 2012\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\nR and RMarkdown\n\nLecture: Intro to R; Download R code\nMarkdown: Name_HW_template.Rmd\n\n\n\n\n\nWalk through Three scripts on R Fundamentals . For additional help, see links under the Learning tab on class website.\nRead Hankin Chapter 1 (sections 1.0. 1.1, and 1.5)\nRead Thompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
   },
   {
     "objectID": "FW552/week1.html#week-1",
     "href": "FW552/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\n\n\nRead Hankin Chapter 2\nRead Gerber et al. 2012\nDiscussion Post on Canvas\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\n\n\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\n\n\n\n\nLecture: Intro to R; Download R code\nMarkdown: Name_HW_template.Rmd\n\n\n\n\n\n\nWalk through Three scripts on R Fundamentals . For additional help, see links under the Learning tab on class website.\nRead Hankin Chapter 1 (sections 1.0. 1.1, and 1.5)\nRead Thompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
+    "text": "Lecture: Introduction\n\n\n\n\n\nRead Hankin Chapter 2\nRead Gerber et al. 2012\nDiscussion Post on Canvas\nPlease bring a laptop next class with R and RStudio installed.\n\n\n\n\n\n\n\n\nIn Class Discussion Questions of Gerber et al. 2012\nApply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012\n\nWhat was the target population?\nWhat was the sampling frame?\nWhat was the sampling selection method of the sample units? It might be useful to think of a fundamental sample unit and subsample units.\nHow would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?\n\nR and RMarkdown\n\nLecture: Intro to R; Download R code\nMarkdown: Name_HW_template.Rmd\n\n\n\n\n\nWalk through Three scripts on R Fundamentals . For additional help, see links under the Learning tab on class website.\nRead Hankin Chapter 1 (sections 1.0. 1.1, and 1.5)\nRead Thompson Chapter 10  (sections 10.1 and 10.3)\n\n\n\n\n\nDumelle et al. 2022 \nGregoire2011"
   },
   {
     "objectID": "FW552/CourseOverview.html",
@@ -8621,14 +8621,14 @@
     "href": "FW552/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "here\nhere\n\n\n\n\n\nhere\nhere\n\n\n\n\n\n\n\n\nhere\nhere\n\n\n\n\n\nhere\nhere"
   },
   {
     "objectID": "FW552/week3.html#week-3",
     "href": "FW552/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization\nLecture Code: Likelihood.R\n\n\nReadings for next class:\n\nDushoff et al. 2019\nFieberg, Chapter 1.10\n\n\nBackground Reading (not required):\n\nFieberg, Ch. 1\nBolker Ch. 7\nZurr Ch. 2\n\n\n\n\n\nLecture: Regression\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "here\nhere\n\n\n\n\n\nhere\nhere\n\n\n\n\n\n\n\n\nhere\nhere\n\n\n\n\n\nhere\nhere"
   },
   {
     "objectID": "FW552/week16.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Postn\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\nThompson Ch. 2\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n\n\n\n \nWe\n8-Oct\n\n\n\n\n\n9\nMo\n13-Oct\n\n\n\n\n\n \nWe\n15-Oct\n\n\n\n\n\n10\nMo\n20-Oct\n\n\n\n\n\n \nWe\n22-Oct\n\n\n\n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -10057,5 +10057,19 @@
     "title": "Sampling I",
     "section": "Is our estimator biased?",
     "text": "Is our estimator biased?"
+  },
+  {
+    "objectID": "FW552/Bigdata.SRS.html#big-data-paradox",
+    "href": "FW552/Bigdata.SRS.html#big-data-paradox",
+    "title": "Big Data Paradox",
+    "section": "Big Data Paradox",
+    "text": "Big Data Paradox\n\nMeng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\nVideo: Statistical paradises and pardoxes in Big Data"
+  },
+  {
+    "objectID": "FW552/Bigdata.SRS.html#big-data-paradox-1",
+    "href": "FW552/Bigdata.SRS.html#big-data-paradox-1",
+    "title": "Big Data Paradox",
+    "section": "Big Data Paradox",
+    "text": "Big Data Paradox\nThree ways to reduces ‘errors’\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho \\times \\sigma \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\text{errors} &= \\begin{array} \\text{data} \\\\ \\text{quality} \\end{array} \\times \\begin{array} \\text{problem} \\\\ \\text{difficulty} \\end{array} \\times \\begin{array} \\text{data} \\\\ \\text{quantitiy} \\end{array}\n\\end{split}\n\\]"
   }
 ]

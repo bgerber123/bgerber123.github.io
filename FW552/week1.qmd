@@ -4,13 +4,13 @@ title: ""
 
 ## Week 1
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
 -   Lecture: <a href="/FW552/Introduction.qmd">Introduction</a>
 
-#### [Assigned | Due Next Class]{style="color:red;"}
+#### **Assigned | Due Next Class**
 
   - Read <a href="/readings552/Hankin Chapter 2.pdf">Hankin Chapter 2</a>
   - Read <a href="/readings552/Gerber et al. 2012.pdf">Gerber et al. 2012</a> 
@@ -21,11 +21,11 @@ title: ""
 
 <hr style="border:2px solid gray">
 
-### Day 2 
+### [Day 2]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
-##### **In Class Discussion Questions of Gerber et al. 2012**
+*In Class Discussion Questions of Gerber et al. 2012*
 
 Apply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012
 
@@ -37,20 +37,20 @@ Apply your learning from Hankin Ch.2 (Basics Concepts) to Gerber et al. 2012
  
  - How would you characterize the generality of scientific learning from this study? Would you apply the knowledge gained to other individuals of the species?
 
-##### **R and RMarkdown**
+*R and RMarkdown*
 
 - Lecture: <a href="/FW552/IntroR.qmd">Intro to R</a>; <a href="/FW552/IntroR.R">Download R code</a>
 
 - Markdown: <a href="/classfiles552/Name_HW_template.Rmd">Name_HW_template.Rmd</a>
 
-#### [Assigned | Due Next Class]{style="color:red;"}
+#### **Assigned | Due Next Class**
 
 - Walk through <a href="/classfiles552/R.Fundamentals.zip">Three scripts on R Fundamentals </a>. For additional help, see links under the `Learning` tab on <a href="https://bgerber123.github.io/FW552/">class website</a>. 
 - Read <a href="/readings552/Hankin Chapter 1.pdf">Hankin Chapter 1 </a>(sections 1.0. 1.1, and 1.5)
 - Read <a href="/readings552/Thompson Chapter 10.pdf">Thompson Chapter 10 </a> (sections 10.1 and 10.3) 
 
 
-#### [Background Readings (not required)]{style="color:red;"}
+#### **Background Readings (not required)**
 
   - <a href="/readings552/Dumelle et al. 2022.pdf">Dumelle et al. 2022 </a> 
   - <a href="/readings552/Gregoire2011.pdf">Gregoire2011 </a> 

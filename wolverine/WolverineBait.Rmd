@@ -24,7 +24,7 @@ output:
 
 # **Context**
 
-In the 2017 and 2022 WAFWA wolverine surveys, camera sites included either bait or a scent lure.
+In the 2017 and 2022 WAFWA wolverine surveys, camera sites included either bait and lure (labeled as bait below) or only a scent lure (labeled as lure below).
 
 We are interested in understanding the  effects of bait and lure in detecting wolverine at a site. 
 
@@ -33,7 +33,11 @@ This includes:
 - how detection probability could be different at occupied sites when using bait vs lure and 
 - whether there is an effect of detecting wolverine at all at a site using lure; i.e., a wolverine is present but may go undetected using lure but will be detected using bait. 
 
-We can investigate the second part by evaluating whether baited sites in 2017 that had detections are more likely to be undetected in 2022 when using lure compared to sites that were baited in both years. We unfortunately can't use the reverse logic of comparing lure sites in 2017 that did not detect wolverine because no lure sites were then later baited. The assumption in this investigation is that wolverine occupancy is unlikely to change in a 5 year period and that changes are due to detection method. It is possible there is a bait/lure effect only, only real changes in occupancy, or both. 
+The first part can be addressed pretty easily as we can estimate different detection probabilities for a site labeled as bait vs lure.
+
+The second part is more challenging. This is a more insidious problem. We can investigate this by conditioning on sites what were occupied in 2017 and asking if the change in occupancy (colonization/extirpation) is different based on whether a site was baited both years or used lure both years or changed from bait to lure. Unfortunately, no sites that used lure in 2017 were then baited in 2022. There should not be a difference in colonization or extirpation by this change. 
+
+There are a lot of data summary tables below that could be skipped. The main investigation is presented in the section: `Dynamic Occupancy Model`.
 
 ```{r load.data,echo=FALSE,warning=FALSE,results='hide', message=FALSE}
 # Load Packages
@@ -47,7 +51,7 @@ We can investigate the second part by evaluating whether baited sites in 2017 th
 
 # Load survey data
   visitData2017 = read.csv("../data/visitDataWolv2017_07-16-25.csv")
-  visitData2022 = read.csv("../data/visitDataWolv2022_07-16-25.csv")
+  visitData2022 = read.csv("../data/visitDataWolv2022_07-31-25.csv")
   habData2017 = read.csv("../data/habDataWolv2017_07-16-25.csv")
   habData2022 = read.csv("../data/habDataWolv2022_07-16-25.csv")
 ```
@@ -100,11 +104,7 @@ We can investigate the second part by evaluating whether baited sites in 2017 th
 **Summary:** Sites that got bait or lure were not randomly assigned. There could be some correlating factor of site differences that is not really due to detection method. For example, sites with difficulty accessibility in 2017 often used lure. Also, in 2022 the sites with wolverines present and had plenty of baited sites were only Idaho and Wyoming. Need to think about both concerns when evaluating the effect of detection method.   
 
 
-# **Data Mgmt**
-
-For 2022, there are 2 sites (1 in UT and 1 in ID) that have missing values for the bait/lure covariate. These need to be fixed. For now, I will treat them as `Lure` sites. Their `GRID_ID` are 9374 and 13192.
-
-Second, there are 12 sites labeled as `Bait_Lure` (primarily in Utah, but also some in Oregon), indicating both were used. I will treat these as `Bait` sites. There are no wolverines detected in these states and they are only surveyed in 2022, so not an issue for this investigation. 
+<!-- # **Data Mgmt** -->
 
 
 ```{r,data.mgmt,echo=FALSE}
@@ -112,8 +112,8 @@ Second, there are 12 sites labeled as `Bait_Lure` (primarily in Utah, but also s
 # visitData2022$STATE[which(visitData2022$SiteType2022=="")]
   
 # Need to confirm, but for now we will change these missing and other to Bait sites  
-  index=which(visitData2022$SiteType2022=="")
-  visitData2022$SiteType2022[index]="Lure"
+#  index=which(visitData2022$SiteType2022=="")
+#  visitData2022$SiteType2022[index]="Lure"
   
   index=which(visitData2022$SiteType2022=="Bait_Lure")
   visitData2022$SiteType2022[index]="Bait"
@@ -121,7 +121,7 @@ Second, there are 12 sites labeled as `Bait_Lure` (primarily in Utah, but also s
 
 # **Covariate Comparison**
 
-Comparisons of the availble spatial covariates by year between sites with bait or lure. 
+Comparisons of the available spatial covariates by year between sites with bait or lure. 
 
 ### *2017:*
 
@@ -601,6 +601,9 @@ If a site used lure in 2017 and had a detection then this is whether there was a
 # plot shared sites
   dat.plot = dplyr::left_join(visit.2017.data.wide[-remove.na,],visit.2022.data.wide[these,],by="GRID_ID")
   
+# Make a new column
+ dat.plot$SiteType2017.2022 = paste0(dat.plot$SiteType2017,dat.plot$SiteType2022)
+  
     #plot first    
   state.plot=  ggplot(lim.states) +
     geom_sf(aes()) #+
@@ -609,10 +612,12 @@ If a site used lure in 2017 and had a detection then this is whether there was a
   plot.state.shared =  state.plot + new_scale_colour()+
     geom_point(data = dat.plot, 
                aes(x = Albers_X.x, 
-                   y = Albers_Y.x),
+                   y = Albers_Y.x,
+                   colour=SiteType2017.2022),
                shape = 15, size = 1) +
-    scale_colour_manual(values = c("black"))+
-    ggtitle("Shared Sample site 2017/2022")
+    scale_colour_manual(values = c("red","orange", "black"))+
+    #scale_colour_manual(values = c("black"))+
+    ggtitle("Shared Sample sites 2017/2022")
 
   
 # Create covariates
