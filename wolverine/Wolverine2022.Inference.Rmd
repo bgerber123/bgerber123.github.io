@@ -41,6 +41,7 @@ To consider the spatial variables that influence wolverines occurence, we should
 
 ## **Covariates** 
 
+
 These variables were derived by Jake Ivan and confirmed to be accurate. 
 
 - *propBurned2016_2021*: The mean proportion a cell was burned between 2016 and 2021. Increasing values are hypothesized to decrease occupancy; recent fires potentially decrease food/cover. 
