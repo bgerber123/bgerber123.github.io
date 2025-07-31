@@ -51,11 +51,11 @@ These variables were derived by Jake Ivan and confirmed to be accurate.
 
 - *meanHumanMod_2021*: The mean measure of human modification from Dave Theolbald.
 
-- *meanNDVI_2022*: The mean NDVI by cell over years X-X. 
+- *meanNDVI_2022*: The mean NDVI per cell from 2010-2020 for the same set of months each year.
 
 - *propCopelandInman*: Predicted potential habitat from CoplelandInman model. Increasing values are hypothesized to increase occupancy. Used to define the sampling frame. 
 
-- *ClusterCount*: Predicted connectivity of cells (function in ArcGIS); ask Jake. Increasing values are hypothesized to increase occupancy, probably up to some point. 
+- *ClusterCount*: This was derived from the ArcGIS Pro Spatially Constrained Multivariate Clustering Tool.  According to ESRI this tool "finds spatially contiguous clusters of features based on a set of feature attribute values and optional cluster size limits." The feature attribute selected was the variable *propCopelandInman*. Increasing values are hypothesized to increase occupancy as  connectivity of habitat makes it easier for wolverine to move around and find necessary resources.  
 
 - *SDMayDepth2022*: Standard deviation of snow depth in May. Decreasing values are hypothesized to increase occupancy (more consistency at low values).  
 
