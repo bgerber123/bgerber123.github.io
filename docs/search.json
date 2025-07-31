@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nInstall R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nQuiz 2; pick paper and describe the target population\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Postn\nBoyd et al. 2023 and Thompson Ch. 2\n\n\n3\nMo\n3-Sep\nBig Data Paradox / SRS\n\n\n\n\n \nWe\n8-Sep\n\n\n\n\n\n4\nMo\n10-Sep\n\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n \n\n\n9\nMo\n13-Oct\n\n\n \n\n\n10\nMo\n20-Oct\n\n\n \n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-5Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9048,14 +9048,14 @@
     "href": "FW552/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nCanvas Quiz 1\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023"
   },
   {
     "objectID": "FW552/week2.html#week-2",
     "href": "FW552/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "No Class\n\n\n\n\n\n\n\n\nLecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nCanvas Quiz 1\nAssigned Readings:\n\nBoyd et al. 2023 \nHankin Chapter"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023"
   },
   {
     "objectID": "FW552/week4.html",
@@ -9398,7 +9398,7 @@
     "href": "FW552/Sampling1.html#common-sample-units",
     "title": "Sampling I",
     "section": "Common Sample Units",
-    "text": "Common Sample Units\n\n\nplots/quadrats - small area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established throughout a population\ntransects - straight-line segments\nindividual organisms - the organism is the sample unit or the organism defines the location of the sample unit"
+    "text": "Common Sample Units\n\n\nplots/quadrats - small area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established throughout a population\ntransects - line segments in which observations are taken from\nindividual organisms - the organism is the sample unit or the organism defines the location of the sample unit"
   },
   {
     "objectID": "FW552/Sampling1.html#more-language",
@@ -9482,14 +9482,14 @@
     "href": "FW552/Sampling1.html#biased-estimator",
     "title": "Sampling I",
     "section": "Biased Estimator",
-    "text": "Biased Estimator\nWe sample all bears but use a different estimator for the population mean\n\\[\n\\hat{\\mu} = \\left(\\sum_{i=1}^{n}\\frac{(y_{i})^{0.91}}{1.3}\\right)\\times \\frac{1}{n^{1/2}}\n\\]"
+    "text": "Biased Estimator\nWe sample all bears but use a different estimator for the population mean\n\\[\n\\hat{\\mu} = \\left(\\sum_{i=1}^{n}(y_{i})^{0.38}\\right)\\times \\frac{1}{n^{1/10000}}\n\\]"
   },
   {
     "objectID": "FW552/Sampling1.html#biased-estimator-1",
     "href": "FW552/Sampling1.html#biased-estimator-1",
     "title": "Sampling I",
     "section": "Biased Estimator",
-    "text": "Biased Estimator\n\nExpected Bias = 214.24"
+    "text": "Biased Estimator\n\nExpected Bias = 14.87"
   },
   {
     "objectID": "FW552/Introduction.html#questions-for-you",
@@ -9538,7 +9538,7 @@
     "href": "FW552/Sampling1.html#sampling-variation",
     "title": "Sampling I",
     "section": "Sampling Variation",
-    "text": "Sampling Variation\nCalculate many many sample means\n\n# Create function to sample 50 units and take the mean\nsample.mean.fn = function(target,n){\n                                    mean(\n                                         sample(target,n)\n                                         )\n                                   }\n#Repeat the above function 20000 times\n  set.seed(54343)\n  mu.hat = replicate(20000,\n                     sample.mean.fn(pop.weights,n)\n                     )"
+    "text": "Sampling Variation\nCalculate many many sample means\n\n# Create function to sample 50 units and take the mean\n sample.mean.fn = function(target,n){\n                                     mean(\n                                         sample(target,n)\n                                          )\n                                     }\n# Repeat the above function 20000 times\n  mu.hat = replicate(20000,\n                     sample.mean.fn(pop.weights,n)\n                     )"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-variation-1",
@@ -9587,7 +9587,7 @@
     "href": "FW552/Sampling1.html#sampling-variation-2",
     "title": "Sampling I",
     "section": "Sampling Variation",
-    "text": "Sampling Variation\n\nIs our estimator biased?"
+    "text": "Sampling Variation\nWhich sampling distribution would you prefer?"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-bias-4",
@@ -9622,14 +9622,14 @@
     "href": "FW552/Sampling1.html#population-and-sample-2",
     "title": "Sampling I",
     "section": "Population and Sample",
-    "text": "Population and Sample\n\n\n\n\nTrees of sufficient size for spotted owls to use for nesting\nHouse characteristics that northern flickers most often damage\nSurvival of rainbow trout in the presence of whirling disease\nSurveys, e.g., number of people that\n\nbird watch\nhunt or fish\nthink wolves should live in Colorado"
+    "text": "Population and Sample\n\n\n\nTrees of sufficient size for nesting by spotted owls\nHouse characteristics that northern flickers most often damage\nSurvival of rainbow trout in the presence of whirling disease\nSurveys, e.g., number of people that\n\nbird watch / hunt / fish / think wolves should live in CO"
   },
   {
     "objectID": "FW552/Sampling1.html#population-and-sample-3",
     "href": "FW552/Sampling1.html#population-and-sample-3",
     "title": "Sampling I",
     "section": "Population and Sample",
-    "text": "Population and Sample\n\n\n\n\nTrees of sufficient size for spotted owls to use for nesting\nHouse characteristics that northern flickers most often damage\nSurvival of rainbow trout in the presence of whirling disease\nSurveys, e.g., number of people that\n\nbird watch\nhunt or fish\nthink wolves should live in Colorado\n\n\n\nOften a spatial/temporal context to our target population"
+    "text": "Population and Sample\n\n\nOften a spatial/temporal context to our target population"
   },
   {
     "objectID": "FW552/Sampling1.html#population-and-sample-4",
@@ -9979,7 +9979,7 @@
     "href": "FW552/Sampling1.html#sampling-types",
     "title": "Sampling I",
     "section": "Sampling Types",
-    "text": "Sampling Types\n\nConvenient sampling - results when most convenient units are chosen\nJudgment sampling - obtained at the discretion of someone who is familiar with the characteristics of the population\nProbability sampling - based on a designed process that the probability a unitm is selected is known"
+    "text": "Sampling Types\n\nConvenient sampling - when most convenient units are chosen\nJudgment sampling - obtained at the discretion of someone who is familiar with the characteristics of the population\nProbability sampling - based on a process that the probability a unit is selected is known"
   },
   {
     "objectID": "FW552/Sampling1.html#central-paradox-of-sampling",
@@ -9993,14 +9993,14 @@
     "href": "FW552/Sampling1.html#measurement-error",
     "title": "Sampling I",
     "section": "Measurement Error",
-    "text": "Measurement Error\nThis is not sampling error."
+    "text": "Measurement Error\nDidn’t zero the scale before weighing; this is not sampling error."
   },
   {
     "objectID": "FW552/Sampling1.html#measurement-error-1",
     "href": "FW552/Sampling1.html#measurement-error-1",
     "title": "Sampling I",
     "section": "Measurement Error",
-    "text": "Measurement Error\nInaccurate measurements due to malfunctioning instruments or poor procedures or by-product of sampling plan\n\n\nE.g., The intervewier effect - In Aspen, CO, human black bear conflicts tend to be under-reported - In New Jersey, they tend to be over-reported - Depends on social constructs and attitudes towards wildlife"
+    "text": "Measurement Error\nInaccurate measurements due to malfunctioning instruments or poor procedures or by-product of sampling plan\n\n\nE.g.,\n\nIn Aspen, CO human-bear conflicts tend to be under reported\nIn New Jersey they tend to be over reported"
   },
   {
     "objectID": "FW552/Sampling1.html#sampling-variation-5",
@@ -10028,7 +10028,7 @@
     "href": "FW552/Sampling1.html#estimator-bias",
     "title": "Sampling I",
     "section": "Estimator Bias",
-    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{x} g(x)p(x|\\mu)dx\\right) - \\mu\n\\]\nExpectations are an “average” taken over all possible samples of size n."
+    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{x} g(x)p(x|\\mu)dx\\right) - \\mu\n\\]\n\n\nExpectations are an average over all possible samples of size n."
   },
   {
     "objectID": "FW552/Sampling1.html#precision",
@@ -10042,7 +10042,7 @@
     "href": "FW552/Sampling1.html#probability",
     "title": "Sampling I",
     "section": "Probability",
-    "text": "Probability\nWe can also summarize the sampling variation into a probability\n\n\nFor n = 50, how likely is it that I’ll be within 10% of the true population parameter?\n\nlower = pop.mu.weights - pop.mu.weights*0.05\nupper = pop.mu.weights + pop.mu.weights*0.05\n\nlength(which(mu.hat &gt; lower & mu.hat &lt; upper)) / length(mu.hat)\n\n[1] 0.97165"
+    "text": "Probability\nWe can also summarize the sampling variation into a probability\n\n\nFor n = 50, how likely is it that one sample will be within 10% of the true population parameter?\n\nlower = pop.mu.weights - pop.mu.weights*0.05\nupper = pop.mu.weights + pop.mu.weights*0.05\n\nlength(which(mu.hat &gt; lower & mu.hat &lt; upper)) / length(mu.hat)\n\n[1] 0.9758"
   },
   {
     "objectID": "FW552/Sampling1.html#accuracy",
@@ -10050,5 +10050,12 @@
     "title": "Sampling I",
     "section": "Accuracy",
     "text": "Accuracy\nTypically a measure of how close the average sample value is to truth"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#is-our-estimator-biased",
+    "href": "FW552/Sampling1.html#is-our-estimator-biased",
+    "title": "Sampling I",
+    "section": "Is our estimator biased?",
+    "text": "Is our estimator biased?"
   }
 ]

@@ -239,9 +239,9 @@ code.r{
 <section id="sampling-types" class="slide level2">
 <h2><span style="color:#078BCD;">Sampling Types</span></h2>
 <ul>
-<li><span style="color:cornflowerblue">Convenient sampling</span> - results when most convenient units are chosen</li>
+<li><span style="color:cornflowerblue">Convenient sampling</span> - when most convenient units are chosen</li>
 <li><span style="color:cornflowerblue">Judgment sampling</span> - obtained at the discretion of someone who is familiar with the characteristics of the population</li>
-<li><span style="color:cornflowerblue">Probability sampling</span> - based on a designed process that the probability a unitm is selected is known</li>
+<li><span style="color:cornflowerblue">Probability sampling</span> - based on a process that the probability a unit is selected is known</li>
 </ul>
 </section>
 <section id="central-paradox-of-sampling" class="slide level2">
@@ -266,7 +266,7 @@ code.r{
 <ul>
 <li><span style="color:cornflowerblue">plots/quadrats</span> - small area to measure/count plants, seeds, insects, etc.</li>
 <li><span style="color:cornflowerblue">points</span> - measurements are taken from a set of points established throughout a population</li>
-<li><span style="color:cornflowerblue">transects</span> - straight-line segments</li>
+<li><span style="color:cornflowerblue">transects</span> - line segments in which observations are taken from</li>
 <li><span style="color:cornflowerblue">individual organisms</span> - the organism is the sample unit or the organism defines the location of the sample unit</li>
 </ul>
 </div>
@@ -275,19 +275,15 @@ code.r{
 <h2><span style="color:#078BCD;">Population and Sample</span></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="r-fit-text">
 <ul>
-<li>Trees of sufficient size for spotted owls to use for nesting</li>
+<li>Trees of sufficient size for nesting by spotted owls</li>
 <li>House characteristics that northern flickers most often damage</li>
 <li>Survival of rainbow trout in the presence of whirling disease</li>
 <li>Surveys, e.g., number of people that
 <ul>
-<li>bird watch</li>
-<li>hunt or fish</li>
-<li>think wolves should live in Colorado</li>
+<li>bird watch / hunt / fish / think wolves should live in CO</li>
 </ul></li>
 </ul>
-</div>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -300,19 +296,6 @@ code.r{
 <h2><span style="color:#078BCD;">Population and Sample</span></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="r-fit-text">
-<ul>
-<li>Trees of sufficient size for spotted owls to use for nesting</li>
-<li>House characteristics that northern flickers most often damage</li>
-<li>Survival of rainbow trout in the presence of whirling disease</li>
-<li>Surveys, e.g., number of people that
-<ul>
-<li>bird watch</li>
-<li>hunt or fish</li>
-<li>think wolves should live in Colorado</li>
-</ul></li>
-</ul>
-</div>
 <p><span style="color:red;">Often a spatial/temporal context to our target population</span></p>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
@@ -505,16 +488,15 @@ code.r{
 <p>Calculate many many sample means</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Create function to sample 50 units and take the mean</span></span>
-<span id="cb5-2"><a></a>sample.mean.fn <span class="ot">=</span> <span class="cf">function</span>(target,n){</span>
-<span id="cb5-3"><a></a>                                    <span class="fu">mean</span>(</span>
+<span id="cb5-2"><a></a> sample.mean.fn <span class="ot">=</span> <span class="cf">function</span>(target,n){</span>
+<span id="cb5-3"><a></a>                                     <span class="fu">mean</span>(</span>
 <span id="cb5-4"><a></a>                                         <span class="fu">sample</span>(target,n)</span>
-<span id="cb5-5"><a></a>                                         )</span>
-<span id="cb5-6"><a></a>                                   }</span>
-<span id="cb5-7"><a></a><span class="co">#Repeat the above function 20000 times</span></span>
-<span id="cb5-8"><a></a>  <span class="fu">set.seed</span>(<span class="dv">54343</span>)</span>
-<span id="cb5-9"><a></a>  mu.hat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">20000</span>,</span>
-<span id="cb5-10"><a></a>                     <span class="fu">sample.mean.fn</span>(pop.weights,n)</span>
-<span id="cb5-11"><a></a>                     )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a></a>                                          )</span>
+<span id="cb5-6"><a></a>                                     }</span>
+<span id="cb5-7"><a></a><span class="co"># Repeat the above function 20000 times</span></span>
+<span id="cb5-8"><a></a>  mu.hat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">20000</span>,</span>
+<span id="cb5-9"><a></a>                     <span class="fu">sample.mean.fn</span>(pop.weights,n)</span>
+<span id="cb5-10"><a></a>                     )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="sampling-variation-1" class="slide level2">
@@ -528,17 +510,26 @@ code.r{
 <div class="fragment">
 <p><span class="math display">\[
 \text{Bias}(\hat{\mu},\mu) = \bar{\hat{\mu}} - \mu \\
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
 \text{Bias}(\hat{\mu},\mu) = E[\hat\mu] - \mu \\
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
 \text{Bias}(\hat{\mu},\mu) = \left(\int_{x} g(x)p(x|\mu)dx\right) - \mu
 \]</span></p>
-<p>Expectations are an “average” taken over all possible samples of size n.</p>
+</div>
+<div class="fragment">
+<p>Expectations are an average over all possible samples of size n.</p>
 </div>
 </section>
-<section id="sampling-variation-2" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation</span></h2>
+<section id="is-our-estimator-biased" class="slide level2">
+<h2><span style="color:#078BCD;">Is our estimator biased?</span></h2>
 
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><p><span style="color:cornflowerblue">Is our estimator biased?</span></p>
-</section>
+<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="precision" class="slide level2">
 <h2><span style="color:#078BCD;">Precision</span></h2>
 
@@ -549,14 +540,14 @@ code.r{
 <p><span style="color:cornflowerblue">We can also summarize the sampling variation into a probability</span></p>
 <p><br></p>
 <div class="fragment">
-<p>For n = 50, how likely is it that I’ll be within 10% of the true population parameter?</p>
+<p>For n = 50, how likely is it that one sample will be within 10% of the true population parameter?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>lower <span class="ot">=</span> pop.mu.weights <span class="sc">-</span> pop.mu.weights<span class="sc">*</span><span class="fl">0.05</span></span>
 <span id="cb6-2"><a></a>upper <span class="ot">=</span> pop.mu.weights <span class="sc">+</span> pop.mu.weights<span class="sc">*</span><span class="fl">0.05</span></span>
 <span id="cb6-3"><a></a></span>
 <span id="cb6-4"><a></a><span class="fu">length</span>(<span class="fu">which</span>(mu.hat <span class="sc">&gt;</span> lower <span class="sc">&amp;</span> mu.hat <span class="sc">&lt;</span> upper)) <span class="sc">/</span> <span class="fu">length</span>(mu.hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.97165</code></pre>
+<pre><code>[1] 0.9758</code></pre>
 </div>
 </div>
 </div>
@@ -566,7 +557,7 @@ code.r{
 <p><span style="color:cornflowerblue">Typically a measure of how close the average sample value is to truth</span></p>
 
 <img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="sampling-variation-3" class="slide level2">
+<section id="sampling-variation-2" class="slide level2">
 <h2><span style="color:#078BCD;">Sampling Variation</span></h2>
 <p><span style="color:cornflowerblue">Which sampling distribution would you prefer?</span></p>
 
@@ -607,28 +598,32 @@ code.r{
 <h2><span style="color:#078BCD;">Biased Estimator</span></h2>
 <p>We sample all bears but use a different estimator for the population mean</p>
 <p><span class="math display">\[
-\hat{\mu} = \left(\sum_{i=1}^{n}\frac{(y_{i})^{0.91}}{1.3}\right)\times \frac{1}{n^{1/2}}
+\hat{\mu} = \left(\sum_{i=1}^{n}(y_{i})^{0.38}\right)\times \frac{1}{n^{1/10000}}
 \]</span></p>
 </section>
 <section id="biased-estimator-1" class="slide level2">
 <h2><span style="color:#078BCD;">Biased Estimator</span></h2>
 
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><p>Expected Bias = 214.24</p>
+<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><p>Expected Bias = 14.87</p>
 </section>
 <section id="measurement-error" class="slide level2">
 <h2><span style="color:#078BCD;">Measurement Error</span></h2>
-<p>This is not sampling error.</p>
+<p>Didn’t zero the scale before weighing; this is not sampling error.</p>
 
 <img data-src="../img/bear.scale.png" class="r-stretch"></section>
 <section id="measurement-error-1" class="slide level2">
 <h2><span style="color:#078BCD;">Measurement Error</span></h2>
 <p>Inaccurate measurements due to malfunctioning instruments or poor procedures or by-product of sampling plan</p>
 <p><br></p>
-<div class="r-fit-text">
-<p>E.g., The intervewier effect - In Aspen, CO, human black bear conflicts tend to be under-reported - In New Jersey, they tend to be over-reported - Depends on social constructs and attitudes towards wildlife</p>
+<div class="fragment">
+<p>E.g.,</p>
+<ul>
+<li>In Aspen, CO human-bear conflicts tend to be under reported</li>
+<li>In New Jersey they tend to be over reported</li>
+</ul>
+
+
 </div>
-
-
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
