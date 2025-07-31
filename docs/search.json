@@ -10062,14 +10062,35 @@
     "objectID": "FW552/Bigdata.SRS.html#big-data-paradox",
     "href": "FW552/Bigdata.SRS.html#big-data-paradox",
     "title": "Big Data Paradox",
-    "section": "Big Data Paradox",
-    "text": "Big Data Paradox\n\nMeng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\nVideo: Statistical paradises and pardoxes in Big Data"
+    "section": "",
+    "text": "Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\nVideo: Statistical paradises and pardoxes in Big Data"
   },
   {
     "objectID": "FW552/Bigdata.SRS.html#big-data-paradox-1",
     "href": "FW552/Bigdata.SRS.html#big-data-paradox-1",
     "title": "Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\nThree ways to reduces ‘errors’\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho \\times \\sigma \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\text{errors} &= \\begin{array} \\text{data} \\\\ \\text{quality} \\end{array} \\times \\begin{array} \\text{problem} \\\\ \\text{difficulty} \\end{array} \\times \\begin{array} \\text{data} \\\\ \\text{quantitiy} \\end{array}\n\\end{split}\n\\]"
+    "text": "Big Data Paradox\nThree ways to reduces ‘errors’\n\\[\n\\begin{split}\n\\text{errors} &= \\begin{array} \\normalfont{\\text{data}} \\\\ \\text{quality} \\end{array} \\times \\begin{array} \\normalfont{\\text{problem}} \\\\ \\text{difficulty} \\end{array} \\times \\begin{array} \\normalfont{\\text{data}} \\\\ \\text{quantitiy} \\end{array}\n\\end{split}\n\\]\n. . .\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho_{R,G} \\times \\sigma_{G} \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\end{split}\n\\]\n. . .\n\\(\\rho_{R,G}\\) is the data defect correlation between the true population values (G) and what is recorded (R); measures both the sign and degree of selection bias caused by the R-mechanism (such as non-response from voters from party X)"
+  },
+  {
+    "objectID": "FW552/Bigdata.SRS.html",
+    "href": "FW552/Bigdata.SRS.html",
+    "title": "Big Data Paradox",
+    "section": "",
+    "text": "Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\nVideo: Statistical paradises and pardoxes in Big Data"
+  },
+  {
+    "objectID": "FW552/Bigdata.SRS.html#big-data-paradox-2",
+    "href": "FW552/Bigdata.SRS.html#big-data-paradox-2",
+    "title": "Big Data Paradox",
+    "section": "Big Data Paradox",
+    "text": "Big Data Paradox\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho_{R,G} \\times \\sigma_{G} \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\end{split}\n\\]\nBig data aims to reduce errors by data quantity. \\"
+  },
+  {
+    "objectID": "FW552/Bigdata.SRS.html#big-data-paradox-3",
+    "href": "FW552/Bigdata.SRS.html#big-data-paradox-3",
+    "title": "Big Data Paradox",
+    "section": "Big Data Paradox",
+    "text": "Big Data Paradox\nMeng (2018) wanted to know the sample size (n) needed to achieve a certain level of error with different levels of data quality (\\(\\rho = 0\\) (SRS) and \\(\\rho = 0.005\\) (Big Data))\n\nThe example was voter survey data for the 2016 U.S. presidential election.\nthe correlation between whether a person responds and what their response is\n\nMeng (2018) estimate \\(\\pho = -0.005\\) sample membership and respondents’ intention to vote for Trump"
   }
 ]
