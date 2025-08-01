@@ -10092,5 +10092,54 @@
     "title": "Big Data Paradox",
     "section": "Big Data Paradox",
     "text": "Big Data Paradox\nMeng (2018) wanted to know the sample size (n) needed to achieve a certain level of error with different levels of data quality (\\(\\rho = 0\\) (SRS) and \\(\\rho = 0.005\\) (Big Data))\n\nThe example was voter survey data for the 2016 U.S. presidential election.\nthe correlation between whether a person responds and what their response is\n\nMeng (2018) estimate \\(\\pho = -0.005\\) sample membership and respondents’ intention to vote for Trump"
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html",
+    "href": "wolverine/Wolverine2022.Inference.html",
+    "title": "Wolverine 2022 Inference",
+    "section": "",
+    "text": "To investigate spatial factors affecting wolverine occupancy, we will use non-spatial Bayesian single-season occupancy models (via the R package UBMS and Unmarked). These models are more straightforward to interpret as there is no trading off between the spatial covariates of interest and a generalized spatial neighborhood process (used in the spatial occupancy model); the spatial occupancy models is intended for prediction, rather than inference.\nTo consider the spatial variables that influence wolverines occurence, we should only consider areas that have wolverines (Montana, Washington, Wyoming, Idaho). The states that do not have wolverines (or detected wolverines; Colorado, Utah, Oregon) do not help us understand the spatial factors because there are no wolverines available to select a certain site and not another site. Therefore, this analysis is limited to the 4-state sampling frame."
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#inference",
+    "href": "wolverine/Wolverine2022.Inference.html#inference",
+    "title": "Wolverine 2022 Inference",
+    "section": "",
+    "text": "To investigate spatial factors affecting wolverine occupancy, we will use non-spatial Bayesian single-season occupancy models (via the R package UBMS and Unmarked). These models are more straightforward to interpret as there is no trading off between the spatial covariates of interest and a generalized spatial neighborhood process (used in the spatial occupancy model); the spatial occupancy models is intended for prediction, rather than inference.\nTo consider the spatial variables that influence wolverines occurence, we should only consider areas that have wolverines (Montana, Washington, Wyoming, Idaho). The states that do not have wolverines (or detected wolverines; Colorado, Utah, Oregon) do not help us understand the spatial factors because there are no wolverines available to select a certain site and not another site. Therefore, this analysis is limited to the 4-state sampling frame."
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#covariates",
+    "href": "wolverine/Wolverine2022.Inference.html#covariates",
+    "title": "Wolverine 2022 Inference",
+    "section": "Covariates",
+    "text": "Covariates\nThese variables were derived by Jake Ivan and confirmed to be accurate.\n\npropBurned2016_2021: The mean proportion a cell was burned between 2016 and 2021. Increasing values are hypothesized to decrease occupancy; recent fires potentially decrease food/cover.\npropBurned2001_2015: The mean proportion a cell was burned between 2001 and 2015. Increasing values are hypothesized to increase occupancy; old fires potentially increase food/cover.\npropBurned2001_2021: The mean proportion a cell was burned between 2001 and 2021. Mixes recent and old fires. Probably do not use.\nmeanHumanMod_2021: The mean measure of human modification from Dave Theolbald.\nmeanNDVI_2022: The mean NDVI per cell from 2010-2020 for the same set of months each year.\npropCopelandInman: Predicted potential habitat from CoplelandInman model. Increasing values are hypothesized to increase occupancy. Used to define the sampling frame.\nClusterCount: This was derived from the ArcGIS Pro Spatially Constrained Multivariate Clustering Tool. According to ESRI this tool “finds spatially contiguous clusters of features based on a set of feature attribute values and optional cluster size limits.” The feature attribute selected was the variable propCopelandInman and the max cluster size was 50 across all 7 states. Increasing values are hypothesized to increase occupancy as connectivity of habitat makes it easier for wolverine to move around and find necessary resources.\nSDMayDepth2022: Standard deviation of snow depth in May. Decreasing values are hypothesized to increase occupancy (more consistency at low values).\nMeanMayDepth2022: Mean snow depth in May. Increasing values are hypothesized to increase occupancy, up to some point.\nSDMaySWE2022: Standard deviation of snow water equivalent in May. Decreasing values are hypothesized to increase occupancy (more consistency at low values).\nMeanMaySWE2022: Mean snow water equivalent in May. Increasing values are hypothesized to increase occupancy, up to some point.\n\nSpatial Plots\n\nCovariate Correlations\n\nNoted High Pairwise Correlations\nPreferred covariates in bold:\n\npropBurned2001_2021 and propBurned2016_2021\npropCopelandInman and meanHumanMod_2021 ; medium correlation.\npropCopelandInman and ClusterCount and snow measures\nAll snow measures are correlated. Use MeanMayDepth2022."
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#models",
+    "href": "wolverine/Wolverine2022.Inference.html#models",
+    "title": "Wolverine 2022 Inference",
+    "section": "Models",
+    "text": "Models\nWe considered three models. In each, the variables hypothesized to effect occupancy varied (see below; general summary of the model and model syntax) while detection probability was always hypothesized to be effected by whether a site had bait or lure.\nWe will compare models using the expected log pointwise predictive density (elpd; lower is better; Vehtari et al. 2016).\n\n\nModel 1: Human Modification*Habitat Connectivity\n\nmeanHumanMod_2021*ClusterCount\n\n\n\nModel 2: Environmental model (NDVI with quadratic, burn, and Snow with quadratic)\n\nmeanNDVI_2022 + I(meanNDVI_2022^2) + propBurned2016_2021 + propBurned2001_2015 + meanMayDepth_2022 + I(meanMayDepth_2022^2)\n\n\n\nModel 3: Simple Environmental and Human Modification with Connectivity\n\nmeanHumanMod_2021 + ClusterCount + meanNDVI_2022 + propBurned2016_2021 + propBurned2001_2015 + meanMayDepth_2022"
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#results",
+    "href": "wolverine/Wolverine2022.Inference.html#results",
+    "title": "Wolverine 2022 Inference",
+    "section": "Results",
+    "text": "Results\nModel Comparison\nModel 3 was most supported, as measured by expected log-poinwise predicted density (elpd). However, there isn’t that much difference among models, especically when considering the variation (se_diff).\n\n\n\n\n\nelpd\nnparam\nelpd_diff\nse_diff\n\n\n\nModel3\n-210.723\n14.384\n0.000\n0.000\n\n\nModel1\n-212.666\n11.702\n-1.943\n3.316\n\n\nMode2\n-218.209\n15.535\n-7.486\n3.836\n\n\n\n\n\nMCMC Convergence\n\n\n\n\n\n\n\n\nAll parameter from the most supported model have convereged.\nGoodness of fit\n\n\n\n\n\n\n\n\nNo departure of model fit using this test statistic.\nModel Summary\n\n\n\nCall:\nstan_occu(formula = ~SiteType2022 ~ meanHumanMod_2021 + ClusterCount + \n    meanNDVI_2022 + propBurned2016_2021 + propBurned2001_2015 + \n    meanMayDepth_2022, data = umf.2022, chains = 3, iter = 2000, \n    cores = 3, seed = 123)\n\nOccupancy (logit-scale):\n                    Estimate    SD   2.5%  97.5% n_eff Rhat\n(Intercept)           -0.442 0.401 -1.174  0.397  1864    1\nmeanHumanMod_2021      0.230 0.287 -0.316  0.807  2496    1\nClusterCount           0.988 0.327  0.404  1.694  2426    1\nmeanNDVI_2022         -0.857 0.432 -1.787 -0.120  2193    1\npropBurned2016_2021    0.283 0.384 -0.353  1.129  2018    1\npropBurned2001_2015    0.618 0.307  0.108  1.336  1580    1\nmeanMayDepth_2022      0.268 0.316 -0.305  0.939  2150    1\n\nDetection (logit-scale):\n                 Estimate    SD   2.5% 97.5% n_eff Rhat\n(Intercept)         0.632 0.206  0.233  1.05  2747    1\nSiteType2022Lure   -2.256 0.400 -3.018 -1.44  1737    1\n\nLOOIC: 421.446\nRuntime: 4.262 sec\n\n\nProbability of Support\n\n\n\n\n\nProbability&gt;0\n\n\n\nOcc.Intercept\n0.16\n\n\nOcc.meanHumanMod_2012\n0.77\n\n\nOcc.ClusterCount\n1.00\n\n\nOcc.meanNDVI2022\n0.02\n\n\nOcc.PropBurned2016-2021\n0.78\n\n\nOcc.PropBurned2001-2015\n0.99\n\n\nOcc_MeanMayDepth\n0.79\n\n\nDet.Intercept\n1.00\n\n\nDet.SiteType\n0.00\n\n\n\n\n\n\nA probability near 1 indicates a strong support for a positive effect.\nA probability near 0 indicates a strong support for a negative effect.\nProbabilities between 0.1 and 0.9 indicate mild or no statistical support.\nMarginal Effect Plots\n\n\n\n\n\n\n\n\nNote that the x-axes vary, based on the standardization of the variable."
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#summary",
+    "href": "wolverine/Wolverine2022.Inference.html#summary",
+    "title": "Wolverine 2022 Inference",
+    "section": "Summary",
+    "text": "Summary\n\nThere is clear statistical support that increasing connectivity (ClusterCount) leads to increase wolverine occupancy.\nThere is clear statistical support that increasing meanNDVI_2022 leads to decreasing wolverine occupancy.\nThere is clear statistical support that increasing old fires (PropBurned2001-2015) leads to increasing wolverine occupancy.\nThere is clear statistical support that lure decreases the probability of detection at an occupied site relative to bait sites."
+  },
+  {
+    "objectID": "wolverine/Wolverine2022.Inference.html#references",
+    "href": "wolverine/Wolverine2022.Inference.html#references",
+    "title": "Wolverine 2022 Inference",
+    "section": "References",
+    "text": "References\nVehtari, A., Gelman, A., and Gabry, J. (2017). Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC. Statistics and Computing. 27(5), 1413–1432. doi:10.1007/s11222-016-9696-4"
   }
 ]
