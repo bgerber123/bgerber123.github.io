@@ -1,7 +1,7 @@
 ---
 title: "Wolverine 2022 Inference"
 author: "Brian D. Gerber and Jacob S. Ivan"
-date: "2025-07-28"
+date: "2025-8-1"
 output: 
     html_document:
       toc: true
@@ -27,7 +27,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, warning=FALSE, results='hide',message=FALSE, echo=FALSE}
+```{r load.packages, warning=FALSE, results='hide',message=FALSE, echo=FALSE}
 library(ubms)
 library(unmarked)
 ```
@@ -112,7 +112,7 @@ We will compare models using the expected log pointwise predictive density (elpd
 
 Model 3 was most supported, as measured by expected log-poinwise predicted density (elpd). However, there isn't that much difference among models, especically when considering the variation (se_diff).
 
-```{r,echo=FALSE}
+```{r, load.objects,echo=FALSE}
 # Models to consider
   load("../outputs/fit.m2")
   load("../outputs/fit.m3")
