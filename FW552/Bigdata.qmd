@@ -1,0 +1,213 @@
+---
+title: <span style="color:white">The Big Data Paradox</span>
+title-slide-attributes:
+  data-background-image: /img/stars.jpg
+  background-opacity: "0.45"
+format: revealjs
+  
+---
+
+## []{style="color:#078BCD;"}
+
+![](../img/boyd.png)
+
+<br>
+<br>
+
+*"era of big data"* - what does this mean for our field?
+
+## [Boyd et al. 2023]{style="color:#078BCD;"}
+
+
+![](../img/boydBox1.png)
+
+::: {.r-fit-text}
+
+"when $\rho(R,Y) >0$ larger values of Y are more likely to be in the sample than in the population and vice versa. Where $\rho(R,Y) =0$, this term cancels the others and there is no [systematic] error".
+
+:::
+
+## [Errors]{style="color:#078BCD;"}
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+- Sampling Error is normal; big data or small data
+
+. . .
+
+- The issue is when there is correlation between obtaining an observation and the value of the observation (*sample selection bias*)
+
+. . .
+
+- Survey data: correlation between *whether* a person responds and *what* their response is
+
+. . .
+
+- Species distribution: correlation between *where you sample* and the probability the species occurs there
+
+. . .
+
+- Another?
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+[Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.](https://projecteuclid.org/journalArticle/Download?urlId=10.1214%2F18-AOAS1161SF)
+
+<br>
+
+[Blog by Civil Statistician](https://civilstat.com/2018/10/mengs-big-data-paradox-and-an-extreme-example/)
+
+
+<br>
+
+[Video: Statistical paradises and pardoxes in Big Data](https://www.youtube.com/watch?v=8YLdIDOMEZs)
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+Three ways to reduce 'errors'
+
+$$
+\begin{split}
+\text{errors} &= \begin{array} \normalfont{\text{data}} \\ \text{quality} \end{array} \times \begin{array} \normalfont{\text{problem}} \\ \text{difficulty} \end{array} \times \begin{array} \normalfont{\text{data}} \\ \text{quantitiy} \end{array}
+\end{split}
+$$
+
+. . .
+
+$$
+\begin{split}
+\hat{\mu} - \mu &= \rho_{R,G} \times \sigma_{G} \times \sqrt(\frac{N - n}{n})\\
+\end{split}
+$$
+
+. . .
+
+$\rho_{R,G}$ is the `data defect correlation` between the true population values (G) and what is recorded (R); measures both the
+sign and degree of selection bias caused by the R-mechanism (such as non-response from voters from party X).
+
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+$$
+\begin{split}
+\hat{\mu} - \mu &= \rho_{R,G} \times \sigma_{G} \times \sqrt(\frac{N - n}{n})\\
+\end{split}
+$$
+
+Often assumed that `Big data` reduces errors by the magnitude of the data quantity
+
+. . .
+
+<br>
+
+BUT, the nature of big data is such that $\rho_{R,G} \neq 0$; this equals zero under simple random sampling (SRS)
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+Meng (2018) wanted to know the sample size (n) needed to achieve a certain level of error (mean squared error) with different levels of data quality:  
+
+- $\rho_{R,G} = 0$ (SRS) and 
+- $\rho_{R,G} = 0.005$ (Big Data))
+
+. . .
+
+- The example was voter survey data for the 2016 U.S. presidential election.
+
+- the correlation between *whether* a person responds and *what* their response was
+
+## [Back to Boyd et al. 2023]{style="color:#078BCD;"}
+
+
+![](../img/MengEffectiveSampleSize.png)
+
+. . .
+
+ - When $\rho_{R,G}$ deviates even slightly from 0, the relative effective sample size ($n_{eff}/n$) decreases with the true population size, N. 
+
+. . . 
+
+**Implication:** Each data point added means less than the previous one. 
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+Look at big data for what it is
+
+- Meng's voter survey example 
+  - n = 2,300,000 
+  - $N_{eff} = 400$ (assuming 100% response rate)
+
+- all depends on whether $\rho(R,Y) \neq 0$
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+**Mean Squared Error**
+
+$$
+\text{MSE}(\hat{\mu}) = \frac{1}{n}\Sigma_{i=1}^{n}\left(\hat{\mu}_{i}-\mu\right)
+$$
+
+. . .
+
+$$
+\text{MSE}(\hat{\mu}) = E[(\hat{\mu}-\mu)]
+$$
+
+. . .
+
+
+$$
+\text{MSE}(\hat{\mu}) = \text{Var}(\hat{\mu})+(\text{Bias}(\hat{\mu},\mu))^{2}
+$$
+
+[Proof](https://en.wikipedia.org/wiki/Mean_squared_error)
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+![](../img/boyd.fig1.png)
+
+- 'large biased' is $\rho_{R,G} = -0.058$, $n = 1000$
+
+- vertical line is true proportional occupancy 
+
+- MSE is the same
+
+. . .
+
+**BUT 95% Confidence Intervals include the truth 0% of the time**
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+![](../img/boyd.fig1.png)
+
+**Take home**: Large biased data --> highly biased and highly precise estimates
+
+## [Data Analyst]{style="color:#078BCD;"}
+
+Do 'data analysts' think about *sample selection bias*?
+
+![](../img/data.analyst.png)
+
+
+## [Big Data Paradox]{style="color:#078BCD;"}
+
+**Is there really a choice?**
+
+1. Big Data with sample selection bias
+
+2. Small sample from Simple random sample (no selection bias)
+
+
