@@ -1,7 +1,7 @@
 ---
 title: "Wolverine 2022 Modeling Update"
 author: "Brian D. Gerber and Jacob S. Ivan"
-date: "2025-07-24"
+date: "2025-08-1"
 output:     
   html_document:
     toc: true
@@ -186,9 +186,9 @@ Here are the posterior distributions of the number of occupied sites by state (l
 
 ```{r echo=FALSE}
 knitr::kable(data.frame(State=c("Utah","Colorado","Wyoming","Idaho","Oregon", "Montana","Washington"),
-          "2.5%" =c(0,0,44,73,0,42,10),
-          "50%" =c(0,0,58,89,0,67,26),
-          "97.5%" =c(1,1,75,112,1,102,53)),format = "html",table.attr = "style='width:50%;'",align = "c")
+          "2.5%" =c(0,0,44,74,0,42,10),
+          "50%" =c(0,0,58,92,0,66,27),
+          "97.5%" =c(1,1,76,117,1,102,54)),format = "html",table.attr = "style='width:50%;'",align = "c")
 ```
 
 ### Probability of Occupancy
@@ -196,8 +196,8 @@ knitr::kable(data.frame(State=c("Utah","Colorado","Wyoming","Idaho","Oregon", "M
 ```{r echo=FALSE}
 knitr::kable(data.frame(State=c("Utah","Colorado","Wyoming","Idaho","Oregon", "Montana","Washington"),
           "2.5%" =c(0.00,0.00,0.27,0.37,0.00,0.22,0.11),
-          "50%" =c(0.00,0.00,0.35,0.45,0.00,0.36,0.28),
-          "97.5%" =c(0.01,0.01,0.46,0.56,0.09,0.54,0.57)),format = "html",table.attr = "style='width:50%;'",align = "c")
+          "50%" =c(0.00,0.00,0.35,0.46,0.00,0.35,0.29),
+          "97.5%" =c(0.01,0.01,0.46,0.59,0.01,0.54,0.58)),format = "html",table.attr = "style='width:50%;'",align = "c")
 ```
 
 
