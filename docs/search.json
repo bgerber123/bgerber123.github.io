@@ -8621,14 +8621,14 @@
     "href": "FW552/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "In Class Discussion Questions of Boyd et al. 2023\n\nLecture: Big Data\n\n\n\n\n\nRead Thompson Chapter 2 \nCanvas Quiz 1\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nRead Thompson Chapter 2 \nYou can download code from this chapter here\nCanvas Quiz 1\nCanvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week3.html#week-3",
     "href": "FW552/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "In Class Discussion Questions of Boyd et al. 2023\n\nLecture: Big Data\n\n\n\n\n\nRead Thompson Chapter 2 \nCanvas Quiz 1\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nRead Thompson Chapter 2 \nYou can download code from this chapter here\nCanvas Quiz 1\nCanvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week16.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n3-Sep\nPaper Discussion; Big Data Paradox\n\nThompson Ch. 2\n\n\n \nWe\n8-Sep\nSimple Random Sampling\n\nThompson Chapter 3\n\n\n4\nMo\n10-Sep\nConfidence Intervals\n\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n\n\n\n \nWe\n8-Oct\n\n\n\n\n\n9\nMo\n13-Oct\n\n\n\n\n\n \nWe\n15-Oct\n\n\n\n\n\n10\nMo\n20-Oct\n\n\n\n\n\n \nWe\n22-Oct\n\n\n\n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n3-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment 1\nThompson Ch. 2\n\n\n \nWe\n8-Sep\nSimple Random Sampling\n\nThompson Chapter 3\n\n\n4\nMo\n10-Sep\nConfidence Intervals\nQuiz 2; Assignment 2\n\n\n\n \nWe\n15-Sep\n\n\n\n\n\n5\nMo\n17-Sep\n\n\n\n\n\n \nWe\n22-Sep\n\n\n\n\n\n6\nMo\n24-Sep\n\n\n\n\n\n \nWe\n27-Sep\n\n\n\n\n\n7\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n8\nMo\n6-Oct\n\n\n\n\n\n \nWe\n8-Oct\n\n\n\n\n\n9\nMo\n13-Oct\n\n\n\n\n\n \nWe\n15-Oct\n\n\n\n\n\n10\nMo\n20-Oct\n\n\n\n\n\n \nWe\n22-Oct\n\n\n\n\n\n11\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n12\nMo\n3-Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n13\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n14\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n15\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n16\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n17\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9048,28 +9048,28 @@
     "href": "FW552/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023 \n\n\n\n\n\nRead Elliot and Valiant 2017"
   },
   {
     "objectID": "FW552/week2.html#week-2",
     "href": "FW552/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nDiscussion Post on Canvas\nRead Boyd et al. 2023 \n\n\n\n\n\nRead Elliot and Valiant 2017"
   },
   {
     "objectID": "FW552/week4.html",
     "href": "FW552/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nGetting familar with Confidence Intervals\n\n\n\n\n\n\n\n\n\n\n\nLecture:"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nRead Thompson Chapter 4 \nCanvas Quiz 2\nCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture:"
   },
   {
     "objectID": "FW552/week4.html#week-4",
     "href": "FW552/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nGetting familar with Confidence Intervals\n\n\n\n\n\n\n\n\n\n\n\nLecture:"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nRead Thompson Chapter 4 \nCanvas Quiz 2\nCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture:"
   },
   {
     "objectID": "FW552/week6.html",
@@ -10330,5 +10330,40 @@
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
     "text": "Big Data Paradox\nIs there really a choice?\n\nBig Data with sample selection bias\nSmall sample from Simple random sample (no selection bias)"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter2/Chapter2.Results.html",
+    "href": "classfiles552/ThompsonChapter2/Chapter2.Results.html",
+    "title": "Chapter 2 Problems",
+    "section": "",
+    "text": "In Figure 2.4, the locations of objects (e.g., trees, mines, dwellings) in a study region are given by the centers of “+” symbols. The goal is to estimate the number of objects in the study region.\n\n(a) A random sample without replacement of n = 10 units has been selected from the N = 100 units in the population. Units selected are indicated by shading in Figure 2.4. List the sample data. Use the sample to estimate the number of objects in the figure. Estimate the variance of your estimator.\n\nIf the point crossed the thick black line into the cell, I considered it a sample\n\ny &lt;- c(0, 1, 1, 1, 1, 3, 1, 0, 4, 0)\n\n\n\n# Total number of cells\n  N &lt;- 100\n\n# The estimate of the number of objects in the figure.\n  N*mean(y)\n\n[1] 120\n\n# Sample Size\n  n &lt;- 10\n\n# Variance of the estimator\n  ((N-n)/N)*(var(y)/n)\n\n[1] 0.156\n\n\n\n(b) Repeat part (a), selecting another sample of size 10 by simple random sampling (without replacement) and making new estimates. Indicate the positions of the units of the samples on the sketch.\n\n\n# locations of new sample\n  newsample &lt;- sample(1:100,10, replace = FALSE)\n\n# new sample\n  y &lt;- c(1, 0, 1, 1, 3, 1, 1, 0, 2, 2)\n\n# The estimate of the number of objects in the figure.\n  N*mean(y)\n\n[1] 120\n\n# Variance of the estimator\n ((N-n)/N)*(var(y)/n)\n\n[1] 0.076\n\n\n\nGive the inclusion probability for the unit in the upper left-hand corner. How many possiblesamples are there? What is the probability of selecting the sample you obtained in part (a)?\n\n# Inclusion probability for a given cell\n1/100\n\n[1] 0.01\n\n# the probability of selecting the sample obtained in a\n1/choose(100,10)\n\n[1] 5.776904e-14"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter2/Chapter2.Results.html#chapter-2-problem-1",
+    "href": "classfiles552/ThompsonChapter2/Chapter2.Results.html#chapter-2-problem-1",
+    "title": "Chapter 2 Problems",
+    "section": "",
+    "text": "In Figure 2.4, the locations of objects (e.g., trees, mines, dwellings) in a study region are given by the centers of “+” symbols. The goal is to estimate the number of objects in the study region.\n\n(a) A random sample without replacement of n = 10 units has been selected from the N = 100 units in the population. Units selected are indicated by shading in Figure 2.4. List the sample data. Use the sample to estimate the number of objects in the figure. Estimate the variance of your estimator.\n\nIf the point crossed the thick black line into the cell, I considered it a sample\n\ny &lt;- c(0, 1, 1, 1, 1, 3, 1, 0, 4, 0)\n\n\n\n# Total number of cells\n  N &lt;- 100\n\n# The estimate of the number of objects in the figure.\n  N*mean(y)\n\n[1] 120\n\n# Sample Size\n  n &lt;- 10\n\n# Variance of the estimator\n  ((N-n)/N)*(var(y)/n)\n\n[1] 0.156\n\n\n\n(b) Repeat part (a), selecting another sample of size 10 by simple random sampling (without replacement) and making new estimates. Indicate the positions of the units of the samples on the sketch.\n\n\n# locations of new sample\n  newsample &lt;- sample(1:100,10, replace = FALSE)\n\n# new sample\n  y &lt;- c(1, 0, 1, 1, 3, 1, 1, 0, 2, 2)\n\n# The estimate of the number of objects in the figure.\n  N*mean(y)\n\n[1] 120\n\n# Variance of the estimator\n ((N-n)/N)*(var(y)/n)\n\n[1] 0.076\n\n\n\nGive the inclusion probability for the unit in the upper left-hand corner. How many possiblesamples are there? What is the probability of selecting the sample you obtained in part (a)?\n\n# Inclusion probability for a given cell\n1/100\n\n[1] 0.01\n\n# the probability of selecting the sample obtained in a\n1/choose(100,10)\n\n[1] 5.776904e-14"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter2/Chapter2.Results.html#chapter-2-problem-3",
+    "href": "classfiles552/ThompsonChapter2/Chapter2.Results.html#chapter-2-problem-3",
+    "title": "Chapter 2 Problems",
+    "section": "Chapter 2, Problem 3",
+    "text": "Chapter 2, Problem 3\nConsider a small population of N = 5 units, labeled 1, 2, 3, 4, 5, with respective y-values 3, 1, 0, 1, 5. Consider a simple random sampling design with a sample size n = 3. For your convenience, several parts of the following may be combined into a single table.\nPart a\nGive the values of the population parameters \\(\\mu\\), \\(\\tau\\) , and \\(\\sigma^2\\). List every possible sample of size n = 3. For each sample, what is the probability that it is the one selected?\nPopulation parameters\n\ny = c(3, 1, 0, 1, 5)\n\nN = length(y)\n\nmu = mean(y)\nmu\n\n[1] 2\n\ntau = N*mu\ntau\n\n[1] 10\n\nsigma2 = var(y)\nsigma2\n\n[1] 4\n\n\nAll possible samples of n = 3\n\n# Combinations\n  all.possible.3=utils::combn(y, 3)\n all.possible.3\n\n     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]\n[1,]    3    3    3    3    3    3    1    1    1     0\n[2,]    1    1    1    0    0    1    0    0    1     1\n[3,]    0    1    5    1    5    5    1    5    5     5\n\n# probability of a given sample\n  1/choose(N,3)\n\n[1] 0.1\n\n\nPart b\nFor each sample, compute the sample mean y and the sample median m. Demonstrate that the sample mean is unbiased for the population mean and determine whether the sample median is unbiased for the population median.\n\nsample.means = apply(all.possible.3,2,mean)\nsample.medians = apply(all.possible.3,2,median)\n\n# Unbiasedness of sample mean - Yes\n  mean(sample.means)-mu\n\n[1] 0\n\n# Unbiasedness of sample median - No\n  mean(sample.medians)-mu\n\n[1] -0.4"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter3/Chapter3.Results.html",
+    "href": "classfiles552/ThompsonChapter3/Chapter3.Results.html",
+    "title": "Chapter 3 Problem",
+    "section": "",
+    "text": "From the data of parts (a) and (b) of Exercise 1 of Chapter 2, construct approximate 95% confidence intervals for the population total. Also construct approximate 95% confidence intervals for the population mean per unit. On what assumptions or results is the confidence interval procedure based, and how well does the method apply here?\n\n\n# Create 95% CIs for the population total\n\n\n# Create 95% CIs for the population mean"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter3/Chapter3.Results.html#chapter-3-problem-1",
+    "href": "classfiles552/ThompsonChapter3/Chapter3.Results.html#chapter-3-problem-1",
+    "title": "Chapter 3 Problem",
+    "section": "",
+    "text": "From the data of parts (a) and (b) of Exercise 1 of Chapter 2, construct approximate 95% confidence intervals for the population total. Also construct approximate 95% confidence intervals for the population mean per unit. On what assumptions or results is the confidence interval procedure based, and how well does the method apply here?\n\n\n# Create 95% CIs for the population total\n\n\n# Create 95% CIs for the population mean"
   }
 ]

@@ -1,0 +1,15 @@
+{
+  "hash": "0fd8f16349200bf3b41213080f85d120",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Chapter 3 Problem\"\nauthor: \"Brian Gerber\"\ndate: \"2025-08-01\"\noutput: html_document\n---\n\n\n\n\n\n\n\n## Chapter 3, Problem 1\n\n<style type=\"text/css\">\n  body{\n  font-size: 14pt;\n}\npre.r { /* Targets R code blocks */\n      font-size: 12pt;\n    }\ncode { /* Targets inline code */\n      font-size: 12pt;\n    }\n\n</style>\n\n\nFrom the data of parts (a) and (b) of Exercise 1 of Chapter 2, construct approximate 95% confidence intervals for the population total. Also construct\napproximate 95% confidence intervals for the population mean per unit. On what assumptions or results is the confidence interval procedure based, and\nhow well does the method apply here?\n\n### Part a\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Create 95% CIs for the population total\n\n\n# Create 95% CIs for the population mean\n```\n:::\n\n\n\n\n\n### Part b\n\n\n\n\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

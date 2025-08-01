@@ -8,14 +8,31 @@ title: ""
 
 #### **In Class**
 
+- Lecture: <a href="/FW552/Bigdata.qmd">Big Data</a>
+
 *In Class Discussion Questions of Boyd et al. 2023*
 
-- Lecture: <a href="/FW552/Bigdata.qmd">Big Data</a>
+- What is representativeness?
+
+- What are design weights?
+
+- What is a non-probability sample and why are they a concern?
+
+- Table 1: do the concerns here make sense?
+
+- Take-away's from Box1?
+
+- How does model-based inference help with sampling issues?
+
+- What do we do about non-probability samples?
+
 
 #### **Assigned | Due Next Class**
 
 - Read <a href="/readings552/Sampling - 2012 - Thompson.pdf">Thompson Chapter 2 </a> 
+- You can download code from this chapter [here](../classfiles552/ThompsonChapter2/ThompsonChapter2_ComputingNotes_Code.R)
 - [Canvas Quiz 1](https://colostate.instructure.com/courses/212614/quizzes/499475)
+- [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2803658): Book Problems, Chapter 2, problems 1 and 3 
 
 
 ### [Day 2]{style="color:red;"}
