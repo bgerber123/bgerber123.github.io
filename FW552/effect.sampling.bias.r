@@ -109,11 +109,14 @@ for(i in 1:n.sim){
     data=truth[sample.sites,]
     probs.save[i]=mean(data$occu)
     
-    options(warn=-1)
-    model=glm(occu~1,family=binomial,data=data,
-              weights=prob.sample.ratio)
-    options(warn=0)
-    probs.est[i]=predict(model,type="response")[1]
+    # options(warn=-1)
+    # model=glm(occu~1,family=binomial,data=data,
+    #           weights=prob.sample.ratio)
+    # options(warn=0)
+    # probs.est[i]=predict(model,type="response")[1]
+    
+    # esimtator
+    probs.est[i] = sum(data$occu/data$prob.sample) /sum((1/data$prob.sample))
   }
   
   #Visualize sampling distribution of proportion sites occupied
@@ -131,3 +134,12 @@ for(i in 1:n.sim){
   mean(probs.est)-prob.occ 
 
 ######################
+
+  #correction- Generalized unequal probabilitity estimator
+  sum(data$occu/data$prob.sample) /sum((1/data$prob.sample))
+  
+  
+  
+# Consider Missing at random vs not missing at random.   
+  
+  
