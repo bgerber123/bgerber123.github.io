@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title> FW 552   Applied Sampling for Wildlife/Fish Studies   (Fall 2025)  – Brian D. Gerber</title>
+<meta name="author" content="Your Name">
+<title>Homework # – Brian D. Gerber</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +18,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -38,8 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-47f01f893a8495e1e731575642ac68dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-47f01f893a8495e1e731575642ac68dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,16 +95,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Brian D. Gerber</span>
@@ -86,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -111,8 +136,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">FW552</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
 </i> 
 <span class="menu-text">Scholar</span></a>
@@ -133,346 +158,110 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Email</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-stuff" id="toc-course-stuff" class="nav-link active" data-scroll-target="#course-stuff">Course Stuff</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  </ul>
-</nav>
+<li><a href="#homework-assignment-name" id="toc-homework-assignment-name" class="nav-link active" data-scroll-target="#homework-assignment-name">Homework Assignment Name</a></li>
+  <li><a href="#including-plots" id="toc-including-plots" class="nav-link" data-scroll-target="#including-plots">Including Plots</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><center><br>
-FW 552 <br> Applied Sampling for Wildlife/Fish Studies <br> (Fall 2025)<br>
-</center></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Homework #</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Invalid Date</p>
+    </div>
+  </div>
   
     
   </div>
   
 
 
-</header>
-
-
-<section id="course-stuff" class="level2">
-<h2 class="anchored" data-anchor-id="course-stuff">Course Stuff</h2>
-<title>Schedule</title>
+</header><section id="homework-assignment-name" class="level2"><h2 class="anchored" data-anchor-id="homework-assignment-name">Homework Assignment Name</h2>
 <style type="text/css">
-
-code.r{
-  font-size: 30px;
+  body{
+  font-size: 12pt;
 }
+pre.r { /* Targets R code blocks */
+      font-size: 12pt;
+    }
+    code { /* Targets inline code */
+      font-size: 12pt;
+    }
+
 </style>
-
-<a href="../FW552/Syllabus.html">Syllabus</a><p></p>
-<p><strong>Book</strong>: We will be using quite a bit of <a href="Sampling - 2012 - Thompson.pdf">Thompson. 2012. Sampling. Third Edition.</a>.</p>
-<p><strong>Readings</strong>: Come prepared to discuss the assigned reading on the next class after the readings were assigned.</p>
-<ul>
-<li>What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.</span></li>
-</ul>
-<p><strong>Assignments</strong>: are assigned on the day they are listed under and are due …..</p>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>Day</th>
-<th>Date</th>
-<th>In Class Topic</th>
-<th>Assignments</th>
-<th>Readings</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="../FW552/week1.html">1</a></td>
-<td>Mo</td>
-<td>25-Aug</td>
-<td>Introduction</td>
-<td>Discussion Post; Install <a href="https://www.r-project.org/">R</a> and <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>.</td>
-<td>Hankin Ch. 2; Gerber et al.&nbsp;2012</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>27-Aug</td>
-<td>Paper Discussion / R and RMarkdown</td>
-<td>R Fundamentals</td>
-<td>Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW552/week2.html">2</a></td>
-<td>Mo</td>
-<td>1-Sep</td>
-<td><span style="color:red">No Class</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>3-Sep</td>
-<td>Sampling I</td>
-<td>Discussion Post</td>
-<td>Boyd et al.&nbsp;2023</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW552/week3.html">3</a></td>
-<td>Mo</td>
-<td>8-Sep</td>
-<td>Paper Discussion; Big Data Paradox</td>
-<td>Quiz 1; Assignment 1</td>
-<td>Thompson Ch. 2</td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>10-Sep</td>
-<td>Simple Random Sampling</td>
-<td></td>
-<td>Thompson Chapter 3</td>
-</tr>
-<tr class="odd">
-<td><a href="../FW552/week4.html">4</a></td>
-<td>Mo</td>
-<td>15-Sep</td>
-<td>Confidence Intervals</td>
-<td>Quiz 2; Assignment 2</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>17-Sep</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Mo</td>
-<td>22-Sep</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>24-Sep</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>Mo</td>
-<td>29-Sep</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>1-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Mo</td>
-<td>6-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>8-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>Mo</td>
-<td>13-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>15-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Mo</td>
-<td>20-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>22-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>Mo</td>
-<td>27-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>29-Oct</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Mo</td>
-<td>3-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>5-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>Mo</td>
-<td>10-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>12-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Mo</td>
-<td>17-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>19-Nov</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>14</td>
-<td>Mo</td>
-<td>24-Nov</td>
-<td><span style="color:red">No Class</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>26-Nov</td>
-<td><span style="color:red">No Class</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>15</td>
-<td>Mo</td>
-<td>1-Dec</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>3-Dec</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>16</td>
-<td>Mo</td>
-<td>8-Dec</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>&nbsp;</td>
-<td>We</td>
-<td>10-Dec</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. For assignments, I will ask you for the Rmd file and the knitted HTML, along with any other files that are external to the Rmd file and loaded; this allows me to execute your code if need be.</p>
+<p>You can embed an R code chunk like this:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create an object called 'values' that consists of the integers from 1 to 1000</span></span>
+<span>  <span class="va">values</span> <span class="op">=</span>  <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1000</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Set the seed for a random number generator and sample (size of 10) from the object 'values'</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">432432</span><span class="op">)</span></span>
+<span>  <span class="va">s1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">values</span>, size <span class="op">=</span> <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span>  <span class="va">s1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 129 910 238  57 715 650 140 337 690 684</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create an object called 'normal.values' that come from a Normal Distribution</span></span>
+<span><span class="co"># with a mean of 100 and standard deviation of 10 (sample size of 50)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">4324321</span><span class="op">)</span></span>
+<span>  <span class="va">normal.values</span> <span class="op">=</span>  <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">50</span>, mean <span class="op">=</span> <span class="fl">100</span>, sd <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span>  <span class="va">normal.values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  96.74474 107.54993  94.68642 101.51679  92.08989 104.24035 117.56222
+ [8] 107.30433 110.91343  72.29415 115.99155  97.20976  89.02006  91.46432
+[15]  90.12327  94.96677 109.00046  90.71059 105.13303 113.07277 114.20272
+[22] 101.52427 109.30394 105.69916  94.92778  88.65461  83.81766 101.11308
+[29]  99.15054  99.44897 102.25597  94.05942  99.92350  75.79662 105.68692
+[36]  95.77633 109.47008  86.30428  96.20405  99.40444  88.62136 103.38826
+[43] 101.62365 111.76193 100.92859  83.46600  93.65529 108.57361  88.85869
+[50] 116.98262</code></pre>
+</div>
+</div>
+</section><section id="including-plots" class="level2"><h2 class="anchored" data-anchor-id="including-plots">Including Plots</h2>
+<p>You can also embed plots, for example:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="Name_HW_template_files/figure-html/pressure-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note that the <code>echo = FALSE</code> argument was added to the code chunk so that the code text is not printed in the output file.</p>
+<p><br></p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -890,8 +679,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
 </div>   
@@ -903,8 +691,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
