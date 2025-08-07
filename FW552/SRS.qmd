@@ -1,0 +1,174 @@
+---
+title: <span style="color:purple">Simple Random Sampling</span>
+title-slide-attributes:
+  data-background-image: /img/srs.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+---
+
+## [Goal]{style="color:#078BCD;"}
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+```{r,echo=FALSE,warning=FALSE,results='hide'}
+library(tidyverse)
+library(kableExtra)
+```
+
+**Goal:** to know the mean number of boreal toad egg masses per pond in RMNP
+
+- different egg masses per pond is meaningful why?
+
+
+![](../img/borealtoad.png)
+
+## [SRS Conceptual Walkthrough]{style="color:#078BCD;"}
+
+- We have a known population of ponds, N = 6
+
+- We have enough to money for n = 2
+
+- Will use SRS
+
+```{r, echo=FALSE}
+ponds = data.frame(matrix(nrow=6,ncol=2))
+colnames(ponds)=c("Pond","egg.mass")
+
+ponds$Pond=LETTERS[1:6]
+ponds$egg.mass = c(2,6,8,10,10,12)
+
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+
+```
+
+![](../img/borealtoad.png)
+
+# [SRS]{style="color:#078BCD;"}
+
+Population Parameter: $\mu = 8$
+
+```{r,echo=FALSE}
+mu = mean(ponds$egg.mass)
+```
+
+. . .
+
+How many possible unique samples are there (w/o replacement)
+
+$$
+{N}\choose{n} 
+$$
+
+. . .
+
+$$
+\frac{N!}{n!(N-n)!}
+$$
+
+. . .
+
+```{}
+choose(6,2)
+```
+
+
+
+# [SRS]{style="color:#078BCD;"}
+
+How many possible unique samples are there?
+
+. . .
+
+Look at all possible combinations:
+
+```{r, echo=TRUE, results='hide'}
+utils::combn(LETTERS[1:6],2)
+```
+
+
+. . .
+
+What is the probability pond "A" will be sampled"? Pond "B"?
+
+# [SRS]{style="color:#078BCD;"}
+
+Consider each sample mean
+
+
+```{r, echo=FALSE}
+ponds.letters=t(utils::combn(LETTERS[1:6],2))
+ponds.numbers=utils::combn(1:6,2)
+
+ponds.all=data.frame(cbind(matrix(1:15,ncol=1),ponds.letters,matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE)))
+colnames(ponds.all)=c("Sample.Number","First Pond","Second Pond","First Value","Second Value")
+
+ponds.all %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+
+
+
+```
+
+# [SRS]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+#library(kableExtra)
+#library(tidyr)
+ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
+
+ponds.all$Absolute.Deviation = abs(ponds.all$Sample.Mean-8)
+
+#knitr::kable(ponds.all)
+
+
+ponds.all %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+
+```
+
+
+# [SRS]{style="color:#078BCD;"}
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r, echo=FALSE}
+ponds.simple = data.frame(Sample.Number = ponds.all$Sample.Number,
+                          Sample.Mean = ponds.all$Sample.Mean,
+                          Deviance.Truth = ponds.all$Sample.Mean-8
+                          )
+ponds.simple %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+
+```
+
+
+
+:::
+
+::: {.column width="50%"}
+
+CREATE NEW TABLE
+
+:::
+
+::::
+
+

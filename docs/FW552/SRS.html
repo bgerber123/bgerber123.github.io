@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>Brian D. Gerber – Sampling I</title>
+  <title>Brian D. Gerber – Simple Random Sampling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -188,442 +188,508 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" background-opacity="0.45" data-background-image="../img/background1.png" class="quarto-title-block center">
-  <h1 class="title"><span style="color:white">Sampling I</span></h1>
+<section id="title-slide" background-opacity="0.45" data-background-image="../img/srs.png" class="quarto-title-block center">
+  <h1 class="title"><span style="color:purple">Simple Random Sampling</span></h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="population-and-sample" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
+<section id="goal" class="slide level2">
+<h2><span style="color:#078BCD;">Goal</span></h2>
 <style type="text/css">
 
 code.r{
   font-size: 30px;
 }
 </style>
+<p><strong>Goal:</strong> to know the mean number of boreal toad egg masses per pond in RMNP</p>
+<ul>
+<li>different egg masses per pond is meaningful why?</li>
+</ul>
 
-<img data-src="../img/sample.png" class="r-stretch"><div class="fragment">
-<p>Define 1) census, 2) sample, and 3) sampling?</p>
-</div>
-</section>
-<section id="population-and-sample-1" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
-
-<img data-src="../img/sample.png" class="r-stretch"><p>To use a sample to describe a ‘population’ is called what?</p>
-</section>
-<section id="definitions" class="slide level2 scrollable">
-<h2><span style="color:#078BCD;">Definitions</span></h2>
+<img data-src="../img/borealtoad.png" class="r-stretch"></section>
+<section id="srs-conceptual-walkthrough" class="slide level2">
+<h2><span style="color:#078BCD;">SRS Conceptual Walkthrough</span></h2>
 <ul>
-<li><strong>Census?</strong>
-<ul>
-<li>Complete enumeration of the population (i.e., the whole)</li>
-</ul></li>
-<li><strong>What is a sample?</strong>
-<ul>
-<li>The act, process, or technique of selecting a representative part of a population for the purpose of determining parameters or characteristics of the whole population</li>
-</ul></li>
-<li><strong>What is sampling?</strong>
-<ul>
-<li>Selection of a part of a population to be used to estimate characteristics of the population</li>
-<li>To make inference about the population from a part, i.e., the sample.</li>
-</ul></li>
+<li><p>We have a known population of ponds, N = 6</p></li>
+<li><p>We have enough to money for n = 2</p></li>
+<li><p>Will use SRS</p></li>
 </ul>
-</section>
-<section id="sampling-types" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Types</span></h2>
-<ul>
-<li><span style="color:cornflowerblue">Convenient sampling</span> - when most convenient units are chosen</li>
-<li><span style="color:cornflowerblue">Judgment sampling</span> - obtained at the discretion of someone who is familiar with the characteristics of the population</li>
-<li><span style="color:cornflowerblue">Probability sampling</span> - based on a process that the probability a unit is selected is known</li>
-</ul>
-</section>
-<section id="central-paradox-of-sampling" class="slide level2">
-<h2><span style="color:#078BCD;">Central paradox of Sampling</span></h2>
-<ul>
-<li><p>Impossible to know from a sample whether it is representative</p></li>
-<li><p>We rely on the process, not the outcome.</p></li>
-</ul>
-</section>
-<section id="why-sample" class="slide level2">
-<h2><span style="color:#078BCD;">Why Sample?</span></h2>
-<ol type="1">
-<li>Large populations are physically prohibitive to census</li>
-<li>Fiscally prohibitive to census</li>
-<li>Timeliness</li>
-<li>Observing might be destructive. For example?</li>
-</ol>
-</section>
-<section id="common-sample-units" class="slide level2">
-<h2><span style="color:#078BCD;">Common Sample Units</span></h2>
-<div class="fragment">
-<ul>
-<li><span style="color:cornflowerblue">plots/quadrats</span> - small area to measure/count plants, seeds, insects, etc.</li>
-<li><span style="color:cornflowerblue">points</span> - measurements are taken from a set of points established throughout a population</li>
-<li><span style="color:cornflowerblue">transects</span> - line segments in which observations are taken from</li>
-<li><span style="color:cornflowerblue">individual organisms</span> - the organism is the sample unit or the organism defines the location of the sample unit</li>
-</ul>
-</div>
-</section>
-<section id="population-and-sample-2" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>Trees of sufficient size for nesting by spotted owls</li>
-<li>House characteristics that northern flickers most often damage</li>
-<li>Survival of rainbow trout in the presence of whirling disease</li>
-<li>Surveys, e.g., number of people that
-<ul>
-<li>bird watch / hunt / fish / think wolves should live in CO</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img/owl.trout.png" class="quarto-figure quarto-figure-center" width="250"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="population-and-sample-3" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><span style="color:red;">Often a spatial/temporal context to our target population</span></p>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img/owl.trout.png" class="quarto-figure quarto-figure-center" width="250"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="population-and-sample-4" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
-<p><b>Title:</b> Muskrat occurrence in Rhode Island shows little evidence of land use change driving declines</p>
-<!-- **Clear target population and sample** -->
-
-<img data-src="../img/muskratRI.png" class="r-stretch"></section>
-<section id="population-and-sample-5" class="slide level2">
-<h2><span style="color:#078BCD;">Population and Sample</span></h2>
-<p><b>Title:</b> Land cover attributes affect the distribution of rooting damage by wild pigs (Sus scrofa)</p>
-<div class="r-fit-text">
-<ul>
-<li>Surveys within 1) The Savannah River Site (green) 2) Newberry County (blue), 3) Hampton County (red)</li>
-<li>“We generated 9 random points to act as the center of respective 200-ha survey grids”.</li>
-<li>“Properties were primarily composed of mixed agricultural-forested cover”.</li>
-</ul>
-</div>
-
-<img data-src="../img/rooting.SC.png" class="r-stretch"></section>
-<section id="thinking-backwards" class="slide level2">
-<h2><span style="color:#078BCD;">Thinking Backwards</span></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>People often think backwards from what data they have to identify the Population.</p>
-<div class="r-fit-text">
-<p>E.g., Nesting shorebirds are censused each summer at a handful of beaches.</p>
-<p>Can we use these sites as samples to apply to all beaches in the area?</p>
-</div>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img/RI.beaches.png" class="quarto-figure quarto-figure-center" width="400"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="design-vs.-sampling" class="slide level2">
-<h2><span style="color:#078BCD;">Design vs.&nbsp;Sampling</span></h2>
-<div class="fragment">
-<ul>
-<li><strong>Experimental Design:</strong>
-<ul>
-<li>Deliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed</li>
-</ul></li>
-<li><strong>Sampling Design</strong>:
-<ul>
-<li>The process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="design--vs-model-based-infernce" class="slide level2">
-<h2><span style="color:#078BCD;">Design- vs Model-based Infernce</span></h2>
-<p>What are important differences according to Thompson and Hankin et al.?</p>
-<p>Benefits or costs of either?</p>
-<div class="fragment">
-<p><strong>Important Considerations</strong></p>
-<ul>
-<li>randomness</li>
-<li>fixed</li>
-<li>undefinable infinite superpoulation vs.&nbsp;real target population</li>
-</ul>
-</div>
-</section>
-<section id="design--vs-model-based-infernce-1" class="slide level2">
-<h2><span style="color:#078BCD;">Design- vs Model-based Infernce</span></h2>
-
-<img data-src="../img/designModel.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="design--vs-model-based-infernce-2" class="slide level2">
-<h2><span style="color:#078BCD;">Design- vs Model-based Infernce</span></h2>
-
-<img data-src="../img/forest.png" class="r-stretch"></section>
-<section id="sample-language" class="slide level2">
-<h2><span style="color:#078BCD;">Sample Language</span></h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>A sample (height in inches):</p>
-<p><span class="math inline">\(\textbf{y} = [69, 54, 72, 61, 58, 71]\)</span></p>
-<p><br></p>
-<p>A sample unit:</p>
-<p><span class="math inline">\(y_{2} =54\)</span></p>
-<p><br></p>
-<p>Sample size:</p>
-<p><span class="math inline">\(n = 6\)</span></p>
-</div><div class="column" style="width:60%;">
-<p><br> <br> <br> <br> <img data-src="../img/census.sample.unit.png" class="quarto-figure quarto-figure-center" width="2200"></p>
-</div></div>
-</section>
-<section id="more-language" class="slide level2">
-<h2><span style="color:#078BCD;">More Language</span></h2>
-<p><strong>What is a statistic?</strong></p>
-<div class="fragment">
-<ul>
-<li>An estimate of a population parameter from a sample</li>
-</ul>
-</div>
-<div class="fragment">
-<p><span class="math display">\[\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 57.7\]</span></p>
-<ul>
-<li><span class="math inline">\(n\)</span> is a sample parameter (size of sample)</li>
-<li><span class="math inline">\(\hat{\mu}\)</span> is an estimate of a population parameter (<span class="math inline">\(\mu\)</span>) from the estimator (mathematical rule for calculation)</li>
-<li>57.7 is a statistic (specific value)</li>
-</ul>
-</div>
-</section>
-<section id="more-language-1" class="slide level2">
-<h2><span style="color:#078BCD;">More Language</span></h2>
-<p><span class="math display">\[\mu =\left(\sum_{i=1}^{N}y_{i}\right)\times \frac{1}{N} = 54\]</span></p>
-<ul>
-<li><span class="math inline">\(\mu\)</span> is a population parameter (measure of central tendency)</li>
-<li><span class="math inline">\(N\)</span> is a population parameter (size of all possible sample units)</li>
-<li><span class="math inline">\(54\)</span> is the value of the population parameter</li>
-</ul>
-</section>
-<section id="sampling-error" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Error</span></h2>
-<ul>
-<li><strong>Sampling Error</strong>
-<ul>
-<li>The difference b/w a sample statistic (specific value) and the true value of a population paramter</li>
-<li>57.7 - 54 = 3.3 (inches) sampling error</li>
-<li>Due solely to incomplete enumeration of the population (chance)</li>
-<li>Protection against this is large sample size</li>
-</ul></li>
-</ul>
-</section>
-<section id="sampling-variation-and-error" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation and Error</span></h2>
-<p><strong>Target Population:</strong> Weight of all black bears in a region</p>
-
-<img data-src="../img/bear.png" class="quarto-figure quarto-figure-center r-stretch" width="600"><div class="fragment">
-<p>How would you describe a <em>sampling frame</em> relevant to this target population?</p>
-</div>
-</section>
-<section id="sampling-variation-and-error-1" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation and Error</span></h2>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="sampling-error-1" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Error</span></h2>
-<p>Vector of bear weights</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>  pop.weights[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 421.7759 185.2152 321.6069 221.8225 284.4739</code></pre>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Sample Size</span></span>
-<span id="cb3-2"><a></a>  n <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="co"># Sample and estimate mean one time</span></span>
-<span id="cb3-5"><a></a>  sample<span class="fl">.1</span> <span class="ot">=</span> <span class="fu">mean</span>(</span>
-<span id="cb3-6"><a></a>                  <span class="fu">sample</span>(pop.weights,</span>
-<span id="cb3-7"><a></a>                         n,</span>
-<span id="cb3-8"><a></a>                         <span class="at">replace =</span> <span class="cn">FALSE</span></span>
-<span id="cb3-9"><a></a>                         )</span>
-<span id="cb3-10"><a></a>                  )</span>
-<span id="cb3-11"><a></a></span>
-<span id="cb3-12"><a></a><span class="co"># Calculate Sampling Error</span></span>
-<span id="cb3-13"><a></a>  sample<span class="fl">.1</span> <span class="sc">-</span> pop.mu.weights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.822778</code></pre>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="r-stack">
-<p><strong>Is this a problem?</strong></p>
-</div>
-</div>
-</section>
-<section id="sampling-variation-vs-error" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation vs Error</span></h2>
-<p>Sampling variation is the process and sampling error is an outcome.</p>
-<p><br></p>
-<p>The differences between samples (sampling variation) lead to differences between sample statistics and population parameters (sampling error).</p>
-</section>
-<section id="sampling-variation" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation</span></h2>
-<p>Calculate many many sample means</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Create function to sample 50 units and take the mean</span></span>
-<span id="cb5-2"><a></a> sample.mean.fn <span class="ot">=</span> <span class="cf">function</span>(target,n){</span>
-<span id="cb5-3"><a></a>                                     <span class="fu">mean</span>(</span>
-<span id="cb5-4"><a></a>                                         <span class="fu">sample</span>(target,n)</span>
-<span id="cb5-5"><a></a>                                          )</span>
-<span id="cb5-6"><a></a>                                     }</span>
-<span id="cb5-7"><a></a><span class="co"># Repeat the above function 20000 times</span></span>
-<span id="cb5-8"><a></a>  mu.hat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">20000</span>,</span>
-<span id="cb5-9"><a></a>                     <span class="fu">sample.mean.fn</span>(pop.weights,n)</span>
-<span id="cb5-10"><a></a>                     )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="sampling-variation-1" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation</span></h2>
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
 
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="estimator-bias" class="slide level2">
-<h2><span style="color:#078BCD;">Estimator Bias</span></h2>
-<!-- We should be very interested in the characteristics of the sampling distribution and error. -->
-<p>Expected Bias (of the estimator) = average sample mean - population mean</p>
+
+</div>
+</div>
+
+<img data-src="../img/borealtoad.png" class="r-stretch"></section>
+<section id="srs" class="title-slide slide level1 center">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<p>Population Parameter: <span class="math inline">\(\mu = 8\)</span></p>
 <div class="fragment">
+<p>How many possible unique samples are there (w/o replacement)</p>
 <p><span class="math display">\[
-\text{Bias}(\hat{\mu},\mu) = \bar{\hat{\mu}} - \mu \\
+{N}\choose{n}
 \]</span></p>
 </div>
 <div class="fragment">
 <p><span class="math display">\[
-\text{Bias}(\hat{\mu},\mu) = E[\hat\mu] - \mu \\
+\frac{N!}{n!(N-n)!}
 \]</span></p>
 </div>
 <div class="fragment">
-<p><span class="math display">\[
-\text{Bias}(\hat{\mu},\mu) = \left(\int_{x} g(x)p(x|\mu)dx\right) - \mu
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Expectations are an average over all possible samples of size n.</p>
+<pre><code>choose(6,2)</code></pre>
 </div>
 </section>
-<section id="is-our-estimator-biased" class="slide level2">
-<h2><span style="color:#078BCD;">Is our estimator biased?</span></h2>
 
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="precision" class="slide level2">
-<h2><span style="color:#078BCD;">Precision</span></h2>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><p><span style="color:cornflowerblue">How close are repeated measures to each other?</span></p>
-</section>
-<section id="probability" class="slide level2">
-<h2><span style="color:#078BCD;">Probability</span></h2>
-<p><span style="color:cornflowerblue">We can also summarize the sampling variation into a probability</span></p>
-<p><br></p>
+<section id="srs-1" class="title-slide slide level1 center">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<p>How many possible unique samples are there?</p>
 <div class="fragment">
-<p>For n = 50, how likely is it that one sample will be within 10% of the true population parameter?</p>
+<p>Look at all possible combinations:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>lower <span class="ot">=</span> pop.mu.weights <span class="sc">-</span> pop.mu.weights<span class="sc">*</span><span class="fl">0.05</span></span>
-<span id="cb6-2"><a></a>upper <span class="ot">=</span> pop.mu.weights <span class="sc">+</span> pop.mu.weights<span class="sc">*</span><span class="fl">0.05</span></span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="fu">length</span>(<span class="fu">which</span>(mu.hat <span class="sc">&gt;</span> lower <span class="sc">&amp;</span> mu.hat <span class="sc">&lt;</span> upper)) <span class="sc">/</span> <span class="fu">length</span>(mu.hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9758</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>utils<span class="sc">::</span><span class="fu">combn</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</section>
-<section id="accuracy" class="slide level2">
-<h2><span style="color:#078BCD;">Accuracy</span></h2>
-<p><span style="color:cornflowerblue">Typically a measure of how close the average sample value is to truth</span></p>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="sampling-variation-2" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Variation</span></h2>
-<p><span style="color:cornflowerblue">Which sampling distribution would you prefer?</span></p>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="sampling-bias" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Bias</span></h2>
-<ul>
-<li><strong>Sampling Bias</strong>
-<ul>
-<li>Systematic tendency of selecting certain sample units; makes the samples <em>unrepresentative</em> to the target population</li>
-<li>Examples in fish/wildlife??</li>
-</ul></li>
-</ul>
-</section>
-<section id="sampling-bias-1" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Bias</span></h2>
-<p><strong>Sample Population:</strong> Weight of harvested black bears in a region that allows food provisioning</p>
-
-<img data-src="../img/beardonut.png" class="quarto-figure quarto-figure-center r-stretch" width="400"></section>
-<section id="sampling-error-and-bias" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Error and Bias</span></h2>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
-<section id="sampling-bias-2" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Bias</span></h2>
-<p>We only sample harvested bears with food supplementation</p>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><div class="fragment">
-<p>Expected Bias = 35.63</p>
-</div>
-</section>
-<section id="sampling-bias-3" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Bias</span></h2>
-<p>Relative Expected Bias = <span class="math inline">\(\frac{E(\hat{\mu})-\mu}{\mu}\)</span></p>
-<p>Relative Expected Bias = 0.12</p>
-</section>
-<section id="biased-estimator" class="slide level2">
-<h2><span style="color:#078BCD;">Biased Estimator</span></h2>
-<p>We sample all bears but use a different estimator for the population mean</p>
-<p><span class="math display">\[
-\hat{\mu} = \left(\sum_{i=1}^{n}(y_{i})^{0.38}\right)\times \frac{1}{n^{1/10000}}
-\]</span></p>
-</section>
-<section id="biased-estimator-1" class="slide level2">
-<h2><span style="color:#078BCD;">Biased Estimator</span></h2>
-
-<img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><p>Expected Bias = 14.87</p>
-</section>
-<section id="measurement-error" class="slide level2">
-<h2><span style="color:#078BCD;">Measurement Error</span></h2>
-<p>Didn’t zero the scale before weighing; this is not sampling error.</p>
-
-<img data-src="../img/bear.scale.png" class="r-stretch"></section>
-<section id="measurement-error-1" class="slide level2">
-<h2><span style="color:#078BCD;">Measurement Error</span></h2>
-<p>Inaccurate measurements due to malfunctioning instruments or poor procedures or by-product of sampling plan</p>
-<p><br></p>
 <div class="fragment">
-<p>E.g.,</p>
-<ul>
-<li>In Aspen, CO human-bear conflicts tend to be under reported</li>
-<li>In New Jersey they tend to be over reported</li>
-</ul>
+<p>What is the probability pond “A” will be sampled”? Pond “B”?</p>
+</div>
+</section>
+
+<section id="srs-2" class="title-slide slide level1 center">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<p>Consider each sample mean</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sample.Number</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">First Pond</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Second Pond</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">First Value</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Second Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">12</td>
+</tr>
+</tbody>
+</table>
 
 
 </div>
+</div>
+</section>
+
+<section id="srs-3" class="title-slide slide level1 center">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sample.Number</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">First Pond</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Second Pond</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">First Value</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Second Value</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Absolute.Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+
+<section id="srs-4" class="title-slide slide level1 center">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 20px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sample.Number</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Deviance.Truth</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>CREATE NEW TABLE</p>
+</div></div>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
