@@ -8460,7 +8460,7 @@
     "href": "wolverine/index.html",
     "title": "Wolverine",
     "section": "",
-    "text": "New\nPlease look over the five new summary websites below. Bring questions for Brian and Jake\nInvestigating effect of bait vs lure\nUpdated 2017 Spatial Occupancy Modeling\nUpdated 2022 Spatial Occupancy Modeling\nUpdated 2017.2022 Comparison\nUpdated 2022 Wolverine Inference\n\n\nPrevious\nSummary of and motivation for 2017/2022 Data Changes\nWAFWA Wolverine 2017 Results\nWAFWA Wolverine 2022 Results\nWAFWA Wolverine 2017.2022 Comparison"
+    "text": "New\nPlease look over the five new summary websites below. Bring questions for Brian and Jake at the next meeting!\nUpdated 2017 Spatial Occupancy Modeling\nUpdated 2022 Spatial Occupancy Modeling\nUpdated 2017.2022 Comparison\nUpdated 2022 Wolverine Inference\nInvestigating effect of bait vs lure\n\n\nPrevious (can ignore these)\nSummary of and motivation for 2017/2022 Data Changes\nWAFWA Wolverine 2017 Results\nWAFWA Wolverine 2022 Results\nWAFWA Wolverine 2017.2022 Comparison"
   },
   {
     "objectID": "wolverine/Motivation.for.Changes.html",
@@ -8621,14 +8621,14 @@
     "href": "FW552/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nRead Thompson Chapter 2 \nYou can download code from this chapter here\nCanvas Quiz 1\nCanvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week3.html#week-3",
     "href": "FW552/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nRead Thompson Chapter 2 \nYou can download code from this chapter here\nCanvas Quiz 1\nCanvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week16.html",
@@ -10370,14 +10370,21 @@
     "objectID": "FW552/SRS.html#goal",
     "href": "FW552/SRS.html#goal",
     "title": "Simple Random Sampling",
-    "section": "Goal",
-    "text": "Goal\n\nGoal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
+    "section": "",
+    "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
   },
   {
     "objectID": "FW552/SRS.html#srs-conceptual-walkthrough",
     "href": "FW552/SRS.html#srs-conceptual-walkthrough",
     "title": "Simple Random Sampling",
     "section": "SRS Conceptual Walkthrough",
-    "text": "SRS Conceptual Walkthrough\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\nPond\negg.mass\n\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+    "text": "SRS Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\nPond\negg.mass\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+  },
+  {
+    "objectID": "FW552/SRS.html",
+    "href": "FW552/SRS.html",
+    "title": "Simple Random Sampling",
+    "section": "",
+    "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
   }
 ]

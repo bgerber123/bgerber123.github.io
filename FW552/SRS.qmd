@@ -1,11 +1,13 @@
 ---
-title: <span style="color:purple">Simple Random Sampling</span>
+title: <span style="color:orange">Simple Random Sampling</span>
 title-slide-attributes:
   data-background-image: /img/srs.png
   background-opacity: "0.45"
 format:
   revealjs:
     chalkboard: true
+    scrollable: true
+    slide-level: 1
 ---
 
 ## [Goal]{style="color:#078BCD;"}
@@ -33,13 +35,28 @@ library(kableExtra)
 
 ## [SRS Conceptual Walkthrough]{style="color:#078BCD;"}
 
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
 - We have a known population of ponds, N = 6
 
 - We have enough to money for n = 2
 
 - Will use SRS
 
+
+:::
+
+::: {.column width="50%"}
+
 ```{r, echo=FALSE}
+library(magrittr)
+library(knitr)
+
 ponds = data.frame(matrix(nrow=6,ncol=2))
 colnames(ponds)=c("Pond","egg.mass")
 
@@ -48,11 +65,18 @@ ponds$egg.mass = c(2,6,8,10,10,12)
 
 ponds %>% 
   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
-  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
 
 ```
 
+
+
+:::
+
+::::
+
 ![](../img/borealtoad.png)
+
 
 # [SRS]{style="color:#078BCD;"}
 
@@ -78,7 +102,9 @@ $$
 
 . . .
 
-```{}
+*R*
+
+```{r,echo=TRUE}
 choose(6,2)
 ```
 
@@ -86,7 +112,21 @@ choose(6,2)
 
 # [SRS]{style="color:#078BCD;"}
 
-How many possible unique samples are there?
+What is the probability of any one particular sample?
+
+<br>
+
+. . .
+
+SRS: all samples have the same probability!
+
+<br>
+
+. . .
+
+What is the probability pond "A" will be sampled"? Pond "B"?
+
+<br>
 
 . . .
 
@@ -97,14 +137,7 @@ utils::combn(LETTERS[1:6],2)
 ```
 
 
-. . .
-
-What is the probability pond "A" will be sampled"? Pond "B"?
-
 # [SRS]{style="color:#078BCD;"}
-
-Consider each sample mean
-
 
 ```{r, echo=FALSE}
 ponds.letters=t(utils::combn(LETTERS[1:6],2))
@@ -117,11 +150,42 @@ ponds.all %>%
   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
 
-
-
 ```
 
+. . .
+
+What is the probability pond "A" will be sampled"? Pond "B"?
+
 # [SRS]{style="color:#078BCD;"}
+
+Is it okay to not like your random sample and resample?
+
+```{r,echo=TRUE}
+sample(LETTERS[1:6],2)
+```
+
+. . .
+
+```{r,echo=TRUE}
+sample(LETTERS[1:6],2)
+```
+
+. . .
+
+```{r,echo=TRUE}
+sample(LETTERS[1:6],2)
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+# [SRS]{style="color:#078BCD;"}
+
+Consider the sample mean $\hat{\mu}$ for each sample
 
 ```{r, echo=FALSE}
 #library(kableExtra)
@@ -165,10 +229,128 @@ ponds.simple %>%
 
 ::: {.column width="50%"}
 
-CREATE NEW TABLE
+
+
+$$ \frac{1}{N}\times\sum_{i=1}^N (\hat{\mu}_{i}) = 8$$ 
+
+
+```{r, echo=FALSE,results='hide'}
+#result above
+mean(ponds.simple$Sample.Mean)
+```
+
+
+$$\sum_{i=1}^N(\hat{\mu}_{i}-\mu) = 0 $$ 
+
+```{r, echo=FALSE, results='hide'}
+#result above
+sum(ponds.simple$Deviance.Truth)
+```
+
+
+Estimator Bias?
 
 :::
 
 ::::
+
+# [SRS]{style="color:#078BCD;" .scrollable}
+
+```{r, echo=FALSE}
+
+temp=data.frame(table(ponds.simple$Sample.Mean))
+colnames(temp)=c("Sample.Mean","Frequency")
+temp$Relative.Freq= temp$Frequency/sum(temp$Frequency)
+temp$Mean.times.Rel.Freq= as.numeric(as.character(temp$Sample.Mean))*temp$Relative.Freq
+
+temp$Sample.Mean=as.character(temp$Sample.Mean)
+temp[9,]=c("Sum","15","1","8")
+
+temp$Relative.Freq = as.numeric(temp$Relative.Freq)
+temp$Mean.times.Rel.Freq = as.numeric(temp$Mean.times.Rel.Freq)
+temp %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',
+        digits = 3) %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+
+# temp2=data.frame("SUM",sum(as.numeric(temp$Frequency[1:8])),sum(as.numeric(temp$Relative.Freq[1:8])),sum(as.numeric(temp$Mean.times.Rel.Freq[1:8])))
+# colnames(temp2)=NULL
+# 
+# temp2 %>% 
+#   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+#   kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 40)
+
+```
+. . .
+
+$$
+E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
+$$
+
+- $Q$ = number of possible samples
+
+- $p_i$ = probability of obtaining a given sample / relative frequency
+
+
+
+# [SRS]{style="color:#078BCD;"}
+
+```{r, echo=FALSE}
+temp=data.frame(table(ponds.simple$Sample.Mean))
+colnames(temp)=c("Sample.Mean","Frequency")
+temp$Relative.Freq= temp$Frequency/sum(temp$Frequency)
+temp$Mean.times.Rel.Freq= as.numeric(as.character(temp$Sample.Mean))*temp$Relative.Freq
+
+hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
+     main="Sampling Distribution",
+     xlab="Sample Mean")
+
+```
+
+<!-- . . . -->
+
+<!-- - Sum of deviations = 0 -->
+<!-- - Estimator of $\mu$ is unbiased -->
+<!-- -  -->
+
+# [Sampling Disribution]{style="color:#078BCD;"}
+
+::: incremental
+- Sample mean formula is an <span style="color:red">estimator</span> of the population mean (<span style="color:red">parameter</span> )
+- Sample mean is a <span style="color:red">random variable</span> with a sampling distribution
+  - sample mean varies from sample-to-sample becasue of the sampling process
+- The sampling distribution is specific to an estimator - has known outcomes and relative frequencies of values
+
+:::
+
+
+# [Sampling Disribution]{style="color:#078BCD;"}
+
+- judge an estimator by its sampling distribution
+- What properties do we want?
+
+
+
+```{r, echo=FALSE}
+hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
+     main="Sampling Distribution",
+     xlab="Sample Mean")
+
+```
+
+
+
+# [Estimator Properties]{style="color:#078BCD;"}
+
+- Precise estimator
+- Unbiased estimator
+- Is our estimator below precise?
+
+```{r,echo=FALSE}
+hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
+     main="Sampling Distribution",
+     xlab="Sample Mean")
+```
 
 

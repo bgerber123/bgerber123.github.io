@@ -35,9 +35,13 @@ This includes:
 
 The first part can be addressed pretty easily as we can estimate different detection probabilities for a site labeled as bait vs lure.
 
-The second part is more challenging. This is a more insidious problem. We can investigate this by conditioning on sites what were occupied in 2017 and asking if the change in occupancy (colonization/extirpation) is different based on whether a site was baited both years or used lure both years or changed from bait to lure. Unfortunately, no sites that used lure in 2017 were then baited in 2022. There should not be a difference in colonization or extirpation by this change. 
+The second part is more challenging. This is a more insidious problem. We can investigate this by conditioning on sites that were occupied in 2017 and asking if the change in occupancy (colonization/extirpation) is different based on whether a site was baited both years or used lure both years or changed from bait to lure. Unfortunately, no sites that used lure in 2017 were then baited in 2022. There should not be a difference in colonization or extirpation  based on whether the bait-lure status changed. Sites should be estimated to be occupied, or not, and/or changed their occupancy status independent of bait-lure status.
 
-There are a lot of data summary tables below that could be skipped. The main investigation is presented in the section: `Dynamic Occupancy Model`.
+However, we have to think about confounding factors between a bait site and a lure site. One way we can think of this is via covariate comparisons between these site types, which is done below. But there are of course unmeasured factors that we can not do this for. If a site was chosen to be a bait site in both survey years because of a certain factor that is different than a site that had bait (2017) and then had lure (2022) we could expect this difference to be detected in the analyses below but is not a signal of an effect of bait but because of this confounding factor. This is a concern. 
+
+This point is captured by Justin Gude: "Our ability to disentangle the effect on detection probability of using baited versus scent-pump only sites is hampered by different site type selection methods among states. Washington and Montana switched from largely baited sites in 2017 (other than inaccessible sites) to exclusively scent-pump only sites in 2022. Idaho and Wyoming used both types of sites in both surveys. However, the use of baited sites in these states was in order to collect genetic material, so they placed these sites in areas known to previously and consistently contain wolverines, to maximize success in collecting genetic material. So wolverine detection probability at these baited sites in 2022 may have inherently been higher."
+
+There are a lot of data summary tables below that could be skipped. The main investigation is presented in the section: `Dynamic Occupancy Model`. 
 
 ```{r load.data,echo=FALSE,warning=FALSE,results='hide', message=FALSE}
 # Load Packages
@@ -54,7 +58,28 @@ There are a lot of data summary tables below that could be skipped. The main inv
   visitData2022 = read.csv("../data/visitDataWolv2022_07-31-25.csv")
   habData2017 = read.csv("../data/habDataWolv2017_07-16-25.csv")
   habData2022 = read.csv("../data/habDataWolv2022_07-16-25.csv")
+  
+
 ```
+
+<!-- # **Data Mgmt** -->
+
+
+```{r,data.mgmt,echo=FALSE}
+# unique(visitData2022$SiteType2022)
+# visitData2022$STATE[which(visitData2022$SiteType2022=="")]
+  
+# Need to confirm, but for now we will change these missing and other to Bait sites  
+#  index=which(visitData2022$SiteType2022=="")
+#  visitData2022$SiteType2022[index]="Lure"
+  
+  index=which(visitData2022$SiteType2022=="Bait_Lure")
+  visitData2022$SiteType2022[index]="Bait"
+  
+    index=which(habData2022$SiteType2022=="Bait_Lure")
+  habData2022$SiteType2022[index]="Bait"
+```
+
 
 # **Spatial Distribution**
 
@@ -92,7 +117,7 @@ There are a lot of data summary tables below that could be skipped. The main inv
                    y = Albers_Y,
                    colour = SiteType2022),
                shape = 15, size = 1) +
-    scale_colour_manual(values = c("grey","red","orange", "black"))+
+    scale_colour_manual(values = c("grey","red", "black"))+
     ggtitle("Bait/Lure 2022")
   
   plot.bait.2022.state
@@ -104,20 +129,6 @@ There are a lot of data summary tables below that could be skipped. The main inv
 **Summary:** Sites that got bait or lure were not randomly assigned. There could be some correlating factor of site differences that is not really due to detection method. For example, sites with difficulty accessibility in 2017 often used lure. Also, in 2022 the sites with wolverines present and had plenty of baited sites were only Idaho and Wyoming. Need to think about both concerns when evaluating the effect of detection method.   
 
 
-<!-- # **Data Mgmt** -->
-
-
-```{r,data.mgmt,echo=FALSE}
-# unique(visitData2022$SiteType2022)
-# visitData2022$STATE[which(visitData2022$SiteType2022=="")]
-  
-# Need to confirm, but for now we will change these missing and other to Bait sites  
-#  index=which(visitData2022$SiteType2022=="")
-#  visitData2022$SiteType2022[index]="Lure"
-  
-  index=which(visitData2022$SiteType2022=="Bait_Lure")
-  visitData2022$SiteType2022[index]="Bait"
-```
 
 # **Covariate Comparison**
 
@@ -808,9 +819,9 @@ Basically, if you use lure at a site that was previously unoccupied, you are not
 
 ```
 
-**Summary**  Again, I don't think we can assume there aren't true changes in occupancy happening, but those changes are exacerbated because of changes in detection method (bait-->lure). Bait-->Bait sites have a lower probability of extirpation. But, it's not zero, so some dynamic changes irrespective of detection method. Bait-->Lure extirpation probability is higher. The difference between the two may be the detection method. There is high uncertainty in extirpation probability for Lure-->Lure, making it hard to interpret.
+**Summary**  I don't think we can assume there aren't true changes in occupancy happening, but those changes are exacerbated because of changes in detection method (bait-->lure). Bait-->Bait sites have a lower probability of extirpation. But, it's not zero, so some dynamic changes irrespective of detection method. Bait-->Lure extirpation probability is higher. The difference between the two may be the detection method. There is high uncertainty in extirpation probability for Lure-->Lure, making it hard to interpret.
 
-Basically, if you use bait at a site that previously used bait and was previously occupied, there is a chance of extirpation, but it's lower (by half) than if you changed to lure. Note the similar probabilities of colonization and extirpation for bait-->bait sites; they basically cancel each other out. We will see this below in the precicted occupancy by year. 
+Basically, if you use bait at a site that previously used bait and was previously occupied, there is a chance of extirpation, but it's lower (by half) than if you changed to lure. Note the similar probabilities of colonization and extirpation for bait-->bait sites; they basically cancel each other out. We will see this below in the predicted occupancy by year. 
 
 If you use lure at a site that was previously occupied and used bait previously, you have a high probability of extirpation. This bump in probability beyond Bait-->Bait is likely a detection method. 
 
@@ -881,11 +892,15 @@ Occupancy is basically the same.
 
 <br>
 
-<span style="color:purple">Summary: My major takeaway is that there are dynamics going on at all sites, probably due to wolverines moving around and sampling variation. However, there seems to also be an effect of detection method. Sites with bait in both years have a moderate increase in mean occupancy, while when changing to lure from bait, occupancy decreases. We would expect no change in a site that uses lure in both years and that is exactly what we see. </span>
+<span style="color:purple">Summary: I believe there are dynamics going on at all sites, probably due to wolverines moving around and sampling variation. However, there seems to be a *suggestion* of an effect of detection method. Sites with bait in both years have a moderate increase in mean occupancy, while when changing to lure from bait, occupancy decreases. We would expect no change in a site that uses lure in both years and that is exactly what we see. </span>
 
-<span style="color:purple">The fundamental question because bait/lure site designations were not randomized, is what is different between these bait sites and lure sites in 2017? Regardless of those differences though, a baited site that then used lure should not be different than a baited site in both years, unless the detection method is causing a change on detecting wolverines at all at those sites.</span>
+<span style="color:purple">The fundamental question because bait/lure site designations were not randomized, is what is different between these bait sites and lure sites in 2017 and different between Bait-->Bait and Bait-->Lure sites? It could be a detection method difference, which is a concern. OR, it could be a confounding factor, for example, that Bait-->Bait sites were chosen because the state sampling also wanted genetic material and chose site to deploy bait at sites known to have wolverines for a long time. Note that when we are examining Bait-->Bait sites, we are only examining sites in Wyoming and Idaho. When we are examining Bait-->Lure sites, we are looking at sites from Idaho, Montana, Washington, and Wyoming. Should we expect different dynamic parameters (by BaitBait, BaitLure) because of the locations of these two samples?</span>
 
-<span style="color:purple">When we are examining BaitBait sites, we are only examining sites in Wyoming and Idaho. When we are examining BaitLure sites, we are looking at sites from Idaho, Montana, Washington, and Wyoming. Should we expect different dynamic parameters (by BaitBait, BaitLure) because of the locations of these two samples? </span>
+<span style="color:purple">My overall take away: There is a concern (not perfect evidence) that lure sites are missing wolverine. Not a huge concern, but something to note is that occupied sites have a lower detection probability if using lure only (clear evidence).</span>
 
 
+<span style="color:purple">1. What to do next: Consider randomizing a selection of sites that went from Bait-->Lure to be sampled using bait in the third survey. If there a detection method effect we should expect a high proportion of these sites to become occupied or occupied at a higher rate than othere Bait-->Lure sites that continued to be a lure site in the third survey. </span>
+
+
+<span style="color:purple">2. What to do next: Either include this analyses in the 2nd manuscript as evidence of the concern. Or, present the concern in the discussion logically without the analysis. The later is my preference to keep the manuscript from getting too overwhelming. Note that we have at least partly ameliorated the effect issue of detection method by including bait/lure covariate on the detection probability in the 2017 and 2022 analyses. Because of this change, the difference in occupancy across the years is less than it is when not including it. We can not mix the detection method concern on occupancy, but we can discuss it in the manuscript without this analysis presented above.  </span>
 
