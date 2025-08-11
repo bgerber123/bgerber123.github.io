@@ -5,7 +5,6 @@ title-slide-attributes:
   background-opacity: "0.45"
 format:
   revealjs:
-    chalkboard: true
     scrollable: true
     slide-level: 1
 ---
