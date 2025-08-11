@@ -274,13 +274,19 @@ code.r{
 </section>
 <section id="srs-1" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
-<p>Population Parameter: <span class="math inline">\(\mu = 8\)</span></p>
-<div class="fragment">
+<p>Population Parameters:</p>
+<ul>
+<li><span class="math inline">\(\mu = 8\)</span></li>
+<li><span class="math inline">\(N = 6\)</span></li>
+<li><span class="math inline">\(\sigma^2 = 12.8\)</span></li>
+</ul>
+</section>
+<section id="srs-2" class="slide level1">
+<h1><span style="color:#078BCD;">SRS</span></h1>
 <p>How many possible unique samples are there (w/o replacement)</p>
 <p><span class="math display">\[
 {N}\choose{n}
 \]</span></p>
-</div>
 <div class="fragment">
 <p><span class="math display">\[
 \frac{N!}{n!(N-n)!}
@@ -296,7 +302,7 @@ code.r{
 </div>
 </div>
 </section>
-<section id="srs-2" class="slide level1">
+<section id="srs-3" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>What is the probability of any one particular sample?</p>
 <p><br></p>
@@ -305,10 +311,10 @@ code.r{
 <p><br></p>
 </div>
 <div class="fragment">
-<p>Convenient Sampling: What is the probability of one particular sample?</p>
+<p><span style="color:red">Convenient Sampling</span>: What is the probability of one particular sample?</p>
 </div>
 </section>
-<section id="srs-3" class="slide level1">
+<section id="srs-4" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>What is the probability pond “A” will be sampled”? Pond “B”?</p>
 <p><br></p>
@@ -327,7 +333,7 @@ code.r{
 </div>
 </div>
 </section>
-<section id="srs-4" class="slide level1">
+<section id="srs-5" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <div class="cell">
 <div class="cell-output-display">
@@ -457,20 +463,20 @@ code.r{
 <p>What is the probability pond “A” will be sampled”? Pond “B”?</p>
 </div>
 </section>
-<section id="srs-5" class="slide level1">
+<section id="srs-6" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>Is it okay to not like your random sample and resample?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "B" "D"</code></pre>
+<pre><code>[1] "D" "F"</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "F" "D"</code></pre>
+<pre><code>[1] "E" "D"</code></pre>
 </div>
 </div>
 </div>
@@ -478,13 +484,16 @@ code.r{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "A" "D"</code></pre>
+<pre><code>[1] "A" "E"</code></pre>
 </div>
 </div>
-<p><br> <br> <br> <br> <br></p>
+</div>
+<div class="fragment">
+<p>Yes, but why don’t you like it? Maybe SRS is not what you want.</p>
+<p><br> <br></p>
 </div>
 </section>
-<section id="srs-6" class="slide level1">
+<section id="srs-7" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>Consider the sample mean <span class="math inline">\(\hat{\mu}\)</span> for each sample</p>
 <div class="cell">
@@ -644,7 +653,7 @@ code.r{
 </div>
 </div>
 </section>
-<section id="srs-7" class="slide level1">
+<section id="srs-8" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -741,12 +750,12 @@ code.r{
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<p><span class="math display">\[ \frac{1}{N}\times\sum_{i=1}^N (\hat{\mu}_{i}) = 8\]</span></p>
+<p><span class="math display">\[ \frac{1}{15}\times\sum_{i=1}^{15} (\hat{\mu}_{i}) = 8\]</span></p>
 <p><span class="math display">\[\sum_{i=1}^N(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
 <p>Estimator Bias?</p>
 </div></div>
 </section>
-<section id="srs-8" class="slide level1">
+<section id="srs-9" class="slide level1">
 <h1><span class="scrollable" style="color:#078BCD;">SRS</span></h1>
 <div class="cell">
 <div class="cell-output-display">
@@ -825,12 +834,12 @@ code.r{
 E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 \]</span></p>
 <ul>
-<li><p><span class="math inline">\(Q\)</span> = number of possible samples</p></li>
+<li><p><span class="math inline">\(Q\)</span> = number of unique sample means</p></li>
 <li><p><span class="math inline">\(p_i\)</span> = probability of obtaining a given sample / relative frequency</p></li>
 </ul>
 </div>
 </section>
-<section id="srs-9" class="slide level1">
+<section id="srs-10" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 
 <!-- . . . -->
@@ -863,53 +872,10 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <h1><span style="color:#078BCD;">Estimator Properties</span></h1>
 <ul>
 <li>Precise and unbiased estimator</li>
-<li>Is our estimator below precise?</li>
+<li>Is our estimator precise?</li>
 </ul>
 
 <img data-src="SRS_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
-<section id="population-variance" class="slide level1">
-<h1><span style="color:#078BCD;">Population Variance</span></h1>
-<p>The variance of all sample units</p>
-<p><span class="math display">\[
-\sigma^{2} = \frac{1}{N-1}\sum_{i=1}^{N} \left(y_{i}-\mu\right)^{2}
-\]</span></p>
-<p><span class="math display">\[
-\sigma^{2} = \frac{1}{6-1}\sum_{i=1}^{6} \left(y_{i}-8\right)^{2}
-\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>(<span class="dv">1</span><span class="sc">/</span>(<span class="dv">6-1</span>))<span class="sc">*</span><span class="fu">sum</span>((ponds<span class="sc">$</span>egg.mass<span class="dv">-8</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12.8</code></pre>
-</div>
-</div>
-</section>
-<section id="sample-variance" class="slide level1">
-<h1><span style="color:#078BCD;">Sample Variance</span></h1>
-<p><strong>Estimate population variance</strong> from each sample</p>
-<p><span class="math display">\[
-\hat{\sigma}^{2} = \frac{1}{n-1}\sum_{i=1}^{n} \left(y_{i}-\hat{\mu}\right)^{2}
-\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>var.per.sample <span class="ot">=</span> <span class="fu">apply</span>(</span>
-<span id="cb13-2"><a></a>                       <span class="fu">cbind</span>(ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">First Value</span><span class="st">`</span>,ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">Second Value</span><span class="st">`</span>),</span>
-<span id="cb13-3"><a></a>                       <span class="dv">1</span>,</span>
-<span id="cb13-4"><a></a>                       var</span>
-<span id="cb13-5"><a></a>                       )</span>
-<span id="cb13-6"><a></a><span class="co"># Expected value of population variance</span></span>
-<span id="cb13-7"><a></a>  <span class="fu">mean</span>(var.per.sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 12.8</code></pre>
-</div>
-</div>
-</section>
-<section id="sample-variance-1" class="slide level1">
-<h1><span style="color:#078BCD;">Sample Variance</span></h1>
-
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"><ul>
-<li>Unbiased estimate of the population variance.</li>
-<li>Individual values will deviate from the population variance.</li>
-</ul>
-</section>
 <section id="variance-of-sampling-distribution" class="slide level1">
 <h1><span style="color:#078BCD;">Variance of Sampling Distribution</span></h1>
 <div class="cell">
@@ -1005,22 +971,68 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">var</span>(ponds.simple<span class="sc">$</span>Sample.Mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">var</span>(ponds.simple<span class="sc">$</span>Sample.Mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.571429</code></pre>
 </div>
 </div>
+</section>
+<section id="population-variance" class="slide level1">
+<h1><span style="color:#078BCD;">Population Variance</span></h1>
+<p>The variance of all sample units</p>
+<p><span class="math display">\[
+\sigma^{2} = \frac{1}{N-1}\sum_{i=1}^{N} \left(y_{i}-\mu\right)^{2}
+\]</span></p>
+<p><span class="math display">\[
+\sigma^{2} = \frac{1}{6-1}\sum_{i=1}^{6} \left(y_{i}-8\right)^{2}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>(<span class="dv">1</span><span class="sc">/</span>(<span class="dv">6-1</span>))<span class="sc">*</span><span class="fu">sum</span>((ponds<span class="sc">$</span>egg.mass<span class="dv">-8</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.8</code></pre>
+</div>
+</div>
+</section>
+<section id="sample-variance" class="slide level1">
+<h1><span style="color:#078BCD;">Sample Variance</span></h1>
+<p><strong>Estimate population variance</strong> from each sample</p>
+<p><span class="math display">\[
+\hat{\sigma}^{2} = \frac{1}{n-1}\sum_{i=1}^{n} \left(y_{i}-\hat{\mu}\right)^{2}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>var.per.sample <span class="ot">=</span> <span class="fu">apply</span>(</span>
+<span id="cb15-2"><a></a>                       <span class="fu">cbind</span>(ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">First Value</span><span class="st">`</span>,ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">Second Value</span><span class="st">`</span>),</span>
+<span id="cb15-3"><a></a>                       <span class="dv">1</span>,</span>
+<span id="cb15-4"><a></a>                       var</span>
+<span id="cb15-5"><a></a>                       )</span>
+<span id="cb15-6"><a></a><span class="co"># Expected value of population variance</span></span>
+<span id="cb15-7"><a></a>  <span class="fu">mean</span>(var.per.sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.8</code></pre>
+</div>
+</div>
+</section>
+<section id="sample-variance-1" class="slide level1">
+<h1><span style="color:#078BCD;">Sample Variance</span></h1>
+
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"><ul>
+<li>Unbiased estimate of the population variance.</li>
+<li>Individual values will deviate from the population variance.</li>
+</ul>
+</section>
+<section id="connect-these-two" class="slide level1">
+<h1><span style="color:#078BCD;">Connect these two</span></h1>
 <ul>
 <li><strong>Population variance</strong> - variation among sample units; estimate from sample variance</li>
 <li><strong>Var. Sampling Distribution</strong> - variance of mean values from each possible sample</li>
 </ul>
 </section>
-<section id="connect-these-two" class="slide level1">
+<section id="connect-these-two-1" class="slide level1">
 <h1><span style="color:#078BCD;">Connect these two</span></h1>
 <p>Variance of all units vs variance of all sample means</p>
 
 <img data-src="SRS_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
-<section id="connect-these-two-1" class="slide level1">
+<section id="connect-these-two-2" class="slide level1">
 <h1><span style="color:#078BCD;">Connect these two</span></h1>
 <ul>
 <li>As the sample size (n) increases the sample variance declines by <strong>1/n</strong></li>
@@ -1029,32 +1041,99 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <p><span class="math display">\[
 \left(\frac{N-n}{N}\right)
 \]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+E[\text{Sampling Distribution Variance}] = \frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+\]</span></p>
+</div>
 </section>
-<section id="connect-these-two-2" class="slide level1">
+<section id="connect-these-two-3" class="slide level1">
 <h1><span style="color:#078BCD;">Connect these two</span></h1>
 <div>
 <ul>
 <li class="fragment">Sample size (n) = 2</li>
 <li class="fragment">Total units (N) = 6</li>
 <li class="fragment">E[pop var] = 12.8</li>
-<li class="fragment">E[sample dist. var] = 4.3</li>
+<li class="fragment">E[sample dist. var] = 4.27</li>
 <li class="fragment">1/n = 0.5</li>
 <li class="fragment">Finite correction factor = 0.67</li>
-<li class="fragment"><strong>E[pop var] <span class="math inline">\(\times\)</span> 1/n <span class="math inline">\(\times\)</span> CF = 4.3</strong></li>
+<li class="fragment"><strong>E[pop var] <span class="math inline">\(\times\)</span> 1/n <span class="math inline">\(\times\)</span> FCF = 4.27</strong></li>
 </ul>
 </div>
 </section>
-<section id="connect-these-two-3" class="slide level1">
+<section id="connect-these-two-4" class="slide level1">
+<h1><span style="color:#078BCD;">Connect these two</span></h1>
+<p><span class="math display">\[
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+\]</span></p>
+<div>
+<ul>
+<li class="fragment">As n–&gt; N, (N-n)/(N) approaches zero.</li>
+<li class="fragment">n = N then no sampling distribution variance</li>
+<li class="fragment">n &lt;&lt; N then correction factor ~1 and expected sampling distribution variance is related to the population variance by 1/n</li>
+</ul>
+</div>
+</section>
+<section id="connect-these-two-5" class="slide level1">
 <h1><span style="color:#078BCD;">Connect these two</span></h1>
 <h3 id="why-does-this-matter"><strong>Why does this matter?</strong></h3>
 </section>
-<section id="connect-these-two-4" class="slide level1">
+<section id="connect-these-two-6" class="slide level1">
 <h1><span style="color:#078BCD;">Connect these two</span></h1>
 <p>If you know the E[pop var] …</p>
 <ul>
 <li>you have a mechanism to understand the variation of sample distribution of the means</li>
 <li>the more variation in <span class="math inline">\(y\)</span>, the more variation in sampling dist. of means.</li>
 </ul>
+</section>
+<section id="sample-size" class="slide level1">
+<h1><span style="color:#078BCD;">Sample Size</span></h1>
+<p><span class="math display">\[
+E[\text{Sampling Distribution Variance}]
+\]</span></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>n = 2 –&gt; 4.27</li>
+<li>n = 3 –&gt; 2.13</li>
+<li>n = 4 –&gt; 1.06</li>
+<li>n = 5 –&gt; 0.43</li>
+<li>n = 6 –&gt; 0</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="SRS_files/figure-revealjs/unnamed-chunk-24-1.png" width="1440"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="sample-size-1" class="slide level1">
+<h1><span style="color:#078BCD;">Sample Size</span></h1>
+<p>Not pond example; When N is large enough . . .</p>
+
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<section id="sample-size-2" class="slide level1 scollable">
+<h1><span style="color:#078BCD;">Sample Size</span></h1>
+<ul>
+<li>Sampling distribution is less variable</li>
+<li>Sampling distribution centers on population mean</li>
+<li>Sampling distribution looks more ‘Normal’</li>
+</ul>
+<div class="fragment">
+<p>This is because of the Central limit theorem (CLT)</p>
+<ul>
+<li>CLT relies on random/prob. based sampling</li>
+<li>leads to parameter unbiasedness</li>
+<li>Does not depends on distribution of samples</li>
+<li>allows estimation of precision of parameters</li>
+<li>allows estimation of confidence intervals</li>
+</ul>
+</div>
 </section>
 <section id="the-total" class="slide level1">
 <h1><span style="color:#078BCD;">The TOTAL</span></h1>
@@ -1065,19 +1144,9 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 </section>
 <section id="the-total-1" class="slide level1">
 <h1><span style="color:#078BCD;">The TOTAL</span></h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>tau.est <span class="ot">=</span> ponds.simple<span class="sc">$</span>Sample.Mean <span class="sc">*</span> <span class="dv">6</span></span>
-<span id="cb17-2"><a></a><span class="fu">hist</span>(tau.est,<span class="at">main=</span><span class="st">""</span>,<span class="at">xlab=</span><span class="st">"Totals per Sample"</span>)</span>
-<span id="cb17-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(ponds.simple<span class="sc">$</span>Sample.Mean) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>)</span>
-<span id="cb17-4"><a></a><span class="co">#truth</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h2 id="back-to-ponds-example">Back to ponds example</h2>
 
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  <span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 48</code></pre>
-</div>
-</div>
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="the-total-2" class="slide level1">
 <h1><span style="color:#078BCD;">The TOTAL</span></h1>
 <p>Variance of the total</p>
@@ -1089,18 +1158,35 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <h1><span style="color:#078BCD;">Probabilty of</span></h1>
 <p>Whenever you have the sampling distribution, frame <em>precision</em> in terms of what matters to you.</p>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
 <section id="probabilty-of-1" class="slide level1">
 <h1><span style="color:#078BCD;">Probabilty of</span></h1>
 <p><span class="math display">\[
-P(\hat{\tau}) \leq 2 \times \tau
+P(\hat{\tau}\leq 2 \times \tau)
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
 </div>
+</section>
+<section id="sample-size-3" class="slide level1">
+<h1><span style="color:#078BCD;">Sample Size</span></h1>
+<p>But what <span class="math inline">\(n\)</span>?</p>
+<ul>
+<li><span class="math inline">\(n\)</span> impacts variation in estimates</li>
+<li>variation in <span class="math inline">\(y\)</span> impacts the influence of <span class="math inline">\(n\)</span></li>
+<li>objective probably impacts <span class="math inline">\(n\)</span> the most</li>
+<li>higher <span class="math inline">\(n\)</span> is not always better</li>
+</ul>
+<!-- # [Confidence Intervals]{style="color:#078BCD;"} -->
+<!-- **Another measure of precision and accuracy!** -->
+<!-- . . . -->
+<!-- - uses one sample  -->
+<!-- - assumes distribution of all possible samples -->
+<!-- - provides an estimated interval -->
+<!-- - the interval is a measure related to the true population parameter (which is unknow) -->
 
 
 </section>

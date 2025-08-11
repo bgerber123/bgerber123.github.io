@@ -80,13 +80,17 @@ ponds %>%
 
 # [SRS]{style="color:#078BCD;"}
 
-Population Parameter: $\mu = 8$
+Population Parameters: 
+
+- $\mu = 8$
+- $N = 6$
+- $\sigma^2 = 12.8$ 
 
 ```{r,echo=FALSE}
 mu = mean(ponds$egg.mass)
 ```
 
-. . .
+# [SRS]{style="color:#078BCD;"}
 
 How many possible unique samples are there (w/o replacement)
 
@@ -124,7 +128,7 @@ SRS: all samples have the same probability!
 
 . . .
 
-Convenient Sampling: What is the probability of one particular sample?
+<span style="color:red">Convenient Sampling</span>: What is the probability of one particular sample?
 
 
 
@@ -182,9 +186,10 @@ sample(LETTERS[1:6],2)
 sample(LETTERS[1:6],2)
 ```
 
-<br>
-<br>
-<br>
+. . .
+
+Yes, but why don't you like it? Maybe SRS is not what you want.
+
 <br>
 <br>
 
@@ -237,7 +242,7 @@ ponds.simple %>%
 
 
 
-$$ \frac{1}{N}\times\sum_{i=1}^N (\hat{\mu}_{i}) = 8$$ 
+$$ \frac{1}{15}\times\sum_{i=1}^{15} (\hat{\mu}_{i}) = 8$$ 
 
 
 ```{r, echo=FALSE,results='hide'}
@@ -294,7 +299,7 @@ $$
 E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 $$
 
-- $Q$ = number of possible samples
+- $Q$ = number of unique sample means
 
 - $p_i$ = probability of obtaining a given sample / relative frequency
 
@@ -350,7 +355,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 # [Estimator Properties]{style="color:#078BCD;"}
 
 - Precise and unbiased estimator
-- Is our estimator below precise? 
+- Is our estimator precise? 
 
 
 ```{r,echo=FALSE}
@@ -359,6 +364,19 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      xlab="Sample Mean")
 ```
 
+# [Variance of Sampling Distribution]{style="color:#078BCD;"}
+
+```{r,echo=FALSE}
+ponds.simple %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+```
+
+```{r,echo=TRUE}
+var(ponds.simple$Sample.Mean)
+```
+
+
 # [Population Variance]{style="color:#078BCD;"}
 
 The variance of all sample units
@@ -366,8 +384,6 @@ The variance of all sample units
 $$
 \sigma^{2} = \frac{1}{N-1}\sum_{i=1}^{N} \left(y_{i}-\mu\right)^{2}
 $$
-
-
 
 
 $$
@@ -410,17 +426,7 @@ var.per.sample = apply(
 - Individual values will deviate from the population variance.
 
 
-# [Variance of Sampling Distribution]{style="color:#078BCD;"}
-
-```{r,echo=FALSE}
-ponds.simple %>% 
-  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
-  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
-```
-
-```{r,echo=TRUE}
-var(ponds.simple$Sample.Mean)
-```
+# [Connect these two ]{style="color:#078BCD;"}
 
 - **Population variance** - variation among sample units; estimate from sample variance
 - **Var. Sampling Distribution** - variance of mean values from each possible sample
@@ -448,6 +454,14 @@ $$
 \left(\frac{N-n}{N}\right)
 $$
 
+. . .
+
+
+$$
+E[\text{Sampling Distribution Variance}] = \frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+$$
+
+
 # [Connect these two]{style="color:#078BCD;"}
 
 :::{.incremental}
@@ -455,13 +469,27 @@ $$
 - Sample size (n) = 2
 - Total units (N) = 6
 - E[pop var] = 12.8
-- E[sample dist. var] = 4.3
+- E[sample dist. var] = 4.27
 - 1/n = 0.5
 - Finite correction factor = 0.67
-- **E[pop var] $\times$ 1/n $\times$ CF = 4.3**
+- **E[pop var] $\times$ 1/n $\times$ FCF = 4.27**
 
 :::
 
+
+# [Connect these two]{style="color:#078BCD;"}
+
+$$
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+$$
+
+:::{.incremental}
+
+- As  n--> N, (N-n)/(N) approaches zero.
+- n = N then no sampling distribution variance
+- n << N then correction factor ~1 and expected sampling distribution variance is related to the population variance by 1/n
+
+:::
 
 # [Connect these two]{style="color:#078BCD;"}
 
@@ -475,6 +503,111 @@ If you know the E[pop var] ...
 - the more variation in $y$, the more variation in sampling dist. of means.
 
 
+# [Sample Size]{style="color:#078BCD;"}
+
+$$
+E[\text{Sampling Distribution Variance}]
+$$
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- n = 2 --> 4.27
+- n = 3 --> 2.13
+- n = 4 --> 1.06
+- n = 5 --> 0.43
+- n = 6 --> 0
+
+:::
+
+::: {.column width="70%"}
+
+```{r, fig.width=15}
+#sampling distribution of n=4
+  ponds.numbers2=t(utils::combn(1:6,4))
+  ponds.all2=matrix(ponds$egg.mass[c(ponds.numbers2)],ncol=4,byrow = FALSE)
+
+  ponds.numbers3=t(utils::combn(1:6,6))
+  ponds.all3=matrix(ponds$egg.mass[c(ponds.numbers2)],ncol=5,byrow = FALSE)
+
+  
+#expected variance of sampling distributiuon
+
+hist(ponds.simple$Sample.Mean,breaks=10,xlim=c(3,12),ylim=c(0,4),xlab="Sample Means",main="Sampling Distributions \n of the Mean",cex = 2,cex.axis=2,cex.lab=2,cex.main=2)
+hist(apply(ponds.all2,1,mean),add=TRUE,col=grDevices::adjustcolor("red",alpha.f = 0.5)  ,breaks=10,cex = 2,cex.axis=2,cex.lab=2)
+hist(apply(ponds.all3,1,mean),add=TRUE,col=grDevices::adjustcolor("purple",alpha.f = 0.5)  ,breaks=10,cex = 2,cex.axis=2,cex.lab=2)
+legend("topleft",legend=c("n=2","n=4","n=5"),col=c("grey",2,"purple"),lwd=5,cex = 2)
+abline(v=8,lty=1,col=1,lwd=4)
+```
+:::
+
+::::
+
+# [Sample Size]{style="color:#078BCD;"}
+
+ Not pond example; When N is large enough . . .
+
+
+```{r,echo=FALSE}
+ sample.mean.fn = function(target,n){
+                                     mean(
+                                         sample(target,n)
+                                          )
+                                     }
+
+#z = rnorm(100,100,10)
+
+set.seed(34234)
+z=(rgamma(1000,1,0.01))
+
+#random sample many means n= 10
+n = 10
+  mu.hat1 = replicate(20000,
+                     sample.mean.fn(z,n)
+                     )
+n = 20  
+  mu.hat2 = replicate(20000,
+                     sample.mean.fn(z,n)
+                     )
+n = 50  
+  mu.hat3 = replicate(20000,
+                     sample.mean.fn(z,n)
+                     )
+n = 100    
+  mu.hat4 = replicate(20000,
+                     sample.mean.fn(z,n)
+                     )
+  
+  
+par(mfrow=c(2,2))
+hist(mu.hat1,col=2,breaks=10,freq = TRUE,xlab="Sample Means",main="n = 10",xlim=c(30,200))
+abline(v=100,col=1,lwd=3)
+hist(mu.hat2,col=grDevices::adjustcolor("red",alpha.f = 0.5),add=FALSE,breaks=10,freq = TRUE,xlab="Sample Means",main="n = 20",xlim=c(30,200))
+abline(v=100,col=1,lwd=3)
+hist(mu.hat3,col=grDevices::adjustcolor("purple",alpha.f = 0.5),add=FALSE,breaks=10,freq = TRUE,xlab="Sample Means",main="n = 50",xlim=c(30,200))
+abline(v=100,col=1,lwd=3)
+hist(mu.hat4,col=grDevices::adjustcolor("orange",alpha.f = 0.5),add=FALSE,breaks=20,freq = TRUE,xlab="Sample Means",main="n = 100",xlim=c(30,200))
+abline(v=100,col=1,lwd=3)
+```
+
+# [Sample Size]{style="color:#078BCD;"}{.scollable}
+
+- Sampling distribution is less variable
+- Sampling distribution centers on population mean
+- Sampling distribution looks more 'Normal'
+
+. . .
+
+This is because of the Central limit theorem (CLT)
+
+- CLT relies on random/prob. based sampling
+- leads to parameter unbiasedness
+- Does not depends on distribution of samples
+- allows estimation of precision of parameters
+- allows estimation of confidence intervals
+
+
 # [The TOTAL]{style="color:#078BCD;"}
 
 *Extrapolate the sample to the total population*
@@ -485,14 +618,15 @@ $$
 
 # [The TOTAL]{style="color:#078BCD;"}
 
+## Back to ponds example
 
-```{r,echo=TRUE}
+```{r,echo=FALSE}
 tau.est = ponds.simple$Sample.Mean * 6
 hist(tau.est,main="",xlab="Totals per Sample")
-abline(v=mean(ponds.simple$Sample.Mean) * 6,lwd=3)
-#truth
-  abline(v=sum(ponds$egg.mass) * 6,lwd=3,col=2)
-  sum(ponds$egg.mass)
+abline(v=sum(ponds$egg.mass),lwd=5,col=1,lty=1)
+abline(v=mean(ponds.simple$Sample.Mean) * 6,lwd=5,lty=3,col=3)
+legend("topleft",col=c(1,3),legend=c("truth","expectation"),lwd=4)
+
 ```
 
 
@@ -516,10 +650,31 @@ hist(ponds.simple$Sample.Mean * 6,main="",xlab="Totals per Sample")
 # [Probabilty of ]{style="color:#078BCD;"}
 
 $$
-P(\hat{\tau}) \leq 2 \times \tau
+P(\hat{\tau}\leq 2 \times \tau) 
 $$
 
 ```{r,echo=TRUE}
 length(which( tau.est <=  2*48))/length(tau.est)
 ```
 
+# [Sample Size]{style="color:#078BCD;"}
+
+But what $n$?
+
+- $n$ impacts variation in estimates
+- variation in $y$ impacts the influence of $n$
+- objective probably impacts $n$ the most
+- higher $n$ is not always better
+
+
+
+<!-- # [Confidence Intervals]{style="color:#078BCD;"} -->
+
+<!-- **Another measure of precision and accuracy!** -->
+
+<!-- . . . -->
+
+<!-- - uses one sample  -->
+<!-- - assumes distribution of all possible samples -->
+<!-- - provides an estimated interval -->
+<!-- - the interval is a measure related to the true population parameter (which is unknow) -->
