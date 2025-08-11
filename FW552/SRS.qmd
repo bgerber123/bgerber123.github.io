@@ -35,10 +35,10 @@ library(knitr)
 
 ![](../img/borealtoad.png)
 
-## [SRS Conceptual Walkthrough]{style="color:#078BCD;"}
 
+# [SRS]{style="color:#078BCD;"}
 
-
+## Conceptual Walkthrough
 
 :::: {.columns}
 
@@ -75,7 +75,7 @@ ponds %>%
 
 ::::
 
-![](../img/borealtoad.png)
+<!-- ![](../img/borealtoad.png) -->
 
 
 # [SRS]{style="color:#078BCD;"}
@@ -124,6 +124,12 @@ SRS: all samples have the same probability!
 
 . . .
 
+Convenient Sampling: What is the probability of one particular sample?
+
+
+
+# [SRS]{style="color:#078BCD;"}
+
 What is the probability pond "A" will be sampled"? Pond "B"?
 
 <br>
@@ -132,7 +138,7 @@ What is the probability pond "A" will be sampled"? Pond "B"?
 
 Look at all possible combinations:
 
-```{r, echo=TRUE, results='hide'}
+```{r, echo=TRUE}
 utils::combn(LETTERS[1:6],2)
 ```
 

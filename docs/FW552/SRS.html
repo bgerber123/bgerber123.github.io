@@ -216,8 +216,11 @@ code.r{
 <ul>
 <li>different egg masses per pond is meaningful why?</li>
 </ul>
-<p><img data-src="../img/borealtoad.png"></p>
-<h2 id="srs-conceptual-walkthrough"><span style="color:#078BCD;">SRS Conceptual Walkthrough</span></h2>
+
+<img data-src="../img/borealtoad.png" class="r-stretch"></section>
+<section id="srs" class="slide level1">
+<h1><span style="color:#078BCD;">SRS</span></h1>
+<h2 id="conceptual-walkthrough">Conceptual Walkthrough</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -267,9 +270,9 @@ code.r{
 </div>
 </div>
 </div></div>
-<p><img data-src="../img/borealtoad.png"></p>
+<!-- ![](../img/borealtoad.png) -->
 </section>
-<section id="srs" class="slide level1">
+<section id="srs-1" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>Population Parameter: <span class="math inline">\(\mu = 8\)</span></p>
 <div class="fragment">
@@ -293,7 +296,7 @@ code.r{
 </div>
 </div>
 </section>
-<section id="srs-1" class="slide level1">
+<section id="srs-2" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>What is the probability of any one particular sample?</p>
 <p><br></p>
@@ -302,17 +305,29 @@ code.r{
 <p><br></p>
 </div>
 <div class="fragment">
+<p>Convenient Sampling: What is the probability of one particular sample?</p>
+</div>
+</section>
+<section id="srs-3" class="slide level1">
+<h1><span style="color:#078BCD;">SRS</span></h1>
 <p>What is the probability pond “A” will be sampled”? Pond “B”?</p>
 <p><br></p>
-</div>
 <div class="fragment">
 <p>Look at all possible combinations:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>utils<span class="sc">::</span><span class="fu">combn</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
+[1,] "A"  "A"  "A"  "A"  "A"  "B"  "B"  "B"  "B"  "C"   "C"   "C"   "D"   "D"  
+[2,] "B"  "C"  "D"  "E"  "F"  "C"  "D"  "E"  "F"  "D"   "E"   "F"   "E"   "F"  
+     [,15]
+[1,] "E"  
+[2,] "F"  </code></pre>
+</div>
 </div>
 </div>
 </section>
-<section id="srs-2" class="slide level1">
+<section id="srs-4" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <div class="cell">
 <div class="cell-output-display">
@@ -442,34 +457,34 @@ code.r{
 <p>What is the probability pond “A” will be sampled”? Pond “B”?</p>
 </div>
 </section>
-<section id="srs-3" class="slide level1">
+<section id="srs-5" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>Is it okay to not like your random sample and resample?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "B" "E"</code></pre>
+<pre><code>[1] "B" "D"</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "F" "C"</code></pre>
+<pre><code>[1] "F" "D"</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C" "F"</code></pre>
+<pre><code>[1] "A" "D"</code></pre>
 </div>
 </div>
 <p><br> <br> <br> <br> <br></p>
 </div>
 </section>
-<section id="srs-4" class="slide level1">
+<section id="srs-6" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <p>Consider the sample mean <span class="math inline">\(\hat{\mu}\)</span> for each sample</p>
 <div class="cell">
@@ -629,7 +644,7 @@ code.r{
 </div>
 </div>
 </section>
-<section id="srs-5" class="slide level1">
+<section id="srs-7" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -731,7 +746,7 @@ code.r{
 <p>Estimator Bias?</p>
 </div></div>
 </section>
-<section id="srs-6" class="slide level1">
+<section id="srs-8" class="slide level1">
 <h1><span class="scrollable" style="color:#078BCD;">SRS</span></h1>
 <div class="cell">
 <div class="cell-output-display">
@@ -815,7 +830,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 </ul>
 </div>
 </section>
-<section id="srs-7" class="slide level1">
+<section id="srs-9" class="slide level1">
 <h1><span style="color:#078BCD;">SRS</span></h1>
 
 <!-- . . . -->
@@ -862,7 +877,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 \sigma^{2} = \frac{1}{6-1}\sum_{i=1}^{6} \left(y_{i}-8\right)^{2}
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>(<span class="dv">1</span><span class="sc">/</span>(<span class="dv">6-1</span>))<span class="sc">*</span><span class="fu">sum</span>((ponds<span class="sc">$</span>egg.mass<span class="dv">-8</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>(<span class="dv">1</span><span class="sc">/</span>(<span class="dv">6-1</span>))<span class="sc">*</span><span class="fu">sum</span>((ponds<span class="sc">$</span>egg.mass<span class="dv">-8</span>)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12.8</code></pre>
 </div>
@@ -875,13 +890,13 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 \hat{\sigma}^{2} = \frac{1}{n-1}\sum_{i=1}^{n} \left(y_{i}-\hat{\mu}\right)^{2}
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>var.per.sample <span class="ot">=</span> <span class="fu">apply</span>(</span>
-<span id="cb12-2"><a></a>                       <span class="fu">cbind</span>(ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">First Value</span><span class="st">`</span>,ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">Second Value</span><span class="st">`</span>),</span>
-<span id="cb12-3"><a></a>                       <span class="dv">1</span>,</span>
-<span id="cb12-4"><a></a>                       var</span>
-<span id="cb12-5"><a></a>                       )</span>
-<span id="cb12-6"><a></a><span class="co"># Expected value of population variance</span></span>
-<span id="cb12-7"><a></a>  <span class="fu">mean</span>(var.per.sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>var.per.sample <span class="ot">=</span> <span class="fu">apply</span>(</span>
+<span id="cb13-2"><a></a>                       <span class="fu">cbind</span>(ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">First Value</span><span class="st">`</span>,ponds.all<span class="sc">$</span><span class="st">`</span><span class="at">Second Value</span><span class="st">`</span>),</span>
+<span id="cb13-3"><a></a>                       <span class="dv">1</span>,</span>
+<span id="cb13-4"><a></a>                       var</span>
+<span id="cb13-5"><a></a>                       )</span>
+<span id="cb13-6"><a></a><span class="co"># Expected value of population variance</span></span>
+<span id="cb13-7"><a></a>  <span class="fu">mean</span>(var.per.sample)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12.8</code></pre>
 </div>
@@ -990,7 +1005,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">var</span>(ponds.simple<span class="sc">$</span>Sample.Mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">var</span>(ponds.simple<span class="sc">$</span>Sample.Mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.571429</code></pre>
 </div>
@@ -1051,13 +1066,13 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <section id="the-total-1" class="slide level1">
 <h1><span style="color:#078BCD;">The TOTAL</span></h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>tau.est <span class="ot">=</span> ponds.simple<span class="sc">$</span>Sample.Mean <span class="sc">*</span> <span class="dv">6</span></span>
-<span id="cb16-2"><a></a><span class="fu">hist</span>(tau.est,<span class="at">main=</span><span class="st">""</span>,<span class="at">xlab=</span><span class="st">"Totals per Sample"</span>)</span>
-<span id="cb16-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(ponds.simple<span class="sc">$</span>Sample.Mean) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>)</span>
-<span id="cb16-4"><a></a><span class="co">#truth</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>tau.est <span class="ot">=</span> ponds.simple<span class="sc">$</span>Sample.Mean <span class="sc">*</span> <span class="dv">6</span></span>
+<span id="cb17-2"><a></a><span class="fu">hist</span>(tau.est,<span class="at">main=</span><span class="st">""</span>,<span class="at">xlab=</span><span class="st">"Totals per Sample"</span>)</span>
+<span id="cb17-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(ponds.simple<span class="sc">$</span>Sample.Mean) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>)</span>
+<span id="cb17-4"><a></a><span class="co">#truth</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass) <span class="sc">*</span> <span class="dv">6</span>,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>  <span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  <span class="fu">sum</span>(ponds<span class="sc">$</span>egg.mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 48</code></pre>
 </div>
@@ -1081,7 +1096,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 P(\hat{\tau}) \leq 2 \times \tau
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
