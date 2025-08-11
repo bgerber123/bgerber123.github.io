@@ -10370,15 +10370,15 @@
     "objectID": "FW552/SRS.html#goal",
     "href": "FW552/SRS.html#goal",
     "title": "Simple Random Sampling",
-    "section": "",
-    "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
+    "section": "Goal",
+    "text": "Goal\n\nGoal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
   },
   {
     "objectID": "FW552/SRS.html#srs-conceptual-walkthrough",
     "href": "FW552/SRS.html#srs-conceptual-walkthrough",
     "title": "Simple Random Sampling",
     "section": "SRS Conceptual Walkthrough",
-    "text": "SRS Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\nPond\negg.mass\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+    "text": "SRS Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\n\nPond\negg.mass\n\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
   },
   {
     "objectID": "FW552/SRS.html",
@@ -10386,5 +10386,33 @@
     "title": "Simple Random Sampling",
     "section": "",
     "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
+  },
+  {
+    "objectID": "FW552/SRS.html#population-variance",
+    "href": "FW552/SRS.html#population-variance",
+    "title": "Simple Random Sampling",
+    "section": "Population Variance",
+    "text": "Population Variance\n\\[\n\\sigma^{2} = \\frac{1}{N-1}\\sum_{i=1}^{N} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2}\n\\]"
+  },
+  {
+    "objectID": "FW552/SRS.html#population-variance-1",
+    "href": "FW552/SRS.html#population-variance-1",
+    "title": "Simple Random Sampling",
+    "section": "Population Variance",
+    "text": "Population Variance\n\\[\n\\sigma^{2} = \\frac{1}{6-1}\\sum_{i=1}^{6} \\left(\\hat{\\mu}_{i}-8\\right)^{2}\n\\]\n\n(1/(6-1))*sum((ponds.simple$Sample.Mean-8)^2)\n\n[1] 12.8"
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-variance",
+    "href": "FW552/SRS.html#sample-variance",
+    "title": "Simple Random Sampling",
+    "section": "Sample Variance",
+    "text": "Sample Variance\nEstimate population variance from 1 sample\n\nBLACK MAGIC!\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{n-1}\\sum_{i=1}^{n} \\left(y_{i}-\\hat{\\mu}\\right)^{2}\n\\]\n\n\n\nvar.per.sample = apply(\n                       cbind(ponds.all$`First Value`,ponds.all$`Second Value`),\n                       1,\n                       var\n                       )\n(1/(6-1))*sum((ponds.simple$Sample.Mean-8)^2)\n\n[1] 12.8\n\nmean(var.per.sample)\n\n[1] 12.8"
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-variance-1",
+    "href": "FW552/SRS.html#sample-variance-1",
+    "title": "Simple Random Sampling",
+    "section": "Sample Variance",
+    "text": "Sample Variance\n\nabline(v=mean.sample.var,col=2) mean.sample.var ```"
   }
 ]

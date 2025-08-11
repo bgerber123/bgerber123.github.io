@@ -24,6 +24,8 @@ code.r{
 ```{r,echo=FALSE,warning=FALSE,results='hide'}
 library(tidyverse)
 library(kableExtra)
+library(magrittr)
+library(knitr)
 ```
 
 **Goal:** to know the mean number of boreal toad egg masses per pond in RMNP
@@ -54,8 +56,6 @@ library(kableExtra)
 ::: {.column width="50%"}
 
 ```{r, echo=FALSE}
-library(magrittr)
-library(knitr)
 
 ponds = data.frame(matrix(nrow=6,ncol=2))
 colnames(ponds)=c("Pond","egg.mass")
@@ -343,9 +343,9 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 
 # [Estimator Properties]{style="color:#078BCD;"}
 
-- Precise estimator
-- Unbiased estimator
-- Is our estimator below precise?
+- Precise and unbiased estimator
+- Is our estimator below precise? 
+
 
 ```{r,echo=FALSE}
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
@@ -353,4 +353,167 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      xlab="Sample Mean")
 ```
 
+# [Population Variance]{style="color:#078BCD;"}
+
+The variance of all sample units
+
+$$
+\sigma^{2} = \frac{1}{N-1}\sum_{i=1}^{N} \left(y_{i}-\mu\right)^{2}
+$$
+
+
+
+
+$$
+\sigma^{2} = \frac{1}{6-1}\sum_{i=1}^{6} \left(y_{i}-8\right)^{2}
+$$
+
+```{r,echo=TRUE,results='markup'}
+(1/(6-1))*sum((ponds$egg.mass-8)^2)
+```
+
+# [Sample Variance]{style="color:#078BCD;"}
+
+**Estimate population variance** from each sample
+
+
+$$
+\hat{\sigma}^{2} = \frac{1}{n-1}\sum_{i=1}^{n} \left(y_{i}-\hat{\mu}\right)^{2}
+$$
+
+
+```{r,echo=TRUE,results='markup'}
+var.per.sample = apply(
+                       cbind(ponds.all$`First Value`,ponds.all$`Second Value`),
+                       1,
+                       var
+                       )
+# Expected value of population variance
+  mean(var.per.sample)
+```
+
+# [Sample Variance]{style="color:#078BCD;"}
+
+```{r,echo=FALSE}
+ hist(var.per.sample,xlab="Sample Variance")
+ abline(v=mean(var.per.sample),lwd=3)
+```
+
+
+- Unbiased estimate of the population variance.
+- Individual values will deviate from the population variance.
+
+
+# [Variance of Sampling Distribution]{style="color:#078BCD;"}
+
+```{r,echo=FALSE}
+ponds.simple %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 20)
+```
+
+```{r,echo=TRUE}
+var(ponds.simple$Sample.Mean)
+```
+
+- **Population variance** - variation among sample units; estimate from sample variance
+- **Var. Sampling Distribution** - variance of mean values from each possible sample
+
+# [Connect these two]{style="color:#078BCD;"}
+
+Variance of all units vs variance of all sample means
+
+```{r,echo=FALSE}
+par(mfrow=c(2,1))
+hist(ponds$egg.mass,freq=TRUE,breaks=10,
+     main="",
+     xlab="Sample Units (egg masses)")
+hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
+     main="",
+     xlab="Sample Mean")
+```
+
+# [Connect these two]{style="color:#078BCD;"}
+
+- As the sample size (n) increases the sample variance declines by **1/n**
+- Finite-population correction factor
+
+$$
+\left(\frac{N-n}{N}\right)
+$$
+
+# [Connect these two]{style="color:#078BCD;"}
+
+:::{.incremental}
+
+- Sample size (n) = 2
+- Total units (N) = 6
+- E[pop var] = 12.8
+- E[sample dist. var] = 4.3
+- 1/n = 0.5
+- Finite correction factor = 0.67
+- **E[pop var] $\times$ 1/n $\times$ CF = 4.3**
+
+:::
+
+
+# [Connect these two]{style="color:#078BCD;"}
+
+### **Why does this matter?**
+
+# [Connect these two]{style="color:#078BCD;"}
+
+If you know the E[pop var] ...
+
+- you have a mechanism to understand the variation of sample distribution of the means
+- the more variation in $y$, the more variation in sampling dist. of means.
+
+
+# [The TOTAL]{style="color:#078BCD;"}
+
+*Extrapolate the sample to the total population*
+
+$$
+\hat{\tau} = N \times \hat{\mu} = \frac{N}{n}\sum_{i=1}^{n}(y_i)
+$$
+
+# [The TOTAL]{style="color:#078BCD;"}
+
+
+```{r,echo=TRUE}
+tau.est = ponds.simple$Sample.Mean * 6
+hist(tau.est,main="",xlab="Totals per Sample")
+abline(v=mean(ponds.simple$Sample.Mean) * 6,lwd=3)
+#truth
+  abline(v=sum(ponds$egg.mass) * 6,lwd=3,col=2)
+  sum(ponds$egg.mass)
+```
+
+
+# [The TOTAL]{style="color:#078BCD;"}
+
+Variance of the total
+
+$$
+\text{var}(\hat{\tau}) = N\times(N-1) \times \frac{\hat{\sigma}^2}{n}
+$$
+
+# [Probabilty of ]{style="color:#078BCD;"}
+
+Whenever you have the sampling distribution, frame *precision* in terms of what matters to you.
+
+
+```{r,echo=FALSE}
+hist(ponds.simple$Sample.Mean * 6,main="",xlab="Totals per Sample")
+```
+
+# [Probabilty of ]{style="color:#078BCD;"}
+
+$$
+P(\hat{\tau}) \leq 2 \times \tau
+$$
+
+```{r,echo=TRUE}
+length(which( tau.est <=  2*48))/length(tau.est)
+```
 
