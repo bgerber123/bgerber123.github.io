@@ -7,6 +7,11 @@ format:
   revealjs:
     chalkboard: true
     multiplex: true
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
 ---
 
 ## [Class Stuff]{style="color:#078BCD;"}
