@@ -1,8 +1,3 @@
-
-##############
-#  MODULE 2  #
-##############
-
 # Chapter 2: Simple Random Sampling
 # 2.8. Computing Notes
 

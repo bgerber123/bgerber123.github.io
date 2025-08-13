@@ -16,13 +16,13 @@ code.r{
 <a href="/FW552/Syllabus.qmd">Syllabus</a></p>
 ```
 
-**Book**: We will be using quite a bit of [Thompson. 2012. Sampling. Third Edition.](Sampling - 2012 - Thompson.pdf).
+**Book**: We will be using quite a bit of [Thompson. 2012. Sampling. Third Edition.](/readings552/Sampling - 2012 - Thompson.pdf).
 
 **Readings**: Come prepared to discuss the assigned reading on the next class after the readings were assigned. 
 
 - What was interesting and useful? What did not make sense? What did you disagree with? What did you learn? <span style="color:red">Bring points to highlight and bring questions (make a list). Check each week's link to see if there are listed reading questions.</span>
 
-**Assignments**: are assigned on the day they are listed; check Cavas for due date.
+**Assignments**: are assigned on the day they are listed; check Canvas for due date.
 
 
 
@@ -30,37 +30,37 @@ code.r{
 
 ## Schedule 
 
-Week                                |	Day|	Date     | 	In Class Topic                         | Assignments           |	   Readings                                                
+Week                                |	Day|	Date     | 	In Class Topic                         | Assignments           |	   Readings
 -                                   | -- | -----     |----                  | ----  |----                                  
 <a href="/FW552/week1.qmd">1</a>    | Mo | 25-Aug	   | Introduction                            | Discussion Post; Install [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/). |  Hankin Ch. 2; Gerber et al. 2012                    
-&nbsp;                              |	We | 27-Aug	   | Paper Discussion / R and RMarkdown      | R Fundamentals        | Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3
-<a href="/FW552/week2.qmd">2</a>    |	Mo | 1-Sep	   | <span style="color:red">No Class</span> |                       |                        
-&nbsp;                              | We | 3-Sep	   | Sampling I                              | Discussion Post       | Boyd et al. 2023 
-<a href="/FW552/week3.qmd">3</a>    |	Mo | 8-Sep	   | Paper Discussion; Big Data Paradox      | Quiz 1; Assignment 1  | Thompson Ch. 2        
-&nbsp;                              |	We | 10-Sep	   | Simple Random Sampling                  |                       | Thompson Chapter 3             
-<a href="/FW552/week4.qmd">4</a>    |	Mo | 15-Sep	   | Confidence Intervals                    | Quiz 2; Assignment 2  | Thompson Chapter 4           
-&nbsp;                              |	We | 17-Sep	   | Sample Size                             | Assignment 3          |                          
-5                                   |	Mo | 22-Sep	   |                                         |                       |                       
-&nbsp;                              |	We | 24-Sep	   |                                         |                   |                                  
-6                                   |	Mo | 29-Sep	   |                                         |                   |                                   
-&nbsp;                              |	We | 1-Oct	   |                                         |                   |                                    
-7                                   |	Mo | 6-Oct	   |                                         |                   |                                  
-&nbsp;                              |	We | 8-Oct	   |                                         |                   |                                   
-8                                   |	Mo | 13-Oct   |                                         |                   |                                     
-&nbsp;                              |	We | 15-Oct	   |                                         |                   |                          
-9                                   |	Mo | 20-Oct	   |                                         |                   |                                    
-&nbsp;                              |	We | 22-Oct	   |                                         |                   |                          
-10                                  | Mo | 27-Oct    |                                         |                   |                                    
-&nbsp;                              | We | 29-Oct	   |                                         |                   |                          
-11                                  | Mo | 3-Nov	   |                                         |                   |                                     
-&nbsp;                              | We | 5-Nov	   |                                         |                   |                                  
-12                                  | Mo | 10-Nov	   |                                         |                   |                                     
-&nbsp;                              | We | 12-Nov	   |                                         |                   |                                     
-13                                  | Mo | 17-Nov	   |                                         |                   |                                    
-&nbsp;                              | We | 19-Nov	   |                                         |                   |                                    
-14                                  | Mo | 24-Nov	   | <span style="color:red">No Class</span> |                   |                                    
-&nbsp;                              | We | 26-Nov	   | <span style="color:red">No Class</span> |                   |                                    
-15                                  | Mo | 1-Dec	   |                                         |                   |                                    
-&nbsp;                              | We | 3-Dec	   |                                         |                   |                                    
-16                                  | Mo | 8-Dec	   |                                         |                   |                                     
-&nbsp;                              | We | 10-Dec	   |                                         |                   |                                     
+&nbsp;                              |	We | 27-Aug	   | Paper Discussion / R and RMarkdown      | R Fundamentals           | Hankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3
+<a href="/FW552/week2.qmd">2</a>    |	Mo | 1-Sep	   | <span style="color:red">No Class</span> |                          |                         
+&nbsp;                              | We | 3-Sep	   | Sampling I                              | Discussion Post          | Boyd et al. 2023 
+<a href="/FW552/week3.qmd">3</a>    |	Mo | 8-Sep	   | Paper Discussion; Big Data Paradox      | Quiz 1; Assignment Ch. 2 | Thompson Ch. 2        
+&nbsp;                              |	We | 10-Sep	   | Simple Random Sampling                  |                          | Thompson Ch. 3   
+<a href="/FW552/week4.qmd">4</a>    |	Mo | 15-Sep	   | Confidence Intervals                    | Quiz 2; Assignment Ch.3  | Thompson Ch. 4           
+&nbsp;                              |	We | 17-Sep	   | Sample Size                             | Assignment Ch. 4         | Thompson Ch. 5.0 - 5.4 
+<a href="/FW552/week4.qmd">5</a>    |	Mo | 22-Sep	   | Proportions                             | Assignment Ch. 5         | Boyd et al. 2023 Ecology  
+&nbsp;                              |	We | 24-Sep	   | Paper Discussion                        |                          |
+6                                   |	Mo | 29-Sep	   | Stratified Sampling I                   |                   |               
+&nbsp;                              |	We | 1-Oct	   | Stratified Sampling I                   |                   |               
+7                                   |	Mo | 6-Oct	   | Cluster Sampling                        |                   |                                  
+&nbsp;                              |	We | 8-Oct	   | Systematic Sampling                     |                   |                           
+8                                   |	Mo | 13-Oct    | Multi-stage Sampling I                  |                   |                               
+&nbsp;                              |	We | 15-Oct	   | Multi-stage Sampling I                  |                   |                          
+9                                   |	Mo | 20-Oct	   | Ratio Estimation                        |                   |                                
+&nbsp;                              |	We | 22-Oct	   | Double Sampling                         |                   |                          
+10                                  | Mo | 27-Oct    | Mid-term Exam                           |                   |                  
+&nbsp;                              | We | 29-Oct	   | Mid-term Exam                           |                   |                          
+11                                  | Mo | 3-Nov	   | Adaptive Cluster Sampling               |                   |                   
+&nbsp;                              | We | 5-Nov	   | Design I (Causal Inference)             |                   |                     
+12                                  | Mo | 10-Nov	   | Design II (Causal Inference)            |                   |                                
+&nbsp;                              | We | 12-Nov	   | Design II (Causal Inference)            |                   |          
+13                                  | Mo | 17-Nov	   | Distance Sampling I                     |                   |                   
+&nbsp;                              | We | 19-Nov	   | Distance Sampling II                    |                   |                             
+14                                  | Mo | 24-Nov	   | <span style="color:red">No Class</span> |                   |                          
+&nbsp;                              | We | 26-Nov	   | <span style="color:red">No Class</span> |                   |                      
+15                                  | Mo | 1-Dec	   | Distance Sampling III                   |                   |             
+&nbsp;                              | We | 3-Dec	   | Paper Discussion                        |                   |           
+16                                  | Mo | 8-Dec	   | Presentations I                         |                   |           
+&nbsp;                              | We | 10-Dec	   | Presentations I                         |                   |                                     

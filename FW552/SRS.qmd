@@ -595,7 +595,7 @@ abline(v=100,col=1,lwd=3)
 
 - Sampling distribution is less variable
 - Sampling distribution centers on population mean
-- Sampling distribution looks more 'Normal'
+- As n increases, the distribution becomes 'Normal'
 
 . . .
 
@@ -603,7 +603,7 @@ This is because of the Central limit theorem (CLT)
 
 - CLT relies on random/prob. based sampling
 - leads to parameter unbiasedness
-- Does not depends on distribution of samples
+- Does not depend on distribution of samples
 - allows estimation of precision of parameters
 - allows estimation of confidence intervals
 
@@ -666,6 +666,11 @@ But what $n$?
 - objective probably impacts $n$ the most
 - higher $n$ is not always better
 
+
+```{r,echo=FALSE, results='hide'}
+#Output code into R file
+knitr::purl(input="../FW552/SRS.qmd",output="../FW552/SRS.r")
+```
 
 
 <!-- # [Confidence Intervals]{style="color:#078BCD;"} -->

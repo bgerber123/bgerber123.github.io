@@ -4,63 +4,44 @@ title: ""
 
 ## Week 5
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
-##### **In Class Discussion Questions for Fieberg, Ch. 8 and Tredennick et al. 2021**
-
-- Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2
-
-- What is stepwise selection? How does it perform?
-
-- Why fit only one model? Drawbacks? How to decide on how many variables?
-
-- What is AIC? 
-
-- What is Regularization using penalization?
-
-- "Model selection is the Black Hole of Statistics". What do you think?
-
-- Covariate selection vs. model selection?
-
-##### **In-Class Group Questions**
-
-<a href="/classfiles/variableCombs/VariableCombs.Rmd">Variable Combinations</a>
-
-#### [Assigned]{style="color:red;"}
-
-- Background Reading (not required):
-  - <a href="/readings/Gelman and Hill Chapters 11 and 12.pdf"> Gelman and Hill Ch. 11 and 12</a>.
+- Lecture: <a href="/FW552/Proportions.qmd">Proportions</a> 
+- Lecture Code: <a href="/FW552/Proportions.R">Proportions.R</a>
 
 
+#### **Assigned**
 
+- **Due Next Class**: Read <a href="/readings552/Boyd et al 2023 Ecology.pdf">Boyd et al 2023 Ecology </a>
+- **Due 1 week:** [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2821522): Book Problem, Chapter 5, problems 1 and 3
 
-<!-- #### [Assigned]{style="color:red;"} -->
+### [Day 2]{style="color:red;"}
 
-<!-- -   Readings for next class:  -->
-<!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
+#### **In Class**
 
+*In Class Discussion Questions of Boyd et al. 2023*
 
+- Summarize the main setup of this paper.
+ 
+- What is a naive sample mean?
 
+- What is quasi-randomization?
+ 
+- What is Post-stratification?
 
+- What is Super-population modeling?
 
-### Day 2 (lab)
+- What is Doubly robust estimator?
 
-#### [Today]{style="color:red;"}
+- What is Subsampling?
 
--   Lecture: <a href="/FW680A4/hierarchical.qmd">Hierarchical Models</a>
+- What is Multilevel regression and post-stratification?
 
--   Downloads: <a href="/classfiles/glmmlab/week5files.zip">Files</a>
+- How did the 6 estimators peform in using sample weights to correct for non-probability samples?
 
--   Install R packages:
+#### **Assigned** 
 
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("glmmTMB","broom.mixed","lme4"))
-```
-
-#### [Assigned]{style="color:red;"}
-
-  - <a href="/readings/Kery and Kellner Chapter 2.pdf"> Kery and Kellner Ch. 2, sections 2.7-2.10</a>.
+<!-- - **Due 1 Week:** [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2818141): Book Problem, Chapter 4, problem 1 and Class Problem -->
 

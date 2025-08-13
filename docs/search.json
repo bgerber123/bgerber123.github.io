@@ -2355,8 +2355,8 @@
     "objectID": "FW680A4/Introduction.html#class-stuff",
     "href": "FW680A4/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
-    "section": "",
-    "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
+    "section": "Class Stuff",
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
   },
   {
     "objectID": "FW680A4/Introduction.html#what-is-this-course",
@@ -2468,7 +2468,7 @@
     "href": "FW680A4/Introduction.html#learning",
     "title": "Wildlife Ecology Modeling",
     "section": "Learning",
-    "text": "Learning\n\n\n\n\n\nI do not know where you are starting"
+    "text": "Learning\n\n\nI do not know where you are starting"
   },
   {
     "objectID": "FW680A4/Introduction.html#statistics-and-coding",
@@ -2559,7 +2559,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\n. . .\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
+    "text": "The language of R\n\nObjects\nA storage place for information; stored in the “Environment”\n\n\n‘Attributes’ describes the structure or information of the object"
   },
   {
     "objectID": "FW680A4/Introduction.html#the-language-of-r-1",
@@ -2601,7 +2601,7 @@
     "href": "FW680A4/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.22895129 -0.23543173  0.25250440 -0.05512031 -0.19921642 -0.06873026\n [7] -0.15605470  0.57359061  0.32028873  0.22507929\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.2 0.1 0.2 0.1 0.0 0.0 0.4 0.3 0.3"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.618403326 -0.006921372 -0.481460119  0.081494982  0.053305038\n [6]  0.650195620  0.332174332  0.089708473  0.026064767  0.171748750\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.0 0.1 0.2 0.2 0.3 0.2 0.1 0.1 0.0"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
@@ -2615,7 +2615,7 @@
     "href": "FW680A4/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\n\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
+    "text": "Think Statistically\nKnow…\n\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
   },
   {
     "objectID": "FW680A4/Introduction.html#type-of-modeling",
@@ -2636,7 +2636,7 @@
     "href": "FW680A4/Introduction.html#assessment",
     "title": "Wildlife Ecology Modeling",
     "section": "Assessment",
-    "text": "Assessment\n\n\nAssessment Components\nPercentage of Grade\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nDiscussions\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
+    "text": "Assessment\n\n\n\nAssessment Components\nPercentage of Grade\n\n\n\n\nCourse Engagement\n10%\n\n\nLab Assignments\n40%\n\n\nDiscussions\n10%\n\n\nQuizzes\n10%\n\n\nProject\n30%"
   },
   {
     "objectID": "FW680A4/Introduction.html#project-1",
@@ -2657,7 +2657,7 @@
     "href": "FW680A4/Introduction.html#statistics-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Statistics in the Modern Age",
-    "text": "Statistics in the Modern Age\n. . .\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
+    "text": "Statistics in the Modern Age\n\n\n\"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good\nstatistical thinking have not changed, but their implementation has.\" - Cox and Efron, Sci. Adv. 2017;3: e1700768."
   },
   {
     "objectID": "FW680A4/Introduction.html#software",
@@ -2678,14 +2678,14 @@
     "href": "FW680A4/Introduction.html#why-use-r",
     "title": "Wildlife Ecology Modeling",
     "section": "Why use R?",
-    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\n\ndata management\nstatistics\nplotting / graphics"
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-use-rstudio",
     "href": "FW680A4/Introduction.html#why-use-rstudio",
     "title": "Wildlife Ecology Modeling",
     "section": "Why use RStudio?",
-    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\n\nR Shiny: Interactive online apps\n\nR Markdown: Interactive documents\n\nQuarto: interactive articles, websites, blog, …\n\nPosit - Certified B corp"
+    "text": "Why use RStudio?\n\nMakes using R easier\nProjects (file mgmt)\nR Shiny: Interactive online apps\nR Markdown: Interactive documents\nQuarto: interactive articles, websites, blog, …\nPosit - Certified B corp"
   },
   {
     "objectID": "FW680A4/Introduction.html#our-aim-1",
@@ -2699,7 +2699,7 @@
     "href": "FW680A4/Introduction.html#the-language-of-r-4",
     "title": "Wildlife Ecology Modeling",
     "section": "The language of R",
-    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n. . .\nobject = function(input1, input2)\n\n. . .\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
+    "text": "The language of R\nobject = function(argument1 = input1, argument1 = input2)\n\n\nobject = function(input1, input2)\n\n\n\nthis = sign(x = -5)\n\n\n\nsign(-5)\n\n[1] -1\n\nsign(5)\n\n[1] 1"
   },
   {
     "objectID": "FW680A4/week2.html",
@@ -3161,7 +3161,7 @@
     "href": "FW680A4/Introduction.html#science-practice",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Practice",
-    "text": "Science Practice\n\nI am a pragmatist\n\n. . .\n\nThere are many ways to do great science\n\n. . .\n\nThere are more ways to do meh science\n\n. . .\n\nDisciplines have conventions\n\n. . .\n\nThere are foundations of scientific and statistical learning\n\n. . .\n\nKnow the why of your decisions\n\n. . .\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Practice\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW680A4/Introduction.html#section",
@@ -3182,7 +3182,7 @@
     "href": "FW680A4/Introduction.html#code-organization",
     "title": "Wildlife Ecology Modeling",
     "section": "Code Organization",
-    "text": "Code Organization\n\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\n. . .\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
+    "text": "Code Organization\n\n\nHierarchical code organization\n\ncode structure using indenting\ntop –&gt; bottom execution\n\n\n\n\nHelp! My code doesn’t work…\n\n                cor.sp.route.cor=vector(\"list\",n.species)\ncor.sp=rep(NA,n.species)\n            for(s in 1:n.species){\nroute=new.cov.species.long.scaled[[s]]$routeID\ncor.sp[s]=cor(patch.size20.species.scaled.mat.center.route[s,],patch.count20.species.scaled.mat.center.route[s,])\n    for(i in 1:nroutes){\ntemp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n  temp2=patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n  if(length(temp1)&gt;5){\n  cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n  }}}"
   },
   {
     "objectID": "FW680A4/Introduction.html#better",
@@ -8607,28 +8607,28 @@
     "href": "FW552/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?"
   },
   {
     "objectID": "FW552/week5.html#week-5",
     "href": "FW552/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?"
   },
   {
     "objectID": "FW552/week3.html",
     "href": "FW552/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\nLecture Code: SRS.R\n\n\n\n\n\nRead Thompson Chapter 3  ; download code from this chapter here.\nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week3.html#week-3",
     "href": "FW552/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\n\n\n\n\n\nRead Thompson Chapter 3 \nPlease bring a laptop next class"
+    "text": "Lecture: Big Data\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nWhat is representativeness?\nWhat are design weights?\nWhat is a non-probability sample and why are they a concern?\nTable 1: do the concerns here make sense?\nTake-away’s from Box1?\nHow does model-based inference help with sampling issues?\nWhat do we do about non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 2  ; download code from this chapter here.\nDue in 1 Week: Canvas Quiz 1\nDue in 1 Week: Canvas Assignment: Book Problems, Chapter 2, problems 1 and 3\n\n\n\n\n\n\n\n\nLecture: Simple Random Sampling\nLecture Code: SRS.R\n\n\n\n\n\nRead Thompson Chapter 3  ; download code from this chapter here.\nPlease bring a laptop next class"
   },
   {
     "objectID": "FW552/week16.html",
@@ -8677,21 +8677,21 @@
     "href": "FW552/schedule.html",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "",
-    "text": "Schedule\n\n\nSyllabus\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are assigned on the day they are listed; check Cavas for due date."
+    "text": "Schedule\n\n\nSyllabus\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are assigned on the day they are listed; check Canvas for due date."
   },
   {
     "objectID": "FW552/schedule.html#course-stuff",
     "href": "FW552/schedule.html#course-stuff",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "",
-    "text": "Schedule\n\n\nSyllabus\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are assigned on the day they are listed; check Cavas for due date."
+    "text": "Schedule\n\n\nSyllabus\nBook: We will be using quite a bit of Thompson. 2012. Sampling. Third Edition..\nReadings: Come prepared to discuss the assigned reading on the next class after the readings were assigned.\n\nWhat was interesting and useful? What did not make sense? What did you disagree with? What did you learn? Bring points to highlight and bring questions (make a list). Check each week’s link to see if there are listed reading questions.\n\nAssignments: are assigned on the day they are listed; check Canvas for due date."
   },
   {
     "objectID": "FW552/schedule.html#schedule",
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment 1\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Chapter 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment 2\nThompson Chapter 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment 3\n\n\n\n5\nMo\n22-Sep\n\n\n\n\n\n \nWe\n24-Sep\n\n\n\n\n\n6\nMo\n29-Sep\n\n\n\n\n\n \nWe\n1-Oct\n\n\n\n\n\n7\nMo\n6-Oct\n\n\n\n\n\n \nWe\n8-Oct\n\n\n\n\n\n8\nMo\n13-Oct\n\n\n\n\n\n \nWe\n15-Oct\n\n\n\n\n\n9\nMo\n20-Oct\n\n\n\n\n\n \nWe\n22-Oct\n\n\n\n\n\n10\nMo\n27-Oct\n\n\n\n\n\n \nWe\n29-Oct\n\n\n\n\n\n11\nMo\n3-Nov\n\n\n\n\n\n \nWe\n5-Nov\n\n\n\n\n\n12\nMo\n10-Nov\n\n\n\n\n\n \nWe\n12-Nov\n\n\n\n\n\n13\nMo\n17-Nov\n\n\n\n\n\n \nWe\n19-Nov\n\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\n\n\n\n\n\n \nWe\n3-Dec\n\n\n\n\n\n16\nMo\n8-Dec\n\n\n\n\n\n \nWe\n10-Dec"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\n\n\n\n6\nMo\n29-Sep\nStratified Sampling I\n\n\n\n\n \nWe\n1-Oct\nStratified Sampling I\n\n\n\n\n7\nMo\n6-Oct\nCluster Sampling\n\n\n\n\n \nWe\n8-Oct\nSystematic Sampling\n\n\n\n\n8\nMo\n13-Oct\nMulti-stage Sampling I\n\n\n\n\n \nWe\n15-Oct\nMulti-stage Sampling I\n\n\n\n\n9\nMo\n20-Oct\nRatio Estimation\n\n\n\n\n \nWe\n22-Oct\nDouble Sampling\n\n\n\n\n10\nMo\n27-Oct\nMid-term Exam\n\n\n\n\n \nWe\n29-Oct\nMid-term Exam\n\n\n\n\n11\nMo\n3-Nov\nAdaptive Cluster Sampling\n\n\n\n\n \nWe\n5-Nov\nDesign I (Causal Inference)\n\n\n\n\n12\nMo\n10-Nov\nDesign II (Causal Inference)\n\n\n\n\n \nWe\n12-Nov\nDesign II (Causal Inference)\n\n\n\n\n13\nMo\n17-Nov\nDistance Sampling I\n\n\n\n\n \nWe\n19-Nov\nDistance Sampling II\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nDistance Sampling III\n\n\n\n\n \nWe\n3-Dec\nPaper Discussion\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations I"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9062,14 +9062,14 @@
     "href": "FW552/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week4.html#week-4",
     "href": "FW552/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week6.html",
@@ -10370,8 +10370,8 @@
     "objectID": "FW552/SRS.html#goal",
     "href": "FW552/SRS.html#goal",
     "title": "Simple Random Sampling",
-    "section": "Goal",
-    "text": "Goal\n\nGoal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
+    "section": "",
+    "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
   },
   {
     "objectID": "FW552/SRS.html#srs-conceptual-walkthrough",
@@ -10414,5 +10414,215 @@
     "title": "Simple Random Sampling",
     "section": "Sample Variance",
     "text": "Sample Variance\n\nabline(v=mean.sample.var,col=2) mean.sample.var ```"
+  },
+  {
+    "objectID": "FW552/Proportions.html#proportions",
+    "href": "FW552/Proportions.html#proportions",
+    "title": "Proportions",
+    "section": "",
+    "text": "Strong Interest in fish/wildlife\nExamples?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#proportions-1",
+    "href": "FW552/Proportions.html#proportions-1",
+    "title": "Proportions",
+    "section": "Proportions",
+    "text": "Proportions\n\\[\ny \\in \\{0,1\\}\n\\] \\[\n1 = \\text{occur} \\\\0 = \\text{not occur}\n\\]\n. . .\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n. . .\n\\[\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]"
+  },
+  {
+    "objectID": "FW552/Proportions.html#pao",
+    "href": "FW552/Proportions.html#pao",
+    "title": "Proportions",
+    "section": "PAO",
+    "text": "PAO\nProportion area occupied\nHow does sample grid effect precision?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#sigma2",
+    "href": "FW552/Proportions.html#sigma2",
+    "title": "Proportions",
+    "section": "Sigma^2",
+    "text": "Sigma^2"
+  },
+  {
+    "objectID": "FW552/Proportions.html#proportion-area-occupied",
+    "href": "FW552/Proportions.html#proportion-area-occupied",
+    "title": "Proportions",
+    "section": "Proportion area occupied",
+    "text": "Proportion area occupied\nHow does sample grid effect \\(\\hat{p}\\) and \\(\\hat{\\sigma}^2_{p}\\)?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#how-does-sample-grid-effect-precision",
+    "href": "FW552/Proportions.html#how-does-sample-grid-effect-precision",
+    "title": "Proportions",
+    "section": "How does sample grid effect precision?",
+    "text": "How does sample grid effect precision?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#proportion-area-occupied-1",
+    "href": "FW552/Proportions.html#proportion-area-occupied-1",
+    "title": "Proportions",
+    "section": "Proportion area occupied",
+    "text": "Proportion area occupied\nHow does sample grid effect \\(\\hat{p}\\) and \\(\\hat{\\sigma}^2_{p}\\)?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#sampling-problem",
+    "href": "FW552/Proportions.html#sampling-problem",
+    "title": "Proportions",
+    "section": "[Sampling ‘Problem’]",
+    "text": "[Sampling ‘Problem’]"
+  },
+  {
+    "objectID": "FW552/Proportions.html#my-wolverine-problem",
+    "href": "FW552/Proportions.html#my-wolverine-problem",
+    "title": "Proportions",
+    "section": "My Wolverine ‘Problem’",
+    "text": "My Wolverine ‘Problem’"
+  },
+  {
+    "objectID": "FW552/Proportions.html#a-sampling-problem",
+    "href": "FW552/Proportions.html#a-sampling-problem",
+    "title": "Proportions",
+    "section": "A Sampling ‘Problem’",
+    "text": "A Sampling ‘Problem’\n\nSites surveyed by the States were selected via SRS\n\n\n\na handful of additional sites were surveyed by other entities (e.g., NGO) using the same field protocol\n\n. . .\nShould I include the additional/ancillary surveys as data?\nShould I report the cells with occurrences at all?\n. . .\nIn small groups: Discuss and then tell me what to do and explain."
+  },
+  {
+    "objectID": "FW552/Proportions.html#what-if",
+    "href": "FW552/Proportions.html#what-if",
+    "title": "Proportions",
+    "section": "What if?",
+    "text": "What if?\n\nN = 200\np = 0.5\nSRS of n = 60\n\n\n\n  sites occu\n1     1    0\n2     2    1\n3     3    0\n4     4    1\n5     5    1\n6     6    1"
+  },
+  {
+    "objectID": "FW552/Proportions.html#srs",
+    "href": "FW552/Proportions.html#srs",
+    "title": "Proportions",
+    "section": "SRS",
+    "text": "SRS\nSampling Distribution of \\(\\hat{p}\\)\n\n\n\n\n\n\n\n\nEstimator Bias = -0.00005\nDistribution Var = 0.00084"
+  },
+  {
+    "objectID": "FW552/Proportions.html#ancillary-occurences",
+    "href": "FW552/Proportions.html#ancillary-occurences",
+    "title": "Proportions",
+    "section": "Ancillary Occurences",
+    "text": "Ancillary Occurences\nSRS of n = 200 with 5% ancillary and occupied sites\n\n\n\n\n\n\n\n\nEstimator Bias = 0.02382\nDistribution Var = 0.00073"
+  },
+  {
+    "objectID": "FW552/Proportions.html#ancillary-occurences-1",
+    "href": "FW552/Proportions.html#ancillary-occurences-1",
+    "title": "Proportions",
+    "section": "Ancillary Occurences",
+    "text": "Ancillary Occurences\nSRS of n = 200 with 10% ancillary and occupied sites\n\n\n\n\n\n\n\n\nEstimator Bias = 0.04536\nDistribution Var = 0.00069"
+  },
+  {
+    "objectID": "FW552/Proportions.html#simulation",
+    "href": "FW552/Proportions.html#simulation",
+    "title": "Proportions",
+    "section": "Simulation",
+    "text": "Simulation\nWhat if?\n\nN = 600\np = 0.5\nSRS of n = 200\n\n\n\n  sites occu\n1     1    1\n2     2    1\n3     3    0\n4     4    0\n5     5    0\n6     6    1"
+  },
+  {
+    "objectID": "FW552/Proportions.html#unequal-probability-of-sampling",
+    "href": "FW552/Proportions.html#unequal-probability-of-sampling",
+    "title": "Proportions",
+    "section": "Unequal Probability of Sampling",
+    "text": "Unequal Probability of Sampling\nInstead of adding sites w/o clear sampling probabilities, we make these explicit.\nIdentify sites that are important and increase their probability of being selected for sampling"
+  },
+  {
+    "objectID": "FW552/Proportions.html#unequal-probability-of-sampling-1",
+    "href": "FW552/Proportions.html#unequal-probability-of-sampling-1",
+    "title": "Proportions",
+    "section": "Unequal Probability of Sampling",
+    "text": "Unequal Probability of Sampling\n\n1/2 sites with 3x the probability of being sampled versus other half\nsample function has an argument prob\n\n. . .\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n. . .\n\n\n\n\n\n\n\n\nEstimator Bias = 0.13753"
+  },
+  {
+    "objectID": "FW552/Proportions.html#unequal-probability-of-sampling-2",
+    "href": "FW552/Proportions.html#unequal-probability-of-sampling-2",
+    "title": "Proportions",
+    "section": "Unequal Probability of Sampling",
+    "text": "Unequal Probability of Sampling\nGeneralized Unequal Probability Estimator\nThompson Ch. 6.3\n\\[\n\\hat{\\theta} = \\frac{\\sum_{i} y_i / \\pi_i}{\\sum_{i}1 / \\pi_i}\n\\]\n\n\n\\(\\pi_{i}\\) = probability of selecting sample \\(i\\).\n\n. . .\n\n\n\n\n\n\n\n\nEstimator Bias = -0.03147\n“not precisely unbiased” - Thompson"
+  },
+  {
+    "objectID": "FW552/Proportions.html#my-wolverine-problem-1",
+    "href": "FW552/Proportions.html#my-wolverine-problem-1",
+    "title": "Proportions",
+    "section": "My Wolverine ‘Problem’",
+    "text": "My Wolverine ‘Problem’\nShould I include the ancillary surveys as data?\nShould I report the cells with occurrences at all?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#proportion-area-occupied-2",
+    "href": "FW552/Proportions.html#proportion-area-occupied-2",
+    "title": "Proportions",
+    "section": "Proportion area occupied",
+    "text": "Proportion area occupied\nHow does sample grid effect \\(\\hat{p}\\) and \\(\\hat{\\sigma}^2_{p}\\)?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#variance-of-p",
+    "href": "FW552/Proportions.html#variance-of-p",
+    "title": "Proportions",
+    "section": "Variance of p",
+    "text": "Variance of p"
+  },
+  {
+    "objectID": "FW552/Proportions.html#variance-of-p-1",
+    "href": "FW552/Proportions.html#variance-of-p-1",
+    "title": "Proportions",
+    "section": "Variance of p",
+    "text": "Variance of p\nSoooooo useful!\n\\[\n\\hat{\\sigma}_{p} = \\sqrt\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]\n\n\nhow many fish should I tag?\nhow many elk should I track?\nhow many point intercepts (plant survey) should I take?\nhow many plots (camera traps / plant survey) should I sample?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#variance-of-p-2",
+    "href": "FW552/Proportions.html#variance-of-p-2",
+    "title": "Proportions",
+    "section": "Variance of p",
+    "text": "Variance of p\nLets visualize a few standard deviations of p"
+  },
+  {
+    "objectID": "FW552/Proportions.html#sdp",
+    "href": "FW552/Proportions.html#sdp",
+    "title": "Proportions",
+    "section": "SD(p)",
+    "text": "SD(p)\nSoooooo useful!\n\\[\n\\hat{\\sigma}_{p} = \\sqrt\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]\n. . .\n\nhow many fish should I tag?\nhow many elk should I track?\nhow many point intercepts (plant survey) should I take?\nhow many plots (camera traps / plant survey) should I sample?"
+  },
+  {
+    "objectID": "FW552/Proportions.html#varp",
+    "href": "FW552/Proportions.html#varp",
+    "title": "Proportions",
+    "section": "Var(p)",
+    "text": "Var(p)\n\n\n\n\n\n\n\n\n. . ."
+  },
+  {
+    "objectID": "FW552/Proportions.html#sdp-1",
+    "href": "FW552/Proportions.html#sdp-1",
+    "title": "Proportions",
+    "section": "SD(p)",
+    "text": "SD(p)\nLets visualize a few standard deviations of p"
+  },
+  {
+    "objectID": "FW552/Proportions.html#n-p-sdp",
+    "href": "FW552/Proportions.html#n-p-sdp",
+    "title": "Proportions",
+    "section": "n, p, sd(p)",
+    "text": "n, p, sd(p)"
+  },
+  {
+    "objectID": "FW552/SRS.html#conceptual-walkthrough",
+    "href": "FW552/SRS.html#conceptual-walkthrough",
+    "title": "Simple Random Sampling",
+    "section": "Conceptual Walkthrough",
+    "text": "Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\nPond\negg.mass\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+  },
+  {
+    "objectID": "FW552/SRS.html#back-to-ponds-example",
+    "href": "FW552/SRS.html#back-to-ponds-example",
+    "title": "Simple Random Sampling",
+    "section": "Back to ponds example",
+    "text": "Back to ponds example"
+  },
+  {
+    "objectID": "FW552/Proportions.html",
+    "href": "FW552/Proportions.html",
+    "title": "Proportions",
+    "section": "",
+    "text": "Strong Interest in fish/wildlife\nExamples?"
   }
 ]

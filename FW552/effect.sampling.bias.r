@@ -21,7 +21,7 @@
 
 
 # Probability of sampling an occupied cell
-  p.sample.occ=1.1/N
+  p.sample.occ=1/N
 
   p.sampling.unocc = (1-(p.sample.occ*n.occu))/(N-n.occu)
 
@@ -136,7 +136,7 @@ for(i in 1:n.sim){
 ######################
 
   #correction- Generalized unequal probabilitity estimator
-  sum(data$occu/data$prob.sample) /sum((1/data$prob.sample))
+  sum(data$occu/data$prob.sample) / sum((1/data$prob.sample))
   
   
   
