@@ -14,7 +14,6 @@ format:
 ---
 
 
-
 ## [Proportions]{style="color:#078BCD;"}
 
 ```{r knitr, echo=FALSE,results='hide'}

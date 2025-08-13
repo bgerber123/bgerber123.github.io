@@ -15,9 +15,20 @@ format:
 
 
 
-## [Stratified RS]{style="color:#078BCD;"}
+## [Concept]{style="color:#078BCD;"}
 
 ```{r knitr, echo=FALSE,results='hide'}
 #knitr::purl(input="../FW552/Proportions.qmd",output="../FW552/Proportions.r")
 ```
 
+Can we improve an unbiased estimator using random sampling?
+
+. . .
+
+We can improve the variance / precision!
+
+. . .
+
+How? Break our sampling frame into homogeneous parts.
+
+## [Concept]{style="color:#078BCD;"}

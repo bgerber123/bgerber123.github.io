@@ -8607,14 +8607,14 @@
     "href": "FW552/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?"
+    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 11"
   },
   {
     "objectID": "FW552/week5.html#week-5",
     "href": "FW552/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?"
+    "text": "Lecture: Proportions\nLecture Code: Proportions.R\n\n\n\n\n\nDue Next Class: Read Boyd et al 2023 Ecology \nDue 1 week: Canvas Assignment: Book Problem, Chapter 5, problems 1 and 3\n\n\n\n\n\n\n\nIn Class Discussion Questions of Boyd et al. 2023\n\nSummarize the main setup of this paper.\nWhat is a naive sample mean?\nWhat is quasi-randomization?\nWhat is Post-stratification?\nWhat is Super-population modeling?\nWhat is Doubly robust estimator?\nWhat is Subsampling?\nWhat is Multilevel regression and post-stratification?\nHow did the 6 estimators peform in using sample weights to correct for non-probability samples?\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 11"
   },
   {
     "objectID": "FW552/week3.html",
@@ -10419,15 +10419,15 @@
     "objectID": "FW552/Proportions.html#proportions",
     "href": "FW552/Proportions.html#proportions",
     "title": "Proportions",
-    "section": "",
-    "text": "Strong Interest in fish/wildlife\nExamples?"
+    "section": "Proportions",
+    "text": "Proportions\nStrong Interest in fish/wildlife\nExamples?"
   },
   {
     "objectID": "FW552/Proportions.html#proportions-1",
     "href": "FW552/Proportions.html#proportions-1",
     "title": "Proportions",
     "section": "Proportions",
-    "text": "Proportions\n\\[\ny \\in \\{0,1\\}\n\\] \\[\n1 = \\text{occur} \\\\0 = \\text{not occur}\n\\]\n. . .\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n. . .\n\\[\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]"
+    "text": "Proportions\n\\[\ny \\in \\{0,1\\}\n\\] \\[\n1 = \\text{occur} \\\\0 = \\text{not occur}\n\\]\n\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n\n\n\\[\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]"
   },
   {
     "objectID": "FW552/Proportions.html#pao",
@@ -10483,7 +10483,7 @@
     "href": "FW552/Proportions.html#a-sampling-problem",
     "title": "Proportions",
     "section": "A Sampling ‘Problem’",
-    "text": "A Sampling ‘Problem’\n\nSites surveyed by the States were selected via SRS\n\n\n\na handful of additional sites were surveyed by other entities (e.g., NGO) using the same field protocol\n\n. . .\nShould I include the additional/ancillary surveys as data?\nShould I report the cells with occurrences at all?\n. . .\nIn small groups: Discuss and then tell me what to do and explain."
+    "text": "A Sampling ‘Problem’\n\nSites surveyed by the States were selected via SRS\n\n\n\na handful of additional sites were surveyed by other entities (e.g., NGO) using the same field protocol\n\n\nShould I include the additional/ancillary surveys as data?\nShould I report the cells with occurrences at all?\n\n\nIn small groups: Discuss and then tell me what to do and explain."
   },
   {
     "objectID": "FW552/Proportions.html#what-if",
@@ -10497,21 +10497,21 @@
     "href": "FW552/Proportions.html#srs",
     "title": "Proportions",
     "section": "SRS",
-    "text": "SRS\nSampling Distribution of \\(\\hat{p}\\)\n\n\n\n\n\n\n\n\nEstimator Bias = -0.00005\nDistribution Var = 0.00084"
+    "text": "SRS\nSampling Distribution of \\(\\hat{p}\\)\n\nEstimator Bias = -0.00005\nDistribution Var = 0.00084"
   },
   {
     "objectID": "FW552/Proportions.html#ancillary-occurences",
     "href": "FW552/Proportions.html#ancillary-occurences",
     "title": "Proportions",
     "section": "Ancillary Occurences",
-    "text": "Ancillary Occurences\nSRS of n = 200 with 5% ancillary and occupied sites\n\n\n\n\n\n\n\n\nEstimator Bias = 0.02382\nDistribution Var = 0.00073"
+    "text": "Ancillary Occurences\nSRS of n = 200 with 5% ancillary and occupied sites\n\nEstimator Bias = 0.02382\nDistribution Var = 0.00073"
   },
   {
     "objectID": "FW552/Proportions.html#ancillary-occurences-1",
     "href": "FW552/Proportions.html#ancillary-occurences-1",
     "title": "Proportions",
     "section": "Ancillary Occurences",
-    "text": "Ancillary Occurences\nSRS of n = 200 with 10% ancillary and occupied sites\n\n\n\n\n\n\n\n\nEstimator Bias = 0.04536\nDistribution Var = 0.00069"
+    "text": "Ancillary Occurences\nSRS of n = 200 with 10% ancillary and occupied sites\n\nEstimator Bias = 0.04536\nDistribution Var = 0.00069"
   },
   {
     "objectID": "FW552/Proportions.html#simulation",
@@ -10532,14 +10532,14 @@
     "href": "FW552/Proportions.html#unequal-probability-of-sampling-1",
     "title": "Proportions",
     "section": "Unequal Probability of Sampling",
-    "text": "Unequal Probability of Sampling\n\n1/2 sites with 3x the probability of being sampled versus other half\nsample function has an argument prob\n\n. . .\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n. . .\n\n\n\n\n\n\n\n\nEstimator Bias = 0.13753"
+    "text": "Unequal Probability of Sampling\n\n1/2 sites with 3x the probability of being sampled versus other half\nsample function has an argument prob\n\n\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n\n\n\n\n\n\n\n\n\n\n\nEstimator Bias = 0.13753"
   },
   {
     "objectID": "FW552/Proportions.html#unequal-probability-of-sampling-2",
     "href": "FW552/Proportions.html#unequal-probability-of-sampling-2",
     "title": "Proportions",
     "section": "Unequal Probability of Sampling",
-    "text": "Unequal Probability of Sampling\nGeneralized Unequal Probability Estimator\nThompson Ch. 6.3\n\\[\n\\hat{\\theta} = \\frac{\\sum_{i} y_i / \\pi_i}{\\sum_{i}1 / \\pi_i}\n\\]\n\n\n\\(\\pi_{i}\\) = probability of selecting sample \\(i\\).\n\n. . .\n\n\n\n\n\n\n\n\nEstimator Bias = -0.03147\n“not precisely unbiased” - Thompson"
+    "text": "Unequal Probability of Sampling\nGeneralized Unequal Probability Estimator\nThompson Ch. 6.3\n\\[\n\\hat{\\theta} = \\frac{\\sum_{i} y_i / \\pi_i}{\\sum_{i}1 / \\pi_i}\n\\]\n\n\\(\\pi_{i}\\) = probability of selecting sample \\(i\\).\n\n\n\n\n\n\n\n\n\n\n\nEstimator Bias = -0.03147\n“not precisely unbiased” - Thompson"
   },
   {
     "objectID": "FW552/Proportions.html#my-wolverine-problem-1",
@@ -10581,14 +10581,14 @@
     "href": "FW552/Proportions.html#sdp",
     "title": "Proportions",
     "section": "SD(p)",
-    "text": "SD(p)\nSoooooo useful!\n\\[\n\\hat{\\sigma}_{p} = \\sqrt\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]\n. . .\n\nhow many fish should I tag?\nhow many elk should I track?\nhow many point intercepts (plant survey) should I take?\nhow many plots (camera traps / plant survey) should I sample?"
+    "text": "SD(p)\nSoooooo useful!\n\\[\n\\hat{\\sigma}_{p} = \\sqrt\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]\n\n\nhow many fish should I tag?\nhow many elk should I track?\nhow many point intercepts (plant survey) should I take?\nhow many plots (camera traps / plant survey) should I sample?"
   },
   {
     "objectID": "FW552/Proportions.html#varp",
     "href": "FW552/Proportions.html#varp",
     "title": "Proportions",
     "section": "Var(p)",
-    "text": "Var(p)\n\n\n\n\n\n\n\n\n. . ."
+    "text": "Var(p)"
   },
   {
     "objectID": "FW552/Proportions.html#sdp-1",
