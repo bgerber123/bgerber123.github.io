@@ -2601,7 +2601,7 @@
     "href": "FW680A4/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.3081005366  0.1163989332  0.2208904161 -0.1485022150  0.1575898319\n [6] -0.1514334192  0.0776153526  0.0568918324  0.1004681859  0.0009310333\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.3 0.1 0.2 0.2 0.0 0.2 0.2 0.0 0.2"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.356772536  0.033934457 -0.237817472 -0.272299554 -0.494920197\n [6] -0.049415000 -0.021611812 -0.005851695 -0.412304818  0.234196891\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.1 0.0 0.0 0.1 0.1 0.1 0.1 0.1 0.3"
   },
   {
     "objectID": "FW680A4/Introduction.html#why-is-statistics-and-modeling-so-difficult",
