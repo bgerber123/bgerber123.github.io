@@ -1,10 +1,6 @@
 ---
 title: <center>FW 680A4 <br> Wildlife Ecology Modeling <br> (Fall 2024)</center>
-format:
-  html: 
-    theme: default
-    fontsize: 1.1em
-    linestretch: 1.2
+format: html
 ---
 ## Course Stuff
 ```{=html}

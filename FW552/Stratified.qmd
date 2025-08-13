@@ -1,0 +1,23 @@
+---
+title: <span style="color:darkorange"></span>
+title-slide-attributes:
+  data-background-image: /img/stratified.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    scrollable: true
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
+---
+
+
+
+## [Stratified RS]{style="color:#078BCD;"}
+
+```{r knitr, echo=FALSE,results='hide'}
+#knitr::purl(input="../FW552/Proportions.qmd",output="../FW552/Proportions.r")
+```
+

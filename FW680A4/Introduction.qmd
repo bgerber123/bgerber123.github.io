@@ -3,9 +3,7 @@ title: <span style="color:white">Wildlife Ecology Modeling</span>
 title-slide-attributes:
   data-background-image: /img/background1.png
   background-opacity: "0.45"
-format:
-  revealjs:
-    chalkboard: true
+  format: revealjs
 ---
 
 
