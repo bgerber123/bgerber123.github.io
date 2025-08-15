@@ -4,66 +4,34 @@ title: ""
 
 ## Week 6
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
-
--   Lecture: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
-
--   Lecture Code: <a href="/FW680A4/bayesian.R">bayesian.R</a>
-
-#### [Assigned]{style="color:red;"}
-
-  - <a href="/readings/Ellison 2004.pdf"> Ellison 2004</a>.
-
-- Background Reading (not required):
-  - <a href="/readings/Hobbs_and_Hooten Ch5.pdf"> Hobbs and Hooten Ch5</a>.
-  - <a href="https://fw8051statistics4ecologists.netlify.app/bayes"> Fieberg Chapter 11</a>.
-  - <a href="https://fw8051statistics4ecologists.netlify.app/a-brief-introduction-to-mcmc-sampling-and-jags"> Fieberg Chapter 12</a>.
+- Lecture: <a href="/FW552/Stratified.qmd">Stratified Random Sampling</a> 
+- Lecture Code: <a href="/FW552/Stratified.R">Stratified.R</a>
 
 
+#### **Assigned**
 
+- **Please bring a laptop next class**
 
-<!-- #### [Assigned]{style="color:red;"} -->
+<!-- - **Due 1 week:** [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2821522): Book Problem, Chapter 5, problems 1 and 3 -->
 
-<!-- -   Readings for next class:  -->
-<!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
+### [Day 2]{style="color:red;"}
 
+#### **In Class**
 
+- **Please bring a laptop to class**
+- Exercise: Optimizing Sampling Allocation within Strata [Download Data](../classfiles552/ThompsonChapter11/N.fish.csv)
+- These data are counts of fish per stream segment. Create a RMarkdown script to optimally allocated the samples among strata; you have to decide on the strata. Use a fixed total sample size of $n = 100$.
 
+**The optimal n per strata**
 
+$$
+n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k \sigma_k}
+$$
 
-### Day 2 (lab)
+#### **Assigned** 
 
-#### [Today]{style="color:red;"}
-
--    Lecture: Continue with: <a href="/FW680A4/bayesian.qmd">Bayesian Inference</a>
-
--   Downloads: <a href="/classfiles/bayeslab/week6filesSept27.zip">Files (9/27)</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("rjags","bayesplot","rstanarm"))
-```
-
-- Install External Software Program [JAGS](https://sourceforge.net/projects/mcmc-jags/files/)
-
-#### [Assigned]{style="color:red;"}
-
-- [Bayes Quiz on Canvas](https://colostate.instructure.com/courses/193678/quizzes)
-
-
-<!-- -   Readings for next class:  -->
-<!--     - <a href="https://statistics4ecologists-v2.netlify.app/mmi#mmi">Fieberg, Ch. 8</a> -->
-
-
-- Background Reading (not required): 
-  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
-
-
-
-
-
+<!-- - **Due Next Class**: Read <a href="/readings552/Sampling - 2012 - Thompson.pdf">Thompson Chapter 11 </a>  -->

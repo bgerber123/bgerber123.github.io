@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>Brian D. Gerber – quarto-inputb2ba7bbe1591e923</title>
+  <title>Brian D. Gerber – quarto-input5c47410a69443a2a</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8f3eebe07241f08526c91a7e9cbef8fd.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -122,6 +187,10 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -134,10 +203,873 @@
 </div>
 
 </section>
-<section id="stratified-rs" class="slide level2">
-<h2><span style="color:#078BCD;">Stratified RS</span></h2>
+<section id="concept" class="slide level2">
+<h2><span style="color:#078BCD;">Concept</span></h2>
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+<p>Can we improve on an unbiased estimator using SRS?</p>
+<p><br></p>
+<div class="fragment">
+<p>We can improve our parameter variances!</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p>How? Break our sampling frame into homogeneous parts.</p>
+</div>
+</section>
+<section id="concept-1" class="slide level2 nostretch">
+<h2><span style="color:#078BCD;">Concept</span></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>define strata (singular, strata)</li>
+<li>randomly sample within each</li>
+<li>try to create homogenous strata</li>
+<li>ideally a higher sample size within strata with higher variance</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="../img/stratified.book.png" style="width:100.0%"></p>
+</div></div>
+</section>
+<section id="concept-2" class="slide level2">
+<h2><span style="color:#078BCD;">Concept</span></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>auxiliary information</li>
+<li>depends on ability to select beneficial strata</li>
+<li>almost always going to improve precision; unlikely to do worse
+<ul>
+<li>allocate more samples to a stratum wiht low variance</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="../img/stratified.book.png" style="width:100.0%"></p>
+</div></div>
+<div class="fragment">
+<p><span style="color:purple">What are strata used in fish/wildlife studies?</span></p>
+</div>
+</section>
+<section id="estimator" class="slide level2">
+<h2><span style="color:#078BCD;">Estimator</span></h2>
+<p>We sample <span class="math inline">\(y_{ih}\)</span> within strata <span class="math inline">\(h\)</span> from 1 … <span class="math inline">\(L\)</span> and units <span class="math inline">\(i\)</span> from 1 … <span class="math inline">\(n_h\)</span>.</p>
+<p><span class="math display">\[
+\hat{\mu}_{h} = \frac{1}{n_h} \sum_{i=1}^{n_h} y_{hi}
+\]</span></p>
+<p><br></p>
+<p><span class="math display">\[
+\hat{\mu}_{st} = \frac{1}{N} \sum_{h=1}^{L} N_{h}\hat{\mu}_{h}
+\]</span></p>
+</section>
+<section id="estimator-1" class="slide level2">
+<h2><span style="color:#078BCD;">Estimator</span></h2>
+<p><span class="math display">\[
+\hat{\sigma}^2_{h} = \frac{1}{N_h -1} \sum_{i=1}^{N_h}\left(y_{hi}-\hat{\mu}_{h}\right)^2
+\]</span></p>
+<p><br></p>
+<p><span class="math display">\[
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+\]</span></p>
+</section>
+<section id="boreal-toad-case-study" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+<p><strong>Goal:</strong> to know the mean number of boreal toad egg masses per pond in RMNP</p>
+<p><br></p>
+<p><strong>Goal 2:</strong> Use stratification to reduce the sampling variance.</p>
+
+<img data-src="../img/borealtoad.png" class="r-stretch"></section>
+<section id="boreal-toad-case-study-1" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+<ul>
+<li><span class="math inline">\(N = 6\)</span> ; <span class="math inline">\(L = 2\)</span></li>
+<li><span class="math inline">\(N_{h} = N/L = 3\)</span></li>
+<li><span class="math inline">\(n_{h} = 2\)</span></li>
+<li><span class="math inline">\(\mu = 8\)</span></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 40px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">strata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
 
 
+</div>
+</div>
+</section>
+<section id="boreal-toad-case-study-2" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+<p><em>How may unique combinations?</em></p>
+<h4 id="first-strata">First strata</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">choose</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<h4 id="second-strata">Second strata</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">choose</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<h4 id="all-combinations">All Combinations</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">choose</span>(<span class="dv">3</span>,<span class="dv">2</span>)<span class="sc">*</span><span class="fu">choose</span>(<span class="dv">3</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9</code></pre>
+</div>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Sample</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Var.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Var.S2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><br></p>
+<p><br></p>
+<p><span class="math display">\[
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+\]</span></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Var.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Var.S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Var.mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.42</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.83</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.17</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<h4 id="stratifed">Stratifed</h4>
+<p>E[Sampling Distribution Variance] = 0.44</p>
+<p><br></p>
+<h4 id="srs">SRS</h4>
+<p>E[Sampling Distribution Variance] = 4.26</p>
+</div>
+</section>
+<section id="boreal-toad-case-study-3" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+
+<img data-src="Stratified_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="boreal-toad-case-study-4" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+
+<img data-src="Stratified_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="boreal-toad-case-study-5" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+
+<img data-src="Stratified_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="boreal-toad-case-study-6" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad (Case Study)</span></h2>
+
+<img data-src="Stratified_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="stratification-allocation" class="slide level2">
+<h2><span style="color:#078BCD;">Stratification Allocation</span></h2>
+<p><em>Sample Size per Strata</em></p>
+<div>
+<ul>
+<li class="fragment">uniform distribution; <span class="math inline">\(n_1 = 2 ; n_2 = 2\)</span></li>
+<li class="fragment">variable distribution; e.g., <span class="math inline">\(n_1 = 1 ; n_2 = 3\)</span>
+<ul>
+<li class="fragment">allocation proportional to size (e.g.&nbsp;area): <span class="math inline">\(n_h = \frac{nN_h}{N}\)</span></li>
+<li class="fragment">optimal allocation for fixed <span class="math inline">\(n\)</span>: <span class="math inline">\(n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k\sigma_k}\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="stratification-allocation-1" class="slide level2">
+<h2><span style="color:#078BCD;">Stratification Allocation</span></h2>
+<p><strong>Allocate most of our samples to the strata with the highest variance</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 40px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">strata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right; background-color: purple !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right; background-color: purple !important;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right; background-color: purple !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: lavender !important;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: lavender !important;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right; background-color: lavender !important;">2</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<p><span style="color:purple">How many possible sample combinations are there?</span></p>
+</div>
+</section>
+<section id="stratification-allocation-2" class="slide level2">
+<h2><span style="color:#078BCD;">Stratification Allocation</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Sample</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.3</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">pop.means</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">5.333333</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">7.666667</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">5.333333</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">7.666667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">5.333333</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">8.666667</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<ul>
+<li>removed the variance from stratum 1</li>
+</ul>
+</section>
+<section id="stratification-allocation-3" class="slide level2">
+<h2><span style="color:#078BCD;">Stratification Allocation</span></h2>
+<p>Reverse the situation- allocate more samples to the least variable stratum</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 40px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">strata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Sample</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2.3</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Mean.S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">pop.means</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10.66667</td>
+<td style="text-align: center;">6.333333</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">10.66667</td>
+<td style="text-align: center;">8.333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10.66667</td>
+<td style="text-align: center;">9.333333</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>compared to population means of 7.6, 7.6, and 8.6</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Estimator population means is still unbisaed
+<ul>
+<li><span class="math inline">\(E[\hat{\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \mu\)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="srs-estimator" class="slide level2">
+<h2><span style="color:#078BCD;">SRS Estimator</span></h2>
+<p><span style="color:purple">What if we ignored the stratification and used the SRS sample mean estimator?</span></p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Sample means are 8.5, 9.5, 10</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Population mean is 9.3333333</p></li>
+<li><p><span class="math inline">\(E[\hat{\mu}_{SRS}] \neq \mu\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="unequal-sampling-fractions" class="slide level2">
+<h2><span style="color:#078BCD;">Unequal Sampling Fractions</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 40px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">strata</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right; background-color: lavender !important;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right; background-color: purple !important;">2</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Strata 1, <span class="math inline">\(\text{weight}_{i}\)</span> = <span class="math inline">\(1/n_h = 1/1 =1\)</span></li>
+<li>Strata 2, <span class="math inline">\(\text{weight}_{i}\)</span> = <span class="math inline">\(1/n_h = 1/3\)</span></li>
+</ul>
+</div>
+</section>
+<section id="unequal-sampling-fractions-1" class="slide level2">
+<h2><span style="color:#078BCD;">Unequal Sampling Fractions</span></h2>
+<p><span class="math display">\[
+\hat{\mu}_{st} = \frac{1}{L}\sum_{h=1}^L \sum_{i=1}^{n_h} y_{hi}\times \text{weight}_h
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Strata</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">S3</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.3333333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.3333333</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0.3333333</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="fragment">
+<p><strong>Sample 1</strong></p>
+<p><span class="math display">\[
+\hat{\mu}_{st} = \frac{\left(2\times1\right) + \left(10\times1/3 + 10\times1/3 + 12\times1/3 \right)}{2}
+\]</span></p>
+</div>
+</section>
+<section id="summary" class="slide level2">
+<h2><span style="color:#078BCD;">Summary</span></h2>
+<div class="fragment">
+<ul>
+<li>Units need a probability of being sampled but don’t need to be the same</li>
+<li>Stratification requires accounting for within strata sample size (i.e., the weighting)</li>
+<li>Stratification allocations allow us a means to reduce the population sampling distribution variance</li>
+<li>Sampling an entire strata is perfectly fine</li>
+<li>Construct strata so their averages are different as possible and their variances are as small as possible</li>
+<li>Need at least <span class="math inline">\(n_h \geq 2\)</span> to estimate variability in a stratum</li>
+</ul>
+
+
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

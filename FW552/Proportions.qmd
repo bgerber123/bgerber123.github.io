@@ -16,6 +16,16 @@ format:
 
 ## [Proportions]{style="color:#078BCD;"}
 
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
 ```{r knitr, echo=FALSE,results='hide'}
 #knitr::purl(input="../FW552/Proportions.qmd",output="../FW552/Proportions.r")
 ```

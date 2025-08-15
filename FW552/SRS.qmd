@@ -7,6 +7,11 @@ format:
   revealjs:
     scrollable: true
     slide-level: 1
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
 ---
 
 ## [Goal]{style="color:#078BCD;"}
@@ -217,8 +222,6 @@ ponds.all %>%
 
 # [SRS]{style="color:#078BCD;"}
 
-
-
 :::: {.columns}
 
 ::: {.column width="50%"}
@@ -412,6 +415,12 @@ var.per.sample = apply(
                        )
 # Expected value of population variance
   mean(var.per.sample)
+```
+
+```{r, echo=FALSE}
+#variance for sample mean
+mean ( (N-2)/N * var.per.sample/2 )
+
 ```
 
 # [Sample Variance]{style="color:#078BCD;"}

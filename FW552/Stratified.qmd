@@ -17,18 +17,592 @@ format:
 
 ## [Concept]{style="color:#078BCD;"}
 
-```{r knitr, echo=FALSE,results='hide'}
-#knitr::purl(input="../FW552/Proportions.qmd",output="../FW552/Proportions.r")
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
 ```
 
-Can we improve an unbiased estimator using random sampling?
+```{r,echo=FALSE,warning=FALSE,results='hide'}
+library(tidyverse)
+library(kableExtra)
+library(magrittr)
+library(knitr)
+```
+
+```{r knitr, echo=FALSE,results='hide'}
+#knitr::purl(input="../FW552/Stratified.qmd",output="../FW552/Stratified.R")
+```
+
+Can we improve on an unbiased estimator using SRS?
+
+<br>
 
 . . .
 
-We can improve the variance / precision!
+We can improve our parameter variances!
+
+<br>
 
 . . .
 
 How? Break our sampling frame into homogeneous parts.
 
+## [Concept]{style="color:#078BCD;"}{.nostretch}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- define strata (singular, strata)
+- randomly sample within each
+- try to create homogenous strata
+- ideally a higher sample size within strata with higher variance
+
+:::
+
+::: {.column width="40%"}
+
+![](../img/stratified.book.png){width="100%"}
+
+
+:::
+
+:::: 
+
 ## [Concept]{style="color:#078BCD;"}
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+
+- auxiliary information
+- depends on ability to select beneficial strata
+- almost always going to improve precision; unlikely to do worse
+    - allocate more samples to a stratum wiht low variance
+
+:::
+
+::: {.column width="40%"}
+
+![](../img/stratified.book.png){width="100%"}
+
+
+:::
+
+:::: 
+
+. . .
+
+[What are strata used in fish/wildlife studies?]{style="color:purple"}
+
+## [Estimator]{style="color:#078BCD;"}
+
+We sample $y_{ih}$ within strata $h$ from 1 ... $L$ and units $i$ from 1 ... $n_h$.
+
+$$
+\hat{\mu}_{h} = \frac{1}{n_h} \sum_{i=1}^{n_h} y_{hi}
+$$
+
+<br>
+
+$$
+\hat{\mu}_{st} = \frac{1}{N} \sum_{h=1}^{L} N_{h}\hat{\mu}_{h}
+$$
+
+## [Estimator]{style="color:#078BCD;"}
+
+
+$$
+\hat{\sigma}^2_{h} = \frac{1}{N_h -1} \sum_{i=1}^{N_h}\left(y_{hi}-\hat{\mu}_{h}\right)^2
+$$
+
+<br>
+
+
+$$
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+$$
+
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+**Goal:** to know the mean number of boreal toad egg masses per pond in RMNP
+
+<br>
+
+**Goal 2:** Use stratification to reduce the sampling variance.
+
+![](../img/borealtoad.png)
+
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+- $N = 6$ ; $L = 2$
+- $N_{h} = N/L = 3$ 
+- $n_{h} = 2$ 
+- $\mu = 8$
+
+```{r,echo=FALSE}
+ponds = data.frame(matrix(nrow=6,ncol=2))
+colnames(ponds)=c("Pond","egg.mass")
+
+N = 6
+Nh = 3
+nh= 2
+mu = 8
+
+ponds$Pond=LETTERS[1:6]
+ponds$egg.mass = c(2,6,8,10,10,12)
+ponds$strata = c(1,1,1,2,2,2)
+
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 40)
+
+```
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+*How may unique combinations?*
+
+
+#### First strata
+
+```{r, echo=TRUE}
+choose(3,2)
+```
+
+#### Second strata
+
+```{r, echo=TRUE}
+choose(3,2)
+```
+
+#### All Combinations
+
+```{r, echo=TRUE}
+choose(3,2)*choose(3,2)
+```
+
+## 
+
+
+```{r}
+letters.S1=t(utils::combn(LETTERS[c(1,2,3)],2))
+letters.S2=t(utils::combn(LETTERS[c(4,5,6)],2))
+
+num.S1=t(utils::combn(c(1,2,3),2))
+num.S2=t(utils::combn(c(4,5,6),2))
+
+first.strata = rbind(
+                matrix(rep(letters.S1[1,],3),nrow=3,byrow = TRUE),
+                matrix(rep(letters.S1[2,],3),nrow=3,byrow = TRUE),
+                matrix(rep(letters.S1[3,],3),nrow=3,byrow = TRUE)
+)
+
+first.strata.num = rbind(
+                matrix(rep(num.S1[1,],3),nrow=3,byrow = TRUE),
+                matrix(rep(num.S1[2,],3),nrow=3,byrow = TRUE),
+                matrix(rep(num.S1[3,],3),nrow=3,byrow = TRUE)
+)
+
+
+sec.strata=rbind(letters.S2,letters.S2,letters.S2)
+sec.strata.num=rbind(num.S2,num.S2,num.S2)
+
+comb.strats=data.frame(cbind(first.strata,sec.strata))
+comb.strats.num=cbind(first.strata.num,sec.strata.num)
+
+colnames(comb.strats)=c("S1.1","S1.2","S2.1","S2.2")           
+
+strata.1.eggs=cbind(ponds$egg.mass[comb.strats.num[,1]],
+                    ponds$egg.mass[comb.strats.num[,2]]
+                    )
+strata.2.eggs=cbind(ponds$egg.mass[comb.strats.num[,3]],
+                    ponds$egg.mass[comb.strats.num[,4]]
+                    )
+
+strata.1.means = apply(strata.1.eggs,1,mean)
+strata.2.means = apply(strata.2.eggs,1,mean)
+strata.1.var = apply(strata.1.eggs,1,var)
+strata.2.var = apply(strata.2.eggs,1,var)
+
+
+comb.strats=data.frame(Sample = 1:9,
+                       comb.strats,
+                        Mean.S1 = strata.1.means,
+                        Mean.S2 = strata.2.means,
+                        Var.S1 = strata.1.var,
+                        Var.S2 = strata.2.var
+                       )
+
+
+comb.strats %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+
+```
+
+##
+
+<br>
+
+<br>
+
+$$
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+$$
+
+
+## 
+
+```{r}
+
+s2.h=cbind(strata.1.var,strata.2.var)
+# calculate sampling variance
+
+s2 = (Nh/N)^2 * ((Nh-nh)/(Nh)) * (s2.h/nh)
+s2=apply(s2,1,sum)
+comb.strats=comb.strats[,-1]
+
+comb.strats$Var.mean = round(s2,digits=2)
+
+comb.strats %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+
+```
+
+. . .
+
+<br>
+
+
+#### Stratifed 
+
+E[Sampling Distribution Variance] = `r round(mean(s2),digits=2)`
+
+<br>
+
+#### SRS
+
+E[Sampling Distribution Variance] = 4.26
+
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+```{r}
+
+# Stratified RS population-level mean
+pop.mean.stratified = (strata.1.means*Nh)/N + (strata.2.means*Nh)/N
+
+
+# Get sample mean distribution under n=2 and n=4 for SRS
+ponds.numbers=utils::combn(1:6,2)
+mean.SRS.n2 = apply(matrix(ponds$egg.mass[c(ponds.numbers)],ncol=2,byrow = TRUE),1,mean)
+
+ponds.numbers=utils::combn(1:6,4)
+mean.SRS.n4 = apply(matrix(ponds$egg.mass[c(ponds.numbers)],ncol=4,byrow = TRUE),1,mean)
+
+hist(mean.SRS.n2,breaks=10,main="Sampling Distibution of Mean",freq=TRUE,ylim=c(0,10),xlim=c(3,12),xlab="Sample Mean")
+abline(v=mu,lwd=3,col=1)
+legend("topleft",lwd=3,col=c(1,2),legend=c("SRS n=2; comb = 15"))
+
+```
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+```{r}
+hist(mean.SRS.n2,breaks=10,main="Sampling Distibution of Mean",freq=TRUE,ylim=c(0,10),xlim=c(3,12),xlab="Sample Mean")
+hist(mean.SRS.n4,breaks=10,add=TRUE,
+     col=grDevices::adjustcolor("red",alpha.f=0.5))
+abline(v=mu,lwd=3,col=1)
+legend("topleft",lwd=3,col=c(1,2),legend=c("SRS n=2 ; comb = 15", "SRS n=4; comb = 15"))
+```
+
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+```{r}
+hist(mean.SRS.n2,breaks=10,main="Sampling Distibution of Mean",freq=TRUE,ylim=c(0,10),xlim=c(3,12),xlab="Sample Mean")
+hist(mean.SRS.n4,breaks=10,add=TRUE,
+     col=grDevices::adjustcolor("red",alpha.f=0.5))
+hist(pop.mean.stratified,breaks=5,add=TRUE,
+     col=grDevices::adjustcolor("purple",alpha.f=0.5))
+abline(v=mu,lwd=3,col=1)
+legend("topleft",lwd=3,col=c(1,2,"purple"),legend=c("SRS n=2; comb = 15", "SRS n=4; comb = 15","Strat n=4; comb = 9"))
+```
+
+## [Boreal Toad (Case Study)]{style="color:#078BCD;"}
+
+```{r}
+hist(mean.SRS.n2,breaks=10,main="Sampling Distibution of Mean",freq=TRUE,ylim=c(0,10),xlim=c(3,12),xlab="Sample Mean")
+hist(mean.SRS.n4,breaks=10,add=TRUE,
+     col=grDevices::adjustcolor("red",alpha.f=0.5))
+hist(pop.mean.stratified,breaks=5,add=TRUE,
+     col=grDevices::adjustcolor("purple",alpha.f=0.5))
+abline(v=mu,lwd=3,col=1)
+legend("topleft",lwd=3,col=c(1,2,"purple"),legend=c("SRS n=2; comb = 15", "SRS n=4; comb = 15","Strat n=4; comb = 9"))
+
+text(7,6,"ALL UNBIASED ESTIMATORS",cex=3,col=1)
+```
+
+## [Stratification Allocation]{style="color:#078BCD;"}
+
+*Sample Size per Strata*
+
+:::{.incremental}
+
+- uniform distribution; $n_1 = 2 ; n_2 = 2$
+- variable distribution; e.g., $n_1 = 1 ; n_2 = 3$ 
+    - allocation proportional to size (e.g. area): $n_h = \frac{nN_h}{N}$
+    - optimal allocation for fixed $n$: $n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k\sigma_k}$
+
+:::
+
+## [Stratification Allocation]{style="color:#078BCD;"}
+
+**Allocate most of our samples to the strata with the highest variance**
+
+
+```{r}
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 40) %>% column_spec(3, background = c("purple", "purple", "purple", "lavender","lavender","lavender"))
+```
+
+
+. . .
+
+[How many possible sample combinations are there?]{style="color:purple"}
+
+
+## [Stratification Allocation]{style="color:#078BCD;"}
+
+```{r}
+letters.S1=t(utils::combn(LETTERS[c(1,2,3)],3))
+letters.S2=t(utils::combn(LETTERS[c(4,5,6)],1))
+
+num.S1=t(utils::combn(c(1,2,3),3))
+num.S2=t(utils::combn(c(4,5,6),1))
+
+first.strata = rbind(letters.S1,letters.S1,letters.S1)
+
+first.strata.num = rbind(num.S1,num.S1,num.S1)
+
+
+sec.strata=rbind(letters.S2)
+sec.strata.num=rbind(num.S2)
+
+comb.strats=data.frame(cbind(first.strata,sec.strata))
+comb.strats.num=cbind(first.strata.num,sec.strata.num)
+
+colnames(comb.strats)=c("S1.1","S1.2","S1.3","S2.1")           
+
+strata.1.eggs=ponds$egg.mass[comb.strats.num[1,1:3]]
+strata.1.mean=mean(strata.1.eggs)
+
+#values and means are the same
+strata.2.eggs=ponds$egg.mass[comb.strats.num[,4]]
+
+#Get population mean
+#3 = n_h for stratum sample size
+
+pop.means=(rep(strata.1.mean,3)*3 + strata.2.eggs*3) * 1/N
+
+#strata.1.var = rep(var(strata.1.eggs),3)
+#strata.2.var = rep(0,3)
+
+#strata.var = (3/6)^2 * ((3-3) / 3) *  (strata.1.var / 3) + (1/6)^2 * #((3-1) / 3)*  (strata.2.var / 1)
+
+comb.strats2=data.frame(Sample = 1:3,
+                        comb.strats,
+                        Mean.S1 = rep(strata.1.mean,3),
+                        Mean.S2 = strata.2.eggs,
+                        pop.means=pop.means
+                        
+                       )
+
+
+comb.strats2 %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+
+```
+
+
+- removed the variance from stratum 1
+
+
+## [Stratification Allocation]{style="color:#078BCD;"}
+
+Reverse the situation- allocate more samples to the least variable stratum
+
+```{r}
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 40) %>% column_spec(3, background = c("lavender", "lavender", "lavender", "purple","purple","purple"))
+```
+
+```{r}
+letters.S1=t(utils::combn(LETTERS[c(1,2,3)],1))
+letters.S2=t(utils::combn(LETTERS[c(4,5,6)],3))
+
+num.S1=t(utils::combn(c(1,2,3),1))
+num.S2=t(utils::combn(c(4,5,6),3))
+
+sec.strata = rbind(letters.S2,letters.S2,letters.S2)
+
+sec.strata.num = rbind(num.S2,num.S2,num.S2)
+
+
+first.strata=rbind(letters.S1)
+first.strata.num=rbind(num.S1)
+
+comb.strats=data.frame(cbind(first.strata,sec.strata))
+comb.strats.num=cbind(first.strata.num,sec.strata.num)
+
+colnames(comb.strats)=c("S1.1","S2.1","S2.2","S2.3")           
+
+strata.2.eggs=ponds$egg.mass[comb.strats.num[1,2:4]]
+strata.2.mean=mean(strata.2.eggs)
+
+
+strata.1.eggs=ponds$egg.mass[comb.strats.num[,1]]
+
+#Get population mean
+#3 = n_h for stratum sample size
+
+pop.means=(rep(strata.2.mean,3)*3 + strata.1.eggs*3) * 1/N
+
+#strata.1.var = rep(var(strata.1.eggs),3)
+#strata.2.var = rep(0,3)
+
+#strata.var = (3/6)^2 * ((3-3) / 3) *  (strata.1.var / 3) + (1/6)^2 * #((3-1) / 3)*  (strata.2.var / 1)
+
+comb.strats2=data.frame(Sample = 1:3,
+                        comb.strats,
+                        Mean.S1 = strata.1.eggs,
+                        Mean.S2 = strata.2.mean,
+                        pop.means=pop.means
+                        
+                       )
+
+
+comb.strats2 %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+```
+
+. . .
+
+- compared to population means of 7.6, 7.6, and 8.6
+
+. . .
+
+- Estimator population means is still unbisaed
+    - $E[\hat{\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \mu$
+
+
+## [SRS Estimator]{style="color:#078BCD;"}
+
+[What if we ignored the stratification and used the SRS sample mean estimator?]{style="color:purple"}
+
+. . .
+
+```{r,echo=FALSE}
+one.sample=c(strata.1.eggs[1],strata.2.eggs)
+two.sample=c(strata.1.eggs[2],strata.2.eggs)
+three.sample=c(strata.1.eggs[3],strata.2.eggs)
+
+#mean(one.sample)
+#mean(two.sample)
+#mean(three.sample)
+
+biased.estimator=data.frame(S1 = one.sample,
+                            S2 = two.sample,
+                            S3 = three.sample
+                            )
+biased.estimator %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+
+```
+
+. . .
+
+- Sample means are `r c(mean(one.sample), mean(two.sample), mean(three.sample))`
+
+. . .
+
+- Population mean is `r mean(c(mean(one.sample), mean(two.sample), mean(three.sample)))`
+
+- $E[\hat{\mu}_{SRS}] \neq \mu$ 
+
+
+## [Unequal Sampling Fractions]{style="color:#078BCD;"}
+
+```{r}
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 40) %>% column_spec(3, background = c("lavender", "lavender", "lavender", "purple","purple","purple"))
+```
+
+. . .
+
+- Strata 1, $\text{weight}_{i}$ =  $1/n_h = 1/1 =1$
+- Strata 2, $\text{weight}_{i}$ =  $1/n_h = 1/3$
+
+## [Unequal Sampling Fractions]{style="color:#078BCD;"}
+
+$$
+\hat{\mu}_{st} = \frac{1}{L}\sum_{h=1}^L \sum_{i=1}^{n_h} y_{hi}\times \text{weight}_h
+$$
+
+
+```{r}
+biased.estimator=data.frame(Strata = c(1,2,2,2),
+                            S1 = one.sample,
+                            S2 = two.sample,
+                            S3 = three.sample,
+                            Weight = c(1,1/3,1/3,1/3)
+                            )
+biased.estimator %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"',align = 'c') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30, position = "center")
+
+```
+
+. . .
+
+**Sample 1**
+
+$$
+\hat{\mu}_{st} = \frac{\left(2\times1\right) + \left(10\times1/3 + 10\times1/3 + 12\times1/3 \right)}{2}
+$$
+
+## [Summary]{style="color:#078BCD;"}
+
+. . .
+
+- Units need a probability of being sampled but don't need to be the same
+- Stratification requires accounting for within strata sample size (i.e., the weighting)
+- Stratification allocations allow us a means to reduce the population sampling distribution variance
+- Sampling an entire strata is perfectly fine
+- Construct strata so their averages are different as possible and their variances are as small as possible
+- Need at least $n_h \geq 2$ to estimate variability in a stratum
+
+
+
+
+
+
+
+
+
