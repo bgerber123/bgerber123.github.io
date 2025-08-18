@@ -16,17 +16,27 @@ title: ""
 
 - **Please bring a laptop next class**
 
-<!-- - **Due 1 week:** [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2821522): Book Problem, Chapter 5, problems 1 and 3 -->
+- **Due 1 week:** [Canvas Quiz 3](https://colostate.instructure.com/courses/212614/quizzes/499474)
 
 ### [Day 2]{style="color:red;"}
 
 #### **In Class**
 
 - **Please bring a laptop to class**
-- Exercise: Optimizing Sampling Allocation within Strata [Download Data](../classfiles552/ThompsonChapter11/N.fish.csv)
-- These data are counts of fish per stream segment. Create a RMarkdown script to optimally allocated the samples among strata; you have to decide on the strata. Use a fixed total sample size of $n = 100$.
 
-**The optimal n per strata**
+**Exercise: Optimizing Sampling Allocation within Strata**
+
+A colleague asks you for help in planning their next study. They are interested in estimating the total number of a fish species throughout a large region (assume detection probability is 1). They can survey a total of 100 stream segments. However, they know there is spatial variation in the numbers of this fish and want to use stratification to help minimize the variance. To help your colleague, you ask for some data and your colleague offers up count / population size data of a related species. 
+
+- Create a RMarkdown script/HTML to optimally allocate $n = 100$ fixed samples among strata; you have to decide on the strata!
+
+- Estimate the allocation of samples per strata and the proportion of samples per strata. 
+
+- Investigate whether the proportional optimal allocation of samples per strata changes if you increase or decrease the total number of samples.
+
+- [Download Data](../classfiles552/ThompsonChapter11/N.fish.csv)
+
+**The optimal n per strata (for population mean or total population)**
 
 $$
 n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k \sigma_k}
@@ -34,4 +44,11 @@ $$
 
 #### **Assigned** 
 
-<!-- - **Due Next Class**: Read <a href="/readings552/Sampling - 2012 - Thompson.pdf">Thompson Chapter 11 </a>  -->
+- **Due Next Class**: Read <a href="/readings552/Sampling - 2012 - Thompson.pdf">Thompson Chapter 12 </a>
+- **Due in 1 Week**: [Submit your RMarkdown script and html from the above inclass exercise on Canvas.](https://colostate.instructure.com/courses/212614/assignments/2834868)
+- **Due in 1 Week**: [Chapter 11, exercise 1. ](https://colostate.instructure.com/courses/212614/assignments/2834868)
+
+#### **Background Readings (not required)**
+
+  - <a href="/readings552/Paciﬁci et al 2015.pdf">Paciﬁci et al. 2015</a> 
+

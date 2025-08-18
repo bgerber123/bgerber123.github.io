@@ -117,7 +117,6 @@ $$
 
 ## [Estimator]{style="color:#078BCD;"}
 
-
 $$
 \hat{\sigma}^2_{h} = \frac{1}{N_h -1} \sum_{i=1}^{N_h}\left(y_{hi}-\hat{\mu}_{h}\right)^2
 $$
@@ -586,6 +585,28 @@ biased.estimator %>%
 $$
 \hat{\mu}_{st} = \frac{\left(2\times1\right) + \left(10\times1/3 + 10\times1/3 + 12\times1/3 \right)}{2}
 $$
+
+## [Pseudo Random Sampling]{style="color:#078BCD;"}
+
+- In practice random sampling can be expensive; can feel wastefull
+- Stratification improves the 'targetedness' of sampling
+- Sometimes the samples per strata are random but then the selection of individuals or specific subplots within sampled strata are left to the observers to choose. (`Quota Sampling`)
+
+## [Quota Sampling]{style="color:#078BCD;"}
+
+**Observer Freedom**
+
+- selection bias is present
+- selection procedure is ill-defined; Standard Error's have no valid estimator
+- "But quota sampling always achieves the same sample size [within strata] as random sampling"
+
+## [Quota Sampling]{style="color:#078BCD;"}
+
+- The increased flexibility comes at a reduction of sample credibility
+- Selection bias
+- Non-response bias
+- No valid measures of uncertainty
+
 
 ## [Summary]{style="color:#078BCD;"}
 

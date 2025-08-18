@@ -4,52 +4,39 @@ title: ""
 
 ## Week 7
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
--   Please bring your laptop today
-
--   Board work for statistical notation and JAGS syntax for Bayesian generalized linear models
-
-#### [Assigned]{style="color:red;"}
- 
- 
-### Day 2 (lab)
-
-#### [Today]{style="color:red;"}
-
--   Discuss Project
-
-- <a href="/classfiles/hbayes/Bayesian non hierarchical model.pdf">Statistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits</a>
-
--   Board work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models
-
--   Fit models specified in the previous class
-
--   No lab to turn in next week.
-
--   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
+- Lecture: <a href="/FW552/Cluster.qmd">Cluster and Systematic Sampling</a> 
+- Lecture Code: <a href="/FW552/Cluster.R">Cluster.R</a>
 
 
--   Install R packages:
+#### **Assigned**
 
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("brms","bayesplot"))
-```
+- **Please bring a laptop next class**
 
+- **Due Next Class**: Read <a href="/readings552/Noon et al 2006.pdf">Noon et al 2006</a>
 
-#### [Assigned]{style="color:red;"}
+### [Day 2]{style="color:red;"}
 
--   Readings for next class:
-    -   <a href="/readings/Widmer et al 2021.pdf">Widmer et al 2021</a>
-    -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a>
+#### **In Class**
 
-- Background Reading (not required):
-  - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
-  - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
-  - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>.
+- **Please bring a laptop to class**
+
+**Exercise: Cluster vs Simple Random Sampling**
 
 
+#### **Assigned** 
+
+<!-- - **Due in 1 Week**: [Submit your RMarkdown script and html from the above inclass exercise on Canvas.](https://colostate.instructure.com/courses/212614/assignments/2834868) -->
+<!-- - **Due in 1 Week**: [Chapter 11, exercise 1. ](https://colostate.instructure.com/courses/212614/assignments/2834868) -->
+
+
+<!-- - **Due Next Class**: Read <a href="/readings552/Sampling - 2012 - Thompson.pdf">Thompson Chapter 12 </a> -->
+<!-- - **Due in 1 Week**: Read <a href="/readings552/Noon et al 2006.pdf">Noon et al 2006</a> -->
+
+<!-- #### **Background Readings (not required)** -->
+
+<!--   - <a href="/readings552/Paciﬁci et al 2015.pdf">Paciﬁci et al 2015</a>  -->
 
