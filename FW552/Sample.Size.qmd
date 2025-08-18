@@ -24,7 +24,7 @@ format:
 - depends on design
 - depends on objective
 
-# [Population Mean]{style="color:#078BCD;"}
+## [Population Mean]{style="color:#078BCD;"}
 
 ```{=html}
 <style type="text/css">
@@ -62,7 +62,7 @@ $$
 
 :::
 
-# [Population Mean]{style="color:#078BCD;"}
+## [Population Mean]{style="color:#078BCD;"}
 
 **Objective: to know the average count of bass with fish lice**
 
@@ -71,7 +71,7 @@ $$
 - Common in eutrophic lakes throughout North America
 - Assuming no error in detecting lice
 
-# [Population Mean]{style="color:#078BCD;"}
+## [Population Mean]{style="color:#078BCD;"}
 
 - N = number of areas in a lake with bass = 200
 - Abs. difference (d) is 10
@@ -91,7 +91,7 @@ $$
 
 ```
 
-# [Population Mean]{style="color:#078BCD;"}
+## [Population Mean]{style="color:#078BCD;"}
 
 Thompson Ch.4 : "A bothersome aspect of sample size formulas such as these is that they depend on the population variance".  
 
@@ -103,7 +103,7 @@ Thompson Ch.4 : "A bothersome aspect of sample size formulas such as these is th
 
 Me - "A bothersome aspect of sample size formulas such as these is that they depend on the difference ($d$); we know more about $n$ than $d$". 
 
-# [Population Mean]{style="color:#078BCD;"}
+## [Population Mean]{style="color:#078BCD;"}
 
 - You can afford to sample 10 units 
 - What is the worst level of difference ($d$) for
@@ -120,7 +120,7 @@ Me - "A bothersome aspect of sample size formulas such as these is that they dep
 **This is a HW question**
 
 
-# NHT Paradigm
+## NHT Paradigm
 
 The null hypothesis testing paradigm is often focused on Type I error ($\alpha$), rejecting the null hypothesis when it is actually true.
 
@@ -132,7 +132,7 @@ The Null hypothesis is commonly, $H_0(\mu_1 = \mu_2)$
 
 ![](../img/NHT.png){fig-align="center"}
 
-# Statistical Power
+## Statistical Power
 
 ```{=html}
 <style type="text/css">
@@ -185,11 +185,11 @@ Power = 1 - $\beta$
 
 <!-- ![](extra/Statistical_test,_significance_level,_power.png){.absolute top=260 left=350 width="500"} -->
 
-# Type II Error / Power
+## Type II Error / Power
 
 ![](../img/power.png){}
 
-# Power Analysis
+## Power Analysis
 
 Contributions to statistical power
 
@@ -208,14 +208,14 @@ Contributions to statistical power
 
 
 
-# Case Study
+## Case Study
 
 **Objective**: To evaluate the relative use of two types of hummingbird feeders.
 
 
 ![](../img/feeders.png){fig-align="center"}
 
-# Case Study
+## Case Study
 
 <br>
 
@@ -236,7 +236,7 @@ Mean daily use of each feeder is not equal ($\mu_{1} \neq \mu_{2}$).
 
 **Statistical Test**: two-tailed t-test
 
-# Case Study
+## Case Study
 
 First, we need to define TRUTH
 ```{r,echo = TRUE}
@@ -256,7 +256,7 @@ First, we need to define TRUTH
   legend("topleft",legend=c("Feeder 1","Feeder 2"),col=c("black","red"),lwd=3,cex=1.5)
 ```
 
-# Case Study (R Code)
+## Case Study (R Code)
 
 ```{r}
 #| echo: TRUE
@@ -281,7 +281,7 @@ library(pwr)
 ```
 
 
-# Case Study
+## Case Study
 
 ```{r}
 #| echo: TRUE
@@ -303,7 +303,7 @@ out$n
 How do we design for this?
 
 
-# Tradeoff (Power vs N) {.scrollable}
+## Tradeoff (Power vs N) {.scrollable}
 
 Let's consider multiple levels of power
 
@@ -339,7 +339,7 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
 abline(h=c(20,25,30,35),col="grey")
 ```
 
-# Truth? {.scrollable}
+## Truth? {.scrollable}
 
 <span style="color:red">These results assume we are correct about... <span>
 
@@ -362,7 +362,7 @@ What if we are wrong?
 How do we evaluate this?
 
 
-# Tradeoffs {.scrollable}
+## Tradeoffs {.scrollable}
 
 **Power, Effect Size, N**
 
@@ -420,7 +420,7 @@ my.func = function(x,x2){
 
 
 
-# Tradeoffs 
+## Tradeoffs 
 
 **Power, Effect Size, N**
 
