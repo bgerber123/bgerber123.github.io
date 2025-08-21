@@ -10855,5 +10855,138 @@
     "title": "",
     "section": "Quota Sampling",
     "text": "Quota Sampling\n\nThe increased flexibility comes at a reduction of sample credibility\nSelection bias\nNon-response bias\nNo valid measures of uncertainty"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#how-many-samples",
+    "href": "FW552/Sample.Size.html#how-many-samples",
+    "title": "Sample Size",
+    "section": "How many samples?",
+    "text": "How many samples?\nMost common question \n\ndepends on sampling\ndepends on design\ndepends on objective"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#population-mean",
+    "href": "FW552/Sample.Size.html#population-mean",
+    "title": "Sample Size",
+    "section": "Population Mean",
+    "text": "Population Mean\n\nSample size (n) for estimating the population mean (Thompson Ch. 4, Eqn 3)\n\\[\nn = \\frac{1}{d^2/(z^{2}\\sigma^2)+(1/N)}\n\\]\n\n\n\\(d\\) = absolute difference b/w population mean and estimate\n\\(d\\) = \\(\\lvert{\\theta- \\hat{\\theta}}\\lvert\\)\n\\(N\\) = total possible sample units\n\\(\\sigma^2\\) = population variance\n\\(z\\) = upper \\(\\alpha/2\\) of the std. normal dist.\n\\(z_{1-\\alpha/2}\\) = \\(z_{1-0.01/2} = z_{0.99}\\) = 2.5758293"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#population-mean-1",
+    "href": "FW552/Sample.Size.html#population-mean-1",
+    "title": "Sample Size",
+    "section": "Population Mean",
+    "text": "Population Mean\nObjective: to know the average count of bass with fish lice\n\n\nCommon in eutrophic lakes throughout North America\nAssuming no error in detecting lice"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#population-mean-2",
+    "href": "FW552/Sample.Size.html#population-mean-2",
+    "title": "Sample Size",
+    "section": "Population Mean",
+    "text": "Population Mean\n\nN = number of areas in a lake with bass = 200\nAbs. difference (d) is 10\n99% confidence, \\(\\alpha = 0.01\\)\n\\(\\sigma = 20\\); variation in count across sample units\n\n\n  N = 200\n  d = 10\n  alpha  = 0.01\n  z = qnorm(1-alpha/2)\n  sigma2 = 20^2\n\n  n = 1/(d^2/(z^2*sigma2)+(1/N))\n  n\n\n[1] 23.43042"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#population-mean-3",
+    "href": "FW552/Sample.Size.html#population-mean-3",
+    "title": "Sample Size",
+    "section": "Population Mean",
+    "text": "Population Mean\nThompson Ch.4 : “A bothersome aspect of sample size formulas such as these is that they depend on the population variance”.\n\n\n\nMe - “A bothersome aspect of sample size formulas such as these is that they depend on the difference (\\(d\\)); we know more about \\(n\\) than \\(d\\)”."
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#population-mean-4",
+    "href": "FW552/Sample.Size.html#population-mean-4",
+    "title": "Sample Size",
+    "section": "Population Mean",
+    "text": "Population Mean\n\nYou can afford to sample 10 units\nWhat is the worst level of difference (\\(d\\)) for\n\n95% confidence level\n\\(\\sigma\\) could range from 10 to 100\n\n\n\nHow would you solve this?\n\n\nThis is a HW question"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#nht-paradigm",
+    "href": "FW552/Sample.Size.html#nht-paradigm",
+    "title": "Sample Size",
+    "section": "NHT Paradigm",
+    "text": "NHT Paradigm\nThe null hypothesis testing paradigm is often focused on Type I error (\\(\\alpha\\)), rejecting the null hypothesis when it is actually true.\n\nThe Null hypothesis is commonly, \\(H_0(\\mu_1 = \\mu_2)\\)"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#statistical-power",
+    "href": "FW552/Sample.Size.html#statistical-power",
+    "title": "Sample Size",
+    "section": "Statistical Power",
+    "text": "Statistical Power\n\n\n\nDefinition: the probability that a test will reject a false null hypothesis.\n\n\\(H_0(\\mu_1 = \\mu_2)\\) vs \\(H_1(\\mu_1 \\ne \\mu_2)\\)\n\nThe higher the statistical power for a given experiment, the lower the probability of making a Type II error (false negative)"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#type-ii-error-power",
+    "href": "FW552/Sample.Size.html#type-ii-error-power",
+    "title": "Sample Size",
+    "section": "Type II Error / Power",
+    "text": "Type II Error / Power"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#power-analysis-1",
+    "href": "FW552/Sample.Size.html#power-analysis-1",
+    "title": "Sample Size",
+    "section": "Power Analysis",
+    "text": "Power Analysis\nContributions to statistical power\n\n\nWhich statistical test and its assumptions\nEffective Sample size (simplest case this is \\(n\\) per group)\nReality\n\nt-test: difference of means\nHow different these are: \\(\\mu_{1}\\) and \\(\\mu_{2}\\)\nHow variable these are: \\(\\sigma_{1}\\) and \\(\\sigma_{2}\\)"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#case-study",
+    "href": "FW552/Sample.Size.html#case-study",
+    "title": "Sample Size",
+    "section": "Case Study",
+    "text": "Case Study\nObjective: To evaluate the relative use of two types of hummingbird feeders."
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#case-study-1",
+    "href": "FW552/Sample.Size.html#case-study-1",
+    "title": "Sample Size",
+    "section": "Case Study",
+    "text": "Case Study\n\nNull Hypothesis  Mean daily use of each feeder is equal (\\(\\mu_{1} = \\mu_{2}\\)).\n\n\nAlt. Hypothesis  Mean daily use of each feeder is not equal (\\(\\mu_{1} \\neq \\mu_{2}\\)).\n\n\n\nStatistical Test: two-tailed t-test"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#case-study-2",
+    "href": "FW552/Sample.Size.html#case-study-2",
+    "title": "Sample Size",
+    "section": "Case Study",
+    "text": "Case Study\nFirst, we need to define TRUTH\n\n  Group1.Mean &lt;- 100\n  Group1.SD &lt;- 20\n  \n  Group2.Mean &lt;- 120\n  Group2.SD &lt;- 20"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#case-study-r-code",
+    "href": "FW552/Sample.Size.html#case-study-r-code",
+    "title": "Sample Size",
+    "section": "Case Study (R Code)",
+    "text": "Case Study (R Code)\n\nlibrary(pwr)\n# Wish to test a difference b/w groups 1 and 2\n# Want to know if there is a difference in means\n \n#Difference in Means\n  effect.size &lt;- Group1.Mean-Group2.Mean\n\n#Group st. dev\n  group.sd &lt;- sqrt(mean(c(Group1.SD^2,Group2.SD^2)))\n\n#Mean difference divided by group stdev\n#How does the numerator and denominator influence this number?  \n  d &lt;- effect.size/group.sd"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#case-study-3",
+    "href": "FW552/Sample.Size.html#case-study-3",
+    "title": "Sample Size",
+    "section": "Case Study",
+    "text": "Case Study\n\npower = 0.8\n\nout = pwr.t.test(d=d,power=power,type=\"two.sample\",\n                 alternative=\"two.sided\")\n\n#Sample Size Needed for each Group\nout$n\n\n[1] 16.71472\n\n\n\nAssuming Independence b/w feeders How do we design for this?"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#tradeoff-power-vs-n",
+    "href": "FW552/Sample.Size.html#tradeoff-power-vs-n",
+    "title": "Sample Size",
+    "section": "Tradeoff (Power vs N)",
+    "text": "Tradeoff (Power vs N)\nLet’s consider multiple levels of power\n\n\npower = matrix(seq(0.8,0.99,by=0.01))\n\nmy.func = function(x){                    \n                      pwr.t.test(d=d,power=x,\n                                 type=\"two.sample\",\n                                 alternative=\"two.sided\"\n                                )$n\n}\n\nout= apply(power,1, FUN=my.func)"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#truth",
+    "href": "FW552/Sample.Size.html#truth",
+    "title": "Sample Size",
+    "section": "Truth?",
+    "text": "Truth?\nThese results assume we are correct about… \n\n  Group1.Mean &lt;- 100\n  Group1.SD &lt;- 20\n  \n  Group2.Mean &lt;- 120\n  Group2.SD &lt;- 20\n\n\n\nWhat if we are wrong?\n\nHow do we evaluate this?"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#tradeoffs",
+    "href": "FW552/Sample.Size.html#tradeoffs",
+    "title": "Sample Size",
+    "section": "Tradeoffs",
+    "text": "Tradeoffs\nPower, Effect Size, N\n\n# Allow group 1 to vary\n  Group1.Mean &lt;- seq(10,110,by=5)\n\n#THIS IS THE SAME\n  Group1.SD &lt;- 20\n  Group2.Mean &lt;- 120\n  Group2.SD &lt;- 20\n  group.sd &lt;- sqrt(mean(Group1.SD^2,Group2.SD^2))\n\n# Variable effect.size  \n  effect.size &lt;- Group1.Mean-Group2.Mean\n  d &lt;- effect.size/group.sd\n\n#setup combinations of d and power\n  power = seq(0.8,0.99,by=0.01)\n  power.d = expand.grid(power,d)\n  power.d$Var1 = as.numeric(power.d$Var1)\n\n\n\n\n#make new function and use mapply\nmy.func = function(x,x2){                    \n                      pwr.t.test(d=x2,power=x,\n                                 type=\"two.sample\",\n                                 alternative=\"two.sided\"\n                                )$n\n}\n\n# mapply function\n  out= mapply(power.d$Var1,power.d$Var2, FUN=my.func)\n\n# unstandardized the effect size back to difference of means\n  power.d$Var2=power.d$Var2*group.sd\n  \n  out2=cbind(power.d,out)\n  colnames(out2)=c(\"power\",\"d\",\"n\")"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#tradeoffs-1",
+    "href": "FW552/Sample.Size.html#tradeoffs-1",
+    "title": "Sample Size",
+    "section": "Tradeoffs",
+    "text": "Tradeoffs\nPower, Effect Size, N"
   }
 ]
