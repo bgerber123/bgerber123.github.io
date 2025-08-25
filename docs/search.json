@@ -10370,8 +10370,8 @@
     "objectID": "FW552/SRS.html#goal",
     "href": "FW552/SRS.html#goal",
     "title": "Simple Random Sampling",
-    "section": "",
-    "text": "Goal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
+    "section": "Goal",
+    "text": "Goal\n\nGoal: to know the mean number of boreal toad egg masses per pond in RMNP\n\ndifferent egg masses per pond is meaningful why?"
   },
   {
     "objectID": "FW552/SRS.html#srs-conceptual-walkthrough",
@@ -10392,7 +10392,7 @@
     "href": "FW552/SRS.html#population-variance",
     "title": "Simple Random Sampling",
     "section": "Population Variance",
-    "text": "Population Variance\n\\[\n\\sigma^{2} = \\frac{1}{N-1}\\sum_{i=1}^{N} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2}\n\\]"
+    "text": "Population Variance\nThe variance of all sample units\n\\[\n\\sigma^{2} = \\frac{1}{N-1}\\sum_{i=1}^{N} \\left(y_{i}-\\mu\\right)^{2}\n\\]\n\\[\n\\sigma^{2} = \\frac{1}{6-1}\\sum_{i=1}^{6} \\left(y_{i}-8\\right)^{2}\n\\]\n\n(1/(6-1))*sum((ponds$egg.mass-8)^2)\n\n[1] 12.8"
   },
   {
     "objectID": "FW552/SRS.html#population-variance-1",
@@ -10406,14 +10406,14 @@
     "href": "FW552/SRS.html#sample-variance",
     "title": "Simple Random Sampling",
     "section": "Sample Variance",
-    "text": "Sample Variance\nEstimate population variance from 1 sample\n\nBLACK MAGIC!\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{n-1}\\sum_{i=1}^{n} \\left(y_{i}-\\hat{\\mu}\\right)^{2}\n\\]\n\n\n\nvar.per.sample = apply(\n                       cbind(ponds.all$`First Value`,ponds.all$`Second Value`),\n                       1,\n                       var\n                       )\n(1/(6-1))*sum((ponds.simple$Sample.Mean-8)^2)\n\n[1] 12.8\n\nmean(var.per.sample)\n\n[1] 12.8"
+    "text": "Sample Variance\nEstimate population variance from each sample\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{n-1}\\sum_{i=1}^{n} \\left(y_{i}-\\hat{\\mu}\\right)^{2}\n\\]\n\nvar.per.sample = apply(\n                       cbind(ponds.all$`First Value`,ponds.all$`Second Value`),\n                       1,\n                       var\n                       )\n# Expected value of population variance\n  mean(var.per.sample)\n\n[1] 12.8\n\n\n\n\n[1] 4.266667"
   },
   {
     "objectID": "FW552/SRS.html#sample-variance-1",
     "href": "FW552/SRS.html#sample-variance-1",
     "title": "Simple Random Sampling",
     "section": "Sample Variance",
-    "text": "Sample Variance\n\nabline(v=mean.sample.var,col=2) mean.sample.var ```"
+    "text": "Sample Variance\n\n\nUnbiased estimate of the population variance.\nIndividual values will deviate from the population variance."
   },
   {
     "objectID": "FW552/Proportions.html#proportions",
@@ -10609,7 +10609,7 @@
     "href": "FW552/SRS.html#conceptual-walkthrough",
     "title": "Simple Random Sampling",
     "section": "Conceptual Walkthrough",
-    "text": "Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\nPond\negg.mass\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+    "text": "Conceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\n\nPond\negg.mass\n\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
   },
   {
     "objectID": "FW552/SRS.html#back-to-ponds-example",
@@ -10988,5 +10988,215 @@
     "title": "Sample Size",
     "section": "Tradeoffs",
     "text": "Tradeoffs\nPower, Effect Size, N"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs",
+    "href": "FW552/SRS.html#srs",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nConceptual Walkthrough\n\n\n\nWe have a known population of ponds, N = 6\nWe have enough to money for n = 2\nWill use SRS\n\n\n\n\n\n\n\nPond\negg.mass\n\n\n\n\nA\n2\n\n\nB\n6\n\n\nC\n8\n\n\nD\n10\n\n\nE\n10\n\n\nF\n12"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-1",
+    "href": "FW552/SRS.html#srs-1",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nPopulation Parameters:\n\n\\(\\mu = 8\\)\n\\(N = 6\\)\n\\(\\sigma^2_{y} = 12.8\\)"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-2",
+    "href": "FW552/SRS.html#srs-2",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nHow many possible unique samples are there (w/o replacement)\n\\[\n{N}\\choose{n}\n\\]\n\n\\[\n\\frac{N!}{n!(N-n)!}\n\\]\n\n\nR\n\nchoose(6,2)\n\n[1] 15"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-3",
+    "href": "FW552/SRS.html#srs-3",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nWhat is the probability of any one particular sample?\n\n\nSRS: all samples have the same probability!\n\n\n\nConvenient Sampling: What is the probability of one particular sample?"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-5",
+    "href": "FW552/SRS.html#srs-5",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\n\n\n\n\n\nSample.Number\nFirst Pond\nSecond Pond\nFirst Value\nSecond Value\n\n\n\n\n1\nA\nB\n2\n6\n\n\n2\nA\nC\n2\n8\n\n\n3\nA\nD\n2\n10\n\n\n4\nA\nE\n2\n10\n\n\n5\nA\nF\n2\n12\n\n\n6\nB\nC\n6\n8\n\n\n7\nB\nD\n6\n10\n\n\n8\nB\nE\n6\n10\n\n\n9\nB\nF\n6\n12\n\n\n10\nC\nD\n8\n10\n\n\n11\nC\nE\n8\n10\n\n\n12\nC\nF\n8\n12\n\n\n13\nD\nE\n10\n10\n\n\n14\nD\nF\n10\n12\n\n\n15\nE\nF\n10\n12\n\n\n\n\n\n\n\n\nWhat is the probability pond “A” will be sampled”? Pond “B”?"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-4",
+    "href": "FW552/SRS.html#srs-4",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nWhat is the probability pond “A” will be sampled”? Pond “B”?\n\n\nLook at all possible combinations:\n\nutils::combn(LETTERS[1:6],2)\n\n     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]\n[1,] \"A\"  \"A\"  \"A\"  \"A\"  \"A\"  \"B\"  \"B\"  \"B\"  \"B\"  \"C\"   \"C\"   \"C\"   \"D\"   \"D\"  \n[2,] \"B\"  \"C\"  \"D\"  \"E\"  \"F\"  \"C\"  \"D\"  \"E\"  \"F\"  \"D\"   \"E\"   \"F\"   \"E\"   \"F\"  \n     [,15]\n[1,] \"E\"  \n[2,] \"F\""
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-6",
+    "href": "FW552/SRS.html#srs-6",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nIs it okay to not like your random sample and resample?\n\nsample(LETTERS[1:6],2)\n\n[1] \"E\" \"F\"\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"C\" \"E\"\n\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"D\" \"A\""
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-7",
+    "href": "FW552/SRS.html#srs-7",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\nConsider the sample mean \\(\\hat{\\mu}\\) for each sample\n\n\n\n\n\nSample.Number\nFirst Pond\nSecond Pond\nFirst Value\nSecond Value\nSample.Mean\nAbsolute.Deviation\n\n\n\n\n1\nA\nB\n2\n6\n4\n4\n\n\n2\nA\nC\n2\n8\n5\n3\n\n\n3\nA\nD\n2\n10\n6\n2\n\n\n4\nA\nE\n2\n10\n6\n2\n\n\n5\nA\nF\n2\n12\n7\n1\n\n\n6\nB\nC\n6\n8\n7\n1\n\n\n7\nB\nD\n6\n10\n8\n0\n\n\n8\nB\nE\n6\n10\n8\n0\n\n\n9\nB\nF\n6\n12\n9\n1\n\n\n10\nC\nD\n8\n10\n9\n1\n\n\n11\nC\nE\n8\n10\n9\n1\n\n\n12\nC\nF\n8\n12\n10\n2\n\n\n13\nD\nE\n10\n10\n10\n2\n\n\n14\nD\nF\n10\n12\n11\n3\n\n\n15\nE\nF\n10\n12\n11\n3"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-8",
+    "href": "FW552/SRS.html#srs-8",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\n\n\n\n\n\n\n\nSample.Number\nSample.Mean\nDeviance.Truth\n\n\n\n\n1\n4\n-4\n\n\n2\n5\n-3\n\n\n3\n6\n-2\n\n\n4\n6\n-2\n\n\n5\n7\n-1\n\n\n6\n7\n-1\n\n\n7\n8\n0\n\n\n8\n8\n0\n\n\n9\n9\n1\n\n\n10\n9\n1\n\n\n11\n9\n1\n\n\n12\n10\n2\n\n\n13\n10\n2\n\n\n14\n11\n3\n\n\n15\n11\n3\n\n\n\n\n\n\n\n\n\\[ \\frac{1}{15}\\times\\sum_{i=1}^{15} (\\hat{\\mu}_{i}) = 8\\]\n\\[\\sum_{i=1}^N(\\hat{\\mu}_{i}-\\mu) = 0 \\]\nEstimator Bias?"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-9",
+    "href": "FW552/SRS.html#srs-9",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS\n\n\n\n\n\nSample.Mean\nFrequency\nRelative.Freq\nMean.times.Rel.Freq\n\n\n\n\n4\n1\n0.067\n0.267\n\n\n5\n1\n0.067\n0.333\n\n\n6\n2\n0.133\n0.800\n\n\n7\n2\n0.133\n0.933\n\n\n8\n2\n0.133\n1.067\n\n\n9\n3\n0.200\n1.800\n\n\n10\n2\n0.133\n1.333\n\n\n11\n2\n0.133\n1.467\n\n\nSum\n15\n1.000\n8.000\n\n\n\n\n\n\n\n\n\\[\nE[\\mu] = \\sum_{q=1}^{Q} p_i \\times \\hat{\\mu}_{i} = 8\n\\]\n\n\\(Q\\) = number of unique sample means\n\\(p_i\\) = probability of obtaining a given sample / relative frequency"
+  },
+  {
+    "objectID": "FW552/SRS.html#srs-10",
+    "href": "FW552/SRS.html#srs-10",
+    "title": "Simple Random Sampling",
+    "section": "SRS",
+    "text": "SRS"
+  },
+  {
+    "objectID": "FW552/SRS.html#sampling-disribution",
+    "href": "FW552/SRS.html#sampling-disribution",
+    "title": "Simple Random Sampling",
+    "section": "Sampling Disribution",
+    "text": "Sampling Disribution\n\n\nSample mean formula is an estimator of the population mean (parameter )\nSample mean is a random variable with a sampling distribution\n\nsample mean varies from sample-to-sample becasue of the sampling process\n\nThe sampling distribution is specific to an estimator - has known outcomes and relative frequencies of values"
+  },
+  {
+    "objectID": "FW552/SRS.html#sampling-disribution-1",
+    "href": "FW552/SRS.html#sampling-disribution-1",
+    "title": "Simple Random Sampling",
+    "section": "Sampling Disribution",
+    "text": "Sampling Disribution\n\njudge an estimator by its sampling distribution\nWhat properties do we want?"
+  },
+  {
+    "objectID": "FW552/SRS.html#estimator-properties",
+    "href": "FW552/SRS.html#estimator-properties",
+    "title": "Simple Random Sampling",
+    "section": "Estimator Properties",
+    "text": "Estimator Properties\n\nPrecise and unbiased estimator\nIs our estimator precise?"
+  },
+  {
+    "objectID": "FW552/SRS.html#variance-of-sampling-distribution",
+    "href": "FW552/SRS.html#variance-of-sampling-distribution",
+    "title": "Simple Random Sampling",
+    "section": "Variance of Sampling Distribution",
+    "text": "Variance of Sampling Distribution\n\n\n\n\n\nSample.Number\nSample.Mean\nDeviance.Truth\n\n\n\n\n1\n4\n-4\n\n\n2\n5\n-3\n\n\n3\n6\n-2\n\n\n4\n6\n-2\n\n\n5\n7\n-1\n\n\n6\n7\n-1\n\n\n7\n8\n0\n\n\n8\n8\n0\n\n\n9\n9\n1\n\n\n10\n9\n1\n\n\n11\n9\n1\n\n\n12\n10\n2\n\n\n13\n10\n2\n\n\n14\n11\n3\n\n\n15\n11\n3\n\n\n\n\n\n\n\n\nvar(ponds.simple$Sample.Mean)\n\n[1] 4.571429"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two",
+    "href": "FW552/SRS.html#connect-these-two",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\n\nPopulation variance - variation among sample units; estimate from sample variance\nVar. Sampling Distribution - variance of mean values from each possible sample"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two-2",
+    "href": "FW552/SRS.html#connect-these-two-2",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\n\nAs the sample size (n) increases the sample variance declines by 1/n\nFinite-population correction factor\n\n\\[\n\\left(\\frac{N-n}{N}\\right)\n\\]\n\n\\[\nE[\\text{Sampling Distribution Variance}] = \\frac{1}{n} \\left(\\frac{N-n}{N}\\right) \\times \\text{Population Variance}\n\\]"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two-3",
+    "href": "FW552/SRS.html#connect-these-two-3",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\n\n\nSample size (n) = 2\nTotal units (N) = 6\nE[pop var] = 12.8\nE[sample dist. var] = 4.27\n1/n = 0.5\nFinite correction factor = 0.67\nE[pop var] \\(\\times\\) 1/n \\(\\times\\) FCF = 4.27"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two-4",
+    "href": "FW552/SRS.html#connect-these-two-4",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\n\\[\nE[\\text{Sampling Distribution Variance}] = \\\\\\frac{1}{n} \\left(\\frac{N-n}{N}\\right) \\times \\text{Population Variance}\n\\]\n\n\nAs n–&gt; N, (N-n)/(N) approaches zero.\nn = N then no sampling distribution variance\nn &lt;&lt; N then correction factor ~1 and expected sampling distribution variance is related to the population variance by 1/n"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two-5",
+    "href": "FW552/SRS.html#connect-these-two-5",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\nWhy does this matter?"
+  },
+  {
+    "objectID": "FW552/SRS.html#connect-these-two-6",
+    "href": "FW552/SRS.html#connect-these-two-6",
+    "title": "Simple Random Sampling",
+    "section": "Connect these two",
+    "text": "Connect these two\nIf you know the E[pop var] …\n\nyou have a mechanism to understand the variation of sample distribution of the means\nthe more variation in \\(y\\), the more variation in sampling dist. of means."
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-size",
+    "href": "FW552/SRS.html#sample-size",
+    "title": "Simple Random Sampling",
+    "section": "Sample Size",
+    "text": "Sample Size\n\\[\nE[\\text{Sampling Distribution Variance}]\n\\]\n\n\n\nn = 2 –&gt; 4.27\nn = 3 –&gt; 2.13\nn = 4 –&gt; 1.06\nn = 5 –&gt; 0.43\nn = 6 –&gt; 0"
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-size-1",
+    "href": "FW552/SRS.html#sample-size-1",
+    "title": "Simple Random Sampling",
+    "section": "Sample Size",
+    "text": "Sample Size\nNot pond example; When N is large enough . . ."
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-size-2",
+    "href": "FW552/SRS.html#sample-size-2",
+    "title": "Simple Random Sampling",
+    "section": "Sample Size",
+    "text": "Sample Size\n\nSampling distribution is less variable\nSampling distribution centers on population mean\nAs n increases, the distribution becomes ‘Normal’\n\n\nThis is because of the Central limit theorem (CLT)\n\nCLT relies on random/prob. based sampling\nleads to parameter unbiasedness\nDoes not depend on distribution of samples\nallows estimation of precision of parameters\nallows estimation of confidence intervals"
+  },
+  {
+    "objectID": "FW552/SRS.html#the-total",
+    "href": "FW552/SRS.html#the-total",
+    "title": "Simple Random Sampling",
+    "section": "The TOTAL",
+    "text": "The TOTAL\nExtrapolate the sample to the total population\n\\[\n\\hat{\\tau} = N \\times \\hat{\\mu} = \\frac{N}{n}\\sum_{i=1}^{n}(y_i)\n\\]"
+  },
+  {
+    "objectID": "FW552/SRS.html#the-total-1",
+    "href": "FW552/SRS.html#the-total-1",
+    "title": "Simple Random Sampling",
+    "section": "The TOTAL",
+    "text": "The TOTAL\nBack to ponds example"
+  },
+  {
+    "objectID": "FW552/SRS.html#the-total-2",
+    "href": "FW552/SRS.html#the-total-2",
+    "title": "Simple Random Sampling",
+    "section": "The TOTAL",
+    "text": "The TOTAL\nVariance of the total\n\\[\n\\text{var}(\\hat{\\tau}) = N\\times(N-1) \\times \\frac{\\hat{\\sigma}^2}{n}\n\\]"
+  },
+  {
+    "objectID": "FW552/SRS.html#probabilty-of",
+    "href": "FW552/SRS.html#probabilty-of",
+    "title": "Simple Random Sampling",
+    "section": "Probabilty of",
+    "text": "Probabilty of\nWhenever you have the sampling distribution, frame precision in terms of what matters to you."
+  },
+  {
+    "objectID": "FW552/SRS.html#probabilty-of-1",
+    "href": "FW552/SRS.html#probabilty-of-1",
+    "title": "Simple Random Sampling",
+    "section": "Probabilty of",
+    "text": "Probabilty of\n\\[\nP(\\hat{\\tau}\\leq 2 \\times \\tau)\n\\]\n\nlength(which( tau.est &lt;=  2*48))/length(tau.est)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW552/SRS.html#sample-size-3",
+    "href": "FW552/SRS.html#sample-size-3",
+    "title": "Simple Random Sampling",
+    "section": "Sample Size",
+    "text": "Sample Size\nBut what \\(n\\)?\n\n\\(n\\) impacts variation in estimates\nvariation in \\(y\\) impacts the influence of \\(n\\)\nobjective probably impacts \\(n\\) the most\nhigher \\(n\\) is not always better"
   }
 ]

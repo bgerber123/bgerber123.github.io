@@ -6,7 +6,6 @@ library(knitr)
 
 
 ## ----echo=FALSE---------------------------------------------------------------
-
 ponds = data.frame(matrix(nrow=6,ncol=2))
 colnames(ponds)=c("Pond","egg.mass")
 
@@ -94,7 +93,6 @@ sum(ponds.simple$Deviance.Truth)
 
 
 ## ----echo=FALSE---------------------------------------------------------------
-
 temp=data.frame(table(ponds.simple$Sample.Mean))
 colnames(temp)=c("Sample.Mean","Frequency")
 temp$Relative.Freq= temp$Frequency/sum(temp$Frequency)
@@ -109,7 +107,6 @@ temp %>%
   kable(table.attr = 'data-quarto-disable-processing="true"',
         digits = 3) %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
-
 
 # temp2=data.frame("SUM",sum(as.numeric(temp$Frequency[1:8])),sum(as.numeric(temp$Relative.Freq[1:8])),sum(as.numeric(temp$Mean.times.Rel.Freq[1:8])))
 # colnames(temp2)=NULL
@@ -170,6 +167,13 @@ var.per.sample = apply(
 
 
 ## ----echo=FALSE---------------------------------------------------------------
+#variance for sample mean
+N=6
+mean ( (N-2)/N * var.per.sample/2 )
+
+
+
+## ----echo=FALSE---------------------------------------------------------------
  hist(var.per.sample,xlab="Sample Variance")
  abline(v=mean(var.per.sample),lwd=3)
 
@@ -178,10 +182,10 @@ var.per.sample = apply(
 par(mfrow=c(2,1))
 hist(ponds$egg.mass,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Units (egg masses)")
+     xlab="Sample Units (egg masses)",ylim=c(0,3))
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Mean")
+     xlab="Sample Mean",ylim=c(0,3))
 
 
 ## ----fig.width=15-------------------------------------------------------------

@@ -6,7 +6,7 @@ title-slide-attributes:
 format:
   revealjs:
     scrollable: true
-    slide-level: 1
+#    slide-level: 1
     theme: simple
     slide-number: true
     show-slide-number: all
@@ -41,9 +41,9 @@ library(knitr)
 ![](../img/borealtoad.png)
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
-## Conceptual Walkthrough
+### Conceptual Walkthrough
 
 :::: {.columns}
 
@@ -61,7 +61,6 @@ library(knitr)
 ::: {.column width="50%"}
 
 ```{r, echo=FALSE}
-
 ponds = data.frame(matrix(nrow=6,ncol=2))
 colnames(ponds)=c("Pond","egg.mass")
 
@@ -83,19 +82,19 @@ ponds %>%
 <!-- ![](../img/borealtoad.png) -->
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 Population Parameters: 
 
 - $\mu = 8$
 - $N = 6$
-- $\sigma^2 = 12.8$ 
+- $\sigma^2_{y} = 12.8$ 
 
 ```{r,echo=FALSE}
 mu = mean(ponds$egg.mass)
 ```
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 How many possible unique samples are there (w/o replacement)
 
@@ -119,7 +118,7 @@ choose(6,2)
 
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 What is the probability of any one particular sample?
 
@@ -137,7 +136,7 @@ SRS: all samples have the same probability!
 
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 What is the probability pond "A" will be sampled"? Pond "B"?
 
@@ -152,7 +151,7 @@ utils::combn(LETTERS[1:6],2)
 ```
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 ```{r, echo=FALSE}
 ponds.letters=t(utils::combn(LETTERS[1:6],2))
@@ -171,7 +170,7 @@ ponds.all %>%
 
 What is the probability pond "A" will be sampled"? Pond "B"?
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 Is it okay to not like your random sample and resample?
 
@@ -191,15 +190,15 @@ sample(LETTERS[1:6],2)
 sample(LETTERS[1:6],2)
 ```
 
-. . .
 
-Yes, but why don't you like it? Maybe SRS is not what you want.
+<!-- Yes, but why don't you like it? Maybe SRS is not what you want. -->
 
 <br>
 <br>
+<br>
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 Consider the sample mean $\hat{\mu}$ for each sample
 
@@ -220,7 +219,7 @@ ponds.all %>%
 ```
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 :::: {.columns}
 
@@ -268,10 +267,9 @@ Estimator Bias?
 
 ::::
 
-# [SRS]{style="color:#078BCD;" .scrollable}
+## [SRS]{style="color:#078BCD;" .scrollable}
 
 ```{r, echo=FALSE}
-
 temp=data.frame(table(ponds.simple$Sample.Mean))
 colnames(temp)=c("Sample.Mean","Frequency")
 temp$Relative.Freq= temp$Frequency/sum(temp$Frequency)
@@ -286,7 +284,6 @@ temp %>%
   kable(table.attr = 'data-quarto-disable-processing="true"',
         digits = 3) %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
-
 
 # temp2=data.frame("SUM",sum(as.numeric(temp$Frequency[1:8])),sum(as.numeric(temp$Relative.Freq[1:8])),sum(as.numeric(temp$Mean.times.Rel.Freq[1:8])))
 # colnames(temp2)=NULL
@@ -308,7 +305,7 @@ $$
 
 
 
-# [SRS]{style="color:#078BCD;"}
+## [SRS]{style="color:#078BCD;"}
 
 ```{r, echo=FALSE}
 temp=data.frame(table(ponds.simple$Sample.Mean))
@@ -328,7 +325,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 <!-- - Estimator of $\mu$ is unbiased -->
 <!-- -  -->
 
-# [Sampling Disribution]{style="color:#078BCD;"}
+## [Sampling Disribution]{style="color:#078BCD;"}
 
 ::: incremental
 - Sample mean formula is an <span style="color:red">estimator</span> of the population mean (<span style="color:red">parameter</span> )
@@ -339,7 +336,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 :::
 
 
-# [Sampling Disribution]{style="color:#078BCD;"}
+## [Sampling Disribution]{style="color:#078BCD;"}
 
 - judge an estimator by its sampling distribution
 - What properties do we want?
@@ -355,7 +352,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 
 
 
-# [Estimator Properties]{style="color:#078BCD;"}
+## [Estimator Properties]{style="color:#078BCD;"}
 
 - Precise and unbiased estimator
 - Is our estimator precise? 
@@ -367,7 +364,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      xlab="Sample Mean")
 ```
 
-# [Variance of Sampling Distribution]{style="color:#078BCD;"}
+## [Variance of Sampling Distribution]{style="color:#078BCD;"}
 
 ```{r,echo=FALSE}
 ponds.simple %>% 
@@ -380,7 +377,7 @@ var(ponds.simple$Sample.Mean)
 ```
 
 
-# [Population Variance]{style="color:#078BCD;"}
+## [Population Variance]{style="color:#078BCD;"}
 
 The variance of all sample units
 
@@ -397,10 +394,9 @@ $$
 (1/(6-1))*sum((ponds$egg.mass-8)^2)
 ```
 
-# [Sample Variance]{style="color:#078BCD;"}
+## [Sample Variance]{style="color:#078BCD;"}
 
 **Estimate population variance** from each sample
-
 
 $$
 \hat{\sigma}^{2} = \frac{1}{n-1}\sum_{i=1}^{n} \left(y_{i}-\hat{\mu}\right)^{2}
@@ -419,11 +415,12 @@ var.per.sample = apply(
 
 ```{r, echo=FALSE}
 #variance for sample mean
+N=6
 mean ( (N-2)/N * var.per.sample/2 )
 
 ```
 
-# [Sample Variance]{style="color:#078BCD;"}
+## [Sample Variance]{style="color:#078BCD;"}
 
 ```{r,echo=FALSE}
  hist(var.per.sample,xlab="Sample Variance")
@@ -435,7 +432,7 @@ mean ( (N-2)/N * var.per.sample/2 )
 - Individual values will deviate from the population variance.
 
 
-# [Connect these two ]{style="color:#078BCD;"}
+## [Connect these two ]{style="color:#078BCD;"}
 
 - **Population variance** - variation among sample units; estimate from sample variance
 - **Var. Sampling Distribution** - variance of mean values from each possible sample
@@ -448,13 +445,13 @@ Variance of all units vs variance of all sample means
 par(mfrow=c(2,1))
 hist(ponds$egg.mass,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Units (egg masses)")
+     xlab="Sample Units (egg masses)",ylim=c(0,3))
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Mean")
+     xlab="Sample Mean",ylim=c(0,3))
 ```
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 - As the sample size (n) increases the sample variance declines by **1/n**
 - Finite-population correction factor
@@ -471,7 +468,7 @@ E[\text{Sampling Distribution Variance}] = \frac{1}{n} \left(\frac{N-n}{N}\right
 $$
 
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 :::{.incremental}
 
@@ -486,7 +483,7 @@ $$
 :::
 
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 $$
 E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
@@ -500,11 +497,11 @@ $$
 
 :::
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 ### **Why does this matter?**
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 If you know the E[pop var] ...
 
@@ -512,7 +509,7 @@ If you know the E[pop var] ...
 - the more variation in $y$, the more variation in sampling dist. of means.
 
 
-# [Sample Size]{style="color:#078BCD;"}
+## [Sample Size]{style="color:#078BCD;"}
 
 $$
 E[\text{Sampling Distribution Variance}]
@@ -553,7 +550,7 @@ abline(v=8,lty=1,col=1,lwd=4)
 
 ::::
 
-# [Sample Size]{style="color:#078BCD;"}
+## [Sample Size]{style="color:#078BCD;"}
 
  Not pond example; When N is large enough . . .
 
@@ -600,7 +597,7 @@ hist(mu.hat4,col=grDevices::adjustcolor("orange",alpha.f = 0.5),add=FALSE,breaks
 abline(v=100,col=1,lwd=3)
 ```
 
-# [Sample Size]{style="color:#078BCD;"}{.scollable}
+## [Sample Size]{style="color:#078BCD;"}{.scollable}
 
 - Sampling distribution is less variable
 - Sampling distribution centers on population mean
@@ -617,7 +614,7 @@ This is because of the Central limit theorem (CLT)
 - allows estimation of confidence intervals
 
 
-# [The TOTAL]{style="color:#078BCD;"}
+## [The TOTAL]{style="color:#078BCD;"}
 
 *Extrapolate the sample to the total population*
 
@@ -625,9 +622,9 @@ $$
 \hat{\tau} = N \times \hat{\mu} = \frac{N}{n}\sum_{i=1}^{n}(y_i)
 $$
 
-# [The TOTAL]{style="color:#078BCD;"}
+## [The TOTAL]{style="color:#078BCD;"}
 
-## Back to ponds example
+Back to ponds example
 
 ```{r,echo=FALSE}
 tau.est = ponds.simple$Sample.Mean * 6
@@ -639,7 +636,7 @@ legend("topleft",col=c(1,3),legend=c("truth","expectation"),lwd=4)
 ```
 
 
-# [The TOTAL]{style="color:#078BCD;"}
+## [The TOTAL]{style="color:#078BCD;"}
 
 Variance of the total
 
@@ -647,7 +644,7 @@ $$
 \text{var}(\hat{\tau}) = N\times(N-1) \times \frac{\hat{\sigma}^2}{n}
 $$
 
-# [Probabilty of ]{style="color:#078BCD;"}
+## [Probabilty of ]{style="color:#078BCD;"}
 
 Whenever you have the sampling distribution, frame *precision* in terms of what matters to you.
 
@@ -656,7 +653,7 @@ Whenever you have the sampling distribution, frame *precision* in terms of what 
 hist(ponds.simple$Sample.Mean * 6,main="",xlab="Totals per Sample")
 ```
 
-# [Probabilty of ]{style="color:#078BCD;"}
+## [Probabilty of ]{style="color:#078BCD;"}
 
 $$
 P(\hat{\tau}\leq 2 \times \tau) 
@@ -666,7 +663,7 @@ $$
 length(which( tau.est <=  2*48))/length(tau.est)
 ```
 
-# [Sample Size]{style="color:#078BCD;"}
+## [Sample Size]{style="color:#078BCD;"}
 
 But what $n$?
 
