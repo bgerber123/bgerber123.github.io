@@ -26,7 +26,7 @@ format: html
 
 **Course Number:** FW 552 
 
-**Fall 2024:** Mo/We 3pm - 4:15
+**Fall 2024:** Mo/We 3-4:15pm
 
 **Credits:** 3
 
@@ -38,7 +38,7 @@ format: html
 
 **Text and Readings:** Primarily we will use [Thompson (2012). Sampling. Third Addition](/readings552/Sampling - 2012 - Thompson.pdf). All lecture and course materials will be provided. 
 
-**Computing:** A computer will be necessary to work on coding assignments.
+**Computing:** A computer will be necessary to complete assignments; a laptop will be necessary for some classroom assignments.
 
 **Software:** We will use [R](https://www.r-project.org/) through [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
@@ -46,7 +46,7 @@ format: html
 
 This course covers the core concepts of sampling design, including survey sampling theory and techniques, which provide a foundation for designing and interpreting fish and wildlife studies. 
 
-Sampling designs and surveys are generally covered sparsely in statistics courses regularly taken in graduate school, yet, such designs are key to solving fish and wildlife enumeration problems in the field. A commanding understanding of the different sampling designs available to fish and wildlife managers, as well as practice with the statistical tools that allow for the detection, enumeration, or even the occupancy of fish and wildlife populations, are essential to making sound management and conservation recommendations. This course will introduce students to sampling theory and will provide practical examples that apply to fish and wildlife studies. 
+Sampling designs and surveys are generally covered sparsely in statistics courses regularly taken in graduate school, yet, such designs are key to learning about fish, wildlife, and their habitats. A commanding understanding of the fundamental theory of sampling as well as sampling design alternatives is a *super power*. This power helps you think through and implement practices to mitigate potential biases and help ensure your data are appropriate for statistical inference. A cornerstone of effective wildlife and fish management is sound science and the ideas of sampling help ensure that your science is sound. This course will introduce students to sampling theory and will provide practical examples that apply to fish and wildlife studies. 
 
 ## Course Learning Objectives
 
@@ -63,7 +63,7 @@ Upon successful completion of this course students will:
 
 - Be able to use fundamental code practices in the R programming language.  
 
-- Be able to think from a `sampling perspective`, in contrast from a logistics or field techniques perspective.
+- Be able to think about answering a research question from a `sampling perspective`, in contrast to a logistics or field techniques perspective.
 
 ## Assessment
 
@@ -100,13 +100,13 @@ Table 1: Grade scheme from [CSU](https://canvas.colostate.edu/grading-schemes/)
 
 ## Student Experiences and Pedagogical Techniques
 
-**In-class lectures:** Class periods will often include a lecture that which will incorporate instructor-led questions and short discussions. **Please come prepared to share your thoughts and opinions.**
+**In-class lectures:** Class periods will often include a lecture that which will incorporate instructor-led questions and short discussions. **Please come prepared to share your thoughts and opinions.** This class is intended to be an open environment of ideas, thoughts, and questions. We should all be prepared to challenge each other, leveraging our personal experiences and knowledge.
 
 **In-class student-led discussions:** Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others. 
 
 **Out-of-class  assignments:** Assignments will be common and help guide learning and provide feedback to the instructor.
 
-**Out-of-class reading:** Come prepared to class by having read and thought about the assigned readings; check the website for discussion points.
+**Out-of-class reading:** Come prepared to class by having read and thought about the assigned readings; check the website for discussion points. Come with questions! Come preprared to answer questions from other students and the instructor. 
 
 **Quizzes:** Quizzes will be administered on Canvas and will be used to gauge student comprehension of assigned readings and provide accountability for out-of-class preparation. 
 

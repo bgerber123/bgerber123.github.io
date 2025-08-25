@@ -43,7 +43,7 @@ code.r{
 . . .
 
 
--   **Computers**: Assignments will often require a computer (R programming)
+-   **Laptop**: Needed for assignments and in class exercises.
 
 ## [My Background]{style="color:#078BCD"}
 
@@ -101,7 +101,7 @@ code.r{
 
 - Experience with the R programming language
 
-- One vision of an ideal job, research project, study animal, or study location.
+- What is your ideal job, research project, study animal, or study location?
 
 
 
@@ -112,8 +112,8 @@ Assessment Components  | Percentage of Grade
 Course Engagement      | 10%
 Assignments            | 25%
 Quizzes                | 25%
-Tests                  | 20%
-Presentation           | 20%
+Test                   | 20%
+Project                | 20%
 
 ## [Project]{style="color:#078BCD;"}
 
@@ -121,36 +121,38 @@ An oral presentation on a topic of choice that focuses on the ideas of sampling
 
 - how to improve a current project
 - designing a future study
-- evaluating evaluating sampling options in terms of bias/precision/cost/etc.  
+- evaluating  sampling options in terms of bias/precision/cost/etc.  
 
 
 
-## [Course Learning Objectives]{style="color:#078BCD;"}
+<!-- ## [Course Learning Objectives]{style="color:#078BCD;"} -->
 
-<!-- Upon successful completion of this course students will be able to: -->
+<!-- <!-- Upon successful completion of this course students will be able to: --> 
 
-<!-- ::: incremental  -->
+<!-- <!-- ::: incremental  --> 
 
-- Identify different types of sampling designs and understand when to apply them
+<!-- - Identify different types of sampling designs and understand when to apply them -->
 
-- Understand statistical estimators and their properties
+<!-- - Understand statistical estimators and their properties -->
 
-- Frame a fish and wildlife sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.  
+<!-- - Frame a fish and wildlife sampling design problem and apply appropriate statistical tools to estimate parameters of interest in accordance with the selected design.   -->
 
-- Be able to use fundamental code practices in the R programming language.  
+<!-- - Be able to use fundamental code practices in the R programming language.   -->
 
 <!-- ::: -->
 
 
 ## [Why is this class useful?]{style="color:#078BCD;"} {.scrollable}
 
--   Fundamental to scientific learning
-
 -   Thinking from a sampling perspective is a super power!
 
--   Have options in being efficient in your study's
+-   Fundamental to scientific learning
 
--   Interpret and frame learning when reading the literature
+-   Efficient learning about the world
+
+-   Don't need any damn statistical model!
+
+-   Interpret and frame learning from any "study"
 
 ## [Software]{style="color:#078BCD;"}
 
@@ -240,6 +242,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 -   Learning is a choice (in every moment)
 
+-   Words Matter
+
 -   An inclusive environment is paramount for learning
 
 -   Communication is everything
@@ -249,17 +253,17 @@ statistical thinking have not changed, but their implementation has."</em></span
 -   Struggle is good. Solving problems leads to learning. But....
 
 
-## []{style="color:#078BCD"}
+<!-- ## []{style="color:#078BCD"} -->
 
-<br>
-<br>
-<br>
-<br>
-<br>
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
 
-```{=html}
-<center><span style="color:#FF0000";><p style="font-size:100px">Words Matter</p><em></em></p></span></center>
-```
+<!-- ```{=html} -->
+<!-- <!-- <center><span style="color:#FF0000";><p style="font-size:100px">Words Matter</p><em></em></p></span></center> --> 
+<!-- ``` -->
 
 
 ## [Website]{style="color:#078BCD"}
