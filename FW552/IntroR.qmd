@@ -755,6 +755,6 @@ x[,2]
 :::
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE,results='hide'}
 knitr::purl("IntroR.qmd")
 ```
