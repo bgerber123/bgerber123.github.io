@@ -1,0 +1,17 @@
+{
+  "hash": "7076a61137007c3b2c73c9e4c799c54d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Homework #\"\nauthor: \"Your Name\"\ndate: \"Date\"\noutput: html_document\n---\n\n\n\n\n## Homework Assignment Name\n\n<style type=\"text/css\">\n  body{\n  font-size: 12pt;\n}\npre.r { /* Targets R code blocks */\n      font-size: 12pt;\n    }\ncode { /* Targets inline code */\n      font-size: 12pt;\n      }\n</style>\n\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. For assignments, I will ask you for the Rmd file and the knitted HTML, along with any other files that are external to the Rmd file and loaded; this allows me to execute your code if need be.\n\nYou can embed an R code chunk like this:\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Create an object called 'values' that consists of the integers from 1 to 1000\n  values =  seq(1,1000)\n\n# Set the seed for a random number generator and sample (size of 10) from the object 'values'\n  set.seed(432432)\n  s1 = sample(values, size = 10, replace = FALSE)\n  s1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1] 129 910 238  57 715 650 140 337 690 684\n```\n\n\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n# Create an object called 'normal.values' that come from a Normal Distribution\n# with a mean of 100 and standard deviation of 10 (sample size of 50)\n  set.seed(4324321)\n  normal.values =  rnorm(50, mean = 100, sd = 10)\n\n  normal.values\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1]  96.74474 107.54993  94.68642 101.51679  92.08989 104.24035 117.56222\n [8] 107.30433 110.91343  72.29415 115.99155  97.20976  89.02006  91.46432\n[15]  90.12327  94.96677 109.00046  90.71059 105.13303 113.07277 114.20272\n[22] 101.52427 109.30394 105.69916  94.92778  88.65461  83.81766 101.11308\n[29]  99.15054  99.44897 102.25597  94.05942  99.92350  75.79662 105.68692\n[36]  95.77633 109.47008  86.30428  96.20405  99.40444  88.62136 103.38826\n[43] 101.62365 111.76193 100.92859  83.46600  93.65529 108.57361  88.85869\n[50] 116.98262\n```\n\n\n:::\n:::\n\n\n\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Name_HW_template_files/figure-html/pressure-1.png){width=672}\n:::\n:::\n\n\n\n\nNote that the `echo = FALSE` argument was added to the code chunk so that the code text is not printed in the output file.\n\n<br>\n",
+    "supporting": [
+      "Name_HW_template_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
