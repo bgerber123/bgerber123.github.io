@@ -236,18 +236,21 @@ code.r{
 </ul></li>
 </ul>
 </section>
-<section id="sampling-types" class="slide level2">
-<h2><span style="color:#078BCD;">Sampling Types</span></h2>
-<ul>
-<li><span style="color:cornflowerblue">Convenient sampling</span> - when most convenient units are chosen</li>
-<li><span style="color:cornflowerblue">Judgment sampling</span> - obtained at the discretion of someone who is familiar with the characteristics of the population</li>
-<li><span style="color:cornflowerblue">Probability sampling</span> - based on a process that the probability a unit is selected is known</li>
-</ul>
-</section>
 <section id="central-paradox-of-sampling" class="slide level2">
 <h2><span style="color:#078BCD;">Central paradox of Sampling</span></h2>
 <!-- - Impossible to know from a sample whether it is representative -->
 <!-- - We rely on the process, not the outcome. -->
+</section>
+<section id="sampling-types" class="slide level2">
+<h2><span style="color:#078BCD;">Sampling Types</span></h2>
+<ul>
+<li><span style="color:cornflowerblue">Convenient sampling</span></li>
+<li><span style="color:cornflowerblue">Judgment sampling</span></li>
+<li><span style="color:cornflowerblue">Probability sampling</span></li>
+</ul>
+<!-- - when most convenient units are chosen -->
+<!-- obtained at the discretion of someone who is familiar with the characteristics of the population -->
+<!-- - based on a process that the probability a unit is selected is known  -->
 </section>
 <section id="why-sample" class="slide level2">
 <h2><span style="color:#078BCD;">Why Sample?</span></h2>
@@ -312,22 +315,37 @@ code.r{
 <p><b>Title:</b> Land cover attributes affect the distribution of rooting damage by wild pigs (Sus scrofa)</p>
 <div class="r-fit-text">
 <ul>
-<li>Surveys within 1) The Savannah River Site (green) 2) Newberry County (blue), 3) Hampton County (red)</li>
+<li>Surveys in 1) The Savannah River Site (green) 2) Newberry County (blue), 3) Hampton County (red)</li>
 <li>“We generated 9 random points to act as the center of respective 200-ha survey grids”.</li>
 <li>“Properties were primarily composed of mixed agricultural-forested cover”.</li>
 </ul>
 </div>
 
 <img data-src="../img/rooting.SC.png" class="r-stretch"></section>
+<section id="generalizability" class="slide level2">
+<h2><span style="color:#078BCD;">Generalizability?</span></h2>
+<p><strong>Compare and contrast</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../img/muskratRI.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../img/rooting.SC.png"></p>
+</div></div>
+</section>
 <section id="thinking-backwards" class="slide level2">
+<h2><span style="color:#078BCD;">Thinking Backwards</span></h2>
+<p><strong>Not uncommon to think backwards.</strong></p>
+<ul>
+<li><p>I have data here</p></li>
+<li><p>I will take what I learned and apply to a larger area that is the <em>Population</em></p></li>
+</ul>
+</section>
+<section id="thinking-backwards-1" class="slide level2">
 <h2><span style="color:#078BCD;">Thinking Backwards</span></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>People often think backwards from what data they have to identify the Population.</p>
-<div class="r-fit-text">
-<p>E.g., Nesting shorebirds are censused each summer at a handful of beaches.</p>
+<p>E.g., Nesting shorebirds are censused each summer at a few beaches.</p>
 <p>Can we use these sites as samples to apply to all beaches in the area?</p>
-</div>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -338,31 +356,26 @@ code.r{
 </section>
 <section id="design-vs.-sampling" class="slide level2">
 <h2><span style="color:#078BCD;">Design vs.&nbsp;Sampling</span></h2>
-<div class="fragment">
 <ul>
 <li><strong>Experimental Design:</strong>
 <ul>
-<li>Deliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed</li>
+<li>Deliberately perturbing a part of a <em>population</em> to compare it’s effect to a part that was not perturbed</li>
 </ul></li>
 <li><strong>Sampling Design</strong>:
 <ul>
 <li>The process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="design--vs-model-based-infernce" class="slide level2">
 <h2><span style="color:#078BCD;">Design- vs Model-based Infernce</span></h2>
 <p>What are important differences according to Thompson and Hankin et al.?</p>
 <p>Benefits or costs of either?</p>
-<div class="fragment">
-<p><strong>Important Considerations</strong></p>
-<ul>
-<li>randomness</li>
-<li>fixed</li>
-<li>undefinable infinite superpoulation vs.&nbsp;real target population</li>
-</ul>
-</div>
+<!-- . . . -->
+<!-- **Important Considerations** -->
+<!-- - randomness -->
+<!-- - fixed -->
+<!-- - undefinable infinite superpoulation vs. real target population -->
 </section>
 <section id="design--vs-model-based-infernce-1" class="slide level2">
 <h2><span style="color:#078BCD;">Design- vs Model-based Infernce</span></h2>
@@ -377,7 +390,7 @@ code.r{
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>A sample (height in inches):</p>
-<p><span class="math inline">\(\textbf{y} = [69, 54, 72, 61, 58, 71]\)</span></p>
+<p><span class="math inline">\(\textbf{y} = \begin{bmatrix} 69 &amp; 54 &amp; 72 &amp; 61 &amp; 58 &amp; 71 \end{bmatrix}\)</span></p>
 <p><br></p>
 <p>A sample unit:</p>
 <p><span class="math inline">\(y_{2} =54\)</span></p>
@@ -397,7 +410,7 @@ code.r{
 </ul>
 </div>
 <div class="fragment">
-<p><span class="math display">\[\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 57.7\]</span></p>
+<p><span class="math display">\[\hat{\mu} = \left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n} = 57.7\]</span></p>
 <ul>
 <li><span class="math inline">\(n\)</span> is a sample parameter (size of sample)</li>
 <li><span class="math inline">\(\hat{\mu}\)</span> is an estimate of a population parameter (<span class="math inline">\(\mu\)</span>) from the estimator (mathematical rule for calculation)</li>
@@ -515,11 +528,11 @@ code.r{
 </div>
 <div class="fragment">
 <p><span class="math display">\[
-\text{Bias}(\hat{\mu},\mu) = \left(\int_{x} g(x)p(x|\mu)dx\right) - \mu
+\text{Bias}(\hat{\mu},\mu) = \left(\int_{\hat{\mu}} \hat{\mu} p(\hat{\mu})dx\right) - \mu
 \]</span></p>
 </div>
 <div class="fragment">
-<p>Expectations are an average over all possible samples of size n.</p>
+<p>Expectations are an average over all samples of size <span class="math inline">\(n\)</span>.</p>
 </div>
 </section>
 <section id="is-our-estimator-biased" class="slide level2">
@@ -550,7 +563,7 @@ code.r{
 </section>
 <section id="accuracy" class="slide level2">
 <h2><span style="color:#078BCD;">Accuracy</span></h2>
-<p><span style="color:cornflowerblue">Typically a measure of how close the average sample value is to truth</span></p>
+<p><span style="color:cornflowerblue">A measure of how close the average sample value is to truth</span></p>
 
 <img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
 <section id="sampling-variation-2" class="slide level2">
@@ -558,6 +571,10 @@ code.r{
 <p><span style="color:cornflowerblue">Which sampling distribution would you prefer?</span></p>
 
 <img data-src="Sampling1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="estimator-consistency" class="slide level2">
+<h2><span style="color:#078BCD;">Estimator Consistency</span></h2>
+<p>An estimator of a parameter is <em>consistent</em> if it converges in probability to the true value of the parameter as the sample size tends to infinity.</p>
+</section>
 <section id="sampling-bias" class="slide level2">
 <h2><span style="color:#078BCD;">Sampling Bias</span></h2>
 <ul>
@@ -617,9 +634,44 @@ code.r{
 <li>In Aspen, CO human-bear conflicts tend to be under reported</li>
 <li>In New Jersey they tend to be over reported</li>
 </ul>
-
-
 </div>
+</section>
+<section id="summary" class="slide level2">
+<h2><span style="color:#078BCD;">Summary</span></h2>
+<div class="columns">
+<div class="r-fit-text">
+<div class="column" style="width:50%;">
+<ul>
+<li>census</li>
+<li>inference</li>
+<li>sample</li>
+<li>sample unit</li>
+<li>sample size</li>
+<li>sampling error</li>
+<li>sampling variation</li>
+<li>sample parameter</li>
+<li>sampling frame</li>
+<li>sampling bias</li>
+<li>sampling distribution</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>target population / population</li>
+<li>population parameter</li>
+<li>design vs model-based inference</li>
+<li>vector</li>
+<li>statistic</li>
+<li>estimator</li>
+<li>estimate</li>
+<li>estimator bias</li>
+<li>accuracy / bias / precision</li>
+<li>estimator consistency</li>
+<li>measurement error</li>
+</ul>
+</div></div>
+</div>
+
+
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

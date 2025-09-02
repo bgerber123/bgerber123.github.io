@@ -44,25 +44,30 @@ To use a sample to describe a 'population' is called what?
     - Complete enumeration of the population (i.e., the whole)
 
 - **What is a sample?**
-    - The act, process, or technique of selecting a representative part of a population for the purpose of determining parameters or characteristics of the whole
-population 
+    - The act, process, or technique of selecting a representative part of a population for the purpose of determining parameters or characteristics of the whole population 
 
 
 - **What is sampling?**
     - Selection of a part of a population to be used to estimate characteristics of the population
     - To make inference about the population from a part, i.e., the sample.
 
-## [Sampling Types]{style="color:#078BCD;"}
-
-- [Convenient sampling]{style="color:cornflowerblue"} - when most convenient units are chosen
-- [Judgment sampling]{style="color:cornflowerblue"} - obtained at the discretion of someone who is familiar with the characteristics of the population
-- [Probability sampling]{style="color:cornflowerblue"} - based on a process that the probability a unit is selected is known 
 
 ## [Central paradox of Sampling]{style="color:#078BCD;"}
 
 <!-- - Impossible to know from a sample whether it is representative -->
 
 <!-- - We rely on the process, not the outcome. -->
+
+
+## [Sampling Types]{style="color:#078BCD;"}
+
+- [Convenient sampling]{style="color:cornflowerblue"} 
+- [Judgment sampling]{style="color:cornflowerblue"} 
+- [Probability sampling]{style="color:cornflowerblue"} 
+
+<!-- - when most convenient units are chosen -->
+<!-- obtained at the discretion of someone who is familiar with the characteristics of the population -->
+<!-- - based on a process that the probability a unit is selected is known  -->
 
 ## [Why Sample?]{style="color:#078BCD;"}
 
@@ -139,7 +144,6 @@ population
 
 <!-- **Clear target population and sample** -->
 
-
 ![](../img/muskratRI.png)
 
 ## [Population and Sample]{style="color:#078BCD;"}
@@ -150,7 +154,7 @@ population
 
 ::: {.r-fit-text}
 
-- Surveys within 1) The Savannah River Site (green) 2)  Newberry County (blue), 3) Hampton County (red)
+- Surveys in 1) The Savannah River Site (green) 2)  Newberry County (blue), 3) Hampton County (red)
 - "We generated 9 random points to act as the center of respective 200-ha survey grids".
 - "Properties were primarily composed of mixed agricultural-forested cover".
 
@@ -158,21 +162,44 @@ population
 
 ![](../img/rooting.SC.png) 
 
+## [Generalizability?]{style="color:#078BCD;"}
+
+**Compare and contrast**
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](../img/muskratRI.png)
+
+:::
+
+::: {.column width="50%"}
+
+![](../img/rooting.SC.png) 
+
+:::
+
+::::
+
+## [Thinking Backwards]{style="color:#078BCD;"}
+
+**Not uncommon to think backwards.**
+
+- I have data here
+
+- I will take what I learned and apply to a larger area that is the *Population*
+
 ## [Thinking Backwards]{style="color:#078BCD;"}
 
 :::: {.columns}
 
 ::: {.column width="60%"}
 
-People often think backwards from what data they have to identify the Population.
 
-::: {.r-fit-text}
-
-E.g., Nesting shorebirds are censused each summer at a handful of beaches.
+E.g., Nesting shorebirds are censused each summer at a few beaches.
 
 Can we use these sites as samples to apply to all beaches in the area?
-
-:::
 
 :::
 
@@ -186,10 +213,9 @@ Can we use these sites as samples to apply to all beaches in the area?
 
 ## [Design vs. Sampling]{style="color:#078BCD;"}
 
-. . .
 
 -   **Experimental Design:**
-    - Deliberately perturbing a part of a 'population' to compare it's effect to a part that was not perturbed
+    - Deliberately perturbing a part of a *population* to compare it's effect to a part that was not perturbed
 
 -   **Sampling Design**: 
     - The process of obtaining a representative sample to characterize a 'population' w/o necessarily perturbing it.
@@ -202,13 +228,13 @@ What are important differences according to Thompson and Hankin et al.?
 
 Benefits or costs of either?
 
-. . .
+<!-- . . . -->
 
-**Important Considerations**
+<!-- **Important Considerations** -->
 
-- randomness
-- fixed
-- undefinable infinite superpoulation vs. real target population
+<!-- - randomness -->
+<!-- - fixed -->
+<!-- - undefinable infinite superpoulation vs. real target population -->
 
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
@@ -230,7 +256,7 @@ Benefits or costs of either?
 
 A sample (height in inches):
 
-$\textbf{y} = [69, 54, 72, 61, 58, 71]$
+$\textbf{y} = \begin{bmatrix} 69 & 54 & 72 & 61 & 58 & 71 \end{bmatrix}$
 
 <br>
 
@@ -272,7 +298,7 @@ $n = 6$
 
 . . .
 
-$$\hat{\mu} = \left(\left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n}\right) = 57.7$$
+$$\hat{\mu} = \left(\sum_{i=1}^{n}y_{i}\right)\times \frac{1}{n} = 57.7$$
 
 - $n$ is a sample parameter (size of sample) 
 - $\hat{\mu}$ is an estimate of a population parameter ($\mu$) from the estimator (mathematical rule for calculation) 
@@ -422,12 +448,12 @@ $$
 . . .
 
 $$
-\text{Bias}(\hat{\mu},\mu) = \left(\int_{x} g(x)p(x|\mu)dx\right) - \mu
+\text{Bias}(\hat{\mu},\mu) = \left(\int_{\hat{\mu}} \hat{\mu} p(\hat{\mu})dx\right) - \mu
 $$
 
 . . .
 
-Expectations are an average over all possible samples of size n.
+Expectations are an average over all samples of size $n$.
 
 ## [Is our estimator biased?]{style="color:#078BCD;"}
 
@@ -471,7 +497,7 @@ length(which(mu.hat > lower & mu.hat < upper)) / length(mu.hat)
 
 ## [Accuracy]{style="color:#078BCD;"}
 
-[Typically a measure of how close the average sample value is to truth]{style="color:cornflowerblue"}
+[A measure of how close the average sample value is to truth]{style="color:cornflowerblue"}
 
 ```{r echo=FALSE}
 par(mfrow=c(2,2))
@@ -508,11 +534,18 @@ abline(v=300,lwd=3,col=2)
 ```
 
 
+## [Estimator Consistency]{style="color:#078BCD;"}
+
+An estimator of a parameter is *consistent* if it converges in probability to the true value of the parameter as the sample size tends to infinity.
+
+
+
 ## [Sampling Bias]{style="color:#078BCD;"}
 
 -  **Sampling Bias**
     - Systematic tendency of selecting certain sample units; makes the samples *unrepresentative* to the target population
     - Examples in fish/wildlife??
+
 
 
 ## [Sampling Bias]{style="color:#078BCD;"}
@@ -615,3 +648,47 @@ E.g.,
   - In Aspen, CO human-bear conflicts tend to be under reported
   - In New Jersey they tend to be over reported
 
+
+## [Summary]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.r-fit-text}
+
+::: {.column width="50%"}
+
+
+- census
+- inference
+- sample
+- sample unit
+- sample size
+- sampling error
+- sampling variation
+- sample parameter
+- sampling frame
+- sampling bias
+- sampling distribution
+
+
+:::
+
+::: {.column width="50%"}
+
+
+- target population / population
+- population parameter
+- design vs model-based inference
+- vector
+- statistic
+- estimator
+- estimate
+- estimator bias
+- accuracy / bias / precision
+- estimator consistency
+- measurement error
+:::
+
+:::
+
+::::

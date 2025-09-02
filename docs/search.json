@@ -9048,14 +9048,14 @@
     "href": "FW552/week2.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nRead Boyd et al. 2023 \nDiscussion Post on Canvas\n\n\n\n\n\nRead Elliot and Valiant 2017"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nRead Boyd et al. 2023 \nDiscussion Post on Canvas\n\n\n\n\n\nRead Elliot and Valiant 2017\nRead Aubry and Francesiaz 2022"
   },
   {
     "objectID": "FW552/week2.html#week-2",
     "href": "FW552/week2.html#week-2",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nRead Boyd et al. 2023 \nDiscussion Post on Canvas\n\n\n\n\n\nRead Elliot and Valiant 2017"
+    "text": "Lecture: Sampling I\nLecture Code: Sampling1.R\n\n\n\n\n\nRead Boyd et al. 2023 \nDiscussion Post on Canvas\n\n\n\n\n\nRead Elliot and Valiant 2017\nRead Aubry and Francesiaz 2022"
   },
   {
     "objectID": "FW552/week4.html",
@@ -9370,7 +9370,7 @@
     "href": "FW552/Sampling1.html#design--vs-model-based-infernce",
     "title": "Sampling I",
     "section": "Design- vs Model-based Infernce",
-    "text": "Design- vs Model-based Infernce\nWhat are important differences according to Thompson and Hankin et al.?\nBenefits or costs of either?\n\nImportant Considerations\n\nrandomness\nfixed\nundefinable infinite superpoulation vs. real target population"
+    "text": "Design- vs Model-based Infernce\nWhat are important differences according to Thompson and Hankin et al.?\nBenefits or costs of either?"
   },
   {
     "objectID": "FW552/Sampling1.html#design--vs-model-based-infernce-1",
@@ -9384,14 +9384,14 @@
     "href": "FW552/Sampling1.html#design-vs.-sampling",
     "title": "Sampling I",
     "section": "Design vs. Sampling",
-    "text": "Design vs. Sampling\n\n\nExperimental Design:\n\nDeliberately perturbing a part of a ‘population’ to compare it’s effect to a part that was not perturbed\n\nSampling Design:\n\nThe process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
+    "text": "Design vs. Sampling\n\nExperimental Design:\n\nDeliberately perturbing a part of a population to compare it’s effect to a part that was not perturbed\n\nSampling Design:\n\nThe process of obtaining a representative sample to characterize a ‘population’ w/o necessarily perturbing it."
   },
   {
     "objectID": "FW552/Sampling1.html#sample-language",
     "href": "FW552/Sampling1.html#sample-language",
     "title": "Sampling I",
     "section": "Sample Language",
-    "text": "Sample Language\n\n\nA sample (height in inches):\n\\(\\textbf{y} = [69, 54, 72, 61, 58, 71]\\)\n\nA sample unit:\n\\(y_{2} =54\\)\n\nSample size:\n\\(n = 6\\)"
+    "text": "Sample Language\n\n\nA sample (height in inches):\n\\(\\textbf{y} = \\begin{bmatrix} 69 & 54 & 72 & 61 & 58 & 71 \\end{bmatrix}\\)\n\nA sample unit:\n\\(y_{2} =54\\)\n\nSample size:\n\\(n = 6\\)"
   },
   {
     "objectID": "FW552/Sampling1.html#common-sample-units",
@@ -9405,7 +9405,7 @@
     "href": "FW552/Sampling1.html#more-language",
     "title": "Sampling I",
     "section": "More Language",
-    "text": "More Language\nWhat is a statistic?\n\n\nAn estimate of a population parameter from a sample\n\n\n\n\\[\\hat{\\mu} = \\left(\\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n}\\right) = 57.7\\]\n\n\\(n\\) is a sample parameter (size of sample)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter (\\(\\mu\\)) from the estimator (mathematical rule for calculation)\n57.7 is a statistic (specific value)"
+    "text": "More Language\nWhat is a statistic?\n\n\nAn estimate of a population parameter from a sample\n\n\n\n\\[\\hat{\\mu} = \\left(\\sum_{i=1}^{n}y_{i}\\right)\\times \\frac{1}{n} = 57.7\\]\n\n\\(n\\) is a sample parameter (size of sample)\n\\(\\hat{\\mu}\\) is an estimate of a population parameter (\\(\\mu\\)) from the estimator (mathematical rule for calculation)\n57.7 is a statistic (specific value)"
   },
   {
     "objectID": "FW552/Sampling1.html#more-language-1",
@@ -9643,7 +9643,7 @@
     "href": "FW552/Sampling1.html#population-and-sample-5",
     "title": "Sampling I",
     "section": "Population and Sample",
-    "text": "Population and Sample\nTitle: Land cover attributes affect the distribution of rooting damage by wild pigs (Sus scrofa)\n\n\nSurveys within 1) The Savannah River Site (green) 2) Newberry County (blue), 3) Hampton County (red)\n“We generated 9 random points to act as the center of respective 200-ha survey grids”.\n“Properties were primarily composed of mixed agricultural-forested cover”."
+    "text": "Population and Sample\nTitle: Land cover attributes affect the distribution of rooting damage by wild pigs (Sus scrofa)\n\n\nSurveys in 1) The Savannah River Site (green) 2) Newberry County (blue), 3) Hampton County (red)\n“We generated 9 random points to act as the center of respective 200-ha survey grids”.\n“Properties were primarily composed of mixed agricultural-forested cover”."
   },
   {
     "objectID": "FW552/Syllabus.html#instructor",
@@ -9944,7 +9944,7 @@
     "href": "FW552/Sampling1.html#thinking-backwards",
     "title": "Sampling I",
     "section": "Thinking Backwards",
-    "text": "Thinking Backwards\n\n\nPeople often think backwards from what data they have to identify the Population.\n\nE.g., Nesting shorebirds are censused each summer at a handful of beaches.\nCan we use these sites as samples to apply to all beaches in the area?"
+    "text": "Thinking Backwards\nNot uncommon to think backwards.\n\nI have data here\nI will take what I learned and apply to a larger area that is the Population"
   },
   {
     "objectID": "FW552/Sampling1.html#definitions-1",
@@ -9979,7 +9979,7 @@
     "href": "FW552/Sampling1.html#sampling-types",
     "title": "Sampling I",
     "section": "Sampling Types",
-    "text": "Sampling Types\n\nConvenient sampling - when most convenient units are chosen\nJudgment sampling - obtained at the discretion of someone who is familiar with the characteristics of the population\nProbability sampling - based on a process that the probability a unit is selected is known"
+    "text": "Sampling Types\n\nConvenient sampling\nJudgment sampling\nProbability sampling"
   },
   {
     "objectID": "FW552/Sampling1.html#central-paradox-of-sampling",
@@ -10028,7 +10028,7 @@
     "href": "FW552/Sampling1.html#estimator-bias",
     "title": "Sampling I",
     "section": "Estimator Bias",
-    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{x} g(x)p(x|\\mu)dx\\right) - \\mu\n\\]\n\n\nExpectations are an average over all possible samples of size n."
+    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{\\hat{\\mu}} \\hat{\\mu} p(\\hat{\\mu})dx\\right) - \\mu\n\\]\n\n\nExpectations are an average over all samples of size \\(n\\)."
   },
   {
     "objectID": "FW552/Sampling1.html#precision",
@@ -10049,7 +10049,7 @@
     "href": "FW552/Sampling1.html#accuracy",
     "title": "Sampling I",
     "section": "Accuracy",
-    "text": "Accuracy\nTypically a measure of how close the average sample value is to truth"
+    "text": "Accuracy\nA measure of how close the average sample value is to truth"
   },
   {
     "objectID": "FW552/Sampling1.html#is-our-estimator-biased",
@@ -11219,5 +11219,40 @@
     "title": "Homework #",
     "section": "Including Plots",
     "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\nNote that the echo = FALSE argument was added to the code chunk so that the code text is not printed in the output file."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#thinking-backwards-1",
+    "href": "FW552/Sampling1.html#thinking-backwards-1",
+    "title": "Sampling I",
+    "section": "Thinking Backwards",
+    "text": "Thinking Backwards\n\n\nE.g., Nesting shorebirds are censused each summer at a few beaches.\nCan we use these sites as samples to apply to all beaches in the area?"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#estimator-consistency",
+    "href": "FW552/Sampling1.html#estimator-consistency",
+    "title": "Sampling I",
+    "section": "Estimator Consistency",
+    "text": "Estimator Consistency\nAn estimator of a parameter is consistent if it converges in probability to the true value of the parameter as the sample size tends to infinity."
+  },
+  {
+    "objectID": "FW552/Sampling1.html#generalizability",
+    "href": "FW552/Sampling1.html#generalizability",
+    "title": "Sampling I",
+    "section": "Generalizability?",
+    "text": "Generalizability?\nCompare and contrast"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#language",
+    "href": "FW552/Sampling1.html#language",
+    "title": "Sampling I",
+    "section": "Language",
+    "text": "Language\n\n\n\n\ncensus\ninference\nsample\nsample unit\nsample size\nsampling error\nsampling variation\nsample parameter\nsampling frame\nsampling bias\nsampling distribution\n\n\n\ntarget population / population\npopulation parameter\ndesign vs model-based inference\nvector\nstatistic\nestimator\nestimate\nestimator bias\naccuracy / bias / precision\nestimator consistency\nmeasurement error"
+  },
+  {
+    "objectID": "FW552/Sampling1.html#summary",
+    "href": "FW552/Sampling1.html#summary",
+    "title": "Sampling I",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\ncensus\ninference\nsample\nsample unit\nsample size\nsampling error\nsampling variation\nsample parameter\nsampling frame\nsampling bias\nsampling distribution\n\n\n\ntarget population / population\npopulation parameter\ndesign vs model-based inference\nvector\nstatistic\nestimator\nestimate\nestimator bias\naccuracy / bias / precision\nestimator consistency\nmeasurement error"
   }
 ]
