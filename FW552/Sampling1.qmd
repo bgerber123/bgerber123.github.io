@@ -79,8 +79,6 @@ To use a sample to describe a 'population' is called what?
 
 ## [Common Sample Units]{style="color:#078BCD;"}
 
-. . .
-
 - [plots/quadrats]{style="color:cornflowerblue"} - small area to measure/count plants, seeds, insects, etc.
 - [points]{style="color:cornflowerblue"} - measurements are taken from a set of points established throughout a population
 - [transects]{style="color:cornflowerblue"} - line segments in which observations are taken from
@@ -184,7 +182,7 @@ To use a sample to describe a 'population' is called what?
 
 ## [Thinking Backwards]{style="color:#078BCD;"}
 
-**Not uncommon to think backwards.**
+**Not uncommon!**
 
 - I have data here
 
@@ -238,11 +236,13 @@ Benefits or costs of either?
 
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
-![](../img/designModel.png){fig-align="center"}
+![](../img/forest.png)
 
 ## [Design- vs Model-based Infernce]{style="color:#078BCD;"}
 
-![](../img/forest.png)
+![](../img/designModel.png){fig-align="center"}
+
+
 
 
 
@@ -453,7 +453,7 @@ $$
 
 . . .
 
-Expectations are an average over all samples of size $n$.
+This expectation is an average over all samples of size $n$.
 
 ## [Is our estimator biased?]{style="color:#078BCD;"}
 

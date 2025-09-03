@@ -9398,7 +9398,7 @@
     "href": "FW552/Sampling1.html#common-sample-units",
     "title": "Sampling I",
     "section": "Common Sample Units",
-    "text": "Common Sample Units\n\n\nplots/quadrats - small area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established throughout a population\ntransects - line segments in which observations are taken from\nindividual organisms - the organism is the sample unit or the organism defines the location of the sample unit"
+    "text": "Common Sample Units\n\nplots/quadrats - small area to measure/count plants, seeds, insects, etc.\npoints - measurements are taken from a set of points established throughout a population\ntransects - line segments in which observations are taken from\nindividual organisms - the organism is the sample unit or the organism defines the location of the sample unit"
   },
   {
     "objectID": "FW552/Sampling1.html#more-language",
@@ -9944,7 +9944,7 @@
     "href": "FW552/Sampling1.html#thinking-backwards",
     "title": "Sampling I",
     "section": "Thinking Backwards",
-    "text": "Thinking Backwards\nNot uncommon to think backwards.\n\nI have data here\nI will take what I learned and apply to a larger area that is the Population"
+    "text": "Thinking Backwards\nNot uncommon!\n\nI have data here\nI will take what I learned and apply to a larger area that is the Population"
   },
   {
     "objectID": "FW552/Sampling1.html#definitions-1",
@@ -10028,7 +10028,7 @@
     "href": "FW552/Sampling1.html#estimator-bias",
     "title": "Sampling I",
     "section": "Estimator Bias",
-    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{\\hat{\\mu}} \\hat{\\mu} p(\\hat{\\mu})dx\\right) - \\mu\n\\]\n\n\nExpectations are an average over all samples of size \\(n\\)."
+    "text": "Estimator Bias\n\nExpected Bias (of the estimator) = average sample mean - population mean\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\bar{\\hat{\\mu}} - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = E[\\hat\\mu] - \\mu \\\\\n\\]\n\n\n\\[\n\\text{Bias}(\\hat{\\mu},\\mu) = \\left(\\int_{\\hat{\\mu}} \\hat{\\mu} p(\\hat{\\mu})dx\\right) - \\mu\n\\]\n\n\nThis expectation is an average over all samples of size \\(n\\)."
   },
   {
     "objectID": "FW552/Sampling1.html#precision",
