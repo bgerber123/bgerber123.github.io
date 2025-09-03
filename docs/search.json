@@ -9391,7 +9391,7 @@
     "href": "FW552/Sampling1.html#sample-language",
     "title": "Sampling I",
     "section": "Sample Language",
-    "text": "Sample Language\n\n\nA sample (height in inches):\n\\(\\textbf{y} = \\begin{bmatrix} 69 & 54 & 72 & 61 & 58 & 71 \\end{bmatrix}\\)\n\nA sample unit:\n\\(y_{2} =54\\)\n\nSample size:\n\\(n = 6\\)"
+    "text": "Sample Language\n\n\nA sample (height in inches):\n\\(\\textbf{y} = \\begin{bmatrix} 69 & 54 & 72 & 61 & 58 & 71 \\end{bmatrix}\\)\n\nA sample unit:\n\\(y_{2} =54\\)\n\nSample size:\n\\(n = 8\\)"
   },
   {
     "objectID": "FW552/Sampling1.html#common-sample-units",
