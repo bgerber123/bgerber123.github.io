@@ -37,7 +37,6 @@ Examples?
 ![](../img/proportion.png)
 
 
-
 ## [Proportions]{style="color:#078BCD;"}
 
 $$
@@ -45,19 +44,20 @@ y \in \{0,1\}
 $$
 
 $$
-1 = \text{occur} \\0 = \text{not occur}
+1 = \text{occur} \\
+0 = \text{not occur}
 $$
 
-. . .
 
 $$
-\hat{p} = \frac{1}{n}\sum_{i=1}^{n}y_i 
+\hat{p} = \frac{1}{n}\sum_{i=1}^{n}y_{i} 
 $$
 
-. . .
+
 
 $$
 \hat{\sigma}^2_{p} = \left(\frac{N-n}{N}\right)\frac{\hat{p}(1-\hat{p})}{n-1}
 $$
+
 
 
