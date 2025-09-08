@@ -70,7 +70,8 @@ $$
 
 How does sample grid effect $\hat{p}$ and $\hat{\sigma}^2_{p}$?
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, fig.width=8, fig.height=8}
+
 library(graphics)
 x <- seq(1,10,by=1)
 y <-  seq(1,10,by=1)
@@ -108,7 +109,7 @@ points(x=c(1,4,5,2,2),y=c(1,5,7,4,9),pch=16,col=2,cex=2)
 
 How does sample grid effect $\hat{p}$ and $\hat{\sigma}^2_{p}$?
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, fig.width=8, fig.height=8}
 x <- seq(1,10,by=1)
 y <-  seq(1,10,by=1)
 
@@ -157,7 +158,7 @@ text(6.5,3.5,bquote(p==.(round(5/64,digits=2))),col="purple",cex=2)
 
 How does sample grid effect $\hat{p}$ and $\hat{\sigma}^2_{p}$?
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, fig.width=8, fig.height=8}
 x <- seq(1,10,by=1)
 y <-  seq(1,10,by=1)
 
