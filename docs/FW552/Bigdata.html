@@ -143,7 +143,11 @@
 <h2><span style="color:#078BCD;">Boyd et al.&nbsp;2023</span></h2>
 
 <img data-src="../img/boydBox1.png" class="r-stretch"><div class="r-fit-text">
-<p>“when <span class="math inline">\(\rho(R,Y) &gt;0\)</span> larger values of Y are more likely to be in the sample than in the population and vice versa. Where <span class="math inline">\(\rho(R,Y) =0\)</span>, this term cancels the others and there is no [systematic] error”.</p>
+<ul>
+<li><span class="math inline">\(\sigma_Y\)</span> is the population standard deviation</li>
+<li><span class="math inline">\(f = n/N\)</span>; sampling rate</li>
+</ul>
+<p>“when <span class="math inline">\(\rho(R,Y) &gt;0\)</span>: larger values of Y are more likely to be in the sample than in the population and vice versa. Where <span class="math inline">\(\rho(R,Y) =0\)</span>, this term cancels the others and there is no [systematic] error”.</p>
 </div>
 </section>
 <section id="errors" class="slide level2">
@@ -159,32 +163,32 @@ code.r{
 </ul>
 <div class="fragment">
 <ul>
-<li>The issue is when there is correlation between obtaining an observation and the value of the observation (<em>sample selection bias</em>)</li>
+<li>The issue: correlation b/w obtaining an observation and the value of the observation (<em>sample selection bias</em>)</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li>Survey data: correlation between <em>whether</em> a person responds and <em>what</em> their response is</li>
+<li><strong>Survey data</strong>: correlation between <em>whether</em> a person responds and <em>what</em> their response is</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li>Species distribution: correlation between <em>where you sample</em> and the probability the species occurs there</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Another?</li>
+<li><strong>Species distribution</strong>: correlation between <em>where you sample</em> and the probability the species occurs there</li>
 </ul>
 </div>
 </section>
 <section id="big-data-paradox" class="slide level2">
 <h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
 <p><a href="https://projecteuclid.org/journalArticle/Download?urlId=10.1214%2F18-AOAS1161SF">Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.</a></p>
+<ul>
+<li><a href="https://civilstat.com/2018/10/mengs-big-data-paradox-and-an-extreme-example/">Blog by Civil Statistician</a></li>
+<li><a href="https://www.youtube.com/watch?v=8YLdIDOMEZs">Video: Statistical paradises and pardoxes in Big Data</a></li>
+</ul>
 <p><br></p>
-<p><a href="https://civilstat.com/2018/10/mengs-big-data-paradox-and-an-extreme-example/">Blog by Civil Statistician</a></p>
-<p><br></p>
-<p><a href="https://www.youtube.com/watch?v=8YLdIDOMEZs">Video: Statistical paradises and pardoxes in Big Data</a></p>
+<p><a href="https://www.nature.com/articles/s41586-021-04198-4">Bradley, V.C., Kuriwaki, S., Isakov, M. et al.&nbsp;Unrepresentative big surveys significantly overestimated US vaccine uptake.</a></p>
+<ul>
+<li><a href="https://www.nature.com/articles/d41586-021-03604-1">What Surveys really say</a></li>
+</ul>
 </section>
 <section id="big-data-paradox-1" class="slide level2">
 <h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
@@ -215,7 +219,13 @@ code.r{
 <p>Often assumed that <code>Big data</code> reduces errors by the magnitude of the data quantity</p>
 <div class="fragment">
 <p><br></p>
-<p>BUT, the nature of big data is such that <span class="math inline">\(\rho_{R,G} \neq 0\)</span>; this equals zero under simple random sampling (SRS)</p>
+<p>BUT, the nature of big data is such that <span class="math inline">\(\rho_{R,G} \neq 0\)</span></p>
+<ul>
+<li>Major posit!</li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\rho_{R,G} = 0\)</span> under simple random sampling (SRS)!</p>
 </div>
 </section>
 <section id="big-data-paradox-3" class="slide level2">
@@ -232,16 +242,22 @@ code.r{
 </ul>
 </div>
 </section>
-<section id="back-to-boyd-et-al.-2023" class="slide level2">
+<section id="back-to-boyd-et-al.-2023" class="slide level2 scrollable">
 <h2><span style="color:#078BCD;">Back to Boyd et al.&nbsp;2023</span></h2>
-
-<img data-src="../img/MengEffectiveSampleSize.png" class="r-stretch"><div class="fragment">
+<p><img data-src="../img/MengEffectiveSampleSize.png"> - <span class="math inline">\(f = n/N\)</span></p>
+<div class="fragment">
 <ul>
-<li>When <span class="math inline">\(\rho_{R,G}\)</span> deviates even slightly from 0, the relative effective sample size (<span class="math inline">\(n_{eff}/n\)</span>) decreases with the true population size, N.</li>
+<li>When <span class="math inline">\(\rho_{R,G}\)</span> deviates even slightly from 0, the relative effective sample size (<span class="math inline">\(n_{eff}/n\)</span>) decreases with the true population size, N.(See Meng 2018; Figure 2)</li>
 </ul>
 </div>
 <div class="fragment">
-<p><strong>Implication:</strong> Each data point added means less than the previous one.</p>
+<p><strong>Implication:</strong> When <span class="math inline">\(N\)</span> is large, your relative ESS (<span class="math inline">\(n_{eff}/n\)</span>) is small; your data are worthless.</p>
+</div>
+<div class="fragment">
+<p>“In biodiversity monitoring, N is typically very large, so this reduction can be substantial.”</p>
+<!-- ## [Back to Meng, 2018]{style="color:#078BCD;"} -->
+<!-- ![](../img/ess.correlation.rho.png) -->
+<!-- x-axis is $f = n/N$ -->
 </div>
 </section>
 <section id="big-data-paradox-4" class="slide level2">
@@ -251,16 +267,17 @@ code.r{
 <li>Meng’s voter survey example
 <ul>
 <li>n = 2,300,000</li>
+<li><span class="math inline">\(\rho_{R,G} = 0.005\)</span></li>
 <li><span class="math inline">\(N_{eff} = 400\)</span> (assuming 100% response rate)</li>
+<li>0.99982608695 <span class="math inline">\(%\)</span> reduction in sample size</li>
 </ul></li>
-<li>all depends on whether <span class="math inline">\(\rho(R,Y) \neq 0\)</span></li>
 </ul>
 </section>
 <section id="big-data-paradox-5" class="slide level2">
 <h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
-<p><strong>Mean Squared Error</strong></p>
+<p>We need to think about <strong>Mean Squared Error</strong> (<a href="https://en.wikipedia.org/wiki/Mean_squared_error">Proof</a>)</p>
 <p><span class="math display">\[
-\text{MSE}(\hat{\mu}) = \frac{1}{n}\Sigma_{i=1}^{n}\left(\hat{\mu}_{i}-\mu\right)
+\text{MSE}(\hat{\mu}) = \frac{1}{n}\Sigma_{i=1}^{n}\left(\hat{\mu}_{i}-\mu\right)^{2}
 \]</span></p>
 <div class="fragment">
 <p><span class="math display">\[
@@ -271,32 +288,42 @@ code.r{
 <p><span class="math display">\[
 \text{MSE}(\hat{\mu}) = \text{Var}(\hat{\mu})+(\text{Bias}(\hat{\mu},\mu))^{2}
 \]</span></p>
-<p><a href="https://en.wikipedia.org/wiki/Mean_squared_error">Proof</a></p>
+</div>
+<div class="fragment">
+<p><strong>Implication:</strong> Same MSE can be achieved with different combinations of variance and bias<span class="math inline">\(^2\)</span>.</p>
 </div>
 </section>
-<section id="big-data-paradox-6" class="slide level2">
-<h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
+<section id="back-to-boyd-et-al.-2023-1" class="slide level2">
+<h2><span style="color:#078BCD;">Back to Boyd et al.&nbsp;2023</span></h2>
 
 <img data-src="../img/boyd.fig1.png" class="r-stretch"><ul>
-<li><p>‘large biased’ is <span class="math inline">\(\rho_{R,G} = -0.058\)</span>, <span class="math inline">\(n = 1000\)</span></p></li>
-<li><p>vertical line is true proportional occupancy</p></li>
-<li><p>MSE is the same</p></li>
+<li>‘large biased’ is <span class="math inline">\(\rho_{R,G} = -0.058\)</span>, <span class="math inline">\(n = 1000\)</span></li>
+<li>MSE is the same</li>
+<li><strong>95% CI’s include the truth 0% of the time for ‘Large Biased’</strong></li>
 </ul>
-<div class="fragment">
-<p><strong>BUT 95% Confidence Intervals include the truth 0% of the time</strong></p>
-</div>
 </section>
-<section id="big-data-paradox-7" class="slide level2">
-<h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
+<section id="back-to-boyd-et-al.-2023-2" class="slide level2">
+<h2><span style="color:#078BCD;">Back to Boyd et al.&nbsp;2023</span></h2>
 
 <img data-src="../img/boyd.fig1.png" class="r-stretch"><p><strong>Take home</strong>: Large biased data –&gt; highly biased and highly precise estimates</p>
 </section>
-<section id="data-analyst" class="slide level2">
-<h2><span style="color:#078BCD;">Data Analyst</span></h2>
-<p>Do ‘data analysts’ think about <em>sample selection bias</em>?</p>
-
-<img data-src="../img/data.analyst.png" class="r-stretch"></section>
-<section id="big-data-paradox-8" class="slide level2">
+<section id="meng-2018" class="slide level2">
+<h2><span style="color:#078BCD;">Meng (2018)</span></h2>
+<ul>
+<li>“…what should be unbelievable is the magical power of probabilistic sampling, which we all have taken for granted for too long.”</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>“once we lose control over the <span class="math inline">\(R\)</span> mechanism, we can no longer keep the monster <span class="math inline">\(N\)</span> at bay, so to speak.”</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>“It is therefore essentially wishful thinking to rely on the “bigness” of Big Data to protect us from its questionable quality, especially for large populations.”</li>
+</ul>
+</div>
+</section>
+<section id="big-data-paradox-6" class="slide level2">
 <h2><span style="color:#078BCD;">Big Data Paradox</span></h2>
 <p><strong>Is there really a choice?</strong></p>
 <ol type="1">

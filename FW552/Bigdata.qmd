@@ -23,7 +23,10 @@ format: revealjs
 
 ::: {.r-fit-text}
 
-"when $\rho(R,Y) >0$ larger values of Y are more likely to be in the sample than in the population and vice versa. Where $\rho(R,Y) =0$, this term cancels the others and there is no [systematic] error".
+- $\sigma_Y$ is the population standard deviation
+- $f = n/N$; sampling rate
+
+"when $\rho(R,Y) >0$: larger values of Y are more likely to be in the sample than in the population and vice versa. Where $\rho(R,Y) =0$, this term cancels the others and there is no [systematic] error".
 
 :::
 
@@ -42,34 +45,30 @@ code.r{
 
 . . .
 
-- The issue is when there is correlation between obtaining an observation and the value of the observation (*sample selection bias*)
+- The issue: correlation b/w obtaining an observation and the value of the observation (*sample selection bias*)
 
 . . .
 
-- Survey data: correlation between *whether* a person responds and *what* their response is
+- **Survey data**: correlation between *whether* a person responds and *what* their response is
 
 . . .
 
-- Species distribution: correlation between *where you sample* and the probability the species occurs there
+- **Species distribution**: correlation between *where you sample* and the probability the species occurs there
 
-. . .
-
-- Another?
 
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
 
 [Meng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.](https://projecteuclid.org/journalArticle/Download?urlId=10.1214%2F18-AOAS1161SF)
 
-<br>
-
-[Blog by Civil Statistician](https://civilstat.com/2018/10/mengs-big-data-paradox-and-an-extreme-example/)
-
+  - [Blog by Civil Statistician](https://civilstat.com/2018/10/mengs-big-data-paradox-and-an-extreme-example/)
+  - [Video: Statistical paradises and pardoxes in Big Data](https://www.youtube.com/watch?v=8YLdIDOMEZs)
 
 <br>
 
-[Video: Statistical paradises and pardoxes in Big Data](https://www.youtube.com/watch?v=8YLdIDOMEZs)
+[Bradley, V.C., Kuriwaki, S., Isakov, M. et al. Unrepresentative big surveys significantly overestimated US vaccine uptake.](https://www.nature.com/articles/s41586-021-04198-4)
 
+  - [What Surveys really say](https://www.nature.com/articles/d41586-021-03604-1)
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
 
@@ -110,7 +109,13 @@ Often assumed that `Big data` reduces errors by the magnitude of the data quanti
 
 <br>
 
-BUT, the nature of big data is such that $\rho_{R,G} \neq 0$; this equals zero under simple random sampling (SRS)
+BUT, the nature of big data is such that $\rho_{R,G} \neq 0$
+
+- Major posit!
+
+. . .
+
+$\rho_{R,G} = 0$ under simple random sampling (SRS)!
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
 
@@ -125,18 +130,31 @@ Meng (2018) wanted to know the sample size (n) needed to achieve a certain level
 
 - the correlation between *whether* a person responds and *what* their response was
 
-## [Back to Boyd et al. 2023]{style="color:#078BCD;"}
+## [Back to Boyd et al. 2023]{style="color:#078BCD;"}{.scrollable}
 
 
 ![](../img/MengEffectiveSampleSize.png)
+- $f = n/N$
 
 . . .
 
- - When $\rho_{R,G}$ deviates even slightly from 0, the relative effective sample size ($n_{eff}/n$) decreases with the true population size, N. 
+ - When $\rho_{R,G}$ deviates even slightly from 0, the relative effective sample size ($n_{eff}/n$) decreases with the true population size, N.(See Meng 2018; Figure 2) 
 
 . . . 
 
-**Implication:** Each data point added means less than the previous one. 
+**Implication:** When $N$ is large, your relative ESS ($n_{eff}/n$) is small; your data are worthless.
+
+. . .
+
+"In biodiversity monitoring, N is typically very large, so this reduction can be substantial." 
+
+
+<!-- ## [Back to Meng, 2018]{style="color:#078BCD;"} -->
+
+<!-- ![](../img/ess.correlation.rho.png) -->
+
+
+<!-- x-axis is $f = n/N$ -->
 
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
@@ -145,20 +163,21 @@ Look at big data for what it is
 
 - Meng's voter survey example 
   - n = 2,300,000 
+  - $\rho_{R,G} = 0.005$
   - $N_{eff} = 400$ (assuming 100% response rate)
-
-- all depends on whether $\rho(R,Y) \neq 0$
+  - 0.99982608695 $%$ reduction in sample size
 
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
 
-**Mean Squared Error**
+We need to think about  **Mean Squared Error** ([Proof](https://en.wikipedia.org/wiki/Mean_squared_error))
 
 $$
-\text{MSE}(\hat{\mu}) = \frac{1}{n}\Sigma_{i=1}^{n}\left(\hat{\mu}_{i}-\mu\right)
+\text{MSE}(\hat{\mu}) = \frac{1}{n}\Sigma_{i=1}^{n}\left(\hat{\mu}_{i}-\mu\right)^{2}
 $$
 
 . . .
+
 
 $$
 \text{MSE}(\hat{\mu}) = E[(\hat{\mu}-\mu)]
@@ -171,36 +190,40 @@ $$
 \text{MSE}(\hat{\mu}) = \text{Var}(\hat{\mu})+(\text{Bias}(\hat{\mu},\mu))^{2}
 $$
 
-[Proof](https://en.wikipedia.org/wiki/Mean_squared_error)
 
 
-## [Big Data Paradox]{style="color:#078BCD;"}
+. . .
+
+**Implication:** Same MSE can be achieved with different combinations of variance and bias$^2$.
+
+
+
+## [Back to Boyd et al. 2023]{style="color:#078BCD;"}
 
 ![](../img/boyd.fig1.png)
 
 - 'large biased' is $\rho_{R,G} = -0.058$, $n = 1000$
-
-- vertical line is true proportional occupancy 
-
 - MSE is the same
-
-. . .
-
-**BUT 95% Confidence Intervals include the truth 0% of the time**
+- **95% CI's include the truth 0% of the time for 'Large Biased'**
 
 
-## [Big Data Paradox]{style="color:#078BCD;"}
+## [Back to Boyd et al. 2023]{style="color:#078BCD;"}
 
 ![](../img/boyd.fig1.png)
 
 **Take home**: Large biased data --> highly biased and highly precise estimates
 
-## [Data Analyst]{style="color:#078BCD;"}
+## [Meng (2018)]{style="color:#078BCD;"}
 
-Do 'data analysts' think about *sample selection bias*?
+- "...what should be unbelievable is the magical power of probabilistic sampling, which we all have taken for granted for too long."
 
-![](../img/data.analyst.png)
+. . .
 
+- "once we lose control over the $R$ mechanism, we can no longer keep the monster $N$ at bay, so to speak."
+
+. . .
+
+- "It is therefore essentially wishful thinking to rely on the “bigness” of Big Data to protect us from its questionable quality, especially for large populations."
 
 ## [Big Data Paradox]{style="color:#078BCD;"}
 

@@ -10245,21 +10245,21 @@
     "href": "FW552/Bigdata.html#boyd-et-al.-2023",
     "title": "The Big Data Paradox",
     "section": "Boyd et al. 2023",
-    "text": "Boyd et al. 2023\n\n\n“when \\(\\rho(R,Y) &gt;0\\) larger values of Y are more likely to be in the sample than in the population and vice versa. Where \\(\\rho(R,Y) =0\\), this term cancels the others and there is no [systematic] error”."
+    "text": "Boyd et al. 2023\n\n\n\n\\(\\sigma_Y\\) is the population standard deviation\n\\(f = n/N\\); sampling rate\n\n“when \\(\\rho(R,Y) &gt;0\\): larger values of Y are more likely to be in the sample than in the population and vice versa. Where \\(\\rho(R,Y) =0\\), this term cancels the others and there is no [systematic] error”."
   },
   {
     "objectID": "FW552/Bigdata.html#errors",
     "href": "FW552/Bigdata.html#errors",
     "title": "The Big Data Paradox",
     "section": "Errors",
-    "text": "Errors\n\n\nSampling Error is normal; big data or small data\n\n\n\nThe issue is when there is correlation between obtaining an observation and the value of the observation (sample selection bias)\n\n\n\n\nSurvey data: correlation between whether a person responds and what their response is\n\n\n\n\nSpecies distribution: correlation between where you sample and the probability the species occurs there\n\n\n\n\nAnother?"
+    "text": "Errors\n\n\nSampling Error is normal; big data or small data\n\n\n\nThe issue: correlation b/w obtaining an observation and the value of the observation (sample selection bias)\n\n\n\n\nSurvey data: correlation between whether a person responds and what their response is\n\n\n\n\nSpecies distribution: correlation between where you sample and the probability the species occurs there"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox",
     "href": "FW552/Bigdata.html#big-data-paradox",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\nMeng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\n\nBlog by Civil Statistician\n\nVideo: Statistical paradises and pardoxes in Big Data"
+    "text": "Big Data Paradox\nMeng, X. L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election.\n\nBlog by Civil Statistician\nVideo: Statistical paradises and pardoxes in Big Data\n\n\nBradley, V.C., Kuriwaki, S., Isakov, M. et al. Unrepresentative big surveys significantly overestimated US vaccine uptake.\n\nWhat Surveys really say"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-1",
@@ -10273,7 +10273,7 @@
     "href": "FW552/Bigdata.html#big-data-paradox-2",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho_{R,G} \\times \\sigma_{G} \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\end{split}\n\\]\nOften assumed that Big data reduces errors by the magnitude of the data quantity\n\n\nBUT, the nature of big data is such that \\(\\rho_{R,G} \\neq 0\\); this equals zero under simple random sampling (SRS)"
+    "text": "Big Data Paradox\n\\[\n\\begin{split}\n\\hat{\\mu} - \\mu &= \\rho_{R,G} \\times \\sigma_{G} \\times \\sqrt(\\frac{N - n}{n})\\\\\n\\end{split}\n\\]\nOften assumed that Big data reduces errors by the magnitude of the data quantity\n\n\nBUT, the nature of big data is such that \\(\\rho_{R,G} \\neq 0\\)\n\nMajor posit!\n\n\n\n\\(\\rho_{R,G} = 0\\) under simple random sampling (SRS)!"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-3",
@@ -10287,35 +10287,35 @@
     "href": "FW552/Bigdata.html#back-to-boyd-et-al.-2023",
     "title": "The Big Data Paradox",
     "section": "Back to Boyd et al. 2023",
-    "text": "Back to Boyd et al. 2023\n\n\n\nWhen \\(\\rho_{R,G}\\) deviates even slightly from 0, the relative effective sample size (\\(n_{eff}/n\\)) decreases with the true population size, N.\n\n\n\nImplication: Each data point added means less than the previous one."
+    "text": "Back to Boyd et al. 2023\n - \\(f = n/N\\)\n\n\nWhen \\(\\rho_{R,G}\\) deviates even slightly from 0, the relative effective sample size (\\(n_{eff}/n\\)) decreases with the true population size, N.(See Meng 2018; Figure 2)\n\n\n\nImplication: When \\(N\\) is large, your relative ESS (\\(n_{eff}/n\\)) is small; your data are worthless.\n\n\n“In biodiversity monitoring, N is typically very large, so this reduction can be substantial.”"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-4",
     "href": "FW552/Bigdata.html#big-data-paradox-4",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\nLook at big data for what it is\n\nMeng’s voter survey example\n\nn = 2,300,000\n\\(N_{eff} = 400\\) (assuming 100% response rate)\n\nall depends on whether \\(\\rho(R,Y) \\neq 0\\)"
+    "text": "Big Data Paradox\nLook at big data for what it is\n\nMeng’s voter survey example\n\nn = 2,300,000\n\\(\\rho_{R,G} = 0.005\\)\n\\(N_{eff} = 400\\) (assuming 100% response rate)\n0.99982608695 \\(%\\) reduction in sample size"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-5",
     "href": "FW552/Bigdata.html#big-data-paradox-5",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\nMean Squared Error\n\\[\n\\text{MSE}(\\hat{\\mu}) = \\frac{1}{n}\\Sigma_{i=1}^{n}\\left(\\hat{\\mu}_{i}-\\mu\\right)\n\\]\n\n\\[\n\\text{MSE}(\\hat{\\mu}) = E[(\\hat{\\mu}-\\mu)]\n\\]\n\n\n\\[\n\\text{MSE}(\\hat{\\mu}) = \\text{Var}(\\hat{\\mu})+(\\text{Bias}(\\hat{\\mu},\\mu))^{2}\n\\]\nProof"
+    "text": "Big Data Paradox\nWe need to think about Mean Squared Error (Proof)\n\\[\n\\text{MSE}(\\hat{\\mu}) = \\frac{1}{n}\\Sigma_{i=1}^{n}\\left(\\hat{\\mu}_{i}-\\mu\\right)^{2}\n\\]\n\n\\[\n\\text{MSE}(\\hat{\\mu}) = E[(\\hat{\\mu}-\\mu)]\n\\]\n\n\n\\[\n\\text{MSE}(\\hat{\\mu}) = \\text{Var}(\\hat{\\mu})+(\\text{Bias}(\\hat{\\mu},\\mu))^{2}\n\\]\n\n\nImplication: Same MSE can be achieved with different combinations of variance and bias\\(^2\\)."
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-6",
     "href": "FW552/Bigdata.html#big-data-paradox-6",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\n\n\n‘large biased’ is \\(\\rho_{R,G} = -0.058\\), \\(n = 1000\\)\nvertical line is true proportional occupancy\nMSE is the same\n\n\nBUT 95% Confidence Intervals include the truth 0% of the time"
+    "text": "Big Data Paradox\nIs there really a choice?\n\nBig Data with sample selection bias\nSmall sample from Simple random sample (no selection bias)"
   },
   {
     "objectID": "FW552/Bigdata.html#big-data-paradox-7",
     "href": "FW552/Bigdata.html#big-data-paradox-7",
     "title": "The Big Data Paradox",
     "section": "Big Data Paradox",
-    "text": "Big Data Paradox\n\nTake home: Large biased data –&gt; highly biased and highly precise estimates"
+    "text": "Big Data Paradox\nIs there really a choice?\n\nBig Data with sample selection bias\nSmall sample from Simple random sample (no selection bias)"
   },
   {
     "objectID": "FW552/Bigdata.html#data-analyst",
@@ -11254,5 +11254,33 @@
     "title": "Sampling I",
     "section": "Summary",
     "text": "Summary\n\n\n\n\ncensus\ninference\nsample\nsample unit\nsample size\nsampling error\nsampling variation\nsample parameter\nsampling frame\nsampling bias\nsampling distribution\n\n\n\ntarget population / population\npopulation parameter\ndesign vs model-based inference\nvector\nstatistic\nestimator\nestimate\nestimator bias\naccuracy / bias / precision\nestimator consistency\nmeasurement error"
+  },
+  {
+    "objectID": "FW552/Bigdata.html#back-to-meng-2018",
+    "href": "FW552/Bigdata.html#back-to-meng-2018",
+    "title": "The Big Data Paradox",
+    "section": "Back to Meng, 2018",
+    "text": "Back to Meng, 2018\n\nx-axis is \\(f = n/N\\)"
+  },
+  {
+    "objectID": "FW552/Bigdata.html#back-to-boyd-et-al.-2023-1",
+    "href": "FW552/Bigdata.html#back-to-boyd-et-al.-2023-1",
+    "title": "The Big Data Paradox",
+    "section": "Back to Boyd et al. 2023",
+    "text": "Back to Boyd et al. 2023\n\n\n‘large biased’ is \\(\\rho_{R,G} = -0.058\\), \\(n = 1000\\)\nMSE is the same\n95% CI’s include the truth 0% of the time for ‘Large Biased’"
+  },
+  {
+    "objectID": "FW552/Bigdata.html#meng-2018",
+    "href": "FW552/Bigdata.html#meng-2018",
+    "title": "The Big Data Paradox",
+    "section": "Meng (2018)",
+    "text": "Meng (2018)\n\n“…what should be unbelievable is the magical power of probabilistic sampling, which we all have taken for granted for too long.”\n\n\n\n“once we lose control over the \\(R\\) mechanism, we can no longer keep the monster \\(N\\) at bay, so to speak.”\n\n\n\n\n“It is therefore essentially wishful thinking to rely on the “bigness” of Big Data to protect us from its questionable quality, especially for large populations.”"
+  },
+  {
+    "objectID": "FW552/Bigdata.html#back-to-boyd-et-al.-2023-2",
+    "href": "FW552/Bigdata.html#back-to-boyd-et-al.-2023-2",
+    "title": "The Big Data Paradox",
+    "section": "Back to Boyd et al. 2023",
+    "text": "Back to Boyd et al. 2023\n\nTake home: Large biased data –&gt; highly biased and highly precise estimates"
   }
 ]
