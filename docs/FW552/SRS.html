@@ -468,7 +468,7 @@ code.r{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "E" "F"</code></pre>
+<pre><code>[1] "F" "D"</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -483,7 +483,7 @@ code.r{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "D" "A"</code></pre>
+<pre><code>[1] "E" "B"</code></pre>
 </div>
 </div>
 <!-- Yes, but why don't you like it? Maybe SRS is not what you want. -->
@@ -504,7 +504,7 @@ code.r{
 <th style="text-align: left;" data-quarto-table-cell-role="th">First Value</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">Second Value</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Absolute.Deviation</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Error</th>
 </tr>
 </thead>
 <tbody>
@@ -661,7 +661,7 @@ code.r{
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Sample.Number</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Deviance.Truth</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Error</th>
 </tr>
 </thead>
 <tbody>
@@ -749,7 +749,7 @@ code.r{
 </div><div class="column" style="width:50%;">
 <p><span class="math display">\[ \frac{1}{15}\times\sum_{i=1}^{15} (\hat{\mu}_{i}) = 8\]</span></p>
 <p><span class="math display">\[\sum_{i=1}^N(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
-<p>Estimator Bias?</p>
+<p>No Estimator Bias!</p>
 </div></div>
 </section>
 <section id="srs-9" class="slide level2">
@@ -860,7 +860,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <section id="sampling-disribution-1" class="slide level2">
 <h2><span style="color:#078BCD;">Sampling Disribution</span></h2>
 <ul>
-<li>judge an estimator by its sampling distribution</li>
+<li>Judge an estimator by its sampling distribution</li>
 <li>What properties do we want?</li>
 </ul>
 
@@ -882,7 +882,7 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Sample.Number</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">Deviance.Truth</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sample.Error</th>
 </tr>
 </thead>
 <tbody>
@@ -1008,16 +1008,14 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <pre><code>[1] 12.8</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.266667</code></pre>
-</div>
+<div class="fragment">
+<p>Var Sample Means: 4.2666667</p>
 </div>
 </section>
-<section id="sample-variance-1" class="slide level2">
-<h2><span style="color:#078BCD;">Sample Variance</span></h2>
+<section id="sample-distribution-of-variance" class="slide level2">
+<h2><span style="color:#078BCD;">Sample Distribution of Variance</span></h2>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"><ul>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"><ul>
 <li>Unbiased estimate of the population variance.</li>
 <li>Individual values will deviate from the population variance.</li>
 </ul>
@@ -1029,38 +1027,34 @@ E[\mu] = \sum_{q=1}^{Q} p_i \times \hat{\mu}_{i} = 8
 <li><strong>Var. Sampling Distribution</strong> - variance of mean values from each possible sample</li>
 </ul>
 </section>
-<section>
-<section id="connect-these-two-1" class="title-slide slide level1 center">
-<h1><span style="color:#078BCD;">Connect these two</span></h1>
+<section id="connect-these-two-1" class="slide level2">
+<h2><span style="color:#078BCD;">Connect these two</span></h2>
 <p>Variance of all units vs variance of all sample means</p>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="connect-these-two-2" class="slide level2">
 <h2><span style="color:#078BCD;">Connect these two</span></h2>
+<p><span class="math display">\[
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \sigma^2
+\]</span></p>
 <ul>
 <li>As the sample size (n) increases the sample variance declines by <strong>1/n</strong></li>
-<li>Finite-population correction factor</li>
+<li>Finite-population correction factor (N-n/N)</li>
 </ul>
-<p><span class="math display">\[
-\left(\frac{N-n}{N}\right)
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-E[\text{Sampling Distribution Variance}] = \frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
-\]</span></p>
-</div>
 </section>
 <section id="connect-these-two-3" class="slide level2">
 <h2><span style="color:#078BCD;">Connect these two</span></h2>
-<div>
 <ul>
-<li class="fragment">Sample size (n) = 2</li>
-<li class="fragment">Total units (N) = 6</li>
-<li class="fragment">E[pop var] = 12.8</li>
-<li class="fragment">E[sample dist. var] = 4.27</li>
-<li class="fragment">1/n = 0.5</li>
-<li class="fragment">Finite correction factor = 0.67</li>
-<li class="fragment"><strong>E[pop var] <span class="math inline">\(\times\)</span> 1/n <span class="math inline">\(\times\)</span> FCF = 4.27</strong></li>
+<li>Sample size (n) = 2</li>
+<li>Total units (N) = 6</li>
+<li>E[<span class="math inline">\(\sigma^2\)</span>] = 12.8</li>
+<li>E[sample dist. var] = 4.27</li>
+<li>1/n = 0.5</li>
+<li>Finite correction factor = 0.67</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>E[<span class="math inline">\(\sigma^2\)</span>] <span class="math inline">\(\times\)</span> 1/n <span class="math inline">\(\times\)</span> FCF = <strong>4.27</strong></li>
 </ul>
 </div>
 </section>
@@ -1083,16 +1077,16 @@ E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\rig
 </section>
 <section id="connect-these-two-6" class="slide level2">
 <h2><span style="color:#078BCD;">Connect these two</span></h2>
-<p>If you know the E[pop var] …</p>
+<p><strong>If you know the E[<span class="math inline">\(\sigma^2\)</span>]</strong> …</p>
 <ul>
 <li>you have a mechanism to understand the variation of sample distribution of the means</li>
-<li>the more variation in <span class="math inline">\(y\)</span>, the more variation in sampling dist. of means.</li>
+<li>the more variation in <span class="math inline">\(y\)</span>, the more variation in sampling distrubution of means (<span class="math inline">\(\hat{\mu}\)</span>.</li>
 </ul>
 </section>
 <section id="sample-size" class="slide level2">
 <h2><span style="color:#078BCD;">Sample Size</span></h2>
 <p><span class="math display">\[
-E[\text{Sampling Distribution Variance}]
+E[\hat{\sigma}^2]
 \]</span></p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -1108,7 +1102,7 @@ E[\text{Sampling Distribution Variance}]
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="SRS_files/figure-revealjs/unnamed-chunk-25-1.png" width="1440"></p>
+<p><img data-src="SRS_files/figure-revealjs/unnamed-chunk-24-1.png" width="1440"></p>
 </figure>
 </div>
 </div>
@@ -1119,7 +1113,7 @@ E[\text{Sampling Distribution Variance}]
 <h2><span style="color:#078BCD;">Sample Size</span></h2>
 <p>Not pond example; When N is large enough . . .</p>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
 <section id="sample-size-2" class="slide level2 scollable">
 <h2><span style="color:#078BCD;">Sample Size</span></h2>
 <ul>
@@ -1132,7 +1126,7 @@ E[\text{Sampling Distribution Variance}]
 <ul>
 <li>CLT relies on random/prob. based sampling</li>
 <li>leads to parameter unbiasedness</li>
-<li>Does not depend on distribution of samples</li>
+<li><strong>Does not depend on distribution of samples!</strong></li>
 <li>allows estimation of precision of parameters</li>
 <li>allows estimation of confidence intervals</li>
 </ul>
@@ -1149,7 +1143,7 @@ E[\text{Sampling Distribution Variance}]
 <h2><span style="color:#078BCD;">The TOTAL</span></h2>
 <p>Back to ponds example</p>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="the-total-2" class="slide level2">
 <h2><span style="color:#078BCD;">The TOTAL</span></h2>
 <p>Variance of the total</p>
@@ -1161,14 +1155,14 @@ E[\text{Sampling Distribution Variance}]
 <h2><span style="color:#078BCD;">Probabilty of</span></h2>
 <p>Whenever you have the sampling distribution, frame <em>precision</em> in terms of what matters to you.</p>
 
-<img data-src="SRS_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
+<img data-src="SRS_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
 <section id="probabilty-of-1" class="slide level2">
 <h2><span style="color:#078BCD;">Probabilty of</span></h2>
 <p><span class="math display">\[
 P(\hat{\tau}\leq 2 \times \tau)
 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>( tau.est <span class="sc">&lt;=</span>  <span class="dv">2</span><span class="sc">*</span><span class="dv">48</span>))<span class="sc">/</span><span class="fu">length</span>(tau.est)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
@@ -1180,7 +1174,7 @@ P(\hat{\tau}\leq 2 \times \tau)
 <ul>
 <li><span class="math inline">\(n\)</span> impacts variation in estimates</li>
 <li>variation in <span class="math inline">\(y\)</span> impacts the influence of <span class="math inline">\(n\)</span></li>
-<li>objective probably impacts <span class="math inline">\(n\)</span> the most</li>
+<li>research objective probably impacts <span class="math inline">\(n\)</span> the most</li>
 <li>higher <span class="math inline">\(n\)</span> is not always better</li>
 </ul>
 <!-- # [Confidence Intervals]{style="color:#078BCD;"} -->
@@ -1192,7 +1186,7 @@ P(\hat{\tau}\leq 2 \times \tau)
 <!-- - the interval is a measure related to the true population parameter (which is unknow) -->
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

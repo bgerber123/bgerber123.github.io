@@ -60,7 +60,7 @@ sample(LETTERS[1:6],2)
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Absolute.Deviation = abs(ponds.all$Sample.Mean-8)
+ponds.all$Sample.Error = abs(ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 
@@ -74,7 +74,7 @@ ponds.all %>%
 ## ----echo=FALSE---------------------------------------------------------------
 ponds.simple = data.frame(Sample.Number = ponds.all$Sample.Number,
                           Sample.Mean = ponds.all$Sample.Mean,
-                          Deviance.Truth = ponds.all$Sample.Mean-8
+                          Sample.Error = ponds.all$Sample.Mean-8
                           )
 ponds.simple %>% 
   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
@@ -167,14 +167,7 @@ var.per.sample = apply(
 
 
 ## ----echo=FALSE---------------------------------------------------------------
-#variance for sample mean
-N=6
-mean ( (N-2)/N * var.per.sample/2 )
-
-
-
-## ----echo=FALSE---------------------------------------------------------------
- hist(var.per.sample,xlab="Sample Variance")
+ hist(var.per.sample,xlab="Sample Variance", main="")
  abline(v=mean(var.per.sample),lwd=3)
 
 
@@ -182,10 +175,10 @@ mean ( (N-2)/N * var.per.sample/2 )
 par(mfrow=c(2,1))
 hist(ponds$egg.mass,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Units (egg masses)",ylim=c(0,3))
+     xlab="Sample Units (egg masses)",ylim=c(0,3),xlim=c(0,12))
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Mean",ylim=c(0,3))
+     xlab="Sample Mean",ylim=c(0,3),xlim=c(0,12))
 
 
 ## ----fig.width=15-------------------------------------------------------------

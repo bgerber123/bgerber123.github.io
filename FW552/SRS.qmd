@@ -207,7 +207,7 @@ Consider the sample mean $\hat{\mu}$ for each sample
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Absolute.Deviation = abs(ponds.all$Sample.Mean-8)
+ponds.all$Sample.Error = abs(ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 
@@ -228,7 +228,7 @@ ponds.all %>%
 ```{r, echo=FALSE}
 ponds.simple = data.frame(Sample.Number = ponds.all$Sample.Number,
                           Sample.Mean = ponds.all$Sample.Mean,
-                          Deviance.Truth = ponds.all$Sample.Mean-8
+                          Sample.Error = ponds.all$Sample.Mean-8
                           )
 ponds.simple %>% 
   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
@@ -261,7 +261,7 @@ sum(ponds.simple$Deviance.Truth)
 ```
 
 
-Estimator Bias?
+No Estimator Bias!
 
 :::
 
@@ -338,7 +338,7 @@ hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
 
 ## [Sampling Disribution]{style="color:#078BCD;"}
 
-- judge an estimator by its sampling distribution
+- Judge an estimator by its sampling distribution
 - What properties do we want?
 
 
@@ -413,17 +413,15 @@ var.per.sample = apply(
   mean(var.per.sample)
 ```
 
-```{r, echo=FALSE}
-#variance for sample mean
-N=6
-mean ( (N-2)/N * var.per.sample/2 )
+. . .
 
-```
+Var Sample Means: `r N=6; mean ( (N-2)/N * var.per.sample/2 )`
 
-## [Sample Variance]{style="color:#078BCD;"}
+
+## [Sample Distribution of Variance]{style="color:#078BCD;"}
 
 ```{r,echo=FALSE}
- hist(var.per.sample,xlab="Sample Variance")
+ hist(var.per.sample,xlab="Sample Variance", main="")
  abline(v=mean(var.per.sample),lwd=3)
 ```
 
@@ -437,7 +435,7 @@ mean ( (N-2)/N * var.per.sample/2 )
 - **Population variance** - variation among sample units; estimate from sample variance
 - **Var. Sampling Distribution** - variance of mean values from each possible sample
 
-# [Connect these two]{style="color:#078BCD;"}
+## [Connect these two]{style="color:#078BCD;"}
 
 Variance of all units vs variance of all sample means
 
@@ -445,42 +443,40 @@ Variance of all units vs variance of all sample means
 par(mfrow=c(2,1))
 hist(ponds$egg.mass,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Units (egg masses)",ylim=c(0,3))
+     xlab="Sample Units (egg masses)",ylim=c(0,3),xlim=c(0,12))
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Mean",ylim=c(0,3))
+     xlab="Sample Mean",ylim=c(0,3),xlim=c(0,12))
 ```
 
 ## [Connect these two]{style="color:#078BCD;"}
 
+$$
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \sigma^2
+$$
+
 - As the sample size (n) increases the sample variance declines by **1/n**
-- Finite-population correction factor
-
-$$
-\left(\frac{N-n}{N}\right)
-$$
-
-. . .
+- Finite-population correction factor (N-n/N)
 
 
-$$
-E[\text{Sampling Distribution Variance}] = \frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
-$$
 
 
 ## [Connect these two]{style="color:#078BCD;"}
 
-:::{.incremental}
+
 
 - Sample size (n) = 2
 - Total units (N) = 6
-- E[pop var] = 12.8
+- E[$\sigma^2$] = 12.8
 - E[sample dist. var] = 4.27
 - 1/n = 0.5
 - Finite correction factor = 0.67
-- **E[pop var] $\times$ 1/n $\times$ FCF = 4.27**
 
-:::
+. . .
+
+- E[$\sigma^2$] $\times$ 1/n $\times$ FCF = **4.27**
+
+
 
 
 ## [Connect these two]{style="color:#078BCD;"}
@@ -503,16 +499,16 @@ $$
 
 ## [Connect these two]{style="color:#078BCD;"}
 
-If you know the E[pop var] ...
+**If you know the E[$\sigma^2$]** ...
 
 - you have a mechanism to understand the variation of sample distribution of the means
-- the more variation in $y$, the more variation in sampling dist. of means.
+- the more variation in $y$, the more variation in sampling distrubution of means ($\hat{\mu}$.
 
 
 ## [Sample Size]{style="color:#078BCD;"}
 
 $$
-E[\text{Sampling Distribution Variance}]
+E[\hat{\sigma}^2]
 $$
 
 :::: {.columns}
@@ -609,7 +605,7 @@ This is because of the Central limit theorem (CLT)
 
 - CLT relies on random/prob. based sampling
 - leads to parameter unbiasedness
-- Does not depend on distribution of samples
+- **Does not depend on distribution of samples!**
 - allows estimation of precision of parameters
 - allows estimation of confidence intervals
 
@@ -669,7 +665,7 @@ But what $n$?
 
 - $n$ impacts variation in estimates
 - variation in $y$ impacts the influence of $n$
-- objective probably impacts $n$ the most
+- research objective probably impacts $n$ the most
 - higher $n$ is not always better
 
 
@@ -677,6 +673,7 @@ But what $n$?
 #Output code into R file
 knitr::purl(input="../FW552/SRS.qmd",output="../FW552/SRS.r")
 ```
+
 
 
 <!-- # [Confidence Intervals]{style="color:#078BCD;"} -->
