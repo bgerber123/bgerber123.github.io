@@ -1,9 +1,11 @@
 {
-  "hash": "51dd3395216dc1d90a3ebd25aadfd9a5",
+  "hash": "11820cf4084344128a9c026ffd4f542b",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: <span style=\"color:orange\">Proportions</span>\ntitle-slide-attributes:\n  data-background-image: /img/srs.png\n  background-opacity: \"0.45\"\nformat:\n  revealjs:\n    scrollable: true\n#    slide-level: 1\n    theme: simple\n    slide-number: true\n    show-slide-number: all\n    html:\n         page-layout: full\n---\n\n\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n\n\n```{=html}\n<style type=\"text/css\">\n\ncode.r{\n  font-size: 30px;\n}\n</style>\n```\n\n::: {.cell}\n\n:::\n\n\n\nStrong Interest in fish/wildlife\n\nExamples?\n\n![](../img/proportion.png)\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n$$\ny \\in \\{0,1\\}\n$$\n. . .\n\n$$\n1 = \\text{occur} \\\\\n0 = \\text{not occur}\n$$\n\n. . .\n\n$$\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_{i} \n$$\n\n. . .\n\n\n$$\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n$$\n\n\n\n",
-    "supporting": [],
+    "markdown": "---\ntitle: <span style=\"color:orange\">Proportions</span>\ntitle-slide-attributes:\n  data-background-image: /img/srs.png\n  background-opacity: \"0.45\"\nformat:\n  revealjs:\n    scrollable: true\n#    slide-level: 1\n    theme: simple\n    slide-number: true\n    show-slide-number: all\n    html:\n         page-layout: full\n---\n\n\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n\n\n```{=html}\n<style type=\"text/css\">\n\ncode.r{\n  font-size: 30px;\n}\n</style>\n```\n\n::: {.cell}\n\n:::\n\n\n\nStrong Interest in fish/wildlife\n\nExamples?\n\n![](../img/proportion.png)\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n$$\ny \\in \\{0,1\\}\n$$\n. . .\n\n$$\n1 = \\text{occur} \\\\\n0 = \\text{not occur}\n$$\n\n. . .\n\n$$\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_{i} \n$$\n\n. . .\n\n\n$$\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n$$\n\n\n\n## [Proportion area occupied]{style=\"color:#078BCD;\"}{.scollable}\n\nHow does sample grid effect $\\hat{p}$ and $\\hat{\\sigma}^2_{p}$?\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Proportions_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n",
+    "supporting": [
+      "Proportions_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

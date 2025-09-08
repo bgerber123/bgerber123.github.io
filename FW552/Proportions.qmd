@@ -64,3 +64,40 @@ $$
 
 
 
+## [Proportion area occupied]{style="color:#078BCD;"}{.scollable}
+
+How does sample grid effect $\hat{p}$ and $\hat{\sigma}^2_{p}$?
+
+```{r,echo=FALSE}
+library(graphics)
+x <- seq(1,10,by=1)
+y <-  seq(1,10,by=1)
+
+par(mfrow=c(2,2),cex.axis=1.5,cex.lab=2,cex.main=3)
+plot(x,y, pch = 19, col = 0,main="2x2",xaxt="n",yaxt="n",xlab="",ylab="")
+grid(nx = 2, ny = 2,
+     lty = 2,      
+     col = "gray", 
+     lwd = 2)
+points(x=c(1,4,5,2,2),y=c(1,5,7,4,9),pch=16,col=2,cex=2)
+plot(x,y, pch = 19, col = 0,main="4x4",xaxt="n",yaxt="n",xlab="",ylab="")
+grid(nx = 4, ny = 4,
+     lty = 2,      
+     col = "gray", 
+     lwd = 2)
+points(x=c(1,4,5,2,2),y=c(1,5,7,4,9),pch=16,col=2,cex=2)
+
+plot(x,y, pch = 19, col = 0,main="6x6",xaxt="n",yaxt="n",xlab="",ylab="")
+grid(nx = 6, ny = 6,
+     lty = 2,      
+     col = "gray", 
+     lwd = 2)
+points(x=c(1,4,5,2,2),y=c(1,5,7,4,9),pch=16,col=2,cex=2)
+
+plot(x,y, pch = 19, col = 0,main="8x8",xaxt="n",yaxt="n",xlab="",ylab="")
+grid(nx = 8, ny = 8,
+     lty = 2,      
+     col = "gray", 
+     lwd = 2)
+points(x=c(1,4,5,2,2),y=c(1,5,7,4,9),pch=16,col=2,cex=2)
+```
