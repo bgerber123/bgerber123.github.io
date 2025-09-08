@@ -42,17 +42,20 @@ Examples?
 $$
 y \in \{0,1\}
 $$
+. . .
 
 $$
 1 = \text{occur} \\
 0 = \text{not occur}
 $$
 
+. . .
 
 $$
 \hat{p} = \frac{1}{n}\sum_{i=1}^{n}y_{i} 
 $$
 
+. . .
 
 
 $$
