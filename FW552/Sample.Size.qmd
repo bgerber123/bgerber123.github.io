@@ -52,10 +52,10 @@ $$
 :::{.incremental}
 
 - $d$ = absolute difference b/w population mean and estimate
-- $d$ = $\lvert{\theta- \hat{\theta}}\lvert$
+- $d$ = $\lvert{\mu- \hat{\mu}}\lvert$
 - $N$ = total possible sample units
 - $\sigma^2$ = population variance
-- $z$ = upper $\alpha/2$ of the std. normal dist.
+- $z$ = upper $\alpha/2$ of the std. normal dist. (i.e, Normal(0,1)) 
 - $z_{1-\alpha/2}$ = $z_{1-0.01/2} = z_{0.99}$ = `r qnorm(0.995)`  
 
 :::
@@ -107,7 +107,7 @@ Me - "A bothersome aspect of sample size formulas such as these is that they dep
 - What is the worst level of difference ($d$) for
     - 95% confidence level
     - $\sigma$ could range from 10 to 100
-
+- Use Sample size equation to solve
 
 . . .
 
@@ -117,8 +117,13 @@ Me - "A bothersome aspect of sample size formulas such as these is that they dep
 
 **This is a HW question**
 
+. . .
 
-## NHT Paradigm
+[Work on problem together]{style="color:#9D00FF;"} **OR** [more about sample sizes]{style="color:#5CE65C;"}?
+
+
+
+## [NHT Paradigm]{style="color:#078BCD;"}
 
 The null hypothesis testing paradigm is often focused on Type I error ($\alpha$), rejecting the null hypothesis when it is actually true.
 
@@ -130,7 +135,7 @@ The Null hypothesis is commonly, $H_0(\mu_1 = \mu_2)$
 
 ![](../img/NHT.png){fig-align="center"}
 
-## Statistical Power
+## [Statistical Power]{style="color:#078BCD;"}
 
 ```{=html}
 <style type="text/css">
@@ -149,16 +154,18 @@ pre {
 ```
 
 
-::: incremental
-
 -   **Definition**: the probability that a test will reject a false null hypothesis.
 
     -   $H_0(\mu_1 = \mu_2)$ vs $H_1(\mu_1 \ne \mu_2)$
 
+
+::: incremental
+
+
 -   The higher the statistical power for a given experiment, the lower the probability of making a Type II error (false negative)
 :::
 
-# Power Analysis
+## [Power Analysis]{style="color:#078BCD;"}
 
 <br>
 
@@ -183,17 +190,17 @@ Power = 1 - $\beta$
 
 <!-- ![](extra/Statistical_test,_significance_level,_power.png){.absolute top=260 left=350 width="500"} -->
 
-## Type II Error / Power
+## [Type II Error / Power]{style="color:#078BCD;"}
 
 ![](../img/power.png){}
 
-## Power Analysis
+## [Power Analysis]{style="color:#078BCD;"}
 
 Contributions to statistical power
 
 ::: incremental
 
--   Which statistical test and its assumptions
+-   The statistical test and its assumptions
 
 -   Effective Sample size (simplest case this is $n$ per group)
 
@@ -206,14 +213,14 @@ Contributions to statistical power
 
 
 
-## Case Study
+## [Case Study]{style="color:#078BCD;"}
 
 **Objective**: To evaluate the relative use of two types of hummingbird feeders.
 
 
 ![](../img/feeders.png){fig-align="center"}
 
-## Case Study
+## [Case Study]{style="color:#078BCD;"}
 
 <br>
 
@@ -234,7 +241,7 @@ Mean daily use of each feeder is not equal ($\mu_{1} \neq \mu_{2}$).
 
 **Statistical Test**: two-tailed t-test
 
-## Case Study
+## [Case Study]{style="color:#078BCD;"}
 
 First, we need to define TRUTH
 ```{r,echo = TRUE}
@@ -254,7 +261,7 @@ First, we need to define TRUTH
   legend("topleft",legend=c("Feeder 1","Feeder 2"),col=c("black","red"),lwd=3,cex=1.5)
 ```
 
-## Case Study (R Code)
+## [Case Study (R Code)]{style="color:#078BCD;"}
 
 ```{r}
 #| echo: TRUE
@@ -279,7 +286,7 @@ library(pwr)
 ```
 
 
-## Case Study
+## [Case Study]{style="color:#078BCD;"}
 
 ```{r}
 #| echo: TRUE
@@ -298,10 +305,10 @@ out$n
 . . .
 
 <span style="color:red">Assuming Independence b/w feeders</span><br>
-How do we design for this?
+How do we design our sampling to ensure this?
 
 
-## Tradeoff (Power vs N) {.scrollable}
+## [Tradeoff (Power vs N)]{style="color:#078BCD;"} {.scrollable}
 
 Let's consider multiple levels of power
 
@@ -337,7 +344,7 @@ plot(power,out,type="b",ylab="Sample Size Per Group",
 abline(h=c(20,25,30,35),col="grey")
 ```
 
-## Truth? {.scrollable}
+## [Truth?]{style="color:#078BCD;"} {.scrollable}
 
 <span style="color:red">These results assume we are correct about... <span>
 
@@ -360,7 +367,7 @@ What if we are wrong?
 How do we evaluate this?
 
 
-## Tradeoffs {.scrollable}
+## [Tradeoffs]{style="color:#078BCD;"} {.scrollable}
 
 **Power, Effect Size, N**
 
@@ -418,7 +425,7 @@ my.func = function(x,x2){
 
 
 
-## Tradeoffs 
+## [Tradeoffs]{style="color:#078BCD;"}
 
 **Power, Effect Size, N**
 

@@ -9062,14 +9062,14 @@
     "href": "FW552/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%), and evaluate what information confidence intervals convey.\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week4.html#week-4",
     "href": "FW552/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%), and evaluate what information confidence intervals convey.\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 weekCanvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week6.html",
@@ -10868,7 +10868,7 @@
     "href": "FW552/Sample.Size.html#population-mean",
     "title": "Sample Size",
     "section": "Population Mean",
-    "text": "Population Mean\n\nSample size (n) for estimating the population mean (Thompson Ch. 4, Eqn 3)\n\\[\nn = \\frac{1}{d^2/(z^{2}\\sigma^2)+(1/N)}\n\\]\n\n\n\\(d\\) = absolute difference b/w population mean and estimate\n\\(d\\) = \\(\\lvert{\\theta- \\hat{\\theta}}\\lvert\\)\n\\(N\\) = total possible sample units\n\\(\\sigma^2\\) = population variance\n\\(z\\) = upper \\(\\alpha/2\\) of the std. normal dist.\n\\(z_{1-\\alpha/2}\\) = \\(z_{1-0.01/2} = z_{0.99}\\) = 2.5758293"
+    "text": "Population Mean\n\nSample size (n) for estimating the population mean (Thompson Ch. 4, Eqn 3)\n\\[\nn = \\frac{1}{d^2/(z^{2}\\sigma^2)+(1/N)}\n\\]\n\n\n\\(d\\) = absolute difference b/w population mean and estimate\n\\(d\\) = \\(\\lvert{\\mu- \\hat{\\mu}}\\lvert\\)\n\\(N\\) = total possible sample units\n\\(\\sigma^2\\) = population variance\n\\(z\\) = upper \\(\\alpha/2\\) of the std. normal dist. (i.e, Normal(0,1))\n\\(z_{1-\\alpha/2}\\) = \\(z_{1-0.01/2} = z_{0.99}\\) = 2.5758293"
   },
   {
     "objectID": "FW552/Sample.Size.html#population-mean-1",
@@ -10896,7 +10896,7 @@
     "href": "FW552/Sample.Size.html#population-mean-4",
     "title": "Sample Size",
     "section": "Population Mean",
-    "text": "Population Mean\n\nYou can afford to sample 10 units\nWhat is the worst level of difference (\\(d\\)) for\n\n95% confidence level\n\\(\\sigma\\) could range from 10 to 100\n\n\n\nHow would you solve this?\n\n\nThis is a HW question"
+    "text": "Population Mean\n\nYou can afford to sample 10 units\nWhat is the worst level of difference (\\(d\\)) for\n\n95% confidence level\n\\(\\sigma\\) could range from 10 to 100\n\nUse Sample size equation to solve\n\n\nHow would you solve this?\n\n\nThis is a HW question\n\n\nWork on problem together OR more about sample sizes?"
   },
   {
     "objectID": "FW552/Sample.Size.html#nht-paradigm",
@@ -10910,7 +10910,7 @@
     "href": "FW552/Sample.Size.html#statistical-power",
     "title": "Sample Size",
     "section": "Statistical Power",
-    "text": "Statistical Power\n\n\n\nDefinition: the probability that a test will reject a false null hypothesis.\n\n\\(H_0(\\mu_1 = \\mu_2)\\) vs \\(H_1(\\mu_1 \\ne \\mu_2)\\)\n\nThe higher the statistical power for a given experiment, the lower the probability of making a Type II error (false negative)"
+    "text": "Statistical Power\n\n\nDefinition: the probability that a test will reject a false null hypothesis.\n\n\\(H_0(\\mu_1 = \\mu_2)\\) vs \\(H_1(\\mu_1 \\ne \\mu_2)\\)\n\n\n\n\nThe higher the statistical power for a given experiment, the lower the probability of making a Type II error (false negative)"
   },
   {
     "objectID": "FW552/Sample.Size.html#type-ii-error-power",
@@ -10924,7 +10924,7 @@
     "href": "FW552/Sample.Size.html#power-analysis-1",
     "title": "Sample Size",
     "section": "Power Analysis",
-    "text": "Power Analysis\nContributions to statistical power\n\n\nWhich statistical test and its assumptions\nEffective Sample size (simplest case this is \\(n\\) per group)\nReality\n\nt-test: difference of means\nHow different these are: \\(\\mu_{1}\\) and \\(\\mu_{2}\\)\nHow variable these are: \\(\\sigma_{1}\\) and \\(\\sigma_{2}\\)"
+    "text": "Power Analysis\nContributions to statistical power\n\n\nThe statistical test and its assumptions\nEffective Sample size (simplest case this is \\(n\\) per group)\nReality\n\nt-test: difference of means\nHow different these are: \\(\\mu_{1}\\) and \\(\\mu_{2}\\)\nHow variable these are: \\(\\sigma_{1}\\) and \\(\\sigma_{2}\\)"
   },
   {
     "objectID": "FW552/Sample.Size.html#case-study",
@@ -10959,7 +10959,7 @@
     "href": "FW552/Sample.Size.html#case-study-3",
     "title": "Sample Size",
     "section": "Case Study",
-    "text": "Case Study\n\npower = 0.8\n\nout = pwr.t.test(d=d,power=power,type=\"two.sample\",\n                 alternative=\"two.sided\")\n\n#Sample Size Needed for each Group\nout$n\n\n[1] 16.71472\n\n\n\nAssuming Independence b/w feeders How do we design for this?"
+    "text": "Case Study\n\npower = 0.8\n\nout = pwr.t.test(d=d,power=power,type=\"two.sample\",\n                 alternative=\"two.sided\")\n\n#Sample Size Needed for each Group\nout$n\n\n[1] 16.71472\n\n\n\nAssuming Independence b/w feeders How do we design our sampling to ensure this?"
   },
   {
     "objectID": "FW552/Sample.Size.html#tradeoff-power-vs-n",
@@ -11296,5 +11296,12 @@
     "title": "Simple Random Sampling",
     "section": "Connect these two",
     "text": "Connect these two\nVariance of all units vs variance of all sample means"
+  },
+  {
+    "objectID": "FW552/Sample.Size.html#power-analysis",
+    "href": "FW552/Sample.Size.html#power-analysis",
+    "title": "Sample Size",
+    "section": "Power Analysis",
+    "text": "Power Analysis\n\nType I Error = P(reject \\(H_0\\) | \\(H_0\\) is true) = \\(\\alpha\\)\n\nPower = P(reject \\(H_0\\) | \\(H_1\\) is true)\n\n\nPower = 1 - Type II Error\n\n\nPower = 1 - Pr(False Negative)\n\n\nPower = 1 - \\(\\beta\\)"
   }
 ]
