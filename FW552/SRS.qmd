@@ -207,7 +207,7 @@ Consider the sample mean $\hat{\mu}$ for each sample
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Sample.Error = abs(ponds.all$Sample.Mean-8)
+ponds.all$Abs.Sample.Error = abs(ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 

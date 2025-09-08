@@ -204,6 +204,8 @@ text(6.5,3.5,bquote(p==.(round(5/64,digits=2))),col="purple",cex=2)
 
 ## [Var(p)]{style="color:#078BCD;"}
 
+Does this make sense?
+
 ```{r,echo=FALSE}
 n=10
 N=100
@@ -237,9 +239,8 @@ $$
 
 - how many fish should I tag?
 - how many elk should I track?
-- how many point intercepts (plant survey) should I take?
-- how many plots (camera traps / plant survey) should I sample?
-
+- how many point intercepts should I take?
+- how many plots should I sample?
 
 
 ## [SD(p)]{style="color:#078BCD;"}
@@ -247,7 +248,6 @@ $$
 Lets visualize a few standard deviations of p
 
 ```{r echo=FALSE}
-
 curve(dnorm(x,0.5,0.15),xlim=c(0,1),xlab="Proportion",col=1,ylim=c(0,20))
 these=rev(seq(0.01,0.15,by=0.01))
 cols=viridis::viridis(15)
@@ -291,11 +291,11 @@ fig
 
 
 
-## [My Wolverine 'Problem']{style="color:#078BCD;"}
+## [Wolverine Monitoring]{style="color:#078BCD;"}
 
 ![](../img/wolverine.sampling.grid.png)
 
-## [A Sampling 'Problem']{style="color:#078BCD;"}
+## [My Wolverine 'Problem']{style="color:#078BCD;"}
 
 - Sites surveyed by the States were selected via SRS
 
