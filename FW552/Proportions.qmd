@@ -1,17 +1,19 @@
 ---
-title: <span style="color:white">Proportions</span>
+title: <span style="color:orange">Proportions</span>
 title-slide-attributes:
   data-background-image: /img/background1.png
   background-opacity: "0.45"
 format:
   revealjs:
     scrollable: true
+#    slide-level: 1
     theme: simple
     slide-number: true
     show-slide-number: all
     html:
          page-layout: full
 ---
+
 
 ## [Proportions]{style="color:#078BCD;"}
 
