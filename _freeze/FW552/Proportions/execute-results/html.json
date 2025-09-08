@@ -1,11 +1,9 @@
 {
-  "hash": "52f4163d648639a70baa7ac48875b832",
+  "hash": "6a30218f828e49efd134fd3f12844c64",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: <span style=\"color:white\">Proportions</span>\ntitle-slide-attributes:\n  data-background-image: /img/background1.png\n  background-opacity: \"0.45\"\nformat:\n  revealjs:\n    scrollable: true\n#    slide-level: 1\n    theme: simple\n    slide-number: true\n    show-slide-number: all\n    html:\n         page-layout: full\n---\n\n\n\n\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n\n\n\n```{=html}\n<style type=\"text/css\">\n\ncode.r{\n  font-size: 30px;\n}\n</style>\n```\n\n::: {.cell}\n\n:::\n\n\n\n\nStrong Interest in fish/wildlife\n\nExamples?\n\n![](../img/proportion.png)\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n$$\ny \\in \\{0,1\\}\n$$\n$$\n1 = \\text{occur} \\\\0 = \\text{not occur}\n$$\n\n. . .\n\n$$\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i \n$$\n\n. . .\n\n$$\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n$$\n\n## [Proportion area occupied]{style=\"color:#078BCD;\"}{.scollable}\n\nHow does sample grid effect $\\hat{p}$ and $\\hat{\\sigma}^2_{p}$?\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Proportions_files/figure-revealjs/unnamed-chunk-1-1.png){width=768}\n:::\n:::\n\n\n\n## [Proportion area occupied]{style=\"color:#078BCD;\"}{.scollable}\n\nHow does sample grid effect $\\hat{p}$ and $\\hat{\\sigma}^2_{p}$?\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Proportions_files/figure-revealjs/unnamed-chunk-2-1.png){width=768}\n:::\n:::\n",
-    "supporting": [
-      "Proportions_files"
-    ],
+    "markdown": "---\ntitle: <span style=\"color:white\">Proportions</span>\ntitle-slide-attributes:\n  data-background-image: /img/background1.png\n  background-opacity: \"0.45\"\nformat:\n  revealjs:\n    scrollable: true\n#    slide-level: 1\n    theme: simple\n    slide-number: true\n    show-slide-number: all\n    html:\n         page-layout: full\n---\n\n\n\n\n\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n\n\n\n```{=html}\n<style type=\"text/css\">\n\ncode.r{\n  font-size: 30px;\n}\n</style>\n```\n\n::: {.cell}\n\n:::\n\n\n\n\nStrong Interest in fish/wildlife\n\nExamples?\n\n![](../img/proportion.png)\n\n## [Proportions]{style=\"color:#078BCD;\"}\n\n$$\ny \\in \\{0,1\\}\n$$\n\n$$\n1 = \\text{occur} \\\\0 = \\text{not occur}\n$$\n\n. . .\n\n$$\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i \n$$\n\n. . .\n\n$$\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n$$\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

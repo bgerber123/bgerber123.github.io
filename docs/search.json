@@ -10427,7 +10427,7 @@
     "href": "FW552/Proportions.html#proportions-1",
     "title": "Proportions",
     "section": "Proportions",
-    "text": "Proportions\n\\[\ny \\in \\{0,1\\}\n\\] \\[\n1 = \\text{occur} \\\\0 = \\text{not occur}\n\\]\n\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n\n\n\\[\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]"
+    "text": "Proportions\n\\[\ny \\in \\{0,1\\}\n\\]\n\\[\n1 = \\text{occur} \\\\0 = \\text{not occur}\n\\]\n\n\\[\n\\hat{p} = \\frac{1}{n}\\sum_{i=1}^{n}y_i\n\\]\n\n\n\\[\n\\hat{\\sigma}^2_{p} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\n\\]"
   },
   {
     "objectID": "FW552/Proportions.html#pao",
