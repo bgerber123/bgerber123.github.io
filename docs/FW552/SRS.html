@@ -282,7 +282,7 @@ code.r{
 </section>
 <section id="srs-2" class="slide level2">
 <h2><span style="color:#078BCD;">SRS</span></h2>
-<p>How many possible unique samples are there (w/o replacement)</p>
+<p>How many possible unique samples are there (w/o replacement)?</p>
 <p><span class="math display">\[
 {N}\choose{n}
 \]</span></p>
@@ -468,14 +468,14 @@ code.r{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "F" "D"</code></pre>
+<pre><code>[1] "A" "D"</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C" "E"</code></pre>
+<pre><code>[1] "C" "B"</code></pre>
 </div>
 </div>
 </div>
@@ -483,7 +483,7 @@ code.r{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">sample</span>(LETTERS[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>],<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "E" "B"</code></pre>
+<pre><code>[1] "B" "A"</code></pre>
 </div>
 </div>
 <!-- Yes, but why don't you like it? Maybe SRS is not what you want. -->
@@ -515,7 +515,7 @@ code.r{
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">6</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
+<td style="text-align: right;">-4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2</td>
@@ -524,7 +524,7 @@ code.r{
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">8</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: right;">-3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">3</td>
@@ -533,7 +533,7 @@ code.r{
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">10</td>
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">-2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">4</td>
@@ -542,7 +542,7 @@ code.r{
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">10</td>
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">-2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">5</td>
@@ -551,7 +551,7 @@ code.r{
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">12</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">6</td>
@@ -560,7 +560,7 @@ code.r{
 <td style="text-align: left;">6</td>
 <td style="text-align: left;">8</td>
 <td style="text-align: right;">7</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">7</td>
@@ -749,7 +749,6 @@ code.r{
 </div><div class="column" style="width:50%;">
 <p><span class="math display">\[ \frac{1}{15}\times\sum_{i=1}^{15} (\hat{\mu}_{i}) = 8\]</span></p>
 <p><span class="math display">\[\sum_{i=1}^N(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
-<p>No Estimator Bias!</p>
 </div></div>
 </section>
 <section id="srs-9" class="slide level2">
@@ -1061,7 +1060,7 @@ E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\rig
 <section id="connect-these-two-4" class="slide level2">
 <h2><span style="color:#078BCD;">Connect these two</span></h2>
 <p><span class="math display">\[
-E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \sigma^2
 \]</span></p>
 <div>
 <ul>
@@ -1077,10 +1076,10 @@ E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\rig
 </section>
 <section id="connect-these-two-6" class="slide level2">
 <h2><span style="color:#078BCD;">Connect these two</span></h2>
-<p><strong>If you know the E[<span class="math inline">\(\sigma^2\)</span>]</strong> …</p>
+<h3 id="if-you-know-the-esigma2"><strong>If you know the E[<span class="math inline">\(\sigma^2\)</span>]</strong> …</h3>
 <ul>
 <li>you have a mechanism to understand the variation of sample distribution of the means</li>
-<li>the more variation in <span class="math inline">\(y\)</span>, the more variation in sampling distrubution of means (<span class="math inline">\(\hat{\mu}\)</span>.</li>
+<li>the more variation in <span class="math inline">\(y\)</span>, the more variation in sampling distrubution of means (<span class="math inline">\(\hat{\mu}\)</span>).</li>
 </ul>
 </section>
 <section id="sample-size" class="slide level2">
@@ -1134,7 +1133,7 @@ E[\hat{\sigma}^2]
 </section>
 <section id="the-total" class="slide level2">
 <h2><span style="color:#078BCD;">The TOTAL</span></h2>
-<p><em>Extrapolate the sample to the total population</em></p>
+<p><em>Estimate the total population using the sample</em></p>
 <p><span class="math display">\[
 \hat{\tau} = N \times \hat{\mu} = \frac{N}{n}\sum_{i=1}^{n}(y_i)
 \]</span></p>

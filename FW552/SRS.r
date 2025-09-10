@@ -60,7 +60,7 @@ sample(LETTERS[1:6],2)
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Sample.Error = abs(ponds.all$Sample.Mean-8)
+ponds.all$Sample.Error = (ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 

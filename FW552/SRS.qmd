@@ -96,7 +96,7 @@ mu = mean(ponds$egg.mass)
 
 ## [SRS]{style="color:#078BCD;"}
 
-How many possible unique samples are there (w/o replacement)
+How many possible unique samples are there (w/o replacement)?
 
 $$
 {N}\choose{n} 
@@ -207,7 +207,7 @@ Consider the sample mean $\hat{\mu}$ for each sample
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Abs.Sample.Error = abs(ponds.all$Sample.Mean-8)
+ponds.all$Sample.Error = (ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 
@@ -261,7 +261,6 @@ sum(ponds.simple$Deviance.Truth)
 ```
 
 
-No Estimator Bias!
 
 :::
 
@@ -482,7 +481,7 @@ $$
 ## [Connect these two]{style="color:#078BCD;"}
 
 $$
-E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \text{Population Variance}
+E[\text{Sampling Distribution Variance}] = \\\frac{1}{n} \left(\frac{N-n}{N}\right) \times \sigma^2
 $$
 
 :::{.incremental}
@@ -499,10 +498,10 @@ $$
 
 ## [Connect these two]{style="color:#078BCD;"}
 
-**If you know the E[$\sigma^2$]** ...
+### **If you know the E[$\sigma^2$]** ...
 
 - you have a mechanism to understand the variation of sample distribution of the means
-- the more variation in $y$, the more variation in sampling distrubution of means ($\hat{\mu}$.
+- the more variation in $y$, the more variation in sampling distrubution of means ($\hat{\mu}$).
 
 
 ## [Sample Size]{style="color:#078BCD;"}
@@ -612,7 +611,7 @@ This is because of the Central limit theorem (CLT)
 
 ## [The TOTAL]{style="color:#078BCD;"}
 
-*Extrapolate the sample to the total population*
+*Estimate the total population using the sample*
 
 $$
 \hat{\tau} = N \times \hat{\mu} = \frac{N}{n}\sum_{i=1}^{n}(y_i)

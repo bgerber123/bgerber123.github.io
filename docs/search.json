@@ -11008,7 +11008,7 @@
     "href": "FW552/SRS.html#srs-2",
     "title": "Simple Random Sampling",
     "section": "SRS",
-    "text": "SRS\nHow many possible unique samples are there (w/o replacement)\n\\[\n{N}\\choose{n}\n\\]\n\n\\[\n\\frac{N!}{n!(N-n)!}\n\\]\n\n\nR\n\nchoose(6,2)\n\n[1] 15"
+    "text": "SRS\nHow many possible unique samples are there (w/o replacement)?\n\\[\n{N}\\choose{n}\n\\]\n\n\\[\n\\frac{N!}{n!(N-n)!}\n\\]\n\n\nR\n\nchoose(6,2)\n\n[1] 15"
   },
   {
     "objectID": "FW552/SRS.html#srs-3",
@@ -11036,21 +11036,21 @@
     "href": "FW552/SRS.html#srs-6",
     "title": "Simple Random Sampling",
     "section": "SRS",
-    "text": "SRS\nIs it okay to not like your random sample and resample?\n\nsample(LETTERS[1:6],2)\n\n[1] \"A\" \"D\"\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"D\" \"B\"\n\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"B\" \"D\""
+    "text": "SRS\nIs it okay to not like your random sample and resample?\n\nsample(LETTERS[1:6],2)\n\n[1] \"A\" \"D\"\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"C\" \"B\"\n\n\n\n\n\nsample(LETTERS[1:6],2)\n\n[1] \"B\" \"A\""
   },
   {
     "objectID": "FW552/SRS.html#srs-7",
     "href": "FW552/SRS.html#srs-7",
     "title": "Simple Random Sampling",
     "section": "SRS",
-    "text": "SRS\nConsider the sample mean \\(\\hat{\\mu}\\) for each sample\n\n\n\n\n\nSample.Number\nFirst Pond\nSecond Pond\nFirst Value\nSecond Value\nSample.Mean\nAbs.Sample.Error\n\n\n\n\n1\nA\nB\n2\n6\n4\n4\n\n\n2\nA\nC\n2\n8\n5\n3\n\n\n3\nA\nD\n2\n10\n6\n2\n\n\n4\nA\nE\n2\n10\n6\n2\n\n\n5\nA\nF\n2\n12\n7\n1\n\n\n6\nB\nC\n6\n8\n7\n1\n\n\n7\nB\nD\n6\n10\n8\n0\n\n\n8\nB\nE\n6\n10\n8\n0\n\n\n9\nB\nF\n6\n12\n9\n1\n\n\n10\nC\nD\n8\n10\n9\n1\n\n\n11\nC\nE\n8\n10\n9\n1\n\n\n12\nC\nF\n8\n12\n10\n2\n\n\n13\nD\nE\n10\n10\n10\n2\n\n\n14\nD\nF\n10\n12\n11\n3\n\n\n15\nE\nF\n10\n12\n11\n3"
+    "text": "SRS\nConsider the sample mean \\(\\hat{\\mu}\\) for each sample\n\n\n\n\n\nSample.Number\nFirst Pond\nSecond Pond\nFirst Value\nSecond Value\nSample.Mean\nSample.Error\n\n\n\n\n1\nA\nB\n2\n6\n4\n-4\n\n\n2\nA\nC\n2\n8\n5\n-3\n\n\n3\nA\nD\n2\n10\n6\n-2\n\n\n4\nA\nE\n2\n10\n6\n-2\n\n\n5\nA\nF\n2\n12\n7\n-1\n\n\n6\nB\nC\n6\n8\n7\n-1\n\n\n7\nB\nD\n6\n10\n8\n0\n\n\n8\nB\nE\n6\n10\n8\n0\n\n\n9\nB\nF\n6\n12\n9\n1\n\n\n10\nC\nD\n8\n10\n9\n1\n\n\n11\nC\nE\n8\n10\n9\n1\n\n\n12\nC\nF\n8\n12\n10\n2\n\n\n13\nD\nE\n10\n10\n10\n2\n\n\n14\nD\nF\n10\n12\n11\n3\n\n\n15\nE\nF\n10\n12\n11\n3"
   },
   {
     "objectID": "FW552/SRS.html#srs-8",
     "href": "FW552/SRS.html#srs-8",
     "title": "Simple Random Sampling",
     "section": "SRS",
-    "text": "SRS\n\n\n\n\n\n\n\nSample.Number\nSample.Mean\nSample.Error\n\n\n\n\n1\n4\n-4\n\n\n2\n5\n-3\n\n\n3\n6\n-2\n\n\n4\n6\n-2\n\n\n5\n7\n-1\n\n\n6\n7\n-1\n\n\n7\n8\n0\n\n\n8\n8\n0\n\n\n9\n9\n1\n\n\n10\n9\n1\n\n\n11\n9\n1\n\n\n12\n10\n2\n\n\n13\n10\n2\n\n\n14\n11\n3\n\n\n15\n11\n3\n\n\n\n\n\n\n\n\n\\[ \\frac{1}{15}\\times\\sum_{i=1}^{15} (\\hat{\\mu}_{i}) = 8\\]\n\\[\\sum_{i=1}^N(\\hat{\\mu}_{i}-\\mu) = 0 \\]\nNo Estimator Bias!"
+    "text": "SRS\n\n\n\n\n\n\n\nSample.Number\nSample.Mean\nSample.Error\n\n\n\n\n1\n4\n-4\n\n\n2\n5\n-3\n\n\n3\n6\n-2\n\n\n4\n6\n-2\n\n\n5\n7\n-1\n\n\n6\n7\n-1\n\n\n7\n8\n0\n\n\n8\n8\n0\n\n\n9\n9\n1\n\n\n10\n9\n1\n\n\n11\n9\n1\n\n\n12\n10\n2\n\n\n13\n10\n2\n\n\n14\n11\n3\n\n\n15\n11\n3\n\n\n\n\n\n\n\n\n\\[ \\frac{1}{15}\\times\\sum_{i=1}^{15} (\\hat{\\mu}_{i}) = 8\\]\n\\[\\sum_{i=1}^N(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
   },
   {
     "objectID": "FW552/SRS.html#srs-9",
@@ -11120,7 +11120,7 @@
     "href": "FW552/SRS.html#connect-these-two-4",
     "title": "Simple Random Sampling",
     "section": "Connect these two",
-    "text": "Connect these two\n\\[\nE[\\text{Sampling Distribution Variance}] = \\\\\\frac{1}{n} \\left(\\frac{N-n}{N}\\right) \\times \\text{Population Variance}\n\\]\n\n\nAs n–&gt; N, (N-n)/(N) approaches zero.\nn = N then no sampling distribution variance\nn &lt;&lt; N then correction factor ~1 and expected sampling distribution variance is related to the population variance by 1/n"
+    "text": "Connect these two\n\\[\nE[\\text{Sampling Distribution Variance}] = \\\\\\frac{1}{n} \\left(\\frac{N-n}{N}\\right) \\times \\sigma^2\n\\]\n\n\nAs n–&gt; N, (N-n)/(N) approaches zero.\nn = N then no sampling distribution variance\nn &lt;&lt; N then correction factor ~1 and expected sampling distribution variance is related to the population variance by 1/n"
   },
   {
     "objectID": "FW552/SRS.html#connect-these-two-5",
@@ -11134,7 +11134,7 @@
     "href": "FW552/SRS.html#connect-these-two-6",
     "title": "Simple Random Sampling",
     "section": "Connect these two",
-    "text": "Connect these two\nIf you know the E[\\(\\sigma^2\\)] …\n\nyou have a mechanism to understand the variation of sample distribution of the means\nthe more variation in \\(y\\), the more variation in sampling distrubution of means (\\(\\hat{\\mu}\\)."
+    "text": "Connect these two\nIf you know the E[\\(\\sigma^2\\)] …\n\nyou have a mechanism to understand the variation of sample distribution of the means\nthe more variation in \\(y\\), the more variation in sampling distrubution of means (\\(\\hat{\\mu}\\))."
   },
   {
     "objectID": "FW552/SRS.html#sample-size",
@@ -11162,7 +11162,7 @@
     "href": "FW552/SRS.html#the-total",
     "title": "Simple Random Sampling",
     "section": "The TOTAL",
-    "text": "The TOTAL\nExtrapolate the sample to the total population\n\\[\n\\hat{\\tau} = N \\times \\hat{\\mu} = \\frac{N}{n}\\sum_{i=1}^{n}(y_i)\n\\]"
+    "text": "The TOTAL\nEstimate the total population using the sample\n\\[\n\\hat{\\tau} = N \\times \\hat{\\mu} = \\frac{N}{n}\\sum_{i=1}^{n}(y_i)\n\\]"
   },
   {
     "objectID": "FW552/SRS.html#the-total-1",
