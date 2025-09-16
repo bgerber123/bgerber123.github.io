@@ -31,8 +31,8 @@
   confidence.coef = 1-alpha
 
   # quantiles
-  t.upper = confidence.coef+alpha/2
-  t.lower = 0+alpha/2
+  p.upper = confidence.coef+alpha/2
+  p.lower = 0+alpha/2
 
   
 
@@ -49,16 +49,16 @@ for(i in 1:n.sim){
   y = sample(dat$Count,size=n)
   y.mean= mean(y)
   
-  y.LCL = y.mean + qt(t.lower,df=length(y)-1) * sqrt(((N-n)/N)*(var(y)/n))
-  y.UCL = y.mean + qt(t.upper,df=length(y)-1) * sqrt(((N-n)/N)*(var(y)/n))
+  y.LCL = y.mean + qt(p.lower,df=length(y)-1) * sqrt(((N-n)/N)*(var(y)/n))
+  y.UCL = y.mean + qt(p.upper,df=length(y)-1) * sqrt(((N-n)/N)*(var(y)/n))
   
  if (y.LCL<mu & mu < y.UCL) {mu.indicator = 1}
   
   tau = N*y.mean
   
   
-  tau.LCL = tau + qt(t.lower,df=length(y)-1) * sqrt(N*(N-n)*var(y)/n)
-  tau.UCL = tau + qt(t.upper,df=length(y)-1) * sqrt(N*(N-n)*var(y)/n)
+  tau.LCL = tau + qt(p.lower,df=length(y)-1) * sqrt(N*(N-n)*var(y)/n)
+  tau.UCL = tau + qt(p.upper,df=length(y)-1) * sqrt(N*(N-n)*var(y)/n)
   
   
   if (tau.LCL<Total & Total < tau.UCL) {total.indicator = 1}
@@ -77,9 +77,10 @@ for(i in 1:n.sim){
 
 head(save.outputs)
 
-
+# should be near a probability of confidence.coef
 mean(save.outputs$total.indicator)
 
+# should be near a probability of confidence.coef
 mean(save.outputs$mean.indicator)
 
 
@@ -87,6 +88,8 @@ mean(save.outputs$mean.indicator)
 library(ggplot2)
 
 save.outputs$x= 1:n.sim
+
+#Plot CI's and truth
 
 ggplot(data = save.outputs, aes(x = x, y = mean)) +
          geom_ribbon(aes(ymin = mean.LCL, ymax = mean.UCL)) +
