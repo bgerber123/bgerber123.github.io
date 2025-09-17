@@ -9062,14 +9062,14 @@
     "href": "FW552/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nWhat is a confidence interval?\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week4.html#week-4",
     "href": "FW552/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
+    "text": "Please bring a laptop to class\nExercise: Getting familiar with Confidence Intervals; Download Data\nThese data are counts per plot of kangaroos. We will use these data to sample from this population, calculate confidence intervals (85% and 99%) and evaluate what information confidence intervals convey. Come ready to code!\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 4 \nDue 1 week: Canvas Quiz 2\nDue 1 week: Canvas Assignment: Book Problem, Chapter 3, problem 1\n\n\n\n\n\n\n\n\nWhat is a confidence interval?\nLecture: Sample Size\nLecture Code: SampleSize.R\n\n\n\n\n\nDue Next Class: Read Thompson Chapter 5.0-5.4 \nDue 1 Week: Canvas Assignment: Book Problem, Chapter 4, problem 1 and Class Problem"
   },
   {
     "objectID": "FW552/week6.html",
@@ -11387,5 +11387,19 @@
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling vs SRS",
     "text": "Cluster sampling vs SRS\n\nColleague wants to take a sample of n = 100 plots to measure mushroom abundance\n\nCould take random sample of 100 plots\nCould take random sample of 50 clusters (primary) with 2 plots each (secondary).\n\nWHAT DO YOU RECOMMEND?"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter3/CI_questions.html",
+    "href": "classfiles552/ThompsonChapter3/CI_questions.html",
+    "title": "Brian D. Gerber",
+    "section": "",
+    "text": "1st person answers: What is a confidence interval?\n2nd person should ask one clarifying question\n\n\n\n\n\n2nd person answers: Why is a confidence interval useful to you?\n1st person should ask one clarifying question\n\n\n\n\n\n1st person answers: How do you decide on 89% vs 95% vs 99%?\n2nd person should ask one clarifying question"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter3/CI_questions.html#pair-up",
+    "href": "classfiles552/ThompsonChapter3/CI_questions.html#pair-up",
+    "title": "Brian D. Gerber",
+    "section": "Pair up",
+    "text": "Pair up\n\n1st: What is a confidence interval? (2 min)\n\n2nd asks one clarifying question\n\n2nd: Why is a confidence interval useful to you? (2 min)\n\n1st: disagree. Make an argument that they are not useful (2 min)\n\n1st: Who decides on the interval? (1 min)\n\n2nd: When would you decide on 95% vs 89%? (2 min)\n1st asks one clarifying question"
   }
 ]
