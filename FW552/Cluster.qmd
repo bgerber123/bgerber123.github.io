@@ -1,0 +1,238 @@
+---
+title: <span style="color:orange">Cluster/Systematic Sampling</span>
+title-slide-attributes:
+  data-background-image: /img/cluster.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    scrollable: true
+#    slide-level: 1
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
+---
+
+
+## [Cluster and systematic sampling]{style="color:#078BCD;"}
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+```{r knitr, echo=FALSE,results='hide'}
+library(tidyverse)
+library(kableExtra)
+library(magrittr)
+library(knitr)
+#knitr::purl(input="../FW552/Cluster.qmd",output="../FW552/Proportions.r")
+```
+
+Appear to be opposites
+
+- Cluster: units are clumped together
+- Systematic: units spaced out
+
+. . .
+
+Both use partitioned sampling of *primary* and *secondary* units
+
+- Cluster: primary units consist of cluster of secondary units
+- Systematic: primary unit consists of secondary units that are systematically arranged (rule set)
+
+
+![](../img/cluster2.png)
+
+## Boreal toad egg masses per pond in RMNP
+
+
+```{r, echo=FALSE}
+ponds = data.frame(matrix(nrow=6,ncol=2))
+colnames(ponds)=c("Pond","egg.mass")
+
+ponds$Pond=LETTERS[1:6]
+ponds$egg.mass = c(2,6,8,10,10,12)
+ponds$cluster = c(1,2,1,2,3,3)
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+```
+
+- N = 6
+- $\mu =8$
+
+
+## Boreal toad egg masses per pond in RMNP{.scrollable}
+
+#### Cluster sampling scheme A
+
+```{r, echo=FALSE}
+cluster.df=NULL
+cluster.df$cluster= c(1,2,3)
+cluster.df$member1 = c(2,6,10)
+cluster.df$member2 = c(8,10,12)
+cluster.df$mean = c(5,8,11)
+cluster.df$dev2 = c(9,0,9)
+cluster.df=data.frame(cluster.df)
+cluster.df %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+```
+
+. . .
+
+$$\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 $$ 
+. . .
+
+$$
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 6
+$$
+
+. . .
+
+**Recall that the variance for SRS was 4.26**
+
+. . .
+
+
+## Cluster Sampling
+
+Superficial resemblance to stratification: 'clustered' sample units are grouped like a stratum
+
+**Selection process is different**
+
+- stratification: every strata is part of the sampling process
+- cluster: select among clusters in same way as SRS
+    - then observe all units within cluster
+
+. . .
+
+Cluster sampling is really SRS applied to groups of population members
+
+
+## Cluster sampling scheme B
+
+*Make cluster of similar values*
+
+```{r, echo=FALSE}
+ponds = data.frame(matrix(nrow=6,ncol=2))
+colnames(ponds)=c("Pond","egg.mass")
+
+ponds$Pond=LETTERS[1:6]
+ponds$egg.mass = c(2,6,8,10,10,12)
+ponds$cluster = c(1,1,2,2,3,3)
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+```
+
+## Cluster sampling scheme B
+
+```{r, echo=FALSE}
+cluster.df=NULL
+cluster.df$cluster= c(1,2,3)
+cluster.df$member1 = c(2,8,10)
+cluster.df$member2 = c(6,10,12)
+cluster.df$mean = c(4,9,11)
+cluster.df$dev2 = c(16,1,9)
+cluster.df=data.frame(cluster.df)
+cluster.df %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+```
+
+. . .
+
+$$\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 $$ 
+. . .
+
+$$
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 8.67
+$$
+
+
+## Cluster sampling scheme C
+
+*Make clusters of similar values*
+
+```{r, echo=FALSE}
+ponds = data.frame(matrix(nrow=6,ncol=2))
+colnames(ponds)=c("Pond","egg.mass")
+
+ponds$Pond=LETTERS[1:6]
+ponds$egg.mass = c(2,6,8,10,10,12)
+ponds$cluster = c(1,2,3,3,2,1)
+ponds %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+```
+
+## Cluster sampling scheme C
+
+*Make clusters of dissimilar values*
+
+```{r, echo=FALSE}
+cluster.df=NULL
+cluster.df$cluster= c(1,2,3)
+cluster.df$member1 = c(2,6,8)
+cluster.df$member2 = c(12,10,10)
+cluster.df$mean = c(7,8,9)
+cluster.df$dev2 = c(1,0,1)
+cluster.df=data.frame(cluster.df)
+cluster.df %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+```
+
+. . .
+
+$$\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 $$ 
+. . .
+
+$$
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 0.67
+$$
+
+## Cluster sampling 
+
+- Maximize precision by forming clusters that have varying values within secondary units
+- Overall cluster values (i.e., mean) are similar
+
+. . .
+
+*BUT*, in our field we often think of forming clusters by location 
+
+. . .
+
+First Law of Geography: "everything is related to everything else, but near things are more related than distant things." - Waldo Tobler
+
+. . . 
+
+This contradicts the principal and utility of cluster sampling.
+
+
+
+
+## Cluster sampling vs SRS
+
+![](../img/mushroom.png)
+
+Colleague wants to take a sample of n = 100 plots to measure *mushroom abundance*
+
+- Could take random sample of 100 plots
+- Could take random sample of 50 clusters (primary) with 2 plots each (secondary).
+
+
+**WHAT DO YOU RECOMMEND?**
+
+
+
