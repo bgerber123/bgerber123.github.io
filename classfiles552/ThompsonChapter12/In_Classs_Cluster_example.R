@@ -8,21 +8,20 @@
 
 library(fields)
 
-# We are interested in the total population size of fish
+# We are interested in the total population size of pika
 
-# In our system, there are 10 streams that we can divide each into 100 reaches/segments
+# In our system, there are 10 mtns that we can divide each into 100 plots based on talus slopes (piles of rocks and boulders)
 
 # Thus, in total there are 10 x 100 sample units in a SRS sense.
 
-# We expect the most deviation to occur across streams, rather than in them. Why is that? I don't know.
-# Ask a fishy colleague. But that's our reality!
+# We expect the most deviation to occur across mountains, rather than in them. Why is that? 
 
-# We are going to cluster across streams - aggregate segments across streams.
+# We are going to cluster across mountains - aggregate plot across mtns.
 
 
 # Simulate a true population
-  x.max= 100 # stream reach
-  y.max= 10 # streams
+  x.max= 100 # talus splope plots
+  y.max= 10 # mtns
 
 # Create matrix
   pop = matrix(0,x.max,y.max)
@@ -41,8 +40,11 @@ for(j in 1:y.max){
 
 # look at our population
 pop
-fields::image.plot(matrix((data=pop), ncol=100, nrow=10))
-
+fields::image.plot(matrix((data=pop), ncol=10, nrow=100),
+                   axes=F, xlab="Plot #",
+                   ylab="Mtn #")
+axis(2, at=seq(0,1,length.out=10),lab=1:10)
+axis(1, at=seq(0,1,length.out=100),lab=1:100)
 # Get true population parameters
   mu = mean(pop)
   mu
@@ -161,8 +163,8 @@ cluster.fun = function(pop){
   
 #clusters are mostly similar
 apply(pop,1,sum)
-sd(apply(pop,1,sum))
+var(apply(pop,1,sum))
 
 #compare to population variation
-sd(pop)
+sd(pop)^2
 

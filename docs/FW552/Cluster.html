@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -152,9 +218,11 @@ code.r{
 <li>Systematic: units spaced out</li>
 </ul>
 <div class="fragment">
-<p>Both use partitioned sampling of <em>primary</em> and <em>secondary</em> units</p>
+<p>Both partition sampling into <em>primary</em> and <em>secondary</em> units</p>
+</div>
+<div class="fragment">
 <ul>
-<li>Cluster: primary units consist of cluster of secondary units</li>
+<li>Cluster: primary units consist of cluster of secondary</li>
 <li>Systematic: primary unit consists of secondary units that are systematically arranged (rule set)</li>
 </ul>
 <p><img data-src="../img/cluster2.png"></p>
@@ -495,6 +563,102 @@ code.r{
 <li>Could take random sample of 50 clusters (primary) with 2 plots each (secondary).</li>
 </ul>
 <p><strong>WHAT DO YOU RECOMMEND?</strong></p>
+</section>
+<section id="pika-case-study" class="slide level2">
+<h2>Pika Case Study</h2>
+<p>We are interested in the total population size of pika across 10 mountains</p>
+
+<img data-src="../img/pika2.png" class="r-stretch"><ul>
+<li>10 Mtns</li>
+<li>Each mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)</li>
+<li>a total of 10 x 100 sample units (in a SRS sense).</li>
+<li>we expect the most deviation to occur across mountains, rather than in them.</li>
+<li>we will cluster our samples across mountains (aggrgate plots across mtns)</li>
+</ul>
+</section>
+<section id="pika-case-study-1" class="slide level2">
+<h2>Pika Case Study</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Simulate a true population</span></span>
+<span id="cb1-2"><a></a>  N.plots<span class="ot">=</span> <span class="dv">100</span> <span class="co"># talus slope plots</span></span>
+<span id="cb1-3"><a></a>  N.mtns<span class="ot">=</span> <span class="dv">10</span> <span class="co"># mtns</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="co"># Create matrix of counts</span></span>
+<span id="cb1-6"><a></a>  pop <span class="ot">=</span> <span class="fu">matrix</span>(<span class="dv">0</span>,N.plots,N.mtns)</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="co"># Consider each mtn has a different mean abundance</span></span>
+<span id="cb1-9"><a></a><span class="co"># This forces the mtns to vary in pika abundance</span></span>
+<span id="cb1-10"><a></a>  mu <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">100</span>,<span class="at">length.out=</span>N.mtns)</span>
+<span id="cb1-11"><a></a></span>
+<span id="cb1-12"><a></a><span class="co"># Loop over each mountain and draw N.plots random values from that specific mean</span></span>
+<span id="cb1-13"><a></a><span class="co"># log transform the mean and the exponentiate then round to make them counts </span></span>
+<span id="cb1-14"><a></a><span class="co"># and to ensure values are never negative</span></span>
+<span id="cb1-15"><a></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N.mtns){</span>
+<span id="cb1-16"><a></a>  <span class="fu">set.seed</span>(<span class="dv">143453543</span><span class="sc">+</span>j)</span>
+<span id="cb1-17"><a></a>  pop[,j] <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">exp</span>(<span class="fu">rnorm</span>(N.plots,<span class="fu">log</span>(mu[j]),<span class="fl">0.1</span>)),<span class="at">digits=</span><span class="dv">0</span>)</span>
+<span id="cb1-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pika-case-study-2" class="slide level2">
+<h2>Pika Case Study</h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="pika-case-study-3" class="slide level2">
+<h2>Pika Case Study</h2>
+<p>$= $ 50.67</p>
+<p>$= $ 5.067^{4}</p>
+<div class="fragment">
+<h4 id="setup-simulation-to-compare-srs-vs-cluster">Setup Simulation to compare SRS vs Cluster</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p>Importantly, the same number of total units are sampled: 100</p>
+</div>
+</section>
+<section id="srs" class="slide level2">
+<h2>SRS</h2>
+</section>
+<section id="srs-1" class="slide level2">
+<h2>SRS</h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><p>$_{,SRS} = $ 3109.6570815</p>
+</section>
+<section id="cluster" class="slide level2">
+<h2>Cluster</h2>
+</section>
+<section id="cluster-1" class="slide level2">
+<h2>Cluster</h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>$_{,Cluster} = $ 554.2570844</p>
+</section>
+<section id="srs-vs-cluster" class="slide level2">
+<h2>SRS vs Cluster</h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="srs-vs-cluster-1" class="slide level2">
+<h2>SRS vs Cluster</h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"><h3 id="why-did-clusters-work-so-well">Why did Clusters work so well?</h3>
+<p>Thompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,</p>
+<p>$$ = </p>
+<p>$$ . . .</p>
+<h3 id="numerator">Numerator</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1045.07</code></pre>
+</div>
+</div>
+<h3 id="denominator">Denominator</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 342.1313</code></pre>
+</div>
+</div>
 
 
 </section>

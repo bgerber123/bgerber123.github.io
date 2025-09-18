@@ -41,9 +41,11 @@ Appear to be opposites
 
 . . .
 
-Both use partitioned sampling of *primary* and *secondary* units
+Both partition sampling into *primary* and *secondary* units
 
-- Cluster: primary units consist of cluster of secondary units
+. . .
+
+- Cluster: primary units consist of cluster of secondary 
 - Systematic: primary unit consists of secondary units that are systematically arranged (rule set)
 
 
@@ -236,3 +238,208 @@ Colleague wants to take a sample of n = 100 plots to measure *mushroom abundance
 
 
 
+## Pika Case Study
+
+We are interested in the total population size of pika across 10 mountains
+
+![](../img/pika2.png)
+
+
+- 10 Mtns
+- Each mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)
+- a total of 10 x 100 sample units (in a SRS sense).
+- we expect the most deviation to occur across mountains, rather than in them.
+- we will cluster our samples across mountains (aggrgate plots across mtns)
+
+## Pika Case Study
+
+```{r, echo = TRUE}
+# Simulate a true population
+  N.plots= 100 # talus slope plots
+  N.mtns= 10 # mtns
+
+# Create matrix of counts
+  pop = matrix(0,N.plots,N.mtns)
+
+# Consider each mtn has a different mean abundance
+# This forces the mtns to vary in pika abundance
+  mu = seq(1,100,length.out=N.mtns)
+
+# Loop over each mountain and draw N.plots random values from that specific mean
+# log transform the mean and the exponentiate then round to make them counts 
+# and to ensure values are never negative
+for(j in 1:N.mtns){
+  set.seed(143453543+j)
+  pop[,j] = round(exp(rnorm(N.plots,log(mu[j]),0.1)),digits=0)
+}
+```
+
+
+## Pika Case Study
+
+```{r,echo=FALSE}
+fields::image.plot(matrix((data=pop), ncol=10, nrow=100),
+                   axes=F, xlab="Plot #",
+                   ylab="Mtn #")
+axis(2, at=seq(0,1,length.out=10),lab=1:10)
+axis(1, at=seq(0,1,length.out=100),lab=1:100)
+# Get true population parameters
+```
+
+
+## Pika Case Study
+
+```{r,echo=FALSE}
+# Get true population parameters
+  mu = mean(pop)
+  tau = sum(pop)
+```
+
+$\mu = $ `r mu`
+
+$\tau = $ `r tau`
+
+. . .
+
+#### Setup Simulation to compare SRS vs Cluster
+
+```{r}
+# Total number of secondary sample units for SRS
+  N = N.plots*N.mtns
+# Sample size of secondary units for SRS  
+  n=100
+  
+# Total number of clusters  
+  N.plots
+# Sample size of primary units  
+  N.mtns
+```
+
+Importantly, the same number of total units are sampled:  100  
+
+
+## SRS
+
+```{r}
+#Number of simulated studies / replicate samples  
+n.sim= 10000
+  
+# Create SRS function  
+srs.fun = function(pop){
+  
+  # Get a sample of indices
+  index=sample(1:(N.plots*N.mtns),size=n)
+  
+  # Use those indices to get our population counts in each sample unit
+  y = c(pop)[index]
+  
+  #Total estimate
+  tau.est=mean(y)*N
+  
+  #Standard deviation of total 
+  tau.sd=sqrt(N*(N-n)*(var(y)/n))
+
+  list(tau.est=tau.est,
+       tau.sd=tau.sd)
+}
+
+# replicate!
+srs.total.dist=replicate(n.sim, srs.fun(pop))
+
+```
+
+
+## SRS
+
+```{r}
+hist(unlist(srs.total.dist[1,]),
+     main="SRS Tau Estimate")
+abline(v=tau,col=2,lwd=3)
+```
+
+$\sigma_{\hat{\tau},SRS} = $ `r sd(unlist(srs.total.dist[1,]))`
+
+## Cluster
+
+```{r}
+cluster.fun = function(pop){
+  index=sample(1:N.plots, size = N.mtns)
+  
+  y = pop[index,]
+  y.sum = apply(y,1,sum)
+  
+  tau.est = N.plots*mean(y.sum)
+
+  #Standard deviation of total 
+  var.primary= var(y.sum)
+  tau.sd = sqrt(N.plots*(N.plots-N.mtns)*(var.primary/N.mtns))
+  
+  list(tau.est=tau.est,
+       tau.sd=tau.sd)
+    
+}
+
+# Replicate!!!!
+  cluster.total.dist=replicate(n.sim, cluster.fun(pop))
+```
+
+## Cluster
+
+```{r}
+  hist(unlist(cluster.total.dist[1,]),breaks=20,
+         main="Tau Estimate")
+  abline(v=tau,col=2,lwd=3)
+```
+
+$\sigma_{\hat{\tau},Cluster} = $ `r sd(unlist(cluster.total.dist[1,]))`
+
+## SRS vs Cluster
+
+```{r,echo=FALSE}
+  hist(unlist(srs.total.dist[1,]),breaks=20,
+         main="Tau Estimate",xlab="Population Estimate")
+  abline(v=tau,col=2,lwd=3)
+  # Add plot of Cluster
+  hist(unlist(cluster.total.dist[1,]),
+       col=grDevices::adjustcolor("red",alpha.f=0.1),
+       breaks=20,
+       add=TRUE)
+```
+
+
+## SRS vs Cluster
+
+
+```{r,echo=FALSE}
+  hist(unlist(srs.total.dist[2,]),breaks=20,
+         main="Tau Variance",xlim=c(0,4000),xlab="Population Variance")
+  abline(v=tau,col=2,lwd=3)
+  # Add plot of Cluster
+  hist(unlist(cluster.total.dist[2,]),
+       col=grDevices::adjustcolor("red",alpha.f=0.1),
+       breaks=20,
+       add=TRUE)
+
+```
+
+### Why did Clusters work so well?
+
+Thompson pg. 137: "The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances",
+
+$$
+\frac{\text{var}(\tau_{srs})}{\text{var}(\tau_{\mu})} = \frac{\text{var}(\text{across all values in population})}{\text{var}(\text{across secondary units})}
+
+$$
+. . .
+
+### Numerator
+
+```{r}
+var(c(pop))
+```
+
+### Denominator
+
+```{r}
+var(apply(pop,1,sum))
+```

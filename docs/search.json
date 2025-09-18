@@ -11323,7 +11323,7 @@
     "href": "FW552/Cluster.html#cluster-and-systematic-sampling",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster and systematic sampling",
-    "text": "Cluster and systematic sampling\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n\nBoth use partitioned sampling of primary and secondary units\n\nCluster: primary units consist of cluster of secondary units\nSystematic: primary unit consists of secondary units that are systematically arranged (rule set)"
+    "text": "Cluster and systematic sampling\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n\nBoth partition sampling into primary and secondary units\n\n\n\nCluster: primary units consist of cluster of secondary\nSystematic: primary unit consists of secondary units that are systematically arranged (rule set)"
   },
   {
     "objectID": "FW552/Cluster.html#boreal-toad-egg-masses-per-pond-in-rmnp",
@@ -11401,5 +11401,75 @@
     "title": "Brian D. Gerber",
     "section": "Pair up",
     "text": "Pair up\n\n1st: What is a confidence interval? (2 min)\n\n2nd asks one clarifying question\n\n2nd: Why is a confidence interval useful to you? (2 min)\n\n1st: disagree. Make an argument that they are not useful (2 min)\n\n1st: Who decides on the interval? (1 min)\n\n2nd: When would you decide on 95% vs 89%? (2 min)\n1st asks one clarifying question"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study",
+    "href": "FW552/Cluster.html#pika-case-study",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\nWe are interested in the total population size of pika across 10 mountains\n\n\n10 Mtns\nEach mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)\na total of 10 x 100 sample units (in a SRS sense).\nwe expect the most deviation to occur across mountains, rather than in them.\nwe will cluster our samples across mountains (aggrgate plots across mtns)"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-1",
+    "href": "FW552/Cluster.html#pika-case-study-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n# Simulate a true population\n  N.plots= 100 # talus slope plots\n  N.mtns= 10 # mtns\n\n# Create matrix of counts\n  pop = matrix(0,N.plots,N.mtns)\n\n# Consider each mtn has a different mean abundance\n# This forces the mtns to vary in pika abundance\n  mu = seq(1,100,length.out=N.mtns)\n\n# Loop over each mountain and draw N.plots random values from that specific mean\n# log transform the mean and the exponentiate then round to make them counts \n# and to ensure values are never negative\nfor(j in 1:N.mtns){\n  set.seed(143453543+j)\n  pop[,j] = round(exp(rnorm(N.plots,log(mu[j]),0.1)),digits=0)\n}"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-2",
+    "href": "FW552/Cluster.html#pika-case-study-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-3",
+    "href": "FW552/Cluster.html#pika-case-study-3",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n$= $ 50.67\n$= $ 5.067^{4}\n\nSetup Simulation to compare SRS vs Cluster\n\n\n[1] 100\n\n\n[1] 10\n\n\nImportantly, the same number of total units are sampled: 100"
+  },
+  {
+    "objectID": "FW552/Cluster.html#srs",
+    "href": "FW552/Cluster.html#srs",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS",
+    "text": "SRS"
+  },
+  {
+    "objectID": "FW552/Cluster.html#srs-1",
+    "href": "FW552/Cluster.html#srs-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS",
+    "text": "SRS\n\n$_{,SRS} = $ 3109.6570815"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster",
+    "href": "FW552/Cluster.html#cluster",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster",
+    "text": "Cluster"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-1",
+    "href": "FW552/Cluster.html#cluster-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster",
+    "text": "Cluster\n\n$_{,Cluster} = $ 554.2570844"
+  },
+  {
+    "objectID": "FW552/Cluster.html#srs-vs-cluster",
+    "href": "FW552/Cluster.html#srs-vs-cluster",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS vs Cluster",
+    "text": "SRS vs Cluster"
+  },
+  {
+    "objectID": "FW552/Cluster.html#srs-vs-cluster-1",
+    "href": "FW552/Cluster.html#srs-vs-cluster-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS vs Cluster",
+    "text": "SRS vs Cluster\n\nWhy did Clusters work so well?\nThompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,\n$$ = \n$$ . . .\nNumerator\n\n\n[1] 1045.07\n\n\nDenominator\n\n\n[1] 342.1313"
   }
 ]
