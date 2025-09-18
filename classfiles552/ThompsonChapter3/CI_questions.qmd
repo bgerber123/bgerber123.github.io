@@ -4,7 +4,6 @@ format:
   revealjs:
     theme: simple
     html:
-         page-layout: full
 ---
 
 ## Pair up
