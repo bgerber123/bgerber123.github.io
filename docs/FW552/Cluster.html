@@ -223,13 +223,18 @@ code.r{
 <div class="fragment">
 <ul>
 <li>Cluster: primary units consist of cluster of secondary</li>
-<li>Systematic: primary unit consists of secondary units that are systematically arranged (rule set)</li>
+<li>Systematic: primary unit consists of secondary units that are arranged via a rule set</li>
 </ul>
-<p><img data-src="../img/cluster2.png"></p>
 </div>
 </section>
-<section id="boreal-toad-egg-masses-per-pond-in-rmnp" class="slide level2">
-<h2>Boreal toad egg masses per pond in RMNP</h2>
+<section id="cluster-and-systematic-sampling-1" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster and systematic sampling</span></h2>
+
+<img data-src="../img/cluster2.png" class="r-stretch"></section>
+<section id="boreal-toad-case-study" class="slide level2">
+<h2><span style="color:#078BCD;">Boreal Toad Case Study</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -275,20 +280,23 @@ code.r{
 </table>
 </div>
 </div>
+</div><div class="column" style="width:50%;">
 <ul>
 <li>N = 6</li>
 <li><span class="math inline">\(\mu =8\)</span></li>
 </ul>
-</section>
-<section id="boreal-toad-egg-masses-per-pond-in-rmnp-1" class="slide level2 scrollable">
-<h2>Boreal toad egg masses per pond in RMNP</h2>
+</div></div>
+
+<img data-src="../img/borealtoad.png" class="r-stretch"></section>
+<section id="boreal-toad" class="slide level2 scrollable">
+<h2><span style="color:#078BCD;">Boreal toad</span></h2>
 <h4 id="cluster-sampling-scheme-a">Cluster sampling scheme A</h4>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterA</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
@@ -321,32 +329,74 @@ code.r{
 </table>
 </div>
 </div>
-<p>. . .</p>
-<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span> . . .</p>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section>
+<section id="boreal-toad-1" class="slide level2 scrollable">
+<h2><span style="color:#078BCD;">Boreal toad</span></h2>
+<h4 id="cluster-sampling-scheme-a-1">Cluster sampling scheme A</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><span class="math display">\[
-\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 6
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 6\\
 \]</span></p>
-<p>. . .</p>
 <p><strong>Recall that the variance for SRS was 4.26</strong></p>
-<p>. . .</p>
 </section>
 <section id="cluster-sampling" class="slide level2">
-<h2>Cluster Sampling</h2>
+<h2><span style="color:#078BCD;">Cluster Sampling</span></h2>
 <p>Superficial resemblance to stratification: ‘clustered’ sample units are grouped like a stratum</p>
 <p><strong>Selection process is different</strong></p>
 <ul>
-<li>stratification: every strata is part of the sampling process</li>
-<li>cluster: select among clusters in same way as SRS
+<li><span style="color:#078BCD;">stratification</span>: every strata is part of the sampling process
+<ul>
+<li>not all units in each strata are sampled</li>
+</ul></li>
+<li><span style="color:#078BCD;">cluster</span>: select among clusters in same way as SRS
 <ul>
 <li>then observe all units within cluster</li>
 </ul></li>
 </ul>
 <div class="fragment">
-<p>Cluster sampling is really SRS applied to groups of population members</p>
+<p><strong>Cluster sampling is really SRS applied to groups of population members</strong></p>
 </div>
 </section>
 <section id="cluster-sampling-scheme-b" class="slide level2">
-<h2>Cluster sampling scheme B</h2>
+<h2><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
 <p><em>Make cluster of similar values</em></p>
 <div class="cell">
 <div class="cell-output-display">
@@ -355,7 +405,7 @@ code.r{
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
 </tr>
 </thead>
 <tbody>
@@ -395,13 +445,13 @@ code.r{
 </div>
 </section>
 <section id="cluster-sampling-scheme-b-1" class="slide level2">
-<h2>Cluster sampling scheme B</h2>
+<h2><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
@@ -434,16 +484,55 @@ code.r{
 </table>
 </div>
 </div>
-<div class="fragment">
-<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span> . . .</p>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section>
+<section id="cluster-sampling-scheme-b-2" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><span class="math display">\[
 \hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 8.67
 \]</span></p>
-</div>
 </section>
 <section id="cluster-sampling-scheme-c" class="slide level2">
-<h2>Cluster sampling scheme C</h2>
-<p><em>Make clusters of similar values</em></p>
+<h2><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
+<p><em>Make clusters of dissimilar values</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -451,7 +540,7 @@ code.r{
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
 </tr>
 </thead>
 <tbody>
@@ -491,14 +580,14 @@ code.r{
 </div>
 </section>
 <section id="cluster-sampling-scheme-c-1" class="slide level2">
-<h2>Cluster sampling scheme C</h2>
+<h2><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
 <p><em>Make clusters of dissimilar values</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
@@ -531,134 +620,505 @@ code.r{
 </table>
 </div>
 </div>
-<div class="fragment">
-<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span> . . .</p>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section>
+<section id="cluster-sampling-scheme-c-2" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
+<p><em>Make clusters of dissimilar values</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><span class="math display">\[
 \hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 0.67
 \]</span></p>
+</section>
+<section id="cluster-sampling-scheme-d" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Clusters of dissimilar values and size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="cluster-sampling-scheme-d-1" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Clusters of dissimilar values and size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member3</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">10.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">12.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>mean(c(5.33,10,12)) = 9.11</li>
+<li>9.11 - 8 = 1.11 (biased)</li>
+</ul>
+</section>
+<section id="cluster-sampling-scheme-d-2" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Need to incorporate cluster size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 30px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterSize</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SizeXMean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">divide.avg.cluster.size</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.33</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>mean(c(8,10,6)) = 8</li>
+<li>8 - 8 = 0 (unbiased)</li>
+<li><span class="math inline">\(\hat{\sigma}^{2} = 2.67\)</span></li>
+</ul>
+</section>
+<section id="variable-sizeed-clusters" class="slide level2">
+<h2><span style="color:#078BCD;">Variable-sizeed clusters</span></h2>
+<p><strong>We randomly select the primary units</strong></p>
+<ul>
+<li>the number of secondary units may be quite different and not in our control (i.e., random variable)</li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<p>You want to know something about households</p>
+<ul>
+<li>sample home addresses (building is cluster; primary unit)</li>
+<li>the number of secondary units depends on building type
+<ul>
+<li>single-family house, condo/duplex, apartment complex</li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="cluster-sampling-1" class="slide level2">
-<h2>Cluster sampling</h2>
+<h2><span style="color:#078BCD;">Cluster sampling</span></h2>
 <ul>
 <li>Maximize precision by forming clusters that have varying values within secondary units</li>
-<li>Overall cluster values (i.e., mean) are similar</li>
+<li>Overall cluster values (e.g., mean) are similar (aggregated secondary units)</li>
 </ul>
+</section>
+<section id="but." class="slide level2">
+<h2><span style="color:#078BCD;">But….</span></h2>
+<p>In our field we often think of forming clusters by location</p>
 <div class="fragment">
-<p><em>BUT</em>, in our field we often think of forming clusters by location</p>
+<p><br></p>
+<p><strong>First Law of Geography</strong>: “<em>everything is related to everything else, but near things are more related than distant things</em>.” - Waldo Tobler</p>
 </div>
 <div class="fragment">
-<p>First Law of Geography: “everything is related to everything else, but near things are more related than distant things.” - Waldo Tobler</p>
-</div>
-<div class="fragment">
+<p><br></p>
 <p>This contradicts the principal and utility of cluster sampling.</p>
 </div>
 </section>
-<section id="cluster-sampling-vs-srs" class="slide level2">
-<h2>Cluster sampling vs SRS</h2>
-
-<img data-src="../img/mushroom.png" class="r-stretch"><p>Colleague wants to take a sample of n = 100 plots to measure <em>mushroom abundance</em></p>
-<ul>
-<li>Could take random sample of 100 plots</li>
-<li>Could take random sample of 50 clusters (primary) with 2 plots each (secondary).</li>
-</ul>
-<p><strong>WHAT DO YOU RECOMMEND?</strong></p>
+<section id="cluster-sampling-2" class="slide level2">
+<h2><span style="color:#078BCD;">Cluster sampling</span></h2>
+<p>But also need to consider costs b/w SRS and cluster.</p>
+<div class="fragment">
+<p><strong>Which do you think is more likely to less costly?</strong></p>
+<!-- ## [Cluster sampling vs SRS]{style="color:#078BCD;"} -->
+<!-- ![](../img/mushroom.png) -->
+<!-- Colleague wants to take a sample of n = 100 plots to measure *mushroom abundance* -->
+<!-- ## [Cluster sampling vs SRS]{style="color:#078BCD;"} -->
+<!-- - Could take random sample of 100 plots -->
+<!-- - Could take random sample of 50 clusters (primary) with 2 plots each (secondary). -->
+<!-- **WHAT DO YOU RECOMMEND?** -->
+</div>
 </section>
 <section id="pika-case-study" class="slide level2">
-<h2>Pika Case Study</h2>
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
 <p>We are interested in the total population size of pika across 10 mountains</p>
 
-<img data-src="../img/pika2.png" class="r-stretch"><ul>
+<img data-src="../img/pika2.png" class="r-stretch"></section>
+<section id="pika-case-study-1" class="slide level2">
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
+<p><strong>Goal:</strong> Compare Cluster and SR sampling</p>
+<div class="fragment">
+<ul>
 <li>10 Mtns</li>
 <li>Each mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)</li>
-<li>a total of 10 x 100 sample units (in a SRS sense).</li>
-<li>we expect the most deviation to occur across mountains, rather than in them.</li>
-<li>we will cluster our samples across mountains (aggrgate plots across mtns)</li>
+<li>a total (N) of 10 x 100 sample units (in a SRS sense).</li>
 </ul>
+</div>
+<div class="fragment">
+<ul>
+<li>we expect the most deviation to occur across mountains, rather than in them.</li>
+<li>we will cluster our samples across mountains (aggregate plots across mtns)</li>
+</ul>
+</div>
 </section>
-<section id="pika-case-study-1" class="slide level2">
-<h2>Pika Case Study</h2>
+<section id="pika-case-study-2" class="slide level2">
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Simulate a true population</span></span>
 <span id="cb1-2"><a></a>  N.plots<span class="ot">=</span> <span class="dv">100</span> <span class="co"># talus slope plots</span></span>
 <span id="cb1-3"><a></a>  N.mtns<span class="ot">=</span> <span class="dv">10</span> <span class="co"># mtns</span></span>
 <span id="cb1-4"><a></a></span>
 <span id="cb1-5"><a></a><span class="co"># Create matrix of counts</span></span>
-<span id="cb1-6"><a></a>  pop <span class="ot">=</span> <span class="fu">matrix</span>(<span class="dv">0</span>,N.plots,N.mtns)</span>
+<span id="cb1-6"><a></a>  pop <span class="ot">=</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, N.plots, N.mtns)</span>
 <span id="cb1-7"><a></a></span>
 <span id="cb1-8"><a></a><span class="co"># Consider each mtn has a different mean abundance</span></span>
 <span id="cb1-9"><a></a><span class="co"># This forces the mtns to vary in pika abundance</span></span>
-<span id="cb1-10"><a></a>  mu <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">100</span>,<span class="at">length.out=</span>N.mtns)</span>
+<span id="cb1-10"><a></a>  mu <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">100</span>,<span class="at">length.out =</span> N.mtns)</span>
 <span id="cb1-11"><a></a></span>
 <span id="cb1-12"><a></a><span class="co"># Loop over each mountain and draw N.plots random values from that specific mean</span></span>
 <span id="cb1-13"><a></a><span class="co"># log transform the mean and the exponentiate then round to make them counts </span></span>
 <span id="cb1-14"><a></a><span class="co"># and to ensure values are never negative</span></span>
 <span id="cb1-15"><a></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>N.mtns){</span>
 <span id="cb1-16"><a></a>  <span class="fu">set.seed</span>(<span class="dv">143453543</span><span class="sc">+</span>j)</span>
-<span id="cb1-17"><a></a>  pop[,j] <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">exp</span>(<span class="fu">rnorm</span>(N.plots,<span class="fu">log</span>(mu[j]),<span class="fl">0.1</span>)),<span class="at">digits=</span><span class="dv">0</span>)</span>
-<span id="cb1-18"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-17"><a></a>  pop[,j] <span class="ot">=</span> <span class="fu">round</span>(</span>
+<span id="cb1-18"><a></a>                  <span class="fu">exp</span>(</span>
+<span id="cb1-19"><a></a>                      <span class="fu">rnorm</span>(N.plots,</span>
+<span id="cb1-20"><a></a>                            <span class="fu">log</span>(mu[j]),</span>
+<span id="cb1-21"><a></a>                            <span class="fl">0.1</span></span>
+<span id="cb1-22"><a></a>                            )</span>
+<span id="cb1-23"><a></a>                      ),</span>
+<span id="cb1-24"><a></a>                  <span class="at">digits=</span><span class="dv">0</span></span>
+<span id="cb1-25"><a></a>                  )</span>
+<span id="cb1-26"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="pika-case-study-2" class="slide level2">
-<h2>Pika Case Study</h2>
-
-<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="pika-case-study-3" class="slide level2">
-<h2>Pika Case Study</h2>
-<p>$= $ 50.67</p>
-<p>$= $ 5.067^{4}</p>
-<div class="fragment">
-<h4 id="setup-simulation-to-compare-srs-vs-cluster">Setup Simulation to compare SRS vs Cluster</h4>
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><ul>
+<li>SRS <span class="math inline">\(n = 100\)</span> random units</li>
+</ul>
+</section>
+<section id="pika-case-study-4" class="slide level2">
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
+<li>clusters are columns</li>
+</ul>
+</section>
+<section id="pika-case-study-5" class="slide level2">
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
+
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"><ul>
+<li><span class="math inline">\(N_\text{Primary Cluster} = 100\)</span> with <span class="math inline">\(N_\text{Secondary} = 10\)</span></li>
+<li><span class="math inline">\(n_\text{Primary Cluster} = 10\)</span> with <span class="math inline">\(N_\text{Secondary} = 10\)</span></li>
+</ul>
+</section>
+<section id="pika-case-study-6" class="slide level2">
+<h2><span style="color:#078BCD;">Pika Case Study</span></h2>
+<ul>
+<li><p><strong>The same number of total units are sampled: 100</strong></p></li>
+<li><p><span class="math inline">\(\mu =\)</span> 50.67</p></li>
+<li><p><span class="math inline">\(\tau =\)</span> 50670</p></li>
+</ul>
+</section>
+<section id="setup-simulation" class="slide level2">
+<h2><span style="color:#078BCD;">Setup Simulation</span></h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 100</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10</code></pre>
-</div>
-</div>
-<p>Importantly, the same number of total units are sampled: 100</p>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># SRS</span></span>
+<span id="cb2-2"><a></a>  <span class="co"># Total number of secondary sample units for SRS</span></span>
+<span id="cb2-3"><a></a>    N <span class="ot">=</span> N.plots<span class="sc">*</span>N.mtns</span>
+<span id="cb2-4"><a></a>  <span class="co"># Sample size of secondary units for SRS  </span></span>
+<span id="cb2-5"><a></a>    n<span class="ot">=</span><span class="dv">100</span></span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a><span class="co"># Clusters</span></span>
+<span id="cb2-8"><a></a>   <span class="co"># Number of primary units (plot across mtns)</span></span>
+<span id="cb2-9"><a></a>    N.primary <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb2-10"><a></a></span>
+<span id="cb2-11"><a></a>  <span class="co"># Plots per cluster (mtn); seconary unit</span></span>
+<span id="cb2-12"><a></a>    N.secondary <span class="ot">=</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="srs" class="slide level2">
-<h2>SRS</h2>
+<h2><span style="color:#078BCD;">SRS</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co">#Number of simulated studies / replicate samples  </span></span>
+<span id="cb3-2"><a></a>n.sim<span class="ot">=</span> <span class="dv">10000</span></span>
+<span id="cb3-3"><a></a>  </span>
+<span id="cb3-4"><a></a><span class="co"># Create SRS function  </span></span>
+<span id="cb3-5"><a></a>srs.fun <span class="ot">=</span> <span class="cf">function</span>(pop){</span>
+<span id="cb3-6"><a></a>  </span>
+<span id="cb3-7"><a></a>  <span class="co"># Get a sample of indices</span></span>
+<span id="cb3-8"><a></a>  index<span class="ot">=</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>(N.plots<span class="sc">*</span>N.mtns),<span class="at">size=</span>n)</span>
+<span id="cb3-9"><a></a>  </span>
+<span id="cb3-10"><a></a>  <span class="co"># Use those indices to get our population counts in each sample unit</span></span>
+<span id="cb3-11"><a></a>  y <span class="ot">=</span> <span class="fu">c</span>(pop)[index]</span>
+<span id="cb3-12"><a></a>  </span>
+<span id="cb3-13"><a></a>  <span class="co">#Total estimate</span></span>
+<span id="cb3-14"><a></a>  tau.est<span class="ot">=</span><span class="fu">mean</span>(y)<span class="sc">*</span>N</span>
+<span id="cb3-15"><a></a>  </span>
+<span id="cb3-16"><a></a>  <span class="co">#Standard deviation of total </span></span>
+<span id="cb3-17"><a></a>  tau.sd<span class="ot">=</span><span class="fu">sqrt</span>(N<span class="sc">*</span>(N<span class="sc">-</span>n)<span class="sc">*</span>(<span class="fu">var</span>(y)<span class="sc">/</span>n))</span>
+<span id="cb3-18"><a></a></span>
+<span id="cb3-19"><a></a>  <span class="fu">list</span>(<span class="at">tau.est=</span>tau.est,</span>
+<span id="cb3-20"><a></a>       <span class="at">tau.sd=</span>tau.sd)</span>
+<span id="cb3-21"><a></a>}</span>
+<span id="cb3-22"><a></a></span>
+<span id="cb3-23"><a></a><span class="co"># replicate!</span></span>
+<span id="cb3-24"><a></a>srs.total.dist<span class="ot">=</span><span class="fu">replicate</span>(n.sim, <span class="fu">srs.fun</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="srs-1" class="slide level2">
-<h2>SRS</h2>
+<h2><span style="color:#078BCD;">SRS</span></h2>
 
-<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><p>$_{,SRS} = $ 3109.6570815</p>
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"><p><span class="math inline">\(\sigma_{\hat{\tau},SRS} =\)</span> 3109.66</p>
 </section>
 <section id="cluster" class="slide level2">
-<h2>Cluster</h2>
+<h2><span style="color:#078BCD;">Cluster</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>cluster.fun <span class="ot">=</span> <span class="cf">function</span>(pop){</span>
+<span id="cb4-2"><a></a>  <span class="co">#Get index of plots (clusters) to sample across mtn rnages and sample all within that cluster</span></span>
+<span id="cb4-3"><a></a>  index<span class="ot">=</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N.primary, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb4-4"><a></a>  </span>
+<span id="cb4-5"><a></a>  y <span class="ot">=</span> pop[index,] <span class="co"># this is 10x10 (total of 100 sample units)</span></span>
+<span id="cb4-6"><a></a>  y.sum <span class="ot">=</span> <span class="fu">apply</span>(y,<span class="dv">1</span>,sum)</span>
+<span id="cb4-7"><a></a>  </span>
+<span id="cb4-8"><a></a>  tau.est <span class="ot">=</span> N.primary<span class="sc">*</span><span class="fu">mean</span>(y.sum)</span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a>  <span class="co">#Standard deviation of total </span></span>
+<span id="cb4-11"><a></a>  var.primary<span class="ot">=</span> <span class="fu">var</span>(y.sum)</span>
+<span id="cb4-12"><a></a>  tau.sd <span class="ot">=</span> <span class="fu">sqrt</span>(N.primary<span class="sc">*</span>(N.primary<span class="sc">-</span>N.secondary)<span class="sc">*</span>(var.primary<span class="sc">/</span>N.secondary))</span>
+<span id="cb4-13"><a></a>  </span>
+<span id="cb4-14"><a></a>  <span class="fu">list</span>(<span class="at">tau.est=</span>tau.est,</span>
+<span id="cb4-15"><a></a>       <span class="at">tau.sd=</span>tau.sd)</span>
+<span id="cb4-16"><a></a>    </span>
+<span id="cb4-17"><a></a>}</span>
+<span id="cb4-18"><a></a></span>
+<span id="cb4-19"><a></a><span class="co"># Replicate!!!!</span></span>
+<span id="cb4-20"><a></a>  cluster.total.dist<span class="ot">=</span><span class="fu">replicate</span>(n.sim, <span class="fu">cluster.fun</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="cluster-1" class="slide level2">
-<h2>Cluster</h2>
+<h2><span style="color:#078BCD;">Cluster</span></h2>
 
-<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>$_{,Cluster} = $ 554.2570844</p>
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"><p><span class="math inline">\(\sigma_{\hat{\tau},Cluster} =\)</span> 554.26</p>
 </section>
 <section id="srs-vs-cluster" class="slide level2">
-<h2>SRS vs Cluster</h2>
+<h2><span style="color:#078BCD;">SRS vs Cluster</span></h2>
 
-<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="srs-vs-cluster-1" class="slide level2">
-<h2>SRS vs Cluster</h2>
+<h2><span style="color:#078BCD;">SRS vs Cluster</span></h2>
 
-<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"><h3 id="why-did-clusters-work-so-well">Why did Clusters work so well?</h3>
+<img data-src="Cluster_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<section id="why-did-clusters-work-so-well" class="slide level2">
+<h2><span style="color:#078BCD;">Why did Clusters work so well?</span></h2>
 <p>Thompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,</p>
-<p>$$ = </p>
-<p>$$ . . .</p>
-<h3 id="numerator">Numerator</h3>
+<p><span class="math display">\[
+\frac{\text{var}(\tau_{srs})}{\text{var}(\tau_{\mu})} = \frac{\text{var}(\text{across all values in population})}{\text{var}(\text{across secondary units})}
+\]</span></p>
+<div class="fragment">
+<h4 id="numerator">Numerator</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1045.07</code></pre>
 </div>
 </div>
-<h3 id="denominator">Denominator</h3>
+<h4 id="denominator">Denominator</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 342.1313</code></pre>
 </div>
 </div>
+</div>
+</section>
+<section id="take-home" class="slide level2">
+<h2><span style="color:#078BCD;">Take home</span></h2>
+<p>Cluster sampling will lead to more precise estimates than SRS (at the same sample size) when units within clusters vary more than on average than do the units in the whole sampling frame.</p>
+<p><br></p>
+<div class="fragment">
+<p>The greater variation within clusters, the grater precision of cluster sampling; <strong>opposite of stratified sampling</strong></p>
+<p><br></p>
+</div>
+</section>
+<section id="take-home-1" class="slide level2">
+<h2><span style="color:#078BCD;">Take home</span></h2>
+<p><strong>Beware</strong></p>
+<p><br></p>
+<p>Clusters require good knowledge of the system.</p>
+<p>A poor choice could lead to increasing sampling distribution variance.</p>
+</section>
+<section id="systematic-sample" class="slide level2">
+<h2><span style="color:#078BCD;">Systematic Sample</span></h2>
+
+<img data-src="../img/ferret.png" class="r-stretch"><p>Black-footed ferret breeding program for release into the wild.</p>
+<div class="fragment">
+<ul>
+<li>10 groups of 10 animals (separate colonies)</li>
+<li>each as a number 1 to 10</li>
+</ul>
+</div>
+</section>
+<section id="systematic-sample-1" class="slide level2">
+<h2><span style="color:#078BCD;">Systematic Sample</span></h2>
+<p><em>How do we choose which two individuals to release into the wild?</em></p>
+<ul>
+<li>randomly select a number… 3</li>
+<li>randomly select a new number w/o replacement… 7</li>
+</ul>
+<div class="fragment">
+<p>You systematically have selected individual 3 and 7 for release from each colony/group.</p>
+</div>
+</section>
+<section id="systematic-sample-2" class="slide level2">
+<h2><span style="color:#078BCD;">Systematic Sample</span></h2>
+
+<img data-src="../img/systematic.grid.png" class="r-stretch"><ul>
+<li>people like the “spatial balance”</li>
+</ul>
+</section>
+<section id="systematic-sample-3" class="slide level2">
+<h2><span style="color:#078BCD;">Systematic Sample</span></h2>
+<ul>
+<li>Can be biased
+<ul>
+<li>plots may be more dissimilar than random
+<ul>
+<li>mean is unbiased</li>
+<li>variance is too large</li>
+</ul></li>
+<li>periodicity (ridge/valley/ridge…)
+<ul>
+<li>mean is biased</li>
+<li>variance is underestimated</li>
+</ul></li>
+</ul></li>
+</ul>
 
 
 </section>

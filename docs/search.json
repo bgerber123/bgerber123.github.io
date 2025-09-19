@@ -8593,14 +8593,14 @@
     "href": "FW552/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Cluster and Systematic Sampling\nLecture Code: Cluster.R\n\n\n\n\n\nPlease bring a laptop next class\nDue Next Class: Read Noon et al 2006\n\n\n\n\n\n\n\n\nPlease bring a laptop to class\n\nExercise: Cluster vs Simple Random Sampling"
+    "text": "Lecture: Cluster and Systematic Sampling\nLecture Code: Cluster.R\n\n\n\n\n\nPlease bring a laptop next class\nDue Next Class: Read Noon et al 2006\nDue Next Class: Read Nelson 2014\nDue 1 week: Canvas Quiz 4\n\n\n\n\n\n\n\nIn Class Discussion Questions of Noon et al. 2006\n\nWhat is adaptive cluster?\nHow did the authors setup the study to evaluate the two designs? Strenths/flaws?\n\nIn Class Discussion Questions of Nelson 2014\n\nWhat are the main argument for cluster sampling for fisheries research?\nWhat are reasons cluster sampling should not be used?"
   },
   {
     "objectID": "FW552/week7.html#week-7",
     "href": "FW552/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Cluster and Systematic Sampling\nLecture Code: Cluster.R\n\n\n\n\n\nPlease bring a laptop next class\nDue Next Class: Read Noon et al 2006\n\n\n\n\n\n\n\n\nPlease bring a laptop to class\n\nExercise: Cluster vs Simple Random Sampling"
+    "text": "Lecture: Cluster and Systematic Sampling\nLecture Code: Cluster.R\n\n\n\n\n\nPlease bring a laptop next class\nDue Next Class: Read Noon et al 2006\nDue Next Class: Read Nelson 2014\nDue 1 week: Canvas Quiz 4\n\n\n\n\n\n\n\nIn Class Discussion Questions of Noon et al. 2006\n\nWhat is adaptive cluster?\nHow did the authors setup the study to evaluate the two designs? Strenths/flaws?\n\nIn Class Discussion Questions of Nelson 2014\n\nWhat are the main argument for cluster sampling for fisheries research?\nWhat are reasons cluster sampling should not be used?"
   },
   {
     "objectID": "FW552/week5.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\n\n\n\n7\nMo\n6-Oct\nCluster Sampling\n\nThompson Ch. 12. ; Noon et al., 2006\n\n\n \nWe\n8-Oct\nSystematic Sampling\n\n\n\n\n8\nMo\n13-Oct\nMid-term Exam\n\n\n\n\n \nWe\n15-Oct\nMid-term Exam\n\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling I\n\n\n\n\n \nWe\n22-Oct\nMulti-stage Sampling II\n\n\n\n\n10\nMo\n27-Oct\nRatio Estimation\n\n\n\n\n \nWe\n29-Oct\nDouble Sampling\n\n\n\n\n11\nMo\n3-Nov\nAdaptive Cluster Sampling\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference I\n\n\n\n\n \nWe\n19-Nov\nCausal Inference II\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference III\n\n\n\n\n \nWe\n3-Dec\nCausal Inference VI\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\n\n\n\n7\nMo\n6-Oct\nCluster Sampling\n\nThompson Ch. 12. ; Noon et al., 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nSystematic Sampling\nQuiz 4\n\n\n\n8\nMo\n13-Oct\nMid-term Exam\n\n\n\n\n \nWe\n15-Oct\nMid-term Exam\n\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling I\n\n\n\n\n \nWe\n22-Oct\nMulti-stage Sampling II\n\n\n\n\n10\nMo\n27-Oct\nRatio Estimation\n\n\n\n\n \nWe\n29-Oct\nDouble Sampling\n\n\n\n\n11\nMo\n3-Nov\nAdaptive Cluster Sampling\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference I\n\n\n\n\n \nWe\n19-Nov\nCausal Inference II\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference III\n\n\n\n\n \nWe\n3-Dec\nCausal Inference VI\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -10476,7 +10476,7 @@
     "href": "FW552/Proportions.html#my-wolverine-problem",
     "title": "Proportions",
     "section": "My Wolverine ‘Problem’",
-    "text": "My Wolverine ‘Problem’\n\nSites surveyed by the States were selected via SRS\n\n\n\na handful of additional sites were surveyed by other entities (e.g., NGO) using the same field protocol\n\n\nShould I include the additional/ancillary surveys as data?\nShould I report the cells with occurrences at all?\n\n\nIn small groups: Discuss and then tell me what to do and explain."
+    "text": "My Wolverine ‘Problem’\n\nSites surveyed by the States were selected via probabilistic sampling (GRTS)\n\n\n\na handful of additional sites were surveyed by other entities (e.g., NGO) using the same field protocol\n\n\nShould I include the additional/ancillary surveys as data?\nShould I report the cells with occurrences at all?\n\n\nIn small groups: Discuss and then tell me what to do and explain."
   },
   {
     "objectID": "FW552/Proportions.html#a-sampling-problem",
@@ -11323,14 +11323,14 @@
     "href": "FW552/Cluster.html#cluster-and-systematic-sampling",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster and systematic sampling",
-    "text": "Cluster and systematic sampling\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n\nBoth partition sampling into primary and secondary units\n\n\n\nCluster: primary units consist of cluster of secondary\nSystematic: primary unit consists of secondary units that are systematically arranged (rule set)"
+    "text": "Cluster and systematic sampling\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n\nBoth partition sampling into primary and secondary units\n\n\n\nCluster: primary units consist of cluster of secondary\nSystematic: primary unit consists of secondary units that are arranged via a rule set"
   },
   {
     "objectID": "FW552/Cluster.html#boreal-toad-egg-masses-per-pond-in-rmnp",
     "href": "FW552/Cluster.html#boreal-toad-egg-masses-per-pond-in-rmnp",
     "title": "Cluster/Systematic Sampling",
     "section": "Boreal toad egg masses per pond in RMNP",
-    "text": "Boreal toad egg masses per pond in RMNP\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3\n\n\n\n\n\n\nN = 6\n\\(\\mu =8\\)"
+    "text": "Boreal toad egg masses per pond in RMNP\n\nN = 6\n\\(\\mu =8\\)\n\nCluster sampling scheme A\n\n\n\n\n\ncluster\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n8\n5\n9\n\n\n2\n6\n10\n8\n0\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n. . .\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\] . . .\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 6\n\\]\n. . .\nRecall that the variance for SRS was 4.26\n. . ."
   },
   {
     "objectID": "FW552/Cluster.html#boreal-toad-egg-masses-per-pond-in-rmnp-1",
@@ -11344,49 +11344,49 @@
     "href": "FW552/Cluster.html#cluster-sampling",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster Sampling",
-    "text": "Cluster Sampling\nSuperficial resemblance to stratification: ‘clustered’ sample units are grouped like a stratum\nSelection process is different\n\nstratification: every strata is part of the sampling process\ncluster: select among clusters in same way as SRS\n\nthen observe all units within cluster\n\n\n\nCluster sampling is really SRS applied to groups of population members"
+    "text": "Cluster Sampling\nSuperficial resemblance to stratification: ‘clustered’ sample units are grouped like a stratum\nSelection process is different\n\nstratification: every strata is part of the sampling process\n\nnot all units in each strata are sampled\n\ncluster: select among clusters in same way as SRS\n\nthen observe all units within cluster\n\n\n\nCluster sampling is really SRS applied to groups of population members"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-scheme-b",
     "href": "FW552/Cluster.html#cluster-sampling-scheme-b",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling scheme B",
-    "text": "Cluster sampling scheme B\nMake cluster of similar values\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n2\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3"
+    "text": "Cluster sampling scheme B\nMake cluster of similar values\n\n\n\n\n\nPond\negg.mass\nclusterB\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n2\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-scheme-b-1",
     "href": "FW552/Cluster.html#cluster-sampling-scheme-b-1",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling scheme B",
-    "text": "Cluster sampling scheme B\n\n\n\n\n\ncluster\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n6\n4\n16\n\n\n2\n8\n10\n9\n1\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\] . . .\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 8.67\n\\]"
+    "text": "Cluster sampling scheme B\n\n\n\n\n\nclusterB\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n6\n4\n16\n\n\n2\n8\n10\n9\n1\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-scheme-c",
     "href": "FW552/Cluster.html#cluster-sampling-scheme-c",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling scheme C",
-    "text": "Cluster sampling scheme C\nMake clusters of similar values\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n3\n\n\nD\n10\n3\n\n\nE\n10\n2\n\n\nF\n12\n1"
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\n\nPond\negg.mass\nclusterC\n\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n3\n\n\nD\n10\n3\n\n\nE\n10\n2\n\n\nF\n12\n1"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-scheme-c-1",
     "href": "FW552/Cluster.html#cluster-sampling-scheme-c-1",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling scheme C",
-    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\n\ncluster\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n12\n7\n1\n\n\n2\n6\n10\n8\n0\n\n\n3\n8\n10\n9\n1\n\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\] . . .\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 0.67\n\\]"
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\n\nclusterC\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n12\n7\n1\n\n\n2\n6\n10\n8\n0\n\n\n3\n8\n10\n9\n1\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-1",
     "href": "FW552/Cluster.html#cluster-sampling-1",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling",
-    "text": "Cluster sampling\n\nMaximize precision by forming clusters that have varying values within secondary units\nOverall cluster values (i.e., mean) are similar\n\n\nBUT, in our field we often think of forming clusters by location\n\n\nFirst Law of Geography: “everything is related to everything else, but near things are more related than distant things.” - Waldo Tobler\n\n\nThis contradicts the principal and utility of cluster sampling."
+    "text": "Cluster sampling\n\nMaximize precision by forming clusters that have varying values within secondary units\nOverall cluster values (e.g., mean) are similar (aggregated secondary units)"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-sampling-vs-srs",
     "href": "FW552/Cluster.html#cluster-sampling-vs-srs",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster sampling vs SRS",
-    "text": "Cluster sampling vs SRS\n\nColleague wants to take a sample of n = 100 plots to measure mushroom abundance\n\nCould take random sample of 100 plots\nCould take random sample of 50 clusters (primary) with 2 plots each (secondary).\n\nWHAT DO YOU RECOMMEND?"
+    "text": "Cluster sampling vs SRS\n\nColleague wants to take a sample of n = 100 plots to measure mushroom abundance"
   },
   {
     "objectID": "classfiles552/ThompsonChapter3/CI_questions.html",
@@ -11407,56 +11407,56 @@
     "href": "FW552/Cluster.html#pika-case-study",
     "title": "Cluster/Systematic Sampling",
     "section": "Pika Case Study",
-    "text": "Pika Case Study\nWe are interested in the total population size of pika across 10 mountains\n\n\n10 Mtns\nEach mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)\na total of 10 x 100 sample units (in a SRS sense).\nwe expect the most deviation to occur across mountains, rather than in them.\nwe will cluster our samples across mountains (aggrgate plots across mtns)"
+    "text": "Pika Case Study\nWe are interested in the total population size of pika across 10 mountains"
   },
   {
     "objectID": "FW552/Cluster.html#pika-case-study-1",
     "href": "FW552/Cluster.html#pika-case-study-1",
     "title": "Cluster/Systematic Sampling",
     "section": "Pika Case Study",
-    "text": "Pika Case Study\n\n# Simulate a true population\n  N.plots= 100 # talus slope plots\n  N.mtns= 10 # mtns\n\n# Create matrix of counts\n  pop = matrix(0,N.plots,N.mtns)\n\n# Consider each mtn has a different mean abundance\n# This forces the mtns to vary in pika abundance\n  mu = seq(1,100,length.out=N.mtns)\n\n# Loop over each mountain and draw N.plots random values from that specific mean\n# log transform the mean and the exponentiate then round to make them counts \n# and to ensure values are never negative\nfor(j in 1:N.mtns){\n  set.seed(143453543+j)\n  pop[,j] = round(exp(rnorm(N.plots,log(mu[j]),0.1)),digits=0)\n}"
+    "text": "Pika Case Study\nGoal: Compare Cluster and SR sampling\n\n\n10 Mtns\nEach mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)\na total (N) of 10 x 100 sample units (in a SRS sense).\n\n\n\n\nwe expect the most deviation to occur across mountains, rather than in them.\nwe will cluster our samples across mountains (aggregate plots across mtns)"
   },
   {
     "objectID": "FW552/Cluster.html#pika-case-study-2",
     "href": "FW552/Cluster.html#pika-case-study-2",
     "title": "Cluster/Systematic Sampling",
     "section": "Pika Case Study",
-    "text": "Pika Case Study"
+    "text": "Pika Case Study\n\n# Simulate a true population\n  N.plots= 100 # talus slope plots\n  N.mtns= 10 # mtns\n\n# Create matrix of counts\n  pop = matrix(NA, N.plots, N.mtns)\n\n# Consider each mtn has a different mean abundance\n# This forces the mtns to vary in pika abundance\n  mu = seq(1,100,length.out = N.mtns)\n\n# Loop over each mountain and draw N.plots random values from that specific mean\n# log transform the mean and the exponentiate then round to make them counts \n# and to ensure values are never negative\nfor(j in 1:N.mtns){\n  set.seed(143453543+j)\n  pop[,j] = round(\n                  exp(\n                      rnorm(N.plots,\n                            log(mu[j]),\n                            0.1\n                            )\n                      ),\n                  digits=0\n                  )\n}"
   },
   {
     "objectID": "FW552/Cluster.html#pika-case-study-3",
     "href": "FW552/Cluster.html#pika-case-study-3",
     "title": "Cluster/Systematic Sampling",
     "section": "Pika Case Study",
-    "text": "Pika Case Study\n$= $ 50.67\n$= $ 5.067^{4}\n\nSetup Simulation to compare SRS vs Cluster\n\n\n[1] 100\n\n\n[1] 10\n\n\nImportantly, the same number of total units are sampled: 100"
+    "text": "Pika Case Study\n\n\nSRS \\(n = 100\\) random units"
   },
   {
     "objectID": "FW552/Cluster.html#srs",
     "href": "FW552/Cluster.html#srs",
     "title": "Cluster/Systematic Sampling",
     "section": "SRS",
-    "text": "SRS"
+    "text": "SRS\n\n#Number of simulated studies / replicate samples  \nn.sim= 10000\n  \n# Create SRS function  \nsrs.fun = function(pop){\n  \n  # Get a sample of indices\n  index=sample(1:(N.plots*N.mtns),size=n)\n  \n  # Use those indices to get our population counts in each sample unit\n  y = c(pop)[index]\n  \n  #Total estimate\n  tau.est=mean(y)*N\n  \n  #Standard deviation of total \n  tau.sd=sqrt(N*(N-n)*(var(y)/n))\n\n  list(tau.est=tau.est,\n       tau.sd=tau.sd)\n}\n\n# replicate!\nsrs.total.dist=replicate(n.sim, srs.fun(pop))"
   },
   {
     "objectID": "FW552/Cluster.html#srs-1",
     "href": "FW552/Cluster.html#srs-1",
     "title": "Cluster/Systematic Sampling",
     "section": "SRS",
-    "text": "SRS\n\n$_{,SRS} = $ 3109.6570815"
+    "text": "SRS\n\n\\(\\sigma_{\\hat{\\tau},SRS} =\\) 3109.66"
   },
   {
     "objectID": "FW552/Cluster.html#cluster",
     "href": "FW552/Cluster.html#cluster",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster",
-    "text": "Cluster"
+    "text": "Cluster\n\ncluster.fun = function(pop){\n  #Get index of plots (clusters) to sample across mtn rnages and sample all within that cluster\n  index=sample(1:N.primary, size = 10)\n  \n  y = pop[index,] # this is 10x10 (total of 100 sample units)\n  y.sum = apply(y,1,sum)\n  \n  tau.est = N.primary*mean(y.sum)\n\n  #Standard deviation of total \n  var.primary= var(y.sum)\n  tau.sd = sqrt(N.primary*(N.primary-N.secondary)*(var.primary/N.secondary))\n  \n  list(tau.est=tau.est,\n       tau.sd=tau.sd)\n    \n}\n\n# Replicate!!!!\n  cluster.total.dist=replicate(n.sim, cluster.fun(pop))"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-1",
     "href": "FW552/Cluster.html#cluster-1",
     "title": "Cluster/Systematic Sampling",
     "section": "Cluster",
-    "text": "Cluster\n\n$_{,Cluster} = $ 554.2570844"
+    "text": "Cluster\n\n\\(\\sigma_{\\hat{\\tau},Cluster} =\\) 554.26"
   },
   {
     "objectID": "FW552/Cluster.html#srs-vs-cluster",
@@ -11470,6 +11470,202 @@
     "href": "FW552/Cluster.html#srs-vs-cluster-1",
     "title": "Cluster/Systematic Sampling",
     "section": "SRS vs Cluster",
-    "text": "SRS vs Cluster\n\nWhy did Clusters work so well?\nThompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,\n$$ = \n$$ . . .\nNumerator\n\n\n[1] 1045.07\n\n\nDenominator\n\n\n[1] 342.1313"
+    "text": "SRS vs Cluster"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-and-systematic-sampling-1",
+    "href": "FW552/Cluster.html#cluster-and-systematic-sampling-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster and systematic sampling",
+    "text": "Cluster and systematic sampling"
+  },
+  {
+    "objectID": "FW552/Cluster.html#boreal-toad-egg-masses",
+    "href": "FW552/Cluster.html#boreal-toad-egg-masses",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal toad egg masses",
+    "text": "Boreal toad egg masses\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3"
+  },
+  {
+    "objectID": "FW552/Cluster.html#boreal-toad-case-study",
+    "href": "FW552/Cluster.html#boreal-toad-case-study",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal Toad Case Study",
+    "text": "Boreal Toad Case Study\n\n\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3\n\n\n\n\n\n\n\nN = 6\n\\(\\mu =8\\)"
+  },
+  {
+    "objectID": "FW552/Cluster.html#boreal-toad",
+    "href": "FW552/Cluster.html#boreal-toad",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal toad",
+    "text": "Boreal toad\nCluster sampling scheme A\n\n\n\n\n\nclusterA\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n8\n5\n9\n\n\n2\n6\n10\n8\n0\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
+  },
+  {
+    "objectID": "FW552/Cluster.html#boreal-toad-1",
+    "href": "FW552/Cluster.html#boreal-toad-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal toad",
+    "text": "Boreal toad\nCluster sampling scheme A\n\n\n\n\n\nclusterA\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n8\n5\n9\n\n\n2\n6\n10\n8\n0\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 6\\\\\n\\]\nRecall that the variance for SRS was 4.26"
+  },
+  {
+    "objectID": "FW552/Cluster.html#why-did-clusters-work-so-well",
+    "href": "FW552/Cluster.html#why-did-clusters-work-so-well",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Why did Clusters work so well?",
+    "text": "Why did Clusters work so well?\nThompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,\n\\[\n\\frac{\\text{var}(\\tau_{srs})}{\\text{var}(\\tau_{\\mu})} = \\frac{\\text{var}(\\text{across all values in population})}{\\text{var}(\\text{across secondary units})}\n\\]\n\nNumerator\n\n\n[1] 1045.07\n\n\nDenominator\n\n\n[1] 342.1313"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-scheme-b-2",
+    "href": "FW552/Cluster.html#cluster-sampling-scheme-b-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme B",
+    "text": "Cluster sampling scheme B\n\n\n\n\n\nclusterB\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n6\n4\n16\n\n\n2\n8\n10\n9\n1\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 8.67\n\\]"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-scheme-c-2",
+    "href": "FW552/Cluster.html#cluster-sampling-scheme-c-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme C",
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\n\nclusterC\nmember1\nmember2\nmean\ndev2\n\n\n\n\n1\n2\n12\n7\n1\n\n\n2\n6\n10\n8\n0\n\n\n3\n8\n10\n9\n1\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 0.67\n\\]"
+  },
+  {
+    "objectID": "FW552/Cluster.html#but.",
+    "href": "FW552/Cluster.html#but.",
+    "title": "Cluster/Systematic Sampling",
+    "section": "But….",
+    "text": "But….\nIn our field we often think of forming clusters by location\n\n\nFirst Law of Geography: “everything is related to everything else, but near things are more related than distant things.” - Waldo Tobler\n\n\n\nThis contradicts the principal and utility of cluster sampling."
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-vs-srs-1",
+    "href": "FW552/Cluster.html#cluster-sampling-vs-srs-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling vs SRS",
+    "text": "Cluster sampling vs SRS\n\nCould take random sample of 100 plots\nCould take random sample of 50 clusters (primary) with 2 plots each (secondary).\n\nWHAT DO YOU RECOMMEND?"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-4",
+    "href": "FW552/Cluster.html#pika-case-study-4",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n\nclusters are columns"
+  },
+  {
+    "objectID": "FW552/Cluster.html#setup-simulation-to-compare-srs-vs-cluster",
+    "href": "FW552/Cluster.html#setup-simulation-to-compare-srs-vs-cluster",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Setup Simulation to compare SRS vs Cluster",
+    "text": "Setup Simulation to compare SRS vs Cluster\n\n# SRS\n  # Total number of secondary sample units for SRS\n    N = N.plots*N.mtns\n  # Sample size of secondary units for SRS  \n    n=100\n\n# Clusters\n  # Total number of clusters  \n    N.plots\n\n[1] 100\n\n  # Sample size of primary units  \n    N.mtns\n\n[1] 10\n\n\nImportantly, the same number of total units are sampled: 100"
+  },
+  {
+    "objectID": "FW552/Cluster.html#setup-simulation",
+    "href": "FW552/Cluster.html#setup-simulation",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Setup Simulation",
+    "text": "Setup Simulation\n\n# SRS\n  # Total number of secondary sample units for SRS\n    N = N.plots*N.mtns\n  # Sample size of secondary units for SRS  \n    n=100\n\n# Clusters\n   # Number of primary units (plot across mtns)\n    N.primary = 100\n\n  # Plots per cluster (mtn); seconary unit\n    N.secondary = 10"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-5",
+    "href": "FW552/Cluster.html#pika-case-study-5",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n\n\\(N_\\text{Primary Cluster} = 100\\) with \\(N_\\text{Secondary} = 10\\)\n\\(n_\\text{Primary Cluster} = 10\\) with \\(N_\\text{Secondary} = 10\\)"
+  },
+  {
+    "objectID": "FW552/Cluster.html#pika-case-study-6",
+    "href": "FW552/Cluster.html#pika-case-study-6",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\nThe same number of total units are sampled: 100\n\\(\\mu =\\) 50.67\n\\(\\tau =\\) 50670"
+  },
+  {
+    "objectID": "FW552/Cluster.html#variable-sized-clusters",
+    "href": "FW552/Cluster.html#variable-sized-clusters",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Variable-sized clusters",
+    "text": "Variable-sized clusters\nClusters of dissimilar values and size\n\n\n\n\n\nPond\negg.mass\nclusterD\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n3"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-scheme-d",
+    "href": "FW552/Cluster.html#cluster-sampling-scheme-d",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nClusters of dissimilar values and size\n\n\n\n\n\nPond\negg.mass\nclusterD\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n3"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-2",
+    "href": "FW552/Cluster.html#cluster-sampling-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling",
+    "text": "Cluster sampling\nBut also need to consider costs b/w SRS and cluster.\n\nWhich do you think is more likely to less costly?"
+  },
+  {
+    "objectID": "FW552/Cluster.html#take-home",
+    "href": "FW552/Cluster.html#take-home",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Take home",
+    "text": "Take home\nCluster sampling will lead to more precise estimates than SRS (at the same sample size) when units within clusters vary more than on average than do the units in the whole sampling frame.\n\n\nThe greater variation within clusters, the grater precision of cluster sampling; opposite of stratified sampling"
+  },
+  {
+    "objectID": "FW552/Cluster.html#in-sum",
+    "href": "FW552/Cluster.html#in-sum",
+    "title": "Cluster/Systematic Sampling",
+    "section": "In sum",
+    "text": "In sum\nClusters require good knowledge of the system. A poor choice could lead to increasing sampling distribution variance."
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-scheme-d-1",
+    "href": "FW552/Cluster.html#cluster-sampling-scheme-d-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nClusters of dissimilar values and size\n\n\n\n\n\nclusterD\nmember1\nmember2\nmember3\nmean\n\n\n\n\n1\n2\n6\n8\n5.33\n\n\n2\n10\n10\nNA\n10.00\n\n\n3\n12\nNA\nNA\n12.00\n\n\n\n\n\n\nmean(c(5.33,10,12)) = 9.11\n9.11 - 8 = 1.11 (biased)"
+  },
+  {
+    "objectID": "FW552/Cluster.html#cluster-sampling-scheme-d-2",
+    "href": "FW552/Cluster.html#cluster-sampling-scheme-d-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nNeed to incorporate cluster size\n\n\n\n\n\nclusterD\nmean\nclusterSize\nSizeXMean\ndivide.avg.cluster.size\ndev2\n\n\n\n\n1\n5.33\n3\n16\n8\n0\n\n\n2\n10.00\n2\n20\n10\n4\n\n\n3\n12.00\n1\n12\n6\n4\n\n\n\n\n\n\nmean(c(8,10,6)) = 8\n8 - 8 = 0 (unbiased)\n\\(\\hat{\\sigma}^{2} = 2.67\\)"
+  },
+  {
+    "objectID": "FW552/Cluster.html#variable-sizeed-clusters",
+    "href": "FW552/Cluster.html#variable-sizeed-clusters",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Variable-sizeed clusters",
+    "text": "Variable-sizeed clusters\nWe randomly select the primary units\n\nthe number of secondary units may be quite different and not in our control (i.e., random variable)\n\n\n\nYou want to know something about households\n\nsample home addresses (building is cluster; primary unit)\nthe number of secondary units depends on building type\n\nsingle-family house, condo/duplex, apartment complex"
+  },
+  {
+    "objectID": "FW552/Cluster.html#systematic-sample",
+    "href": "FW552/Cluster.html#systematic-sample",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\nBlack-footed ferret breeding program for release into the wild.\n\n\n10 groups of 10 animals (separate colonies)\neach as a number 1 to 10"
+  },
+  {
+    "objectID": "FW552/Cluster.html#systematic-sample-1",
+    "href": "FW552/Cluster.html#systematic-sample-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\nHow do we choose which two individuals to release into the wild?\n\nrandomly select a number… 3\nrandomly select a new number w/o replacement… 7\n\n\nYou systematically have selected individual 3 and 7 for release from each colony/group."
+  },
+  {
+    "objectID": "FW552/Cluster.html#systematic-sample-2",
+    "href": "FW552/Cluster.html#systematic-sample-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\n\npeople like the “spatial balance”"
+  },
+  {
+    "objectID": "FW552/Cluster.html#take-home-1",
+    "href": "FW552/Cluster.html#take-home-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Take home",
+    "text": "Take home\nBeware\n\nClusters require good knowledge of the system.\nA poor choice could lead to increasing sampling distribution variance."
+  },
+  {
+    "objectID": "FW552/Cluster.html#systematic-sample-3",
+    "href": "FW552/Cluster.html#systematic-sample-3",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\nCan be biased\n\nplots may be more dissimilar than random\n\nmean is unbiased\nvariance is too large\n\nperiodicity (ridge/valley/ridge…)\n\nmean is biased\nvariance is underestimated"
   }
 ]
