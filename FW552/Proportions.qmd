@@ -456,6 +456,10 @@ Distribution Var = `r format(round(var(probs.save3),digits=5),scientific = FALSE
 
 **Should I report the cells with occurrences at all?**
 
+## [My Wolverine 'Problem']{style="color:#078BCD;"}
+
+![](../img/wolverinepred.png)
+
 
 ## [Unequal Probability of Sampling]{style="color:#078BCD;"}  
 
