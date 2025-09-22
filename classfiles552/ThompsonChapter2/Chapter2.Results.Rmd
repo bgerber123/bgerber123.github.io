@@ -94,8 +94,12 @@ the sample you obtained in part (a)?
 
 
 ```{r}
-# Inclusion probability for a given cell
-1/100
+# Inclusion probability for a given cell for n = 1 
+1/N
+
+# The inclusion probability for a given cell for n =10
+n/N
+
 
 # the probability of selecting the sample obtained in a
 1/choose(100,10)
