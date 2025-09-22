@@ -10651,7 +10651,7 @@
     "href": "FW552/Stratified.html#concept-2",
     "title": "",
     "section": "Concept",
-    "text": "Concept\n\n\n\nauxiliary information\ndepends on ability to select beneficial strata\nalmost always going to improve precision; unlikely to do worse\n\nallocate more samples to a stratum wiht low variance\n\n\n\n\n\n\nWhat are strata used in fish/wildlife studies?"
+    "text": "Concept\n\n\n\nauxiliary information\ndepends on ability to select beneficial strata\nalmost always going to improve precision; unlikely to do worse\n\nallocate more samples to a stratum with low variance\n\n\n\n\n\n\nWhat are strata used in fish/wildlife studies?"
   },
   {
     "objectID": "FW552/Stratified.html#boreal-toad-case-study",
@@ -10679,7 +10679,7 @@
     "href": "FW552/Stratified.html#boreal-toad-case-study-2",
     "title": "",
     "section": "Boreal Toad (Case Study)",
-    "text": "Boreal Toad (Case Study)\nHow may unique combinations?\nFirst strata\n\nchoose(3,2)\n\n[1] 3\n\n\nSecond strata\n\nchoose(3,2)\n\n[1] 3\n\n\nAll Combinations\n\nchoose(3,2)*choose(3,2)\n\n[1] 9"
+    "text": "Boreal Toad (Case Study)\nHow may unique combinations?\nFirst strata\n\nL=3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(L,n_h)\n\n[1] 3\n\n\nSecond strata\n\nL=3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(L,n_h)\n\n[1] 3\n\n\nAll Combinations\n\nchoose(L,n_h)*choose(L,n_h)\n\n[1] 9"
   },
   {
     "objectID": "FW552/Stratified.html#boreal-toad-case-study-3",
@@ -10742,35 +10742,35 @@
     "href": "FW552/Stratified.html#section-2",
     "title": "",
     "section": "",
-    "text": "S1.1\nS1.2\nS2.1\nS2.2\nMean.S1\nMean.S2\nVar.S1\nVar.S2\nVar.mean\n\n\n\n\nA\nB\nD\nE\n4\n10\n8\n0\n0.33\n\n\nA\nB\nD\nF\n4\n11\n8\n2\n0.42\n\n\nA\nB\nE\nF\n4\n11\n8\n2\n0.42\n\n\nA\nC\nD\nE\n5\n10\n18\n0\n0.75\n\n\nA\nC\nD\nF\n5\n11\n18\n2\n0.83\n\n\nA\nC\nE\nF\n5\n11\n18\n2\n0.83\n\n\nB\nC\nD\nE\n7\n10\n2\n0\n0.08\n\n\nB\nC\nD\nF\n7\n11\n2\n2\n0.17\n\n\nB\nC\nE\nF\n7\n11\n2\n2\n0.17\n\n\n\n\n\n\n\n\n\nStratifed\nE[Sampling Distribution Variance] = 0.44\n\nSRS\nE[Sampling Distribution Variance] = 4.26"
+    "text": "S1.1\nS1.2\nS2.1\nS2.2\nMean.S1\nMean.S2\nVar.S1\nVar.S2\nVar.mean\n\n\n\n\nA\nB\nD\nE\n4\n10\n8\n0\n0.33\n\n\nA\nB\nD\nF\n4\n11\n8\n2\n0.42\n\n\nA\nB\nE\nF\n4\n11\n8\n2\n0.42\n\n\nA\nC\nD\nE\n5\n10\n18\n0\n0.75\n\n\nA\nC\nD\nF\n5\n11\n18\n2\n0.83\n\n\nA\nC\nE\nF\n5\n11\n18\n2\n0.83\n\n\nB\nC\nD\nE\n7\n10\n2\n0\n0.08\n\n\nB\nC\nD\nF\n7\n11\n2\n2\n0.17\n\n\nB\nC\nE\nF\n7\n11\n2\n2\n0.17\n\n\n\n\n\n\n\nStratifed\nE[Sampling Distribution Variance] = 0.44\n\nSRS\nE[Sampling Distribution Variance] = 4.26"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation",
     "href": "FW552/Stratified.html#stratification-allocation",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\nSample Size per Strata\n\n\nuniform distribution; \\(n_1 = 2 ; n_2 = 2\\)\nvariable distribution; e.g., \\(n_1 = 1 ; n_2 = 3\\)\n\nallocation proportional to size (e.g. area): \\(n_h = \\frac{nN_h}{N}\\)\noptimal allocation for fixed \\(n\\): \\(n_h = \\frac{nN_h\\sigma_h}{\\sum_{k=1}^L N_k\\sigma_k}\\)"
+    "text": "Stratification Allocation\nSample Size per Strata\n\nuniform distribution; \\(n_1 = 2 ; n_2 = 2\\)\nvariable distribution; e.g., \\(n_1 = 1 ; n_2 = 3\\)\n\nallocation proportional to size (e.g. area): \\(n_h = \\frac{nN_h}{N}\\)\noptimal allocation for fixed \\(n\\): \\(n_h = \\frac{nN_h\\sigma_h}{\\sum_{k=1}^L N_k\\sigma_k}\\)"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-1",
     "href": "FW552/Stratified.html#stratification-allocation-1",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\nAllocate most of our samples to the strata with the highest variance\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\nHow many possible sample combinations are there?"
+    "text": "Stratification Allocation\nAllocate most of our samples to the strata with the highest variance\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\nHow many possible sample combinations are there?"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-2",
     "href": "FW552/Stratified.html#stratification-allocation-2",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\n\n\n\n\n\nSample\nS1.1\nS1.2\nS1.3\nS2.1\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nB\nC\nD\n5.333333\n10\n7.666667\n\n\n2\nA\nB\nC\nE\n5.333333\n10\n7.666667\n\n\n3\nA\nB\nC\nF\n5.333333\n12\n8.666667\n\n\n\n\n\n\n\n\nremoved the variance from stratum 1"
+    "text": "Stratification Allocation\n\n\n\n\n\nSample\nS1.1\nS1.2\nS1.3\nS2.1\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nB\nC\nD\n5.333333\n10\n7.666667\n\n\n2\nA\nB\nC\nE\n5.333333\n10\n7.666667\n\n\n3\nA\nB\nC\nF\n5.333333\n12\n8.666667\n\n\n\n\n\n\nremoved the variance from stratum 1"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-3",
     "href": "FW552/Stratified.html#stratification-allocation-3",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\nReverse the situation- allocate more samples to the least variable stratum\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\n\n\n\n\nSample\nS1.1\nS2.1\nS2.2\nS2.3\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nD\nE\nF\n2\n10.66667\n6.333333\n\n\n2\nB\nD\nE\nF\n6\n10.66667\n8.333333\n\n\n3\nC\nD\nE\nF\n8\n10.66667\n9.333333\n\n\n\n\n\n\n\n\n\ncompared to population means of 7.6, 7.6, and 8.6\n\n\n\n\nEstimator population means is still unbisaed\n\n\\(E[\\hat{\\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \\mu\\)"
+    "text": "Stratification Allocation\nReverse the situation- allocate more samples to the least variable stratum\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\n\n\nSample\nS1.1\nS2.1\nS2.2\nS2.3\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nD\nE\nF\n2\n10.66667\n6.333333\n\n\n2\nB\nD\nE\nF\n6\n10.66667\n8.333333\n\n\n3\nC\nD\nE\nF\n8\n10.66667\n9.333333\n\n\n\n\n\n\n\ncompared to population means of 7.6, 7.6, and 8.6\n\n\n\n\nEstimator population means is still unbisaed\n\n\\(E[\\hat{\\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \\mu\\)"
   },
   {
     "objectID": "FW552/Stratified.html#concept-4",
@@ -10791,7 +10791,7 @@
     "href": "FW552/Stratified.html#estimator-1",
     "title": "",
     "section": "Estimator",
-    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{h} = \\frac{1}{N_h -1} \\sum_{i=1}^{N_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{h}}{n_h}\n\\]"
+    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{h} = \\frac{1}{n_h -1} \\sum_{i=1}^{n_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{h}}{n_h}\n\\]"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-4",
@@ -10805,7 +10805,7 @@
     "href": "FW552/Stratified.html#srs-estimator",
     "title": "",
     "section": "SRS Estimator",
-    "text": "SRS Estimator\nWhat if we ignored the stratification and used the SRS sample mean estimator?\n\n\n\n\n\n\nS1\nS2\nS3\n\n\n\n\n2\n6\n8\n\n\n10\n10\n10\n\n\n10\n10\n10\n\n\n12\n12\n12\n\n\n\n\n\n\n\n\n\n\nSample means are 8.5, 9.5, 10\n\n\n\n\nPopulation mean is 9.3333333\n\\(E[\\hat{\\mu}_{SRS}] \\neq \\mu\\)"
+    "text": "SRS Estimator\nWhat if we ignored the stratification and used the SRS sample mean estimator?\n\n\n\n\n\n\nS1\nS2\nS3\n\n\n\n\n2\n6\n8\n\n\n10\n10\n10\n\n\n10\n10\n10\n\n\n12\n12\n12\n\n\n\n\n\n\n\n\nSample means are 8.5, 9.5, 10\n\n\n\n\nPopulation mean is 9.3333333\n\\(E[\\hat{\\mu}_{SRS}] \\neq \\mu\\)"
   },
   {
     "objectID": "FW552/Stratified.html#unequal-sampling-probabilities",
@@ -10819,14 +10819,14 @@
     "href": "FW552/Stratified.html#unequal-sampling-fractions",
     "title": "",
     "section": "Unequal Sampling Fractions",
-    "text": "Unequal Sampling Fractions\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\n\nStrata 1, \\(\\text{weight}_{i}\\) = \\(1/n_h = 1/1 =1\\)\nStrata 2, \\(\\text{weight}_{i}\\) = \\(1/n_h = 1/3\\)"
+    "text": "Unequal Sampling Fractions\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\nStrata 1, \\(\\text{weight}_{i}\\) = \\(1/n_h = 1/1 =1\\)\nStrata 2, \\(\\text{weight}_{i}\\) = \\(1/n_h = 1/3\\)"
   },
   {
     "objectID": "FW552/Stratified.html#unequal-sampling-fractions-1",
     "href": "FW552/Stratified.html#unequal-sampling-fractions-1",
     "title": "",
     "section": "Unequal Sampling Fractions",
-    "text": "Unequal Sampling Fractions\n\\[\n\\hat{\\mu}_{st} = \\frac{1}{L}\\sum_{h=1}^L \\sum_{i=1}^{n_h} y_{hi}\\times \\text{weight}_h\n\\]\n\n\n\n\n\nStrata\nS1\nS2\nS3\nWeight\n\n\n\n\n1\n2\n6\n8\n1.0000000\n\n\n2\n10\n10\n10\n0.3333333\n\n\n2\n10\n10\n10\n0.3333333\n\n\n2\n12\n12\n12\n0.3333333\n\n\n\n\n\n\n\n\nSample 1\n\\[\n\\hat{\\mu}_{st} = \\frac{\\left(2\\times1\\right) + \\left(10\\times1/3 + 10\\times1/3 + 12\\times1/3 \\right)}{2}\n\\]"
+    "text": "Unequal Sampling Fractions\n\\[\n\\hat{\\mu}_{st} = \\frac{1}{L}\\sum_{h=1}^L \\sum_{i=1}^{n_h} y_{hi}\\times \\text{weight}_h\n\\]\n\n\n\n\n\nStrata\nS1\nS2\nS3\nWeight\n\n\n\n\n1\n2\n6\n8\n1.0000000\n\n\n2\n10\n10\n10\n0.3333333\n\n\n2\n10\n10\n10\n0.3333333\n\n\n2\n12\n12\n12\n0.3333333\n\n\n\n\n\n\nSample 1\n\\[\n\\hat{\\mu}_{st} = \\frac{\\left(2\\times1\\right) + \\left(10\\times1/3 + 10\\times1/3 + 12\\times1/3 \\right)}{2}\n\\]"
   },
   {
     "objectID": "FW552/Stratified.html#summary",

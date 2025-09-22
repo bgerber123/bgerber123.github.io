@@ -59,8 +59,13 @@ y <- c(0, 1, 1, 1, 1, 3, 1, 0, 4, 0)
 # Sample Size
   n <- 10
 
-# Variance of the estimator
-  ((N-n)/N)*(var(y)/n)
+# Variance of the estimator (tau) - first option
+  var_mu.hat = (N-n)/N*var(y)/n
+  N^2*var_mu.hat
+  
+# Variance of the estimator (tau) - second option
+  N*(N-n)*(var(y)/n)
+  
 ```
 
 ### Part b
