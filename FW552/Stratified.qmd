@@ -419,6 +419,7 @@ strata.2.eggs=ponds$egg.mass[comb.strats.num[,4]]
 
 pop.means=(rep(strata.1.mean,3)*3 + strata.2.eggs*3) * 1/N
 
+#note, did not calculate variances here. point to distribution of population means.
 
 comb.strats2=data.frame(Sample = 1:3,
                         comb.strats,
