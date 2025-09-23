@@ -4,81 +4,8 @@ title: ""
 
 ## Week 8
 
-### Day 1
+<span style="color:red">No class this week</span>
 
-#### [Today]{style="color:red;"}
+Please work on your [mid-term activity](https://bgerber123.github.io/FW552/Syllabus.html#mid-term-activity). The due date is listed on canvas.
 
-##### **In Class Discussion of Widmer et al 2021, led by Libby Mojica, Travis Rainey**
-
-- What was the objective of the modeling, and how do you feel the authors did in addressing the objective?
-
-- How did the authors address potential problems that come from using presence-only data (e.g., spatial autocorrelation, pseudo-absences)? Was this effort adequate?
-
-- What other aspects of ecological processes are not addressed by the objectives? Could these have been incorporated in this study?
-
-- Were their any findings you found particularly important? Anything that stood out to you, good or bad, in the methodology or interpretation?
-
-- Is the study area and scale of analysis relevant to each of the 4 salamanders?
-
-- Are the prediction maps useful or relevant for salamander conservation?
-
-<br>
- 
-##### **In Class Discussion of Guillera-Arroita et al. 2015**
-
-- What is a SDM?
-
-- What are they used for?
-
-- What are the types of data used and how does that change the inference/predictions?
-
-- What are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?
-
-- What is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?
-
-- What are some specific model types or algorithms commonly used for fitting a SDM?
-
-<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
-
-<!-- -   Install R packages: -->
-
-<!-- ```{r, eval=FALSE, echo=TRUE} -->
-<!-- # CRAN packages -->
-<!-- install.packages(c("brms","bayesplot")) -->
-<!-- ``` -->
-
-#### [Assigned]{style="color:red;"}
- -   Readings for next class:
-     - <a href="/readings/Wildman et al 2024.pdf">Wildman et al 2024</a>
-     - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch 7 (sections 7.1-7.3)</a>
-
- 
-### Day 2 (lab)
-
-#### [Today]{style="color:red;"}
-
-##### **In Class Discussion of Wildman et al 2024, led by Alex Badeaux, Noel Clark, Elke Tukker**
-
--   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
-
--   Downloads: <a href="/classfiles/cjslab/cjslabfiles.zip">Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("stringr","coda","runjags"))
-```
-
-
-#### [Assigned]{style="color:red;"}
--   Readings for next class: 
-    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
-
-- Background Reading (not required):
-  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
-  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
-
-
-
-
+This is also a good time to start thinking and planning your [end of the semester presentation](https://bgerber123.github.io/FW552/Syllabus.html#student-presentations).
