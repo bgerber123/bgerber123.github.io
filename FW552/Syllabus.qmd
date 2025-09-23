@@ -72,8 +72,8 @@ Assessment Components  | Percentage of Grade
 Course Engagement      | 10%
 Assignments            | 25%
 Quizzes                | 25%
-Exam                   | 20%
-Presentation           | 20%
+Mid-term               | 10%
+Presentation           | 30%
  
 Table 1: Grade breakdown by graded components
 
@@ -110,15 +110,82 @@ Table 1: Grade scheme from [CSU](https://canvas.colostate.edu/grading-schemes/)
 
 **Quizzes:** Quizzes will be administered on Canvas and will be used to gauge student comprehension of assigned readings and provide accountability for out-of-class preparation. 
 
-**Tests:** We will have one mid-term exam. 
+**Tests:** There are no planned standard tests. 
 
-**Student Presentations:** Students will give a short and punchy oral presentation following the [Ignite Talk format](https://www.ignitetalks.io/) (5 min, 20 slides, slides advance automatically every 15 seconds). The topic is up to the student but focus on the ideas of sampling; topics could be about 1) improving a current study, 2) designing a future study, or 3) evaluating sampling options in terms of bias/precision/cost/etc.  Some considerations when making the presentation ...
+**Student Presentations:** At the end of the course, students will be asked to give a short and punchy oral presentation on a topic of their choosing that is related to the ideas discussed in FW552.
+
+## Mid-term Activity
+
+Each student should reach out to a scientist in their field (not an advisor or student) to discuss how they use sampling in their work. The scientist is ideally someone on the CSU campus (e.g., in your department or program) that you would like to meet with and make a connection. 
+
+#### **Reaching out**
+  - Send this person an email or stop by their office to schedule a meeting
+  - If you say it is for a class how could they refuse!
+  - Context to provide: I am taking a Sampling class (FW552; Applied Sampling for Wildlife/Fish Studies) and learning about inference, sampling variation, power analysis, and alternative sampling strategies. I was hoping to ask you a few questions how you use some of these concepts in your work. Would you have 30 minutes available on XXXX or XXXX? If helpful, I can provide the questions in advance.
+  
+#### **Questions**
+
+- [Sampling Question]{style="color:#078BCD;"}
+  - Do you use sampling frames to define your population of interest and relevant sample units? Do you use simple random sampling or alternative methods picking samples, such as cluster, adaptive cluster, stratified, or systematic sampling? How do you decide on sampling method?
+
+- [Science Communication question]{style="color:#078BCD;"}
+  - It is hard to communicate what a confidence interval. How do you communicate what they are and why they are useful to students or non-scientist?
+
+- [Power analysis question]{style="color:#078BCD;"}
+  - How do you commonly decide on sample size? Do you use simulations or power analyses?
+  
+- [Wild card question]{style="color:#078BCD;"}  
+  - Make up your own question; something relevant to what you are learning in class
+  - OR, ask whether they primarily use design- or model-based inference and why.
+  
+#### **Write-up**
+
+- take notes during your meeting
+- afterwards, organize your thoughts and what you learned
+- make sure to discuss the difficulty in "getting on the same page"; i.e., the interviewee knew what you were asking and you understood their answer
+- write it up in a discussion post on canvas.
+  
+#### **Why do this**
+
+  - gain experience talking about these important topics 
+  - connect with a (new) scientist in your field or department or program
+  - make connections between class material and scientific practice
+  - justify your time spent in this class (??)
+  - experiential learning is more effective than a standard test
+
+## Student Presentations 
+
+Students will be asked to give a short and punchy oral presentation following the [Ignite Talk format](https://www.ignitetalks.io/) (5 min, 20 slides, slides advance automatically every 15 seconds). The topic is up to the student but focus on the ideas of sampling discussed in FW552. Grading will be done by your peers and the instructor via a [standardized rubric](../classfiles552/Presentation Rubric.docx). 
+
+### Potential topics
+
+- improving a current study 
+- designing a future study 
+- evaluating sampling options for a species/question of interest in terms of bias/precision/cost/tradeoffs etc (e.g., via simulation)
+- a lecture on a sampling topic that provides new insights beyond what has been discussed in class (check with the instructor before deciding this)
+
+
+If you are unsure, talk to the instructor well in advance of the presentations (beginning of December).
+
+### **Some considerations when making the presentation:**
 
 - Are the sampling design and methods well-articulated?
 - Is the sampling frame and sampling unit well defined?
 - Has the sample size been determined and effort allocation been addressed?
-- Have underlying assumptions been noted?
+- Have underlying assumptions been discussed?
 - Has the appropriate biological and ecological considerations been incorporated into the design?
+- Is the presentation well organized?
+- Is the presenter engaging?
+
+*Note that these are the same questions on the grading rubric.*
+
+### **Why a presentation?**
+
+- synthesize knowledge from the course into something that matters to each student
+- practice communicating (visually and orally) sampling ideas and language
+- share knowledge and experiences with peers
+- experiential learning is more effective and more *fun* than a test
+
 
 
 
