@@ -8495,14 +8495,14 @@
     "href": "FW552/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "href": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#assigned-groups",
@@ -8579,14 +8579,14 @@
     "href": "FW552/week9.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nKery and Schaub Ch13 (sections 13.1 to 13.4)\n\n\n\n\n\nBoard work defining the occupancy model hierarchically\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Lecture: Multi-stage Sampling\nLecture Code: multistage.R\n\n\n\n\n\nDue Next Class: Read Johnson et al. 2009\nDue Next Class: Read Stafford et al. 2006 \n\n\n\n\n\n\n\nIn Class Discussion Questions of Johnson et al. 2009\nIn Class Discussion Questions of Stafford et al. 2006"
   },
   {
     "objectID": "FW552/week9.html#week-9",
     "href": "FW552/week9.html#week-9",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "How are data different than a typical capture-recapture study?\nWhat is an ‘activity center’?\nWhat makes this model ‘spatial’? Think about this assumption. When will it be appropriate or not to assume?\nWhat are the two components that control ‘detection probability’?\nIf using a SCR model, how might your sampling strategy change?\nWhat is the exact meaning of abundance in this type of model?\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"secr\",\"sf\"))\n\n\n\nReadings for next class:\n\nKery and Schaub Ch13 (sections 13.1 to 13.4)\n\n\n\n\n\nBoard work defining the occupancy model hierarchically\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Lecture: Multi-stage Sampling\nLecture Code: multistage.R\n\n\n\n\n\nDue Next Class: Read Johnson et al. 2009\nDue Next Class: Read Stafford et al. 2006 \n\n\n\n\n\n\n\nIn Class Discussion Questions of Johnson et al. 2009\nIn Class Discussion Questions of Stafford et al. 2006"
   },
   {
     "objectID": "FW552/week7.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\n\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\n\n\n\n\n \nWe\n22-Oct\nMulti-stage Sampling\n\n\n\n\n10\nMo\n27-Oct\nRatio Estimation\n\n\n\n\n \nWe\n29-Oct\nDouble Sampling\n\n\n\n\n11\nMo\n3-Nov\nAdaptive Cluster Sampling\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference I\n\n\n\n\n \nWe\n19-Nov\nCausal Inference II\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference III\n\n\n\n\n \nWe\n3-Dec\nCausal Inference VI\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\n\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\n\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nMulti-stage Sampling\n\n\n\n\n10\nMo\n27-Oct\nDouble Sampling\n\n\n\n\n \nWe\n29-Oct\nAdaptive Cluster Sampling\n\n\n\n\n11\nMo\n3-Nov\nReview\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference I\n\n\n\n\n \nWe\n19-Nov\nCausal Inference II\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference III\n\n\n\n\n \nWe\n3-Dec\nCausal Inference VI\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -11737,5 +11737,453 @@
     "title": "Brian D. Gerber",
     "section": "",
     "text": "Time for a break!\nIf you have not already done so, it may be a good time to start working on your end of the semester presentation."
+  },
+  {
+    "objectID": "FW552/multistage.html#multi-stage-sampling",
+    "href": "FW552/multistage.html#multi-stage-sampling",
+    "title": "Multi-Stage",
+    "section": "Multi-Stage Sampling",
+    "text": "Multi-Stage Sampling\nA key fundamental difference from SRS, stratified, or cluster sampling\n\nBut also no new principles."
+  },
+  {
+    "objectID": "FW552/multistage.html#srs",
+    "href": "FW552/multistage.html#srs",
+    "title": "Multi-Stage",
+    "section": "SRS",
+    "text": "SRS"
+  },
+  {
+    "objectID": "FW552/multistage.html#stratified-sampling",
+    "href": "FW552/multistage.html#stratified-sampling",
+    "title": "Multi-Stage",
+    "section": "Stratified Sampling",
+    "text": "Stratified Sampling"
+  },
+  {
+    "objectID": "FW552/multistage.html#cluster-sampling",
+    "href": "FW552/multistage.html#cluster-sampling",
+    "title": "Multi-Stage",
+    "section": "Cluster Sampling",
+    "text": "Cluster Sampling"
+  },
+  {
+    "objectID": "FW552/multistage.html#two-stage-sampling",
+    "href": "FW552/multistage.html#two-stage-sampling",
+    "title": "Multi-Stage",
+    "section": "Two-Stage Sampling",
+    "text": "Two-Stage Sampling\n\n\nSimplest multi-stage / most common"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html",
+    "href": "docs/FW552/multistage.html",
+    "title": "Cluster/Systematic Sampling",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nWarning: package 'kableExtra' was built under R version 4.4.3\n\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\n\nAttaching package: 'magrittr'\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\nWarning: package 'knitr' was built under R version 4.4.3\n\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n. . .\nBoth partition sampling into primary and secondary units\n. . .\n\nCluster: primary units consist of cluster of secondary\nSystematic: primary unit consists of secondary units that are arranged via a rule set"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-and-systematic-sampling",
+    "href": "docs/FW552/multistage.html#cluster-and-systematic-sampling",
+    "title": "Cluster/Systematic Sampling",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nWarning: package 'kableExtra' was built under R version 4.4.3\n\n\n\nAttaching package: 'kableExtra'\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\n\nAttaching package: 'magrittr'\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\nWarning: package 'knitr' was built under R version 4.4.3\n\n\nAppear to be opposites\n\nCluster: units are clumped together\nSystematic: units spaced out\n\n. . .\nBoth partition sampling into primary and secondary units\n. . .\n\nCluster: primary units consist of cluster of secondary\nSystematic: primary unit consists of secondary units that are arranged via a rule set"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-and-systematic-sampling-1",
+    "href": "docs/FW552/multistage.html#cluster-and-systematic-sampling-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster and systematic sampling",
+    "text": "Cluster and systematic sampling"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#boreal-toad-case-study",
+    "href": "docs/FW552/multistage.html#boreal-toad-case-study",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal Toad Case Study",
+    "text": "Boreal Toad Case Study\n\n\n\n\n\n\nPond\negg.mass\ncluster\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3\n\n\n\n\n\n\n\nN = 6\n\\(\\mu =8\\)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#boreal-toad",
+    "href": "docs/FW552/multistage.html#boreal-toad",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal toad",
+    "text": "Boreal toad\nCluster sampling scheme A\n\n\n\n\nclusterA\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n8\n5\n9\n\n\n2\n6\n10\n8\n0\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#boreal-toad-1",
+    "href": "docs/FW552/multistage.html#boreal-toad-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Boreal toad",
+    "text": "Boreal toad\nCluster sampling scheme A\n\n\n\n\nclusterA\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n8\n5\n9\n\n\n2\n6\n10\n8\n0\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 6\\\\\n\\]\nRecall that the variance for SRS was 4.26"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling",
+    "href": "docs/FW552/multistage.html#cluster-sampling",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster Sampling",
+    "text": "Cluster Sampling\nSuperficial resemblance to stratification: ‘clustered’ sample units are grouped like a stratum\nSelection process is different\n\n\nstratification: every strata is part of the sampling process\n\nnot all units in each strata are sampled\n\n\n\ncluster: select among clusters in same way as SRS\n\nthen observe all units within cluster\n\n\n\n. . .\nCluster sampling is really SRS applied to groups of population members"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-b",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-b",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme B",
+    "text": "Cluster sampling scheme B\nMake cluster of similar values\n\n\n\n\nPond\negg.mass\nclusterB\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n2\n\n\nD\n10\n2\n\n\nE\n10\n3\n\n\nF\n12\n3"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-b-1",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-b-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme B",
+    "text": "Cluster sampling scheme B\n\n\n\n\nclusterB\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n6\n4\n16\n\n\n2\n8\n10\n9\n1\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-b-2",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-b-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme B",
+    "text": "Cluster sampling scheme B\n\n\n\n\nclusterB\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n6\n4\n16\n\n\n2\n8\n10\n9\n1\n\n\n3\n10\n12\n11\n9\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 8.67\n\\]"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-c",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-c",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme C",
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\nPond\negg.mass\nclusterC\n\n\n\nA\n2\n1\n\n\nB\n6\n2\n\n\nC\n8\n3\n\n\nD\n10\n3\n\n\nE\n10\n2\n\n\nF\n12\n1"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-c-1",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-c-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme C",
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\nclusterC\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n12\n7\n1\n\n\n2\n6\n10\n8\n0\n\n\n3\n8\n10\n9\n1\n\n\n\n\n\n\\[\\sum_{i=1}^3(\\hat{\\mu}_{i}-\\mu) = 0 \\]"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-c-2",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-c-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme C",
+    "text": "Cluster sampling scheme C\nMake clusters of dissimilar values\n\n\n\n\nclusterC\nmember1\nmember2\nmean\ndev2\n\n\n\n1\n2\n12\n7\n1\n\n\n2\n6\n10\n8\n0\n\n\n3\n8\n10\n9\n1\n\n\n\n\n\n\\[\n\\hat{\\sigma}^{2} = \\frac{1}{3}\\sum_{i=1}^{n} \\left(\\hat{\\mu}_{i}-\\mu\\right)^{2} = 0.67\n\\]"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-d",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-d",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nClusters of dissimilar values and size\n\n\n\n\nPond\negg.mass\nclusterD\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n3"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-d-1",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-d-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nClusters of dissimilar values and size\n\n\n\n\nclusterD\nmember1\nmember2\nmember3\nmean\n\n\n\n1\n2\n6\n8\n5.33\n\n\n2\n10\n10\nNA\n10.00\n\n\n3\n12\nNA\nNA\n12.00\n\n\n\n\n\n\nmean(c(5.33,10,12)) = 9.11\n9.11 - 8 = 1.11 (biased)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-scheme-d-2",
+    "href": "docs/FW552/multistage.html#cluster-sampling-scheme-d-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling scheme D",
+    "text": "Cluster sampling scheme D\nNeed to incorporate cluster size\n\n\n\n\nclusterD\nmean\nclusterSize\nSizeXMean\ndivide.avg.cluster.size\ndev2\n\n\n\n1\n5.33\n3\n16\n8\n0\n\n\n2\n10.00\n2\n20\n10\n4\n\n\n3\n12.00\n1\n12\n6\n4\n\n\n\n\n\n\nmean(c(8,10,6)) = 8\n8 - 8 = 0 (unbiased)\n\\(\\hat{\\sigma}^{2} = 2.67\\)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#variable-sizeed-clusters",
+    "href": "docs/FW552/multistage.html#variable-sizeed-clusters",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Variable-sizeed clusters",
+    "text": "Variable-sizeed clusters\nWe randomly select the primary units\n\nthe number of secondary units may be quite different and not in our control (i.e., random variable)\n\n\n. . .\nYou want to know something about households\n\nsample home addresses (building is cluster; primary unit)\nthe number of secondary units depends on building type\n\nsingle-family house, condo/duplex, apartment complex"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-1",
+    "href": "docs/FW552/multistage.html#cluster-sampling-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling",
+    "text": "Cluster sampling\n\nMaximize precision by forming clusters that have varying values within secondary units\nOverall cluster values (e.g., mean) are similar (aggregated secondary units)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#but.",
+    "href": "docs/FW552/multistage.html#but.",
+    "title": "Cluster/Systematic Sampling",
+    "section": "But….",
+    "text": "But….\nIn our field we often think of forming clusters by location\n. . .\n\nFirst Law of Geography: “everything is related to everything else, but near things are more related than distant things.” - Waldo Tobler\n. . .\n\nThis contradicts the principal and utility of cluster sampling."
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-sampling-2",
+    "href": "docs/FW552/multistage.html#cluster-sampling-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster sampling",
+    "text": "Cluster sampling\nBut also need to consider costs b/w SRS and cluster.\n. . .\nWhich do you think is more likely to less costly?"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study",
+    "href": "docs/FW552/multistage.html#pika-case-study",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\nWe are interested in the total population size of pika across 10 mountains"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-1",
+    "href": "docs/FW552/multistage.html#pika-case-study-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\nGoal: Compare Cluster and SR sampling\n. . .\n\n10 Mtns\nEach mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)\na total (N) of 10 x 100 sample units (in a SRS sense).\n\n. . .\n\nwe expect the most deviation to occur across mountains, rather than in them.\nwe will cluster our samples across mountains (aggregate plots across mtns)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-2",
+    "href": "docs/FW552/multistage.html#pika-case-study-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n# Simulate a true population\n  N.plots= 100 # talus slope plots\n  N.mtns= 10 # mtns\n\n# Create matrix of counts\n  pop = matrix(NA, N.plots, N.mtns)\n\n# Consider each mtn has a different mean abundance\n# This forces the mtns to vary in pika abundance\n  mu = seq(1,100,length.out = N.mtns)\n\n# Loop over each mountain and draw N.plots random values from that specific mean\n# log transform the mean and the exponentiate then round to make them counts \n# and to ensure values are never negative\nfor(j in 1:N.mtns){\n  set.seed(143453543+j)\n  pop[,j] = round(\n                  exp(\n                      rnorm(N.plots,\n                            log(mu[j]),\n                            0.1\n                            )\n                      ),\n                  digits=0\n                  )\n}"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-3",
+    "href": "docs/FW552/multistage.html#pika-case-study-3",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n\n\n\n\n\n\n\n\nSRS \\(n = 100\\) random units"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-4",
+    "href": "docs/FW552/multistage.html#pika-case-study-4",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n\n\n\n\n\n\n\n\nclusters are columns"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-5",
+    "href": "docs/FW552/multistage.html#pika-case-study-5",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\n\n\n\n\n\n\n\n\n\n\\(N_\\text{Primary Cluster} = 100\\) with \\(N_\\text{Secondary} = 10\\)\n\n\n\\(n_\\text{Primary Cluster} = 10\\) with \\(N_\\text{Secondary} = 10\\)"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#pika-case-study-6",
+    "href": "docs/FW552/multistage.html#pika-case-study-6",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Pika Case Study",
+    "text": "Pika Case Study\n\nThe same number of total units are sampled: 100\n\\(\\mu =\\) 50.67\n\\(\\tau =\\) 50670"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#setup-simulation",
+    "href": "docs/FW552/multistage.html#setup-simulation",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Setup Simulation",
+    "text": "Setup Simulation\n\n# SRS\n  # Total number of secondary sample units for SRS\n    N = N.plots*N.mtns\n  # Sample size of secondary units for SRS  \n    n=100\n\n# Clusters\n   # Number of primary units (plot across mtns)\n    N.primary = 100\n\n  # Plots per cluster (mtn); seconary unit\n    N.secondary = 10"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#srs",
+    "href": "docs/FW552/multistage.html#srs",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS",
+    "text": "SRS\n\n#Number of simulated studies / replicate samples  \nn.sim= 10000\n  \n# Create SRS function  \nsrs.fun = function(pop){\n  \n  # Get a sample of indices\n  index=sample(1:(N.plots*N.mtns),size=n)\n  \n  # Use those indices to get our population counts in each sample unit\n  y = c(pop)[index]\n  \n  #Total estimate\n  tau.est=mean(y)*N\n  \n  #Standard deviation of total \n  tau.sd=sqrt(N*(N-n)*(var(y)/n))\n\n  list(tau.est=tau.est,\n       tau.sd=tau.sd)\n}\n\n# replicate!\nsrs.total.dist=replicate(n.sim, srs.fun(pop))"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#srs-1",
+    "href": "docs/FW552/multistage.html#srs-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS",
+    "text": "SRS\n\nhist(unlist(srs.total.dist[1,]),\n     main=\"SRS Tau Estimate\",xlab=\"Total Population Size\")\nabline(v=tau,col=2,lwd=3)\n\n\n\n\n\n\n\n\\(\\sigma_{\\hat{\\tau},SRS} =\\) 3109.66"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster",
+    "href": "docs/FW552/multistage.html#cluster",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster",
+    "text": "Cluster\n\ncluster.fun = function(pop){\n  #Get index of plots (clusters) to sample across mtn rnages and sample all within that cluster\n  index=sample(1:N.primary, size = 10)\n  \n  y = pop[index,] # this is 10x10 (total of 100 sample units)\n  y.sum = apply(y,1,sum)\n  \n  tau.est = N.primary*mean(y.sum)\n\n  #Standard deviation of total \n  var.primary= var(y.sum)\n  tau.sd = sqrt(N.primary*(N.primary-N.secondary)*(var.primary/N.secondary))\n  \n  list(tau.est=tau.est,\n       tau.sd=tau.sd)\n    \n}\n\n# Replicate!!!!\n  cluster.total.dist=replicate(n.sim, cluster.fun(pop))"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#cluster-1",
+    "href": "docs/FW552/multistage.html#cluster-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Cluster",
+    "text": "Cluster\n\n  hist(unlist(cluster.total.dist[1,]),breaks=20,\n         main=\"Tau Estimate\")\n  abline(v=tau,col=2,lwd=3)\n\n\n\n\n\n\n\n\\(\\sigma_{\\hat{\\tau},Cluster} =\\) 554.26"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#srs-vs-cluster",
+    "href": "docs/FW552/multistage.html#srs-vs-cluster",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS vs Cluster",
+    "text": "SRS vs Cluster"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#srs-vs-cluster-1",
+    "href": "docs/FW552/multistage.html#srs-vs-cluster-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "SRS vs Cluster",
+    "text": "SRS vs Cluster"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#why-did-clusters-work-so-well",
+    "href": "docs/FW552/multistage.html#why-did-clusters-work-so-well",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Why did Clusters work so well?",
+    "text": "Why did Clusters work so well?\nThompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,\n\\[\n\\frac{\\text{var}(\\tau_{srs})}{\\text{var}(\\tau_{\\mu})} = \\frac{\\text{var}(\\text{across all values in population})}{\\text{var}(\\text{across secondary units})}\n\\]\n. . .\nNumerator\n\nvar(c(pop))\n\n[1] 1045.07\n\n\nDenominator\n\nvar(apply(pop,1,sum))\n\n[1] 342.1313"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#take-home",
+    "href": "docs/FW552/multistage.html#take-home",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Take home",
+    "text": "Take home\nCluster sampling will lead to more precise estimates than SRS (at the same sample size) when units within clusters vary more than on average than do the units in the whole sampling frame.\n\n. . .\nThe greater variation within clusters, the grater precision of cluster sampling; opposite of stratified sampling"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#take-home-1",
+    "href": "docs/FW552/multistage.html#take-home-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Take home",
+    "text": "Take home\nBeware\n\nClusters require good knowledge of the system.\nA poor choice could lead to increasing sampling distribution variance."
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#systematic-sample",
+    "href": "docs/FW552/multistage.html#systematic-sample",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\nBlack-footed ferret breeding program for release into the wild.\n. . .\n\n10 groups of 10 animals (separate colonies)\neach as a number 1 to 10"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#systematic-sample-1",
+    "href": "docs/FW552/multistage.html#systematic-sample-1",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\nHow do we choose which two individuals to release into the wild?\n\nrandomly select a number… 3\nrandomly select a new number w/o replacement… 7\n\n. . .\nYou systematically have selected individual 3 and 7 for release from each colony/group."
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#systematic-sample-2",
+    "href": "docs/FW552/multistage.html#systematic-sample-2",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\n\npeople like the “spatial balance”"
+  },
+  {
+    "objectID": "docs/FW552/multistage.html#systematic-sample-3",
+    "href": "docs/FW552/multistage.html#systematic-sample-3",
+    "title": "Cluster/Systematic Sampling",
+    "section": "Systematic Sample",
+    "text": "Systematic Sample\n\nCan be biased\n\nplots may be more dissimilar than random\n\nmean is unbiased\nvariance is too large\n\n\nperiodicity (ridge/valley/ridge…)\n\nmean is biased\nvariance is underestimated"
+  },
+  {
+    "objectID": "FW552/multistage.html#multi-stage-sampling-1",
+    "href": "FW552/multistage.html#multi-stage-sampling-1",
+    "title": "Multi-Stage",
+    "section": "Multi-Stage Sampling",
+    "text": "Multi-Stage Sampling\nA generalization of cluster sampling in which selection occurs in two or more successive stages.\n\nRather than drawing a sample directly from the population, units are chosen in stages\n\nlarger primary sampling units (PSUs) are selected first, and then\nsmaller secondary sampling units (SSUs) are then sampled within them"
+  },
+  {
+    "objectID": "FW552/multistage.html#examples",
+    "href": "FW552/multistage.html#examples",
+    "title": "Multi-Stage",
+    "section": "Examples",
+    "text": "Examples\nYour turn!"
+  },
+  {
+    "objectID": "FW552/multistage.html#examples-1",
+    "href": "FW552/multistage.html#examples-1",
+    "title": "Multi-Stage",
+    "section": "Examples",
+    "text": "Examples\nYour turn!"
+  },
+  {
+    "objectID": "FW552/multistage.html#selecting-psus",
+    "href": "FW552/multistage.html#selecting-psus",
+    "title": "Multi-Stage",
+    "section": "Selecting PSUs",
+    "text": "Selecting PSUs\n\nSRS: if no prior information is available\n\n\n\nStratification: if variables of interest are available (area, measure of variability of interest) then stratify and sample within each stratum\n\n\n\n\nSystematic: if variables of interest are available, sort by one of these and apply systematic sampling with a random start\n\n\n\n\nProbability proportional to size: if each primary unit has a known measure of size of importance (based on variables) select units with probabilities proportional to that"
+  },
+  {
+    "objectID": "FW552/multistage.html#notation",
+    "href": "FW552/multistage.html#notation",
+    "title": "Multi-Stage",
+    "section": "Notation",
+    "text": "Notation\n\n\\(N\\) is the number of PSUs in the population\n\\(n\\) is the number of PSUs in the sample\n\\(M_i\\) is the number of SSUs in the \\(i^{th}\\) PSU\n\\(m_i\\) is the number of sampled SSUs in the \\(i^{th}\\) sampled PSU\n\\(M = \\sum_{i=1}^N M_i\\) is the number of SSUs in the population\n\\(y_{ij}\\) is the value for the \\(j^{th}\\) SSU in the \\(i^{th}\\) PSU\n\\(\\tau = \\sum_{i=1}^N \\sum_{j=1}^{M_{i}} y_{ij}\\) is the population total\n\\(\\mu = \\frac{\\tau}{M}\\) is the population mean per secondary unit"
+  },
+  {
+    "objectID": "FW552/multistage.html#mean-with-srs",
+    "href": "FW552/multistage.html#mean-with-srs",
+    "title": "Multi-Stage",
+    "section": "Mean with SRS",
+    "text": "Mean with SRS\nUnbiased Mean of primary unit \\(i\\)\n\n\\(\\hat{\\mu}_{i} = \\frac{1}{m_i}\\sum_{j=1}^{m_i} y_{ij}\\)\n\nUnbiased Total Population size\n\n\\(\\hat{\\tau} = \\frac{N}{n}\\sum_{i=1}^n M_{i} \\hat{\\mu}_{i}\\)\n\nUnbiased Population Mean\n\n\\(\\hat{\\mu} = \\frac{\\hat{\\tau}}{M}\\)"
+  },
+  {
+    "objectID": "FW552/multistage.html#variance-of-total-population-size",
+    "href": "FW552/multistage.html#variance-of-total-population-size",
+    "title": "Multi-Stage",
+    "section": "Variance of total population size",
+    "text": "Variance of total population size\npartitioning the variance in the nested components\n\\[\n\\sigma^2_{\\hat{\\tau}} =\\\\ N(N-n)\\frac{\\hat{\\sigma}^2_{\\text{Between_PSU}}}{n}\\\\ + \\\\\\frac{N}{n}\\sum_{i=1}^n M_{i}(M_{i}-m_i)\\frac{\\hat{\\sigma}^2_{\\text{Within_PSU}}}{m_i}\n\\]"
+  },
+  {
+    "objectID": "FW552/multistage.html#two-stage-sampling-1",
+    "href": "FW552/multistage.html#two-stage-sampling-1",
+    "title": "Multi-Stage",
+    "section": "Two-Stage Sampling",
+    "text": "Two-Stage Sampling\n\n\nSimplest multi-stage / most common\n\n\n\n1st stage: sample \\(n\\) primary units (\\(N\\) = 50; n = 10)\n2nd stage: for \\(i^{th}\\) primary unit, select \\(m_i\\) (not all) secondary units (\\(M_i = 8; m_{i} = 4\\))"
+  },
+  {
+    "objectID": "FW552/multistage.html#two-stage-sampling-2",
+    "href": "FW552/multistage.html#two-stage-sampling-2",
+    "title": "Multi-Stage",
+    "section": "Two-Stage Sampling",
+    "text": "Two-Stage Sampling\n\n\nSimplest multi-stage / most common\n\n\n  \nWe have two-levels of sampling variation!\n\nSampling variation of primary units\nSampling variation of secondary units within primary units"
+  },
+  {
+    "objectID": "FW552/multistage.html#multi-stage-sampling-2",
+    "href": "FW552/multistage.html#multi-stage-sampling-2",
+    "title": "Multi-Stage",
+    "section": "Multi-Stage Sampling",
+    "text": "Multi-Stage Sampling\nAllows flexibility\n\nHow?"
+  },
+  {
+    "objectID": "FW552/multistage.html#multi-stage-sampling-3",
+    "href": "FW552/multistage.html#multi-stage-sampling-3",
+    "title": "Multi-Stage",
+    "section": "Multi-Stage Sampling",
+    "text": "Multi-Stage Sampling\nCost is complexity\n\nneed to consider multiple levels of variance estimates"
+  },
+  {
+    "objectID": "FW552/multistage.html#example",
+    "href": "FW552/multistage.html#example",
+    "title": "Multi-Stage",
+    "section": "Example",
+    "text": "Example\nState of Colorado\n\n\n\nNational Forests in CO (PSU)\n\nForest mgmt units (SSU)\n\nmeasure course woody debris"
+  },
+  {
+    "objectID": "FW552/multistage.html#example-1",
+    "href": "FW552/multistage.html#example-1",
+    "title": "Multi-Stage",
+    "section": "Example",
+    "text": "Example\nWestern U.S. Grasslands/Praries/Shrublands\n\n\n\nPronghorn Populations (PSU)\n\nIndividuals (SSU)\n\nScat (Tertiary SU)\n\nMeasure forb contents in each scat"
+  },
+  {
+    "objectID": "FW552/multistage.html#model-based",
+    "href": "FW552/multistage.html#model-based",
+    "title": "Multi-Stage",
+    "section": "Model-Based",
+    "text": "Model-Based\nSame idea in hierarchical models\n\nWe observe the weight of the \\(i^th\\) individual pronghorn within the \\(j^th\\) population\n\n\n\\[\n\\begin{align*}\ny_{ij} &= \\beta_0 + \\mu_j + e_{ij}\\\\\n\\mu_{j} &\\sim \\text{Normal}(\\mu_{\\text{pop}}, \\sigma_{\\text{pop}})\\\\\n\\epsilon_{ij} &\\sim  \\text{Normal}(0, \\sigma_{\\text{indiv}})\n\\end{align*}\n\\]\nCalled a random-intercept model"
+  },
+  {
+    "objectID": "FW552/multistage.html#side-bar",
+    "href": "FW552/multistage.html#side-bar",
+    "title": "Multi-Stage",
+    "section": "Side-Bar",
+    "text": "Side-Bar\nSame idea in model-based inference\n\nWe observe the weight of the \\(i^{th}\\) individual pronghorn within the \\(j^{th}\\) population\n\n\n\\[\n\\begin{align*}\ny_{ij} &= \\beta_0 + \\mu_j + e_{ij}\\\\\n\\mu_{j} &\\sim \\text{Normal}(\\mu_{\\text{pop}}, \\sigma_{\\text{pop}})\\\\\n\\epsilon_{ij} &\\sim  \\text{Normal}(0, \\sigma_{\\text{indiv}})\n\\end{align*}\n\\]\nIs a hierarchical model or often called a random-intercept model"
+  },
+  {
+    "objectID": "FW552/multistage.html#cost-evaluations",
+    "href": "FW552/multistage.html#cost-evaluations",
+    "title": "Multi-Stage",
+    "section": "Cost Evaluations",
+    "text": "Cost Evaluations\nBasic idea is that we get cost savings by this strategy!\nIt may be easier or less costly to observe the same number of secondary units (\\(m\\)) in a cluster than spread out, as in SRS.\n\nThompson (Ch.13.4) Cost Function:\n$$\n$$"
+  },
+  {
+    "objectID": "FW552/multistage.html#cost-evaluation",
+    "href": "FW552/multistage.html#cost-evaluation",
+    "title": "Multi-Stage",
+    "section": "Cost Evaluation",
+    "text": "Cost Evaluation\nBasic idea is that we get cost savings by this strategy!\nIt may be easier or less costly to observe the same number of secondary units (\\(m\\)) in a cluster than spread out, as in SRS.\n\nThompson (Ch.13.4) Cost Function:\n\\[\nC_{\\text{total}} = c_{0} + c_1n+c_2*nm\n\\]\nassuming the same \\(m_{i}\\) for each \\(i^{th}\\) PSU\n\n\\(c_{0}\\): fixed overhead cost\n\\(c_{1}\\): cost per primary unit selected\n\\(c_{2}\\): cost per secondary unit selected\n\\(\\sigma^2_b\\): variance b/w primary units\n\\(\\sigma^2_w\\): means variance within primary units (across secondary units)"
+  },
+  {
+    "objectID": "FW552/multistage.html#cost-evaluation-1",
+    "href": "FW552/multistage.html#cost-evaluation-1",
+    "title": "Multi-Stage",
+    "section": "Cost Evaluation",
+    "text": "Cost Evaluation\nMinimum value of \\(\\sigma^2_{\\hat{\\tau}}\\) is\n\\[\n\\begin{align*}\nm_{\\text{optimal}} &= (\\frac{c_1\\sigma^2_w}{c_2(\\sigma^2_b - \\sigma^2_w/\\bar{M)}})^{1/2}\\\\\n\\sigma^2_b &= \\frac{\\sum_{i=1}^N(\\mu_i-\\mu)^2}{M-1}\\\\\n\\sigma^2_w &= \\frac{1}{N}\\sum_{i=1}^{N}\\sigma_{i}^2\\\\\n\\end{align*}\n\\]"
   }
 ]

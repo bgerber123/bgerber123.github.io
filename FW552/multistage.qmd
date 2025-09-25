@@ -1,0 +1,291 @@
+---
+title: <span style="color:white">Multi-Stage</span>
+title-slide-attributes:
+  data-background-image: /img/lichen.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    scrollable: true
+#    slide-level: 1
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
+---
+
+## [Multi-Stage Sampling]{style="color:#078BCD;"}
+
+**A key fundamental difference from SRS, stratified, or cluster sampling**
+
+<br>
+
+**But also no new principles.**
+
+## [SRS]{style="color:#078BCD;"}
+
+![](../img/srs.png)
+
+## [Stratified Sampling]{style="color:#078BCD;"}
+
+![](../img/stratified.book.png)
+
+## [Cluster Sampling]{style="color:#078BCD;"}
+
+![](../img/cluster3.png)
+
+## [Two-Stage Sampling]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Simplest multi-stage / most common**
+
+![](../img/twostage.png)
+:::
+
+::: {.column width="50%"}
+
+
+:::
+::::
+
+## [Two-Stage Sampling]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Simplest multi-stage / most common**
+
+![](../img/twostage.png)
+:::
+
+::: {.column width="50%"}
+
+- 1st stage: sample $n$ primary units ($N$ = 50; n = 10)
+- 2nd stage: for $i^{th}$ primary unit, select $m_i$ (not all) secondary units ($M_i = 8; m_{i} = 4$)
+
+:::
+::::
+
+
+## [Two-Stage Sampling]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Simplest multi-stage / most common**
+
+![](../img/twostage.png)
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+<br>
+
+**We have two-levels of sampling variation!**
+
+- Sampling variation of primary units
+- Sampling variation of secondary units within primary units
+
+:::
+::::
+
+
+## [Multi-Stage Sampling]{style="color:#078BCD;"}
+
+A generalization of cluster sampling in which selection occurs in two or more successive stages. 
+
+- Rather than drawing a sample directly from the population, units are chosen in stages
+    - larger primary sampling units (PSUs) are selected first, and then
+    - smaller secondary sampling units (SSUs) are then sampled within them
+    
+## [Multi-Stage Sampling]{style="color:#078BCD;"}
+
+**Allows flexibility**
+
+<br>
+
+How?
+
+<!-- - can tailor sampling intensity in PSU -->
+<!-- - accommodates operational constrains -->
+<!-- - reduces travel costs by concentrating effort, but does not require all SSUs (like cluster sampling) -->
+    
+## [Multi-Stage Sampling]{style="color:#078BCD;"}
+
+**Cost is complexity**
+    
+- need to consider multiple levels of variance estimates    
+    
+## [Example]{style="color:#078BCD;"}    
+    
+#### State of Colorado
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- National Forests in CO (PSU)
+    - Forest mgmt units (SSU)
+      - measure course woody debris   
+
+
+:::
+
+::: {.column width="50%"}
+
+![](../img/CWD.png)
+:::
+::::
+
+
+
+
+## [Example]{style="color:#078BCD;"}    
+    
+#### Western U.S. Grasslands/Praries/Shrublands
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+- Pronghorn Populations (PSU)
+    - Individuals (SSU)
+      - Scat (Tertiary SU)
+        - Measure forb contents in each scat
+
+
+:::
+
+::: {.column width="50%"}
+
+![](../img/pronghorn.png)
+:::
+::::    
+    
+
+
+
+## [Examples]{style="color:#078BCD;"}    
+
+ **Your turn!**
+
+
+## [Selecting PSUs]{style="color:#078BCD;"}        
+    
+- **SRS**: if no prior information is available
+
+. . .
+
+- **Stratification:** if variables of interest are available (area, measure of variability of interest) then stratify and sample within each stratum
+
+. . .
+    
+- **Systematic:** if variables of interest are available, sort by one of these and apply systematic sampling with a random start
+
+. . .
+
+- **Probability proportional to size:** if each primary unit has a known measure of size of importance (based on variables) select units with probabilities proportional to that
+
+
+## [Notation]{style="color:#078BCD;"}            
+
+- $N$ is the number of PSUs in the *population*
+- $n$ is the number of PSUs in the *sample*
+- $M_i$ is the number of SSUs in the $i^{th}$ PSU
+- $m_i$ is the number of sampled SSUs in the $i^{th}$ sampled PSU
+- $M = \sum_{i=1}^N M_i$ is the number of SSUs in the population
+- $y_{ij}$ is the value for the $j^{th}$ SSU in the $i^{th}$ PSU
+- $\tau = \sum_{i=1}^N \sum_{j=1}^{M_{i}} y_{ij}$ is the population total
+- $\mu = \frac{\tau}{M}$ is the population mean per secondary unit
+
+## [Mean with SRS]{style="color:#078BCD;"}            
+
+**Unbiased Mean of primary unit $i$**
+
+- $\hat{\mu}_{i} = \frac{1}{m_i}\sum_{j=1}^{m_i} y_{ij}$
+
+**Unbiased Total Population size**
+
+- $\hat{\tau} = \frac{N}{n}\sum_{i=1}^n M_{i} \hat{\mu}_{i}$  
+
+**Unbiased Population Mean**
+
+- $\hat{\mu} = \frac{\hat{\tau}}{M}$  
+
+  
+## [Variance of total population size]{style="color:#078BCD;"}            
+
+*partitioning the variance in the nested components*
+
+$$
+\sigma^2_{\hat{\tau}} =\\ N(N-n)\frac{\hat{\sigma}^2_{\text{Between_PSU}}}{n}\\ + \\\frac{N}{n}\sum_{i=1}^n M_{i}(M_{i}-m_i)\frac{\hat{\sigma}^2_{\text{Within_PSU}}}{m_i}
+$$
+
+## [Side-Bar]{style="color:#078BCD;"}            
+
+*Same idea in model-based inference*
+
+. . .
+
+We observe the weight of the $i^{th}$ individual pronghorn within the $j^{th}$ population
+
+. . .
+
+$$
+\begin{align*}
+y_{ij} &= \beta_0 + \mu_j + e_{ij}\\
+\mu_{j} &\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
+\epsilon_{ij} &\sim  \text{Normal}(0, \sigma_{\text{indiv}})
+\end{align*}
+$$
+
+Is a hierarchical model or often called a random-intercept model
+
+
+## [Cost Evaluation]{style="color:#078BCD;"}            
+
+Basic idea is that we get cost savings by this strategy!
+
+It may be easier or less costly to observe the same number of secondary units ($m$) in a cluster than spread out, as in SRS.
+
+. . .
+
+Thompson (Ch.13.4) Cost Function:
+
+$$
+C_{\text{total}} = c_{0} + c_1n+c_2*nm
+$$
+
+assuming the same $m_{i}$ for each $i^{th}$ PSU
+
+- $c_{0}$: fixed overhead cost
+- $c_{1}$: cost per primary unit selected
+- $c_{2}$: cost per secondary unit selected
+
+- $\sigma^2_b$: variance b/w primary units
+- $\sigma^2_w$: means variance within primary units (across secondary units)
+
+## [Cost Evaluation]{style="color:#078BCD;"}            
+
+Minimum value of $\sigma^2_{\hat{\tau}}$ is 
+
+$$
+\begin{align*}
+m_{\text{optimal}} &= (\frac{c_1\sigma^2_w}{c_2(\sigma^2_b - \sigma^2_w/\bar{M)}})^{1/2}\\
+\sigma^2_b &= \frac{\sum_{i=1}^N(\mu_i-\mu)^2}{M-1}\\
+\sigma^2_w &= \frac{1}{N}\sum_{i=1}^{N}\sigma_{i}^2\\
+\end{align*}
+$$
+

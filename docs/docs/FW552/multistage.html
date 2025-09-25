@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Cluster/Systematic Sampling – Brian D. Gerber</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4db37eba59b960caeafd4e8e87eee78a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script><link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Brian D. Gerber</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../FW680A4/index.html"> 
+<span class="menu-text">FW680A4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../FW552/index.html"> 
+<span class="menu-text">FW552</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
+</i> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Brian-Gerber-4"> <i class="bi bi-r-square-fill" role="img">
+</i> 
+<span class="menu-text">RG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bgerber123"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:brian.gerber@colostate.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#cluster-and-systematic-sampling" id="toc-cluster-and-systematic-sampling" class="nav-link active" data-scroll-target="#cluster-and-systematic-sampling"><span style="color:#078BCD;">Cluster and systematic sampling</span></a></li>
+  <li><a href="#cluster-and-systematic-sampling-1" id="toc-cluster-and-systematic-sampling-1" class="nav-link" data-scroll-target="#cluster-and-systematic-sampling-1"><span style="color:#078BCD;">Cluster and systematic sampling</span></a></li>
+  <li><a href="#boreal-toad-case-study" id="toc-boreal-toad-case-study" class="nav-link" data-scroll-target="#boreal-toad-case-study"><span style="color:#078BCD;">Boreal Toad Case Study</span></a></li>
+  <li><a href="#boreal-toad" id="toc-boreal-toad" class="nav-link" data-scroll-target="#boreal-toad"><span style="color:#078BCD;">Boreal toad</span></a></li>
+  <li><a href="#boreal-toad-1" id="toc-boreal-toad-1" class="nav-link" data-scroll-target="#boreal-toad-1"><span style="color:#078BCD;">Boreal toad</span></a></li>
+  <li><a href="#cluster-sampling" id="toc-cluster-sampling" class="nav-link" data-scroll-target="#cluster-sampling"><span style="color:#078BCD;">Cluster Sampling</span></a></li>
+  <li><a href="#cluster-sampling-scheme-b" id="toc-cluster-sampling-scheme-b" class="nav-link" data-scroll-target="#cluster-sampling-scheme-b"><span style="color:#078BCD;">Cluster sampling scheme B</span></a></li>
+  <li><a href="#cluster-sampling-scheme-b-1" id="toc-cluster-sampling-scheme-b-1" class="nav-link" data-scroll-target="#cluster-sampling-scheme-b-1"><span style="color:#078BCD;">Cluster sampling scheme B</span></a></li>
+  <li><a href="#cluster-sampling-scheme-b-2" id="toc-cluster-sampling-scheme-b-2" class="nav-link" data-scroll-target="#cluster-sampling-scheme-b-2"><span style="color:#078BCD;">Cluster sampling scheme B</span></a></li>
+  <li><a href="#cluster-sampling-scheme-c" id="toc-cluster-sampling-scheme-c" class="nav-link" data-scroll-target="#cluster-sampling-scheme-c"><span style="color:#078BCD;">Cluster sampling scheme C</span></a></li>
+  <li><a href="#cluster-sampling-scheme-c-1" id="toc-cluster-sampling-scheme-c-1" class="nav-link" data-scroll-target="#cluster-sampling-scheme-c-1"><span style="color:#078BCD;">Cluster sampling scheme C</span></a></li>
+  <li><a href="#cluster-sampling-scheme-c-2" id="toc-cluster-sampling-scheme-c-2" class="nav-link" data-scroll-target="#cluster-sampling-scheme-c-2"><span style="color:#078BCD;">Cluster sampling scheme C</span></a></li>
+  <li><a href="#cluster-sampling-scheme-d" id="toc-cluster-sampling-scheme-d" class="nav-link" data-scroll-target="#cluster-sampling-scheme-d"><span style="color:#078BCD;">Cluster sampling scheme D</span></a></li>
+  <li><a href="#cluster-sampling-scheme-d-1" id="toc-cluster-sampling-scheme-d-1" class="nav-link" data-scroll-target="#cluster-sampling-scheme-d-1"><span style="color:#078BCD;">Cluster sampling scheme D</span></a></li>
+  <li><a href="#cluster-sampling-scheme-d-2" id="toc-cluster-sampling-scheme-d-2" class="nav-link" data-scroll-target="#cluster-sampling-scheme-d-2"><span style="color:#078BCD;">Cluster sampling scheme D</span></a></li>
+  <li><a href="#variable-sizeed-clusters" id="toc-variable-sizeed-clusters" class="nav-link" data-scroll-target="#variable-sizeed-clusters"><span style="color:#078BCD;">Variable-sizeed clusters</span></a></li>
+  <li><a href="#cluster-sampling-1" id="toc-cluster-sampling-1" class="nav-link" data-scroll-target="#cluster-sampling-1"><span style="color:#078BCD;">Cluster sampling</span></a></li>
+  <li><a href="#but." id="toc-but." class="nav-link" data-scroll-target="#but."><span style="color:#078BCD;">But….</span></a></li>
+  <li><a href="#cluster-sampling-2" id="toc-cluster-sampling-2" class="nav-link" data-scroll-target="#cluster-sampling-2"><span style="color:#078BCD;">Cluster sampling</span></a></li>
+  <li><a href="#pika-case-study" id="toc-pika-case-study" class="nav-link" data-scroll-target="#pika-case-study"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-1" id="toc-pika-case-study-1" class="nav-link" data-scroll-target="#pika-case-study-1"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-2" id="toc-pika-case-study-2" class="nav-link" data-scroll-target="#pika-case-study-2"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-3" id="toc-pika-case-study-3" class="nav-link" data-scroll-target="#pika-case-study-3"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-4" id="toc-pika-case-study-4" class="nav-link" data-scroll-target="#pika-case-study-4"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-5" id="toc-pika-case-study-5" class="nav-link" data-scroll-target="#pika-case-study-5"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#pika-case-study-6" id="toc-pika-case-study-6" class="nav-link" data-scroll-target="#pika-case-study-6"><span style="color:#078BCD;">Pika Case Study</span></a></li>
+  <li><a href="#setup-simulation" id="toc-setup-simulation" class="nav-link" data-scroll-target="#setup-simulation"><span style="color:#078BCD;">Setup Simulation</span></a></li>
+  <li><a href="#srs" id="toc-srs" class="nav-link" data-scroll-target="#srs"><span style="color:#078BCD;">SRS</span></a></li>
+  <li><a href="#srs-1" id="toc-srs-1" class="nav-link" data-scroll-target="#srs-1"><span style="color:#078BCD;">SRS</span></a></li>
+  <li><a href="#cluster" id="toc-cluster" class="nav-link" data-scroll-target="#cluster"><span style="color:#078BCD;">Cluster</span></a></li>
+  <li><a href="#cluster-1" id="toc-cluster-1" class="nav-link" data-scroll-target="#cluster-1"><span style="color:#078BCD;">Cluster</span></a></li>
+  <li><a href="#srs-vs-cluster" id="toc-srs-vs-cluster" class="nav-link" data-scroll-target="#srs-vs-cluster"><span style="color:#078BCD;">SRS vs Cluster</span></a></li>
+  <li><a href="#srs-vs-cluster-1" id="toc-srs-vs-cluster-1" class="nav-link" data-scroll-target="#srs-vs-cluster-1"><span style="color:#078BCD;">SRS vs Cluster</span></a></li>
+  <li><a href="#why-did-clusters-work-so-well" id="toc-why-did-clusters-work-so-well" class="nav-link" data-scroll-target="#why-did-clusters-work-so-well"><span style="color:#078BCD;">Why did Clusters work so well?</span></a></li>
+  <li><a href="#take-home" id="toc-take-home" class="nav-link" data-scroll-target="#take-home"><span style="color:#078BCD;">Take home</span></a></li>
+  <li><a href="#take-home-1" id="toc-take-home-1" class="nav-link" data-scroll-target="#take-home-1"><span style="color:#078BCD;">Take home</span></a></li>
+  <li><a href="#systematic-sample" id="toc-systematic-sample" class="nav-link" data-scroll-target="#systematic-sample"><span style="color:#078BCD;">Systematic Sample</span></a></li>
+  <li><a href="#systematic-sample-1" id="toc-systematic-sample-1" class="nav-link" data-scroll-target="#systematic-sample-1"><span style="color:#078BCD;">Systematic Sample</span></a></li>
+  <li><a href="#systematic-sample-2" id="toc-systematic-sample-2" class="nav-link" data-scroll-target="#systematic-sample-2"><span style="color:#078BCD;">Systematic Sample</span></a></li>
+  <li><a href="#systematic-sample-3" id="toc-systematic-sample-3" class="nav-link" data-scroll-target="#systematic-sample-3"><span style="color:#078BCD;">Systematic Sample</span></a></li>
+  </ul><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="multistage.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title"><span style="color:orange">Cluster/Systematic Sampling</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="cluster-and-systematic-sampling" class="level2"><h2 class="anchored" data-anchor-id="cluster-and-systematic-sampling"><span style="color:#078BCD;">Cluster and systematic sampling</span></h2>
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'kableExtra' was built under R version 4.4.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'kableExtra'
+
+The following object is masked from 'package:dplyr':
+
+    group_rows
+
+
+Attaching package: 'magrittr'
+
+The following object is masked from 'package:purrr':
+
+    set_names
+
+The following object is masked from 'package:tidyr':
+
+    extract</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'knitr' was built under R version 4.4.3</code></pre>
+</div>
+</div>
+<p>Appear to be opposites</p>
+<ul>
+<li>Cluster: units are clumped together</li>
+<li>Systematic: units spaced out</li>
+</ul>
+<p>. . .</p>
+<p>Both partition sampling into <em>primary</em> and <em>secondary</em> units</p>
+<p>. . .</p>
+<ul>
+<li>Cluster: primary units consist of cluster of secondary</li>
+<li>Systematic: primary unit consists of secondary units that are arranged via a rule set</li>
+</ul></section><section id="cluster-and-systematic-sampling-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-and-systematic-sampling-1"><span style="color:#078BCD;">Cluster and systematic sampling</span></h2>
+<p><img src="../img/cluster2.png" class="img-fluid"></p>
+</section><section id="boreal-toad-case-study" class="level2"><h2 class="anchored" data-anchor-id="boreal-toad-case-study"><span style="color:#078BCD;">Boreal Toad Case Study</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cluster</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>N = 6</li>
+<li><span class="math inline">\(\mu =8\)</span></li>
+</ul>
+</div>
+</div>
+<p><img src="../img/borealtoad.png" class="img-fluid"></p>
+</section><section id="boreal-toad" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="boreal-toad"><span style="color:#078BCD;">Boreal toad</span></h2>
+<section id="cluster-sampling-scheme-a" class="level4"><h4 class="anchored" data-anchor-id="cluster-sampling-scheme-a">Cluster sampling scheme A</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section></section><section id="boreal-toad-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="boreal-toad-1"><span style="color:#078BCD;">Boreal toad</span></h2>
+<section id="cluster-sampling-scheme-a-1" class="level4"><h4 class="anchored" data-anchor-id="cluster-sampling-scheme-a-1">Cluster sampling scheme A</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 6\\
+\]</span></p>
+<p><strong>Recall that the variance for SRS was 4.26</strong></p>
+</section></section><section id="cluster-sampling" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling"><span style="color:#078BCD;">Cluster Sampling</span></h2>
+<p>Superficial resemblance to stratification: ‘clustered’ sample units are grouped like a stratum</p>
+<p><strong>Selection process is different</strong></p>
+<ul>
+<li>
+<span style="color:#078BCD;">stratification</span>: every strata is part of the sampling process
+<ul>
+<li>not all units in each strata are sampled</li>
+</ul>
+</li>
+<li>
+<span style="color:#078BCD;">cluster</span>: select among clusters in same way as SRS
+<ul>
+<li>then observe all units within cluster</li>
+</ul>
+</li>
+</ul>
+<p>. . .</p>
+<p><strong>Cluster sampling is really SRS applied to groups of population members</strong></p>
+</section><section id="cluster-sampling-scheme-b" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-b"><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
+<p><em>Make cluster of similar values</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="cluster-sampling-scheme-b-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-b-1"><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section><section id="cluster-sampling-scheme-b-2" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-b-2"><span style="color:#078BCD;">Cluster sampling scheme B</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterB</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 8.67
+\]</span></p>
+</section><section id="cluster-sampling-scheme-c" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-c"><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
+<p><em>Make clusters of dissimilar values</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="cluster-sampling-scheme-c-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-c-1"><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
+<p><em>Make clusters of dissimilar values</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[\sum_{i=1}^3(\hat{\mu}_{i}-\mu) = 0 \]</span></p>
+</section><section id="cluster-sampling-scheme-c-2" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-c-2"><span style="color:#078BCD;">Cluster sampling scheme C</span></h2>
+<p><em>Make clusters of dissimilar values</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterC</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><span class="math display">\[
+\hat{\sigma}^{2} = \frac{1}{3}\sum_{i=1}^{n} \left(\hat{\mu}_{i}-\mu\right)^{2} = 0.67
+\]</span></p>
+</section><section id="cluster-sampling-scheme-d" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-d"><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Clusters of dissimilar values and size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Pond</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">egg.mass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="cluster-sampling-scheme-d-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-d-1"><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Clusters of dissimilar values and size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member2</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">member3</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">10.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">12.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>mean(c(5.33,10,12)) = 9.11</li>
+<li>9.11 - 8 = 1.11 (biased)</li>
+</ul></section><section id="cluster-sampling-scheme-d-2" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-scheme-d-2"><span style="color:#078BCD;">Cluster sampling scheme D</span></h2>
+<p><em>Need to incorporate cluster size</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead><tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterD</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clusterSize</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SizeXMean</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">divide.avg.cluster.size</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dev2</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.33</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>mean(c(8,10,6)) = 8</li>
+<li>8 - 8 = 0 (unbiased)</li>
+<li><span class="math inline">\(\hat{\sigma}^{2} = 2.67\)</span></li>
+</ul></section><section id="variable-sizeed-clusters" class="level2"><h2 class="anchored" data-anchor-id="variable-sizeed-clusters"><span style="color:#078BCD;">Variable-sizeed clusters</span></h2>
+<p><strong>We randomly select the primary units</strong></p>
+<ul>
+<li>the number of secondary units may be quite different and not in our control (i.e., random variable)</li>
+</ul>
+<p><br></p>
+<p>. . .</p>
+<p>You want to know something about households</p>
+<ul>
+<li>sample home addresses (building is cluster; primary unit)</li>
+<li>the number of secondary units depends on building type
+<ul>
+<li>single-family house, condo/duplex, apartment complex</li>
+</ul>
+</li>
+</ul></section><section id="cluster-sampling-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-1"><span style="color:#078BCD;">Cluster sampling</span></h2>
+<ul>
+<li>Maximize precision by forming clusters that have varying values within secondary units</li>
+<li>Overall cluster values (e.g., mean) are similar (aggregated secondary units)</li>
+</ul></section><section id="but." class="level2"><h2 class="anchored" data-anchor-id="but."><span style="color:#078BCD;">But….</span></h2>
+<p>In our field we often think of forming clusters by location</p>
+<p>. . .</p>
+<p><br></p>
+<p><strong>First Law of Geography</strong>: “<em>everything is related to everything else, but near things are more related than distant things</em>.” - Waldo Tobler</p>
+<p>. . .</p>
+<p><br></p>
+<p>This contradicts the principal and utility of cluster sampling.</p>
+</section><section id="cluster-sampling-2" class="level2"><h2 class="anchored" data-anchor-id="cluster-sampling-2"><span style="color:#078BCD;">Cluster sampling</span></h2>
+<p>But also need to consider costs b/w SRS and cluster.</p>
+<p>. . .</p>
+<p><strong>Which do you think is more likely to less costly?</strong></p>
+<!-- ## [Cluster sampling vs SRS]{style="color:#078BCD;"} -->
+<!-- ![](../img/mushroom.png) -->
+<!-- Colleague wants to take a sample of n = 100 plots to measure *mushroom abundance* -->
+<!-- ## [Cluster sampling vs SRS]{style="color:#078BCD;"} -->
+<!-- - Could take random sample of 100 plots -->
+<!-- - Could take random sample of 50 clusters (primary) with 2 plots each (secondary). -->
+<!-- **WHAT DO YOU RECOMMEND?** -->
+</section><section id="pika-case-study" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<p>We are interested in the total population size of pika across 10 mountains</p>
+<p><img src="../img/pika2.png" class="img-fluid"></p>
+</section><section id="pika-case-study-1" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-1"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<p><strong>Goal:</strong> Compare Cluster and SR sampling</p>
+<p>. . .</p>
+<ul>
+<li>10 Mtns</li>
+<li>Each mtn can be divide into 100 plots based on talus slopes (piles of rocks and boulders)</li>
+<li>a total (N) of 10 x 100 sample units (in a SRS sense).</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>we expect the most deviation to occur across mountains, rather than in them.</li>
+<li>we will cluster our samples across mountains (aggregate plots across mtns)</li>
+</ul></section><section id="pika-case-study-2" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-2"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Simulate a true population</span></span>
+<span>  <span class="va">N.plots</span><span class="op">=</span> <span class="fl">100</span> <span class="co"># talus slope plots</span></span>
+<span>  <span class="va">N.mtns</span><span class="op">=</span> <span class="fl">10</span> <span class="co"># mtns</span></span>
+<span></span>
+<span><span class="co"># Create matrix of counts</span></span>
+<span>  <span class="va">pop</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="va">N.plots</span>, <span class="va">N.mtns</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Consider each mtn has a different mean abundance</span></span>
+<span><span class="co"># This forces the mtns to vary in pika abundance</span></span>
+<span>  <span class="va">mu</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">100</span>,length.out <span class="op">=</span> <span class="va">N.mtns</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Loop over each mountain and draw N.plots random values from that specific mean</span></span>
+<span><span class="co"># log transform the mean and the exponentiate then round to make them counts </span></span>
+<span><span class="co"># and to ensure values are never negative</span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">j</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">N.mtns</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">143453543</span><span class="op">+</span><span class="va">j</span><span class="op">)</span></span>
+<span>  <span class="va">pop</span><span class="op">[</span>,<span class="va">j</span><span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span></span>
+<span>                  <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span></span>
+<span>                      <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">N.plots</span>,</span>
+<span>                            <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">mu</span><span class="op">[</span><span class="va">j</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>                            <span class="fl">0.1</span></span>
+<span>                            <span class="op">)</span></span>
+<span>                      <span class="op">)</span>,</span>
+<span>                  digits<span class="op">=</span><span class="fl">0</span></span>
+<span>                  <span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="pika-case-study-3" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-3"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>SRS <span class="math inline">\(n = 100\)</span> random units</li>
+</ul></section><section id="pika-case-study-4" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-4"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>clusters are columns</li>
+</ul></section><section id="pika-case-study-5" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-5"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<span class="math inline">\(N_\text{Primary Cluster} = 100\)</span> with <span class="math inline">\(N_\text{Secondary} = 10\)</span>
+</li>
+<li>
+<span class="math inline">\(n_\text{Primary Cluster} = 10\)</span> with <span class="math inline">\(N_\text{Secondary} = 10\)</span>
+</li>
+</ul></section><section id="pika-case-study-6" class="level2"><h2 class="anchored" data-anchor-id="pika-case-study-6"><span style="color:#078BCD;">Pika Case Study</span></h2>
+<ul>
+<li><p><strong>The same number of total units are sampled: 100</strong></p></li>
+<li><p><span class="math inline">\(\mu =\)</span> 50.67</p></li>
+<li><p><span class="math inline">\(\tau =\)</span> 50670</p></li>
+</ul></section><section id="setup-simulation" class="level2"><h2 class="anchored" data-anchor-id="setup-simulation"><span style="color:#078BCD;">Setup Simulation</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># SRS</span></span>
+<span>  <span class="co"># Total number of secondary sample units for SRS</span></span>
+<span>    <span class="va">N</span> <span class="op">=</span> <span class="va">N.plots</span><span class="op">*</span><span class="va">N.mtns</span></span>
+<span>  <span class="co"># Sample size of secondary units for SRS  </span></span>
+<span>    <span class="va">n</span><span class="op">=</span><span class="fl">100</span></span>
+<span></span>
+<span><span class="co"># Clusters</span></span>
+<span>   <span class="co"># Number of primary units (plot across mtns)</span></span>
+<span>    <span class="va">N.primary</span> <span class="op">=</span> <span class="fl">100</span></span>
+<span></span>
+<span>  <span class="co"># Plots per cluster (mtn); seconary unit</span></span>
+<span>    <span class="va">N.secondary</span> <span class="op">=</span> <span class="fl">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="srs" class="level2"><h2 class="anchored" data-anchor-id="srs"><span style="color:#078BCD;">SRS</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Number of simulated studies / replicate samples  </span></span>
+<span><span class="va">n.sim</span><span class="op">=</span> <span class="fl">10000</span></span>
+<span>  </span>
+<span><span class="co"># Create SRS function  </span></span>
+<span><span class="va">srs.fun</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># Get a sample of indices</span></span>
+<span>  <span class="va">index</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="op">(</span><span class="va">N.plots</span><span class="op">*</span><span class="va">N.mtns</span><span class="op">)</span>,size<span class="op">=</span><span class="va">n</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># Use those indices to get our population counts in each sample unit</span></span>
+<span>  <span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">[</span><span class="va">index</span><span class="op">]</span></span>
+<span>  </span>
+<span>  <span class="co">#Total estimate</span></span>
+<span>  <span class="va">tau.est</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">*</span><span class="va">N</span></span>
+<span>  </span>
+<span>  <span class="co">#Standard deviation of total </span></span>
+<span>  <span class="va">tau.sd</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">N</span><span class="op">*</span><span class="op">(</span><span class="va">N</span><span class="op">-</span><span class="va">n</span><span class="op">)</span><span class="op">*</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">/</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>tau.est<span class="op">=</span><span class="va">tau.est</span>,</span>
+<span>       tau.sd<span class="op">=</span><span class="va">tau.sd</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># replicate!</span></span>
+<span><span class="va">srs.total.dist</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="va">n.sim</span>, <span class="fu">srs.fun</span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="srs-1" class="level2"><h2 class="anchored" data-anchor-id="srs-1"><span style="color:#078BCD;">SRS</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">srs.total.dist</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span><span class="op">)</span>,</span>
+<span>     main<span class="op">=</span><span class="st">"SRS Tau Estimate"</span>,xlab<span class="op">=</span><span class="st">"Total Population Size"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>v<span class="op">=</span><span class="va">tau</span>,col<span class="op">=</span><span class="fl">2</span>,lwd<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\sigma_{\hat{\tau},SRS} =\)</span> 3109.66</p>
+</section><section id="cluster" class="level2"><h2 class="anchored" data-anchor-id="cluster"><span style="color:#078BCD;">Cluster</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cluster.fun</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="co">#Get index of plots (clusters) to sample across mtn rnages and sample all within that cluster</span></span>
+<span>  <span class="va">index</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">N.primary</span>, size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">y</span> <span class="op">=</span> <span class="va">pop</span><span class="op">[</span><span class="va">index</span>,<span class="op">]</span> <span class="co"># this is 10x10 (total of 100 sample units)</span></span>
+<span>  <span class="va">y.sum</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">y</span>,<span class="fl">1</span>,<span class="va">sum</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">tau.est</span> <span class="op">=</span> <span class="va">N.primary</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">y.sum</span><span class="op">)</span></span>
+<span></span>
+<span>  <span class="co">#Standard deviation of total </span></span>
+<span>  <span class="va">var.primary</span><span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">y.sum</span><span class="op">)</span></span>
+<span>  <span class="va">tau.sd</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">N.primary</span><span class="op">*</span><span class="op">(</span><span class="va">N.primary</span><span class="op">-</span><span class="va">N.secondary</span><span class="op">)</span><span class="op">*</span><span class="op">(</span><span class="va">var.primary</span><span class="op">/</span><span class="va">N.secondary</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>tau.est<span class="op">=</span><span class="va">tau.est</span>,</span>
+<span>       tau.sd<span class="op">=</span><span class="va">tau.sd</span><span class="op">)</span></span>
+<span>    </span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Replicate!!!!</span></span>
+<span>  <span class="va">cluster.total.dist</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">replicate</a></span><span class="op">(</span><span class="va">n.sim</span>, <span class="fu">cluster.fun</span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="cluster-1" class="level2"><h2 class="anchored" data-anchor-id="cluster-1"><span style="color:#078BCD;">Cluster</span></h2>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">cluster.total.dist</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span><span class="op">)</span>,breaks<span class="op">=</span><span class="fl">20</span>,</span>
+<span>         main<span class="op">=</span><span class="st">"Tau Estimate"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>v<span class="op">=</span><span class="va">tau</span>,col<span class="op">=</span><span class="fl">2</span>,lwd<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\sigma_{\hat{\tau},Cluster} =\)</span> 554.26</p>
+</section><section id="srs-vs-cluster" class="level2"><h2 class="anchored" data-anchor-id="srs-vs-cluster"><span style="color:#078BCD;">SRS vs Cluster</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="srs-vs-cluster-1" class="level2"><h2 class="anchored" data-anchor-id="srs-vs-cluster-1"><span style="color:#078BCD;">SRS vs Cluster</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="multistage_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="why-did-clusters-work-so-well" class="level2"><h2 class="anchored" data-anchor-id="why-did-clusters-work-so-well"><span style="color:#078BCD;">Why did Clusters work so well?</span></h2>
+<p>Thompson pg. 137: “The relative efficiency of the cluster (or systematic) sample to the simple random sample of equivalent sample size, defined as the ratio of variances”,</p>
+<p><span class="math display">\[
+\frac{\text{var}(\tau_{srs})}{\text{var}(\tau_{\mu})} = \frac{\text{var}(\text{across all values in population})}{\text{var}(\text{across secondary units})}
+\]</span></p>
+<p>. . .</p>
+<section id="numerator" class="level4"><h4 class="anchored" data-anchor-id="numerator">Numerator</h4>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">pop</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1045.07</code></pre>
+</div>
+</div>
+</section><section id="denominator" class="level4"><h4 class="anchored" data-anchor-id="denominator">Denominator</h4>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">pop</span>,<span class="fl">1</span>,<span class="va">sum</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 342.1313</code></pre>
+</div>
+</div>
+</section></section><section id="take-home" class="level2"><h2 class="anchored" data-anchor-id="take-home"><span style="color:#078BCD;">Take home</span></h2>
+<p>Cluster sampling will lead to more precise estimates than SRS (at the same sample size) when units within clusters vary more than on average than do the units in the whole sampling frame.</p>
+<p><br></p>
+<p>. . .</p>
+<p>The greater variation within clusters, the grater precision of cluster sampling; <strong>opposite of stratified sampling</strong></p>
+<p><br></p>
+</section><section id="take-home-1" class="level2"><h2 class="anchored" data-anchor-id="take-home-1"><span style="color:#078BCD;">Take home</span></h2>
+<p><strong>Beware</strong></p>
+<p><br></p>
+<p>Clusters require good knowledge of the system.</p>
+<p>A poor choice could lead to increasing sampling distribution variance.</p>
+</section><section id="systematic-sample" class="level2"><h2 class="anchored" data-anchor-id="systematic-sample"><span style="color:#078BCD;">Systematic Sample</span></h2>
+<p><img src="../img/ferret.png" class="img-fluid"></p>
+<p>Black-footed ferret breeding program for release into the wild.</p>
+<p>. . .</p>
+<ul>
+<li>10 groups of 10 animals (separate colonies)</li>
+<li>each as a number 1 to 10</li>
+</ul></section><section id="systematic-sample-1" class="level2"><h2 class="anchored" data-anchor-id="systematic-sample-1"><span style="color:#078BCD;">Systematic Sample</span></h2>
+<p><em>How do we choose which two individuals to release into the wild?</em></p>
+<ul>
+<li>randomly select a number… 3</li>
+<li>randomly select a new number w/o replacement… 7</li>
+</ul>
+<p>. . .</p>
+<p>You systematically have selected individual 3 and 7 for release from each colony/group.</p>
+</section><section id="systematic-sample-2" class="level2"><h2 class="anchored" data-anchor-id="systematic-sample-2"><span style="color:#078BCD;">Systematic Sample</span></h2>
+<p><img src="../img/systematic.grid.png" class="img-fluid"></p>
+<ul>
+<li>people like the “spatial balance”</li>
+</ul></section><section id="systematic-sample-3" class="level2"><h2 class="anchored" data-anchor-id="systematic-sample-3"><span style="color:#078BCD;">Systematic Sample</span></h2>
+<ul>
+<li>Can be biased
+<ul>
+<li>plots may be more dissimilar than random
+<ul>
+<li>mean is unbiased</li>
+<li>variance is too large</li>
+</ul>
+</li>
+<li>periodicity (ridge/valley/ridge…)
+<ul>
+<li>mean is biased</li>
+<li>variance is underestimated</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">© 2023 Brian D. Gerber CC BY-SA 4.0</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>

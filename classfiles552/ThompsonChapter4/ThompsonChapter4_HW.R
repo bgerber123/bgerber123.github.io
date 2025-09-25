@@ -44,7 +44,7 @@ n
 N = 200
 n = 10
 z = qnorm(1-alpha/2)
-sigma = seq(10,100)
+sigma = seq(10,100,by=0.1)
 sigma2=sigma^2
 
 inputs= expand.grid(n,sigma2,z,N)
@@ -68,5 +68,7 @@ head(inputs)
 
 #worse case for d is 42.05 or 42
 max(inputs$d)
+
+plot(sigma,inputs$d)
 
 
