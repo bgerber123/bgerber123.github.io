@@ -27,7 +27,7 @@ code { /* Targets inline code */
 </style>
 
 
-A population consists of N = 10 primary units, each of which consists of Mi = 6 secondary units. A two-stage sampling design selects 2 primary units by simple random sampling (without replacement) and 3 secondary units from each selected primary unit, also by simple random sampling. The observed values of the variable of interest are 7, 5, 3 from the first primary unit selected and 4, 2, 3 from the second primary unit selected.
+You are interested in estimating the population size of ringtails (https://en.wikipedia.org/wiki/Ringtail) across 10 areas that can be split each into six areas. In other words, there is a population of 10 primary units, each of which consists of Mi = 6 secondary units. A two-stage sampling design selects 2 primary units by simple random sampling (without replacement) and 3 secondary units from each selected primary unit, also by simple random sampling. The observed values of counts of ringtails within the secondary units are 7, 5, 3 from the first primary unit selected and 4, 2, 3 from the second primary unit selected.
 
 
 ### a) Estimate the population total ($\tau$) and mean per primary unit
