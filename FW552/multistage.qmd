@@ -41,7 +41,7 @@ format:
 ::: {.column width="50%"}
 
 
-**Simplest multi-stage / most common**
+**Simplest multi-stage**
 
 ![](../img/twostage.png)
 :::
@@ -59,7 +59,7 @@ format:
 ::: {.column width="50%"}
 
 
-**Simplest multi-stage / most common**
+**Simplest multi-stage**
 
 ![](../img/twostage.png)
 :::
@@ -67,7 +67,7 @@ format:
 ::: {.column width="50%"}
 
 - 1st stage: sample $n$ primary units ($N$ = 50; n = 10)
-- 2nd stage: for $i^{th}$ primary unit, select $m_i$ (not all) secondary units ($M_i = 8; m_{i} = 4$)
+- 2nd stage: for $i^{th}$ primary unit, select $m_i$ secondary units ($M_i = 8; m_{i} = 4$)
 
 :::
 ::::
@@ -80,16 +80,33 @@ format:
 ::: {.column width="50%"}
 
 
-**Simplest multi-stage / most common**
+**Simplest multi-stage**
 
 ![](../img/twostage.png)
 :::
 
 ::: {.column width="50%"}
 
-<br>
-<br>
-<br>
+- If sampled all $M_i$ then it is what type of sampling?
+:::
+::::
+
+
+## [Two-Stage Sampling]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Simplest multi-stage**
+
+![](../img/twostage.png)
+:::
+
+::: {.column width="50%"}
+
+
 
 **We have two-levels of sampling variation!**
 
@@ -114,7 +131,7 @@ A generalization of cluster sampling in which selection occurs in two or more su
 
 <br>
 
-How?
+How though?
 
 <!-- - can tailor sampling intensity in PSU -->
 <!-- - accommodates operational constrains -->
@@ -212,17 +229,17 @@ How?
 
 ## [Mean with SRS]{style="color:#078BCD;"}            
 
-**Unbiased Mean of primary unit $i$**
+**Unbiased total of primary unit $i$**
 
-- $\hat{\mu}_{i} = \frac{1}{m_i}\sum_{j=1}^{m_i} y_{ij}$
+- $\hat{\tau}_{i} = \frac{M_i}{m_i}\sum_{j=1}^{m_i} y_{ij}$
 
 **Unbiased Total Population size**
 
 - $\hat{\tau} = \frac{N}{n}\sum_{i=1}^n M_{i} \hat{\mu}_{i}$  
 
-**Unbiased Population Mean**
+**Unbiased Population Mean Per Primary Unit**
 
-- $\hat{\mu} = \frac{\hat{\tau}}{M}$  
+- $\hat{\mu} = \frac{\hat{\tau}}{N}$  
 
   
 ## [Variance of total population size]{style="color:#078BCD;"}            
@@ -230,7 +247,7 @@ How?
 *partitioning the variance in the nested components*
 
 $$
-\sigma^2_{\hat{\tau}} =\\ N(N-n)\frac{\hat{\sigma}^2_{\text{Between_PSU}}}{n}\\ + \\\frac{N}{n}\sum_{i=1}^n M_{i}(M_{i}-m_i)\frac{\hat{\sigma}^2_{\text{Within_PSU}}}{m_i}
+\sigma^2_{\hat{\tau}} =\\ \left(N(N-n)\frac{\hat{\sigma}^2_{\text{Between_PSU}}}{n}\right)\\ + \\\left(\frac{N}{n}\sum_{i=1}^n M_{i}(M_{i}-m_i)\frac{\hat{\sigma}^2_{\text{Within_PSU}}}{m_i}\right)
 $$
 
 ## [Side-Bar]{style="color:#078BCD;"}            
@@ -239,19 +256,19 @@ $$
 
 . . .
 
-We observe the weight of the $i^{th}$ individual pronghorn within the $j^{th}$ population
+We observe the weight of the $j^{th}$ individual pronghorn within the $i^{th}$ population
 
 . . .
 
 $$
 \begin{align*}
-y_{ij} &= \beta_0 + \mu_j + e_{ij}\\
-\mu_{j} &\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
+y_{ij} &= \beta_0 + \mu_i + e_{ij}\\
+\mu_{i} &\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
 \epsilon_{ij} &\sim  \text{Normal}(0, \sigma_{\text{indiv}})
 \end{align*}
 $$
 
-Is a hierarchical model or often called a random-intercept model
+This Is a hierarchical model or a random-intercept model
 
 
 ## [Cost Evaluation]{style="color:#078BCD;"}            
@@ -273,19 +290,62 @@ assuming the same $m_{i}$ for each $i^{th}$ PSU
 - $c_{0}$: fixed overhead cost
 - $c_{1}$: cost per primary unit selected
 - $c_{2}$: cost per secondary unit selected
+- $n$ is the number of sampled primary units
+- $m$ is the number of sampled secondary units within primary
 
-- $\sigma^2_b$: variance b/w primary units
-- $\sigma^2_w$: means variance within primary units (across secondary units)
-
-## [Cost Evaluation]{style="color:#078BCD;"}            
+## [Minimum variance]{style="color:#078BCD;"}            
 
 Minimum value of $\sigma^2_{\hat{\tau}}$ is 
 
 $$
 \begin{align*}
-m_{\text{optimal}} &= (\frac{c_1\sigma^2_w}{c_2(\sigma^2_b - \sigma^2_w/\bar{M)}})^{1/2}\\
+m_{\text{optimal}} &= \sqrt(\frac{c_1\sigma^2_w}{c_2(\sigma^2_b - \sigma^2_w/\bar{M)}})\\\\
 \sigma^2_b &= \frac{\sum_{i=1}^N(\mu_i-\mu)^2}{M-1}\\
 \sigma^2_w &= \frac{1}{N}\sum_{i=1}^{N}\sigma_{i}^2\\
 \end{align*}
 $$
+
+- $\sigma^2_b$: variance b/w primary units
+- $\sigma^2_w$: mean within primary unit variance
+- $\bar{M} =$  average number of secondary units across PSU
+
+
+## [Minimum variance]{style="color:#078BCD;"}            
+
+Minimum value of $\sigma^2_{\hat{\tau}}$ is 
+
+$$
+\begin{align*}
+m_{\text{optimal}} &= \sqrt(\frac{c_1}{c_2}\times \frac{\sigma^2_w}{(\sigma^2_b - \sigma^2_w/\bar{M)}})\\\\
+\end{align*}
+$$
+What ratio of costs would drive up $m_{optimal}$?
+
+
+## [Minimum variance]{style="color:#078BCD;"}            
+
+Next, lets ignore costs.
+
+$$
+\begin{align*}
+m_{\text{optimal}}^2 &= \frac{\sigma^2_w}{(\sigma^2_b - \sigma^2_w/\bar{M)}}
+\end{align*}
+$$
+
+- How does the between and within variances affect our optimal $m$?
+- How does M affect our optimal $m$?
+- Generally, how would you investigation this?
+
+
+## [Minimum variance]{style="color:#078BCD;"}            
+
+Re-arranged...
+
+$$
+\begin{align*}
+m_{\text{optimal}}^2 &= \frac{1}{\frac{\sigma^2_b}{\sigma^2_w}- \frac{1}{\bar{M}}}
+\end{align*}
+$$
+- How does the between and within variances affect our optimal $m$?
+- How does M affect our optimal $m$?
 

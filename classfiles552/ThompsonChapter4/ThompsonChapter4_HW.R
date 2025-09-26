@@ -55,6 +55,8 @@ inputs$N = N
 # Create function to solve for d
 
 # d = sqrt((z^2*sigma2)/n - (z^2*sigma2)/N)
+# d = z*sqrt((N-n)/N * (sigma^2/n))
+# same equation, the 2nd one is direct from the book
 
 d.fn = function(inputs){
   sqrt( ((inputs[3]*inputs[2])/inputs[1]) - ((inputs[3]^2*inputs[2])/inputs[4]))
@@ -71,4 +73,12 @@ max(inputs$d)
 
 plot(sigma,inputs$d)
 
+
+
+
+# test
+
+sqrt((1.96^2*10)/12 - (1.96^2*10)/100)
+
+1.96*sqrt((100-12)/100 * (10/12))
 

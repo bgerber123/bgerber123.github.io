@@ -1,0 +1,80 @@
+---
+title: "Chapter 13 Problem"
+author: "Brian Gerber"
+date: "2025-09-26"
+output: html_document
+---
+
+
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Chapter 13, Problem 1
+
+<style type="text/css">
+  body{
+  font-size: 14pt;
+}
+pre.r { /* Targets R code blocks */
+      font-size: 12pt;
+    }
+code { /* Targets inline code */
+      font-size: 12pt;
+    }
+
+</style>
+
+
+A population consists of N = 10 primary units, each of which consists of Mi = 6 secondary units. A two-stage sampling design selects 2 primary units by simple random sampling (without replacement) and 3 secondary units from each selected primary unit, also by simple random sampling. The observed values of the variable of interest are 7, 5, 3 from the first primary unit selected and 4, 2, 3 from the second primary unit selected.
+
+
+### a) Estimate the population total ($\tau$) and mean per primary unit
+
+```{r}
+N = 10 # Total Primary Units
+n = 2  # sampled primary units
+M = 6  # Total secondary units per primary unit
+m = 3  # Sampled secondary units per primary
+
+# Data for primary unit 1
+y1 = c(7,5,3)
+
+# Data for primary unit 2
+y2 = c(4,2,3)
+
+#Estimate the total of each primary unit
+ sample.total.1 = M/m*sum(y1)
+ sample.total.1
+ sample.total.2 = M/m*sum(y2)
+ sample.total.2
+ 
+# Estimate the population total
+
+tau.hat = (N/n)*(sample.total.1+sample.total.2)
+tau.hat
+
+# Mean per primary unit
+
+mu.primary =tau.hat/N
+
+
+```
+
+### b) Estimate the variance of the total population size ($\tau$)
+
+```{r}
+# Sample variance between primary units
+
+s2.between = 1/(n-1)*((sample.total.1-mu.primary)^2+(sample.total.1-mu.primary)^2)
+
+s2.within.1 = 1/(m-1)*sum((y1-mean(y1))^2)
+s2.within.2 = 1/(m-1)*sum((y2-mean(y2))^2)
+
+var.tau = N*(N-n)*(s2.between/n)  + (N/n)*(  M*(M-m)*(s2.within.1/m)  +  M*(M-m)*(s2.within.2/m) )
+
+var.tau
+
+```
+

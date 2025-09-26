@@ -1,0 +1,15 @@
+{
+  "hash": "95f32f598c6d4ea72e3fb4f94baa5656",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Chapter 13 Problem\"\nauthor: \"Brian Gerber\"\ndate: \"2025-09-26\"\noutput: html_document\n---\n\n\n  \n\n\n## Chapter 13, Problem 1\n\n<style type=\"text/css\">\n  body{\n  font-size: 14pt;\n}\npre.r { /* Targets R code blocks */\n      font-size: 12pt;\n    }\ncode { /* Targets inline code */\n      font-size: 12pt;\n    }\n\n</style>\n\n\nA population consists of N = 10 primary units, each of which consists of Mi = 6 secondary units. A two-stage sampling design selects 2 primary units by simple random sampling (without replacement) and 3 secondary units from each selected primary unit, also by simple random sampling. The observed values of the variable of interest are 7, 5, 3 from the first primary unit selected and 4, 2, 3 from the second primary unit selected.\n\n\n### a) Estimate the population total ($\\tau$) and mean per primary unit\n\n\n::: {.cell}\n\n```{.r .cell-code}\nN = 10 # Total Primary Units\nn = 2  # sampled primary units\nM = 6  # Total secondary units per primary unit\nm = 3  # Sampled secondary units per primary\n\n# Data for primary unit 1\ny1 = c(7,5,3)\n\n# Data for primary unit 2\ny2 = c(4,2,3)\n\n#Estimate the total of each primary unit\n sample.total.1 = M/m*sum(y1)\n sample.total.1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 30\n```\n\n\n:::\n\n```{.r .cell-code}\n sample.total.2 = M/m*sum(y2)\n sample.total.2\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 18\n```\n\n\n:::\n\n```{.r .cell-code}\n# Estimate the population total\n\ntau.hat = (N/n)*(sample.total.1+sample.total.2)\ntau.hat\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 240\n```\n\n\n:::\n\n```{.r .cell-code}\n# Mean per primary unit\n\nmu.primary =tau.hat/N\n```\n:::\n\n\n### b) Estimate the variance of the total population size ($\\tau$)\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Sample variance between primary units\n\ns2.between = 1/(n-1)*((sample.total.1-mu.primary)^2+(sample.total.1-mu.primary)^2)\n\ns2.within.1 = 1/(m-1)*sum((y1-mean(y1))^2)\ns2.within.2 = 1/(m-1)*sum((y2-mean(y2))^2)\n\nvar.tau = N*(N-n)*(s2.between/n)  + (N/n)*(  M*(M-m)*(s2.within.1/m)  +  M*(M-m)*(s2.within.2/m) )\n\nvar.tau\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 3030\n```\n\n\n:::\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

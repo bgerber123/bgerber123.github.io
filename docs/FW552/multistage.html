@@ -156,7 +156,7 @@
 <h2><span style="color:#078BCD;">Two-Stage Sampling</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Simplest multi-stage / most common</strong></p>
+<p><strong>Simplest multi-stage</strong></p>
 <p><img data-src="../img/twostage.png"></p>
 </div><div class="column" style="width:50%;">
 
@@ -166,12 +166,12 @@
 <h2><span style="color:#078BCD;">Two-Stage Sampling</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Simplest multi-stage / most common</strong></p>
+<p><strong>Simplest multi-stage</strong></p>
 <p><img data-src="../img/twostage.png"></p>
 </div><div class="column" style="width:50%;">
 <ul>
 <li>1st stage: sample <span class="math inline">\(n\)</span> primary units (<span class="math inline">\(N\)</span> = 50; n = 10)</li>
-<li>2nd stage: for <span class="math inline">\(i^{th}\)</span> primary unit, select <span class="math inline">\(m_i\)</span> (not all) secondary units (<span class="math inline">\(M_i = 8; m_{i} = 4\)</span>)</li>
+<li>2nd stage: for <span class="math inline">\(i^{th}\)</span> primary unit, select <span class="math inline">\(m_i\)</span> secondary units (<span class="math inline">\(M_i = 8; m_{i} = 4\)</span>)</li>
 </ul>
 </div></div>
 </section>
@@ -179,10 +179,21 @@
 <h2><span style="color:#078BCD;">Two-Stage Sampling</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Simplest multi-stage / most common</strong></p>
+<p><strong>Simplest multi-stage</strong></p>
 <p><img data-src="../img/twostage.png"></p>
 </div><div class="column" style="width:50%;">
-<p><br> <br> <br></p>
+<ul>
+<li>If sampled all <span class="math inline">\(M_i\)</span> then it is what type of sampling?</li>
+</ul>
+</div></div>
+</section>
+<section id="two-stage-sampling-3" class="slide level2">
+<h2><span style="color:#078BCD;">Two-Stage Sampling</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Simplest multi-stage</strong></p>
+<p><img data-src="../img/twostage.png"></p>
+</div><div class="column" style="width:50%;">
 <p><strong>We have two-levels of sampling variation!</strong></p>
 <ul>
 <li>Sampling variation of primary units</li>
@@ -205,7 +216,7 @@
 <h2><span style="color:#078BCD;">Multi-Stage Sampling</span></h2>
 <p><strong>Allows flexibility</strong></p>
 <p><br></p>
-<p>How?</p>
+<p>How though?</p>
 <!-- - can tailor sampling intensity in PSU -->
 <!-- - accommodates operational constrains -->
 <!-- - reduces travel costs by concentrating effort, but does not require all SSUs (like cluster sampling) -->
@@ -296,41 +307,41 @@
 </section>
 <section id="mean-with-srs" class="slide level2">
 <h2><span style="color:#078BCD;">Mean with SRS</span></h2>
-<p><strong>Unbiased Mean of primary unit <span class="math inline">\(i\)</span></strong></p>
+<p><strong>Unbiased total of primary unit <span class="math inline">\(i\)</span></strong></p>
 <ul>
-<li><span class="math inline">\(\hat{\mu}_{i} = \frac{1}{m_i}\sum_{j=1}^{m_i} y_{ij}\)</span></li>
+<li><span class="math inline">\(\hat{\tau}_{i} = \frac{M_i}{m_i}\sum_{j=1}^{m_i} y_{ij}\)</span></li>
 </ul>
 <p><strong>Unbiased Total Population size</strong></p>
 <ul>
 <li><span class="math inline">\(\hat{\tau} = \frac{N}{n}\sum_{i=1}^n M_{i} \hat{\mu}_{i}\)</span></li>
 </ul>
-<p><strong>Unbiased Population Mean</strong></p>
+<p><strong>Unbiased Population Mean Per Primary Unit</strong></p>
 <ul>
-<li><span class="math inline">\(\hat{\mu} = \frac{\hat{\tau}}{M}\)</span></li>
+<li><span class="math inline">\(\hat{\mu} = \frac{\hat{\tau}}{N}\)</span></li>
 </ul>
 </section>
 <section id="variance-of-total-population-size" class="slide level2">
 <h2><span style="color:#078BCD;">Variance of total population size</span></h2>
 <p><em>partitioning the variance in the nested components</em></p>
 <p><span class="math display">\[
-\sigma^2_{\hat{\tau}} =\\ N(N-n)\frac{\hat{\sigma}^2_{\text{Between_PSU}}}{n}\\ + \\\frac{N}{n}\sum_{i=1}^n M_{i}(M_{i}-m_i)\frac{\hat{\sigma}^2_{\text{Within_PSU}}}{m_i}
+\sigma^2_{\hat{\tau}} =\\ \left(N(N-n)\frac{\hat{\sigma}^2_{\text{Between_PSU}}}{n}\right)\\ + \\\left(\frac{N}{n}\sum_{i=1}^n M_{i}(M_{i}-m_i)\frac{\hat{\sigma}^2_{\text{Within_PSU}}}{m_i}\right)
 \]</span></p>
 </section>
 <section id="side-bar" class="slide level2">
 <h2><span style="color:#078BCD;">Side-Bar</span></h2>
 <p><em>Same idea in model-based inference</em></p>
 <div class="fragment">
-<p>We observe the weight of the <span class="math inline">\(i^{th}\)</span> individual pronghorn within the <span class="math inline">\(j^{th}\)</span> population</p>
+<p>We observe the weight of the <span class="math inline">\(j^{th}\)</span> individual pronghorn within the <span class="math inline">\(i^{th}\)</span> population</p>
 </div>
 <div class="fragment">
 <p><span class="math display">\[
 \begin{align*}
-y_{ij} &amp;= \beta_0 + \mu_j + e_{ij}\\
-\mu_{j} &amp;\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
+y_{ij} &amp;= \beta_0 + \mu_i + e_{ij}\\
+\mu_{i} &amp;\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
 \epsilon_{ij} &amp;\sim  \text{Normal}(0, \sigma_{\text{indiv}})
 \end{align*}
 \]</span></p>
-<p>Is a hierarchical model or often called a random-intercept model</p>
+<p>This Is a hierarchical model or a random-intercept model</p>
 </div>
 </section>
 <section id="cost-evaluation" class="slide level2">
@@ -344,24 +355,61 @@ C_{\text{total}} = c_{0} + c_1n+c_2*nm
 \]</span></p>
 <p>assuming the same <span class="math inline">\(m_{i}\)</span> for each <span class="math inline">\(i^{th}\)</span> PSU</p>
 <ul>
-<li><p><span class="math inline">\(c_{0}\)</span>: fixed overhead cost</p></li>
-<li><p><span class="math inline">\(c_{1}\)</span>: cost per primary unit selected</p></li>
-<li><p><span class="math inline">\(c_{2}\)</span>: cost per secondary unit selected</p></li>
-<li><p><span class="math inline">\(\sigma^2_b\)</span>: variance b/w primary units</p></li>
-<li><p><span class="math inline">\(\sigma^2_w\)</span>: means variance within primary units (across secondary units)</p></li>
+<li><span class="math inline">\(c_{0}\)</span>: fixed overhead cost</li>
+<li><span class="math inline">\(c_{1}\)</span>: cost per primary unit selected</li>
+<li><span class="math inline">\(c_{2}\)</span>: cost per secondary unit selected</li>
+<li><span class="math inline">\(n\)</span> is the number of sampled primary units</li>
+<li><span class="math inline">\(m\)</span> is the number of sampled secondary units within primary</li>
 </ul>
 </div>
 </section>
-<section id="cost-evaluation-1" class="slide level2">
-<h2><span style="color:#078BCD;">Cost Evaluation</span></h2>
+<section id="minimum-variance" class="slide level2">
+<h2><span style="color:#078BCD;">Minimum variance</span></h2>
 <p>Minimum value of <span class="math inline">\(\sigma^2_{\hat{\tau}}\)</span> is</p>
 <p><span class="math display">\[
 \begin{align*}
-m_{\text{optimal}} &amp;= (\frac{c_1\sigma^2_w}{c_2(\sigma^2_b - \sigma^2_w/\bar{M)}})^{1/2}\\
+m_{\text{optimal}} &amp;= \sqrt(\frac{c_1\sigma^2_w}{c_2(\sigma^2_b - \sigma^2_w/\bar{M)}})\\\\
 \sigma^2_b &amp;= \frac{\sum_{i=1}^N(\mu_i-\mu)^2}{M-1}\\
 \sigma^2_w &amp;= \frac{1}{N}\sum_{i=1}^{N}\sigma_{i}^2\\
 \end{align*}
 \]</span></p>
+<ul>
+<li><span class="math inline">\(\sigma^2_b\)</span>: variance b/w primary units</li>
+<li><span class="math inline">\(\sigma^2_w\)</span>: mean within primary unit variance</li>
+<li><span class="math inline">\(\bar{M} =\)</span> average number of secondary units across PSU</li>
+</ul>
+</section>
+<section id="minimum-variance-1" class="slide level2">
+<h2><span style="color:#078BCD;">Minimum variance</span></h2>
+<p>Minimum value of <span class="math inline">\(\sigma^2_{\hat{\tau}}\)</span> is</p>
+<p><span class="math display">\[
+\begin{align*}
+m_{\text{optimal}} &amp;= \sqrt(\frac{c_1}{c_2}\times \frac{\sigma^2_w}{(\sigma^2_b - \sigma^2_w/\bar{M)}})\\\\
+\end{align*}
+\]</span> What ratio of costs would drive up <span class="math inline">\(m_{optimal}\)</span>?</p>
+</section>
+<section id="minimum-variance-2" class="slide level2">
+<h2><span style="color:#078BCD;">Minimum variance</span></h2>
+<p>Next, lets ignore costs.</p>
+<p><span class="math display">\[
+\begin{align*}
+m_{\text{optimal}}^2 &amp;= \frac{\sigma^2_w}{(\sigma^2_b - \sigma^2_w/\bar{M)}}
+\end{align*}
+\]</span></p>
+<ul>
+<li>How does the between and within variances affect our optimal <span class="math inline">\(m\)</span>?</li>
+<li>How does M affect our optimal <span class="math inline">\(m\)</span>?</li>
+<li>Generally, how would you investigation this?</li>
+</ul>
+</section>
+<section id="minimum-variance-3" class="slide level2">
+<h2><span style="color:#078BCD;">Minimum variance</span></h2>
+<p>Re-arranged…</p>
+<p><span class="math display">\[
+\begin{align*}
+m_{\text{optimal}}^2 &amp;= \frac{1}{\frac{\sigma^2_b}{\sigma^2_w}- \frac{1}{\bar{M}}}
+\end{align*}
+\]</span> - How does the between and within variances affect our optimal <span class="math inline">\(m\)</span>? - How does M affect our optimal <span class="math inline">\(m\)</span>?</p>
 
 
 </section>
