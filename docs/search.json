@@ -10644,14 +10644,14 @@
     "href": "FW552/Stratified.html#concept-1",
     "title": "",
     "section": "Concept",
-    "text": "Concept\n\n\n\ndefine strata (singular, strata)\nrandomly sample within each\ntry to create homogenous strata\nideally a higher sample size within strata with higher variance"
+    "text": "Concept\n\n\n\ndefine strata (singular, stratum)\nrandomly sample within ALL strata\ntry to create homogenous strata\nideally a higher sample size within strata with higher variance"
   },
   {
     "objectID": "FW552/Stratified.html#concept-2",
     "href": "FW552/Stratified.html#concept-2",
     "title": "",
     "section": "Concept",
-    "text": "Concept\n\n\n\nauxiliary information\ndepends on ability to select beneficial strata\nalmost always going to improve precision; unlikely to do worse\n\nallocate more samples to a stratum with low variance\n\n\n\n\n\n\nWhat are strata used in fish/wildlife studies?"
+    "text": "Concept\n\n\n\nauxiliary information\ndepends on ability to select beneficial strata\nalmost always going to improve precision; unlikely to do worse\n\nallocate more samples to a stratum to lower the overall variance\n\n\n\n\n\n\nWhat are strata used in fish/wildlife studies?"
   },
   {
     "objectID": "FW552/Stratified.html#boreal-toad-case-study",
@@ -10679,7 +10679,7 @@
     "href": "FW552/Stratified.html#boreal-toad-case-study-2",
     "title": "",
     "section": "Boreal Toad (Case Study)",
-    "text": "Boreal Toad (Case Study)\nHow may unique combinations?\nFirst strata\n\nL=3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(L,n_h)\n\n[1] 3\n\n\nSecond strata\n\nL=3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(L,n_h)\n\n[1] 3\n\n\nAll Combinations\n\nchoose(L,n_h)*choose(L,n_h)\n\n[1] 9"
+    "text": "Boreal Toad (Case Study)\nHow may unique combinations?\nFirst strata\n\nN_h = 3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(N_h,n_h)\n\n[1] 3\n\n\nSecond strata\n\nN_h=3; # num. of strata\nn_h = 2 # sample size of units within strata\nchoose(N_h,n_h)\n\n[1] 3\n\n\nAll Combinations\n\nchoose(N_h,n_h)*choose(N_h,n_h)\n\n[1] 9"
   },
   {
     "objectID": "FW552/Stratified.html#boreal-toad-case-study-3",
@@ -10784,14 +10784,14 @@
     "href": "FW552/Stratified.html#estimator",
     "title": "",
     "section": "Estimator",
-    "text": "Estimator\nWe sample \\(y_{ih}\\) within strata \\(h\\) from 1 … \\(L\\) and units \\(i\\) from 1 … \\(n_h\\).\n\\[\n\\hat{\\mu}_{h} = \\frac{1}{n_h} \\sum_{i=1}^{n_h} y_{hi}\n\\]\n\n\\[\n\\hat{\\mu}_{st} = \\frac{1}{N} \\sum_{h=1}^{L} N_{h}\\hat{\\mu}_{h}\n\\]"
+    "text": "Estimator\nWe sample \\(y_{ih}\\) within strata \\(h\\) from 1 … \\(L\\) and units \\(i\\) from 1 … \\(n_h\\).\n\\[\n\\bar{y}_{h} = \\hat{\\mu}_{h} = \\frac{1}{n_h} \\sum_{i=1}^{n_h} y_{hi}\n\\]\n\n\\[\n\\hat{\\mu}_{st} = \\frac{1}{N} \\sum_{h=1}^{L} N_{h}\\hat{\\mu}_{h}\n\\]"
   },
   {
     "objectID": "FW552/Stratified.html#estimator-1",
     "href": "FW552/Stratified.html#estimator-1",
     "title": "",
     "section": "Estimator",
-    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{h} = \\frac{1}{n_h -1} \\sum_{i=1}^{n_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{h}}{n_h}\n\\]"
+    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},h} = \\frac{1}{n_h -1} \\sum_{i=1}^{n_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{h}}{n_h}\n\\]"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-4",
@@ -10833,14 +10833,14 @@
     "href": "FW552/Stratified.html#summary",
     "title": "",
     "section": "Summary",
-    "text": "Summary\n\n\nUnits need a probability of being sampled but don’t need to be the same\nStratification requires accounting for within strata sample size (i.e., the weighting)\nStratification allocations allow us a means to reduce the population sampling distribution variance\nSampling an entire strata is perfectly fine\nConstruct strata so their averages are different as possible and their variances are as small as possible\nNeed at least \\(n_h \\geq 2\\) to estimate variability in a stratum"
+    "text": "Summary\n\nUnits need a probability of being sampled but don’t need to be the same\nStratification requires accounting for within strata sample size (i.e., the weighting)\nStratification allocations allow us a means to reduce the population sampling distribution variance\nSampling an entire strata is perfectly fine\nConstruct strata so their averages are different as possible and their variances are as small as possible\nNeed at least \\(n_h \\geq 2\\) to estimate variability in a stratum"
   },
   {
     "objectID": "FW552/Stratified.html#pseudo-random-sampling",
     "href": "FW552/Stratified.html#pseudo-random-sampling",
     "title": "",
     "section": "Pseudo Random Sampling",
-    "text": "Pseudo Random Sampling\n\nIn practice random sampling can be expensive; can feel wastefull\nStratification improves the ‘targetedness’ of sampling\nSometimes the samples per strata are random but then the selection of individuals or specific subplots within sampled strata are left to the observers to choose. (Quota Sampling)"
+    "text": "Pseudo Random Sampling\n\nIn practice random sampling can be expensive; can feel wasteful\nStratification improves the ‘targetedness’ of sampling\nSometimes the samples per strata are random but then the selection of individuals or specific subplots within sampled strata are left to the observers to choose. (Quota Sampling)"
   },
   {
     "objectID": "FW552/Stratified.html#quota-sampling",

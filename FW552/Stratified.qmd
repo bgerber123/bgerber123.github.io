@@ -57,8 +57,8 @@ How? Break our sampling frame into homogeneous parts.
 
 ::: {.column width="60%"}
 
-- define strata (singular, strata)
-- randomly sample within each
+- define strata (singular, stratum)
+- randomly sample within **ALL** strata
 - try to create homogenous strata
 - ideally a higher sample size within strata with higher variance
 
@@ -84,7 +84,7 @@ How? Break our sampling frame into homogeneous parts.
 - auxiliary information
 - depends on ability to select beneficial strata
 - almost always going to improve precision; unlikely to do worse
-    - allocate more samples to a stratum with low variance
+    - allocate more samples to a stratum to lower the overall variance
 
 :::
 
@@ -106,7 +106,7 @@ How? Break our sampling frame into homogeneous parts.
 We sample $y_{ih}$ within strata $h$ from 1 ... $L$ and units $i$ from 1 ... $n_h$.
 
 $$
-\hat{\mu}_{h} = \frac{1}{n_h} \sum_{i=1}^{n_h} y_{hi}
+\bar{y}_{h} = \hat{\mu}_{h} = \frac{1}{n_h} \sum_{i=1}^{n_h} y_{hi}
 $$
 
 <br>
@@ -118,7 +118,7 @@ $$
 ## [Estimator]{style="color:#078BCD;"}
 
 $$
-\hat{\sigma}^2_{h} = \frac{1}{n_h -1} \sum_{i=1}^{n_h}\left(y_{hi}-\hat{\mu}_{h}\right)^2
+\hat{\sigma}^2_{\hat{\mu},h} = \frac{1}{n_h -1} \sum_{i=1}^{n_h}\left(y_{hi}-\hat{\mu}_{h}\right)^2
 $$
 
 <br>
@@ -174,23 +174,23 @@ ponds %>%
 #### First strata
 
 ```{r, echo=TRUE}
-L=3; # num. of strata
+N_h = 3; # num. of strata
 n_h = 2 # sample size of units within strata
-choose(L,n_h)
+choose(N_h,n_h)
 ```
 
 #### Second strata
 
 ```{r, echo=TRUE}
-L=3; # num. of strata
+N_h=3; # num. of strata
 n_h = 2 # sample size of units within strata
-choose(L,n_h)
+choose(N_h,n_h)
 ```
 
 #### All Combinations
 
 ```{r, echo=TRUE}
-choose(L,n_h)*choose(L,n_h)
+choose(N_h,n_h)*choose(N_h,n_h)
 ```
 
 ## 
@@ -591,7 +591,7 @@ $$
 
 ## [Pseudo Random Sampling]{style="color:#078BCD;"}
 
-- In practice random sampling can be expensive; can feel wastefull
+- In practice random sampling can be expensive; can feel wasteful
 - Stratification improves the 'targetedness' of sampling
 - Sometimes the samples per strata are random but then the selection of individuals or specific subplots within sampled strata are left to the observers to choose. (`Quota Sampling`)
 
@@ -613,7 +613,7 @@ $$
 
 ## [Summary]{style="color:#078BCD;"}
 
-. . .
+:::{.incremental}
 
 - Units need a probability of being sampled but don't need to be the same
 - Stratification requires accounting for within strata sample size (i.e., the weighting)
@@ -622,7 +622,7 @@ $$
 - Construct strata so their averages are different as possible and their variances are as small as possible
 - Need at least $n_h \geq 2$ to estimate variability in a stratum
 
-
+:::
 
 
 
