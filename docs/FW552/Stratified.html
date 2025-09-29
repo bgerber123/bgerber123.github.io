@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.32">
 
-  <title>Brian D. Gerber – quarto-inputccede3c97cb0226f</title>
+  <title>Brian D. Gerber – quarto-input2c1ff6edd5543171</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -273,7 +273,7 @@ code.r{
 \]</span></p>
 <p><br></p>
 <p><span class="math display">\[
-\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{\hat{\mu},h}}{n_h}
 \]</span></p>
 </section>
 <section id="boreal-toad-case-study" class="slide level2">
@@ -649,7 +649,7 @@ code.r{
 <p><em>Sample Size per Strata</em></p>
 <ul>
 <li class="fragment">uniform distribution; <span class="math inline">\(n_1 = 2 ; n_2 = 2\)</span></li>
-<li class="fragment">variable distribution; e.g., <span class="math inline">\(n_1 = 1 ; n_2 = 3\)</span>
+<li class="fragment">variable distribution; e.g., <span class="math inline">\(n_1 = 3 ; n_2 = 1\)</span>
 <ul>
 <li class="fragment">allocation proportional to size (e.g.&nbsp;area): <span class="math inline">\(n_h = \frac{nN_h}{N}\)</span></li>
 <li class="fragment">optimal allocation for fixed <span class="math inline">\(n\)</span>: <span class="math inline">\(n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k\sigma_k}\)</span></li>
@@ -871,7 +871,7 @@ code.r{
 <ul>
 <li>Estimator population means is still unbisaed
 <ul>
-<li><span class="math inline">\(E[\hat{\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \mu\)</span></li>
+<li><span class="math inline">\(E[\hat{\mu}_{st}] = (6.333 + 8.333 + 9.333) / 3 = 8 = \mu\)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -1072,7 +1072,7 @@ code.r{
 <li class="fragment">Stratification requires accounting for within strata sample size (i.e., the weighting)</li>
 <li class="fragment">Stratification allocations allow us a means to reduce the population sampling distribution variance</li>
 <li class="fragment">Sampling an entire strata is perfectly fine</li>
-<li class="fragment">Construct strata so their averages are different as possible and their variances are as small as possible</li>
+<li class="fragment">Construct strata so their averages are different as possible and their variances are as small as possible (i.e., approx. homogenous)</li>
 <li class="fragment">Need at least <span class="math inline">\(n_h \geq 2\)</span> to estimate variability in a stratum</li>
 </ul>
 

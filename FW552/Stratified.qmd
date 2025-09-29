@@ -125,7 +125,7 @@ $$
 
 
 $$
-\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{h}}{n_h}
+\hat{\sigma}^2_{\hat{\mu},st} = \sum_{h=1}^{L} \left(\frac{N_h}{N}\right)^2 \frac{N_h-n_h}{N_h}\frac{\hat{\sigma}^2_{\hat{\mu},h}}{n_h}
 $$
 
 
@@ -363,7 +363,7 @@ text(7,6,"ALL UNBIASED ESTIMATORS",cex=3,col=1)
 :::{.incremental}
 
 - uniform distribution; $n_1 = 2 ; n_2 = 2$
-- variable distribution; e.g., $n_1 = 1 ; n_2 = 3$ 
+- variable distribution; e.g., $n_1 = 3 ; n_2 = 1$ 
     - allocation proportional to size (e.g. area): $n_h = \frac{nN_h}{N}$
     - optimal allocation for fixed $n$: $n_h = \frac{nN_h\sigma_h}{\sum_{k=1}^L N_k\sigma_k}$
 
@@ -509,7 +509,7 @@ comb.strats2 %>%
 . . .
 
 - Estimator population means is still unbisaed
-    - $E[\hat{\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \mu$
+    - $E[\hat{\mu}_{st}] = (6.333 + 8.333 + 9.333) / 3 = 8 = \mu$
 
 
 ## [SRS Estimator]{style="color:#078BCD;"}
@@ -619,7 +619,7 @@ $$
 - Stratification requires accounting for within strata sample size (i.e., the weighting)
 - Stratification allocations allow us a means to reduce the population sampling distribution variance
 - Sampling an entire strata is perfectly fine
-- Construct strata so their averages are different as possible and their variances are as small as possible
+- Construct strata so their averages are different as possible and their variances are as small as possible (i.e., approx. homogenous)
 - Need at least $n_h \geq 2$ to estimate variability in a stratum
 
 :::

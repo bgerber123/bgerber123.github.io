@@ -10749,7 +10749,7 @@
     "href": "FW552/Stratified.html#stratification-allocation",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\nSample Size per Strata\n\nuniform distribution; \\(n_1 = 2 ; n_2 = 2\\)\nvariable distribution; e.g., \\(n_1 = 1 ; n_2 = 3\\)\n\nallocation proportional to size (e.g. area): \\(n_h = \\frac{nN_h}{N}\\)\noptimal allocation for fixed \\(n\\): \\(n_h = \\frac{nN_h\\sigma_h}{\\sum_{k=1}^L N_k\\sigma_k}\\)"
+    "text": "Stratification Allocation\nSample Size per Strata\n\nuniform distribution; \\(n_1 = 2 ; n_2 = 2\\)\nvariable distribution; e.g., \\(n_1 = 3 ; n_2 = 1\\)\n\nallocation proportional to size (e.g. area): \\(n_h = \\frac{nN_h}{N}\\)\noptimal allocation for fixed \\(n\\): \\(n_h = \\frac{nN_h\\sigma_h}{\\sum_{k=1}^L N_k\\sigma_k}\\)"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-1",
@@ -10770,7 +10770,7 @@
     "href": "FW552/Stratified.html#stratification-allocation-3",
     "title": "",
     "section": "Stratification Allocation",
-    "text": "Stratification Allocation\nReverse the situation- allocate more samples to the least variable stratum\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\n\n\nSample\nS1.1\nS2.1\nS2.2\nS2.3\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nD\nE\nF\n2\n10.66667\n6.333333\n\n\n2\nB\nD\nE\nF\n6\n10.66667\n8.333333\n\n\n3\nC\nD\nE\nF\n8\n10.66667\n9.333333\n\n\n\n\n\n\n\ncompared to population means of 7.6, 7.6, and 8.6\n\n\n\n\nEstimator population means is still unbisaed\n\n\\(E[\\hat{\\mu}_{st}] = 6.3333 + 8.33333 + 9.3333 = 8 = \\mu\\)"
+    "text": "Stratification Allocation\nReverse the situation- allocate more samples to the least variable stratum\n\n\n\n\n\nPond\negg.mass\nstrata\n\n\n\n\nA\n2\n1\n\n\nB\n6\n1\n\n\nC\n8\n1\n\n\nD\n10\n2\n\n\nE\n10\n2\n\n\nF\n12\n2\n\n\n\n\n\n\n\n\n\n\nSample\nS1.1\nS2.1\nS2.2\nS2.3\nMean.S1\nMean.S2\npop.means\n\n\n\n\n1\nA\nD\nE\nF\n2\n10.66667\n6.333333\n\n\n2\nB\nD\nE\nF\n6\n10.66667\n8.333333\n\n\n3\nC\nD\nE\nF\n8\n10.66667\n9.333333\n\n\n\n\n\n\n\ncompared to population means of 7.6, 7.6, and 8.6\n\n\n\n\nEstimator population means is still unbisaed\n\n\\(E[\\hat{\\mu}_{st}] = (6.333 + 8.333 + 9.333) / 3 = 8 = \\mu\\)"
   },
   {
     "objectID": "FW552/Stratified.html#concept-4",
@@ -10791,7 +10791,7 @@
     "href": "FW552/Stratified.html#estimator-1",
     "title": "",
     "section": "Estimator",
-    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},h} = \\frac{1}{n_h -1} \\sum_{i=1}^{n_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{h}}{n_h}\n\\]"
+    "text": "Estimator\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},h} = \\frac{1}{n_h -1} \\sum_{i=1}^{n_h}\\left(y_{hi}-\\hat{\\mu}_{h}\\right)^2\n\\]\n\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu},st} = \\sum_{h=1}^{L} \\left(\\frac{N_h}{N}\\right)^2 \\frac{N_h-n_h}{N_h}\\frac{\\hat{\\sigma}^2_{\\hat{\\mu},h}}{n_h}\n\\]"
   },
   {
     "objectID": "FW552/Stratified.html#stratification-allocation-4",
@@ -10833,7 +10833,7 @@
     "href": "FW552/Stratified.html#summary",
     "title": "",
     "section": "Summary",
-    "text": "Summary\n\nUnits need a probability of being sampled but don’t need to be the same\nStratification requires accounting for within strata sample size (i.e., the weighting)\nStratification allocations allow us a means to reduce the population sampling distribution variance\nSampling an entire strata is perfectly fine\nConstruct strata so their averages are different as possible and their variances are as small as possible\nNeed at least \\(n_h \\geq 2\\) to estimate variability in a stratum"
+    "text": "Summary\n\nUnits need a probability of being sampled but don’t need to be the same\nStratification requires accounting for within strata sample size (i.e., the weighting)\nStratification allocations allow us a means to reduce the population sampling distribution variance\nSampling an entire strata is perfectly fine\nConstruct strata so their averages are different as possible and their variances are as small as possible (i.e., approx. homogenous)\nNeed at least \\(n_h \\geq 2\\) to estimate variability in a stratum"
   },
   {
     "objectID": "FW552/Stratified.html#pseudo-random-sampling",
