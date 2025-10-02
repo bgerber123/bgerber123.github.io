@@ -39,12 +39,12 @@ n
 # N = number of areas in a lake with bass = 200
 # Abs. difference (d) is 10
 # 95% confidence, $\alpha = 0.05$
-# sigma^2 could range from 10 to 200
+# sigma could range from 10 to 200
 
 N = 200
 n = 10
 z = qnorm(1-alpha/2)
-sigma = seq(10,100,by=0.1)
+sigma = seq(10,100,by=1)
 sigma2=sigma^2
 
 inputs= expand.grid(n,sigma2,z,N)
@@ -59,7 +59,7 @@ inputs$N = N
 # same equation, the 2nd one is direct from the book
 
 d.fn = function(inputs){
-  sqrt( ((inputs[3]*inputs[2])/inputs[1]) - ((inputs[3]^2*inputs[2])/inputs[4]))
+  sqrt( ((inputs[3]^2*inputs[2])/inputs[1]) - ((inputs[3]^2*inputs[2])/inputs[4]))
   
 }
 
@@ -70,6 +70,9 @@ head(inputs)
 
 #worse case for d is 42.05 or 42
 max(inputs$d)
+which.max(inputs$d)
+
+inputs[91:nrow(inputs),]
 
 plot(sigma,inputs$d)
 
@@ -82,3 +85,12 @@ sqrt((1.96^2*10)/12 - (1.96^2*10)/100)
 
 1.96*sqrt((100-12)/100 * (10/12))
 
+1.96*sqrt(10)*sqrt((1/12)-(1/100))
+
+
+#
+sqrt((1.96^2*100^2)/10 - (1.96^2*100^2)/200)
+
+1.96*100*sqrt((1/10)-(1/200))
+
+z * sqrt(((N-n)/N) * sigma2/n)
