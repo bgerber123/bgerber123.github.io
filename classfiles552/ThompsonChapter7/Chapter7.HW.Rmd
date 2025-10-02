@@ -1,0 +1,86 @@
+---
+title: "Beetle / Cover Study"
+author: "Brian Gerber"
+date: "2025-10-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+### Load data and plot relationships
+
+```{r}
+dat1 = read.csv("BeetleCover.Study1.csv",colClasses = c("character","numeric","numeric"))
+dat2 = read.csv("BeetleCover.Study2.csv",colClasses = c("character","numeric","numeric"))
+```
+
+### Plot for study 1
+
+```{r}
+index1=which(!is.na(dat1$beetle.count))
+plot(dat1$cover[index1],dat1$beetle.count[index1],xlim=c(0,100),
+     ylim=c(0,max(dat1$beetle.count[index1]+10)))
+abline(a = 0, b = 1, col = "red", lty = 2, lwd = 2)
+cor(dat1$cover[index1],dat1$beetle.count[index1])
+```
+
+Shows clear correlation which will make a ratio estimator lead to a more precise variance of the population mean.
+
+Also, it is reasonable to assume that when there is no cover, there are no beetles. Thus, assuming
+
+### Plot for study 2
+
+```{r}
+index2=which(!is.na(dat2$beetle.count))
+plot(dat2$cover[index2],dat2$beetle.count[index2],xlim=c(0,100),
+     ylim=c(0,max(dat2$beetle.count[index2]+10)))
+abline(a = 0, b = 1, col = "red", lty = 2, lwd = 2)
+cor(dat2$cover[index2],dat2$beetle.count[index2])
+```
+
+In study 2, there is not correlation which suggests the ratio estimator will not be an improvement over relying on the sample average.
+
+### Study 1
+
+**Study 1 Mean Estimate**
+
+```{r}
+mu.x = mean(dat1$cover)
+r = mean(dat1$beetle.count[index1])/mean(dat1$cover[index2])
+pop.mean = r * mu.x
+pop.mean
+```
+
+**Study 1 Variance Estimate**
+
+```{r}
+n=length(dat1$beetle.count[index1])
+sample.var = 1/(n) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)
+N=nrow(dat1)
+population.mean.var = (N-n)/N * (sample.var/n)
+population.mean.var
+```
+
+
+### Study 2
+
+
+**Study 2 Mean Estimate**
+
+```{r}
+pop.mu.est = mean(dat2$beetle.count[index2])
+```
+
+**Study 2 Variance Estimate**
+
+```{r}
+sampl.var = var(dat2$beetle.count[index2])
+var.pop.mu = (N-n)/N * sampl.var/n
+var.pop.mu
+```
+
+

@@ -1,0 +1,17 @@
+{
+  "hash": "46ff471156d09b363d86a9f3f630f8ef",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Beetle / Cover Study\"\nauthor: \"Brian Gerber\"\ndate: \"2025-10-02\"\noutput: html_document\n---\n\n\n\n## R Markdown\n\n### Load data and plot relationships\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndat1 = read.csv(\"BeetleCover.Study1.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\ndat2 = read.csv(\"BeetleCover.Study2.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\n```\n:::\n\n\n### Plot for study 1\n\n\n::: {.cell}\n\n```{.r .cell-code}\nindex1=which(!is.na(dat1$beetle.count))\nplot(dat1$cover[index1],dat1$beetle.count[index1],xlim=c(0,100),\n     ylim=c(0,max(dat1$beetle.count[index1]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n```\n\n::: {.cell-output-display}\n![](Chapter7.HW_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n\n```{.r .cell-code}\ncor(dat1$cover[index1],dat1$beetle.count[index1])\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.9625172\n```\n\n\n:::\n:::\n\n\nShows clear correlation which will make a ratio estimator lead to a more precise variance of the population mean.\n\nAlso, it is reasonable to assume that when there is no cover, there are no beetles. Thus, assuming\n\n### Plot for study 2\n\n\n::: {.cell}\n\n```{.r .cell-code}\nindex2=which(!is.na(dat2$beetle.count))\nplot(dat2$cover[index2],dat2$beetle.count[index2],xlim=c(0,100),\n     ylim=c(0,max(dat2$beetle.count[index2]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n```\n\n::: {.cell-output-display}\n![](Chapter7.HW_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n\n```{.r .cell-code}\ncor(dat2$cover[index2],dat2$beetle.count[index2])\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.0186129\n```\n\n\n:::\n:::\n\n\nIn study 2, there is not correlation which suggests the ratio estimator will not be an improvement over relying on the sample average.\n\n### Study 1\n\n**Study 1 Mean Estimate**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmu.x = mean(dat1$cover)\nr = mean(dat1$beetle.count[index1])/mean(dat1$cover[index2])\npop.mean = r * mu.x\npop.mean\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 52.44248\n```\n\n\n:::\n:::\n\n\n**Study 1 Variance Estimate**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nn=length(dat1$beetle.count[index1])\nsample.var = 1/(n) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)\nN=nrow(dat1)\npopulation.mean.var = (N-n)/N * (sample.var/n)\npopulation.mean.var\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 23.90121\n```\n\n\n:::\n:::\n\n\n\n### Study 2\n\n\n**Study 2 Mean Estimate**\n\n\n::: {.cell}\n\n```{.r .cell-code}\npop.mu.est = mean(dat2$beetle.count[index2])\n```\n:::\n\n\n**Study 2 Variance Estimate**\n\n\n::: {.cell}\n\n```{.r .cell-code}\nsampl.var = var(dat2$beetle.count[index2])\nvar.pop.mu = (N-n)/N * sampl.var/n\nvar.pop.mu\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 1.636202\n```\n\n\n:::\n:::\n\n\n\n",
+    "supporting": [
+      "Chapter7.HW_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

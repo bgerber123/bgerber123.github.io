@@ -1,0 +1,289 @@
+---
+title: <span style="color:white">Ratio Estimation <br>(precise auxillary information)</span>
+title-slide-attributes:
+  data-background-image: /img/forestfloor.jpg
+  background-opacity: "0.45"
+format:
+  revealjs:
+    scrollable: true
+#    slide-level: 1
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
+---
+
+
+## [Auxillary Information]{style="color:#078BCD;"}
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+```{r knitr, echo=FALSE,results='hide'}
+library(tidyverse)
+library(kableExtra)
+library(magrittr)
+library(knitr)
+
+#knitr::purl(input="../FW552/Ratio.qmd",output="../FW552/Ratio.r")
+```
+
+- stratification used coarse aux. information to improve estimator precision
+    - groupings
+- Can we use continuous aux. information?
+    - Ratio Estimator
+
+
+## [Fundamental Information]{style="color:#078BCD;"}
+
+- We sample via probabilistic sampling and observe our primary variable of interest ($y_i$)
+- We also record a secondary variable - that correlates with the primary ($x_i$)
+- We also know the true population mean/total for the secondary variable ($\mu_x$)
+
+## [Is this useful to us??]{style="color:#078BCD;"}
+
+**Relevant Wildlife/Fish/Habitat studies???**
+
+## [Example]{style="color:#078BCD;"}
+
+::: {.r-fit-text}
+We take morphometric data on all Lowland Tree Kangaroos in a forest of Papua New Guinea (6 individuals). 
+
+However, what if you end up releasing 2 individuals before getting their weight, but all individuals height was measured.
+:::
+
+![](..\img\treekang.png)
+
+**What was the mean weight of all individuals in the forest?**
+
+## [Example (truth)]{style="color:#078BCD;"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+tk =data.frame(Indiv=1:6,
+               height = c(32,24,28,20,36,25), #inches
+               weight = c(25,20,26,13,33,26) #pounds
+               )
+
+mu.weight = mean(tk$weight)
+mu.height = mean(tk$height)
+
+tk %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r, fig.width=6}
+par(cex.lab=1.5,cex.main=1.5,cex=1.5)
+plot(tk$height,tk$weight,xlab="Height (in)",ylab="Weight (lbs)",pch=18,cex=2)
+```
+
+:::
+
+::::
+
+$\mu_{weight} =$ `r mu.weight`
+
+$\mu_{height} =$ `r mu.height`
+
+## [Example (samples)]{style="color:#078BCD;"}
+
+**Weight**
+
+```{r}
+indiv.index=t(utils::combn(1:6,4))
+
+weight.all=data.frame(cbind(
+            matrix(1:15,ncol=1),
+            matrix(tk$weight[indiv.index],ncol=4,byrow = TRUE)))
+
+weight.all$means = apply(weight.all[,-1],1,mean)
+
+colnames(weight.all)=c("Sample.Number","Indiv.1","Indiv.2","Indiv.3","Indiv.4","means")
+
+weight.all %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+```
+
+$E[\hat{\mu}_{weight}] =$ `r mean(weight.all$means)` $=\mu_{weight}$ 
+
+## [Example (samples)]{style="color:#078BCD;"}
+
+**Height**
+
+```{r}
+indiv.index=t(utils::combn(1:6,4))
+
+height.all=data.frame(cbind(
+            matrix(1:15,ncol=1),
+            matrix(tk$height[indiv.index],ncol=4,byrow = TRUE)))
+
+height.all$means = apply(height.all[,-1],1,mean)
+
+colnames(height.all)=c("Sample.Number","Indiv.1","Indiv.2","Indiv.3","Indiv.4","means")
+
+height.all %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+```
+
+$E[\hat{\mu}_{height}] =$ `r mean(height.all$means)` $=\mu_{height}$ 
+
+
+## [Ratio Estimator of population mean]{style="color:#078BCD;"}
+
+$\hat{\mu}_{r}$ = sample ratio $\times$ population mean of aux
+
+. . .
+
+$\hat{\mu}_{r}$ = sample primary mean / sample aux. mean $\times$ population mean of aux
+. . .
+
+$\hat{\mu}_{r}$ = $r \times \mu_{x}$ 
+
+. . .
+
+$\mu_{x} = \frac{\sum_{i=1}^N x_i}{N}$
+
+. . .
+
+$\hat{r} = \frac{\sum_{i=1}^n y_i}{\sum_{i=1}^n x_i} = \frac{\hat{\mu}_{primary}}{\hat{\mu}_{secondary}} =\frac{\hat{\mu}_{weight}}{\hat{\mu}_{height}}= \frac{\bar{y}}{\bar{x}}$ 
+
+## [Ratio Estimator of population mean]{style="color:#078BCD;"}
+
+$$
+\hat{\sigma}^2_{\hat{\mu_r}} = \left(\frac{N-n}{N}\right)\frac{\hat{\sigma}^2_r}{n}
+$$
+
+$$
+\hat{\sigma}^2_r = \frac{1}{n-1}\sum_{i=1}^n\left(y_i-rx_i\right)^2
+$$
+
+## [Example (ratio estimator)]{style="color:#078BCD;"}
+
+```{r}
+
+ratio.df = data.frame(cbind(
+            matrix(1:15,ncol=1),
+            height.all$means,
+            weight.all$means),
+            weight.all$means/height.all$means*mu.height)
+colnames(ratio.df)=c("Sample.Number","Primary.Weight","Aux.Height", "Ratio")
+
+ratio.mean = mean(ratio.df$Ratio)
+
+ratio.df %>% 
+  kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
+
+```
+
+$E[\hat{\mu}_{r}] =$ `r ratio.mean` $\neq$ 23.83333
+
+
+## [Comparisons]{style="color:#078BCD;"}
+
+```{r,echo=FALSE}
+#calculate expected variance for the weight
+exp.sample.var = mean(apply(weight.all[,c(2,3,4,5)],1,var)/4 * (1-4/6))
+
+#calculate expected variance of ratio estimator
+y=as.matrix(weight.all[,c(2,3,4,5)])
+x=as.matrix(height.all[,c(2,3,4,5)])
+ratio.var=rep(0,nrow(y))
+for(i in 1:nrow(y)){
+ratio.var[i] = 1/(4-1)*sum((y[i,]- (mean(y[i,])/mean(x[i,]))*x[i,])^2)
+}
+var.pop.mean = ((6-4)/6)*(ratio.var/4)
+
+exp.ratio.var= mean(var.pop.mean)
+```
+
+- Sample average of primary (weight) is unbiased
+    - min: `r min(weight.all$means)` 
+    - max: `r max(weight.all$means)` 
+    - Exp.Var: `r exp.sample.var`
+- Ratio estimator of primary (weight) is biased 
+    - min: `r min(ratio.df$Ratio)` 
+    - max: `r max(ratio.df$Ratio)`
+    - Exp.Var: `r exp.ratio.var`
+
+## [Considerations]{style="color:#078BCD;"}
+
+**Ratio Estimator**
+
+- design based 
+- estimators are not unbiased (almost at large sample size; Thompson, Ch. 7)
+- improves precision
+- depends on linear correlation b/w primary and auxiliary information
+- requires: when $x_i = 0$ then $y_i=0$; i.e., intercept is zero
+- rarely do we measure one thing when sampling 
+
+## [Classic Example]{style="color:#078BCD;"}
+
+### Pierre-Simon Laplace
+
+- Wanted a census of France in 1802
+    - Primary: Population Size
+    - Auxiliary: Births
+- Had all birth records from church records
+- Sampled 30 communities and calculated a total of 2,037,615 people
+with 71,866 births
+    - 2,037,615/71,866 = 28.35 people per birth
+- Reasoned he could multiply the population number of births by 28.35 to obtain an estimate of population size.
+
+
+## [Classic Wildlife Example]{style="color:#078BCD;"}
+
+Estimating total population 
+
+:::{.incremental}
+- We mark and release $n_1$ individuals
+- We go and recapture the same population, catching $n_2$ individuals
+- The number of marked individuals caught again is $m_2$
+- Assume equal catchability of individuals and by sample 
+:::
+
+. . .
+
+$$
+\frac{m_2}{n_2} = \frac{n_1}{N}
+$$
+. . .
+
+**Lincoln-Peterson Abundance Estimator**
+
+
+## [Classic Wildlife Example]{style="color:#078BCD;"}
+
+$$
+\hat{N} = \frac{n_1n_2}{m_2}
+$$
+. . .
+
+$$
+\hat{N} = \frac{n_1}{\hat{p}}
+$$
+$$
+\hat{p} = \frac{m_2}{n_2}
+$$
+
+## [Classic Wildlife Example]{style="color:#078BCD;"}
+
+![](../img/LP.estimator.png)

@@ -8495,14 +8495,14 @@
     "href": "FW552/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, OCt 29)\n\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "href": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, OCt 29)\n\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#assigned-groups",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\n\n\n\n10\nMo\n27-Oct\nDouble Sampling\n\n\n\n\n \nWe\n29-Oct\nAdaptive Cluster Sampling\n\n\n\n\n11\nMo\n3-Nov\nReview\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference\n\n\n\n\n \nWe\n19-Nov\nPaper Discussion\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\n\n\n\n10\nMo\n27-Oct\nRatio Estimator\nAssignment Ch. 7\nCollins 2007\n\n\n \nWe\n29-Oct\nAdaptive Cluster Sampling\n\n\n\n\n11\nMo\n3-Nov\nReview\n\n\n\n\n \nWe\n5-Nov\nDesign I\n\n\n\n\n12\nMo\n10-Nov\nDesign II\n\n\n\n\n \nWe\n12-Nov\nDesign III\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference\n\n\n\n\n \nWe\n19-Nov\nPaper Discussion\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9020,14 +9020,14 @@
     "href": "FW552/week10.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture (updated) \nIPM Script \n\n\nReadings for next class:\n\nMcCaffery et al. 2016 \nKery and Kellner ch20 (section 20.1) \n\n\nBackground Reading (not required):\n\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Huggler et al. 2022 \n Wittemyer et al. 2019"
+    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\n\n\n\n\n\n\n\nIn Class Discussion of Collins 2007"
   },
   {
     "objectID": "FW552/week10.html#week-10",
     "href": "FW552/week10.html#week-10",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture (updated) \nIPM Script \n\n\nReadings for next class:\n\nMcCaffery et al. 2016 \nKery and Kellner ch20 (section 20.1) \n\n\nBackground Reading (not required):\n\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Huggler et al. 2022 \n Wittemyer et al. 2019"
+    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\n\n\n\n\n\n\n\nIn Class Discussion of Collins 2007"
   },
   {
     "objectID": "FW552/week12.html",
@@ -12234,5 +12234,152 @@
     "title": "Chapter 13 Problem",
     "section": "",
     "text": "A population consists of N = 10 primary units, each of which consists of Mi = 6 secondary units. A two-stage sampling design selects 2 primary units by simple random sampling (without replacement) and 3 secondary units from each selected primary unit, also by simple random sampling. The observed values of the variable of interest are 7, 5, 3 from the first primary unit selected and 4, 2, 3 from the second primary unit selected.\n\n\nN = 10 # Total Primary Units\nn = 2  # sampled primary units\nM = 6  # Total secondary units per primary unit\nm = 3  # Sampled secondary units per primary\n\n# Data for primary unit 1\ny1 = c(7,5,3)\n\n# Data for primary unit 2\ny2 = c(4,2,3)\n\n#Estimate the total of each primary unit\n sample.total.1 = M/m*sum(y1)\n sample.total.1\n\n[1] 30\n\n sample.total.2 = M/m*sum(y2)\n sample.total.2\n\n[1] 18\n\n# Estimate the population total\n\ntau.hat = (N/n)*(sample.total.1+sample.total.2)\ntau.hat\n\n[1] 240\n\n# Mean per primary unit\n\nmu.primary =tau.hat/N\n\n\n\n# Sample variance between primary units\n\ns2.between = 1/(n-1)*((sample.total.1-mu.primary)^2+(sample.total.1-mu.primary)^2)\n\ns2.within.1 = 1/(m-1)*sum((y1-mean(y1))^2)\ns2.within.2 = 1/(m-1)*sum((y2-mean(y2))^2)\n\nvar.tau = N*(N-n)*(s2.between/n)  + (N/n)*(  M*(M-m)*(s2.within.1/m)  +  M*(M-m)*(s2.within.2/m) )\n\nvar.tau\n\n[1] 3030"
+  },
+  {
+    "objectID": "FW552/Ratio.html#ratio",
+    "href": "FW552/Ratio.html#ratio",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Ratio",
+    "text": "Ratio"
+  },
+  {
+    "objectID": "FW552/Ratio.html#auxillary-information",
+    "href": "FW552/Ratio.html#auxillary-information",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Auxillary Information",
+    "text": "Auxillary Information\n\n\nstratification used coarse aux. information to improve estimator precision\n\ngroupings\n\nCan we use continuous aux. information?\n\nRatio Estimator"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example",
+    "href": "FW552/Ratio.html#example",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example",
+    "text": "Example\n\nWe take morphometric data on all Lowland Tree Kangaroos in a forest of Papua New Guinea (6 individuals).\nHowever, what if you end up releasing 2 individuals before getting their weight, but all individuals height was measured.\n\n\nWhat was the mean weight of all individuals in the forest?"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example-1",
+    "href": "FW552/Ratio.html#example-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example",
+    "text": "Example\n\n\n\n\n\n\n\nIndiv\nheight\nweight\n\n\n\n\n1\n32\n25\n\n\n2\n24\n20\n\n\n3\n28\n26\n\n\n4\n20\n13\n\n\n5\n36\n33\n\n\n6\n25\n26"
+  },
+  {
+    "objectID": "FW552/Ratio.html#fundamental-information",
+    "href": "FW552/Ratio.html#fundamental-information",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Fundamental Information",
+    "text": "Fundamental Information\n\nWe sample via probabilistic sampling and observe our primary variable of interest (\\(y_i\\))\nWe also record a secondary variable - that correlates with the primary (\\(x_i\\))\nWe also know the true population mean/total for the secondary variable (\\(\\mu_x\\))"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example-truth",
+    "href": "FW552/Ratio.html#example-truth",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example (truth)",
+    "text": "Example (truth)\n\n\n\n\n\n\n\nIndiv\nheight\nweight\n\n\n\n\n1\n32\n25\n\n\n2\n24\n20\n\n\n3\n28\n26\n\n\n4\n20\n13\n\n\n5\n36\n33\n\n\n6\n25\n26\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\mu_{weight} =\\) 23.8333333\n\\(\\mu_{height} =\\) 27.5"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example-samples",
+    "href": "FW552/Ratio.html#example-samples",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example (samples)",
+    "text": "Example (samples)\nWeight\n\n\n\n\n\nSample.Number\nIndiv.1\nIndiv.2\nIndiv.3\nIndiv.4\nmeans\n\n\n\n\n1\n25\n25\n25\n25\n25.00\n\n\n2\n25\n25\n25\n25\n25.00\n\n\n3\n25\n25\n20\n20\n22.50\n\n\n4\n20\n20\n26\n20\n21.50\n\n\n5\n20\n20\n20\n20\n20.00\n\n\n6\n20\n26\n26\n26\n24.50\n\n\n7\n13\n26\n26\n26\n22.75\n\n\n8\n13\n13\n26\n26\n19.50\n\n\n9\n26\n13\n13\n33\n21.25\n\n\n10\n13\n13\n33\n33\n23.00\n\n\n11\n13\n13\n33\n33\n23.00\n\n\n12\n33\n13\n33\n26\n26.25\n\n\n13\n33\n26\n26\n33\n29.50\n\n\n14\n26\n26\n26\n33\n27.75\n\n\n15\n26\n26\n26\n26\n26.00\n\n\n\n\n\n\\(E[\\hat{\\mu}_{weight}] =\\) 23.8333333 \\(=\\mu_{weight}\\)"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example-samples-1",
+    "href": "FW552/Ratio.html#example-samples-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example (samples)",
+    "text": "Example (samples)\nHeight\n\n\n\n\n\nSample.Number\nIndiv.1\nIndiv.2\nIndiv.3\nIndiv.4\nmeans\n\n\n\n\n1\n32\n32\n32\n32\n32.00\n\n\n2\n32\n32\n32\n32\n32.00\n\n\n3\n32\n32\n24\n24\n28.00\n\n\n4\n24\n24\n28\n24\n25.00\n\n\n5\n24\n24\n24\n24\n24.00\n\n\n6\n24\n28\n28\n28\n27.00\n\n\n7\n20\n28\n28\n28\n26.00\n\n\n8\n20\n20\n28\n28\n24.00\n\n\n9\n28\n20\n20\n36\n26.00\n\n\n10\n20\n20\n36\n36\n28.00\n\n\n11\n20\n20\n36\n36\n28.00\n\n\n12\n36\n20\n36\n25\n29.25\n\n\n13\n36\n25\n25\n36\n30.50\n\n\n14\n25\n25\n25\n36\n27.75\n\n\n15\n25\n25\n25\n25\n25.00\n\n\n\n\n\n\\(E[\\hat{\\mu}_{height}] =\\) 27.5 \\(=\\mu_{height}\\)"
+  },
+  {
+    "objectID": "FW552/Ratio.html#ratio-estimator",
+    "href": "FW552/Ratio.html#ratio-estimator",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Ratio Estimator",
+    "text": "Ratio Estimator\n\\(\\hat{\\mu}_{r}\\) = sample ratio \\(\\times\\) population ratio\n\n\\(\\hat{\\mu}_{r}\\) = \\(r \\times \\mu_{x}\\)\n\n\n\\(\\hat{r} = \\frac{\\sum_{i=1}^n y_i}{\\sum_{i=1}^n x_i} = \\frac{\\hat{\\mu}_{primary}}{\\hat{\\mu}_{secondary}} =\\frac{\\hat{\\mu}_{weight}}{\\hat{\\mu}_{height}}= \\frac{\\bar{y}}{\\bar{x}}\\)"
+  },
+  {
+    "objectID": "FW552/Ratio.html#example-ratio-estimator",
+    "href": "FW552/Ratio.html#example-ratio-estimator",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Example (ratio estimator)",
+    "text": "Example (ratio estimator)\n\n\n\n\n\nSample.Number\nPrimary.Weight\nAux.Height\nRatio\n\n\n\n\n1\n32.00\n25.00\n21.48438\n\n\n2\n32.00\n25.00\n21.48438\n\n\n3\n28.00\n22.50\n22.09821\n\n\n4\n25.00\n21.50\n23.65000\n\n\n5\n24.00\n20.00\n22.91667\n\n\n6\n27.00\n24.50\n24.95370\n\n\n7\n26.00\n22.75\n24.06250\n\n\n8\n24.00\n19.50\n22.34375\n\n\n9\n26.00\n21.25\n22.47596\n\n\n10\n28.00\n23.00\n22.58929\n\n\n11\n28.00\n23.00\n22.58929\n\n\n12\n29.25\n26.25\n24.67949\n\n\n13\n30.50\n29.50\n26.59836\n\n\n14\n27.75\n27.75\n27.50000\n\n\n15\n25.00\n26.00\n28.60000\n\n\n\n\n\n\\(E[\\hat{\\mu}_{r}] =\\) 23.8683977 \\(\\neq\\) 23.83333"
+  },
+  {
+    "objectID": "FW552/Ratio.html#ratio-estimator-of-population-mean",
+    "href": "FW552/Ratio.html#ratio-estimator-of-population-mean",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Ratio Estimator of population mean",
+    "text": "Ratio Estimator of population mean\n\\(\\hat{\\mu}_{r}\\) = sample ratio \\(\\times\\) population mean of aux\n\n\\(\\hat{\\mu}_{r}\\) = sample primary mean / sample aux. mean \\(\\times\\) population mean of aux . . .\n\\(\\hat{\\mu}_{r}\\) = \\(r \\times \\mu_{x}\\)\n\n\n\\(\\mu_{x} = \\frac{\\sum_{i=1}^N x_i}{N}\\)\n\n\n\\(\\hat{r} = \\frac{\\sum_{i=1}^n y_i}{\\sum_{i=1}^n x_i} = \\frac{\\hat{\\mu}_{primary}}{\\hat{\\mu}_{secondary}} =\\frac{\\hat{\\mu}_{weight}}{\\hat{\\mu}_{height}}= \\frac{\\bar{y}}{\\bar{x}}\\)"
+  },
+  {
+    "objectID": "FW552/Ratio.html#comparisons",
+    "href": "FW552/Ratio.html#comparisons",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Comparisons",
+    "text": "Comparisons\n\nSample average of primary (weight) is unbiased\n\nmin: 19.5\nmax: 29.5\nExp.Var: 3.3777778\n\nRatio estimator of primary (weight) is biased\n\nmin: 21.484375\nmax: 28.6\nExp.Var: 0.5236118"
+  },
+  {
+    "objectID": "FW552/Ratio.html#considerations",
+    "href": "FW552/Ratio.html#considerations",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Considerations",
+    "text": "Considerations\nRatio Estimator\n\ndesign based\nestimators are not unbiased (almost at large sample size; Thompson, Ch. 7)\nimproves precision\ndepends on linear correlation b/w primary and auxiliary information\nrequires: when \\(x_i = 0\\) then \\(y_i=0\\); i.e., intercept is zero\nrarely do we measure one thing when sampling"
+  },
+  {
+    "objectID": "FW552/Ratio.html#classic-example",
+    "href": "FW552/Ratio.html#classic-example",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Classic Example",
+    "text": "Classic Example\nPierre-Simon Laplace\n\nWanted a census of France in 1802\n\nPrimary: Population Size\nAuxiliary: Births\n\nHad all birth records from church records\nSampled 30 communities and calculated a total of 2,037,615 people with 71,866 births\n\n2,037,615/71,866 = 28.35 people per birth\n\nReasoned he could multiply the population number of births by 28.35 to obtain an estimate of population size."
+  },
+  {
+    "objectID": "FW552/Ratio.html#classic-wildlife-example",
+    "href": "FW552/Ratio.html#classic-wildlife-example",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Classic Wildlife Example",
+    "text": "Classic Wildlife Example\nEstimating total population\n\nWe mark and release \\(n_1\\) individuals\nWe go and recapture the same population, catching \\(n_2\\) individuals\nThe number of marked individuals caught again is \\(m_2\\)\nAssume equal catchability of individuals and by sample\n\n\n\\[\n\\frac{m_2}{n_2} = \\frac{n_1}{N}\n\\] . . .\nLincoln-Peterson Abundance Estimator"
+  },
+  {
+    "objectID": "FW552/Ratio.html#classic-wildlife-example-1",
+    "href": "FW552/Ratio.html#classic-wildlife-example-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Classic Wildlife Example",
+    "text": "Classic Wildlife Example\n\\[\n\\hat{N} = \\frac{n_1n_2}{m_2}\n\\] . . .\n\\[\n\\hat{N} = \\frac{n_1}{\\hat{p}}\n\\] \\[\n\\hat{p} = \\frac{m_2}{n_2}\n\\]"
+  },
+  {
+    "objectID": "FW552/Ratio.html#classic-wildlife-example-2",
+    "href": "FW552/Ratio.html#classic-wildlife-example-2",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Classic Wildlife Example",
+    "text": "Classic Wildlife Example"
+  },
+  {
+    "objectID": "FW552/Ratio.html#is-this-useful-to-us",
+    "href": "FW552/Ratio.html#is-this-useful-to-us",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Is this useful to us??",
+    "text": "Is this useful to us??\nRelevant Wildlife/Fish/Habitat studies???"
+  },
+  {
+    "objectID": "FW552/Ratio.html#ratio-estimator-of-population-mean-1",
+    "href": "FW552/Ratio.html#ratio-estimator-of-population-mean-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Ratio Estimator of population mean",
+    "text": "Ratio Estimator of population mean\n\\[\n\\hat{\\sigma}^2_{\\hat{\\mu_r}} = \\left(\\frac{N-n}{N}\\right)\\frac{\\hat{\\sigma}^2_r}{n}\n\\]\n\\[\n\\hat{\\sigma}^2_r = \\frac{1}{n-1}\\sum_{i=1}^n\\left(y_i-rx_i\\right)^2\n\\]"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter7/Chapter7.HW.html",
+    "href": "classfiles552/ThompsonChapter7/Chapter7.HW.html",
+    "title": "Beetle / Cover Study",
+    "section": "",
+    "text": "dat1 = read.csv(\"BeetleCover.Study1.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\ndat2 = read.csv(\"BeetleCover.Study2.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\n\n\n\nindex1=which(!is.na(dat1$beetle.count))\nplot(dat1$cover[index1],dat1$beetle.count[index1],xlim=c(0,100),\n     ylim=c(0,max(dat1$beetle.count[index1]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n\n\n\n\n\n\ncor(dat1$cover[index1],dat1$beetle.count[index1])\n\n[1] 0.9625172\n\n\nShows clear correlation which will make a ratio estimator lead to a more precise variance of the population mean.\nAlso, it is reasonable to assume that when there is no cover, there are no beetles. Thus, assuming\n\n\nindex2=which(!is.na(dat2$beetle.count))\nplot(dat2$cover[index2],dat2$beetle.count[index2],xlim=c(0,100),\n     ylim=c(0,max(dat2$beetle.count[index2]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n\n\n\n\n\n\ncor(dat2$cover[index2],dat2$beetle.count[index2])\n\n[1] 0.0186129\n\n\nIn study 2, there is not correlation which suggests the ratio estimator will not be an improvement over relying on the sample average.\n\nStudy 1 Mean Estimate\n\nmu.x = mean(dat1$cover)\nr = mean(dat1$beetle.count[index1])/mean(dat1$cover[index2])\npop.mean = r * mu.x\npop.mean\n\n[1] 52.44248\n\n\nStudy 1 Variance Estimate\n\nn=length(dat1$beetle.count[index1])\nsample.var = 1/(n) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)\nN=nrow(dat1)\npopulation.mean.var = (N-n)/N * (sample.var/n)\npopulation.mean.var\n\n[1] 23.90121\n\n\n\nStudy 2 Mean Estimate\n\npop.mu.est = mean(dat2$beetle.count[index2])\n\nStudy 2 Variance Estimate\n\nsampl.var = var(dat2$beetle.count[index2])\nvar.pop.mu = (N-n)/N * sampl.var/n\nvar.pop.mu\n\n[1] 1.636202"
+  },
+  {
+    "objectID": "classfiles552/ThompsonChapter7/Chapter7.HW.html#r-markdown",
+    "href": "classfiles552/ThompsonChapter7/Chapter7.HW.html#r-markdown",
+    "title": "Beetle / Cover Study",
+    "section": "",
+    "text": "dat1 = read.csv(\"BeetleCover.Study1.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\ndat2 = read.csv(\"BeetleCover.Study2.csv\",colClasses = c(\"character\",\"numeric\",\"numeric\"))\n\n\n\nindex1=which(!is.na(dat1$beetle.count))\nplot(dat1$cover[index1],dat1$beetle.count[index1],xlim=c(0,100),\n     ylim=c(0,max(dat1$beetle.count[index1]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n\n\n\n\n\n\ncor(dat1$cover[index1],dat1$beetle.count[index1])\n\n[1] 0.9625172\n\n\nShows clear correlation which will make a ratio estimator lead to a more precise variance of the population mean.\nAlso, it is reasonable to assume that when there is no cover, there are no beetles. Thus, assuming\n\n\nindex2=which(!is.na(dat2$beetle.count))\nplot(dat2$cover[index2],dat2$beetle.count[index2],xlim=c(0,100),\n     ylim=c(0,max(dat2$beetle.count[index2]+10)))\nabline(a = 0, b = 1, col = \"red\", lty = 2, lwd = 2)\n\n\n\n\n\n\ncor(dat2$cover[index2],dat2$beetle.count[index2])\n\n[1] 0.0186129\n\n\nIn study 2, there is not correlation which suggests the ratio estimator will not be an improvement over relying on the sample average.\n\nStudy 1 Mean Estimate\n\nmu.x = mean(dat1$cover)\nr = mean(dat1$beetle.count[index1])/mean(dat1$cover[index2])\npop.mean = r * mu.x\npop.mean\n\n[1] 52.44248\n\n\nStudy 1 Variance Estimate\n\nn=length(dat1$beetle.count[index1])\nsample.var = 1/(n) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)\nN=nrow(dat1)\npopulation.mean.var = (N-n)/N * (sample.var/n)\npopulation.mean.var\n\n[1] 23.90121\n\n\n\nStudy 2 Mean Estimate\n\npop.mu.est = mean(dat2$beetle.count[index2])\n\nStudy 2 Variance Estimate\n\nsampl.var = var(dat2$beetle.count[index2])\nvar.pop.mu = (N-n)/N * sampl.var/n\nvar.pop.mu\n\n[1] 1.636202"
   }
 ]
