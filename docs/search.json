@@ -12395,5 +12395,901 @@
     "title": "",
     "section": "Cluster Estimators",
     "text": "Cluster Estimators\n\n\\(i^{th}\\) primary and \\(j^{th} secondary\\)\n\n\\[\ny_i = \\sum_{j=1}^{M_i} y_{ij}\n\\]\n\\[\n\\bar{y} = \\hat{\\mu}_{\\text{primary}} = \\frac{1}{n}\\sum_{i=1}^{n} y_{i}\n\\]\n\\[\n\\hat{\\tau} = \\hat{\\sigma}^2_{\\mu} = \\frac{1}{n-1} \\sum_{i=1}^n(y_i -\\hat{\\mu})^2\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probability",
+    "href": "FW680A4/StatisticalInference.html#probability",
+    "title": "Statistical Inference",
+    "section": "Probability",
+    "text": "Probability\nProbability as the basis for statistical inference\n\n\nThe world is uncertain\nVery few things perfectly known\nNeed to draw conclusions, make decisions, or learn from observations in the face of resulting uncertainty\nProbability: branch of mathematics dealing with chance processes and their outcomes\n\nExtension of logic from certain events to all events in life\nBasis for statistical modeling and inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#objectives",
+    "href": "FW680A4/StatisticalInference.html#objectives",
+    "title": "Statistical Inference",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probabilitystatistics",
+    "href": "FW680A4/StatisticalInference.html#probabilitystatistics",
+    "title": "Statistical Inference",
+    "section": "Probability/Statistics",
+    "text": "Probability/Statistics\n\n\nProbability and statistics are the opposite sides of the same coin.\n\n\nTo understand statistics, we need to understand probability and probability functions.\n\n\n\nThe two key things to understand this connection is the random variable (RV) and parameters (e.g., \\(\\theta\\), \\(\\sigma\\), \\(\\epsilon\\), \\(\\mu\\))."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#motivation",
+    "href": "FW680A4/StatisticalInference.html#motivation",
+    "title": "Statistical Inference",
+    "section": "Motivation",
+    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n\n\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\nmathematical connections and notation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#not-random-variables",
+    "href": "FW680A4/StatisticalInference.html#not-random-variables",
+    "title": "Statistical Inference",
+    "section": "Not Random Variables",
+    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1*c\n\\end{align*}\n\\]\n\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n\n\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#random-variables",
+    "href": "FW680A4/StatisticalInference.html#random-variables",
+    "title": "Statistical Inference",
+    "section": "Random Variables",
+    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n\n\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n\n\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot \n\n\n\n\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#frequency-probabilitities",
+    "href": "FW680A4/StatisticalInference.html#frequency-probabilitities",
+    "title": "Statistical Inference",
+    "section": "Frequency / Probabilitities",
+    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n\n\nWe often only get to see ONE sample from this distribution."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#random-variables-1",
+    "href": "FW680A4/StatisticalInference.html#random-variables-1",
+    "title": "Statistical Inference",
+    "section": "Random Variables",
+    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#philosophy",
+    "href": "FW680A4/StatisticalInference.html#philosophy",
+    "title": "Statistical Inference",
+    "section": "Philosophy",
+    "text": "Philosophy\nFrequentist Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability distributions with unknown parameters that (e.g., \\(\\theta\\)) are fixed (scalars).\n\n\nBayesian Paradigm:\nData (e.g., \\(y\\)) are random variables that can be described by probability functions where the unknown parameters (e.g., \\(\\theta\\)) are also random variables that have probability functions that describe them."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#random-variables-2",
+    "href": "FW680A4/StatisticalInference.html#random-variables-2",
+    "title": "Statistical Inference",
+    "section": "Random Variables",
+    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#functions",
+    "href": "FW680A4/StatisticalInference.html#functions",
+    "title": "Statistical Inference",
+    "section": "Functions",
+    "text": "Functions\nWe commonly use deterministic functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input. \\[\n\\hspace{-12pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{DO STUFF\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\\[\n\\hspace{-14pt}\\text{g} \\\\\nx \\Longrightarrow\\fbox{+7\n} \\Longrightarrow \\text{g}(x)\n\\]\n\n\n\\[\n\\text{g}(x) = x + 7\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#random-variables-3",
+    "href": "FW680A4/StatisticalInference.html#random-variables-3",
+    "title": "Statistical Inference",
+    "section": "Random Variables",
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probability-functions",
+    "href": "FW680A4/StatisticalInference.html#probability-functions",
+    "title": "Statistical Inference",
+    "section": "Probability Functions",
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#pmf",
+    "href": "FW680A4/StatisticalInference.html#pmf",
+    "title": "Statistical Inference",
+    "section": "PMF",
+    "text": "PMF\n\\[\nf(y) = P(Y=y)\n\\]\n\nData has two outcomes (0 = dead, 1 = alive)\n\\(y \\in  \\{0,1\\}\\)\n\n\nThere are two probabilities\n\n\\(f(0) = P(Y=0)\\)\n\\(f(1) = P(Y=1)\\)\n\n\n\nAxiom 1: The probability of an event is greater than or equal to zero and less than or equal to 1.\n\\[\n0 \\leq f(y) \\leq 1\n\\] Example,\n\n\\(f(0) = 0.1\\)\n\\(f(1) = 0.9\\)\n\n\n\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#pmf-1",
+    "href": "FW680A4/StatisticalInference.html#pmf-1",
+    "title": "Statistical Inference",
+    "section": "PMF",
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bernoulli-pmf",
+    "href": "FW680A4/StatisticalInference.html#bernoulli-pmf",
+    "title": "Statistical Inference",
+    "section": "Bernoulli PMF",
+    "text": "Bernoulli PMF\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\nSample space support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bernoulli-pmf-code",
+    "href": "FW680A4/StatisticalInference.html#bernoulli-pmf-code",
+    "title": "Statistical Inference",
+    "section": "Bernoulli PMF (Code)",
+    "text": "Bernoulli PMF (Code)\nWhat would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?\n\n#Define inputs\n  theta=0.2;  N=1 \n\n#Random sample - 1 duck\n  rbinom(n=1,size=N,theta)\n\n[1] 0\n\n#Random sample - 10 ducks\n  rbinom(n=10,size=N,theta)\n\n [1] 1 0 0 0 1 0 1 0 1 0"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#why-is-this-useful-to-us",
+    "href": "FW680A4/StatisticalInference.html#why-is-this-useful-to-us",
+    "title": "Statistical Inference",
+    "section": "Why is this useful to us?",
+    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#binomial-pmf",
+    "href": "FW680A4/StatisticalInference.html#binomial-pmf",
+    "title": "Statistical Inference",
+    "section": "Binomial PMF",
+    "text": "Binomial PMF\nThe Bernoulli is a special case of the Binomial Distribution.\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        {N\\choose y} \\theta^{y}\\times(1-\\theta)^{N-y}\n  \\end{align}\n\\]\n\n\\(N\\) = total trials / tagged and released animals\n\n\n\n\\(y\\) = number of successes / number of alive animals at the of the study."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#binomial-pmf-code",
+    "href": "FW680A4/StatisticalInference.html#binomial-pmf-code",
+    "title": "Statistical Inference",
+    "section": "Binomial PMF (Code)",
+    "text": "Binomial PMF (Code)\n\n# 1 duck tagged/released and one simulation\n  theta=0.2;  N=1 \n  rbinom(n=1,size=N,theta)\n\n[1] 1\n\n\n\n\n# 1000 ducks tagged/released and one simulation\n  theta=0.2;  N=1000 \n  rbinom(n=1,size=N,theta)\n\n[1] 198\n\n\n\n\n\n# 1000 ducks tagged/released and 10 simulation\n  theta=0.2;  N=1000 \n  rbinom(n=10,size=N,theta)\n\n [1] 180 190 198 192 169 192 192 217 206 216\n\n\n\n\n\n# 1 duck tagged for each of 1000 simulations\n  theta=0.2;  N=1\n  y = rbinom(n=1000,size=N,theta)\n  y\n\n   [1] 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0\n  [38] 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0\n  [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n [112] 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0\n [149] 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0\n [186] 1 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [223] 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0\n [260] 0 1 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0\n [297] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\n [334] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0\n [371] 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1\n [408] 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0\n [445] 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0\n [482] 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1\n [519] 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 1 0 0\n [556] 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0\n [593] 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0\n [630] 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 1\n [667] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0\n [704] 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0\n [741] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1\n [778] 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1\n [815] 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0\n [852] 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [889] 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0\n [926] 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n [963] 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0\n[1000] 0\n\n\n\n\n\nsum(y)\n\n[1] 186"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#support",
+    "href": "FW680A4/StatisticalInference.html#support",
+    "title": "Statistical Inference",
+    "section": "Support",
+    "text": "Support\nUse a probability function that makes sense for your data/RV. In Bayesian infernece, we also pick prob. functions that make sense for parameters.\n\nThe sample space and parameter support can be found on Wikipedia for many probability functions."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#normal-pdf",
+    "href": "FW680A4/StatisticalInference.html#normal-pdf",
+    "title": "Statistical Inference",
+    "section": "Normal PDF",
+    "text": "Normal PDF\nFor example, the Normal/Gaussian distribution describes the sample space for all values on the real number line.\n\\[y \\sim \\text{Normal}(\\mu, \\sigma) \\\\ y \\in (-\\infty, \\infty) \\\\ y \\in \\mathbb{R}\\]\nWhat is the parameter space for \\(\\mu\\) and \\(\\sigma\\)?"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#normal-distribution",
+    "href": "FW680A4/StatisticalInference.html#normal-distribution",
+    "title": "Statistical Inference",
+    "section": "Normal Distribution",
+    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean?  \n\n\n\nDoes the support of our data match the support of the PDF?\n\n\n\n\nWhat PDF does?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n\n\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#pdf",
+    "href": "FW680A4/StatisticalInference.html#pdf",
+    "title": "Statistical Inference",
+    "section": "PDF",
+    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\nBeta: \\(y \\in  (0,1)\\)\nContinuous Uniform: \\(y \\in  [a,b]\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#pdf-1",
+    "href": "FW680A4/StatisticalInference.html#pdf-1",
+    "title": "Statistical Inference",
+    "section": "PDF",
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#pdf-2",
+    "href": "FW680A4/StatisticalInference.html#pdf-2",
+    "title": "Statistical Inference",
+    "section": "PDF",
+    "text": "PDF\nAxiom 3:\n\n\\(\\int_{\\text{lower support}}^{\\text{upper suppport}}f(y)dy = 1\\)\n\nThe sum of the probability densities of all possible outcomes is equal to 1."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code",
+    "href": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code",
+    "title": "Statistical Inference",
+    "section": "Normal Distribution (PDF Code)",
+    "text": "Normal Distribution (PDF Code)\n\ny = rnorm(1000, mean = 20, sd = 3)\nhist(y,freq=FALSE,ylim=c(0,0.14))\nlines(density(y),lwd=3,col=4)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-1",
+    "href": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-1",
+    "title": "Statistical Inference",
+    "section": "Normal Distribution (PDF Code)",
+    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean= 20, sd = 3),\n      xlim=c(0,40),lwd=3,col=2,ylab=\"Probability Density\",xlab=\"y\")\nabline(v=20, lwd=3, col=1, lty=4)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-2",
+    "href": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-2",
+    "title": "Statistical Inference",
+    "section": "Normal Distribution (PDF Code)",
+    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#moments",
+    "href": "FW680A4/StatisticalInference.html#moments",
+    "title": "Statistical Inference",
+    "section": "Moments",
+    "text": "Moments\nProperties of all probability functions.\n\n\n1\\({^{st}}\\) moment is central tendency\n2\\({^{nd}}\\) moment is the dispersion\n…\n\n\n\nNormal Distribution: parameters (\\(\\mu\\) and \\(\\sigma\\)) are 1\\({^{st}}\\) and 2\\({^{nd}}\\) moments"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#moments-1",
+    "href": "FW680A4/StatisticalInference.html#moments-1",
+    "title": "Statistical Inference",
+    "section": "Moments",
+    "text": "Moments\nGamma Distribution: parameters are not moments\nParameters\nShape = \\(\\alpha\\), Rate = \\(\\beta\\)\nOR\nShape = \\(\\kappa\\), Scale = \\(\\theta\\), where \\(\\theta = \\frac{1}{\\beta}\\)\n\nNOTE: probability functions can have Alternative Parameterizations, such they have different parameters.\n\n\nMoments are functions of these parameters:\n\nmean = \\(\\kappa\\theta\\) or \\(\\frac{\\alpha}{\\beta}\\)\nvar = \\(\\kappa\\theta^2\\) or \\(\\frac{\\alpha}{\\beta^2}\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#gamma-distribution",
+    "href": "FW680A4/StatisticalInference.html#gamma-distribution",
+    "title": "Statistical Inference",
+    "section": "Gamma Distribution",
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code",
+    "href": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code",
+    "title": "Statistical Inference",
+    "section": "Gamma Distribution (PDF Code)",
+    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape =10\nscale = 2\n\nmean1 = shape*scale\nmean1\n\n[1] 20\n\nmode1 = (shape-1)*scale\nmode1\n\n[1] 18\n\nstdev = sqrt(shape*scale^2)\nstdev\n\n[1] 6.324555"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code-1",
+    "href": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code-1",
+    "title": "Statistical Inference",
+    "section": "Gamma Distribution (PDF Code)",
+    "text": "Gamma Distribution (PDF Code)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-1",
+    "href": "FW680A4/StatisticalInference.html#gamma-distribution-1",
+    "title": "Statistical Inference",
+    "section": "Gamma Distribution",
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-others-side-of-the-coin",
+    "href": "FW680A4/StatisticalInference.html#the-others-side-of-the-coin",
+    "title": "Statistical Inference",
+    "section": "The others side of the coin",
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\n\n REMEMBER \n\n\\(f(y|\\boldsymbol{\\theta})\\) is a probability statement about \\(y\\),  NOT  \\(\\boldsymbol{\\theta}\\)."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#likelihood",
+    "href": "FW680A4/StatisticalInference.html#likelihood",
+    "title": "Statistical Inference",
+    "section": "Likelihood",
+    "text": "Likelihood"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#objectives-1",
+    "href": "FW680A4/StatisticalInference.html#objectives-1",
+    "title": "Statistical Inference",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nlikelihood principle\nlikelihood connection to probability function\noptimization / parameter estimation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-others-side-of-the-coin-1",
+    "href": "FW680A4/StatisticalInference.html#the-others-side-of-the-coin-1",
+    "title": "Statistical Inference",
+    "section": "The others side of the coin",
+    "text": "The others side of the coin\nStatistics: Interested in estimating population-level characteristics; i.e., the parameters\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nEstimation\n\nlikelihood\nBayesian"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#likelihood-1",
+    "href": "FW680A4/StatisticalInference.html#likelihood-1",
+    "title": "Statistical Inference",
+    "section": "Likelihood",
+    "text": "Likelihood\nLikelihood principle\nAll the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to making inference on model parameters (\\(\\theta\\)) is contained in the likelihood function."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-pieces",
+    "href": "FW680A4/StatisticalInference.html#the-pieces",
+    "title": "Statistical Inference",
+    "section": "The pieces",
+    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-likelihood-function",
+    "href": "FW680A4/StatisticalInference.html#the-likelihood-function",
+    "title": "Statistical Inference",
+    "section": "The Likelihood Function",
+    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-likelihood-function-1",
+    "href": "FW680A4/StatisticalInference.html#the-likelihood-function-1",
+    "title": "Statistical Inference",
+    "section": "The Likelihood Function",
+    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n\n\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n\n\n\n#the likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#optimization",
+    "href": "FW680A4/StatisticalInference.html#optimization",
+    "title": "Statistical Inference",
+    "section": "Optimization",
+    "text": "Optimization\nGrid Search\n\n  means = seq(0, 20,by = 0.1) # many guesses of the mean\n  likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#maximum-likelihood-properties",
+    "href": "FW680A4/StatisticalInference.html#maximum-likelihood-properties",
+    "title": "Statistical Inference",
+    "section": "Maximum Likelihood Properties",
+    "text": "Maximum Likelihood Properties\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased at small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#mle-with-n-1",
+    "href": "FW680A4/StatisticalInference.html#mle-with-n-1",
+    "title": "Statistical Inference",
+    "section": "MLE with n > 1",
+    "text": "MLE with n &gt; 1\nWhat is the mean height of King Penguins?"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#mle-with-n-1-1",
+    "href": "FW680A4/StatisticalInference.html#mle-with-n-1-1",
+    "title": "Statistical Inference",
+    "section": "MLE with n > 1",
+    "text": "MLE with n &gt; 1\nWe go and collect data,\n\\(\\boldsymbol{y} = \\begin{matrix} [4.34 & 3.53 & 3.75] \\end{matrix}\\)\n\n\nLet’s decide to use the Normal Distribution as our PDF.\n\n\\[\n\\begin{align*}\nf(y_1 = 4.34|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{1}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_2 = 3.53|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{2}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]\n\n\nAND\n\\[\n\\begin{align*}\nf(y_3 = 3.75|\\mu,\\sigma)  &= \\frac{1}{\\sigma\\sqrt(2\\pi)}e^{-\\frac{1}{2}(\\frac{y_{3}-\\mu}{\\sigma})^2} \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#need-to-connect-data-together",
+    "href": "FW680A4/StatisticalInference.html#need-to-connect-data-together",
+    "title": "Statistical Inference",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nOr simply,\n\\[\n\\textbf{y} \\stackrel{iid}{\\sim} \\text{Normal}(\\mu, \\sigma)\n\\]\n\\(iid\\) = independent and identically distributed"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#need-to-connect-data-together-1",
+    "href": "FW680A4/StatisticalInference.html#need-to-connect-data-together-1",
+    "title": "Statistical Inference",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#need-to-connect-data-together-2",
+    "href": "FW680A4/StatisticalInference.html#need-to-connect-data-together-2",
+    "title": "Statistical Inference",
+    "section": "Need to connect data together",
+    "text": "Need to connect data together\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(4.34|\\mu, \\sigma)\\times f(3.53|\\mu, \\sigma)\\times f(3.75|\\mu, \\sigma) \\end{align*}\n\\] \\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#conditional-independence-assumption",
+    "href": "FW680A4/StatisticalInference.html#conditional-independence-assumption",
+    "title": "Statistical Inference",
+    "section": "Conditional Independence Assumption",
+    "text": "Conditional Independence Assumption\nWe can do this because we are assuming knowing one observation does not tell us any new information about another observation. Such that,\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#code",
+    "href": "FW680A4/StatisticalInference.html#code",
+    "title": "Statistical Inference",
+    "section": "Code",
+    "text": "Code\nTranslate the math to code…\n\n# penguin height data\n  y = c(4.34, 3.53, 3.75)\n\n# Joint likelihood of mu=3, sigma =1, given our data\n  prod(dnorm(y, mean = 3,sd = 1))\n\n[1] 0.01696987"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#optimization-code-grid-search",
+    "href": "FW680A4/StatisticalInference.html#optimization-code-grid-search",
+    "title": "Statistical Inference",
+    "section": "Optimization Code (Grid Search)",
+    "text": "Optimization Code (Grid Search)\nCalculate likelihood of many guesses of \\(\\mu\\) and \\(\\sigma\\) simultaneously,\n\n# The Guesses\n  mu = seq(0,6,0.05)\n  sigma = seq(0.01,2,0.05)\n  try = expand.grid(mu,sigma)\n  colnames(try) = c(\"mu\",\"sigma\")\n\n# function\nfun = function(a,b){\n          prod(dnorm(y,mean = a, sd = b))\n      }\n\n# mapply the function with the inputs\n  likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#mle-code",
+    "href": "FW680A4/StatisticalInference.html#mle-code",
+    "title": "Statistical Inference",
+    "section": "MLE Code",
+    "text": "MLE Code\n\n# maximum likelihood of parameters\n  try[which.max(likelihood),]\n\n      mu sigma\n925 3.85  0.36\n\n\n\n\nLets compare to,\n\nsum(y)/length(y)\n\n[1] 3.873333"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#likelihood-plot-3d",
+    "href": "FW680A4/StatisticalInference.html#likelihood-plot-3d",
+    "title": "Statistical Inference",
+    "section": "Likelihood plot (3D)",
+    "text": "Likelihood plot (3D)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#sample-size",
+    "href": "FW680A4/StatisticalInference.html#sample-size",
+    "title": "Statistical Inference",
+    "section": "Sample Size",
+    "text": "Sample Size\nWhat happens to the likelihood if we increase the sample size to N=100?"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#relativeness",
+    "href": "FW680A4/StatisticalInference.html#relativeness",
+    "title": "Statistical Inference",
+    "section": "Relativeness",
+    "text": "Relativeness\nlog-likelihood\n\nfun.log = function(a,b){\n              sum(dnorm(y,mean = a, sd = b, log=TRUE))\n          }\n\nlog.likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun.log)\n  \n# maximum log-likelihood of parameters\n  try[which.max(log.likelihood),]\n\n       mu sigma\n55683 3.9  0.93"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#optimization-code-numerical",
+    "href": "FW680A4/StatisticalInference.html#optimization-code-numerical",
+    "title": "Statistical Inference",
+    "section": "Optimization Code (Numerical)",
+    "text": "Optimization Code (Numerical)\nLet’s let the computer do some smarter guessing, i.e., optimization.\n\n# Note: optim function uses minimization, not maximization. \n# WE want to find the minimum negative log-likelihood\n# THUS, need to put negative in our function\n\nneg.log.likelihood=function(par){\n  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))\n  }\n\n#find the values that minimizes the function\n#c(1,1) are the initial values for mu and sigma\nfit &lt;- optim(par=c(1,1), fn=neg.log.likelihood,\n             method=\"L-BFGS-B\",\n             lower=c(0,0),upper=c(10,1)\n             )\n\n#Maximum likelihood estimates for mu and sigma\nfit$par\n\n[1] 3.901219 0.927352"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#linear-regression",
+    "href": "FW680A4/StatisticalInference.html#linear-regression",
+    "title": "Statistical Inference",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nKing Penguin Height Data (N=100)\n\nout = lm(y~1)\nsummary(out)\n\n\nCall:\nlm(formula = y ~ 1)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-3.00136 -0.61581  0.01208  0.67407  2.58369 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   3.9012     0.0932   41.86   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.932 on 99 degrees of freedom"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#all-things-bayesian",
+    "href": "FW680A4/StatisticalInference.html#all-things-bayesian",
+    "title": "Statistical Inference",
+    "section": "All things Bayesian",
+    "text": "All things Bayesian\n\n\n\n\nBayesian Inference\n\n\nBayes Thereom\n\n\nBayesian Components\n\n\nlikelihood, prior, evidence, posterior\n\n\nConjugacy\n\n\nHippo Case Study\n\n\nBayesian Computation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-1",
+    "href": "FW680A4/StatisticalInference.html#section-1",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Bayesian Inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probability-data-and-parameters",
+    "href": "FW680A4/StatisticalInference.html#probability-data-and-parameters",
+    "title": "Statistical Inference",
+    "section": "Probability, Data, and Parameters",
+    "text": "Probability, Data, and Parameters\nWhat do we want our model to tell us?\n\n\nDo we want to make probability statements about our data?\n\n\n\n\nLikelihood = P(data|parameters)\n\n\n\n90% CI: the long-run proportion of corresponding CIs that will contain the true value 90% of the time."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probability-data-and-parameters-1",
+    "href": "FW680A4/StatisticalInference.html#probability-data-and-parameters-1",
+    "title": "Statistical Inference",
+    "section": "Probability, Data, and Parameters",
+    "text": "Probability, Data, and Parameters\nWhat do we want our model to tell us?\n\nDo we want to make probability statements about our parameters?\n\n\n\nPosterior = P(parameters|data)\n\nAlternative Interval: 90% probability that the true value lies within the interval, given the evidence from the observed data."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#likelihood-inference",
+    "href": "FW680A4/StatisticalInference.html#likelihood-inference",
+    "title": "Statistical Inference",
+    "section": "Likelihood Inference",
+    "text": "Likelihood Inference\nEstimate of the population size of hedgehogs at two sites."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-inference",
+    "href": "FW680A4/StatisticalInference.html#bayesian-inference",
+    "title": "Statistical Inference",
+    "section": "Bayesian Inference",
+    "text": "Bayesian Inference\nPosterior Samples\n\n\n\n [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219\n [8]  83.99927  64.74208  26.93133"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-inference-1",
+    "href": "FW680A4/StatisticalInference.html#bayesian-inference-1",
+    "title": "Statistical Inference",
+    "section": "Bayesian Inference",
+    "text": "Bayesian Inference\nPosterior Samples\n\n\n [1] 102.67671  81.11546  81.75260  87.77246  73.99043  80.70631  76.26219\n [8]  83.99927  64.74208  26.93133"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-inference-2",
+    "href": "FW680A4/StatisticalInference.html#bayesian-inference-2",
+    "title": "Statistical Inference",
+    "section": "Bayesian Inference",
+    "text": "Bayesian Inference\n\n\n\n\n\n\n\n\n\n\ndiff=post2-post1\nlength(which(diff&gt;0))/length(diff)\n\n[1] 0.8362"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#likelihood-inference-coeficient",
+    "href": "FW680A4/StatisticalInference.html#likelihood-inference-coeficient",
+    "title": "Statistical Inference",
+    "section": "Likelihood Inference (coeficient)",
+    "text": "Likelihood Inference (coeficient)\ny is Body size of a beetle species\nx is elevation\n\n\nsummary(glm(y~x))\n\n\nCall:\nglm(formula = y ~ x)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   0.9862     0.2435   4.049 0.000684 ***\nx             0.5089     0.4022   1.265 0.221093    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1.245548)\n\n    Null deviance: 25.659  on 20  degrees of freedom\nResidual deviance: 23.665  on 19  degrees of freedom\nAIC: 68.105\n\nNumber of Fisher Scoring iterations: 2"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-inference-coeficient",
+    "href": "FW680A4/StatisticalInference.html#bayesian-inference-coeficient",
+    "title": "Statistical Inference",
+    "section": "Bayesian Inference (coeficient)",
+    "text": "Bayesian Inference (coeficient)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-inference-coeficient-1",
+    "href": "FW680A4/StatisticalInference.html#bayesian-inference-coeficient-1",
+    "title": "Statistical Inference",
+    "section": "Bayesian Inference (coeficient)",
+    "text": "Bayesian Inference (coeficient)\n\n#Posterior Mean\n  mean(post)\n\n[1] 0.5185186\n\n\n\n\n\n#Credible/Probability Intervals \n  quantile(post,prob=c(0.025,0.975))\n\n     2.5%     97.5% \n-1.461887  2.403232 \n\n\n\n\n\n\n# #Probabilty of a postive effect\n length(which(post&gt;0))/length(post)\n\n[1] 0.709\n\n\n\n\n\n\n# #Probabilty of a negative effect\n length(which(post&lt;0))/length(post)\n\n[1] 0.291"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-2",
+    "href": "FW680A4/StatisticalInference.html#section-2",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Bayesian Theorem"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-theorem",
+    "href": "FW680A4/StatisticalInference.html#bayes-theorem",
+    "title": "Statistical Inference",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\nLink\n\n\n\n\nMarginal Probability\n\n\n\\(P(A)\\)\n\\(P(B)\\)\n\n\n\n\nClick for Answer\n#P(A)\n3/10 = 0.3\n\n#P(B)\n5/10 = 0.5\n\n\n\n\n\nSampled N = 10 locations"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-theorem-1",
+    "href": "FW680A4/StatisticalInference.html#bayes-theorem-1",
+    "title": "Statistical Inference",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\n\n\n\n\nJoint Probability\n\n\n\\(P(A \\cap B)\\)  \n\n\n\n\nClick for Answer\n#P(A and B)\n2/10 = 0.2\n\n\n\n\n\nSampled N = 10 locations"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-theorem-2",
+    "href": "FW680A4/StatisticalInference.html#bayes-theorem-2",
+    "title": "Statistical Inference",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\n\n\n\n\nConditional Probability\n\n\n\\(P(A|B)\\)\n\\(P(B|A)\\)  \n\n\n\n\nClick for Answer\n#P(A|B)\n2/5 = 0.4\n\n#P(B|A)\n2/3 = 0.6666\n\n\n\n\n\nSampled N = 10 locations"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-theorem-3",
+    "href": "FW680A4/StatisticalInference.html#bayes-theorem-3",
+    "title": "Statistical Inference",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\n\n\n\n\nOR Probability\n\n\n\\(P(A\\cup B)\\)\n\n\n\n\nClick for Answer\n# P(A or B)\n# P(A) + P(B) - P(A and B)\n\n0.3 + 0.5 - 0.2 = 0.6\n\n\n\n\n\nSampled N = 10 locations"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#notice-that",
+    "href": "FW680A4/StatisticalInference.html#notice-that",
+    "title": "Statistical Inference",
+    "section": "Notice that…",
+    "text": "Notice that…\n\\[\n\\begin{equation}\nP(A \\cap B) = 0.2 \\\\\nP(A|B)P(B) = 0.4 \\times 0.5 = 0.2 \\\\\nP(B|A)P(A) = 0.6666 \\times 0.3 = 0.2 \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\nP(A|B)P(B) = P(A \\cap B) \\\\\nP(B|A)P(A) = P(A \\cap B) \\\\\n\\end{equation}\n\\]\n\n\n\\[\n\\begin{equation}\nP(B|A)P(A) = P(A|B)P(B)\n\\end{equation}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-theoreom",
+    "href": "FW680A4/StatisticalInference.html#bayes-theoreom",
+    "title": "Statistical Inference",
+    "section": "Bayes Theoreom",
+    "text": "Bayes Theoreom\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A|B)P(B)}{P(A)} \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\nP(B|A) = \\frac{P(A \\cap B)}{P(A)} \\\\\n\\end{equation}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-3",
+    "href": "FW680A4/StatisticalInference.html#section-3",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Bayesian Components"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-components",
+    "href": "FW680A4/StatisticalInference.html#bayes-components",
+    "title": "Statistical Inference",
+    "section": "Bayes Components",
+    "text": "Bayes Components\nparam = parameters \\[\n\\begin{equation}\nP(\\text{param}|\\text{data}) = \\frac{P(\\text{data}|\\text{param})P(\\text{param})}{P(\\text{data})} \\\\\n\\end{equation}\n\\]\n\n\nPosterior Probability/Belief\n\n\n\n\nLikelihood\n\n\n\n\nPrior Probability\n\n\n\n\nEvidence or Marginal Likelihood"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-components-1",
+    "href": "FW680A4/StatisticalInference.html#bayes-components-1",
+    "title": "Statistical Inference",
+    "section": "Bayes Components",
+    "text": "Bayes Components\nparam = parameters\n\\[\n\\begin{equation}\nP(\\text{param}|\\text{data}) = \\frac{P(\\text{data}|\\text{param})P(\\text{param})}{\\int_{\\forall \\text{ Param}} P(\\text{data}|\\text{param})P(\\text{param})}\n\\end{equation}\n\\]\n\nPosterior Probability/Belief\n\n\nLikelihood\n\n\nPrior Probability\n\n\nEvidence or Marginal Likelihood"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayes-components-2",
+    "href": "FW680A4/StatisticalInference.html#bayes-components-2",
+    "title": "Statistical Inference",
+    "section": "Bayes Components",
+    "text": "Bayes Components\n\\[\n\\begin{equation}\n\\text{Posterior} = \\frac{\\text{Likelihood} \\times \\text{Prior}}{\\text{Evidence}} \\\\\n\\end{equation}\n\\]\n\n\\[\n\\begin{equation}\n\\text{Posterior} \\propto \\text{Likelihood} \\times \\text{Prior} \\end{equation}\n\\]\n\n\n\\[\n\\begin{equation}\n\\text{Posterior} \\propto \\text{Likelihood}\n\\end{equation}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior",
+    "href": "FW680A4/StatisticalInference.html#the-prior",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nAll parameters in a Bayesian model require a prior specified; parameters are random variables.\n\\(y_{i} \\sim \\text{Binom}(N, \\theta)\\)\n\n\\(\\theta \\sim \\text{Beta}(\\alpha = 4, \\beta=2)\\)\n\n\n\ncurve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-1",
+    "href": "FW680A4/StatisticalInference.html#the-prior-1",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\n\\(\\theta \\sim \\text{Beta}(\\alpha = 1, \\beta=1)\\)\n\n\ncurve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-2",
+    "href": "FW680A4/StatisticalInference.html#the-prior-2",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)\nNo such thing as a ‘non-informative’ prior"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-3",
+    "href": "FW680A4/StatisticalInference.html#the-prior-3",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nUse diffuse priors as a starting point\n\nIt’s fine to use diffuse priors as you develop your model but you should always prefer to use “appropriate, well-contructed informative priors” (Hobbs & Hooten, 2015)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-4",
+    "href": "FW680A4/StatisticalInference.html#the-prior-4",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nUse your “domain knowledge”\n\nWe can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-5",
+    "href": "FW680A4/StatisticalInference.html#the-prior-5",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nDive into the literature\n\nFind published estimates and use moment matching and other methods to convert published estimates into prior distributions"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-6",
+    "href": "FW680A4/StatisticalInference.html#the-prior-6",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nVisualize your prior distribution\n\nBe sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-7",
+    "href": "FW680A4/StatisticalInference.html#the-prior-7",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior\nDo a sensitivity analysis\n\nDoes changing the prior change your posterior inference? If not, don’t sweat it. If it does, you’ll need to return to point 2 and justify your prior choice"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-4",
+    "href": "FW680A4/StatisticalInference.html#section-4",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Conjugacy"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-model",
+    "href": "FW680A4/StatisticalInference.html#bayesian-model",
+    "title": "Statistical Inference",
+    "section": "Bayesian Model",
+    "text": "Bayesian Model\n\nModel\n\n\\[\n\\textbf{y} \\sim \\text{Bernoulli}(p)\n\\]\n\n\nPrior\n\n\\[\np \\sim \\text{Beta}( \\alpha, \\beta) \\\\\n\\]\n\nThese are called Prior hyperparameters\n\\[\n\\alpha = 1 \\\\\n\\beta = 1\n\\]\n\n\n\ncurve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab=\"p\",\n      ylab = \"Prior Probability Density\")"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#conjugate-distribution",
+    "href": "FW680A4/StatisticalInference.html#conjugate-distribution",
+    "title": "Statistical Inference",
+    "section": "Conjugate Distribution",
+    "text": "Conjugate Distribution\n\nLikelihood (Joint Probability of y)\n\n\\[\n\\mathscr{L}(p|y) = \\prod_{i=1}^{n} P(y_{i}|p)  = \\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}})\n\\]\n\n\nPrior Distribution\n\n\\[\nP(p) = \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)}\n\\]\n\n\n\nPosterior Distribution of p\n\n\\[\nP(p|y) = \\frac{\\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \\times \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)} }{\\int_{p}(\\text{numerator})}\n\\]\n\n\nCONJUGACY!\n\n\n\n\\[\nP(p|y) \\sim \\text{Beta}(\\alpha^*,\\beta^*)\n\\]\n\n\n\\(\\alpha^*\\) and \\(\\beta^*\\) are called Posterior hyperparameters\n\\[\n\\alpha^* = \\alpha + \\sum_{i=1}^{N}y_i \\\\\n\\beta^* = \\beta + N - \\sum_{i=1}^{N}y_i \\\\\n\\]\nWikipedia Conjugate Page\nConjugate Derivation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-5",
+    "href": "FW680A4/StatisticalInference.html#section-5",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Case Study"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos",
+    "href": "FW680A4/StatisticalInference.html#hippos",
+    "title": "Statistical Inference",
+    "section": "Hippos",
+    "text": "Hippos\nWe do a small study on hippo survival and get these data…\n\n\n\n\n\n\n\n7 Hippos Died\n\n \n\n2 Hippos Lived"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-likelihood-model",
+    "href": "FW680A4/StatisticalInference.html#hippos-likelihood-model",
+    "title": "Statistical Inference",
+    "section": "Hippos: Likelihood Model",
+    "text": "Hippos: Likelihood Model\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,p)\\\\\n\\end{align*}\n\\]\n\n\n# Survival outcomes of three adult hippos\n  y1=c(0,0,0,0,0,0,0,1,1)\n  N1=length(y1)\n  mle.p=mean(y1)\n  mle.p\n\n[1] 0.2222222"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-1",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-1",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Prior 1)",
+    "text": "Hippos: Bayesian Model (Prior 1)\n\\[\n\\begin{align*}\n\\textbf{y} \\sim& \\text{Binomial}(N,p)\\\\\np \\sim& \\text{Beta}(\\alpha,\\beta)\n\\end{align*}\n\\]\n\n  alpha.prior1=1\n  beta.prior1=1"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-2",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-2",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Prior 2)",
+    "text": "Hippos: Bayesian Model (Prior 2)\n\n  alpha.prior2=10\n  beta.prior2=2"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-3",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-prior-3",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Prior 3)",
+    "text": "Hippos: Bayesian Model (Prior 3)\n\n  alpha.prior3=150\n  beta.prior3=15"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Posteriors)",
+    "text": "Hippos: Bayesian Model (Posteriors)\n\\[\nP(p|y) \\sim \\text{Beta}(\\alpha^*,\\beta^*)\\\\\n\\alpha^* = \\alpha + \\sum_{i=1}^{N}y_i \\\\\n\\beta^* = \\beta + N - \\sum_{i=1}^{N}y_i \\\\\n\\]\n\n# Note- the data are the same, but the prior is changing.\n# Gibbs sampler\n  post.1=rbeta(10000,alpha.prior1+sum(y1),beta.prior1+N1-sum(y1))\n  post.2=rbeta(10000,alpha.prior2+sum(y1),beta.prior2+N1-sum(y1))\n  post.3=rbeta(10000,alpha.prior3+sum(y1),beta.prior3+N1-sum(y1))"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-1",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-1",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Posteriors)",
+    "text": "Hippos: Bayesian Model (Posteriors)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-2",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-2",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Posteriors)",
+    "text": "Hippos: Bayesian Model (Posteriors)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-3",
+    "href": "FW680A4/StatisticalInference.html#hippos-bayesian-model-posteriors-3",
+    "title": "Statistical Inference",
+    "section": "Hippos: Bayesian Model (Posteriors)",
+    "text": "Hippos: Bayesian Model (Posteriors)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-more-data-prior-1",
+    "href": "FW680A4/StatisticalInference.html#hippos-more-data-prior-1",
+    "title": "Statistical Inference",
+    "section": "Hippos: More data! (Prior 1)",
+    "text": "Hippos: More data! (Prior 1)\n\ny2=c(0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,\n     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)\nlength(y2)\n\n[1] 40"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-more-data-prior-2",
+    "href": "FW680A4/StatisticalInference.html#hippos-more-data-prior-2",
+    "title": "Statistical Inference",
+    "section": "Hippos: More data! (Prior 2)",
+    "text": "Hippos: More data! (Prior 2)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-more-data-prior-3",
+    "href": "FW680A4/StatisticalInference.html#hippos-more-data-prior-3",
+    "title": "Statistical Inference",
+    "section": "Hippos: More data! (Prior 3)",
+    "text": "Hippos: More data! (Prior 3)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#hippos-dataprior-comparison",
+    "href": "FW680A4/StatisticalInference.html#hippos-dataprior-comparison",
+    "title": "Statistical Inference",
+    "section": "Hippos: Data/prior Comparison",
+    "text": "Hippos: Data/prior Comparison"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-6",
+    "href": "FW680A4/StatisticalInference.html#section-6",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Bayesian Computation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#markov-chain-monte-carlo",
+    "href": "FW680A4/StatisticalInference.html#markov-chain-monte-carlo",
+    "title": "Statistical Inference",
+    "section": "Markov Chain Monte Carlo",
+    "text": "Markov Chain Monte Carlo\nOften don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.\nClass of algorithim\n\nMetropolis-Hastings\nGibbs\nReversible-Juno\nNo U-turn Sampling\n\n\n\\[\nP(p|y) = \\frac{\\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \\times \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)} }{\\int_{p}(\\text{numerator})}\n\\]\n\n\n\\[\nP(p|y) \\propto\\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \\times \\frac{p^{\\alpha-1}(1-p)^{\\beta-1}}{B(\\alpha,\\beta)}\n\\]"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#mcmc-sampling",
+    "href": "FW680A4/StatisticalInference.html#mcmc-sampling",
+    "title": "Statistical Inference",
+    "section": "MCMC Sampling",
+    "text": "MCMC Sampling\n\nnumber of sample (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (unique sets of samples; needed for convergence tests)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#sofware-options",
+    "href": "FW680A4/StatisticalInference.html#sofware-options",
+    "title": "Statistical Inference",
+    "section": "Sofware Options",
+    "text": "Sofware Options\n\nWrite your own algorithim\nWinBUGS/OpenBUGS, JAGS, Stan, Nimble"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#outline",
+    "href": "FW680A4/StatisticalInference.html#outline",
+    "title": "Statistical Inference",
+    "section": "Outline",
+    "text": "Outline\n\nTwo types of Inference\nProbability\nLikelihood\nBayesian"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section",
+    "href": "FW680A4/StatisticalInference.html#section",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "{width=“50%”}"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#two-types-of-inference",
+    "href": "FW680A4/StatisticalInference.html#two-types-of-inference",
+    "title": "Statistical Inference",
+    "section": "Two types of Inference",
+    "text": "Two types of Inference\n{width=“50%”}"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#two-types-of-inference-1",
+    "href": "FW680A4/StatisticalInference.html#two-types-of-inference-1",
+    "title": "Statistical Inference",
+    "section": "Two types of Inference",
+    "text": "Two types of Inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#in-a-nutshell",
+    "href": "FW680A4/StatisticalInference.html#in-a-nutshell",
+    "title": "Statistical Inference",
+    "section": "In a nutshell",
+    "text": "In a nutshell\nStatistical Modeling\n\nStat. model describes chance process that could have produced our data\nView our data set as just one out of a myriad of other possible data sets that same process could have produced\nModel + data allows statistical inferences, i.e., infer features of hypothetical data-generating chance process\nStatistical modeling: building of model and its analysis using e.g., maximum likelihood or Bayesian posterior inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#two-types-of-inference-2",
+    "href": "FW680A4/StatisticalInference.html#two-types-of-inference-2",
+    "title": "Statistical Inference",
+    "section": "Two types of Inference",
+    "text": "Two types of Inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#two-types-of-inference-3",
+    "href": "FW680A4/StatisticalInference.html#two-types-of-inference-3",
+    "title": "Statistical Inference",
+    "section": "Two types of Inference",
+    "text": "Two types of Inference"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#probability-is-made-up",
+    "href": "FW680A4/StatisticalInference.html#probability-is-made-up",
+    "title": "Statistical Inference",
+    "section": "Probability is Made up!",
+    "text": "Probability is Made up!"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#design-based",
+    "href": "FW680A4/StatisticalInference.html#design-based",
+    "title": "Statistical Inference",
+    "section": "Design-based",
+    "text": "Design-based\n\nStrong theoretical basis\nPopulation quantities are fixed\nSampling frame defines units / population is understood\nProbabilistic sampling of units\nUnbiased estimators guaranteed! (i.e., design-unbiased)\nRandomness induced by sampling process\nMinimal assumptions!\nTypically simple parameters of focus"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#model-based",
+    "href": "FW680A4/StatisticalInference.html#model-based",
+    "title": "Statistical Inference",
+    "section": "Model-based",
+    "text": "Model-based\n\nStrong theoretical basis\nPopulation quantities are a random realization of a stochastic generating process; ‘superpopulation’(\\(\\xi\\))\nSampling frame and prob. sampling is not necessary\nModel-unbiasedness is not guaranteed\nRandomness is implicit in the process and assumed to follow stochastic distribution\nSome-to-very many assumptions\nHighly flexible / Basically Magic!"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#named-probability-distributions",
+    "href": "FW680A4/StatisticalInference.html#named-probability-distributions",
+    "title": "Statistical Inference",
+    "section": "Named Probability Distributions",
+    "text": "Named Probability Distributions\n\nMany chance processes so common and so well-studied that they have been given a name\n\ne.g., Bernoulli, binomial, Poisson, normal/Gaussian or uniform distributions\nMany, many, MANY more…. Rayleigh, Cauchy distributions, Pareto, von Mises)\n\nYou can do surprising things when you know just a few of them! -e.g., build all of linear models, generalized linear models, mixed models"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#poisson",
+    "href": "FW680A4/StatisticalInference.html#poisson",
+    "title": "Statistical Inference",
+    "section": "Poisson",
+    "text": "Poisson\n\\[\nf(y|\\lambda) = P(Y=y) = \\frac{\\lambda^ye^{-\\lambda}}{y!}\n\\]\n\nprobability of observing value y of the RV y, given parameter \\(\\lambda\\)\nWhat is P(y = 1 | \\(\\lambda\\) = 2) ?\n\n\n\ndpois(1,lambda=2)\n\n[1] 0.2706706\n\n(2^1*exp(-2)) / (factorial(1))\n\n[1] 0.2706706"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#poisson-1",
+    "href": "FW680A4/StatisticalInference.html#poisson-1",
+    "title": "Statistical Inference",
+    "section": "Poisson",
+    "text": "Poisson\nThe full PMF (for \\(\\lambda\\) = 2):\n\nplot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#poisson-2",
+    "href": "FW680A4/StatisticalInference.html#poisson-2",
+    "title": "Statistical Inference",
+    "section": "Poisson",
+    "text": "Poisson"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#poisson-3",
+    "href": "FW680A4/StatisticalInference.html#poisson-3",
+    "title": "Statistical Inference",
+    "section": "Poisson",
+    "text": "Poisson"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#what-is-a-statistical-model",
+    "href": "FW680A4/StatisticalInference.html#what-is-a-statistical-model",
+    "title": "Statistical Inference",
+    "section": "What is a statistical model?",
+    "text": "What is a statistical model?\n\nAn abstraction or simplification of something complicated\nAny explanation is really a model (because it must always simplify) !\nEvery model has a goal\n\nenforce clarity of thought\nsummarize\nsearch for patterns\nunderstand mechanisms\npredict"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-1",
+    "href": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-1",
+    "title": "Statistical Inference",
+    "section": "What is a statistical model?",
+    "text": "What is a statistical model?\nWe are rarely explicit about the goals of our models…though should be!\n\nIt is impossible to say what is a good model when we haven’t decided on the “what for” question\n\n\nGoals of inference and prediction lead to different modeling strategies."
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-2",
+    "href": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-2",
+    "title": "Statistical Inference",
+    "section": "What is a statistical model?",
+    "text": "What is a statistical model?"
   }
 ]

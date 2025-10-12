@@ -1,0 +1,2612 @@
+---
+title: <span style="color:orange">Statistical Inference</span>
+title-slide-attributes:
+    data-background-image: /img/chalkboard.png
+format:
+  revealjs:
+    chalkboard: true
+    auto-stretch: false
+---
+
+## Outline
+
+- Two types of Inference
+- Probability
+- Likelihood
+- Bayesian
+
+##
+
+![](../img/keryKellner.png){fig-align="center" width="50%"}
+
+## Two types of Inference
+
+![](../img/design_super.png){fig-align="center"}{width="50%"}
+
+## <span style="color:red">Design-based</span> 
+
+- Strong theoretical basis
+- Population quantities are fixed
+- Sampling frame defines units / population is understood
+- Probabilistic sampling of units
+- Unbiased estimators guaranteed! (i.e., design-unbiased)
+- Randomness induced by sampling process
+- Minimal assumptions! 
+- Typically simple parameters of focus
+
+## <span style="color:red">Model-based</span> 
+
+
+
+- Strong theoretical basis
+- Population quantities are *a random realization of a stochastic generating process; ‘superpopulation’*($\xi$)
+- Sampling frame and prob. sampling is not necessary
+- Model-unbiasedness is not guaranteed
+- Randomness is implicit in the process and assumed to follow stochastic distribution
+- Some-to-very many assumptions
+- Highly flexible / Basically Magic!
+
+
+
+
+## Two types of Inference
+
+![](../img/forest.png){fig-align="center" width="75%"}
+
+## In a nutshell
+
+*Statistical Modeling*
+
+- Stat. model describes chance process that could have produced our data
+- View our data set as just one out of a myriad of other possible data sets that same process could have produced
+- Model + data allows statistical inferences, i.e., infer features of hypothetical data-generating chance process
+- Statistical modeling: building of model and its analysis using e.g., maximum likelihood or Bayesian posterior inference
+
+
+## Probability
+
+**Probability as the basis for statistical inference**
+
+. . .
+
+- The world is uncertain
+- Very few things perfectly known 
+- Need to draw conclusions, make decisions, or learn from observations in the face of resulting uncertainty
+
+- <span style="color:red">Probability</span>: branch of mathematics dealing with chance processes and their outcomes
+    - Extension of logic from certain events to all events in life
+    - Basis for statistical modeling and inference
+
+
+## Probability is Made up!
+
+![](../img/noprob.png){fig-align="center" width="100%"}
+
+
+## Objectives
+
+
+<!-- knitr::purl("./FW680A4/StatisticalInference.qmd", output="./FW680A4/StatisticalInference.R") -->
+
+- Connect random variables, probabilities, and parameters
+
+- define prob. functions
+
+  - discrete and continuous random variables
+  
+- use/plot prob. functions
+
+- learn some notation
+
+## Probability/Statistics
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+```
+
+
+<br>
+
+<span style="color:red">Probability</span> and <span style="color:blue">statistics</span> are the opposite sides of the same coin.
+
+<br>
+
+. . .
+
+To understand <span style="color:blue">statistics</span>, we need to understand <span style="color:red">probability</span> and <span style="color:red">probability functions</span>. 
+
+
+<br>
+
+. . .
+
+The two key things to understand this connection is the <span style="color:orange">random variable (RV)</span> and <span style="color:orange">parameters</span> (e.g., $\theta$, $\sigma$, $\epsilon$, $\mu$).
+
+## Motivation {.fit-text}
+<p style="text-align:center">
+Why learn about RVs and probability math?
+</p>
+
+. . .
+
+
+<span style="color:red">Foundations of:</span> 
+
+-   linear regression
+-   generalized linear models
+-   mixed models
+
+. . .
+
+<span style="color:red">Our Goal:</span> 
+
+- conceptual framework to think about *data*, *probabilities*, and *parameters*
+- mathematical connections and notation
+
+## Not Random Variables
+
+$$
+\begin{align*} 
+a =& 10 \\
+b =& \text{log}(a) \times 12 \\
+c =& \frac{a}{b} \\
+y =& \beta_0 + \beta_1*c
+\end{align*}
+$$
+
+. . .
+
+All variables here are <span style="color:red">scalars</span>. They are what they are and that is it.  $\beta$ variables and $y$ are currently unknown, but still <span style="color:red">scalars</span>. 
+
+. . .
+
+<p style="text-align:center">
+<span style="color:red">Scalars</span> are quantities that are fully described by a magnitude (or numerical value) alone.
+</p>
+
+## Random Variables {.scrollable}
+
+$$
+y \sim f(y)
+$$
+
+$y$ is a random variable which may change values each observation; it changes based on a probability function, $f(y)$. 
+
+<br>
+
+. . .
+
+
+The tilde ($\sim$) denotes "has the probability distribution of".
+
+<br>
+
+. . .
+
+
+Which value (y) is observed is predictable. Need to know *parameters* ($\theta$) of the probability function $f(y)$.
+
+<br>
+
+. . .
+
+Specifically, $f(y|\theta)$, where '|' is read as 'given'. 
+
+. . .
+
+<p style="text-align:center">
+<span style="color:blue">Toss of a coin</span> <br>
+<span style="color:blue">Roll of a die</span> <br>
+<span style="color:blue">Weight of a captured elk</span> <br>
+<span style="color:blue">Count of plants in a sampled plot</span> <br>
+</p>
+
+<br>
+
+. . .
+
+<p style="text-align:center"> The values observed can be understand based on the frequency within the <span style="color:red">population</span> or presumed <span style="color:red">super-population</span>. These frequencies can be described by probabilities. </p>
+
+## Frequency / Probabilitities {.scrollable}
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(452)
+y=rpois(1000,10)
+main="Distribution of counts of plants \nin all possible plots"
+```
+
+```{r, eval=TRUE,echo=TRUE}
+#| code-line-numbers: 2,3
+par(mfrow=c(1,2))
+hist(y, breaks=20,xlim=c(0,25),main=main)
+hist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)
+```
+
+. . . 
+
+We often only get to see **ONE** sample from this distribution.
+
+```{r, eval=TRUE,echo=FALSE}
+par(mfrow=c(1,2))
+set.seed(452)
+y=rpois(50,10)
+hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25))
+hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25),freq = FALSE)
+```
+
+
+## Random Variables 
+
+We are often interested in the characteristics of the whole population of frequencies,
+
+- <span style="color:blue">central tendency</span> (mean, mode, median)
+- <span style="color:blue">variability</span>  (var, sd)
+- <span style="color:blue">proportion of the population that meets some condition</span><br> P($8 \leq y \leq$ 12) =0.68
+
+. . .
+
+
+We infer what these are based on our sample (i.e., statistical inference). 
+
+## Philosophy
+
+<span style="color:blue">Frequentist Paradigm:</span>  
+
+Data (e.g., $y$) are random variables that can be described by probability distributions with unknown parameters that (e.g., $\theta$) are *fixed* (scalars). 
+
+<br>
+
+. . .
+
+<span style="color:blue">Bayesian Paradigm:</span>  
+
+Data (e.g., $y$) are random variables that can be described by probability functions where the unknown parameters (e.g., $\theta$) are also random variables that have probability functions that describe them.
+
+## Random Variables 
+$$
+\begin{align*}
+y =& \text{ event/outcome} \\
+f(y|\boldsymbol{\theta}) =& [y|\boldsymbol{\theta}]=  \text{ process governing the value of } y \\
+\boldsymbol{\theta} =& \text{ parameters} \\
+\end{align*}
+$$
+
+. . .
+
+$f()$ or [ ] is conveying a function (math). 
+
+. . .
+
+It is called a PDF when $y$ is continuous and a PMF when $y$ is discrete.
+
+-  PDF: **probability density function** 
+-  PMF: **probability mass function** 
+
+
+## Functions
+We commonly use *deterministic* functions (indicated by non-italic letter); e.g., log(), exp(). Output is always the same with the same input.
+$$ 
+\hspace{-12pt}\text{g} \\
+x \Longrightarrow\fbox{DO STUFF
+} \Longrightarrow \text{g}(x)
+$$ 
+
+. . .
+
+$$ 
+\hspace{-14pt}\text{g} \\
+x \Longrightarrow\fbox{+7
+} \Longrightarrow \text{g}(x)
+$$ 
+
+. . .
+
+$$ 
+\text{g}(x) = x + 7
+$$ 
+
+. . .
+
+
+## Random Variables
+
+<span style="color:red">Probability</span>: Interested in $y$, the data, and the probability function that "generates" the data.
+$$
+\begin{align*}
+y \leftarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+. . .
+
+<span style="color:blue">Statistics</span>: Interested in population characteristics of $y$; i.e., the parameters,
+
+$$
+\begin{align*}
+y \rightarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+
+## Probability Functions {.scrollable}
+
+Special functions with rules to guarantee our logic of probabilities are maintained. 
+
+. . .
+
+### Discrete RVs {.numbered}
+
+$y$ can only be a certain <span style="color:red">set</span> of values. 
+
+::: {.incremental}
+
+1.   $y \in  \{0,1\}$
+      - 0 = dead, 1 = alive
+2.   $y \in  \{0,1, 2\}$ 
+      - 0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young
+3.   $y \in  \{0, 1, 2, ..., 15\}$ 
+      - count of pups in a litter; max could by physiological constraint
+      
+:::
+
+::: {.fragment}
+
+These sets are called the <span style="color:blue">sample space</span> ($\Omega$) or the <span style="color:blue">support</span> of the RV.
+
+:::
+
+## PMF {.scrollable}
+
+$$
+f(y) = P(Y=y)
+$$
+
+. . .
+
+Data has two outcomes (0 = dead, 1 = alive) 
+
+$y \in  \{0,1\}$
+
+. . .
+
+There are two probabilities
+
+-   $f(0) = P(Y=0)$
+-   $f(1) = P(Y=1)$
+
+. . .
+
+<span style="color:blue">Axiom 1:</span> The probability of an event is greater than or equal to zero and less than or equal to 1.
+
+
+$$
+0 \leq f(y) \leq 1
+$$
+Example,
+
+-   $f(0) = 0.1$
+-   $f(1) = 0.9$ 
+
+. . .
+
+<span style="color:blue">Axiom 2:</span> The sum of the probabilities of all possible values (sample space) is one. 
+
+. . .
+
+$$
+\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
+$$
+Example, 
+
+-   $f(0) + f(1) = 0.1 + 0.9 = 1$
+
+
+## PMF
+
+Still need to define $f()$, our PMF for $y \in  \{0,1\}$
+
+
+. . .
+
+The [Bernoulli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution)
+
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        \theta^{y}\times(1-\theta)^{1-y}
+  \end{align}
+$$
+
+::: {.fragment}
+$\theta$ = P(Y = 1) = 0.2 
+:::
+
+::: {.fragment}
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        = 0.2^{1}\times(1-0.2)^{0-0} 
+  \end{align}
+$$
+:::
+
+
+::: {.fragment}
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        = 0.2 \times (0.8)^{0} = 0.2
+  \end{align}
+$$
+:::
+
+
+## Bernoulli PMF
+
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        \theta^{y}\times(1-\theta)^{1-y}
+  \end{align}
+$$
+
+
+Sample space support ($\Omega$):
+
+-   $y \in  \{0,1\}$
+
+
+::: {.fragment}
+Parameter space support ($\Theta$):
+
+-   $\theta \in  [0,1]$
+-   General: $\theta \in \Theta$
+
+::: 
+
+## Bernoulli PMF (Code)
+
+What would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?
+
+```{r bern, echo=TRUE, eval=TRUE}
+#Define inputs
+  theta=0.2;  N=1 
+
+#Random sample - 1 duck
+  rbinom(n=1,size=N,theta)
+
+#Random sample - 10 ducks
+  rbinom(n=10,size=N,theta)
+```
+
+## **Why is this useful to us?**
+
+How about to evaluate the sample size of ducks needed to estimate $\theta$?
+
+. . .
+
+```{r bern2, echo=TRUE, eval=TRUE}
+y.mat = replicate(1000,rbinom(n = 10,size=N,theta))
+theta.hat = apply(y.mat, 2, mean)
+```
+
+```{r bern3, echo=FALSE, eval=TRUE,  out.width="75%"}
+hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta),xlab=expression(theta))
+```
+
+
+
+## Binomial PMF
+
+The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution). 
+
+$$
+f(y|\theta) = [y|\theta]=
+  \begin{align}
+        {N\choose y} \theta^{y}\times(1-\theta)^{N-y}
+  \end{align}
+$$
+
+::: {.fragment}
+
+$N$ = total trials / tagged and released animals
+
+:::
+
+<br>
+
+::: {.fragment}
+
+$y$ = number of successes / number of alive animals at the of the study.
+
+:::
+
+## Binomial PMF (Code) {.scrollable}
+
+
+```{r eval=TRUE, echo=TRUE}
+# 1 duck tagged/released and one simulation
+  theta=0.2;  N=1 
+  rbinom(n=1,size=N,theta)
+```
+
+
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=TRUE}
+# 1000 ducks tagged/released and one simulation
+  theta=0.2;  N=1000 
+  rbinom(n=1,size=N,theta)
+```
+
+:::
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=TRUE}
+# 1000 ducks tagged/released and 10 simulation
+  theta=0.2;  N=1000 
+  rbinom(n=10,size=N,theta)
+```
+
+:::
+
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=TRUE}
+# 1 duck tagged for each of 1000 simulations
+  theta=0.2;  N=1
+  y = rbinom(n=1000,size=N,theta)
+  y
+```
+
+:::
+
+
+::: {.fragment}
+
+
+```{r eval=TRUE, echo=TRUE}
+sum(y)
+```
+
+
+:::
+
+
+
+
+## Support 
+
+Use a probability function that makes sense for your data/RV. In Bayesian infernece, we also pick prob. functions that make sense for parameters.
+
+<br>
+
+The sample space and parameter support can be found on Wikipedia for many probability functions. 
+
+
+
+## Normal PDF 
+
+For example, the [Normal/Gaussian distribution ](https://en.wikipedia.org/wiki/Normal_distribution) describes the sample space for all values on the real number line. 
+
+$$y \sim \text{Normal}(\mu, \sigma) \\ y \in (-\infty, \infty) \\ y \in \mathbb{R}$$
+
+What is the parameter space for $\mu$ and $\sigma$?
+
+## Normal Distribution {.scrollable}
+
+We collect data on adult alligator lengths (in). 
+```{r,eval=TRUE,echo=FALSE}
+shape=100
+rate=1
+scale=1/rate
+
+set.seed(4454)
+round(rgamma(10,shape,rate),digits=2)
+
+```
+
+<br>
+
+<p style="text-align:center">
+<span style="color:blue">
+Should we use the Normal Distribution <br>to estimate the mean? <br>
+</span>
+</p>
+
+. . .
+
+<p style="text-align:center">
+Does the support of our data match <br>the support of the PDF?
+</p>
+
+. . .
+
+<p style="text-align:center">
+What PDF does?
+</p>
+
+. . .
+
+```{r, echo=FALSE,eval=TRUE}
+mu=shape*scale
+var=shape*scale^2
+curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
+      ylab="dgamma(y,shape = 100, rate = 1",main="Equivalent means and variances")
+curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
+legend("topright",legend = c("Gamma PDF (shape = 100, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
+```
+
+<p style="text-align:center"> <span style="color:blue">Are they exactly the same?</span></p>
+
+<br>
+
+. . .
+
+The issue is when the data are near 0, we might estimate non-sensical values (e.g. negative).
+
+```{r, echo=FALSE,eval=TRUE}
+shape=1
+rate=1
+scale=1/rate
+
+mu=shape*scale
+var=shape*scale^2
+curve(dgamma(x, shape=shape,rate=rate),xlim=c(-5,5),lwd=4,xlab="y",
+      ylab="dgamma(y,shape = 1, rate = 1",main="Equivalent means and variances")
+curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
+legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 1, var = 1)"),lwd=3,col=c(1,2))
+```
+
+
+## PDF
+
+### Continuous RVs {.numbered}
+
+$y$ are an uncountable set of values.
+
+<br>
+
+::: {.fragment}
+Provide ecological data examples that match the support?
+:::
+
+::: incremental 
+
+1. <span style="color:blue">Gamma</span>:  $y \in  (0,\infty)$
+2. <span style="color:blue">Beta</span>:   $y \in  (0,1)$ 
+3. <span style="color:blue">Continuous Uniform</span>:   $y \in  [a,b]$
+
+:::
+
+
+## PDF {.scrollable}
+
+PDFs of continious RVs follow the same rules as PMFs.
+
+#### Confusing Differences
+
+::: {.fragment}
+
+<span style="color:blue">Axiom 1:</span>
+
+-   $f(y) \geq 0$
+
+
+PDFs output <span style="color:orange">probability densities</span>, not probabilities.
+
+:::
+
+::: {.fragment}
+
+<br>
+
+<span style="color:blue">Axiom 2:</span>
+
+-   Probs are the area b/w a lower and upper value of $y$; i.e, area under the curve
+
+:::
+
+
+::: {.fragment}
+
+$$
+y \sim \text{Normal}(\mu, \sigma) \\
+f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma})^{2}} \\
+$$
+
+:::
+
+::: {.fragment}
+
+```{r, echo=FALSE,eval=TRUE}
+library(visualize)
+```
+
+```{r,echo=TRUE,eval=TRUE}
+visualize.it(dist = 'norm', stat = c(100),
+             list(mu = 100 , sd = 10), section = "upper")
+```
+
+:::
+
+
+::: {.fragment}
+
+```{r,echo=FALSE,eval=TRUE}
+library(visualize)
+visualize.it(dist = 'norm', stat = c(120),
+             list(mu = 100 , sd = 10), section = "upper")
+```
+
+:::
+
+
+::: {.fragment}
+
+The math,
+
+$$
+\int_{120}^{\infty} f(y| \mu, \sigma)dy = P(120<Y<\infty)
+$$
+:::
+
+
+::: {.fragment}
+
+Read this as "the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)".
+
+:::
+
+<br>
+
+::: {.fragment}
+
+The code
+```{r, echo=TRUE}
+pnorm(120,mean=100,sd=10,lower.tail = FALSE)
+```
+
+:::
+
+<br>
+
+::: {.fragment}
+
+Or, we could reverse the question. 
+```{r, echo=TRUE}
+qnorm(0.02275,100,10,lower.tail = FALSE)
+```
+
+::: 
+
+<!-- How do we use quantiles/probabilities to justify 95\% confidencen intervals? -->
+
+<!-- ```{r,echo=FALSE,eval=TRUE} -->
+<!-- visualize.it(dist = 'norm', stat = c(-1.96,1.96), -->
+<!--              list(mu = 0 , sd = 1), section = "tails") -->
+<!-- ``` -->
+<!-- . . . -->
+
+<!-- Code as, -->
+
+<!-- ```{r, echo=TRUE} -->
+
+<!-- 0.975-0.025 -->
+
+<!-- qnorm(0.025) -->
+
+<!-- qnorm(0.975) -->
+<!-- ``` -->
+
+
+<!-- . . . -->
+
+<!-- What is the probability of $y$ = 80?  -->
+
+<!-- . . . -->
+
+<!-- $$ -->
+<!-- \begin{align*} -->
+<!-- &\int_{80}^{80} f(y|\mu=100, \sigma=10) dy\\ -->
+<!-- \end{align*} -->
+<!-- $$ -->
+<!-- . . . -->
+
+<!-- A definite integral of a continuous function is the limit of a Riemann sum as the number of subdivisions (n) approaches infinity.  -->
+
+<!-- $$ -->
+<!-- \begin{align*} -->
+<!-- &= \lim_{n \to \infty} \sum_{i=1}^{n} \Delta y_i \times f(y_{i}|\mu=100, \sigma=10) = 0\\ -->
+<!-- &\text{where } \Delta y = \frac{80-80}{n} -->
+<!-- \end{align*} -->
+<!-- $$ -->
+
+
+## PDF {.scrollable}
+
+<span style="color:blue">Axiom 3:</span>
+
+-   $\int_{\text{lower support}}^{\text{upper suppport}}f(y)dy = 1$
+
+The sum of the probability densities of all possible outcomes is equal to 1.
+
+
+## Normal Distribution (PDF Code)
+
+```{r pdf1, echo=TRUE, eval=TRUE}
+y = rnorm(1000, mean = 20, sd = 3)
+hist(y,freq=FALSE,ylim=c(0,0.14))
+lines(density(y),lwd=3,col=4)
+```
+
+## Normal Distribution (PDF Code)
+
+```{r pdf1b, echo=TRUE, eval=TRUE}
+curve(dnorm(x, mean= 20, sd = 3),
+      xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
+abline(v=20, lwd=3, col=1, lty=4)
+```
+
+## Normal Distribution (PDF Code)
+
+```{r pdf2a, echo=TRUE, eval=FALSE}
+curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
+```
+
+```{r pdf2b, echo=FALSE, eval=TRUE}
+curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
+abline(v=20, lwd=3, col=1, lty=4)
+curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
+```
+
+## Moments
+
+Properties of all probability functions.
+
+::: {.fragment}
+
+- 1${^{st}}$ moment is central tendency
+- 2${^{nd}}$ moment is the dispersion
+-  ...
+
+:::
+
+::: {.fragment}
+**Normal Distribution**: parameters ($\mu$ and $\sigma$) are 1${^{st}}$ and 2${^{nd}}$ moments
+:::
+
+
+## Moments {.scrollable}
+
+[**Gamma Distribution**](https://en.wikipedia.org/wiki/Gamma_distribution): parameters are not moments
+
+#### Parameters 
+
+Shape = $\alpha$, Rate = $\beta$ 
+
+
+**OR** 
+
+Shape = $\kappa$, Scale = $\theta$, where $\theta = \frac{1}{\beta}$
+
+::: {.fragment}
+**NOTE**: probability functions can have <span style="color:red">Alternative Parameterizations</span>, such they have different parameters.
+:::
+
+::: {.fragment}
+Moments are functions of these parameters: 
+
+- mean = $\kappa\theta$ or $\frac{\alpha}{\beta}$
+
+- var = $\kappa\theta^2$ or $\frac{\alpha}{\beta^2}$
+
+
+:::
+
+
+## Gamma Distribution {.scrollable}
+
+<span style="color:red">Probability</span>:
+Interested in the variation of y,
+$$
+\begin{align*}
+y \leftarrow& f(y|\boldsymbol{\theta'}) \\
+\end{align*}
+$$
+
+. . .
+
+
+$$
+\begin{align*}
+\boldsymbol{\theta'}  =& \begin{matrix} [\kappa & \theta] \end{matrix} \\
+f(y|\boldsymbol{\theta}') &= \text{Gamma(}\kappa, \theta) \\
+\end{align*}
+$$
+
+. . .
+
+
+$$
+\begin{align*}
+f(y|\boldsymbol{\theta}') &= \frac{1}{\Gamma(\kappa)\theta^{\kappa}}y^{\kappa-1} e^{-y/\theta} \\
+\end{align*}
+$$
+
+. . .
+
+
+[Sample/parameter Support:](https://en.wikipedia.org/wiki/Log-normal_distribution)
+
+-   $y \in (0,\infty)$
+-   $\kappa \in (0,\infty)$
+-   $\theta \in (0,\infty)$
+
+
+## Gamma Distribution (PDF Code)
+
+[Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution)
+
+```{r pdf3, echo=TRUE, eval=TRUE}
+shape =10
+scale = 2
+
+mean1 = shape*scale
+mean1
+
+mode1 = (shape-1)*scale
+mode1
+
+stdev = sqrt(shape*scale^2)
+stdev
+```
+
+## Gamma Distribution (PDF Code)
+
+```{r pdf4, echo=FALSE, eval=TRUE}
+curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
+abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
+legend("topright",lty=3, col=c(1,3),legend=c("Mean","Mode"),lwd=3)
+```
+
+
+## Gamma Distribution {.scrollable}
+
+
+
+
+What is the probability we would sample a value >40? <br>
+In this population, how common is a value >40?
+
+. . .
+
+
+$$
+\begin{align*}
+p(y>40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy 
+\end{align*}
+$$
+
+
+```{r,eval=TRUE, echo=TRUE}
+pgamma(q=40, shape=10, scale=2,lower.tail=FALSE)
+```
+
+<br>
+
+. . .
+
+
+What is the probability of observing $y$ < 20
+
+```{r,eval=TRUE, echo=TRUE}
+pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
+```
+
+<br>
+
+. . .
+
+
+What is the probability of observing 20 < $y$ < 40
+
+```{r,eval=TRUE, echo=TRUE}
+pgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-
+pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
+```
+
+<br>
+
+. . .
+
+
+
+Reverse the question: What values of $y$ and lower have a probability of 0.025
+
+```{r,eval=TRUE, echo=TRUE}
+qgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)
+```
+
+<br>
+
+. . .
+
+What values of $y$ and higher have a probability of 0.025
+
+```{r,eval=TRUE, echo=TRUE}
+qgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)
+```
+
+. . .
+
+```{r,eval=TRUE, echo=TRUE}
+curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,
+      xlab="y", ylab="dgamma(x,shape=10, scale=2)")
+abline(v=c(9.590777,34.16961),lwd=3,col=2)
+```
+
+
+. . .
+
+We can consider samples from this population,
+
+```{r,echo=TRUE, eval=TRUE}
+set.seed(154434)
+y <- rgamma(100, shape=10, scale=2)
+```
+
+
+```{r,echo=FALSE, eval=TRUE}
+curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3)
+hist(y,col=adjustcolor("red",alpha.f = 0.5),freq=FALSE,add=TRUE,breaks=100)
+```
+
+  <!-- . . . -->
+  
+<!-- <p style="text-align:center"> -->
+<!-- What use is this to us? -->
+<!-- </p> -->
+
+## Poisson 
+
+$$
+f(y|\lambda) = P(Y=y) = \frac{\lambda^ye^{-\lambda}}{y!}
+$$
+
+- probability of observing value y of the RV y, given parameter $\lambda$
+
+- What is P(y = 1 | $\lambda$ = 2) ?
+
+. . .
+
+```{r,eval=TRUE,echo=TRUE}
+dpois(1,lambda=2)
+(2^1*exp(-2)) / (factorial(1))
+```  
+
+## Poisson 
+
+The full PMF (for $\lambda$ = 2):
+
+```{r,eval=TRUE,echo=TRUE}
+plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
+```
+
+## Poisson
+
+![](../img/poisson_slide.png)
+
+## Poisson
+
+![](../img/poisson_slide2.png){width="90%"}
+
+
+## The others side of the coin {.scrollable}
+
+<span style="color:blue">Statistics</span>:
+Interested in estimating population-level characteristics; i.e., the parameters
+
+$$
+\begin{align*}
+y \rightarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+. . .
+
+<p style="text-align:center">
+<span style="color:red">
+**REMEMBER**
+</span>
+</p>
+$f(y|\boldsymbol{\theta})$ is a probability statement about $y$, <span style="color:red"> **NOT** </span> $\boldsymbol{\theta}$.
+
+<br>
+
+## Named Probability Distributions
+
+- Many chance processes so common and so well-studied that they have been given a name
+    - e.g., Bernoulli, binomial, Poisson, normal/Gaussian or uniform distributions
+    - Many, many, MANY more.... Rayleigh, Cauchy distributions, Pareto, von Mises)
+- You can do surprising things when you know just a few of them!
+    -e.g., build all of linear models, generalized linear models, mixed models
+
+
+## Likelihood
+
+
+
+## Objectives
+
+<!-- knitr::purl("./FW680A4/likelihood.qmd", output="./FW680A4/likelihood.R") -->
+
+- likelihood principle
+- likelihood connection to probability function
+- optimization / parameter estimation 
+
+## The others side of the coin {.scrollable}
+<span style="color:blue">Statistics</span>:
+Interested in estimating population-level characteristics; i.e., the parameters
+
+$$
+\begin{align*}
+y \rightarrow& f(y|\boldsymbol{\theta}) \\
+\end{align*}
+$$
+
+::: {.fragment}
+
+#### Estimation
+  
+  - likelihood
+  - Bayesian
+  
+:::
+
+## Likelihood  
+
+  [Likelihood principle](https://en.wikipedia.org/wiki/Likelihood_principle)
+  
+  All the evidence/information in a sample ($\textbf{y}$, i.e., data) relevant to making inference on model parameters ($\theta$) is contained in the *likelihood function*.
+  
+  
+## The pieces
+  
+  -   The sample data, $\textbf{y}$
+  
+  -   A probability function for $\textbf{y}$:
+  
+      -   $f(\textbf{y};\theta)$ or $[\textbf{y}|\theta]$ or $P(\textbf{y}|\theta)$
+  
+      -   the unknown parameter(s) ($\theta$) of the probability function
+  
+
+## The Likelihood Function {.scrollable}
+
+
+$$
+\begin{align*}
+\mathcal{L}(\boldsymbol{\theta}|y) = P(y|\boldsymbol{\theta})  = f(y|\boldsymbol{\theta})
+\end{align*}
+$$
+
+. . .
+
+The likelihood ($\mathcal{L}$) of the unknown parameters, given our data, can be calculated using our probability function. 
+
+## The Likelihood Function {.scrollable}
+
+For example, for $y_{1} \sim \text{Normal}(\mu,\sigma)$
+
+CODE:
+```{r,eval=TRUE,echo=TRUE}
+# A data point
+  y = c(10)
+
+#the likelihood the mean is 8, given our data
+  dnorm(y, mean = 8)
+```  
+
+<br>
+
+. . .
+
+If we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don't know what the mean truly is.
+
+<br>
+
+. . . 
+
+
+The **key** is to understand that the likelihood values are relative, which means we need many guesses.
+
+
+<br>
+
+. . . 
+
+
+
+```{r,eval=TRUE,echo=TRUE}
+#the likelihood the mean is 9, given our data
+  dnorm(y, mean = 9)
+```  
+
+
+
+## Optimization 
+
+#### Grid Search
+
+```{r,eval=TRUE,echo=TRUE}
+  means = seq(0, 20,by = 0.1) # many guesses of the mean
+  likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean
+```
+
+::: {.fragment}
+
+```{r,eval=TRUE,echo=FALSE, fig.align='center'}
+#Look at guesses and likelihood
+  plot(means,likelihood,xlab="Guesses for the Mean")
+  abline(v=10,lwd=3,col=3)
+  legend("topright",legend=c("Max Likelihood"),
+         lwd=3,col=3)
+```
+
+:::
+
+<!-- ## Double Check -->
+
+<!-- ```{r,eval=TRUE,echo=TRUE} -->
+<!--   means = seq(0,20,by=0.1) -->
+<!--   likelihood = dnorm(y, mean=means, sd=1) -->
+<!--   sum(likelihood*0.1) -->
+<!-- ``` -->
+
+<!-- ::: {.fragment} -->
+
+<!-- ```{r,eval=TRUE,echo=TRUE} -->
+<!--   means = seq(0,20,by=0.01) -->
+<!--   likelihood = dnorm(y, mean=means, sd=1) -->
+<!--   sum(likelihood*0.1) -->
+<!--   sum(likelihood*0.01) -->
+<!-- ``` -->
+
+
+<!-- ::: -->
+
+## Maximum Likelihood Properties {.scrollablew}
+
+::: {.incremental}
+
+- Central Tenet: evidence is relative.  
+
+- Parameters are not RVs. They are not defined by a PDF/PMF.
+
+- MLEs are <span style="color:red">consistent</span>. As sample size increases, they will converge to the true parameter value.
+
+- MLEs are <span style="color:red">asymptotically unbiased</span>. The $E[\hat{\theta}]$ converges to $\theta$ as the sample size gets larger.
+
+- No guarantee that MLE is unbiased at small sample size. Can be tested!
+
+- MLEs will have the minimum variance among all estimators, as the sample size gets larger.
+
+:::
+
+## MLE with n > 1
+
+What is the mean height of King Penguins? 
+
+![](/img/penguin.png){fig-align="center" width="483"}
+
+
+## MLE with n > 1 {.scrollable}
+
+We go and collect data,
+
+$\boldsymbol{y} = \begin{matrix} [4.34 & 3.53 & 3.75] \end{matrix}$
+
+<br>
+
+. . .
+
+Let's decide to use the Normal Distribution as our PDF. 
+
+
+::: {.fragment}
+$$
+\begin{align*}
+f(y_1 = 4.34|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{1}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+:::
+
+::: {.fragment}
+<span style="color:red">AND</span>
+
+$$
+\begin{align*}
+f(y_2 = 3.53|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{2}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+:::
+
+::: {.fragment}
+<span style="color:red">AND</span>
+
+$$
+\begin{align*}
+f(y_3 = 3.75|\mu,\sigma)  &= \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{1}{2}(\frac{y_{3}-\mu}{\sigma})^2} \\
+\end{align*}
+$$
+
+::: 
+
+## Need to connect data together {.scrollable}
+
+**Or simply**, 
+
+$$
+\textbf{y} \stackrel{iid}{\sim} \text{Normal}(\mu, \sigma)
+$$
+
+$iid$ = independent and identically distributed
+
+
+## Need to connect data together
+
+The joint probability of our data with shared parameters $\mu$ and $\sigma$,
+
+$$
+\begin{align*}
+& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \mu, \sigma) \\
+\end{align*}
+$$
+
+::: {.fragment}
+
+$$
+\begin{align*}
+& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \mu, \sigma) \\
+&= \mathcal{L}(\mu, \sigma|\textbf{y})
+\end{align*}
+$$
+
+:::
+## Need to connect data together
+
+<span style="color:red">IF</span> each $y_{i}$ is **independent**, the *joint probability* of our data are simply the multiplication of all three probability densities,
+
+$$
+\begin{align*}
+=& f(4.34|\mu, \sigma)\times f(3.53|\mu, \sigma)\times f(3.75|\mu, \sigma) \end{align*}
+$$
+$$
+\begin{align*}
+=& \prod_{i=1}^{3} f(y_{i}|\mu, \sigma) \\
+=& \mathcal{L}(\mu, \sigma|y_{1},y_{2},y_{3})
+\end{align*}
+$$
+
+
+## Conditional Independence Assumption
+
+We can do this because we are assuming knowing one observation does not tell us any new information about another observation. Such that,
+
+$P(y_{2}|y_{1}) = P(y_{2})$
+
+
+
+
+## Code 
+
+Translate the math to code...
+
+```{r, echo=TRUE, eval=TRUE}
+# penguin height data
+  y = c(4.34, 3.53, 3.75)
+
+# Joint likelihood of mu=3, sigma =1, given our data
+  prod(dnorm(y, mean = 3,sd = 1))
+```
+
+## Optimization Code (Grid Search)
+
+Calculate likelihood of many guesses of $\mu$ and $\sigma$ simultaneously,
+
+```{r, echo=TRUE, eval=TRUE}
+# The Guesses
+  mu = seq(0,6,0.05)
+  sigma = seq(0.01,2,0.05)
+  try = expand.grid(mu,sigma)
+  colnames(try) = c("mu","sigma")
+
+# function
+fun = function(a,b){
+          prod(dnorm(y,mean = a, sd = b))
+      }
+
+# mapply the function with the inputs
+  likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun)
+```
+
+## MLE Code 
+
+```{r, echo=TRUE, eval=TRUE}
+# maximum likelihood of parameters
+  try[which.max(likelihood),]
+```
+
+<br>
+
+. . .
+
+Lets compare to,
+```{r, echo=TRUE, eval=TRUE}
+sum(y)/length(y)
+```
+
+## Likelihood plot (3D) {.scrollable}
+
+```{r,echo=FALSE,eval=TRUE, out.width="150%"}
+library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,likelihood)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'mu'),
+                     yaxis = list(title = 'sigma'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+#fig
+```
+
+
+## Sample Size  {.scrollable}
+What happens to the likelihood if we increase the sample size to N=100?
+
+. . .
+
+```{r,eval=TRUE,echo=FALSE}
+set.seed(154541)
+y=rnorm(100,3.8,1)
+
+try=expand.grid(seq(0,6,0.01),seq(0.01,2,0.01))
+  colnames(try)=c("mu","sigma")
+
+# mapply the function with the inputs
+  likelihood=mapply(try$mu,try$sigma, FUN=fun)
+
+  library(plotly)
+f <- list(
+    size = 15,
+    family = 'sans-serif'
+  )
+  m <- list(
+    l = 2,
+    r = 0,
+    b = 2,
+    t = 2,
+    pad = 0
+  )
+all=cbind(try,likelihood)
+colnames(all)=c("mu","sigma","likelihood")
+fig <- plot_ly(all, x = ~mu, y = ~sigma, z = ~likelihood, marker = list(size = 5),width = 800, height = 800)
+fig <- fig %>% add_markers(color=~likelihood)
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'Mean'),
+                     yaxis = list(title = 'SD'),
+                     zaxis = list(title = 'Likelihood')))
+fig %>% layout(font = f, margin = m)
+
+  
+```
+
+## Relativeness
+
+#### log-likelihood
+```{r,eval=TRUE,echo=TRUE}
+fun.log = function(a,b){
+              sum(dnorm(y,mean = a, sd = b, log=TRUE))
+          }
+
+log.likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun.log)
+  
+# maximum log-likelihood of parameters
+  try[which.max(log.likelihood),]
+
+```
+
+## Optimization Code (Numerical)  {.scrollable}
+
+Let's let the computer do some smarter guessing, i.e., optimization.
+
+```{r echo=TRUE}
+
+# Note: optim function uses minimization, not maximization. 
+# WE want to find the minimum negative log-likelihood
+# THUS, need to put negative in our function
+
+neg.log.likelihood=function(par){
+  -sum(dnorm(y,mean=par[1],sd=par[2],log=TRUE))
+  }
+
+#find the values that minimizes the function
+#c(1,1) are the initial values for mu and sigma
+fit <- optim(par=c(1,1), fn=neg.log.likelihood,
+             method="L-BFGS-B",
+             lower=c(0,0),upper=c(10,1)
+             )
+
+#Maximum likelihood estimates for mu and sigma
+fit$par
+```
+
+## Linear Regression
+
+King Penguin Height Data (N=100)
+
+```{r echo=TRUE}
+out = lm(y~1)
+summary(out)
+```
+
+## What is a statistical model?
+
+- An abstraction or simplification of something complicated
+- Any explanation is really a model (because it must always simplify) !
+- Every model has a goal
+    - enforce clarity of thought
+    - summarize
+    - search for patterns
+    - understand mechanisms
+    - predict	
+
+## What is a statistical model?
+
+<span style="color:red">We are rarely explicit about the goals of our models...though should be!</span>
+
+. . .
+
+It is impossible to say what is a good model when we haven’t decided on the “what for” question
+
+. . .
+
+Goals of inference and prediction lead to different modeling strategies.
+
+## What is a statistical model?
+
+![](../img/slide3.png)
+
+## All things Bayesian
+
+<!-- knitr::purl("./FW680A4/bayesian.qmd", output="./FW680A4/bayesian.R") -->
+
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+-   <p style="color:orange">Bayesian Inference</p>
+
+-   <p style="color:orange">Bayes Thereom</p>
+
+-   <p style="color:orange">Bayesian Components</p>
+    - likelihood, prior, evidence, posterior
+
+-   <p style="color:orange">Conjugacy</p>
+    
+-   <p style="color:orange">Hippo Case Study</p>
+
+-   <p style="color:orange">Bayesian Computation</p>
+
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Inference </b></span></center>
+```
+
+
+## Probability, Data, and Parameters
+
+**What do we want our model to tell us?**
+
+. . .
+
+<p style="color:orange">Do we want to make probability statements about our data?</p>
+
+<br>
+
+. . .
+
+
+**Likelihood** = P(data|parameters)
+
+<br>
+
+. . .
+
+**90\% CI**: the long-run proportion of corresponding CIs that will contain the true value 90\% of the time.
+
+
+## Probability, Data, and Parameters
+
+**What do we want our model to tell us?**
+
+<p style="color:orange">Do we want to make probability statements about our parameters?</p>
+
+<br>
+
+. . .
+
+**Posterior** = P(parameters|data)
+
+<br>
+
+**Alternative Interval**: 90\% probability that the true value lies within the interval, given the evidence from the observed data.
+
+
+
+## Likelihood Inference
+
+Estimate of the population size of hedgehogs at two sites.
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(923874)                 # Create example data
+data <- data.frame(Site = c("Site 1","Site 2"),
+                         Pop.Size = c(75,100),
+                         lower = c(40,80),
+                         upper = c(90,120))
+
+library("ggplot2")
+ggplot(data, aes(Site, Pop.Size)) +        # ggplot2 plot with confidence intervals
+  geom_point(cex=4) +
+  geom_errorbar(aes(ymin = lower, ymax = upper),size = 1)
+
+```
+
+## Bayesian Inference
+
+<span style="color:orange">Posterior Samples</span>
+
+::: {.fragment}
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(5435)
+rnorm(10,75,20)
+```
+
+:::
+
+```{r, eval=TRUE,echo=FALSE,fig.align='center'}
+par(mfrow=c(1,2))
+set.seed(54354)
+post1=rnorm(10000,75,20)
+hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xlab="Population Size at Site 1")
+curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",ylab="Density",lwd=3,xlab="Population Size at Site 1")
+```
+
+## Bayesian Inference
+
+<span style="color:orange">Posterior Samples</span>
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(5435)
+rnorm(10,75,20)
+```
+
+```{r, eval=TRUE,echo=FALSE,fig.align='center'}
+par(mfrow=c(1,2))
+hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xlab="Population Size at Site 1")
+abline(v=mean(post1),lwd=3,col=2)
+abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
+curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",ylab="Density",lwd=3,xlab="Population Size at Site 1")
+abline(v=mean(post1),lwd=3,col=2)
+abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
+
+```
+
+## Bayesian Inference
+
+```{r, eval=TRUE,echo=FALSE, fig.align='center'}
+par(mfrow=c(1,2))
+set.seed(4345)
+post1=post1
+post2=rnorm(10000,100,15)
+hist(post1,freq=FALSE,xlim=c(20,150),ylim=c(0,0.025),main="Posterior Distributions \nof Adundance for Site 1 and Site 2 ",
+     xlab="Population Size")
+hist(post2,freq=FALSE,xlim=c(20,150),add=TRUE,col=2)
+diff=post2-post1
+hist(diff,freq=FALSE,col=3,main="Posterior Distributions \nof the difference in Adundance \nfor Site 1 and Site 2 ",
+     xlab="Pop Size 2 - Pop Size 1")
+```
+
+```{r, eval=TRUE,echo=TRUE}
+diff=post2-post1
+length(which(diff>0))/length(diff)
+```
+
+## Likelihood Inference (coeficient) {.scrollable}
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(5435)
+x=seq(-1,1,by=0.1)
+y=rnorm(21,mean=1+1*x,sd=1)
+```
+
+y is Body size of a beetle species
+
+x is elevation
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+summary(glm(y~x))
+```
+
+## Bayesian Inference (coeficient)
+
+```{r, eval=TRUE,echo=FALSE}
+set.seed(543534)
+post=rnorm(1000,0.5,1)
+hist(post,main="Posterior Distribution of Effect of Elevation",freq = FALSE,xlab="Slope/Coeficient")
+abline(v=0, lwd=4,col=2)
+abline(v=mean(post), lwd=4,col=3)
+legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
+```
+
+## Bayesian Inference (coeficient) {.scrollable}    
+
+```{r, eval=TRUE,echo=TRUE}
+#Posterior Mean
+  mean(post)
+```
+
+<br>
+
+. . .
+
+
+```{r, eval=TRUE,echo=TRUE}
+#Credible/Probability Intervals 
+  quantile(post,prob=c(0.025,0.975))
+```
+
+<br>
+
+. . .
+
+
+```{r, eval=TRUE,echo=TRUE}
+# #Probabilty of a postive effect
+ length(which(post>0))/length(post)
+```
+
+<br>
+
+. . .
+
+```{r, eval=TRUE,echo=TRUE}
+# #Probabilty of a negative effect
+ length(which(post<0))/length(post)
+``` 
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Theorem </b></span></center>
+```
+
+
+## Bayes Theorem 
+
+[Link](https://www.statisticshowto.com/probability-and-statistics/probability-main-index/probability-of-a-and-b/)
+
+::: columns
+::: {.column width="40%"}
+
+-   <p style="color:purple">Marginal Probability</p>
+    - $P(A)$
+    - $P(B)$
+
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A)
+3/10 = 0.3
+
+#P(B)
+5/10 = 0.5
+```
+
+
+:::
+
+::: {.column width="60%"}
+
+<span><center>Sampled N = 10 locations</center></span>
+
+![](/img/bayes.png){fig-align="center" width="700"}
+
+:::
+:::
+
+## Bayes Theorem 
+
+::: columns
+::: {.column width="40%"}
+
+-   <p style="color:purple">Joint Probability</p>
+    - $P(A \cap B)$
+    <!-- - $P(A \cap \overline{B})$ -->
+    <!-- - $P(B \cap \overline{A})$ -->
+
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A and B)
+2/10 = 0.2
+
+```
+:::
+
+::: {.column width="60%"}
+
+<span><center>Sampled N = 10 locations</center></span>
+
+![](/img/bayes.png){fig-align="center" width="700"}
+
+:::
+:::
+
+## Bayes Theorem 
+
+::: columns
+::: {.column width="40%"}
+
+-   <p style="color:purple">Conditional Probability</p>
+    - $P(A|B)$ 
+    - $P(B|A)$
+    <!-- - $P(B|\overline{A})$ -->
+    <!-- - $P(A|\overline{B})$ -->
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+#P(A|B)
+2/5 = 0.4
+
+#P(B|A)
+2/3 = 0.6666
+```
+
+:::
+::: {.column width="60%"}
+
+<span><center>Sampled N = 10 locations</center></span>
+
+![](/img/bayes.png){fig-align="center" width="700"}
+
+:::
+:::
+
+
+## Bayes Theorem 
+
+::: columns
+::: {.column width="40%"}
+
+-   <p style="color:purple">OR Probability</p>
+    - $P(A\cup B)$
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+#| code-fold: true
+#| code-summary: "Click for Answer"
+
+# P(A or B)
+# P(A) + P(B) - P(A and B)
+
+0.3 + 0.5 - 0.2 = 0.6
+
+
+```
+
+
+
+:::
+
+::: {.column width="60%"}
+
+<span><center>Sampled N = 10 locations</center></span>
+
+![](/img/bayes.png){fig-align="center" width="700"}
+
+:::
+:::
+
+
+## Notice that... {.scrollable}
+
+$$
+\begin{equation}
+P(A \cap B) = 0.2 \\
+P(A|B)P(B) = 0.4 \times 0.5 = 0.2 \\
+P(B|A)P(A) = 0.6666 \times 0.3 = 0.2 \\
+\end{equation}
+$$
+
+::: {.fragment}
+
+$$
+\begin{equation}
+P(A|B)P(B) = P(A \cap B) \\
+P(B|A)P(A) = P(A \cap B) \\
+\end{equation}
+$$
+:::
+
+::: {.fragment}
+
+$$
+\begin{equation}
+P(B|A)P(A) = P(A|B)P(B)
+\end{equation}
+$$
+
+:::
+
+
+## Bayes Theoreom {.scrollable}
+
+
+$$
+\begin{equation}
+P(B|A) = \frac{P(A|B)P(B)}{P(A)} \\
+\end{equation}
+$$
+
+::: {.fragment}
+
+$$
+\begin{equation}
+P(B|A) = \frac{P(A \cap B)}{P(A)} \\
+\end{equation}
+$$
+
+:::
+
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Components </b></span></center>
+```
+
+## Bayes Components {.scrollable}
+
+param = parameters
+$$
+\begin{equation}
+P(\text{param}|\text{data}) = \frac{P(\text{data}|\text{param})P(\text{param})}{P(\text{data})} \\
+\end{equation}
+$$
+
+. . .
+
+<p style="color:orange">Posterior Probability/Belief</p> 
+
+. . .
+
+<p style="color:orange">Likelihood</p>
+
+. . .
+
+<p style="color:orange">Prior Probability</p> 
+
+. . .
+
+<p style="color:orange">Evidence or Marginal Likelihood</p> 
+
+
+## Bayes Components {.scrollable}
+
+param = parameters
+
+$$
+\begin{equation}
+P(\text{param}|\text{data}) = \frac{P(\text{data}|\text{param})P(\text{param})}{\int_{\forall \text{ Param}} P(\text{data}|\text{param})P(\text{param})} 
+\end{equation}
+$$
+
+<p style="color:orange">Posterior Probability/Belief</p> 
+
+<p style="color:orange">Likelihood</p>
+
+<p style="color:orange">Prior Probability</p> 
+
+<p style="color:orange">Evidence or Marginal Likelihood</p> 
+
+## Bayes Components {.scrollable}
+
+$$
+\begin{equation}
+\text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Evidence}} \\
+\end{equation}
+$$
+
+. . .
+
+$$
+\begin{equation}
+\text{Posterior} \propto \text{Likelihood} \times \text{Prior} \end{equation}
+$$
+
+. . .
+
+$$
+\begin{equation}
+\text{Posterior} \propto \text{Likelihood} 
+\end{equation}
+$$
+
+## The Prior {.scrollable}
+
+All parameters in a Bayesian model require a prior specified; parameters are random variables.
+
+
+$y_{i} \sim \text{Binom}(N, \theta)$
+
+::: {.fragment}
+$\theta \sim \text{Beta}(\alpha = 4, \beta=2)$
+::: 
+
+::: {.fragment}
+```{r prior, echo=TRUE, eval=TRUE}
+curve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)
+```
+
+::: 
+
+
+## The Prior {.scrollable}
+
+$\theta \sim \text{Beta}(\alpha = 1, \beta=1)$
+
+::: {.fragment}
+```{r prior2, echo=TRUE, eval=TRUE}
+curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
+```
+
+::: 
+
+
+## The Prior
+
+::: {.incremental}
+
+-   The prior describes what we know about the parameter before we collect any data
+
+-   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>)
+
+-   Well-constructed priors can also improve the behavior of our models (computational advantage)
+
+-   No such thing as a 'non-informative' prior
+
+:::
+
+
+## The Prior
+
+<span style="color:purple">Use diffuse priors as a starting point</span>
+
+. . .
+
+It's fine to use diffuse priors as you develop your model but you should always prefer to use "appropriate, well-contructed informative priors" (Hobbs \& Hooten, 2015)
+
+
+## The Prior
+
+<span style="color:purple">Use your "domain knowledge"</span>
+
+. . .
+
+We can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters.
+
+## The Prior
+
+<span style="color:purple">Dive into the literature</span>
+
+. . .
+
+Find published estimates and use moment matching and other methods to convert published estimates into prior distributions
+
+## The Prior
+
+<span style="color:purple">Visualize your prior distribution</span>
+
+. . .
+
+Be sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)
+
+## The Prior
+
+<span style="color:purple">Do a sensitivity analysis</span>
+
+. . .
+
+Does changing the prior change your posterior inference? If not, don't sweat it. If it does, you'll need to return to point 2 and justify your prior choice
+
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Conjugacy </b></span></center>
+```
+
+
+## Bayesian Model {.scrollable}
+
+<p style="color:purple">Model</p> 
+$$
+\textbf{y} \sim \text{Bernoulli}(p)
+$$
+
+. . .
+
+<p style="color:purple">Prior</p> 
+
+$$
+p \sim \text{Beta}( \alpha, \beta) \\
+$$
+
+::: {.fragment}
+
+These are called Prior hyperparameters
+
+$$
+\alpha = 1 \\
+\beta = 1
+$$
+
+:::
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=TRUE}
+curve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab="p",
+      ylab = "Prior Probability Density")
+```
+
+<!-- sum(dbinom(y,size=1,p,log=TRUE)) -->
+<!-- dbeta(p,1,1,log=TRUE) -->
+
+::: 
+
+## Conjugate Distribution {.scrollable}
+
+<p style="color:purple">Likelihood (Joint Probability of y)</p> 
+
+$$
+\mathscr{L}(p|y) = \prod_{i=1}^{n} P(y_{i}|p)  = \prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}})
+$$
+
+. . .
+
+<p style="color:purple">Prior Distribution</p> 
+
+$$
+P(p) = \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}
+$$
+
+. . .
+
+<p style="color:purple">Posterior Distribution of p</p> 
+
+$$
+P(p|y) = \frac{\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)} }{\int_{p}(\text{numerator})}
+$$
+
+::: {.fragment}
+
+<center><span style="color:purple">CONJUGACY!</span></center>
+
+:::
+
+
+::: {.fragment}
+$$
+P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)
+$$
+
+:::
+
+::: {.fragment}
+$\alpha^*$ and $\beta^*$ are called Posterior hyperparameters
+
+$$
+\alpha^* = \alpha + \sum_{i=1}^{N}y_i \\
+\beta^* = \beta + N - \sum_{i=1}^{N}y_i \\
+$$
+
+[Wikipedia Conjugate Page](https://en.wikipedia.org/wiki/Conjugate_prior)
+
+[Conjugate Derivation](https://towardsdatascience.com/conjugate-prior-explained-75957dc80bfb)
+
+:::
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Case Study </b></span></center>
+```
+
+## Hippos
+
+We do a small study on hippo survival and get these data...
+
+![](/img/hippos.png){fig-align="center" width="300"}
+
+<span><center>7 Hippos Died </center></span>
+<span><center>2 Hippos Lived</center></span>
+
+## Hippos: Likelihood Model
+
+$$
+\begin{align*}
+\textbf{y} \sim& \text{Binomial}(N,p)\\
+\end{align*}
+$$
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=TRUE}
+# Survival outcomes of three adult hippos
+  y1=c(0,0,0,0,0,0,0,1,1)
+  N1=length(y1)
+  mle.p=mean(y1)
+  mle.p
+```
+
+::: 
+
+## Hippos: Bayesian Model (Prior 1) {.scrollable}
+
+$$
+\begin{align*}
+\textbf{y} \sim& \text{Binomial}(N,p)\\
+p \sim& \text{Beta}(\alpha,\beta)
+\end{align*}
+$$
+
+
+```{r eval=TRUE, echo=TRUE}
+  alpha.prior1=1
+  beta.prior1=1
+```
+
+::: {.fragment}
+
+```{r eval=TRUE, echo=FALSE}
+#Plot of prior 1
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
+      xlab="Probability",ylab="Probabilty Density",
+      main="Prior Probability of Success",ylim=c(0,20))
+legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
+```
+
+:::
+
+
+## Hippos: Bayesian Model (Prior 2) {.scrollable}
+
+```{r eval=TRUE, echo=TRUE}
+  alpha.prior2=10
+  beta.prior2=2
+```
+
+
+```{r eval=TRUE, echo=FALSE}
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
+      xlab="Probability",ylab="Probabilty Density",
+      main="Prior Probability of Success",ylim=c(0,20))
+legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),lwd=3,col=2,add=TRUE)
+legend("topleft",col=c(1,2),legend=c("Prior 1", "Prior 2"),lwd=3)
+```
+
+## Hippos: Bayesian Model (Prior 3) {.scrollable}
+
+```{r eval=TRUE, echo=TRUE}
+  alpha.prior3=150
+  beta.prior3=15
+```
+
+
+
+```{r eval=TRUE, echo=FALSE}
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
+      xlab="Probability",ylab="Probabilty Density",
+      main="Prior Probability of Success",ylim=c(0,20))
+legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),lwd=3,col=2,add=TRUE)
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),lwd=3,col=3,add=TRUE)
+legend("topleft",col=c(1,2,3),legend=c("Prior 1", "Prior 2","Prior 3"),lwd=3)
+
+```
+
+## Hippos: Bayesian Model (Posteriors) {.scrollable}
+
+$$
+P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
+\alpha^* = \alpha + \sum_{i=1}^{N}y_i \\
+\beta^* = \beta + N - \sum_{i=1}^{N}y_i \\
+$$
+```{r eval=TRUE, echo=TRUE}
+# Note- the data are the same, but the prior is changing.
+# Gibbs sampler
+  post.1=rbeta(10000,alpha.prior1+sum(y1),beta.prior1+N1-sum(y1))
+  post.2=rbeta(10000,alpha.prior2+sum(y1),beta.prior2+N1-sum(y1))
+  post.3=rbeta(10000,alpha.prior3+sum(y1),beta.prior3+N1-sum(y1))
+```
+
+## Hippos: Bayesian Model (Posteriors)
+
+```{r eval=TRUE, echo=FALSE}
+plot(density(post.1,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Prior 1",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),
+      add=TRUE,col=1,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+       legend=c("Posterior","Prior","MLE"))
+```
+
+## Hippos: Bayesian Model (Posteriors)
+
+```{r eval=TRUE, echo=FALSE}
+plot(density(post.2,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
+      add=TRUE,col=2,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topright",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
+       legend=c("Posterior","Prior","MLE"))
+```
+
+## Hippos: Bayesian Model (Posteriors)
+
+```{r eval=TRUE, echo=FALSE}
+plot(density(post.3,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
+      add=TRUE,col=3,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),
+       legend=c("Posterior","Prior","MLE"))
+```
+
+## Hippos: More data! (Prior 1)
+
+```{r eval=TRUE, echo=TRUE}
+y2=c(0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+length(y2)
+```
+
+. . .
+
+```{r eval=TRUE, echo=FALSE}
+N2=length(y2)
+
+mle.p=mean(y2)
+
+post.4=rbeta(10000,alpha.prior1+sum(y2),beta.prior1+N2-sum(y2))
+post.5=rbeta(10000,alpha.prior2+sum(y2),beta.prior2+N2-sum(y2))
+post.6=rbeta(10000,alpha.prior3+sum(y2),beta.prior3+N2-sum(y2))
+
+plot(density(post.4,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Prior 1",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),
+      add=TRUE,col=1,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
+       legend=c("Posterior","Prior","MLE"))
+```
+
+## Hippos: More data! (Prior 2)
+
+```{r eval=TRUE, echo=FALSE}
+plot(density(post.5,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
+      add=TRUE,col=2,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
+       legend=c("Posterior","Prior","MLE"))
+```
+
+## Hippos: More data! (Prior 3)
+
+```{r eval=TRUE, echo=FALSE}
+plot(density(post.6,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
+     xlab="Posterior Probability",ylab="Probability Density")
+curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
+      add=TRUE,col=3,lwd=3,lty=3)
+abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),
+       legend=c("Prior 1","Prior 2","Prior 3"))
+
+```
+
+## Hippos: Data/prior Comparison {.scollable}
+
+```{r eval=TRUE, echo=FALSE}
+par(mfrow=c(1,2))
+plot(density(post.1,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Small Data",
+     xlab="Posterior Probability",ylab="Probability Density")
+#curve(dbeta(x,shape1=alpha1,shape2=beta1),
+#      add=TRUE,col=1,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+
+lines(density(post.2,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3)
+#curve(dbeta(x,shape1=alpha2,shape2=beta2),
+#      add=TRUE,col=2,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+
+lines(density(post.3,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3)
+#curve(dbeta(x,shape1=alpha3,shape2=beta3),
+#      add=TRUE,col=3,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,1,1),col=c("black","red","green"),
+       legend=c("Prior 1","Prior 2","Prior 3"))
+
+#################
+plot(density(post.4,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="More Data",
+     xlab="Posterior Probability",ylab="Probability Density")
+#curve(dbeta(x,shape1=alpha1,shape2=beta1),
+#      add=TRUE,col=1,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+
+lines(density(post.5,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3)
+#curve(dbeta(x,shape1=alpha2,shape2=beta2),
+#      add=TRUE,col=2,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+
+lines(density(post.6),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3)
+#curve(dbeta(x,shape1=alpha3,shape2=beta3),
+#      add=TRUE,col=3,lwd=3,lty=3)
+#abline(v=mle.p,col="purple",lwd=3)
+legend("topleft",lwd=3,lty=c(1,1,1),col=c("black","red","green"),
+       legend=c("Prior 1","Prior 2","Prior 3"))
+
+```
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Computation </b></span></center>
+```
+
+
+## Markov Chain Monte Carlo {.scrollable}
+
+Often don't have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.
+
+**Class of algorithim**
+
+- Metropolis-Hastings
+- Gibbs
+- Reversible-Juno
+- No U-turn Sampling
+
+::: {.fragment}
+
+$$
+P(p|y) = \frac{\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)} }{\int_{p}(\text{numerator})}
+$$
+
+:::
+
+::: {.fragment}
+
+$$
+P(p|y) \propto\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}
+$$
+
+:::
+
+## MCMC Sampling 
+
+-   number of sample (iterations)
+-   thinning (which iterations to keep), every one (1), ever other one (2), every third one (3)
+-   burn-in (how many of the first samples to remove)
+-   chains (unique sets of samples; needed for convergence tests)
+
+
+## Sofware Options
+
+-   Write your own algorithim
+-   WinBUGS/OpenBUGS, JAGS, Stan, Nimble
+
