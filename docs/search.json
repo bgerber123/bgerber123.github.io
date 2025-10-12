@@ -12653,7 +12653,7 @@
     "href": "FW680A4/StatisticalInference.html#likelihood",
     "title": "Statistical Inference",
     "section": "Likelihood",
-    "text": "Likelihood"
+    "text": "Likelihood\nLikelihood principle\nAll the evidence/information in a sample (\\(\\textbf{y}\\), i.e., data) relevant to making inference on model parameters (\\(\\theta\\)) is contained in the likelihood function."
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#objectives-1",
@@ -12821,7 +12821,7 @@
     "href": "FW680A4/StatisticalInference.html#section-1",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Bayesian Inference"
+    "text": "Two types of Inference"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#probability-data-and-parameters",
@@ -12891,7 +12891,7 @@
     "href": "FW680A4/StatisticalInference.html#section-2",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Bayesian Theorem"
+    "text": "Probability"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#bayes-theorem",
@@ -12940,7 +12940,7 @@
     "href": "FW680A4/StatisticalInference.html#section-3",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Bayesian Components"
+    "text": "Likelihood"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#bayes-components",
@@ -13024,7 +13024,7 @@
     "href": "FW680A4/StatisticalInference.html#section-4",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Conjugacy"
+    "text": "Bayesian Inference"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#bayesian-model",
@@ -13045,7 +13045,7 @@
     "href": "FW680A4/StatisticalInference.html#section-5",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Case Study"
+    "text": "Bayesian Theorem"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#hippos",
@@ -13143,7 +13143,7 @@
     "href": "FW680A4/StatisticalInference.html#section-6",
     "title": "Statistical Inference",
     "section": "",
-    "text": "Bayesian Computation"
+    "text": "Bayesian Components"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#markov-chain-monte-carlo",
@@ -13291,5 +13291,89 @@
     "title": "Statistical Inference",
     "section": "What is a statistical model?",
     "text": "What is a statistical model?"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#gelman-blog",
+    "href": "FW680A4/StatisticalInference.html#gelman-blog",
+    "title": "Statistical Inference",
+    "section": "Gelman Blog",
+    "text": "Gelman Blog\n\n\nDecision analysis\nPropagation of uncertainty\nPrior information\nRegularization\nCombining multiple sources of information\nLatent data and parameters.\n\nWhen a model is full of parameters–perhaps even more parameters than data–you can’t estimate them all.\n\nEnabling you to go further"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-7",
+    "href": "FW680A4/StatisticalInference.html#section-7",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Conjugacy"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-8",
+    "href": "FW680A4/StatisticalInference.html#section-8",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Case Study"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-9",
+    "href": "FW680A4/StatisticalInference.html#section-9",
+    "title": "Statistical Inference",
+    "section": "",
+    "text": "Bayesian Computation"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#bayesian-steps",
+    "href": "FW680A4/StatisticalInference.html#bayesian-steps",
+    "title": "Statistical Inference",
+    "section": "Bayesian Steps",
+    "text": "Bayesian Steps"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-8",
+    "href": "FW680A4/StatisticalInference.html#the-prior-8",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-9",
+    "href": "FW680A4/StatisticalInference.html#the-prior-9",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#the-prior-10",
+    "href": "FW680A4/StatisticalInference.html#the-prior-10",
+    "title": "Statistical Inference",
+    "section": "The Prior",
+    "text": "The Prior"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#why-did-bayesian-statistics-take-off-so-late",
+    "href": "FW680A4/StatisticalInference.html#why-did-bayesian-statistics-take-off-so-late",
+    "title": "Statistical Inference",
+    "section": "Why did Bayesian statistics take off so late?",
+    "text": "Why did Bayesian statistics take off so late?\n\nUp to the 1980s, there was essentially no Bayesian inference in ecology; why ?\nA practical reason: the intractable denominator in Bayes’ thereom\nTherefore, could not evaluate posterior distributions in interesting models\nMostly limited cases and statisticians using conjugacy\nMCMC algorithims (Metropolis-Hastings) required computers\n\nalgorithms that produce random numbers from “unknown” distributions, i.e., un-named distributions that can not be dealt with analytically\n\nRandom number generators for the posterior distributions arising in Bayesian models!\nApproximate posterior distribution to arbitrary degree of accuracy by drawing larger samples"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#custom-algrithims-vs-software-engines",
+    "href": "FW680A4/StatisticalInference.html#custom-algrithims-vs-software-engines",
+    "title": "Statistical Inference",
+    "section": "Custom algrithims vs Software Engines",
+    "text": "Custom algrithims vs Software Engines\nSeveral engines that let you fit models using Bayesian MCMC techniques:\n\nBUGS, WinBUGS, OpenBUGS, multiBUGS\nJAGS\nStan\nNimble\nalso many others, e.g. greta…"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#custom-algrithims-vs-software-engines-1",
+    "href": "FW680A4/StatisticalInference.html#custom-algrithims-vs-software-engines-1",
+    "title": "Statistical Inference",
+    "section": "Custom algrithims vs Software Engines",
+    "text": "Custom algrithims vs Software Engines\nShould you learn how to write your own MCMC algorithms? \n\nYES: 10-20%\nHell no!\n\n\nWhat are the advantages?"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#a-feel-for-mcmc",
+    "href": "FW680A4/StatisticalInference.html#a-feel-for-mcmc",
+    "title": "Statistical Inference",
+    "section": "A feel for MCMC …",
+    "text": "A feel for MCMC …"
   }
 ]

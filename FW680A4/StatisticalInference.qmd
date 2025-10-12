@@ -19,6 +19,18 @@ format:
 
 ![](../img/keryKellner.png){fig-align="center" width="50%"}
 
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Two types of Inference </b></span></center>
+```
+
 ## Two types of Inference
 
 ![](../img/design_super.png){fig-align="center"}{width="50%"}
@@ -62,6 +74,17 @@ format:
 - Model + data allows statistical inferences, i.e., infer features of hypothetical data-generating chance process
 - Statistical modeling: building of model and its analysis using e.g., maximum likelihood or Bayesian posterior inference
 
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Probability </b></span></center>
+```
 
 ## Probability
 
@@ -1147,7 +1170,17 @@ $f(y|\boldsymbol{\theta})$ is a probability statement about $y$, <span style="co
     -e.g., build all of linear models, generalized linear models, mixed models
 
 
-## Likelihood
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Likelihood </b></span></center>
+```
 
 
 
@@ -1605,6 +1638,21 @@ Goals of inference and prediction lead to different modeling strategies.
 
 ![](../img/slide3.png)
 
+
+##
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:orange; font-size: 65px;";><b> Bayesian Inference </b></span></center>
+```
+
+
+
 ## All things Bayesian
 
 <!-- knitr::purl("./FW680A4/bayesian.qmd", output="./FW680A4/bayesian.R") -->
@@ -1633,18 +1681,18 @@ code.r{
 -   <p style="color:orange">Bayesian Computation</p>
 
 
-##
+## Gelman Blog {.scrollable}
 
-```{=html}
+![](../img/gelmanBlog.png)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<center><span style="color:orange; font-size: 65px;";><b> Bayesian Inference </b></span></center>
-```
-
+- Decision analysis
+- Propagation of uncertainty
+- Prior information
+- Regularization
+- Combining multiple sources of information
+- Latent data and parameters. 
+    - When a model is full of parameters–perhaps even more parameters than data–you can’t estimate them all.
+- Enabling you to go further
 
 ## Probability, Data, and Parameters
 
@@ -2113,6 +2161,10 @@ $$
 \end{equation}
 $$
 
+## Bayesian Steps
+
+![](../img/bayesSlide.png)
+
 ## The Prior {.scrollable}
 
 All parameters in a Bayesian model require a prior specified; parameters are random variables.
@@ -2199,6 +2251,18 @@ Be sure to look at the prior in terms of the parameters you want to make inferen
 . . .
 
 Does changing the prior change your posterior inference? If not, don't sweat it. If it does, you'll need to return to point 2 and justify your prior choice
+
+## The Prior
+
+![](../img/bayesSlide2.png)
+
+## The Prior
+
+![](../img/bayesSlide3.png)
+
+## The Prior
+
+![](../img/bayesSlide4.png)
 
 
 ##
@@ -2605,8 +2669,50 @@ $$
 -   chains (unique sets of samples; needed for convergence tests)
 
 
-## Sofware Options
+## Why did Bayesian statistics take off so late?{.scrollable}
 
--   Write your own algorithim
--   WinBUGS/OpenBUGS, JAGS, Stan, Nimble
+- Up to the 1980s, there was essentially no Bayesian inference in ecology; why ?
+
+- A practical reason: the intractable denominator in Bayes’ thereom
+
+- Therefore, could not evaluate posterior distributions in interesting models
+
+- Mostly limited cases and statisticians using conjugacy 
+
+- MCMC algorithims (Metropolis-Hastings) required computers
+    - algorithms that produce random numbers from “unknown” distributions, i.e., un-named distributions that can not be dealt with analytically
+    
+- Random number generators for the posterior distributions arising in Bayesian models!
+
+- Approximate posterior distribution to arbitrary degree of accuracy by drawing larger samples
+
+
+## Custom algrithims vs Software Engines {.scrollable}
+
+Several engines that let you fit models using Bayesian MCMC techniques:
+
+- BUGS, WinBUGS, OpenBUGS, multiBUGS
+- JAGS
+- Stan
+- Nimble
+- also many others, e.g. greta...
+
+## Custom algrithims vs Software Engines {.scrollable}
+
+<span style="color:red">Should you learn how to write your own MCMC algorithms?	</span>
+
+- YES: 10-20%
+- Hell no!
+
+. . .
+
+<span style="color:red">What are the advantages?</span>
+	
+	
+## A feel for MCMC ...
+
+
+
+
+
 
