@@ -65,7 +65,7 @@ format:
 
 ::: columns
 
-::: {.column width="55%" style="font-size: 75%;"}
+::: {.column width="55%" style="font-size: 95%;"}
 
 
 - Strong theoretical basis
@@ -87,9 +87,9 @@ format:
 
 ::: columns
 
-::: {.column width="55%" style="font-size: 75%;"}
+::: {.column width="55%" style="font-size: 95%;"}
 
-- Model-unbiasedness is not guaranteed
+- Unbiased estimators are not guaranteed
 - Randomness is implicit in the process and assumed to follow stochastic distribution
 - Some-to-very many assumptions
 - Highly flexible / <span style="color:red">Basically Dark Magic!</span>
@@ -536,7 +536,7 @@ Example,
 . . .
 
 $$
-\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
+\sum_{\forall i} f(y_i) = f(y_1) + f(y_2) + ... = P(\Omega) =1
 $$
 Example, 
 
@@ -845,7 +845,7 @@ PDFs output <span style="color:orange">probability densities</span>, not probabi
 
 <span style="color:blue">Axiom 2:</span>
 
--   Probs are the area b/w a lower and upper value of $y$; i.e, area under the curve
+-   Probabilities are the area b/w a lower and upper value of $y$; i.e, area under the curve
 
 
 ::: {.fragment}
@@ -892,7 +892,7 @@ $$
 
 ::: {.fragment}
 
-Read this as "the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)".
+Read this as "the integral of the PDF between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)".
 
 :::
 
@@ -1046,7 +1046,7 @@ Moments are functions of these parameters:
 ## Gamma Distribution {.scrollable}
 
 <span style="color:red">Probability</span>:
-Interested in the variation of y,
+
 $$
 \begin{align*}
 y \leftarrow& f(y|\boldsymbol{\theta'}) \\
@@ -1081,11 +1081,11 @@ $$
 -   $\theta \in (0,\infty)$
 
 
-## Gamma Distribution (PDF Code)
+<!-- ## Gamma Distribution (PDF Code) -->
 
-[Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution)
+<!-- [Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution) -->
 
-```{r pdf3, echo=TRUE, eval=TRUE}
+```{r pdf3, echo=FALSE, eval=TRUE}
 shape =10
 scale = 2
 
@@ -1235,8 +1235,8 @@ plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
 
 - <span style="color:blue">Bernoulli, binomial, Poisson, normal/Gaussian or uniform distributions</span>
     - Many, many, many more.... Rayleigh, Cauchy distributions, Pareto, von Mises)
-- You can do surprising things when you know just a few of them!
-    -e.g., build all of linear models, generalized linear models, mixed models
+- Good to really know at least a few!
+    - e.g., build all of linear models, generalized linear models, mixed models
 
 
 ## The others side of the coin {.scrollable}
@@ -1518,16 +1518,13 @@ $$
 ::: {.fragment}
 
 $$
-\begin{align*}
-& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \mu, \sigma) \\
-&= \mathcal{L}(\mu, \sigma|\textbf{y})
-\end{align*}
+P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \mu, \sigma)
 $$
 
 :::
 ## Need to connect data together
 
-<span style="color:red">IF</span> each $y_{i}$ is **independent**, the *joint probability* of our data are simply the multiplication of all three probability densities,
+<span style="color:red">IF</span> each $y_{i}$ is **independent**, the *likelihood* of our parameters is simply the multiplication of all three probability densities,
 
 $$
 \begin{align*}
@@ -1543,7 +1540,9 @@ $$
 
 ## Conditional Independence Assumption
 
-We can do this because we are assuming knowing one observation does not tell us any new information about another observation. Such that,
+We can do this because we are assuming knowing one observation does not tell us any new information about another observation.
+
+<br>
 
 $P(y_{2}|y_{1}) = P(y_{2})$
 
@@ -1789,7 +1788,6 @@ code.r{
 -   <p style="color:orange">Bayes Thereom</p>
 
 -   <p style="color:orange">Bayesian Components</p>
-    - likelihood, prior, evidence, posterior
 
 -   <p style="color:orange">Conjugacy</p>
     
@@ -1913,7 +1911,7 @@ abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
 
 ## Bayesian Inference
 
-```{r, eval=TRUE,echo=FALSE, fig.align='center'}
+```{r, eval=TRUE,echo=FALSE, fig.align='center',fig.height=4.5}
 par(mfrow=c(1,2))
 set.seed(4345)
 post1=post1
@@ -1939,9 +1937,9 @@ x=seq(-1,1,by=0.1)
 y=rnorm(21,mean=1+1*x,sd=1)
 ```
 
-y is Body size of a beetle species
+$y$ is Body size of a beetle species
 
-x is elevation
+$x$ is elevation
 
 . . .
 
@@ -2316,15 +2314,16 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 
 ## The Prior
 
-::: {.incremental}
+
 
 -   The prior describes what we know about the parameter before we collect any data
 
--   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>)
+::: {.incremental}
 
--   Well-constructed priors can also improve the behavior of our models (computational advantage)
+-   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>); No such thing as a 'non-informative' prior
 
--   No such thing as a 'non-informative' prior
+-   "Well-constructed" priors can also improve the behavior of our models (computational advantage)
+
 
 :::
 
@@ -2334,6 +2333,8 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 <span style="color:purple">Use diffuse priors as a starting point</span>
 
 . . .
+
+<br>
 
 It's fine to use diffuse priors as you develop your model but you should always prefer to use "appropriate, well-contructed informative priors" (Hobbs \& Hooten, 2015)
 
@@ -2363,9 +2364,7 @@ Find published estimates and use moment matching and other methods to convert pu
 
 <span style="color:purple">Visualize your prior distribution</span>
 
-. . .
-
-Be sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)
+Be sure to look at the prior in terms of the parameters you want to make inferences on 
 
 ## The Prior
 
@@ -2373,7 +2372,9 @@ Be sure to look at the prior in terms of the parameters you want to make inferen
 
 . . .
 
-```{r,echo=TRUE}
+- $\beta \sim \text{Normal}(\mu = 0, \sigma = 100)$
+
+```{r,echo=FALSE}
 prior1 = rnorm(100000,0,100)
 plot(density(prior1),lwd=3,main="Logit Scale",xlab="Logit of Probability")
 ```
@@ -2383,7 +2384,7 @@ plot(density(prior1),lwd=3,main="Logit Scale",xlab="Logit of Probability")
 
 
 
-```{r,echo=TRUE}
+```{r,echo=FALSE}
 plot(density(plogis(prior1),bw=0.001),lwd=3,
      main="Probability Scale",xlab="Probability")
 ```
@@ -2398,11 +2399,14 @@ Does changing the prior change your posterior inference?
 
 ## The Prior
 
-<span style="color:orange>Are priors bad?</span>
+<br>
+
+<span style="color:purple">Are priors bad?</span>
 
 <br>
 
-<span style="color:purple">Do priors make your results 'subjective'?</span>
+<span style="color:purple">Do they compromise scientific objecivity?</span>
+
 
 <!-- ## The Prior -->
 
@@ -2813,7 +2817,7 @@ Often don't have conjugate likelihood and priors, so we use MCMC algorithims to 
 
 ## MCMC Sampling 
 
--   number of sample (iterations)
+-   number of samples (iterations)
 -   thinning (which iterations to keep), every one (1), ever other one (2), every third one (3)
 -   burn-in (how many of the first samples to remove)
 -   chains (unique sets of samples; needed for convergence tests; requires different initial values)
@@ -2821,18 +2825,20 @@ Often don't have conjugate likelihood and priors, so we use MCMC algorithims to 
 
 ## Why did Bayesian statistics take off so late?{.scrollable}
 
-- Up to the 1980s, there was essentially no Bayesian inference in ecology; why ?
+<!-- . . . -->
 
-- The intractable denominator in Bayes’ thereom!
+<!-- - Up to the 1980s, there was essentially no Bayesian inference in ecology; why ? -->
 
-- Mostly limited cases and the use of conjugate distributions
+<!-- - The intractable denominator in Bayes’ thereom! -->
 
-- MCMC algorithms (Metropolis-Hastings) required computers
-    - algorithms that produce random numbers from “unknown” distributions, i.e., un-named distributions that can not be dealt with analytically
-    - converged at infinite samples!
-    
+<!-- - Mostly limited cases and the use of conjugate distributions -->
 
-## Custom algorithms vs Software engines {.scrollable}
+<!-- - MCMC algorithms (Metropolis-Hastings) required computers -->
+<!--     - algorithms that produce random numbers from “unknown” distributions, i.e., un-named distributions that can not be dealt with analytically -->
+<!--     - converged at infinite samples! -->
+
+
+## Many options now {.scrollable}
 
 Several engines that let you fit models using Bayesian MCMC techniques:
 
@@ -2854,14 +2860,6 @@ Several engines that let you fit models using Bayesian MCMC techniques:
 <span style="color:red">What are the advantages/disadvantages?</span>
 	
 	
-## Algorithm of Metropolis et al. (1953)
-
-![](../img/metropolishastings.png)
-
-## Algorithm of Metropolis et al. (1953)
-
-![](../img/metropolishastings2.png){width="70%"}
-
 ##
 
 <br>
@@ -2870,11 +2868,18 @@ Several engines that let you fit models using Bayesian MCMC techniques:
 <br>
 <span style="color:orange; font-size: 60px">Should you be a frequentist or a Bayesian?</span>
 
-## Why we have become Bayesians...
+## 
+##
+
+<br>
+<br>
+<br>
+<br>
+<span style="color:orange; font-size: 60px">Why we have become Bayesians...</span>
+
 
 ## Why we are not real Bayesians...
 
-. . .
 
 - Seldom use informative priors
 - Plus, some inconveniences of Bayesian analysis with MCMC:
@@ -2890,6 +2895,15 @@ Very happy to use maximum likelihood as well
 - Usually will not use BUGS for trivial problems
 - BUGS is fantastic for more complex models (except for large data sets !)
 - BUGS language is great to actually understand a model
+
+## Algorithm of Metropolis et al. (1953)
+
+![](../img/metropolishastings2.png){width="70%"}
+
+
+## Algorithm of Metropolis et al. (1953)
+
+![](../img/metropolishastings.png)
 
 
 ##

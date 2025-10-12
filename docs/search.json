@@ -12576,7 +12576,7 @@
     "href": "FW680A4/StatisticalInference.html#pdf-2",
     "title": "Statistical Inference ",
     "section": "PDF",
-    "text": "PDF\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]"
+    "text": "PDF\nAxiom 2:\n\nProbabilities are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code",
@@ -12618,14 +12618,14 @@
     "href": "FW680A4/StatisticalInference.html#gamma-distribution",
     "title": "Statistical Inference ",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability:\n\\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)\n\n\n\n\n\n[1] 20\n\n\n[1] 18\n\n\n[1] 6.324555"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code",
     "href": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code",
     "title": "Statistical Inference ",
     "section": "Gamma Distribution (PDF Code)",
-    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape =10\nscale = 2\n\nmean1 = shape*scale\nmean1\n\n[1] 20\n\nmode1 = (shape-1)*scale\nmode1\n\n[1] 18\n\nstdev = sqrt(shape*scale^2)\nstdev\n\n[1] 6.324555"
+    "text": "Gamma Distribution (PDF Code)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code-1",
@@ -12737,21 +12737,21 @@
     "href": "FW680A4/StatisticalInference.html#need-to-connect-data-together-1",
     "title": "Statistical Inference ",
     "section": "Need to connect data together",
-    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n& P(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma) \\\\\n&= \\mathcal{L}(\\mu, \\sigma|\\textbf{y})\n\\end{align*}\n\\]"
+    "text": "Need to connect data together\nThe joint probability of our data with shared parameters \\(\\mu\\) and \\(\\sigma\\),\n\\[\n\\begin{align*}\n& P(Y_{1} = y_1,Y_{2} = y_2, Y_{3} = y_3 | \\mu, \\sigma) \\\\\n\\end{align*}\n\\]\n\n\\[\nP(Y_{1} = 4.34,Y_{2} = 3.53, Y_{3} = 3.75 | \\mu, \\sigma)\n\\]"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#need-to-connect-data-together-2",
     "href": "FW680A4/StatisticalInference.html#need-to-connect-data-together-2",
     "title": "Statistical Inference ",
     "section": "Need to connect data together",
-    "text": "Need to connect data together\nIF each \\(y_{i}\\) is independent, the joint probability of our data are simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(4.34|\\mu, \\sigma)\\times f(3.53|\\mu, \\sigma)\\times f(3.75|\\mu, \\sigma) \\end{align*}\n\\] \\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
+    "text": "Need to connect data together\nIF each \\(y_{i}\\) is independent, the likelihood of our parameters is simply the multiplication of all three probability densities,\n\\[\n\\begin{align*}\n=& f(4.34|\\mu, \\sigma)\\times f(3.53|\\mu, \\sigma)\\times f(3.75|\\mu, \\sigma) \\end{align*}\n\\] \\[\n\\begin{align*}\n=& \\prod_{i=1}^{3} f(y_{i}|\\mu, \\sigma) \\\\\n=& \\mathcal{L}(\\mu, \\sigma|y_{1},y_{2},y_{3})\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#conditional-independence-assumption",
     "href": "FW680A4/StatisticalInference.html#conditional-independence-assumption",
     "title": "Statistical Inference ",
     "section": "Conditional Independence Assumption",
-    "text": "Conditional Independence Assumption\nWe can do this because we are assuming knowing one observation does not tell us any new information about another observation. Such that,\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
+    "text": "Conditional Independence Assumption\nWe can do this because we are assuming knowing one observation does not tell us any new information about another observation.\n\n\\(P(y_{2}|y_{1}) = P(y_{2})\\)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#code",
@@ -12814,7 +12814,7 @@
     "href": "FW680A4/StatisticalInference.html#all-things-bayesian",
     "title": "Statistical Inference ",
     "section": "All things Bayesian",
-    "text": "All things Bayesian\n\n\n\n\nBayesian Inference\n\n\nBayes Thereom\n\n\nBayesian Components\n\n\nlikelihood, prior, evidence, posterior\n\n\nConjugacy\n\n\nHippo Case Study\n\n\nBayesian Computation"
+    "text": "All things Bayesian\n\n\n\n\nBayesian Inference\n\n\nBayes Thereom\n\n\nBayesian Components\n\n\nConjugacy\n\n\nHippo Case Study\n\n\nBayesian Computation"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#section-1",
@@ -12870,7 +12870,7 @@
     "href": "FW680A4/StatisticalInference.html#likelihood-inference-coeficient",
     "title": "Statistical Inference ",
     "section": "Likelihood Inference (coeficient)",
-    "text": "Likelihood Inference (coeficient)\ny is Body size of a beetle species\nx is elevation\n\n\nsummary(glm(y~x))\n\n\nCall:\nglm(formula = y ~ x)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   0.9862     0.2435   4.049 0.000684 ***\nx             0.5089     0.4022   1.265 0.221093    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1.245548)\n\n    Null deviance: 25.659  on 20  degrees of freedom\nResidual deviance: 23.665  on 19  degrees of freedom\nAIC: 68.105\n\nNumber of Fisher Scoring iterations: 2"
+    "text": "Likelihood Inference (coeficient)\n\\(y\\) is Body size of a beetle species\n\\(x\\) is elevation\n\n\nsummary(glm(y~x))\n\n\nCall:\nglm(formula = y ~ x)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   0.9862     0.2435   4.049 0.000684 ***\nx             0.5089     0.4022   1.265 0.221093    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1.245548)\n\n    Null deviance: 25.659  on 20  degrees of freedom\nResidual deviance: 23.665  on 19  degrees of freedom\nAIC: 68.105\n\nNumber of Fisher Scoring iterations: 2"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#bayesian-inference-coeficient",
@@ -12982,14 +12982,14 @@
     "href": "FW680A4/StatisticalInference.html#the-prior-2",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)\nNo such thing as a ‘non-informative’ prior"
+    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\n\n\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors ); No such thing as a ‘non-informative’ prior\n“Well-constructed” priors can also improve the behavior of our models (computational advantage)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-3",
     "href": "FW680A4/StatisticalInference.html#the-prior-3",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\nUse diffuse priors as a starting point\n\nIt’s fine to use diffuse priors as you develop your model but you should always prefer to use “appropriate, well-contructed informative priors” (Hobbs & Hooten, 2015)"
+    "text": "The Prior\nUse diffuse priors as a starting point\n\n\nIt’s fine to use diffuse priors as you develop your model but you should always prefer to use “appropriate, well-contructed informative priors” (Hobbs & Hooten, 2015)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-4",
@@ -13017,7 +13017,7 @@
     "href": "FW680A4/StatisticalInference.html#the-prior-7",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\nVisualize your prior distribution\n\nBe sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)"
+    "text": "The Prior\nVisualize your prior distribution\nBe sure to look at the prior in terms of the parameters you want to make inferences on"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#section-4",
@@ -13157,7 +13157,7 @@
     "href": "FW680A4/StatisticalInference.html#mcmc-sampling",
     "title": "Statistical Inference ",
     "section": "MCMC Sampling",
-    "text": "MCMC Sampling\n\nnumber of sample (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (unique sets of samples; needed for convergence tests; requires different initial values)"
+    "text": "MCMC Sampling\n\nnumber of samples (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (unique sets of samples; needed for convergence tests; requires different initial values)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#sofware-options",
@@ -13241,7 +13241,7 @@
     "href": "FW680A4/StatisticalInference.html#named-probability-distributions",
     "title": "Statistical Inference ",
     "section": "Named Probability Distributions",
-    "text": "Named Probability Distributions\n\nBernoulli, binomial, Poisson, normal/Gaussian or uniform distributions\n\nMany, many, many more…. Rayleigh, Cauchy distributions, Pareto, von Mises)\n\nYou can do surprising things when you know just a few of them! -e.g., build all of linear models, generalized linear models, mixed models"
+    "text": "Named Probability Distributions\n\nBernoulli, binomial, Poisson, normal/Gaussian or uniform distributions\n\nMany, many, many more…. Rayleigh, Cauchy distributions, Pareto, von Mises)\n\nGood to really know at least a few!\n\ne.g., build all of linear models, generalized linear models, mixed models"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#poisson",
@@ -13332,14 +13332,14 @@
     "href": "FW680A4/StatisticalInference.html#the-prior-8",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\nYour prior is probabably not invariant to transformations\n\n\nprior1 = rnorm(100000,0,100)\nplot(density(prior1),lwd=3,main=\"Logit Scale\",xlab=\"Logit of Probability\")"
+    "text": "The Prior\nYour prior is probabably not invariant to transformations\n\n\n\\(\\beta \\sim \\text{Normal}(\\mu = 0, \\sigma = 100)\\)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-9",
     "href": "FW680A4/StatisticalInference.html#the-prior-9",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\nYour prior is probabably not invariant to transformations\n\nplot(density(plogis(prior1),bw=0.001),lwd=3,\n     main=\"Probability Scale\",xlab=\"Probability\")"
+    "text": "The Prior\nYour prior is probabably not invariant to transformations"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-10",
@@ -13353,7 +13353,7 @@
     "href": "FW680A4/StatisticalInference.html#why-did-bayesian-statistics-take-off-so-late",
     "title": "Statistical Inference ",
     "section": "Why did Bayesian statistics take off so late?",
-    "text": "Why did Bayesian statistics take off so late?\n\nUp to the 1980s, there was essentially no Bayesian inference in ecology; why ?\nThe intractable denominator in Bayes’ thereom!\nMostly limited cases and the use of conjugate distributions\nMCMC algorithms (Metropolis-Hastings) required computers\n\nalgorithms that produce random numbers from “unknown” distributions, i.e., un-named distributions that can not be dealt with analytically\nconverged at infinite samples!"
+    "text": "Why did Bayesian statistics take off so late?"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#custom-algrithims-vs-software-engines",
@@ -13395,7 +13395,7 @@
     "href": "FW680A4/StatisticalInference.html#model-based-1",
     "title": "Statistical Inference ",
     "section": "Model-based",
-    "text": "Model-based\n\n\n\nModel-unbiasedness is not guaranteed\nRandomness is implicit in the process and assumed to follow stochastic distribution\nSome-to-very many assumptions\nHighly flexible / Basically Dark Magic!"
+    "text": "Model-based\n\n\n\nUnbiased estimators are not guaranteed\nRandomness is implicit in the process and assumed to follow stochastic distribution\nSome-to-very many assumptions\nHighly flexible / Basically Dark Magic!"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#statistical-modeling-concerns",
@@ -13500,7 +13500,7 @@
     "href": "FW680A4/StatisticalInference.html#why-we-are-not-real-bayesians",
     "title": "Statistical Inference ",
     "section": "Why we are not real Bayesians…",
-    "text": "Why we are not real Bayesians…\n\n\nSeldom use informative priors\nPlus, some inconveniences of Bayesian analysis with MCMC:\n\nTake long time to run\nSensitivity of results to prior choice (not with ML)\nBUGS so flexible that may fit nonsensical models\n\n\nVery happy to use maximum likelihood as well"
+    "text": "Why we are not real Bayesians…\n\nSeldom use informative priors\nPlus, some inconveniences of Bayesian analysis with MCMC:\n\nTake long time to run\nSensitivity of results to prior choice (not with ML)\nBUGS so flexible that may fit nonsensical models\n\n\nVery happy to use maximum likelihood as well"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#frequency-probabilitities-1",
@@ -13514,7 +13514,7 @@
     "href": "FW680A4/StatisticalInference.html#pmf-2",
     "title": "Statistical Inference ",
     "section": "PMF",
-    "text": "PMF\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\\[\n\\sum_{i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
+    "text": "PMF\nAxiom 2: The sum of the probabilities of all possible values (sample space) is one.\n\n\\[\n\\sum_{\\forall i} f(y_i) = f(y_1) + f(y_2) + ... = P(\\Omega) =1\n\\] Example,\n\n\\(f(0) + f(1) = 0.1 + 0.9 = 1\\)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#pmf-3",
@@ -13556,7 +13556,7 @@
     "href": "FW680A4/StatisticalInference.html#pdf-5",
     "title": "Statistical Inference ",
     "section": "PDF",
-    "text": "PDF\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\nRead this as “the integral of the PDF between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#pdf-6",
@@ -13626,7 +13626,7 @@
     "href": "FW680A4/StatisticalInference.html#the-prior-11",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\n&lt;span style=“color:orange&gt;Are priors bad?\n\nDo priors make your results ‘subjective’?"
+    "text": "The Prior\n\nAre priors bad?\n\nDo they compromise scientific objecivity?"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-12",
@@ -13634,5 +13634,26 @@
     "title": "Statistical Inference ",
     "section": "The Prior",
     "text": "The Prior"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#many-options-now",
+    "href": "FW680A4/StatisticalInference.html#many-options-now",
+    "title": "Statistical Inference ",
+    "section": "Many options now",
+    "text": "Many options now\nSeveral engines that let you fit models using Bayesian MCMC techniques:\n\nBUGS, WinBUGS, OpenBUGS, multiBUGS\nJAGS\nStan\nNimble\nalso many others, e.g. greta…"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-12",
+    "href": "FW680A4/StatisticalInference.html#section-12",
+    "title": "Statistical Inference ",
+    "section": "",
+    "text": "Why we have become Bayesians…"
+  },
+  {
+    "objectID": "FW680A4/StatisticalInference.html#section-13",
+    "href": "FW680A4/StatisticalInference.html#section-13",
+    "title": "Statistical Inference ",
+    "section": "",
+    "text": "THE END"
   }
 ]
