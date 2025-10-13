@@ -1,17 +1,17 @@
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(452)
 y=rpois(1000,10)
 main="Distribution of counts of plants \nin all possible plots"
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 #| code-line-numbers: 2,3
 par(mfrow=c(1,2))
 hist(y, breaks=20,xlim=c(0,25),main=main)
 hist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 par(mfrow=c(1,2))
 set.seed(452)
 y=rpois(50,10)
@@ -19,7 +19,7 @@ hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25))
 hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25),freq = FALSE)
 
 
-## ----bern, echo=TRUE, eval=TRUE--------------------------------------
+## ----bern, echo=TRUE, eval=TRUE-----
 #Define inputs
   theta=0.2;  N=1 
 
@@ -30,45 +30,16 @@ hist(y, main="Sample of counts of plants (n=50)",breaks=10,xlim=c(0,25),freq = F
   rbinom(n=10,size=N,theta)
 
 
-## ----bern2, echo=TRUE, eval=TRUE-------------------------------------
+## ----bern2, echo=TRUE, eval=TRUE----
 y.mat = replicate(1000,rbinom(n = 10,size=N,theta))
 theta.hat = apply(y.mat, 2, mean)
 
 
-## ----bern3, echo=FALSE, eval=TRUE,  out.width="75%"------------------
+## ----bern3, echo=FALSE, eval=TRUE,  out.width="75%"----
 hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta),xlab=expression(theta))
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
-# 1 duck tagged/released and one simulation
-  theta=0.2;  N=1 
-  rbinom(n=1,size=N,theta)
-
-
-## ----eval=TRUE, echo=TRUE--------------------------------------------
-# 1000 ducks tagged/released and one simulation
-  theta=0.2;  N=1000 
-  rbinom(n=1,size=N,theta)
-
-
-## ----eval=TRUE, echo=TRUE--------------------------------------------
-# 1000 ducks tagged/released and 10 simulation
-  theta=0.2;  N=1000 
-  rbinom(n=10,size=N,theta)
-
-
-## ----eval=TRUE, echo=TRUE--------------------------------------------
-# 1 duck tagged for each of 1000 simulations
-  theta=0.2;  N=1
-  y = rbinom(n=1000,size=N,theta)
-  y
-
-
-## ----eval=TRUE, echo=TRUE--------------------------------------------
-sum(y)
-
-
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 shape=100
 rate=1
 scale=1/rate
@@ -78,7 +49,7 @@ round(rgamma(10,shape,rate),digits=2)
 
 
 
-## ----echo=FALSE,eval=TRUE--------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------
 mu=shape*scale
 var=shape*scale^2
 curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
@@ -87,7 +58,7 @@ curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
 legend("topright",legend = c("Gamma PDF (shape = 100, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
 
 
-## ----echo=FALSE,eval=TRUE--------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------
 shape=1
 rate=1
 scale=1/rate
@@ -100,52 +71,37 @@ curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
 legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 1, var = 1)"),lwd=3,col=c(1,2))
 
 
-## ----echo=FALSE,eval=TRUE--------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------
 library(visualize)
 
 
-## ----echo=TRUE,eval=TRUE---------------------------------------------
+## ----echo=TRUE,eval=TRUE------------
 visualize.it(dist = 'norm', stat = c(100),
              list(mu = 100 , sd = 10), section = "upper")
 
 
-## ----echo=FALSE,eval=TRUE--------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------
 library(visualize)
 visualize.it(dist = 'norm', stat = c(120),
              list(mu = 100 , sd = 10), section = "upper")
 
 
-## ----echo=TRUE-------------------------------------------------------
+## ----echo=TRUE----------------------
 pnorm(120,mean=100,sd=10,lower.tail = FALSE)
 
 
-## ----echo=TRUE-------------------------------------------------------
+## ----echo=TRUE----------------------
 qnorm(0.02275,100,10,lower.tail = FALSE)
 
 
-## ----pdf1, echo=TRUE, eval=TRUE--------------------------------------
+## ----pdf1, echo=TRUE, eval=TRUE-----
 y = rnorm(1000, mean = 20, sd = 3)
 hist(y,freq=FALSE,ylim=c(0,0.14))
 lines(density(y),lwd=3,col=4)
+curve(dnorm(x, mean= 20, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 
 
-## ----pdf1b, echo=TRUE, eval=TRUE-------------------------------------
-curve(dnorm(x, mean= 20, sd = 3),
-      xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=20, lwd=3, col=1, lty=4)
-
-
-## ----pdf2a, echo=TRUE, eval=FALSE------------------------------------
-# curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
-
-
-## ----pdf2b, echo=FALSE, eval=TRUE------------------------------------
-curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=20, lwd=3, col=1, lty=4)
-curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
-
-
-## ----pdf3, echo=FALSE, eval=TRUE-------------------------------------
+## ----pdf3, echo=FALSE, eval=TRUE,results='hide'----
 shape =10
 scale = 2
 
@@ -159,59 +115,59 @@ stdev = sqrt(shape*scale^2)
 stdev
 
 
-## ----pdf4, echo=FALSE, eval=TRUE-------------------------------------
+## ----pdf4, echo=FALSE, eval=TRUE----
 curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
 abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
 legend("topright",lty=3, col=c(1,3),legend=c("Mean","Mode"),lwd=3)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 pgamma(q=40, shape=10, scale=2,lower.tail=FALSE)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 pgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-
 pgamma(q=20,shape=10, scale=2,lower.tail=TRUE)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 qgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 qgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,
       xlab="y", ylab="dgamma(x,shape=10, scale=2)")
 abline(v=c(9.590777,34.16961),lwd=3,col=2)
 
 
-## ----echo=TRUE, eval=TRUE--------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------
 set.seed(154434)
 y <- rgamma(100, shape=10, scale=2)
 
 
-## ----echo=FALSE, eval=TRUE-------------------------------------------
+## ----echo=FALSE, eval=TRUE----------
 curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3)
 hist(y,col=adjustcolor("red",alpha.f = 0.5),freq=FALSE,add=TRUE,breaks=100)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 dpois(1,lambda=2)
 (2^1*exp(-2)) / (factorial(1))
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 # A data point
   y = c(10)
 
@@ -219,19 +175,19 @@ plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
   dnorm(y, mean = 8)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 #the likelihood the mean is 9, given our data
   dnorm(y, mean = 9)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 # many guesses of the mean
   means = seq(0, 20,by = 0.1) 
 # likelihood of each guess of the mean
   likelihood = dnorm(y, mean = means, sd = 1) 
 
 
-## ----eval=TRUE,echo=FALSE, fig.align='center'------------------------
+## ----eval=TRUE,echo=FALSE, fig.align='center'----
 #Look at guesses and likelihood
   plot(means,likelihood,xlab="Guesses for the Mean")
   abline(v=10,lwd=3,col=3)
@@ -239,7 +195,7 @@ plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
          lwd=3,col=3)
 
 
-## ----echo=TRUE, eval=TRUE--------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------
 # penguin height data
   y = c(4.34, 3.53, 3.75)
 
@@ -247,7 +203,7 @@ plot(dpois(0:10, 2), type = 'h', lend = 'butt', lwd = 10)
   prod(dnorm(y, mean = 3,sd = 1))
 
 
-## ----echo=TRUE, eval=TRUE--------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------
 # The Guesses
   mu = seq(0,6,0.05)
   sigma = seq(0.01,2,0.05)
@@ -263,16 +219,16 @@ fun = function(a,b){
   likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun)
 
 
-## ----echo=TRUE, eval=TRUE--------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------
 # maximum likelihood of parameters
   try[which.max(likelihood),]
 
 
-## ----echo=TRUE, eval=TRUE--------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------
 sum(y)/length(y)
 
 
-## ----echo=FALSE,eval=TRUE, out.width="150%"--------------------------
+## ----echo=FALSE,eval=TRUE, out.width="150%"----
 library(plotly)
 f <- list(
     size = 15,
@@ -297,7 +253,7 @@ fig %>% layout(font = f, margin = m)
 #fig
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(154541)
 y=rnorm(100,3.8,1)
 
@@ -331,7 +287,7 @@ fig %>% layout(font = f, margin = m)
   
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 fun.log = function(a,b){
               sum(dnorm(y,mean = a, sd = b, log=TRUE))
           }
@@ -343,7 +299,7 @@ log.likelihood = mapply(a = try$mu, b = try$sigma, FUN=fun.log)
 
 
 
-## ----echo=TRUE-------------------------------------------------------
+## ----echo=TRUE----------------------
 
 # Note: optim function uses minimization, not maximization. 
 # WE want to find the minimum negative log-likelihood
@@ -364,12 +320,12 @@ fit <- optim(par=c(1,1), fn=neg.log.likelihood,
 fit$par
 
 
-## ----echo=TRUE-------------------------------------------------------
+## ----echo=TRUE----------------------
 out = lm(y~1)
 summary(out)
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(923874)                 # Create example data
 data <- data.frame(Site = c("Site 1","Site 2"),
                          Pop.Size = c(75,100),
@@ -383,12 +339,12 @@ ggplot(data, aes(Site, Pop.Size)) +        # ggplot2 plot with confidence interv
 
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(5435)
 rnorm(10,75,20)
 
 
-## ----eval=TRUE,echo=FALSE,fig.align='center'-------------------------
+## ----eval=TRUE,echo=FALSE,fig.align='center'----
 par(mfrow=c(1,2))
 set.seed(54354)
 post1=rnorm(10000,75,20)
@@ -396,12 +352,12 @@ hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xl
 curve(dnorm(x,75,20),xlim=c(0,200),main="Posterior Probability Distribution",ylab="Density",lwd=3,xlab="Population Size at Site 1")
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(5435)
 rnorm(10,75,20)
 
 
-## ----eval=TRUE,echo=FALSE,fig.align='center'-------------------------
+## ----eval=TRUE,echo=FALSE,fig.align='center'----
 par(mfrow=c(1,2))
 hist(post1,xlim=c(0,200),freq=FALSE,main="Posterior Probability Distribution",xlab="Population Size at Site 1")
 abline(v=mean(post1),lwd=3,col=2)
@@ -412,7 +368,7 @@ abline(v=quantile(post1,probs=c(0.025,0.975)),lwd=3,col=4)
 
 
 
-## ----eval=TRUE,echo=FALSE, fig.align='center',fig.height=4.5---------
+## ----eval=TRUE,echo=FALSE, fig.align='center',fig.height=4.5----
 par(mfrow=c(1,2))
 set.seed(4345)
 post1=post1
@@ -425,22 +381,22 @@ hist(diff,freq=FALSE,col=3,main="Posterior Distributions \nof the difference in 
      xlab="Pop Size 2 - Pop Size 1")
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 diff=post2-post1
 length(which(diff>0))/length(diff)
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(5435)
 x=seq(-1,1,by=0.1)
 y=rnorm(21,mean=1+1*x,sd=1)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 summary(glm(y~x))
 
 
-## ----eval=TRUE,echo=FALSE--------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------
 set.seed(543534)
 post=rnorm(1000,0.5,1)
 hist(post,main="Posterior Distribution of Effect of Elevation",freq = FALSE,xlab="Slope/Coeficient")
@@ -449,27 +405,27 @@ abline(v=mean(post), lwd=4,col=3)
 legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 #Posterior Mean
   mean(post)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 #Credible/Probability Intervals 
   quantile(post,prob=c(0.025,0.975))
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 # #Probabilty of a postive effect
  length(which(post>0))/length(post)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------
+## ----eval=TRUE,echo=TRUE------------
 # #Probabilty of a negative effect
  length(which(post<0))/length(post)
 
 
-## --------------------------------------------------------------------
+## -----------------------------------
 #| echo: TRUE
 #| eval: FALSE
 #| code-fold: true
@@ -482,7 +438,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 # 5/10 = 0.5
 
 
-## --------------------------------------------------------------------
+## -----------------------------------
 #| echo: TRUE
 #| eval: FALSE
 #| code-fold: true
@@ -493,7 +449,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 # 
 
 
-## --------------------------------------------------------------------
+## -----------------------------------
 #| echo: TRUE
 #| eval: FALSE
 #| code-fold: true
@@ -506,7 +462,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 # 2/3 = 0.6666
 
 
-## --------------------------------------------------------------------
+## -----------------------------------
 #| echo: TRUE
 #| eval: FALSE
 #| code-fold: true
@@ -520,30 +476,30 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 # 
 
 
-## ----prior, echo=TRUE, eval=TRUE-------------------------------------
+## ----prior, echo=TRUE, eval=TRUE----
 curve(dbeta(x, 4,2),xlim=c(0,1),lwd=5)
 
 
-## ----prior2, echo=TRUE, eval=TRUE------------------------------------
+## ----prior2, echo=TRUE, eval=TRUE----
 curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 
 
-## ----echo=FALSE------------------------------------------------------
+## ----echo=FALSE---------------------
 prior1 = rnorm(100000,0,100)
 plot(density(prior1),lwd=3,main="Logit Scale",xlab="Logit of Probability")
 
 
-## ----echo=FALSE------------------------------------------------------
+## ----echo=FALSE---------------------
 plot(density(plogis(prior1),bw=0.001),lwd=3,
      main="Probability Scale",xlab="Probability")
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 curve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab="p",
       ylab = "Prior Probability Density")
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 # Survival outcomes of three adult hippos
   y1=c(0,0,0,0,0,0,0,1,1)
   N1=length(y1)
@@ -551,12 +507,12 @@ curve(dbeta(x,1,1),xlim=c(0,1),lwd=3,col=2,xlab="p",
   mle.p
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
   alpha.prior1=1
   beta.prior1=1
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 #Plot of prior 1
 curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
@@ -564,12 +520,12 @@ curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
 legend("topleft",col=c(1,2),legend=c("Prior 1"),lwd=3)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
   alpha.prior2=10
   beta.prior2=2
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
       main="Prior Probability of Success",ylim=c(0,20))
@@ -578,12 +534,12 @@ curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),lwd=3,col=2,add=TRUE)
 legend("topleft",col=c(1,2),legend=c("Prior 1", "Prior 2"),lwd=3)
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
   alpha.prior3=150
   beta.prior3=15
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),lwd=3,
       xlab="Probability",ylab="Probabilty Density",
       main="Prior Probability of Success",ylim=c(0,20))
@@ -594,7 +550,7 @@ legend("topleft",col=c(1,2,3),legend=c("Prior 1", "Prior 2","Prior 3"),lwd=3)
 
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 # Note- the data are the same, but the prior is changing.
 # Gibbs sampler
   post.1=rbeta(10000,alpha.prior1+sum(y1),beta.prior1+N1-sum(y1))
@@ -602,7 +558,7 @@ legend("topleft",col=c(1,2,3),legend=c("Prior 1", "Prior 2","Prior 3"),lwd=3)
   post.3=rbeta(10000,alpha.prior3+sum(y1),beta.prior3+N1-sum(y1))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 plot(density(post.1,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Prior 1",
      xlab="Posterior Probability",ylab="Probability Density")
 curve(dbeta(x,shape1=alpha.prior1,shape2=beta.prior1),
@@ -612,7 +568,7 @@ legend("topright",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
        legend=c("Posterior","Prior","MLE"))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 plot(density(post.2,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
      xlab="Posterior Probability",ylab="Probability Density")
 curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
@@ -622,7 +578,7 @@ legend("topright",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
        legend=c("Posterior","Prior","MLE"))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 plot(density(post.3,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
      xlab="Posterior Probability",ylab="Probability Density")
 curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
@@ -632,13 +588,13 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),
        legend=c("Posterior","Prior","MLE"))
 
 
-## ----eval=TRUE, echo=TRUE--------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------
 y2=c(0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
      1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
 length(y2)
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 N2=length(y2)
 
 mle.p=mean(y2)
@@ -656,7 +612,7 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("black","black","purple"),
        legend=c("Posterior","Prior","MLE"))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 plot(density(post.5,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=2,lwd=3,main="Prior 2",
      xlab="Posterior Probability",ylab="Probability Density")
 curve(dbeta(x,shape1=alpha.prior2,shape2=beta.prior2),
@@ -666,7 +622,7 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("red","red","purple"),
        legend=c("Posterior","Prior","MLE"))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 plot(density(post.6,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=3,lwd=3,main="Prior 3",
      xlab="Posterior Probability",ylab="Probability Density")
 curve(dbeta(x,shape1=alpha.prior3,shape2=beta.prior3),
@@ -677,7 +633,7 @@ legend("topleft",lwd=3,lty=c(1,3,1),col=c("green","green","purple"),
 
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------
+## ----eval=TRUE, echo=FALSE----------
 par(mfrow=c(1,2))
 plot(density(post.1,adjust=1.3),ylim=c(0,20),xlim=c(0,1),col=1,lwd=3,main="Small Data",
      xlab="Posterior Probability",ylab="Probability Density")

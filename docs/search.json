@@ -12401,7 +12401,7 @@
     "href": "FW680A4/StatisticalInference.html#probability",
     "title": "Statistical Inference ",
     "section": "Probability",
-    "text": "Probability\nProbability as the basis for statistical inference\n\n\nThe world is uncertain\nVery few things perfectly known (i.e., deterministic)\nNeed to draw conclusions, make decisions, or learn from observations in the face of resulting uncertainty\nProbability: branch of mathematics dealing with chance processes and their outcomes\n\nExtension of logic from certain events to all events in life\nBasis for statistical modeling and inference"
+    "text": "Probability\nProbability as the basis for statistical inference\n\n\nThe world is uncertain; processes are often not perfectly known (i.e., deterministic)\nNeed to draw conclusions, make decisions, or learn from observations in the face of resulting uncertainty\nProbability: branch of mathematics dealing with chance processes and their outcomes\n\nExtension of logic from certain events to all events in life\nBasis for statistical modeling and inference"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#objectives",
@@ -12429,7 +12429,7 @@
     "href": "FW680A4/StatisticalInference.html#not-random-variables",
     "title": "Statistical Inference ",
     "section": "Not Random Variables",
-    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1\\times c+ \\epsilon\n\\end{align*}\n\\]\n\nAll variables here are scalars. They are what they are and that is it. \\(\\beta\\) variables and \\(y\\) are currently unknown, but still scalars.\n\n\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
+    "text": "Not Random Variables\n\\[\n\\begin{align*}\na =& 10 \\\\\nb =& \\text{log}(a) \\times 12 \\\\\nc =& \\frac{a}{b} \\\\\ny =& \\beta_0 + \\beta_1\\times c\n\\end{align*}\n\\]\n\nAll variables here are scalars. They are what they are and that is it. scalars.\n\n\n\nScalars are quantities that are fully described by a magnitude (or numerical value) alone."
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#random-variables",
@@ -12443,14 +12443,14 @@
     "href": "FW680A4/StatisticalInference.html#frequency-probabilitities",
     "title": "Statistical Inference ",
     "section": "Frequency / Probabilitities",
-    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)"
+    "text": "Frequency / Probabilitities"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#random-variables-1",
     "href": "FW680A4/StatisticalInference.html#random-variables-1",
     "title": "Statistical Inference ",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\nMost often, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot"
+    "text": "Random Variables\n\\[\ny \\sim f(y|\\theta)\n\\]\nwhere ‘|’ is read as ‘given’.\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#philosophy",
@@ -12506,7 +12506,7 @@
     "href": "FW680A4/StatisticalInference.html#bernoulli-pmf",
     "title": "Statistical Inference ",
     "section": "Bernoulli PMF",
-    "text": "Bernoulli PMF\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\nSample space support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
+    "text": "Bernoulli PMF\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\nThe support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#bernoulli-pmf-code",
@@ -12520,7 +12520,7 @@
     "href": "FW680A4/StatisticalInference.html#why-is-this-useful-to-us",
     "title": "Statistical Inference ",
     "section": "Why is this useful to us?",
-    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
+    "text": "Why is this useful to us?\n\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#binomial-pmf",
@@ -12541,14 +12541,14 @@
     "href": "FW680A4/StatisticalInference.html#support",
     "title": "Statistical Inference ",
     "section": "Support",
-    "text": "Support\nUse a probability function that makes sense for your data/RV. In Bayesian infernece, we also pick prob. functions that make sense for parameters.\n\nThe sample space and parameter support can be found on Wikipedia for many probability functions."
+    "text": "Support\nUse a probability function that makes sense for your data/RV; has the correct support.\n\nIn Bayesian infernece, we also pick prob. functions that make sense for parameters.\n\nWhere do you find information on probability functions?"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#normal-pdf",
     "href": "FW680A4/StatisticalInference.html#normal-pdf",
     "title": "Statistical Inference ",
     "section": "Normal PDF",
-    "text": "Normal PDF\nFor example, the Normal/Gaussian distribution describes the sample space for all values on the real number line.\n\\[y \\sim \\text{Normal}(\\mu, \\sigma) \\\\ y \\in (-\\infty, \\infty) \\\\ y \\in \\mathbb{R}\\]\nWhat is the parameter space for \\(\\mu\\) and \\(\\sigma\\)?"
+    "text": "Normal PDF\nThe Normal/Gaussian distribution describes the sample space for all values on the real number line.\n\\[y \\sim \\text{Normal}(\\mu, \\sigma) \\\\ y \\in (-\\infty, \\infty) \\\\ y \\in \\mathbb{R}\\]\nWhat is the parameter space for \\(\\mu\\) and \\(\\sigma\\)?"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#normal-distribution",
@@ -12583,14 +12583,14 @@
     "href": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code",
     "title": "Statistical Inference ",
     "section": "Normal Distribution (PDF Code)",
-    "text": "Normal Distribution (PDF Code)\n\ny = rnorm(1000, mean = 20, sd = 3)\nhist(y,freq=FALSE,ylim=c(0,0.14))\nlines(density(y),lwd=3,col=4)"
+    "text": "Normal Distribution (PDF Code)\n\ny = rnorm(1000, mean = 20, sd = 3)\nhist(y,freq=FALSE,ylim=c(0,0.14))\nlines(density(y),lwd=3,col=4)\ncurve(dnorm(x, mean= 20, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-1",
     "href": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-1",
     "title": "Statistical Inference ",
     "section": "Normal Distribution (PDF Code)",
-    "text": "Normal Distribution (PDF Code)\n\ncurve(dnorm(x, mean= 20, sd = 3),\n      xlim=c(0,40),lwd=3,col=2,ylab=\"Probability Density\",xlab=\"y\")\nabline(v=20, lwd=3, col=1, lty=4)"
+    "text": "Normal Distribution (PDF Code)\n\nhist(y,freq=FALSE,ylim=c(0,0.14))\nlines(density(y),lwd=3,col=4)\n\n\n\n\n\n\n\ncurve(dnorm(x, mean= 20, sd = 3),\n      xlim=c(0,40),lwd=3,col=2,ylab=\"Probability Density\",xlab=\"y\")\nabline(v=20, lwd=3, col=1, lty=4)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#normal-distribution-pdf-code-2",
@@ -12618,7 +12618,7 @@
     "href": "FW680A4/StatisticalInference.html#gamma-distribution",
     "title": "Statistical Inference ",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability:\n\\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)\n\n\n\n\n\n[1] 20\n\n\n[1] 18\n\n\n[1] 6.324555"
+    "text": "Gamma Distribution\nProbability:\n\\[\n\\begin{align*}\ny \\sim& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#gamma-distribution-pdf-code",
@@ -12982,7 +12982,7 @@
     "href": "FW680A4/StatisticalInference.html#the-prior-2",
     "title": "Statistical Inference ",
     "section": "The Prior",
-    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\n\n\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors ); No such thing as a ‘non-informative’ prior\n“Well-constructed” priors can also improve the behavior of our models (computational advantage)"
+    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\n\n\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors ); no such thing as a ‘non-informative’ prior\n“Well-constructed” priors can also improve the behavior of our models (computational advantage)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#the-prior-3",
@@ -13157,7 +13157,7 @@
     "href": "FW680A4/StatisticalInference.html#mcmc-sampling",
     "title": "Statistical Inference ",
     "section": "MCMC Sampling",
-    "text": "MCMC Sampling\n\nnumber of samples (iterations)\nthinning (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in (how many of the first samples to remove)\nchains (unique sets of samples; needed for convergence tests; requires different initial values)"
+    "text": "MCMC Sampling\n\niterations: number of samples\nthinning: (which iterations to keep), every one (1), ever other one (2), every third one (3)\nburn-in: (how many of the first samples to remove)\nchains: (unique sets of samples; needed for convergence tests; requires different initial values)"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#sofware-options",
@@ -13234,7 +13234,7 @@
     "href": "FW680A4/StatisticalInference.html#model-based",
     "title": "Statistical Inference ",
     "section": "Model-based",
-    "text": "Model-based\n\n\n\nStrong theoretical basis\nPopulation quantities are a random realization of a stochastic generating process; ‘superpopulation’(\\(\\xi\\))\nSampling frame and prob. sampling are not necessary"
+    "text": "Model-based\n\n\n\nStrong theoretical basis\nPopulation quantities are a random realization of a stochastic generating process; ‘superpopulation’(\\(\\xi\\))\nSampling frame and prob. sampling are not necessary\n“no longer looking for a representation of a real population; looking for a mathematical structure or construction that can explain the distribution of a variable and the relationships between variables” - Raymond and Darsaut, 2025."
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#named-probability-distributions",
@@ -13276,14 +13276,14 @@
     "href": "FW680A4/StatisticalInference.html#what-is-a-statistical-model",
     "title": "Statistical Inference ",
     "section": "What is a statistical model?",
-    "text": "What is a statistical model?\n\nAn abstraction / simplification / explanation\nEvery model has a goal\n\nenforce clarity of thought\nsummarize\nsearch for patterns\nunderstand mechanisms\npredict"
+    "text": "What is a statistical model?\n\n\nAn abstraction / simplification / explanation\nEvery model has a goal\n\nenforce clarity of thought\nsummarize\nsearch for patterns\nunderstand mechanisms\npredict"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-1",
     "href": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-1",
     "title": "Statistical Inference ",
     "section": "What is a statistical model?",
-    "text": "What is a statistical model?\n\nWe are rarely explicit about the goals of our models…though should be!\n\n\nIs my model good ?\n\n\n\nInference vs prediction"
+    "text": "What is a statistical model?\n\n“We are rarely explicit about the goals of our models…though should be!”\n\nIs my model good ?\n\n\nInference vs prediction"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#what-is-a-statistical-model-2",
@@ -13486,7 +13486,7 @@
     "href": "FW680A4/StatisticalInference.html#section-11",
     "title": "Statistical Inference ",
     "section": "",
-    "text": "THE END"
+    "text": "Why we have become Bayesians…"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#custom-algorithms-vs-software-engines",
@@ -13647,7 +13647,7 @@
     "href": "FW680A4/StatisticalInference.html#section-12",
     "title": "Statistical Inference ",
     "section": "",
-    "text": "Why we have become Bayesians…"
+    "text": "THE END"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#section-13",

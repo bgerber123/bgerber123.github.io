@@ -65,12 +65,13 @@ format:
 
 ::: columns
 
-::: {.column width="55%" style="font-size: 95%;"}
+::: {.column width="55%" style="font-size: 80%;"}
 
 
 - Strong theoretical basis
 - Population quantities are <span style="color:red">a random realization of a stochastic generating process; ‘superpopulation’</span>($\xi$)
 - Sampling frame and prob. sampling are not necessary
+- "no longer looking for a representation of a real population; looking for a mathematical structure or construction that can explain the distribution of a variable and the relationships between variables" - Raymond and Darsaut, 2025.
 
 ::: 
 
@@ -130,6 +131,8 @@ format:
 
 ## What is a statistical model?
 
+. . .
+
 - An abstraction / simplification / explanation
 - <span style="color:red">Every model has a goal</span>
     - enforce clarity of thought
@@ -142,9 +145,8 @@ format:
 
 <br>
 
-<span style="color:red">We are rarely explicit about the goals of our models...though should be!</span>
+<span style="color:red">"We are rarely explicit about the goals of our models...though should be!"</span>
 
-. . .
 
 <br>
 
@@ -196,8 +198,7 @@ $$
 
 . . .
 
-- The world is uncertain
-- Very few things perfectly known (i.e., deterministic)
+- The world is uncertain; processes are often not perfectly known (i.e., deterministic)
 - Need to draw conclusions, make decisions, or learn from observations in the face of resulting uncertainty
 
 - <span style="color:red">Probability</span>: branch of mathematics dealing with chance processes and their outcomes
@@ -287,13 +288,13 @@ $$
 a =& 10 \\
 b =& \text{log}(a) \times 12 \\
 c =& \frac{a}{b} \\
-y =& \beta_0 + \beta_1\times c+ \epsilon
+y =& \beta_0 + \beta_1\times c
 \end{align*}
 $$
 
 . . .
 
-All variables here are <span style="color:red">scalars</span>. They are what they are and that is it.  $\beta$ variables and $y$ are currently unknown, but still <span style="color:red">scalars</span>. 
+All variables here are <span style="color:red">scalars</span>. They are what they are and that is it.  <span style="color:red">scalars</span>. 
 
 . . .
 
@@ -328,11 +329,11 @@ Which value (y) is observed is predictable. Need to know *parameters* ($\theta$)
 ## Random Variables
 
 $$
-y \sim f(y)
+y \sim f(y|\theta)
 $$
 
 
-Most often, $f(y|\theta)$, where '|' is read as 'given'. 
+ where '|' is read as 'given'. 
 
 . . .
 
@@ -359,7 +360,7 @@ y=rpois(1000,10)
 main="Distribution of counts of plants \nin all possible plots"
 ```
 
-```{r, eval=TRUE,echo=TRUE}
+```{r, eval=TRUE,echo=FALSE}
 #| code-line-numbers: 2,3
 par(mfrow=c(1,2))
 hist(y, breaks=20,xlim=c(0,25),main=main)
@@ -593,7 +594,7 @@ f(y|\theta) = [y|\theta]=
 $$
 
 
-Sample space support ($\Omega$):
+The support ($\Omega$):
 
 -   $y \in  \{0,1\}$
 
@@ -623,6 +624,8 @@ What would our data look like for 10 ducks that had a probability of survival (Y
 
 ## **Why is this useful to us?**
 
+. . .
+
 How about to evaluate the sample size of ducks needed to estimate $\theta$?
 
 . . .
@@ -638,101 +641,105 @@ hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta
 
 
 
-## Binomial PMF
+<!-- ## Binomial PMF -->
 
-The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution). 
+<!-- The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution).  -->
 
-$$
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        {N\choose y} \theta^{y}\times(1-\theta)^{N-y}
-  \end{align}
-$$
+<!-- $$ -->
+<!-- f(y|\theta) = [y|\theta]= -->
+<!--   \begin{align} -->
+<!--         {N\choose y} \theta^{y}\times(1-\theta)^{N-y} -->
+<!--   \end{align} -->
+<!-- $$ -->
 
-::: {.fragment}
+<!-- ::: {.fragment} -->
 
-$N$ = total trials / tagged and released animals
+<!-- $N$ = total trials / tagged and released animals -->
 
-:::
+<!-- ::: -->
 
-<br>
+<!-- <br> -->
 
-::: {.fragment}
+<!-- ::: {.fragment} -->
 
-$y$ = number of successes / number of alive animals at the of the study.
+<!-- $y$ = number of successes / number of alive animals at the of the study. -->
 
-:::
+<!-- ::: -->
 
-## Binomial PMF (Code) {.scrollable}
-
-
-```{r eval=TRUE, echo=TRUE}
-# 1 duck tagged/released and one simulation
-  theta=0.2;  N=1 
-  rbinom(n=1,size=N,theta)
-```
+<!-- ## Binomial PMF (Code) {.scrollable} -->
 
 
-
-::: {.fragment}
-
-```{r eval=TRUE, echo=TRUE}
-# 1000 ducks tagged/released and one simulation
-  theta=0.2;  N=1000 
-  rbinom(n=1,size=N,theta)
-```
-
-:::
-
-::: {.fragment}
-
-```{r eval=TRUE, echo=TRUE}
-# 1000 ducks tagged/released and 10 simulation
-  theta=0.2;  N=1000 
-  rbinom(n=10,size=N,theta)
-```
-
-:::
+<!-- ```{r eval=TRUE, echo=TRUE} -->
+<!-- # 1 duck tagged/released and one simulation -->
+<!--   theta=0.2;  N=1  -->
+<!--   rbinom(n=1,size=N,theta) -->
+<!-- ``` -->
 
 
-::: {.fragment}
 
-```{r eval=TRUE, echo=TRUE}
-# 1 duck tagged for each of 1000 simulations
-  theta=0.2;  N=1
-  y = rbinom(n=1000,size=N,theta)
-  y
-```
+<!-- ::: {.fragment} -->
 
-:::
+<!-- ```{r eval=TRUE, echo=TRUE} -->
+<!-- # 1000 ducks tagged/released and one simulation -->
+<!--   theta=0.2;  N=1000  -->
+<!--   rbinom(n=1,size=N,theta) -->
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: {.fragment} -->
+
+<!-- ```{r eval=TRUE, echo=TRUE} -->
+<!-- # 1000 ducks tagged/released and 10 simulation -->
+<!--   theta=0.2;  N=1000  -->
+<!--   rbinom(n=10,size=N,theta) -->
+<!-- ``` -->
+
+<!-- ::: -->
 
 
-::: {.fragment}
+<!-- ::: {.fragment} -->
+
+<!-- ```{r eval=TRUE, echo=TRUE} -->
+<!-- # 1 duck tagged for each of 1000 simulations -->
+<!--   theta=0.2;  N=1 -->
+<!--   y = rbinom(n=1000,size=N,theta) -->
+<!--   y -->
+<!-- ``` -->
+
+<!-- ::: -->
 
 
-```{r eval=TRUE, echo=TRUE}
-sum(y)
-```
+<!-- ::: {.fragment} -->
 
 
-:::
+<!-- ```{r eval=TRUE, echo=TRUE} -->
+<!-- sum(y) -->
+<!-- ``` -->
+
+
+<!-- ::: -->
 
 
 
 
 ## Support 
 
-Use a probability function that makes sense for your data/RV. In Bayesian infernece, we also pick prob. functions that make sense for parameters.
+Use a probability function that makes sense for your data/RV; has the correct support. 
 
 <br>
 
-The sample space and parameter support can be found on Wikipedia for many probability functions. 
+In Bayesian infernece, we also pick prob. functions that make sense for parameters.
+
+<br>
+
+Where do you find information on probability functions?
 
 
 
 ## Normal PDF 
 
-For example, the [Normal/Gaussian distribution ](https://en.wikipedia.org/wiki/Normal_distribution) describes the sample space for all values on the real number line. 
+The [Normal/Gaussian distribution ](https://en.wikipedia.org/wiki/Normal_distribution) describes the sample space for all values on the real number line. 
 
 $$y \sim \text{Normal}(\mu, \sigma) \\ y \in (-\infty, \infty) \\ y \in \mathbb{R}$$
 
@@ -976,27 +983,30 @@ The sum of the probability densities of all possible outcomes is equal to 1.
 y = rnorm(1000, mean = 20, sd = 3)
 hist(y,freq=FALSE,ylim=c(0,0.14))
 lines(density(y),lwd=3,col=4)
+curve(dnorm(x, mean= 20, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 ```
 
-## Normal Distribution (PDF Code)
+<!-- ## Normal Distribution (PDF Code) -->
 
-```{r pdf1b, echo=TRUE, eval=TRUE}
-curve(dnorm(x, mean= 20, sd = 3),
-      xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=20, lwd=3, col=1, lty=4)
-```
+<!-- ```{r pdf1b, echo=TRUE, eval=TRUE} -->
+<!-- hist(y,freq=FALSE,ylim=c(0,0.14)) -->
+<!-- lines(density(y),lwd=3,col=4) -->
+<!-- curve(dnorm(x, mean= 20, sd = 3), -->
+<!--       xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y") -->
+<!-- abline(v=20, lwd=3, col=1, lty=4) -->
+<!-- ``` -->
 
-## Normal Distribution (PDF Code)
+<!-- ## Normal Distribution (PDF Code) -->
 
-```{r pdf2a, echo=TRUE, eval=FALSE}
-curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
-```
+<!-- ```{r pdf2a, echo=TRUE, eval=FALSE} -->
+<!-- curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE) -->
+<!-- ``` -->
 
-```{r pdf2b, echo=FALSE, eval=TRUE}
-curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=20, lwd=3, col=1, lty=4)
-curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
-```
+<!-- ```{r pdf2b, echo=FALSE, eval=TRUE} -->
+<!-- curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y") -->
+<!-- abline(v=20, lwd=3, col=1, lty=4) -->
+<!-- curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE) -->
+<!-- ``` -->
 
 ## Moments
 
@@ -1049,7 +1059,7 @@ Moments are functions of these parameters:
 
 $$
 \begin{align*}
-y \leftarrow& f(y|\boldsymbol{\theta'}) \\
+y \sim& f(y|\boldsymbol{\theta'}) \\
 \end{align*}
 $$
 
@@ -1085,7 +1095,7 @@ $$
 
 <!-- [Gamma Wikipedia](https://en.wikipedia.org/wiki/Gamma_distribution) -->
 
-```{r pdf3, echo=FALSE, eval=TRUE}
+```{r pdf3, echo=FALSE, eval=TRUE,results='hide'}
 shape =10
 scale = 2
 
@@ -2320,7 +2330,7 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 
 ::: {.incremental}
 
--   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>); No such thing as a 'non-informative' prior
+-   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>); no such thing as a 'non-informative' prior
 
 -   "Well-constructed" priors can also improve the behavior of our models (computational advantage)
 
@@ -2817,10 +2827,10 @@ Often don't have conjugate likelihood and priors, so we use MCMC algorithims to 
 
 ## MCMC Sampling 
 
--   number of samples (iterations)
--   thinning (which iterations to keep), every one (1), ever other one (2), every third one (3)
--   burn-in (how many of the first samples to remove)
--   chains (unique sets of samples; needed for convergence tests; requires different initial values)
+-   <span style="color:orange">iterations</span>: number of samples 
+-   <span style="color:orange">thinning</span>: (which iterations to keep), every one (1), ever other one (2), every third one (3)
+-   <span style="color:orange">burn-in</span>: (how many of the first samples to remove)
+-   <span style="color:orange">chains</span>: (unique sets of samples; needed for convergence tests; requires different initial values)
 
 
 ## Why did Bayesian statistics take off so late?{.scrollable}
@@ -2869,7 +2879,7 @@ Several engines that let you fit models using Bayesian MCMC techniques:
 <span style="color:orange; font-size: 60px">Should you be a frequentist or a Bayesian?</span>
 
 ## 
-##
+
 
 <br>
 <br>
@@ -2913,7 +2923,7 @@ Very happy to use maximum likelihood as well
 <br>
 <br>
 <br>
-<center><span style="color:orange; font-size: 65px;";><b> THE END </b></span></center>
+<center><span style="color:orange; font-size: 90px;";><b> THE END </b></span></center>
 
 ```
 
