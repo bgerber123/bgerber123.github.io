@@ -12338,21 +12338,21 @@
     "href": "FW552/Ratio.html#classic-wildlife-example",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Classic Wildlife Example",
-    "text": "Classic Wildlife Example\nEstimating total population\n\nWe mark and release \\(n_1\\) individuals\nWe go and recapture the same population, catching \\(n_2\\) individuals\nThe number of marked individuals caught again is \\(m_2\\)\nAssume equal catchability of individuals and by sample\n\n\n\\[\n\\frac{m_2}{n_2} = \\frac{n_1}{N}\n\\] . . .\nLincoln-Peterson Abundance Estimator"
+    "text": "Classic Wildlife Example\nEstimating total population\n\nWe mark and release \\(n_1\\) individuals\nWe go and recapture the same population, catching \\(n_2\\) individuals\nThe number of marked individuals caught again is \\(m_2\\)\nAssume equal catchability of individuals and by sample"
   },
   {
     "objectID": "FW552/Ratio.html#classic-wildlife-example-1",
     "href": "FW552/Ratio.html#classic-wildlife-example-1",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Classic Wildlife Example",
-    "text": "Classic Wildlife Example\n\\[\n\\hat{N} = \\frac{n_1n_2}{m_2}\n\\] . . .\n\\[\n\\hat{N} = \\frac{n_1}{\\hat{p}}\n\\] \\[\n\\hat{p} = \\frac{m_2}{n_2}\n\\]"
+    "text": "Classic Wildlife Example\nEstimating total population\n\\[\n\\frac{m_2}{n_2} = \\frac{n_1}{N}\n\\]\n\nLincoln-Peterson Abundance Estimator"
   },
   {
     "objectID": "FW552/Ratio.html#classic-wildlife-example-2",
     "href": "FW552/Ratio.html#classic-wildlife-example-2",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Classic Wildlife Example",
-    "text": "Classic Wildlife Example"
+    "text": "Classic Wildlife Example\n\\[\n\\hat{N} = \\frac{n_1n_2}{m_2}\n\\]\n\n\\[\n\\hat{N} = \\frac{n_1}{\\hat{p}}\n\\]\n\n\n\\[\n\\hat{p} = \\frac{m_2}{n_2}\n\\]"
   },
   {
     "objectID": "FW552/Ratio.html#is-this-useful-to-us",
@@ -12387,7 +12387,7 @@
     "href": "FW552/Ratio.html#model-based-ratio-estimators",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Model-based Ratio Estimators",
-    "text": "Model-based Ratio Estimators"
+    "text": "Model-based Ratio Estimators\n\\[\n\\begin{align*}\ny_{i} &= \\beta_0 + \\beta_1 \\times x_{i} + e_{i}\\\\\n\\epsilon_{i} &\\sim  \\text{Normal}(0, \\sigma)\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\nE[y_{i}] &= \\beta_0 + \\beta_1 \\times x_{i}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW552/Cluster.html#cluster-estimators",
@@ -13655,5 +13655,103 @@
     "title": "Statistical Inference ",
     "section": "",
     "text": "THE END"
+  },
+  {
+    "objectID": "FW552/Ratio.html#classic-wildlife-example-3",
+    "href": "FW552/Ratio.html#classic-wildlife-example-3",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Classic Wildlife Example",
+    "text": "Classic Wildlife Example"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\n\n# Setup\n  N = 500\n  set.seed(453543)\n  x = rpois(N, 500)\n\n# Fixed \n  beta0 = -5\n  beta1 = 4\n  sigma = 100\n\n# Random variation- inducing some not perfect correlation\n  set.seed(1453543)\n  epsilon = rnorm(N, 0, sigma)\n\n# Derive y  \n  y = beta0 + beta1*x + epsilon\n  \n\n# True population mean\n  mean(y)\n\n[1] 1984.943"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-1",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-2",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-2",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\n\nnsim = 10000\npred.model.coef = beta1.save = save.mean=rep(NA, nsim)\n\n\nfor(i in 1:nsim){\n  \n# Sample size\n  n = 100  \n  \n  #simple random sample\n  index = sample(1:N,n)\n  \n  #Eqns in Section 8.1\n  beta1.save[i] = sum((x[index]-mean(x[index]))*(y[index]-mean(y[index])))/sum((x[index]-mean(x[index]))^2)\n  beta0 = mean(y[index]) - beta1.save[i] * mean(x[index])\n  save.mean[i] =  beta0 + beta1.save[i]*mean(x)\n  \n  pred.model.coef[i] = coef(lm(y[index]~x[index]))[2]\n  \n}"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-3",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-3",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\nSlope Estimator\n\nhist(beta1.save,breaks=25)\nabline(v=beta1,lwd=3,col=2)\n\nmean(beta1.save)-beta1\n\n[1] -0.3461886"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-4",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-4",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\nSlope Model\n\nhist(pred.model.coef,breaks=25)\nabline(v=beta1,lwd=3,col=2)\n\nmean(beta1.save)-beta1\n\n[1] -0.3461886"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-5",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-5",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\nPopulation Average\n\nhist(save.mean)\nabline(v=mean(y),lwd=3,col=2)\n\nmean(save.mean)-mean(y)\n\n[1] 0.1165331"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-evaluation-6",
+    "href": "FW552/Ratio.html#unbiasedness-evaluation-6",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness Evaluation",
+    "text": "Unbiasedness Evaluation\nSlope estimates are not unbiased. Not Design-Unbiased!\n\nWhat about model-unbiased?"
+  },
+  {
+    "objectID": "FW552/Ratio.html#model-unbiasedness-evaluation",
+    "href": "FW552/Ratio.html#model-unbiasedness-evaluation",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Model Unbiasedness Evaluation",
+    "text": "Model Unbiasedness Evaluation\n\nnsim=10000\npred.model.coef= beta1.save = save.mean=rep(NA, nsim)\n\n N = 500\n  set.seed(453543)\n  x = rpois(N, 500)\n\n# Fixed \n  beta0 = -5\n  beta1 = 4\n  sigma = 100\n\n\n  \n\nfor(i in 1:nsim){\n\n# True is now changing!    \n  epsilon = rnorm(N, 0, sigma)\n  y = beta0 + beta1*x + epsilon\n\n# Sample size\n  n = 100  \n  \n# simple random sample\n  index=sample(1:N,n)\n  \n# Eqns in Section 8.1\n  beta1.save[i] = sum((x[index]-mean(x[index]))*(y[index]-mean(y[index])))/sum((x[index]-mean(x[index]))^2)\n  beta0 = mean(y[index]) - beta1.save[i] * mean(x[index])\n  save.mean[i] =  beta0 + beta1.save[i]*mean(x)\n  \n  pred.model.coef[i]=coef(lm(y[index]~x[index]))[2]\n  \n}"
+  },
+  {
+    "objectID": "FW552/Ratio.html#model-unbiasedness-evaluation-1",
+    "href": "FW552/Ratio.html#model-unbiasedness-evaluation-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Model Unbiasedness Evaluation",
+    "text": "Model Unbiasedness Evaluation\nSlope Estimator\n\n\n\n[1] 0.0002540056"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness",
+    "href": "FW552/Ratio.html#unbiasedness",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness",
+    "text": "Unbiasedness\n“Design unbiased” refers to estimators that are unconditionally unbiased regardless of the underlying model; a very strong assertion!\n\n\nSome estimators, including Ordinary Least Squares (OLS) may be model unbiased but not design-unbiased."
+  },
+  {
+    "objectID": "FW552/Ratio.html#model-based-ratio-estimators-1",
+    "href": "FW552/Ratio.html#model-based-ratio-estimators-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Model-based Ratio Estimators",
+    "text": "Model-based Ratio Estimators\nThompson, Section 8.3:\n“Like the ratio estimator, the regression estimator is not unbiased in the design sense under simple random sampling.”\n\n“That is, viewing the y and x values as fixed quantities, the expected value, over all possible samples, of the regression estimator of the population mean of the y’s does not exactly equal the true population mean.”"
+  },
+  {
+    "objectID": "FW552/Ratio.html#estimators",
+    "href": "FW552/Ratio.html#estimators",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Estimators",
+    "text": "Estimators\n\\[\n\\begin{align*}\n\\hat{\\mu} =& a + b\\times\\mu_x\\\\\n\\hat{\\mu}_{y} =& \\beta_0 + \\beta_1\\times\\mu_x\n\\end{align*}\n\\] \n\nThompson, Section 8.1 (ordinary least squares)\n\\[\n\\begin{align*}\n\\beta_1 =& \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})\\times(y_i-\\bar{y})}{\\sum_{i=1}^n(x_i-\\bar{x})^2}\\\\\n\\beta_0 =& \\bar{y}-\\beta_1\\times\\bar{x}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW552/Ratio.html#unbiasedness-1",
+    "href": "FW552/Ratio.html#unbiasedness-1",
+    "title": "Ratio Estimation (precise auxillary information)",
+    "section": "Unbiasedness",
+    "text": "Unbiasedness\nOLS unbiasedness is a property of the estimator for a specific model (super population! the world is not fixed)\n\n\nDesign unbiasedness is a property of the estimator with respect to the design of the sampling, making it model-independent"
   }
 ]

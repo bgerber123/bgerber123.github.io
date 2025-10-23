@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -715,32 +781,247 @@ code.r{
 <li class="fragment">The number of marked individuals caught again is <span class="math inline">\(m_2\)</span></li>
 <li class="fragment">Assume equal catchability of individuals and by sample</li>
 </ul>
-<div class="fragment">
-<p><span class="math display">\[
-\frac{m_2}{n_2} = \frac{n_1}{N}
-\]</span> . . .</p>
-<p><strong>Lincoln-Peterson Abundance Estimator</strong></p>
-</div>
 </section>
 <section id="classic-wildlife-example-1" class="slide level2">
 <h2><span style="color:#078BCD;">Classic Wildlife Example</span></h2>
+<p>Estimating total population</p>
 <p><span class="math display">\[
-\hat{N} = \frac{n_1n_2}{m_2}
-\]</span> . . .</p>
-<p><span class="math display">\[
-\hat{N} = \frac{n_1}{\hat{p}}
-\]</span> <span class="math display">\[
-\hat{p} = \frac{m_2}{n_2}
+\frac{m_2}{n_2} = \frac{n_1}{N}
 \]</span></p>
+<div class="fragment">
+<p><strong>Lincoln-Peterson Abundance Estimator</strong></p>
+</div>
 </section>
 <section id="classic-wildlife-example-2" class="slide level2">
+<h2><span style="color:#078BCD;">Classic Wildlife Example</span></h2>
+<p><span class="math display">\[
+\hat{N} = \frac{n_1n_2}{m_2}
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\hat{N} = \frac{n_1}{\hat{p}}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\hat{p} = \frac{m_2}{n_2}
+\]</span></p>
+</div>
+</section>
+<section id="classic-wildlife-example-3" class="slide level2">
 <h2><span style="color:#078BCD;">Classic Wildlife Example</span></h2>
 
 <img data-src="../img/LP.estimator.png" class="r-stretch"></section>
 <section id="model-based-ratio-estimators" class="slide level2">
 <h2><span style="color:#078BCD;">Model-based Ratio Estimators</span></h2>
+<p><span class="math display">\[
+\begin{align*}
+y_{i} &amp;= \beta_0 + \beta_1 \times x_{i} + e_{i}\\
+\epsilon_{i} &amp;\sim  \text{Normal}(0, \sigma)
+\end{align*}
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{align*}
+E[y_{i}] &amp;= \beta_0 + \beta_1 \times x_{i}
+\end{align*}
+\]</span></p>
+</div>
+</section>
+<section id="model-based-ratio-estimators-1" class="slide level2">
+<h2><span style="color:#078BCD;">Model-based Ratio Estimators</span></h2>
+<p><strong>Thompson, Section 8.3:</strong></p>
+<p>“Like the ratio estimator, the regression estimator is not unbiased in the design sense under simple random sampling.”</p>
+<p><br></p>
+<p>“That is, viewing the y and x values as fixed quantities, the expected value, over all possible samples, of the regression estimator of the population mean of the y’s does not exactly equal the true population mean.”</p>
+</section>
+<section id="unbiasedness-evaluation" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Setup</span></span>
+<span id="cb1-2"><a></a>  N <span class="ot">=</span> <span class="dv">500</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">set.seed</span>(<span class="dv">453543</span>)</span>
+<span id="cb1-4"><a></a>  x <span class="ot">=</span> <span class="fu">rpois</span>(N, <span class="dv">500</span>)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="co"># Fixed </span></span>
+<span id="cb1-7"><a></a>  beta0 <span class="ot">=</span> <span class="sc">-</span><span class="dv">5</span></span>
+<span id="cb1-8"><a></a>  beta1 <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb1-9"><a></a>  sigma <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a><span class="co"># Random variation- inducing some not perfect correlation</span></span>
+<span id="cb1-12"><a></a>  <span class="fu">set.seed</span>(<span class="dv">1453543</span>)</span>
+<span id="cb1-13"><a></a>  epsilon <span class="ot">=</span> <span class="fu">rnorm</span>(N, <span class="dv">0</span>, sigma)</span>
+<span id="cb1-14"><a></a></span>
+<span id="cb1-15"><a></a><span class="co"># Derive y  </span></span>
+<span id="cb1-16"><a></a>  y <span class="ot">=</span> beta0 <span class="sc">+</span> beta1<span class="sc">*</span>x <span class="sc">+</span> epsilon</span>
+<span id="cb1-17"><a></a>  </span>
+<span id="cb1-18"><a></a></span>
+<span id="cb1-19"><a></a><span class="co"># True population mean</span></span>
+<span id="cb1-20"><a></a>  <span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1984.943</code></pre>
+</div>
+</div>
+</section>
+<section id="unbiasedness-evaluation-1" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+
+<img data-src="Ratio_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="estimators" class="slide level2">
+<h2><span style="color:#078BCD;">Estimators</span></h2>
+<p><span class="math display">\[
+\begin{align*}
+\hat{\mu} =&amp; a + b\times\mu_x\\
+\hat{\mu}_{y} =&amp; \beta_0 + \beta_1\times\mu_x
+\end{align*}
+\]</span> <br></p>
+<div class="fragment">
+<p>Thompson, Section 8.1 (ordinary least squares)</p>
+<p><span class="math display">\[
+\begin{align*}
+\beta_1 =&amp; \frac{\sum_{i=1}^{n}(x_i-\bar{x})\times(y_i-\bar{y})}{\sum_{i=1}^n(x_i-\bar{x})^2}\\
+\beta_0 =&amp; \bar{y}-\beta_1\times\bar{x}
+\end{align*}
+\]</span></p>
+</div>
+</section>
+<section id="unbiasedness-evaluation-2" class="slide level2 scrollable">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>nsim <span class="ot">=</span> <span class="dv">10000</span></span>
+<span id="cb3-2"><a></a>pred.model.coef <span class="ot">=</span> beta1.save <span class="ot">=</span> save.mean<span class="ot">=</span><span class="fu">rep</span>(<span class="cn">NA</span>, nsim)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nsim){</span>
+<span id="cb3-6"><a></a>  </span>
+<span id="cb3-7"><a></a><span class="co"># Sample size</span></span>
+<span id="cb3-8"><a></a>  n <span class="ot">=</span> <span class="dv">100</span>  </span>
+<span id="cb3-9"><a></a>  </span>
+<span id="cb3-10"><a></a>  <span class="co">#simple random sample</span></span>
+<span id="cb3-11"><a></a>  index <span class="ot">=</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N,n)</span>
+<span id="cb3-12"><a></a>  </span>
+<span id="cb3-13"><a></a>  <span class="co">#Eqns in Section 8.1</span></span>
+<span id="cb3-14"><a></a>  beta1.save[i] <span class="ot">=</span> <span class="fu">sum</span>((x[index]<span class="sc">-</span><span class="fu">mean</span>(x[index]))<span class="sc">*</span>(y[index]<span class="sc">-</span><span class="fu">mean</span>(y[index])))<span class="sc">/</span><span class="fu">sum</span>((x[index]<span class="sc">-</span><span class="fu">mean</span>(x[index]))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb3-15"><a></a>  beta0 <span class="ot">=</span> <span class="fu">mean</span>(y[index]) <span class="sc">-</span> beta1.save[i] <span class="sc">*</span> <span class="fu">mean</span>(x[index])</span>
+<span id="cb3-16"><a></a>  save.mean[i] <span class="ot">=</span>  beta0 <span class="sc">+</span> beta1.save[i]<span class="sc">*</span><span class="fu">mean</span>(x)</span>
+<span id="cb3-17"><a></a>  </span>
+<span id="cb3-18"><a></a>  pred.model.coef[i] <span class="ot">=</span> <span class="fu">coef</span>(<span class="fu">lm</span>(y[index]<span class="sc">~</span>x[index]))[<span class="dv">2</span>]</span>
+<span id="cb3-19"><a></a>  </span>
+<span id="cb3-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="unbiasedness-evaluation-3" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<h4 id="slope-estimator">Slope Estimator</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">hist</span>(beta1.save,<span class="at">breaks=</span><span class="dv">25</span>)</span>
+<span id="cb4-2"><a></a><span class="fu">abline</span>(<span class="at">v=</span>beta1,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">mean</span>(beta1.save)<span class="sc">-</span>beta1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.3461886</code></pre>
+</div>
+</div>
+<img data-src="Ratio_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="unbiasedness-evaluation-4" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<h4 id="slope-model">Slope Model</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">hist</span>(pred.model.coef,<span class="at">breaks=</span><span class="dv">25</span>)</span>
+<span id="cb7-2"><a></a><span class="fu">abline</span>(<span class="at">v=</span>beta1,<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">mean</span>(beta1.save)<span class="sc">-</span>beta1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.3461886</code></pre>
+</div>
+</div>
+<img data-src="Ratio_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="unbiasedness-evaluation-5" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<h4 id="population-average">Population Average</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">hist</span>(save.mean)</span>
+<span id="cb10-2"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(y),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">mean</span>(save.mean)<span class="sc">-</span><span class="fu">mean</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1165331</code></pre>
+</div>
+</div>
+<img data-src="Ratio_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="unbiasedness-evaluation-6" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness Evaluation</span></h2>
+<p>Slope estimates are not unbiased. <strong>Not Design-Unbiased!</strong></p>
+<p><br></p>
+<p><strong>What about model-unbiased?</strong></p>
+</section>
+<section id="model-unbiasedness-evaluation" class="slide level2 scrollable">
+<h2><span style="color:#078BCD;">Model Unbiasedness Evaluation</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>nsim<span class="ot">=</span><span class="dv">10000</span></span>
+<span id="cb13-2"><a></a>pred.model.coef<span class="ot">=</span> beta1.save <span class="ot">=</span> save.mean<span class="ot">=</span><span class="fu">rep</span>(<span class="cn">NA</span>, nsim)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a> N <span class="ot">=</span> <span class="dv">500</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">set.seed</span>(<span class="dv">453543</span>)</span>
+<span id="cb13-6"><a></a>  x <span class="ot">=</span> <span class="fu">rpois</span>(N, <span class="dv">500</span>)</span>
+<span id="cb13-7"><a></a></span>
+<span id="cb13-8"><a></a><span class="co"># Fixed </span></span>
+<span id="cb13-9"><a></a>  beta0 <span class="ot">=</span> <span class="sc">-</span><span class="dv">5</span></span>
+<span id="cb13-10"><a></a>  beta1 <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb13-11"><a></a>  sigma <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb13-12"><a></a></span>
+<span id="cb13-13"><a></a></span>
+<span id="cb13-14"><a></a>  </span>
+<span id="cb13-15"><a></a></span>
+<span id="cb13-16"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nsim){</span>
+<span id="cb13-17"><a></a></span>
+<span id="cb13-18"><a></a><span class="co"># True is now changing!    </span></span>
+<span id="cb13-19"><a></a>  epsilon <span class="ot">=</span> <span class="fu">rnorm</span>(N, <span class="dv">0</span>, sigma)</span>
+<span id="cb13-20"><a></a>  y <span class="ot">=</span> beta0 <span class="sc">+</span> beta1<span class="sc">*</span>x <span class="sc">+</span> epsilon</span>
+<span id="cb13-21"><a></a></span>
+<span id="cb13-22"><a></a><span class="co"># Sample size</span></span>
+<span id="cb13-23"><a></a>  n <span class="ot">=</span> <span class="dv">100</span>  </span>
+<span id="cb13-24"><a></a>  </span>
+<span id="cb13-25"><a></a><span class="co"># simple random sample</span></span>
+<span id="cb13-26"><a></a>  index<span class="ot">=</span><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>N,n)</span>
+<span id="cb13-27"><a></a>  </span>
+<span id="cb13-28"><a></a><span class="co"># Eqns in Section 8.1</span></span>
+<span id="cb13-29"><a></a>  beta1.save[i] <span class="ot">=</span> <span class="fu">sum</span>((x[index]<span class="sc">-</span><span class="fu">mean</span>(x[index]))<span class="sc">*</span>(y[index]<span class="sc">-</span><span class="fu">mean</span>(y[index])))<span class="sc">/</span><span class="fu">sum</span>((x[index]<span class="sc">-</span><span class="fu">mean</span>(x[index]))<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb13-30"><a></a>  beta0 <span class="ot">=</span> <span class="fu">mean</span>(y[index]) <span class="sc">-</span> beta1.save[i] <span class="sc">*</span> <span class="fu">mean</span>(x[index])</span>
+<span id="cb13-31"><a></a>  save.mean[i] <span class="ot">=</span>  beta0 <span class="sc">+</span> beta1.save[i]<span class="sc">*</span><span class="fu">mean</span>(x)</span>
+<span id="cb13-32"><a></a>  </span>
+<span id="cb13-33"><a></a>  pred.model.coef[i]<span class="ot">=</span><span class="fu">coef</span>(<span class="fu">lm</span>(y[index]<span class="sc">~</span>x[index]))[<span class="dv">2</span>]</span>
+<span id="cb13-34"><a></a>  </span>
+<span id="cb13-35"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="model-unbiasedness-evaluation-1" class="slide level2">
+<h2><span style="color:#078BCD;">Model Unbiasedness Evaluation</span></h2>
+<h4 id="slope-estimator-1">Slope Estimator</h4>
+<div class="cell">
+
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0002540056</code></pre>
+</div>
+</div>
+<img data-src="Ratio_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="unbiasedness" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness</span></h2>
+<p><strong>“Design unbiased”</strong> refers to estimators that are unconditionally unbiased regardless of the underlying model; a very strong assertion!</p>
+<div class="fragment">
+<p><br></p>
+<p>Some estimators, including Ordinary Least Squares (OLS) may be model unbiased but not design-unbiased.</p>
+</div>
+</section>
+<section id="unbiasedness-1" class="slide level2">
+<h2><span style="color:#078BCD;">Unbiasedness</span></h2>
+<p>OLS unbiasedness is a property of the estimator for a specific model (super population! the world is not fixed)</p>
+<div class="fragment">
+<p><br></p>
+<p>Design unbiasedness is a property of the estimator with respect to the design of the sampling, making it model-independent</p>
 
 
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

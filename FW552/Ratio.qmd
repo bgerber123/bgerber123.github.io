@@ -260,12 +260,16 @@ Estimating total population
 - Assume equal catchability of individuals and by sample 
 :::
 
-. . .
+## [Classic Wildlife Example]{style="color:#078BCD;"}
+
+Estimating total population 
 
 $$
 \frac{m_2}{n_2} = \frac{n_1}{N}
 $$
+
 . . .
+
 
 **Lincoln-Peterson Abundance Estimator**
 
@@ -275,11 +279,15 @@ $$
 $$
 \hat{N} = \frac{n_1n_2}{m_2}
 $$
+
 . . .
 
 $$
 \hat{N} = \frac{n_1}{\hat{p}}
 $$
+
+. . .
+
 $$
 \hat{p} = \frac{m_2}{n_2}
 $$
@@ -289,3 +297,225 @@ $$
 ![](../img/LP.estimator.png)
 
 ## [Model-based Ratio Estimators]{style="color:#078BCD;"}
+ 
+$$
+\begin{align*}
+y_{i} &= \beta_0 + \beta_1 \times x_{i} + e_{i}\\
+\epsilon_{i} &\sim  \text{Normal}(0, \sigma)
+\end{align*}
+$$
+
+. . .
+
+$$
+\begin{align*}
+E[y_{i}] &= \beta_0 + \beta_1 \times x_{i} 
+\end{align*}
+$$
+
+## [Model-based Ratio Estimators]{style="color:#078BCD;"}
+
+**Thompson, Section 8.3:**
+
+
+"Like the ratio estimator, the regression estimator is not unbiased in the design sense under simple random sampling."
+
+<br>
+
+"That is, viewing the y and x values as fixed quantities, the expected value, over all possible samples, of the regression estimator of the population mean of the y’s does not exactly equal the true population mean." 
+
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+
+```{r,echo=TRUE}
+# Setup
+  N = 500
+  set.seed(453543)
+  x = rpois(N, 500)
+
+# Fixed 
+  beta0 = -5
+  beta1 = 4
+  sigma = 100
+
+# Random variation- inducing some not perfect correlation
+  set.seed(1453543)
+  epsilon = rnorm(N, 0, sigma)
+
+# Derive y  
+  y = beta0 + beta1*x + epsilon
+  
+
+# True population mean
+  mean(y)
+  
+```
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+```{r}
+plot(x,y)
+```
+
+## [Estimators]{style="color:#078BCD;"}
+
+$$
+\begin{align*}
+\hat{\mu} =& a + b\times\mu_x\\
+\hat{\mu}_{y} =& \beta_0 + \beta_1\times\mu_x
+\end{align*}
+$$
+<br>
+
+. . .
+
+Thompson, Section 8.1 (ordinary least squares)
+
+$$
+\begin{align*}
+\beta_1 =& \frac{\sum_{i=1}^{n}(x_i-\bar{x})\times(y_i-\bar{y})}{\sum_{i=1}^n(x_i-\bar{x})^2}\\
+\beta_0 =& \bar{y}-\beta_1\times\bar{x}
+\end{align*}
+$$
+
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}{.scrollable}
+
+```{r,echo=TRUE}
+nsim = 10000
+pred.model.coef = beta1.save = save.mean=rep(NA, nsim)
+
+
+for(i in 1:nsim){
+  
+# Sample size
+  n = 100  
+  
+  #simple random sample
+  index = sample(1:N,n)
+  
+  #Eqns in Section 8.1
+  beta1.save[i] = sum((x[index]-mean(x[index]))*(y[index]-mean(y[index])))/sum((x[index]-mean(x[index]))^2)
+  beta0 = mean(y[index]) - beta1.save[i] * mean(x[index])
+  save.mean[i] =  beta0 + beta1.save[i]*mean(x)
+  
+  pred.model.coef[i] = coef(lm(y[index]~x[index]))[2]
+  
+}
+
+
+```
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+#### Slope Estimator
+
+```{r,echo=TRUE}
+hist(beta1.save,breaks=25)
+abline(v=beta1,lwd=3,col=2)
+mean(beta1.save)-beta1
+```
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+#### Slope Model
+
+```{r,echo=TRUE}
+hist(pred.model.coef,breaks=25)
+abline(v=beta1,lwd=3,col=2)
+mean(beta1.save)-beta1
+```
+
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+#### Population Average
+
+```{r,echo=TRUE}
+hist(save.mean)
+abline(v=mean(y),lwd=3,col=2)
+mean(save.mean)-mean(y)
+```
+
+
+## [Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+Slope estimates are not unbiased. **Not Design-Unbiased!**
+
+<br>
+
+**What about model-unbiased?**
+
+## [Model Unbiasedness Evaluation]{style="color:#078BCD;"}{.scrollable}
+
+```{r,echo=TRUE}
+nsim=10000
+pred.model.coef= beta1.save = save.mean=rep(NA, nsim)
+
+ N = 500
+  set.seed(453543)
+  x = rpois(N, 500)
+
+# Fixed 
+  beta0 = -5
+  beta1 = 4
+  sigma = 100
+
+
+  
+
+for(i in 1:nsim){
+
+# True is now changing!    
+  epsilon = rnorm(N, 0, sigma)
+  y = beta0 + beta1*x + epsilon
+
+# Sample size
+  n = 100  
+  
+# simple random sample
+  index=sample(1:N,n)
+  
+# Eqns in Section 8.1
+  beta1.save[i] = sum((x[index]-mean(x[index]))*(y[index]-mean(y[index])))/sum((x[index]-mean(x[index]))^2)
+  beta0 = mean(y[index]) - beta1.save[i] * mean(x[index])
+  save.mean[i] =  beta0 + beta1.save[i]*mean(x)
+  
+  pred.model.coef[i]=coef(lm(y[index]~x[index]))[2]
+  
+}
+
+```
+
+
+## [Model Unbiasedness Evaluation]{style="color:#078BCD;"}
+
+#### Slope Estimator
+
+```{r}
+hist(beta1.save,breaks=25)
+abline(v=beta1,lwd=3,col=2)
+mean(beta1.save)-beta1
+```
+
+## [Unbiasedness]{style="color:#078BCD;"}
+
+
+**"Design unbiased"** refers to estimators that are unconditionally unbiased regardless of the underlying model; a very strong assertion!
+
+. . .
+
+<br>
+
+Some estimators, including Ordinary Least Squares (OLS) may be model unbiased but not design-unbiased. 
+
+## [Unbiasedness]{style="color:#078BCD;"}
+
+OLS unbiasedness is a property of the estimator for a specific model (super population! the world is not fixed)
+
+. . .
+
+<br>
+
+Design unbiasedness is a property of the estimator with respect to the design of the sampling, making it model-independent
