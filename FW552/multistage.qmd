@@ -262,13 +262,13 @@ We observe the weight of the $j^{th}$ individual pronghorn within the $i^{th}$ p
 
 $$
 \begin{align*}
-y_{ij} &= \beta_0 + \mu_i + e_{ij}\\
+y_{ij} &= \mu_i + e_{ij}\\
 \mu_{i} &\sim \text{Normal}(\mu_{\text{pop}}, \sigma_{\text{pop}})\\
 \epsilon_{ij} &\sim  \text{Normal}(0, \sigma_{\text{indiv}})
 \end{align*}
 $$
 
-This Is a hierarchical model or a random-intercept model
+This is a hierarchical model or a random-intercept model
 
 
 ## [Cost Evaluation]{style="color:#078BCD;"}            

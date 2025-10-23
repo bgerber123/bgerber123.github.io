@@ -102,7 +102,7 @@ $$
 $$
 
 $$
-\hat{\tau} = \hat{\sigma}^2_{\mu} = \frac{1}{n-1} \sum_{i=1}^n(y_i -\hat{\mu})^2
+\hat{\sigma}^2_{\mu} = \frac{1}{n-1} \sum_{i=1}^n(y_i -\hat{\mu})^2
 $$
 
 
@@ -352,7 +352,7 @@ cluster.df %>%
 
 - mean(c(8,10,6)) = 8
 - 8 - 8 = 0 (unbiased)
-- $\hat{\sigma}^{2} = 1.33$
+- $E[\hat{\sigma}^{2}] = 1.33$
 
 ## [Variable-sizeed clusters]{style="color:#078BCD;"}
 

@@ -11624,7 +11624,7 @@
     "href": "FW552/Cluster.html#cluster-sampling-scheme-d-2",
     "title": "",
     "section": "Cluster sampling scheme D",
-    "text": "Cluster sampling scheme D\nNeed to incorporate cluster size\n\n\n\n\n\nclusterD\nmean\nclusterSize\nSizeXMean\ndivide.avg.cluster.size\ndev2\nvar\n\n\n\n\n1\n5.33\n3\n16\n8\n0\n0\n\n\n2\n10.00\n2\n20\n10\n4\n2\n\n\n3\n12.00\n1\n12\n6\n4\n2\n\n\n\n\n\n\nmean(c(8,10,6)) = 8\n8 - 8 = 0 (unbiased)\n\\(\\hat{\\sigma}^{2} = 1.33\\)"
+    "text": "Cluster sampling scheme D\nNeed to incorporate cluster size\n\n\n\n\n\nclusterD\nmean\nclusterSize\nSizeXMean\ndivide.avg.cluster.size\ndev2\nvar\n\n\n\n\n1\n5.33\n3\n16\n8\n0\n0\n\n\n2\n10.00\n2\n20\n10\n4\n2\n\n\n3\n12.00\n1\n12\n6\n4\n2\n\n\n\n\n\n\nmean(c(8,10,6)) = 8\n8 - 8 = 0 (unbiased)\n\\(E[\\hat{\\sigma}^{2}] = 1.33\\)"
   },
   {
     "objectID": "FW552/Cluster.html#variable-sizeed-clusters",
@@ -12163,7 +12163,7 @@
     "href": "FW552/multistage.html#side-bar",
     "title": "Multi-Stage",
     "section": "Side-Bar",
-    "text": "Side-Bar\nSame idea in model-based inference\n\nWe observe the weight of the \\(j^{th}\\) individual pronghorn within the \\(i^{th}\\) population\n\n\n\\[\n\\begin{align*}\ny_{ij} &= \\beta_0 + \\mu_i + e_{ij}\\\\\n\\mu_{i} &\\sim \\text{Normal}(\\mu_{\\text{pop}}, \\sigma_{\\text{pop}})\\\\\n\\epsilon_{ij} &\\sim  \\text{Normal}(0, \\sigma_{\\text{indiv}})\n\\end{align*}\n\\]\nThis Is a hierarchical model or a random-intercept model"
+    "text": "Side-Bar\nSame idea in model-based inference\n\nWe observe the weight of the \\(j^{th}\\) individual pronghorn within the \\(i^{th}\\) population\n\n\n\\[\n\\begin{align*}\ny_{ij} &= \\mu_i + e_{ij}\\\\\n\\mu_{i} &\\sim \\text{Normal}(\\mu_{\\text{pop}}, \\sigma_{\\text{pop}})\\\\\n\\epsilon_{ij} &\\sim  \\text{Normal}(0, \\sigma_{\\text{indiv}})\n\\end{align*}\n\\]\nThis is a hierarchical model or a random-intercept model"
   },
   {
     "objectID": "FW552/multistage.html#cost-evaluations",
@@ -12394,7 +12394,7 @@
     "href": "FW552/Cluster.html#cluster-estimators",
     "title": "",
     "section": "Cluster Estimators",
-    "text": "Cluster Estimators\n\n\\(i^{th}\\) primary and \\(j^{th} secondary\\)\n\n\\[\ny_i = \\sum_{j=1}^{M_i} y_{ij}\n\\]\n\\[\n\\bar{y} = \\hat{\\mu}_{\\text{primary}} = \\frac{1}{n}\\sum_{i=1}^{n} y_{i}\n\\]\n\\[\n\\hat{\\tau} = \\hat{\\sigma}^2_{\\mu} = \\frac{1}{n-1} \\sum_{i=1}^n(y_i -\\hat{\\mu})^2\n\\]"
+    "text": "Cluster Estimators\n\n\\(i^{th}\\) primary and \\(j^{th} secondary\\)\n\n\\[\ny_i = \\sum_{j=1}^{M_i} y_{ij}\n\\]\n\\[\n\\bar{y} = \\hat{\\mu}_{\\text{primary}} = \\frac{1}{n}\\sum_{i=1}^{n} y_{i}\n\\]\n\\[\n\\hat{\\sigma}^2_{\\mu} = \\frac{1}{n-1} \\sum_{i=1}^n(y_i -\\hat{\\mu})^2\n\\]"
   },
   {
     "objectID": "FW680A4/StatisticalInference.html#probability",
