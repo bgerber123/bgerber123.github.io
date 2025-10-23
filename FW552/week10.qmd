@@ -13,9 +13,9 @@ title: ""
 
 #### **Assigned**
 
-A colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. 
+A colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. Use your knowledge of ratio estimators that makes use of auxillary information; secondly, use your knowledge of sample averages and variances from SRS that don't use auxiliary information. Compare the estimated mean and variances for both ways for each site. Please summarize your findings and your intuition as to why there are differences by method.
 
-- [Data Download for Homework](../classfilesFW552/ThompsonChapter7/BeetleCover.Study.zip)
+- [Data Download for Homework](../classfiles552/ThompsonChapter7/BeetleCover.Study.zip)
 
 - **Due 1 week**: [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2900121)
 - **Due Next Class**: Read <a href="/readings552/Collins2007.pdf">Collins 2007</a>
