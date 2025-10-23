@@ -123,6 +123,8 @@ weight.all %>%
 
 $E[\hat{\mu}_{weight}] =$ `r mean(weight.all$means)` $=\mu_{weight}$ 
 
+$E[\hat{\sigma}^2] = 3.3777$
+
 ## [Example (samples)]{style="color:#078BCD;"}
 
 **Height**
@@ -194,7 +196,9 @@ ratio.df %>%
 
 ```
 
-$E[\hat{\mu}_{r}] =$ `r ratio.mean` $\neq$ 23.83333
+$E[\hat{\mu}_{r}] =$ `r ratio.mean` $\neq$ 23.83333 
+
+$E[\hat{\sigma^2}] = 0.523$ (3.37 using Sample Average Estimator)
 
 
 ## [Comparisons]{style="color:#078BCD;"}

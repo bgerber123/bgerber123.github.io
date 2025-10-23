@@ -12282,7 +12282,7 @@
     "href": "FW552/Ratio.html#example-samples",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Example (samples)",
-    "text": "Example (samples)\nWeight\n\n\n\n\n\nSample.Number\nIndiv.1\nIndiv.2\nIndiv.3\nIndiv.4\nmeans\n\n\n\n\n1\n25\n25\n25\n25\n25.00\n\n\n2\n25\n25\n25\n25\n25.00\n\n\n3\n25\n25\n20\n20\n22.50\n\n\n4\n20\n20\n26\n20\n21.50\n\n\n5\n20\n20\n20\n20\n20.00\n\n\n6\n20\n26\n26\n26\n24.50\n\n\n7\n13\n26\n26\n26\n22.75\n\n\n8\n13\n13\n26\n26\n19.50\n\n\n9\n26\n13\n13\n33\n21.25\n\n\n10\n13\n13\n33\n33\n23.00\n\n\n11\n13\n13\n33\n33\n23.00\n\n\n12\n33\n13\n33\n26\n26.25\n\n\n13\n33\n26\n26\n33\n29.50\n\n\n14\n26\n26\n26\n33\n27.75\n\n\n15\n26\n26\n26\n26\n26.00\n\n\n\n\n\n\\(E[\\hat{\\mu}_{weight}] =\\) 23.8333333 \\(=\\mu_{weight}\\)"
+    "text": "Example (samples)\nWeight\n\n\n\n\n\nSample.Number\nIndiv.1\nIndiv.2\nIndiv.3\nIndiv.4\nmeans\n\n\n\n\n1\n25\n25\n25\n25\n25.00\n\n\n2\n25\n25\n25\n25\n25.00\n\n\n3\n25\n25\n20\n20\n22.50\n\n\n4\n20\n20\n26\n20\n21.50\n\n\n5\n20\n20\n20\n20\n20.00\n\n\n6\n20\n26\n26\n26\n24.50\n\n\n7\n13\n26\n26\n26\n22.75\n\n\n8\n13\n13\n26\n26\n19.50\n\n\n9\n26\n13\n13\n33\n21.25\n\n\n10\n13\n13\n33\n33\n23.00\n\n\n11\n13\n13\n33\n33\n23.00\n\n\n12\n33\n13\n33\n26\n26.25\n\n\n13\n33\n26\n26\n33\n29.50\n\n\n14\n26\n26\n26\n33\n27.75\n\n\n15\n26\n26\n26\n26\n26.00\n\n\n\n\n\n\\(E[\\hat{\\mu}_{weight}] =\\) 23.8333333 \\(=\\mu_{weight}\\)\n\\(E[\\hat{\\sigma}^2] = 3.3777\\)"
   },
   {
     "objectID": "FW552/Ratio.html#example-samples-1",
@@ -12303,7 +12303,7 @@
     "href": "FW552/Ratio.html#example-ratio-estimator",
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Example (ratio estimator)",
-    "text": "Example (ratio estimator)\n\n\n\n\n\nSample.Number\nPrimary.Weight\nAux.Height\nRatio\n\n\n\n\n1\n32.00\n25.00\n21.48438\n\n\n2\n32.00\n25.00\n21.48438\n\n\n3\n28.00\n22.50\n22.09821\n\n\n4\n25.00\n21.50\n23.65000\n\n\n5\n24.00\n20.00\n22.91667\n\n\n6\n27.00\n24.50\n24.95370\n\n\n7\n26.00\n22.75\n24.06250\n\n\n8\n24.00\n19.50\n22.34375\n\n\n9\n26.00\n21.25\n22.47596\n\n\n10\n28.00\n23.00\n22.58929\n\n\n11\n28.00\n23.00\n22.58929\n\n\n12\n29.25\n26.25\n24.67949\n\n\n13\n30.50\n29.50\n26.59836\n\n\n14\n27.75\n27.75\n27.50000\n\n\n15\n25.00\n26.00\n28.60000\n\n\n\n\n\n\\(E[\\hat{\\mu}_{r}] =\\) 23.8683977 \\(\\neq\\) 23.83333"
+    "text": "Example (ratio estimator)\n\n\n\n\n\nSample.Number\nPrimary.Weight\nAux.Height\nRatio\n\n\n\n\n1\n32.00\n25.00\n21.48438\n\n\n2\n32.00\n25.00\n21.48438\n\n\n3\n28.00\n22.50\n22.09821\n\n\n4\n25.00\n21.50\n23.65000\n\n\n5\n24.00\n20.00\n22.91667\n\n\n6\n27.00\n24.50\n24.95370\n\n\n7\n26.00\n22.75\n24.06250\n\n\n8\n24.00\n19.50\n22.34375\n\n\n9\n26.00\n21.25\n22.47596\n\n\n10\n28.00\n23.00\n22.58929\n\n\n11\n28.00\n23.00\n22.58929\n\n\n12\n29.25\n26.25\n24.67949\n\n\n13\n30.50\n29.50\n26.59836\n\n\n14\n27.75\n27.75\n27.50000\n\n\n15\n25.00\n26.00\n28.60000\n\n\n\n\n\n\\(E[\\hat{\\mu}_{r}] =\\) 23.8683977 \\(\\neq\\) 23.83333\n\\(E[\\hat{\\sigma^2}] = 0.523\\) (3.37 using Sample Average Estimator)"
   },
   {
     "objectID": "FW552/Ratio.html#ratio-estimator-of-population-mean",
