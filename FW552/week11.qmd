@@ -9,7 +9,6 @@ title: ""
 #### **In Class**
 
 - Lecture: <a href="/FW552/random.response.qmd">Random Response Survey</a> 
-- Lecture Code: <a href="/FW552/Ratio.R">random.response.R</a>
 
 #### **Assigned**
 
@@ -18,7 +17,6 @@ title: ""
 - 2. For a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).
 
 - **Due 1 week**: [Canvas Assignment](https://colostate.instructure.com/courses/212614/assignments/2910516)
-<!-- - **Due Next Class**: Read <a href="/readings552/Collins2007.pdf">Collins 2007</a> -->
 
 ### [Day 2]{style="color:red;"}
 

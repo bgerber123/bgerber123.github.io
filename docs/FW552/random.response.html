@@ -166,14 +166,14 @@ code.r{
 <li>Use a model / make assumptions</li>
 </ul>
 </section>
-<section id="random-response-model" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<section id="random-response-survey" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Survey</span></h2>
 <h4 id="how-can-we-deal-with-non-response-and-wrong-responses">How can we deal with non-response and “wrong” responses?</h4>
-<p>. . .</p>
+<p><br></p>
 
-<img data-src="https://doi.org/10.2307/2283137.png" class="r-stretch quarto-figure-center"><p class="caption">Warner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60(309), 63-69.</p></section>
-<section id="random-response-model-1" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<img data-src="https://doi.org/10.2307/2283137.png" class="r-stretch quarto-figure-center"><p class="caption">Warner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60, 63-69.</p></section>
+<section id="random-response-survey-1" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Survey</span></h2>
 <p><strong>Combine probability math and a survey technique to ask your question indirectly</strong></p>
 <div class="fragment">
 <ul>
@@ -183,10 +183,10 @@ code.r{
 </ul>
 </div>
 </section>
-<section id="random-response-model-2" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<section id="random-response-survey-2" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Survey</span></h2>
 <ul>
-<li class="fragment"><p>Start with a deck of identical notecards except some fraction (<span class="math inline">\(\theta\)</span>; this has to be known) is marked with <span class="math inline">\(A\)</span> and the remaining <span class="math inline">\((1- \theta)\)</span> is marked with <span class="math inline">\(B\)</span>.</p></li>
+<li class="fragment"><p>Start with identical note cards with a fraction (<span class="math inline">\(\theta\)</span>; this has to be known) marked with <span class="math inline">\(A\)</span> and the remaining <span class="math inline">\((1- \theta)\)</span> marked with <span class="math inline">\(B\)</span>.</p></li>
 <li class="fragment"><p>If <span class="math inline">\(A\)</span>, answer the question, e.g.,</p>
 <ul>
 <li class="fragment">have you ever cheated on an exam</li>
@@ -195,27 +195,26 @@ code.r{
 <ul>
 <li class="fragment">have you never cheated on an exam</li>
 </ul></li>
-<li class="fragment"><p>A sample of people are chosen and each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise.</p></li>
+<li class="fragment"><p>A sample of people are chosen; each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise.</p></li>
 <li class="fragment"><p>The interviewer does not ever see the card – just records ‘yes’ or ‘no’.</p></li>
 </ul>
 </section>
-<section id="random-response-model-3" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<section id="random-response-estimator" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Estimator</span></h2>
 
-<img data-src="../img/random.tree.png" class="r-stretch"><div class="fragment">
-<p><span class="math display">\[
-P(\text{yes}) = \theta p+(1-\theta)\times(1-p)
-\]</span></p>
-</div>
-</section>
-<section id="random-response-model-4" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<!-- . . . -->
+<!-- $$ -->
+<!-- P(\text{yes}) = \theta p+(1-\theta)\times(1-p) -->
+<!-- $$ -->
+<img data-src="../img/random.tree.png" class="r-stretch"></section>
+<section id="random-response-estimator-1" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Estimator</span></h2>
 <p><span class="math display">\[
 \frac{n_{\text{yes}}}{n_{\text{total}}} = \theta p+(1-\theta)\times(1-p)
 \]</span></p>
 </section>
-<section id="random-response-model-5" class="slide level2">
-<h2><span style="color:#078BCD;">Random Response Model</span></h2>
+<section id="random-response-estimator-2" class="slide level2">
+<h2><span style="color:#078BCD;">Random Response Estimator</span></h2>
 <p><span class="math display">\[
 \hat{p} = \frac{1}{2\theta-1} \frac{n_{\text{yes}}}{n_{\text{total}}}-\frac{1-\theta}{2\theta-1}\text{where }\theta\ne0.5
 \]</span> <br></p>
@@ -227,7 +226,7 @@ P(\text{yes}) = \theta p+(1-\theta)\times(1-p)
 <h2><span style="color:#078BCD;">Lots of variations</span></h2>
 <ul>
 <li>flip a coin to pick the question</li>
-<li>whether your phone number ends with an odd or even number</li>
+<li>Q1) primary, Q2) whether your phone number ends with an odd number</li>
 </ul>
 
 <img data-src="../img/tree.random2.png" class="r-stretch"></section>

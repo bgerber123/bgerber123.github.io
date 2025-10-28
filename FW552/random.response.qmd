@@ -53,16 +53,16 @@ code.r{
 - Use a model / make assumptions 
 
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Survey]{style="color:#078BCD;"}
 
 #### How can we deal with non-response and "wrong" responses?
 
-. . .
+<br>
 
-![Warner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60(309), 63-69.](https://doi.org/10.2307/2283137)
+![Warner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60, 63-69.](https://doi.org/10.2307/2283137)
 
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Survey]{style="color:#078BCD;"}
 
 **Combine probability math and a survey technique to ask your question indirectly**
 
@@ -72,12 +72,12 @@ code.r{
 - Second: you need to know the probability of the question
 - Third: record the answers, frequency of yes and no's
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Survey]{style="color:#078BCD;"}
 
 ::: {.incremental}
 
-- Start with a deck of identical notecards except some fraction ($\theta$; this has to be known) is marked
-with $A$ and the remaining $(1- \theta)$ is marked with $B$.
+- Start with identical note cards with a fraction ($\theta$; this has to be known) marked
+with $A$ and the remaining $(1- \theta)$ marked with $B$.
 
 - If $A$, answer the question, e.g.,
     - have you ever cheated on an exam
@@ -85,31 +85,31 @@ with $A$ and the remaining $(1- \theta)$ is marked with $B$.
 - If $B$, answer the question, e.g.,  
     - have you never cheated on an exam
 
-- A sample of people are chosen and each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise. 
+- A sample of people are chosen; each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise. 
 
 - The interviewer does not ever see the card – just records ‘yes’ or ‘no’.
 
 :::
 
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Estimator]{style="color:#078BCD;"}
 
 ![](../img/random.tree.png)
 
-. . .
+<!-- . . . -->
 
-$$
-P(\text{yes}) = \theta p+(1-\theta)\times(1-p)
-$$
+<!-- $$ -->
+<!-- P(\text{yes}) = \theta p+(1-\theta)\times(1-p) -->
+<!-- $$ -->
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Estimator]{style="color:#078BCD;"}
 
 
 $$
 \frac{n_{\text{yes}}}{n_{\text{total}}} = \theta p+(1-\theta)\times(1-p)
 $$
 
-## [Random Response Model]{style="color:#078BCD;"}
+## [Random Response Estimator]{style="color:#078BCD;"}
 
 $$
 \hat{p} = \frac{1}{2\theta-1} \frac{n_{\text{yes}}}{n_{\text{total}}}-\frac{1-\theta}{2\theta-1}\text{where }\theta\ne0.5
@@ -123,7 +123,7 @@ $$
 ## [Lots of variations]{style="color:#078BCD;"}
 
 - flip a coin to pick the question
-- whether your phone number ends with an odd or even number
+- Q1) primary, Q2) whether your phone number ends with an odd number
 
 ![](../img/tree.random2.png)
 

@@ -8663,14 +8663,14 @@
     "href": "FW552/week11.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Random Response Survey\nLecture Code: random.response.R\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment \n\n\n\n\n\n\n\n\nREVIEW"
+    "text": "Lecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW"
   },
   {
     "objectID": "FW552/week11.html#week-11",
     "href": "FW552/week11.html#week-11",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Random Response Survey\nLecture Code: random.response.R\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment \n\n\n\n\n\n\n\n\nREVIEW"
+    "text": "Lecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW"
   },
   {
     "objectID": "FW552/schedule.html",
@@ -13780,7 +13780,7 @@
     "href": "FW552/random.response.html#random-response-model",
     "title": "Random Response",
     "section": "Random Response Model",
-    "text": "Random Response Model\nHow can we deal with non-response and “wrong” responses?\n. . .\n\nWarner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60(309), 63-69."
+    "text": "Random Response Model\nHow can we deal with non-response and “wrong” responses?\n\n\nWarner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60, 63-69."
   },
   {
     "objectID": "FW552/random.response.html#random-response-model-1",
@@ -13836,6 +13836,48 @@
     "href": "FW552/random.response.html#lots-of-variations",
     "title": "Random Response",
     "section": "Lots of variations",
-    "text": "Lots of variations\n\nflip a coin to pick the question\nwhether your phone number ends with an odd or even number"
+    "text": "Lots of variations\n\nflip a coin to pick the question\nQ1) primary, Q2) whether your phone number ends with an odd number"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-survey",
+    "href": "FW552/random.response.html#random-response-survey",
+    "title": "Random Response",
+    "section": "Random Response Survey",
+    "text": "Random Response Survey\nHow can we deal with non-response and “wrong” responses?\n\n\nWarner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60, 63-69."
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-survey-1",
+    "href": "FW552/random.response.html#random-response-survey-1",
+    "title": "Random Response",
+    "section": "Random Response Survey",
+    "text": "Random Response Survey\nCombine probability math and a survey technique to ask your question indirectly\n\n\nFirst: you need a mechanism to receive an answer w/o knowing which question is being asked\nSecond: you need to know the probability of the question\nThird: record the answers, frequency of yes and no’s"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-survey-2",
+    "href": "FW552/random.response.html#random-response-survey-2",
+    "title": "Random Response",
+    "section": "Random Response Survey",
+    "text": "Random Response Survey\n\nStart with identical note cards with a fraction (\\(\\theta\\); this has to be known) marked with \\(A\\) and the remaining \\((1- \\theta)\\) marked with \\(B\\).\nIf \\(A\\), answer the question, e.g.,\n\nhave you ever cheated on an exam\n\nIf \\(B\\), answer the question, e.g.,\n\nhave you never cheated on an exam\n\nA sample of people are chosen; each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise.\nThe interviewer does not ever see the card – just records ‘yes’ or ‘no’."
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-estimator",
+    "href": "FW552/random.response.html#random-response-estimator",
+    "title": "Random Response",
+    "section": "Random Response Estimator",
+    "text": "Random Response Estimator"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-estimator-1",
+    "href": "FW552/random.response.html#random-response-estimator-1",
+    "title": "Random Response",
+    "section": "Random Response Estimator",
+    "text": "Random Response Estimator\n\\[\n\\frac{n_{\\text{yes}}}{n_{\\text{total}}} = \\theta p+(1-\\theta)\\times(1-p)\n\\]"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-estimator-2",
+    "href": "FW552/random.response.html#random-response-estimator-2",
+    "title": "Random Response",
+    "section": "Random Response Estimator",
+    "text": "Random Response Estimator\n\\[\n\\hat{p} = \\frac{1}{2\\theta-1} \\frac{n_{\\text{yes}}}{n_{\\text{total}}}-\\frac{1-\\theta}{2\\theta-1}\\text{where }\\theta\\ne0.5\n\\] \n\\[\n\\hat{\\sigma}^2_p = \\frac{1}{n_{\\text{total}}}\\left( \\frac{1}{16(\\theta-0.5)^2}- (p-0.5)^2\\right)\n\\]"
   }
 ]
