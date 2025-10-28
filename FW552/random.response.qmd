@@ -1,0 +1,139 @@
+---
+title: <span style="color:white">Random Response</span>
+title-slide-attributes:
+  data-background-image: /img/tenrec.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    scrollable: true
+#    slide-level: 1
+    theme: simple
+    slide-number: true
+    show-slide-number: all
+    html:
+         page-layout: full
+---
+
+
+## [Surveys]{style="color:#078BCD;"}
+
+```{=html}
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+```
+
+```{r knitr, echo=FALSE,results='hide'}
+#knitr::purl(input="../FW552/Proportions.qmd",output="../FW552/Proportions.r")
+```
+#### What do we use surveys for in our field?
+
+![](../img/surveys.img.png)
+## [Non-Sampling Error]{style="color:#078BCD;"}
+
+- Differences b/w estimate and true population quantities that [do not]{style="color:red;"} arise because you didn't observe the whole population
+
+![](/../img/sources.error.png)
+
+## [Non-Sampling Error]{style="color:#078BCD;"}
+
+#### Examples??
+
+- Sensitive topics
+- detection errors
+
+## [Dealing with non-response]{style="color:#078BCD;"}
+
+- Prevent it through the design (best solution!)
+- Ignore it (common and may lead to bias)
+- Take representative subsample of non-respondents
+- Use a model / make assumptions 
+
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+#### How can we deal with non-response and "wrong" responses?
+
+. . .
+
+![Warner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60(309), 63-69.](https://doi.org/10.2307/2283137)
+
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+**Combine probability math and a survey technique to ask your question indirectly**
+
+. . .
+
+- First: you need a mechanism to receive an answer w/o knowing which question is being asked
+- Second: you need to know the probability of the question
+- Third: record the answers, frequency of yes and no's
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+::: {.incremental}
+
+- Start with a deck of identical notecards except some fraction ($\theta$; this has to be known) is marked
+with $A$ and the remaining $(1- \theta)$ is marked with $B$.
+
+- If $A$, answer the question, e.g.,
+    - have you ever cheated on an exam
+
+- If $B$, answer the question, e.g.,  
+    - have you never cheated on an exam
+
+- A sample of people are chosen and each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise. 
+
+- The interviewer does not ever see the card – just records ‘yes’ or ‘no’.
+
+:::
+
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+![](../img/random.tree.png)
+
+. . .
+
+$$
+P(\text{yes}) = \theta p+(1-\theta)\times(1-p)
+$$
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+
+$$
+\frac{n_{\text{yes}}}{n_{\text{total}}} = \theta p+(1-\theta)\times(1-p)
+$$
+
+## [Random Response Model]{style="color:#078BCD;"}
+
+$$
+\hat{p} = \frac{1}{2\theta-1} \frac{n_{\text{yes}}}{n_{\text{total}}}-\frac{1-\theta}{2\theta-1}\text{where }\theta\ne0.5
+$$
+<br>
+
+$$
+\hat{\sigma}^2_p = \frac{1}{n_{\text{total}}}\left( \frac{1}{16(\theta-0.5)^2}- (p-0.5)^2\right)
+$$
+
+## [Lots of variations]{style="color:#078BCD;"}
+
+- flip a coin to pick the question
+- whether your phone number ends with an odd or even number
+
+![](../img/tree.random2.png)
+
+## [Test it?]{style="color:#078BCD;"}
+
+#### What's our question?
+
+
+## [Evaluate the Estimator]{style="color:#078BCD;"}
+
+Let's consider how the sample size ($n$) effects the sampling distribution of $\hat{p}$
+
+Also, consider how our choice of $\theta$ effect the sampling distribution of $\hat{p}$

@@ -8495,14 +8495,14 @@
     "href": "FW552/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "href": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#assigned-groups",
@@ -8663,14 +8663,14 @@
     "href": "FW552/week11.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\nBackground Reading (not required):\n\nNathan et al 2008 - Foundational bit of science\nNathan et al. 2022 - Big data science\nSigner et al 2018 - amt R package \nCalabrese et al. 2016 - ctmm R packageguide\nSilva et al. 2021 - autocorrelated kernel density (AKDE) home range review\nMcClintock et al. 2018 - momentuHMM R package\n\n\n\nBackground Videos (not required):\n\n\nMovement Ecology Théo Michelot. February 7, 2022; Code\n\nIntro. Animal Movement Ecology - Josh Cullen\n\n\n\nBackground Resources (not required):\n\nAnimove Resources\nContinuous-time movement modeling\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"amt\",\"tidygraph\",\"ctmm\",\"ggraph\"))\n\n\n\nReadings for next class:\n\n Smith et al. 2022.pdf\nNorthrup et al. 2022 (Intro through ‘How are selection functions fit?’)"
+    "text": "Lecture: Random Response Survey\nLecture Code: random.response.R\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment \n\n\n\n\n\n\n\n\nREVIEW"
   },
   {
     "objectID": "FW552/week11.html#week-11",
     "href": "FW552/week11.html#week-11",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\nBackground Reading (not required):\n\nNathan et al 2008 - Foundational bit of science\nNathan et al. 2022 - Big data science\nSigner et al 2018 - amt R package \nCalabrese et al. 2016 - ctmm R packageguide\nSilva et al. 2021 - autocorrelated kernel density (AKDE) home range review\nMcClintock et al. 2018 - momentuHMM R package\n\n\n\nBackground Videos (not required):\n\n\nMovement Ecology Théo Michelot. February 7, 2022; Code\n\nIntro. Animal Movement Ecology - Josh Cullen\n\n\n\nBackground Resources (not required):\n\nAnimove Resources\nContinuous-time movement modeling\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"amt\",\"tidygraph\",\"ctmm\",\"ggraph\"))\n\n\n\nReadings for next class:\n\n Smith et al. 2022.pdf\nNorthrup et al. 2022 (Intro through ‘How are selection functions fit?’)"
+    "text": "Lecture: Random Response Survey\nLecture Code: random.response.R\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment \n\n\n\n\n\n\n\n\nREVIEW"
   },
   {
     "objectID": "FW552/schedule.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\nThompson Ch. 7\n\n\n10\nMo\n27-Oct\nRatio Estimator\nAssignment Ch. 7\nCollins 2007\n\n\n \nWe\n29-Oct\nPaper Discussion\nQuiz 5\n\n\n\n11\nMo\n3-Nov\nAdaptive Cluster\n\n\n\n\n \nWe\n5-Nov\nReview\n\n\n\n\n12\nMo\n10-Nov\nDesign I\n\n\n\n\n \nWe\n12-Nov\nDesign II\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference\n\n\n\n\n \nWe\n19-Nov\nPaper Discussion\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\nThompson Ch. 7\n\n\n10\nMo\n27-Oct\nRatio Estimator\nAssignment Ch. 7\nCollins 2007\n\n\n \nWe\n29-Oct\nIn class Exercise; Paper Discussion\nQuiz 5\nBerg, 2010\n\n\n1111\nMo\n3-Nov\nRandom Response\nAssignment Rand.Resp\n\n\n\n \nWe\n5-Nov\nReview\n\n\n\n\n12\nMo\n10-Nov\nDesign I\n\n\n\n\n \nWe\n12-Nov\nDesign II\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference\n\n\n\n\n \nWe\n19-Nov\nPaper Discussion\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9020,14 +9020,14 @@
     "href": "FW552/week10.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. Use your knowledge of ratio estimators that makes use of auxillary information; secondly, use your knowledge of sample averages and variances from SRS that don’t use auxiliary information. Compare the estimated mean and variances for both ways for each site. Please summarize your findings and your intuition as to why there are differences by method.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\n\n\n\n\n\n\n\n\nIn Class Discussion of Collins 2007\nIn class Exercise: Evaluate the benefit of the ratio estimator compared to a sample average. Compare the sampling distibution variance/standard devation for both estimators as the correlation b/w x and y change.\n\n\n\n\n\nDue 1 week: Canvas Quiz 5 Assignment\nDue Next Class: Read Non-Response Bias"
+    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. Use your knowledge of ratio estimators that makes use of auxillary information; secondly, use your knowledge of sample averages and variances from SRS that don’t use auxiliary information. Compare the estimated mean and variances for both ways for each site. Please summarize your findings and your intuition as to why there are differences by method.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\nPlease bring a laptop to next class\n\n\n\n\n\n\n\n\nPlease bring a laptop to class\nIn Class Discussion of Collins 2007\nIn class Exercise: Evaluate the benefit of the ratio estimator compared to a sample average. Compare the sampling distribution variance/standard deviation for both estimators as the correlation b/w x and y change.\n\n\n\n\n\nDue 1 week: Canvas Quiz 5 Assignment\nDue Next Class: Read Berg 2010"
   },
   {
     "objectID": "FW552/week10.html#week-10",
     "href": "FW552/week10.html#week-10",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. Use your knowledge of ratio estimators that makes use of auxillary information; secondly, use your knowledge of sample averages and variances from SRS that don’t use auxiliary information. Compare the estimated mean and variances for both ways for each site. Please summarize your findings and your intuition as to why there are differences by method.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\n\n\n\n\n\n\n\n\nIn Class Discussion of Collins 2007\nIn class Exercise: Evaluate the benefit of the ratio estimator compared to a sample average. Compare the sampling distibution variance/standard devation for both estimators as the correlation b/w x and y change.\n\n\n\n\n\nDue 1 week: Canvas Quiz 5 Assignment\nDue Next Class: Read Non-Response Bias"
+    "text": "Lecture: Ratio Estimators\nLecture Code: Ratio.R\n\n\n\n\nA colleague collected data at two sites (study 1 and study 2). They are interested in the mean number of beetles in each plot. A sample size of n = 10 plots were randomly sampled from a sampling frame of N = 100 at each site. The colleague was also able to use GIS data products to classify the ground cover (auxiliary information) at all plots/units in the population to which they sampled. They asked you to help them estimate the population mean abundance and variance of beetles for each site. Use your knowledge of ratio estimators that makes use of auxillary information; secondly, use your knowledge of sample averages and variances from SRS that don’t use auxiliary information. Compare the estimated mean and variances for both ways for each site. Please summarize your findings and your intuition as to why there are differences by method.\n\nData Download for Homework\nDue 1 week: Canvas Assignment\nDue Next Class: Read Collins 2007\nPlease bring a laptop to next class\n\n\n\n\n\n\n\n\nPlease bring a laptop to class\nIn Class Discussion of Collins 2007\nIn class Exercise: Evaluate the benefit of the ratio estimator compared to a sample average. Compare the sampling distribution variance/standard deviation for both estimators as the correlation b/w x and y change.\n\n\n\n\n\nDue 1 week: Canvas Quiz 5 Assignment\nDue Next Class: Read Berg 2010"
   },
   {
     "objectID": "FW552/week12.html",
@@ -13753,5 +13753,89 @@
     "title": "Ratio Estimation (precise auxillary information)",
     "section": "Unbiasedness",
     "text": "Unbiasedness\nOLS unbiasedness is a property of the estimator for a specific model (super population! the world is not fixed)\n\n\nDesign unbiasedness is a property of the estimator with respect to the design of the sampling, making it model-independent"
+  },
+  {
+    "objectID": "FW552/random.response.html#surveys",
+    "href": "FW552/random.response.html#surveys",
+    "title": "Random Response",
+    "section": "Surveys",
+    "text": "Surveys\n\nWhat do we use surveys for in our field?\n ## Non-Sampling Error\n\nDifferences b/w estimate and true population quantities that do not arise because you didn’t observe the whole population"
+  },
+  {
+    "objectID": "FW552/random.response.html#non-sampling-error",
+    "href": "FW552/random.response.html#non-sampling-error",
+    "title": "Random Response",
+    "section": "Non-Sampling Error",
+    "text": "Non-Sampling Error\nExamples??\n\nSensitive topics\ndetection errors"
+  },
+  {
+    "objectID": "FW552/random.response.html#dealing-with-non-response",
+    "href": "FW552/random.response.html#dealing-with-non-response",
+    "title": "Random Response",
+    "section": "Dealing with non-response",
+    "text": "Dealing with non-response\n\nPrevent it through the design (best solution!)\nIgnore it (common and may lead to bias)\nTake representative subsample of non-respondents\nUse a model / make assumptions"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model",
+    "href": "FW552/random.response.html#random-response-model",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\nHow can we deal with non-response and “wrong” responses?\n. . .\n\nWarner, S. L. (1965). Randomized response: A survey technique for eliminating evasive answer bias. Journal of the American statistical association, 60(309), 63-69."
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model-1",
+    "href": "FW552/random.response.html#random-response-model-1",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\nCombine probability math and a survey technique to ask your question indirectly\n\n\nFirst: you need a mechanism to receive an answer w/o knowing which question is being asked\nSecond: you need to know the probability of the question\nThird: record the answers, frequency of yes and no’s"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model-2",
+    "href": "FW552/random.response.html#random-response-model-2",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\n\nStart with a deck of identical notecards except some fraction (\\(\\theta\\); this has to be known) is marked with \\(A\\) and the remaining \\((1- \\theta)\\) is marked with \\(B\\).\nIf \\(A\\), answer the question, e.g.,\n\nhave you ever cheated on an exam\n\nIf \\(B\\), answer the question, e.g.,\n\nhave you never cheated on an exam\n\nA sample of people are chosen and each is asked to randomly draw a card and state ‘yes’ if they agree with the letter on the card or ‘no’ otherwise.\nThe interviewer does not ever see the card – just records ‘yes’ or ‘no’."
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model-3",
+    "href": "FW552/random.response.html#random-response-model-3",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\n\n\n\\[\nP(\\text{yes}) = \\theta p+(1-\\theta)\\times(1-p)\n\\]"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model-4",
+    "href": "FW552/random.response.html#random-response-model-4",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\n\\[\n\\frac{n_{\\text{yes}}}{n_{\\text{total}}} = \\theta p+(1-\\theta)\\times(1-p)\n\\]"
+  },
+  {
+    "objectID": "FW552/random.response.html#test-it",
+    "href": "FW552/random.response.html#test-it",
+    "title": "Random Response",
+    "section": "Test it?",
+    "text": "Test it?\nWhat’s our question?"
+  },
+  {
+    "objectID": "FW552/random.response.html#evaluate-the-estimator",
+    "href": "FW552/random.response.html#evaluate-the-estimator",
+    "title": "Random Response",
+    "section": "Evaluate the Estimator",
+    "text": "Evaluate the Estimator\nLet’s consider how the sample size (\\(n\\)) effects the sampling distribution of \\(\\hat{p}\\)\nAlso, consider how our choice of \\(\\theta\\) effect the sampling distribution of \\(\\hat{p}\\)"
+  },
+  {
+    "objectID": "FW552/random.response.html#random-response-model-5",
+    "href": "FW552/random.response.html#random-response-model-5",
+    "title": "Random Response",
+    "section": "Random Response Model",
+    "text": "Random Response Model\n\\[\n\\hat{p} = \\frac{1}{2\\theta-1} \\frac{n_{\\text{yes}}}{n_{\\text{total}}}-\\frac{1-\\theta}{2\\theta-1}\\text{where }\\theta\\ne0.5\n\\] \n\\[\n\\hat{\\sigma}^2_p = \\frac{1}{n_{\\text{total}}}\\left( \\frac{1}{16(\\theta-0.5)^2}- (p-0.5)^2\\right)\n\\]"
+  },
+  {
+    "objectID": "FW552/random.response.html#lots-of-variations",
+    "href": "FW552/random.response.html#lots-of-variations",
+    "title": "Random Response",
+    "section": "Lots of variations",
+    "text": "Lots of variations\n\nflip a coin to pick the question\nwhether your phone number ends with an odd or even number"
   }
 ]
