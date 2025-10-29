@@ -1,0 +1,21 @@
+---
+title: "Covariates inﬂuence optimal camera-trap survey design foroccupancy modelling"
+type: "article"
+author: "Barton, W, Gerber, B, Cordes, L, Healey, J. and  Shannon, G"
+year: "2025"
+publication: "Remote Sending in Ecology and Conservation"
+doi: "https://doi.org/10.1002%2Frse2.70031"
+download: "../publications/Barton et al 2025.pdf"
+toc: false
+categories:
+  - journal article
+  - mammal
+---
+
+## Citation 
+
+> Barton, O., Gerber, B.D., Cordes, L.S., Healey, J.R. and Shannon, G. (2025). Covariates influence optimal camera-trap survey design for occupancy modelling. Remote Sens Ecol Conserv. https://doi.org/10.1002/rse2.70031
+
+## Abstract
+
+Motion-activated cameras (‘camera-traps’) have become indispensable for wildlife monitoring. Data from camera-trap surveys can be used to make inferences about animal behaviour, space use and population dynamics. Occupancy modelling is a statistical framework commonly used to analyse camera-trap data, which estimates species occurrence while accounting for imperfect detection. Including covariates in models enables the investigation of relationships between occupancy and the environment. Survey design studies help practitioners decide the number of cameras to deploy, deployment duration and camera positioning. However, existing assessments have generally assumed constant occupancy and detectability (i.e. no covariates were considered), which is unrealistic for most real-world scenarios. We investigated the effects of covariates on the relationship between survey effort and the combination of accuracy and precision (i.e. error) of occupancy models. Camera-trap data for a ‘virtual’ species were simulated as a function of randomly generated, site- and survey-specific covariates (e.g. habitat type/quality and temperature, respectively). We then assessed how varying survey design and total effort influenced estimation error with and without covariate information. Increasing the number of cameras consistently reduced error, while longer deployments were only beneficial when the covariate influenced occupancy. When both parameters were affected by covariates, omitting effects on detectability had limited impact on model performance. However, failing to account for effects on occupancy significantly increased error, and none of the predefined thresholds (root mean squared error = 0.15, 0.10 and 0.075) were achievable, even with the maximum survey effort of 9000 camera-days. These results suggest that increasing survey effort is unlikely to improve model performance unless site-level conditions are appropriately modelled. Thus, robust study design should consider total effort and the monitoring of covariates across sites to ensure efficient use of time and financial resources.
