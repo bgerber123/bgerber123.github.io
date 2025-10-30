@@ -13900,5 +13900,40 @@
     "title": "Covariates inﬂuence optimal camera-trap survey design foroccupancy modelling",
     "section": "Abstract",
     "text": "Abstract\nMotion-activated cameras (‘camera-traps’) have become indispensable for wildlife monitoring. Data from camera-trap surveys can be used to make inferences about animal behaviour, space use and population dynamics. Occupancy modelling is a statistical framework commonly used to analyse camera-trap data, which estimates species occurrence while accounting for imperfect detection. Including covariates in models enables the investigation of relationships between occupancy and the environment. Survey design studies help practitioners decide the number of cameras to deploy, deployment duration and camera positioning. However, existing assessments have generally assumed constant occupancy and detectability (i.e. no covariates were considered), which is unrealistic for most real-world scenarios. We investigated the effects of covariates on the relationship between survey effort and the combination of accuracy and precision (i.e. error) of occupancy models. Camera-trap data for a ‘virtual’ species were simulated as a function of randomly generated, site- and survey-specific covariates (e.g. habitat type/quality and temperature, respectively). We then assessed how varying survey design and total effort influenced estimation error with and without covariate information. Increasing the number of cameras consistently reduced error, while longer deployments were only beneficial when the covariate influenced occupancy. When both parameters were affected by covariates, omitting effects on detectability had limited impact on model performance. However, failing to account for effects on occupancy significantly increased error, and none of the predefined thresholds (root mean squared error = 0.15, 0.10 and 0.075) were achievable, even with the maximum survey effort of 9000 camera-days. These results suggest that increasing survey effort is unlikely to improve model performance unless site-level conditions are appropriately modelled. Thus, robust study design should consider total effort and the monitoring of covariates across sites to ensure efficient use of time and financial resources."
+  },
+  {
+    "objectID": "FW552/Review.html",
+    "href": "FW552/Review.html",
+    "title": "\n\nApplied Samplign Review\n",
+    "section": "",
+    "text": "Make a group\nRead the question, discuss, write down the answer"
+  },
+  {
+    "objectID": "FW552/Review.html#review-questions-syllabus",
+    "href": "FW552/Review.html#review-questions-syllabus",
+    "title": "\nApplied Samplign Review\n",
+    "section": "",
+    "text": "When do you not need sampling or statistics?\nDefine sampling, sample, and a non-probabilistic sample.\nWhat are the benefits of sampling compared to a census? What are the costs?\nWhat is the central paradox of sampling?\nWhy is it beneficial to use a sampling frame even when using model-based inference?\nWhat is the concern of using already established monitoring sites to define your sampling frame?\nWhat is a statistic, estimate, and estimator? Which can be biased?\nWhat is the difference b/w a sample and population parameter?\nDefine sampling error and bias.\nWhy is it concerning when there is correlation (data defect correlation) b/w obtaining an observation and the value of the observation\nWhat are the three ways to reduce ‘errors’?\nWhen is a biased and precise estimator better to use than an unbiased and imprecise estimator?\nWhen is a biased and precise estimator worse than an unbiased and imprecise estimator?\nWhat is a sampling distribution?\nWhat is the difference between standard error and standard deviation?\nWhy do we use confidences intervals instead of just stating the standard error?\nHow is the sampling distribution variance related to the population variance?\nWhat do you need to know to determine a sample size for determining a difference in population means?\nExplain how design-based inference is robust to the population distribution being sampled\nWhat controls Type I and II error?\nWhen is more data not always better?\nWhat is the estimator for the standard deviation of a proportion?\nWhat are two ways to properly use nonprobability samples?\nWhy use stratified sampling vs simple random sampling?\nWhat is the difference b/w cluster and stratified sampling and how do you use them efficiently?\nWhen is multi-stage sampling needed?\nDescribe a scenario when a ratio estimator would be beneficial\nWrite the probability math for the probability of obtaining a yes for this random response survey: You survey landowners where they flip a coin and if heads they answer yes or no to question 1 and if tails question 2\n\nQ1) do you have an endangered species on your private property\nQ2) do you own land"
+  },
+  {
+    "objectID": "FW552/Review.html#process",
+    "href": "FW552/Review.html#process",
+    "title": "\nApplied Sampling Review\n",
+    "section": "Process",
+    "text": "Process\n\nMake a group\nRead the question, discuss, write down the answer"
+  },
+  {
+    "objectID": "FW552/Review.html#questions",
+    "href": "FW552/Review.html#questions",
+    "title": "\nApplied Samplign Review\n",
+    "section": "Questions",
+    "text": "Questions\n\n\n\n−+\n02:00\n\n\n\nWhat is the central paradox of sampling?"
+  },
+  {
+    "objectID": "FW552/Review.html#question",
+    "href": "FW552/Review.html#question",
+    "title": "\nApplied Sampling Review\n",
+    "section": "Question",
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is the difference b/w cluster and stratified sampling and how do you use them efficiently?"
   }
 ]

@@ -1,0 +1,71 @@
+---
+title: <center>Applied Sampling Review</center>
+format: revealjs
+---
+
+## Process
+
+1. Make a group
+1. Read the question, discuss, write down the answer
+
+
+
+## [Question]{style="color:#078BCD;"}
+
+
+```{r,echo=FALSE,warnings=FALSE}
+# Questions
+questions = c("When do you not need sampling or statistics?",
+              "Given a population of 100 sampling units, how many samples of size 5 are possible when sampling without replacement?",
+              "Define sampling, sample, and a non-probabilistic sample.",
+              "What are the benefits of sampling compared to a census? What are the costs?",
+   "What is the central paradox of sampling?",
+  "Why is it beneficial to use a sampling frame even when using model-based inference?",
+  "What is the concern of using  already established monitoring sites to define your sampling frame?",
+  "What is a statistic, estimate, and estimator? Which can be biased?",
+  "What is the difference b/w a sample and population parameter?",
+  "Define sampling error and bias.",
+  "When selecting strata, estimation of the population mean will be most precise when what?",
+  "Why is it concerning when there is correlation (data defect correlation) b/w obtaining an observation and the value of the observation",
+"What are the three ways to reduce ‘errors’?",
+"When is a biased and precise estimator better to use than an unbiased and imprecise estimator?",
+  "When is a biased and precise estimator worse than an unbiased and imprecise estimator?",
+  "What is a sampling distribution?",
+  "What is the difference between standard error and standard deviation?",
+  "Why do we use confidences intervals instead of just stating the standard error?",
+  "How is the sampling distribution variance related to the population variance?",
+  "What do you need to know to determine a sample size for determining a difference in population means?",
+  "Explain how design-based inference is `robust` to the population distribution being sampled",
+"What controls Type I and II error?",
+  "When is more data not always better?",
+  "What is the estimator for the standard deviation of a proportion?",
+  "What are two ways to properly use nonprobability samples?",
+  "Why use stratified sampling vs simple random sampling?",
+  "What is the difference b/w cluster and stratified sampling and how do you use them efficiently?",
+  "When is multi-stage sampling needed?",
+  "Describe a scenario when a ratio estimator would be beneficial",
+  "Write the probability math for the probability of obtaining a yes for this random response survey: You survey landowners where they flip a coin and if heads they answer yes or no to question 1 and if tails question 2; Q1) do you have an endangered species on your private property; Q2) do you own land"
+)
+
+```
+
+
+```{r,results='hide',echo=FALSE,warning=FALSE,error=FALSE}
+library(countdown)
+```
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+index=sample(1:length(questions),1)
+out=questions[index]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
