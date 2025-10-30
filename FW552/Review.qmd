@@ -10,7 +10,7 @@ format: revealjs
 
 
 
-## [Question]{style="color:#078BCD;"}
+## [Ready...]{style="color:#078BCD;"}
 
 
 ```{r,echo=FALSE,warnings=FALSE}
@@ -32,7 +32,7 @@ questions = c("When do you not need sampling or statistics?",
   "When is a biased and precise estimator worse than an unbiased and imprecise estimator?",
   "What is a sampling distribution?",
   "What is the difference between standard error and standard deviation?",
-  "Why do we use confidences intervals instead of just stating the standard error?",
+  "Why do we use confidences intervals instead of the standard error?",
   "How is the sampling distribution variance related to the population variance?",
   "What do you need to know to determine a sample size for determining a difference in population means?",
   "Explain how design-based inference is `robust` to the population distribution being sampled",
@@ -54,6 +54,8 @@ questions = c("When do you not need sampling or statistics?",
 library(countdown)
 ```
 
+## [Question]{style="color:#078BCD;"}
+
 ```{r}
 countdown(
   id = "timer1",
@@ -63,9 +65,461 @@ countdown(
   play_sound=TRUE,
   start_immediately=TRUE
 )
-index=sample(1:length(questions),1)
-out=questions[index]
+
+out=questions[1]
 
 ```
 
  <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[2]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[3]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[4]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[5]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[6]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[7]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[8]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[9]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[10]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[11]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[12]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[13]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[14]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[15]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[16]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[17]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[18]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[19]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[20]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[21]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[22]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[23]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[24]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[25]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
+out=questions[26]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
