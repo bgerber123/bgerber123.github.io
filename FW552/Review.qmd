@@ -1,7 +1,11 @@
 ---
-title: <center>Applied Sampling Review \n Game</center>
+title: <span style="color:white"><center>Applied Sampling Review \n Game</center></span>
+title-slide-attributes:
+  data-background-image: /img/electric.png
+  background-opacity: "0.45"
 format: revealjs
 ---
+
 
 ## Process
 
@@ -20,31 +24,39 @@ questions = c("When do you not need sampling or statistics?",
               "Define sampling, sample, and a non-probabilistic sample.",
               "What are the benefits of sampling compared to a census? What are the costs?",
    "What is the central paradox of sampling?",
+    "What is the difference between standard error and standard deviation?",
+   "What is the big data paradox?",
   "Why is it beneficial to use a sampling frame even when using model-based inference?",
-  "What is the concern of using  already established monitoring sites to define your sampling frame?",
+  "What animal would someone else describe you as?",
+  "You stratify your sampling (n=100) into 10 strata, what is the probability of a given strata being sampled?",
+    "When is multi-stage sampling needed?",
+  "Describe a scenario when a ratio estimator would be beneficial",
+  "What is the concern of using already established monitoring sites to define your sampling frame?",
   "What is a statistic, estimate, and estimator? Which can be biased?",
-  "What is the difference b/w a sample and population parameter?",
+    "Write the probability statement for the probability of obtaining a yes for this random response survey: You survey landowners where they flip a coin and if heads they answer yes or no to question 1 and if tails question 2; Q1) do you have an endangered species on your private property; Q2) do you own land",
+  "When is a biased and precise estimator better to use than an unbiased and imprecise estimator?",
+  "Define a sample and population parameter?",
+  "Someone asks you to do a power analysis. What do you do?",
   "Define sampling error and bias.",
+  "How many housecats could fit in this room?",
   "When selecting strata, estimation of the population mean will be most precise when what?",
   "Why is it concerning when there is correlation (data defect correlation) b/w obtaining an observation and the value of the observation",
 "What are the three ways to reduce ‘errors’?",
-"When is a biased and precise estimator better to use than an unbiased and imprecise estimator?",
+    "Explain how the z and t test statistics are different? When do you use each for calculating confidence intervals?",
   "When is a biased and precise estimator worse than an unbiased and imprecise estimator?",
   "What is a sampling distribution?",
-  "What is the difference between standard error and standard deviation?",
+    "If you have a Normal sampling distribution, what is the probability your sample parameter will fall b/w 1 standard deviation below and above the mean?",
   "Why do we use confidences intervals instead of the standard error?",
   "How is the sampling distribution variance related to the population variance?",
   "What do you need to know to determine a sample size for determining a difference in population means?",
   "Explain how design-based inference is `robust` to the population distribution being sampled",
 "What controls Type I and II error?",
-  "When is more data not always better?",
+  "Two examples of when more data is not better?",
   "What is the estimator for the standard deviation of a proportion?",
   "What are two ways to properly use nonprobability samples?",
-  "Why use stratified sampling vs simple random sampling?",
-  "What is the difference b/w cluster and stratified sampling and how do you use them efficiently?",
-  "When is multi-stage sampling needed?",
-  "Describe a scenario when a ratio estimator would be beneficial",
-  "Write the probability math for the probability of obtaining a yes for this random response survey: You survey landowners where they flip a coin and if heads they answer yes or no to question 1 and if tails question 2; Q1) do you have an endangered species on your private property; Q2) do you own land"
+  "When should you use stratified sampling vs simple random sampling? vs cluster sampling?"
+#  "What is the difference b/w cluster and stratified sampling and how do you use them efficiently?",
+
 )
 
 ```
@@ -594,7 +606,8 @@ out=questions[29]
 
 ```
 
- <span style="font-size: 1.5em;">`r out`</span>
+<span style="font-size: 1.5em;">`r out`</span>
+ 
 
 ## [Question]{style="color:#078BCD;"}
 
@@ -611,3 +624,118 @@ countdown(
 out=questions[30]
 
 ```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[31]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[32]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[33]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[34]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[35]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[36]
+
+```
+
+<span style="font-size: 1.5em;">`r out`</span>
+
