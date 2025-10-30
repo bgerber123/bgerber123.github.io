@@ -1,12 +1,12 @@
 ---
-title: <center>Applied Sampling Review</center>
+title: <center>Applied Sampling Review \n Game</center>
 format: revealjs
 ---
 
 ## Process
 
-1. Make a group
-1. Read the question, discuss, write down the answer
+1. Make 3 groups
+2. Read the question, discuss, write down the answer
 
 
 
@@ -62,13 +62,15 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
-out="This is my question"
+out="This is the question"
 
 ```
+
+<span style="font-size: 1.5em;">`r out`</span>
 
 ## [Question]{style="color:#078BCD;"}
 
@@ -78,7 +80,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -96,7 +98,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -114,7 +116,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -132,7 +134,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -151,7 +153,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -169,7 +171,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -187,7 +189,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -205,7 +207,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -223,7 +225,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -241,7 +243,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -259,7 +261,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -277,7 +279,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -295,7 +297,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -313,7 +315,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -331,7 +333,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -349,7 +351,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -367,7 +369,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -385,7 +387,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -403,7 +405,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -421,7 +423,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -439,7 +441,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -457,7 +459,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -475,7 +477,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -493,7 +495,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -511,7 +513,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -529,7 +531,7 @@ countdown(
   minutes = 0,
   seconds = 45,
   font_size = "2em",
-  play_sound=TRUE,
+  play_sound=FALSE,
   start_immediately=TRUE
 )
 
@@ -539,3 +541,73 @@ out=questions[26]
 
  <span style="font-size: 1.5em;">`r out`</span>
 
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[27]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[28]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[29]
+
+```
+
+ <span style="font-size: 1.5em;">`r out`</span>
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=FALSE,
+  start_immediately=TRUE
+)
+
+out=questions[30]
+
+```
