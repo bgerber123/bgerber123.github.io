@@ -66,6 +66,22 @@ countdown(
   start_immediately=TRUE
 )
 
+out="This is my question"
+
+```
+
+## [Question]{style="color:#078BCD;"}
+
+```{r}
+countdown(
+  id = "timer1",
+  minutes = 0,
+  seconds = 45,
+  font_size = "2em",
+  play_sound=TRUE,
+  start_immediately=TRUE
+)
+
 out=questions[1]
 
 ```
