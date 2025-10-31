@@ -4,43 +4,30 @@ title: ""
 
 ## Week 12
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
-##### Discuss Smith et al. 2022; led by Waverly Davis.
-
-##### Discuss Northrup et al. 2022
-
-#### [Assigned]{style="color:red;"}
- -   Readings for next class:
-     - <a href="https://docs.google.com/document/d/171sCFawqLIFo472D7Tfhitlrj-sbJ6zDnYtOlbI4ijM/edit?usp=sharing">A plain language review for modeling animal habitat-selection (draft) </a>
-
-The assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.
-
- 
-### Day 2 (lab)
-
-#### [Today]{style="color:red;"}
-
-##### **In Class Discussion of draft manuscript**
-
--   Downloads: <a href="/classfiles/habsel/habsel.lab.zip">Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("terra","raster","amt","MASS","sp"))
-```
-
-
-#### [Assigned]{style="color:red;"}
-- <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a>
+- Reading Discussion (Marshall and Book Chapter)
+- Design an experiment to test whether a change in hunting season length increases harvest, hunter satisfaction, and decrease poaching? Outline the essential design elements, how data will be collected, and list any uncontrolled factors.
 
 
 
+#### **Assigned**
+
+These papers are pretty short. Read Artelle before Mawdlsey.
+
+- <a href="/readings552/Artelle et al 2018.pdf">Artelle et al 2018</a>
+- <a href="/readings552/Mawdsley et al 2018.pdf">Mawdsley et al 2018</a>
+- <a href="/readings552/Zeller et al 2024.pdf">Zeller et al 2024</a>
 
 
+### [Day 2]{style="color:red;"}
 
+#### **In Class**
 
+- Reading Discussions 
+
+#### **Assigned** 
+
+- **Due Next Class**: Read <a href="/readings552/Hone et al 2023.pdf">Hone et al 2023 </a>

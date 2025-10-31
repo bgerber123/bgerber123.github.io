@@ -19,14 +19,15 @@ format: revealjs
 
 ```{r,echo=FALSE,warnings=FALSE}
 # Questions
-questions = c("When do you not need sampling or statistics?",
+questions = c("Define sampling, sample, and a non-probabilistic sample.",
+  "When do you not need sampling or statistics?",
               "Given a population of 100 sampling units, how many samples of size 5 are possible when sampling without replacement?",
-              "Define sampling, sample, and a non-probabilistic sample.",
+              "What is the difference between standard error and standard deviation?",
               "What are the benefits of sampling compared to a census? What are the costs?",
    "What is the central paradox of sampling?",
-    "What is the difference between standard error and standard deviation?",
    "What is the big data paradox?",
-  "Why is it beneficial to use a sampling frame even when using model-based inference?",
+   "What is a sampling frame and when is it important?",
+  # "Why is it beneficial to use a sampling frame even when using model-based inference?",
   "What animal would someone else describe you as?",
   "You stratify your sampling (n=100) into 10 strata, what is the probability of a given strata being sampled?",
     "When is multi-stage sampling needed?",

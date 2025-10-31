@@ -1,8 +1,12 @@
+# Author: Brian Gerber
+
+# Date Last Modified: 10/20/2025
+
 # Investigate the benefit of the ratio estimator compared to a sample mean
 # Do this by varying sigma which will affect the correlation between y and x.
 
 
-#Ratio estimator
+# Ratio estimator function
 
 ratio.fn = function(N,x,y,mu.x){
   n = length(y)
@@ -11,8 +15,8 @@ ratio.fn = function(N,x,y,mu.x){
   var.r = 1/(n-1) * sum((y-r*x)^2)
   var.mu = ((N-n)/N)*var.r/n
   
-  list(mu=mu,
-       var.mu=var.mu)
+  list(mu = mu,
+       var.mu = var.mu)
 }
 
 

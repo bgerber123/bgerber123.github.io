@@ -8495,14 +8495,14 @@
     "href": "FW552/index.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "href": "FW552/index.html#applied-sampling-for-wildlifefish-studies-fw552",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
+    "text": "Syllabus\n\n\nSchedule (Subject to Change)\n\n\nWeeksSoftwareAdditionalLearning\n\n\n\n\n\nWeek 1 (Aug 25, 27)\n\n\nWeek 2 (Sep 1, 3)\n\n\nWeek 3 (Sep 8, 9)\n\n\nWeek 4 (Sep 15, 17)\n\n\nWeek 5 (Sep 22, 24)\n\n\nWeek 6 (Sep 29, Oct 1)\n\n\nWeek 7 (Oct 6, 8)\n\n\n\nWeek 8 (Oct 13, 15): No Classes\n\n\n\n\nWeek 9 (Oct 20, 22)\n\n\n\n\nWeek 10 (Oct 27, Oct 29)\n\n\n\nWeek 11 (Nov 3, 5)\n\n\n\nWeek 12 (Nov 10, 12)\n\n\n\nWeek 13 (Nov 17, 19)\n\n\n\nWeek 14 (Nov 24, 26): No Classes\n\n\n\n\nWeek 15 (Dec 1, 3)\n\n\nWeek 16 (Dec 8, 10)\n\n\n\n\n\n\nInstall the most recent versions of R and RStudio Desktop.\n\n\n\n\n\n\n\nTo download lectures: Go to lecture html. Click ‘e’. This should connect all slides into one page. Right Click Mouse on page. Click ’Print”. Choose printer “Adobe PDF”; might need Adobe Acrobat installed.\n\n\n\n\n\nCI_inclass_script.R (for loop)\nCI_inclass_script_fn.R (function)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Does Not Exist\nPublic Trust in Scientists\n\n\n\n\n\nLanguage of R\nPrelude In R\nData Carpentry\nIntro to R\nMany Resources\nOur Coding Club\nSW Carpentry\nDoser et al. Book\nIntro to R for Biologists\nIntroduction to R - tidyverse\nR for Data Science (2e)\nAdvanced R\nIntroduction to the R Language\nIntroduction to R\nAn Introduction to R for Research\nIntroduction to Data Exploration ana Analysis with R\nWorking with Data in R\n\n\n\n\n\n\n\n\nProbability Playground: Interactive Probability Distributions\nAn Introduction to Statistical Learning\nThe Elements of Statistical Learning. Download.\nBayesian Data Analysis. Download.\nBayesian Models: A Statistical Primer for Ecologists.\nData Analysis Using Regression and Multilevel/Hierarchical\nStatistics for Spatio-Temporal Data. Download\nSpatio-Temporal Statistics with R. Download\nA First Course in Bayesian Statistical Methods\nBayesian Statistical Methods\n\n\n\n\n\nEcological Models and Data in R\nAnimal Movement: Statistical Models for Telemetry Data\nMixed Effects Models and Extensions in Ecology with R\nApplied hierarchical modeling in Ecology\nHierarchical Modeling in Ecology Books and Code\nPopulation Ecology in Practice. Download\n\n\n\n\n\nComputational Statistics\nParameter Redundancy and Identifiability\nBringing Bayesian Models to Life"
   },
   {
     "objectID": "FW552/index.html#assigned-groups",
@@ -8649,28 +8649,28 @@
     "href": "FW552/week13.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Statistcal Model\nBayesian Community Occupancy Model via Stan\nFor details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.\n\n\n\n\n\nSpecies Richness vs Species Diversity?\nThe vegan R package has a number of common community metrics.\n\n\n\n\n\n\n\n\n\n\nNo class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project."
+    "text": "Reading Discussion (Hone et al. 2023)\n\n\n\n\n\nDue Next Class: Read Arif and MacNeil 2021 \n\n\n\n\n\n\n\n\nReading Discussion\n\n\n\n\n\nDue Next Class: Read Arif and MacNeil 2022 \nDue Next Class: Read Nichols and Cooch 2025"
   },
   {
     "objectID": "FW552/week13.html#week-13",
     "href": "FW552/week13.html#week-13",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Statistcal Model\nBayesian Community Occupancy Model via Stan\nFor details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.\n\n\n\n\n\nSpecies Richness vs Species Diversity?\nThe vegan R package has a number of common community metrics.\n\n\n\n\n\n\n\n\n\n\nNo class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project."
+    "text": "Reading Discussion (Hone et al. 2023)\n\n\n\n\n\nDue Next Class: Read Arif and MacNeil 2021 \n\n\n\n\n\n\n\n\nReading Discussion\n\n\n\n\n\nDue Next Class: Read Arif and MacNeil 2022 \nDue Next Class: Read Nichols and Cooch 2025"
   },
   {
     "objectID": "FW552/week11.html",
     "href": "FW552/week11.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\n\nLecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW"
+    "text": "Please bring a laptop to class\nLecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW\n\n\n\n\n\n\nDue Next Class: Read Morrison Ch.2 pages 37-49 (sections 2-2.4)  and Marshall 2024"
   },
   {
     "objectID": "FW552/week11.html#week-11",
     "href": "FW552/week11.html#week-11",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring a laptop to class\n\nLecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW"
+    "text": "Please bring a laptop to class\nLecture: Random Response Survey\n\n\n\n\n\n\nEvaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide ‘acceptable’ results.\n\n\nFor a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).\n\nDue 1 week: Canvas Assignment\n\n\n\n\n\n\n\n\nREVIEW\n\n\n\n\n\n\nDue Next Class: Read Morrison Ch.2 pages 37-49 (sections 2-2.4)  and Marshall 2024"
   },
   {
     "objectID": "FW552/schedule.html",
@@ -8691,7 +8691,7 @@
     "href": "FW552/schedule.html#schedule",
     "title": "\nFW 552  Applied Sampling for Wildlife/Fish Studies  (Fall 2025)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\nThompson Ch. 7\n\n\n10\nMo\n27-Oct\nRatio Estimator\nAssignment Ch. 7\nCollins 2007\n\n\n \nWe\n29-Oct\nIn class Exercise; Paper Discussion\nQuiz 5\nBerg, 2010\n\n\n11\nMo\n3-Nov\nRandom Response\nAssignment Rand.Response\n\n\n\n \nWe\n5-Nov\nReview\n\n\n\n\n12\nMo\n10-Nov\nDesign I\n\n\n\n\n \nWe\n12-Nov\nDesign II\n\n\n\n\n13\nMo\n17-Nov\nCausal Inference\n\n\n\n\n \nWe\n19-Nov\nPaper Discussion\n\n\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
+    "text": "Schedule\n\n\n\nWeek\nDay\nDate\nIn Class Topic\nAssignments\nReadings\n\n\n\n\n1\nMo\n25-Aug\nIntroduction\nDiscussion Post; Install R and RStudio.\nHankin Ch. 2; Gerber et al. 2012\n\n\n \nWe\n27-Aug\nPaper Discussion / R and RMarkdown\nR Fundamentals\nHankin Ch 1.1 and 1.5; Thompson Ch. 10.1 and 1.3\n\n\n2\nMo\n1-Sep\nNo Class\n\n\n\n\n \nWe\n3-Sep\nSampling I\nDiscussion Post\nBoyd et al. 2023\n\n\n3\nMo\n8-Sep\nPaper Discussion; Big Data Paradox\nQuiz 1; Assignment Ch. 2\nThompson Ch. 2\n\n\n \nWe\n10-Sep\nSimple Random Sampling\n\nThompson Ch. 3\n\n\n4\nMo\n15-Sep\nConfidence Intervals\nQuiz 2; Assignment Ch.3\nThompson Ch. 4\n\n\n \nWe\n17-Sep\nSample Size\nAssignment Ch. 4\nThompson Ch. 5.0 - 5.4\n\n\n5\nMo\n22-Sep\nProportions\nAssignment Ch. 5\nBoyd et al. 2023 Ecology\n\n\n \nWe\n24-Sep\nPaper Discussion\n\nThompson Ch. 11\n\n\n6\nMo\n29-Sep\nStratified Sampling\nQuiz 3\n\n\n\n \nWe\n1-Oct\nStratified Sampling\nOptimal Samples HW and Assignment Ch. 11\nThompson Ch. 12\n\n\n7\nMo\n6-Oct\nCluster/Systematic Sampling\n\nNoon et al. 2006 and Nelson 2013\n\n\n \nWe\n8-Oct\nPaper Discussion\nQuiz 4\nThompson Ch. 13\n\n\n8\nMo\n13-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n \nWe\n15-Oct\nMid-term Activity / No Class\nMid-term Activity / Presentation\n\n\n\n9\nMo\n20-Oct\nMulti-stage Sampling\nAssignment Ch. 13\nStafford et al. 2006; Johnson et al. 2009\n\n\n \nWe\n22-Oct\nPaper Discussion\n\nThompson Ch. 7\n\n\n10\nMo\n27-Oct\nRatio Estimator\nAssignment Ch. 7\nCollins 2007\n\n\n \nWe\n29-Oct\nIn class Exercise; Paper Discussion\nQuiz 5\nBerg, 2010\n\n\n11\nMo\n3-Nov\nRandom Response\nAssignment Rand.Response\n\n\n\n \nWe\n5-Nov\nReview\n\nMorrison Ch.2 pages 37-49; Marshall, 2024\n\n\n12\nMo\n10-Nov\nDesign I\n\nArtelle/Mawdsley/Zeller\n\n\n \nWe\n12-Nov\nDesign II\n\nHone et al 2023\n\n\n13\nMo\n17-Nov\nCausal Inference\n\nArif and MacNeil 2021\n\n\n \nWe\n19-Nov\nCausal Inference\n\nArif and MacNeil 2022; Nichols and Cooch 2025\n\n\n14\nMo\n24-Nov\nNo Class\n\n\n\n\n \nWe\n26-Nov\nNo Class\n\n\n\n\n15\nMo\n1-Dec\nCausal Inference\n\n\n\n\n \nWe\n3-Dec\nProject\n\n\n\n\n16\nMo\n8-Dec\nPresentations I\n\n\n\n\n \nWe\n10-Dec\nPresentations II"
   },
   {
     "objectID": "FW552/Introduction.html",
@@ -9034,14 +9034,14 @@
     "href": "FW552/week12.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\nA plain language review for modeling animal habitat-selection (draft) \n\n\n\nThe assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"terra\",\"raster\",\"amt\",\"MASS\",\"sp\"))\n\n\n\nWright et al 2020"
+    "text": "Reading Discussion (Marshall and Book Chapter)\nDesign an experiment to test whether a change in hunting season length increases harvest, hunter satisfaction, and decrease poaching? Outline the essential design elements, how data will be collected, and list any uncontrolled factors.\n\n\n\n\nThese papers are pretty short. Read Artelle before Mawdlsey.\n\nArtelle et al 2018\nMawdsley et al 2018\nZeller et al 2024\n\n\n\n\n\n\n\n\nReading Discussions\n\n\n\n\n\nDue Next Class: Read Hone et al 2023"
   },
   {
     "objectID": "FW552/week12.html#week-12",
     "href": "FW552/week12.html#week-12",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Readings for next class:\n\nA plain language review for modeling animal habitat-selection (draft) \n\n\n\nThe assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"terra\",\"raster\",\"amt\",\"MASS\",\"sp\"))\n\n\n\nWright et al 2020"
+    "text": "Reading Discussion (Marshall and Book Chapter)\nDesign an experiment to test whether a change in hunting season length increases harvest, hunter satisfaction, and decrease poaching? Outline the essential design elements, how data will be collected, and list any uncontrolled factors.\n\n\n\n\nThese papers are pretty short. Read Artelle before Mawdlsey.\n\nArtelle et al 2018\nMawdsley et al 2018\nZeller et al 2024\n\n\n\n\n\n\n\n\nReading Discussions\n\n\n\n\n\nDue Next Class: Read Hone et al 2023"
   },
   {
     "objectID": "FW552/week2.html",
@@ -13941,28 +13941,28 @@
     "href": "FW552/Review.html#question-1",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhen do you not need sampling or statistics?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nDefine sampling, sample, and a non-probabilistic sample."
   },
   {
     "objectID": "FW552/Review.html#question-2",
     "href": "FW552/Review.html#question-2",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nGiven a population of 100 sampling units, how many samples of size 5 are possible when sampling without replacement?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhen do you not need sampling or statistics?"
   },
   {
     "objectID": "FW552/Review.html#question-3",
     "href": "FW552/Review.html#question-3",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nDefine sampling, sample, and a non-probabilistic sample."
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nGiven a population of 100 sampling units, how many samples of size 5 are possible when sampling without replacement?"
   },
   {
     "objectID": "FW552/Review.html#question-4",
     "href": "FW552/Review.html#question-4",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat are the benefits of sampling compared to a census? What are the costs?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is the difference between standard error and standard deviation?"
   },
   {
     "objectID": "FW552/Review.html#ready",
@@ -13976,14 +13976,14 @@
     "href": "FW552/Review.html#question-5",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is the central paradox of sampling?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat are the benefits of sampling compared to a census? What are the costs?"
   },
   {
     "objectID": "FW552/Review.html#question-6",
     "href": "FW552/Review.html#question-6",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is the difference between standard error and standard deviation?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is the central paradox of sampling?"
   },
   {
     "objectID": "FW552/Review.html#question-7",
@@ -13997,7 +13997,7 @@
     "href": "FW552/Review.html#question-8",
     "title": "\n\nApplied Sampling Review Game\n\n",
     "section": "Question",
-    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhy is it beneficial to use a sampling frame even when using model-based inference?"
+    "text": "Question\n\n\n\n−+\n00:45\n\n\n\nWhat is a sampling frame and when is it important?"
   },
   {
     "objectID": "FW552/Review.html#question-9",

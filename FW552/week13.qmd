@@ -4,32 +4,29 @@ title: ""
 
 ## Week 13
 
-### Day 1
+### [Day 1]{style="color:red;"}
 
-#### [Today]{style="color:red;"}
+#### **In Class**
 
-##### Discuss Wright et al 2020 co-led by Cat Adams, Bijoya Paul, Lisa Roerk
-
-##### Hierarchical Community Occupancy Model
-
--   [Statistcal Model](/classfiles/community/Community Occ Model.pdf)
-
--   [Bayesian Community Occupancy Model via Stan](https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html)
-
--   For details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.
-
-##### Community Ecology Modeling
-
--   Species Richness vs Species Diversity?
-
--   The [vegan R package](https://github.com/vegandevs/vegan?tab=readme-ov-file) has a number of common [community metrics](https://vegandevs.r-universe.dev/vegan/doc/diversity-vegan.pdf).
+- Reading Discussion (Hone et al. 2023)
 
 
-### Day 2 (lab)
+#### **Assigned**
 
-#### [Today]{style="color:red;"}
+- **Due Next Class**: Read <a href="/readings552/Arif and MacNeil 2021.pdf">Arif and MacNeil 2021 </a>
 
-##### ~~Multivariate Community Analyses~~
+### [Day 2]{style="color:red;"}
 
-**No class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project.**
+#### **In Class**
+
+- Reading Discussion
+
+#### **Assigned** 
+
+- **Due Next Class**: Read <a href="/readings552/Arif and MacNeil 2022.pdf">Arif and MacNeil 2022 </a>
+
+- **Due Next Class**: Read <a href="/readings552/Nichols and Cooch 2025.pdf">Nichols and Cooch 2025 </a>
+
+
+
 
