@@ -46,16 +46,16 @@ In study 2, there is not correlation which suggests the ratio estimator will not
 
 ### Study 1
 
-**Study 1 Mean Estimate**
+**Study 1 Mean Estimate (ratio estimator)**
 
 ```{r}
 mu.x = mean(dat1$cover)
-r = mean(dat1$beetle.count[index1])/mean(dat1$cover[index2])
+r = sum(dat1$beetle.count[index1])/sum(dat1$cover[index2])
 pop.mean = r * mu.x
 pop.mean
 ```
 
-**Study 1 Variance Estimate**
+**Study 1 Variance Estimate (ratio estimator)**
 
 ```{r}
 n=length(dat1$beetle.count[index1])
@@ -65,14 +65,34 @@ population.mean.var = (N-n)/N * (sample.var/n)
 population.mean.var
 ```
 
+### Study 1
+
+**Study 1 Mean Estimate (sample avg)**
+
+```{r}
+pop.mean = mean(dat1$beetle.count,na.rm=TRUE)
+```
+
+**Study 1 Variance Estimate (avg estimator)**
+
+```{r}
+
+sample.var = var(dat1$beetle.count[index1])
+N=nrow(dat1)
+population.mean.var = (N-n)/N * (sample.var/n)
+population.mean.var
+```
+
 
 ### Study 2
 
+Given the ratio estimator assumptions are not met (becuase y does not equal 0 when x=0) then I will use only the sample estimator.
 
 **Study 2 Mean Estimate**
 
 ```{r}
 pop.mu.est = mean(dat2$beetle.count[index2])
+pop.mu.est
 ```
 
 **Study 2 Variance Estimate**
