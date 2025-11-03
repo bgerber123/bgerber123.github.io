@@ -1,4 +1,10 @@
 
+# Objective: Evaluate the random response survey estimator presented in class
+
+# Author: Brian D. Gerber
+
+# Last Modified: November 3, 2025
+
 # Libraries
   library(ggplot2)
   library(viridis)
@@ -53,7 +59,7 @@ ggplot(plot.dat, aes(x=p.est, group=n, fill=n)) +
 
 ###################################################
 
-# invesigate sampling standard deviation of p-hat by varying p and theta
+# investigate sampling standard deviation of p-hat by varying p and theta
 
 p = seq(0.05,0.95,by=0.1)
 theta = seq(0.05,0.95,by=0.1)

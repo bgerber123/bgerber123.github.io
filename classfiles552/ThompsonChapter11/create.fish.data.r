@@ -60,33 +60,41 @@ write.csv(N.fish,file="N.fish.csv")
 
 #Now do it as if you don't know the specific strata
 
-dat= y.gr.df$count
+dat=read.csv("C:\\Users\\C825033651\\OneDrive - Colostate\\Documents\\GitHub\\bgerber123.github.io\\classfiles552\\ThompsonChapter11\\N.fish.csv")
+dat=data.frame(dat)
+colnames(dat)=c("Index","Count")
 
-
-dat$Count
 
 index1=which(dat$Count<=50)
 index2=which(dat$Count>50 & dat$Count<=150)
 index3=which(dat$Count>150 & dat$Count<=450)
 index4=which(dat$Count>450)
 
-dat$strata=dat$Count
+dat$strata=NA
 
 dat$strata[index1]="Strata1"
 dat$strata[index2]="Strata2"
 dat$strata[index3]="Strata3"
 dat$strata[index4]="Strata4"
 
+strata.size=unlist(table(dat$strata))
+strata.size
+
+700/4
+
 dat$strata
 
-strata.var=aggregate(dat$Count, by=list(dat$strata),FUN=var)$x
+strata.var=aggregate(dat$Count, 
+                     by=list(dat$strata),FUN=var)$x
+
 strata.size=aggregate(dat$Count, by=list(dat$strata),FUN=length)$x
+strata.size=table(dat$strata)
 
-
-n = 500
+n = 100
 
 optimal.nh = n*strata.size*sqrt(strata.var) / sum(strata.size*sqrt(strata.var))
 
 optimal.nh
 
 optimal.nh/n
+

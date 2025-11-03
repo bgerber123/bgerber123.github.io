@@ -13,7 +13,7 @@ title: ""
 
 #### **Assigned**
 
-- 1. Evaluate how the sampling distribution of p-hat changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide 'acceptable' results.
+- 1. Evaluate how the sampling distribution of $\hat{p}$ changes at different sample sizes. Do this for at least 3 sample sizes. Draw conclusions on how practical it is in your field for obtaining a sample size that would provide 'acceptable' results.
 
 - 2. For a given fixed sample size (n=100), evaluate how the sampling distribution of p-hat changes, as measured by the standard deviation, when theta and p vary (seq(0.1,0.85,by=0.15)).
 
@@ -29,4 +29,4 @@ title: ""
 
 <!-- - **Due 1 week**: [Canvas Quiz 5 Assignment](https://colostate.instructure.com/courses/212614/assignments/2900121) -->
 
-- **Due Next Class**: Read <a href="/readings552/Morrison et al. 2008.pdf">Morrison Ch.2 pages 37-49 (sections 2-2.4) </a> and <a href="/readings552/Marshall 2024.pdf">Marshall 2024 </a>
+- **Due Next Class**: Read <a href="/readings552/Morrison et al. 2008.pdf">Morrison Ch.2 pages 37-48 (sections 2-2.4) </a> and <a href="/readings552/Marshall 2024.pdf">Marshall 2024 </a>

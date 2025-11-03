@@ -28,4 +28,16 @@ z = qnorm(1-0.05/2)
 n = (N*p*(1-p)) / ((N-1)*(d^2/z^2)+p*(1-p))
 
 #  923 sample units will suffice
-n
+
+n0 = ((z^2)*p*(1-p))/d^2
+
+n.alt = 1/((1/n0)+(1/N))
+n.alt
+
+#With no finite-population correction factor
+alpha <- 0.05
+conf.coef <- 1-alpha
+t.upper <- conf.coef + (alpha/2)
+
+(qt(t.upper, df = n-1)^2)*(0.5)*(0.5)/(0.02^2)
+
