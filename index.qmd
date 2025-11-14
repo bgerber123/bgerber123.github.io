@@ -36,22 +36,61 @@ about:
 </script>
 
 
-# Who and What
+# Who 
 
 I am a research scientist with the United States Geological Survey [(USGS)](https://www.usgs.gov/), Assistant Unit Leader at the [Colorado Cooperative Fish and Wildlife Research Unit](https://www1.usgs.gov/coopunits/unit/Colorado), an Associate Professor in the [Department of Fish, Wildlife, and Conservation Biology](https://warnercnr.colostate.edu/fwcb/) and a faculty member of the [Graduate Degree Program in Ecology](https://ecology.colostate.edu/) at [Colorado State University](https://www.colostate.edu/).
 
-My focus is on *collaborative science*:
+# What are cooperative research units?
 
-With my lab and colleagues - we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of biodiversity.
+The U.S. Geological Survey’s Cooperative Research Units (CRU) Program was established in 1935 and codified by Congress (Public Law 86-686) in 1960. The Unit has three fundamental objectives: 
 
-#### *Our research focus includes*
+- conduct relevant research to inform the management of fishery and wildlife resources
+- train graduate students to be effective natural resource scientists, biologists, and managers
+- provide technical assistance to natural resource and conservation agencies and groups
 
--   Wildlife Population Demography and Distribution
--   Conservation Decision Making
--   Animal Behavior (especially on the diel niche)
--   Hierarchical Bayesian Modeling
--   Animal Movement and Habitat Selection
--   Optimal Prediction via Statistical Regularization
+::: columns
+::: {.column width="10%"}
+
+![](./img/cru.logo.png)
+
+:::
+
+
+::: {.column width="90%"}
+
+The Colorado Unit is staffed, supported, and coordinated by Colorado State University, Colorado Parks and Wildlife, U.S. Geological Survey, U.S. Fish & Wildlife Service and the Wildlife Management Institute.
+
+:::
+:::
+
+# What I do?
+
+**My focus is on collaborative science**:
+
+With my lab and colleagues, we work with scientists and resource and land managers to help learn through data to provide inferential or predictive knowledge or decision-support that is used for empirically informed conservation management of animal species and their habitats.
+
+**My focus is on statistical ecology**:
+
+My research often focuses on developing, evaluating, and applying modern sampling techniques and statistical modeling. I am perhaps a generalist in this regard. I do not focus on a single class of statistics or statistical models. 
+
+I teach two graduate courses at Colorado State University, [FW670: Wildlife Ecology Modeling](https://bgerber123.github.io/FW680A4/) and [FW552: Applied Sampling for Fish and Wildlife Studies](https://bgerber123.github.io/FW552/). These courses emphasize the theory and practice of sampling, estimation, and statistical modeling relevant to fish and wildlife ecology and management. 
+
+#### *Some Research Topics*
+
+-   **Wildlife Population Demography and Distribution**
+    - mark-recapture, species distribution modeling
+-   **Study design / Model Evaluation**
+    - simulation analysis, power analysis, robust evaluation
+-   **Conservation Decision Making**
+    - structured decision making, adaptive management
+-   **Animal Behavior**
+    - diel niche, species interactions, predator-prey 
+-   **Hierarchical Bayesian Modeling**
+    - integrated data modeling, observational/process modeling
+-   **Animal Movement and Habitat Selection**
+    - home range, movement modeling, habitat selection
+-   **Optimal Prediction via Statistical Regularization**
+    - lasso, ridge, elastic net, machine learning algorithms
 
 # News {.scrollable}
 
