@@ -44,7 +44,7 @@ I am a research scientist with the United States Geological Survey [(USGS)](http
 
 The U.S. Geological Survey’s Cooperative Research Units (CRU) Program was established in 1935 and codified by Congress (Public Law 86-686) in 1960. The Unit has three fundamental objectives: 
 
-- conduct relevant research to inform the management of fishery and wildlife resources
+- conduct relevant research to inform the management of fish and wildlife
 - train graduate students to be effective natural resource scientists, biologists, and managers
 - provide technical assistance to natural resource and conservation agencies and groups
 
@@ -71,16 +71,20 @@ With my lab and colleagues, we work with scientists and resource and land manage
 
 **My focus is on statistical ecology**:
 
-My research often focuses on developing, evaluating, and applying modern sampling techniques and statistical modeling. I am perhaps a generalist in this regard. I do not focus on a single class of statistics or statistical models. 
+My research often includes developing, evaluating, and applying modern sampling techniques and statistical modeling. I am perhaps a generalist in this regard, as I do not focus on a single class of statistics or statistical models. 
+
+**Teaching**
 
 I teach two graduate courses at Colorado State University, [FW670: Wildlife Ecology Modeling](https://bgerber123.github.io/FW680A4/) and [FW552: Applied Sampling for Fish and Wildlife Studies](https://bgerber123.github.io/FW552/). These courses emphasize the theory and practice of sampling, estimation, and statistical modeling relevant to fish and wildlife ecology and management. 
+
+I also teach workshops that have focused mainly on coding in the R programming language, general statistical modeling (hierarhical Bayesian modeling), and more specific topics (mark-recapture, integrated population models).
 
 #### *Some Research Topics*
 
 -   **Wildlife Population Demography and Distribution**
     - mark-recapture, species distribution modeling, population reconstruction / harvest modeling, integrated population modeling, 
 -   **Study design / Model Evaluation**
-    - simulation analysis, power analysis, robust evaluation
+    - simulation and model robustness analysis, power analysis
 -   **Conservation Decision Making**
     - structured decision making, adaptive management
 -   **Animal Behavior**
