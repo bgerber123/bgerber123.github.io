@@ -50,7 +50,7 @@ In study 2, there is not correlation which suggests the ratio estimator will not
 
 ```{r}
 mu.x = mean(dat1$cover)
-r = sum(dat1$beetle.count[index1])/sum(dat1$cover[index2])
+r = sum(dat1$beetle.count[index1])/sum(dat1$cover[index1])
 pop.mean = r * mu.x
 pop.mean
 ```
@@ -59,18 +59,18 @@ pop.mean
 
 ```{r}
 n=length(dat1$beetle.count[index1])
-sample.var = 1/(n) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)
+sample.var = 1/(n-1) * sum((dat1$beetle.count[index1]-r*dat1$cover[index1])^2)
 N=nrow(dat1)
 population.mean.var = (N-n)/N * (sample.var/n)
 population.mean.var
 ```
 
-### Study 1
 
 **Study 1 Mean Estimate (sample avg)**
 
 ```{r}
 pop.mean = mean(dat1$beetle.count,na.rm=TRUE)
+pop.mean
 ```
 
 **Study 1 Variance Estimate (avg estimator)**
