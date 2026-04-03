@@ -1,0 +1,1077 @@
+---
+title:  <span style="color:black"><u>Big Picture</u> <br> Science and Modeling</span>
+title-slide-attributes:
+  data-background-image: /img/thinking.png
+  background-opacity: "0.45"
+format:
+  revealjs:
+    chalkboard: true
+    multiplex: true
+---
+
+
+## What's the point of statistics?
+
+<!-- knitr::purl("./FW670/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") -->
+
+
+```{=html}
+<style type="text/css">
+
+body, td {
+   font-size: 14px;
+}
+code.r{
+  font-size: 30px;
+}
+pre {
+  font-size: 20px
+}
+</style>
+```
+
+
+ - a process of learning through empirical observations
+ 
+. . .
+ 
+  - together, science philosophy and statistical modeling is the backbone to empirical learning
+
+
+## Today
+
+**1.**    Study Objectives, Hypotheses, and Predictions
+
+**2.**    Big Data and Sampling
+
+**3.**    Inference and Prediction
+
+**4.**    Model-Based vs Design-Based Sampling/Inference
+
+
+<br>
+
+. . .
+
+###
+
+*Lab*: Simulation and Markdown
+
+## Study Objective{.scrollable}
+
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+
+What you want to accomplish; can have multiple related objectives in a single manuscript.
+
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example</summary>
+```
+
+To understand the space-use of coyotes.
+
+![](/img/coyote.png){width=300}
+
+
+::: {.fragment}
+Framing the importance of the objective(s) provides the *justification* and depends on the audience.
+:::
+
+```{=html}
+</details>
+```
+
+
+## Hypothesis
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+
+1. A story that explains how the world works
+
+2. An explanation for an observed phenomenon
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details>
+<summary>Example (weak)</summary>
+```
+
+Coyotes have small home ranges in urban areas
+
+```{=html}
+</details>
+```
+
+
+## Research/Scientific Hypothesis
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+"A statement about a phenomenon that also includes the potential mechanism or cause of that
+phenomenon". [(Betts et al. 2021)](https://doi.org/10.1002/ece3.7365)
+
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example</summary>
+```
+
+Coyotes have small home ranges in urban areas because food resource density is high
+
+```{=html}
+</details>
+```
+
+::: {.fragment}
+```{=html}
+<span style="color:#FF0000";><b>Non-hypothesis hypothesis:</b></span>  We hypothesize variation in coyote home range size.
+```
+:::
+
+
+## Statistical Model/Hypothesis 
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+
+- An explicit mathematical and stochastic representation of the observational & mechanistic process of the empirical observations. 
+
+```{=html}
+</details>
+```
+
+## Statistical Model/Hypothesis 
+
+Example:
+
+$$\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}$$
+$$\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)$$
+
+::: {.fragment}
+
+where...
+
+$\textbf{y}$ = vector of home range sizes of coyotes <br>
+$\beta_0$ = intercept <br>
+$\beta_1$ = effect diff. of HR size for urban coyotes <br>
+$\textbf{x}$ = indicator of HR in urban (1) or not in urban (0) <br>
+$\sigma^2$ = uncertainty / unknown variability 
+
+:::
+
+
+## Statistical Model/Hypothesis 
+
+Example:
+
+$$\textbf{y} = \beta_0 + \beta_1 \times \textbf{x} + \mathbf{\epsilon}$$
+$$\mathbf{\epsilon} \sim \text{Normal}(0, \sigma^2)$$
+
+#### <span style="color:red">Evidence of hypothesis support</span>
+
+$\beta_1$ is negative and **statistically clearly different**^[1](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13159)^ than zero
+
+
+
+## Prediction {.scrollable}
+
+```{=html}
+<details>
+<summary>Definition</summary>
+```
+The expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.
+```{=html}
+</details>
+```
+
+
+```{=html}
+<details>
+<summary>Example 1</summary>
+```
+
+1. <span style="color:red">Okay</span>: Coyote home ranges are smaller in urban areas compared to non-urban areas
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details>
+<summary>Example 2</summary>
+```
+
+2. <span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas
+
+```{=html}
+</details>
+```
+
+
+## Types of Studies
+
+- Descriptive/Naturalist (not hypothetico-deductive)
+
+- Hypothetico-Deductive Observational
+
+- Hypothetico-Deductive Experimental
+
+## Manuscript Writing
+
+<span style="color:red">Where do you put these?</span>
+
+- objectives 
+- justification of objectives
+- hypotheses
+- predictions
+
+
+## Take-Aways?
+
+**1.**    Study Objectives, Hypotheses, and Predictions
+
+
+
+
+##  {background-image="/img/BigData.png"}
+
+
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#C70039; font-size: 65px;";><b>Data is everywhere <br> It is the era of  BIG DATA! </b></span></center>
+```
+
+## Big Data Problems
+
+
+["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+
+"with enough data, the numbers speak for themselves"- Wired Magazine Editor
+
+![](/img/spreadsheet.png){fig-align="center" width="600"}
+
+## Big Data Problems
+
+["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+
+
+
+```{=html}
+<br><span style="color:#FF0000";><center><em>"Data and data sets are not objective;"</center></em></span>
+```
+. . .
+
+```{=html}
+<span style="color:#FF0000";><center><em>"they are creations of human design."</center></em></span>
+```
+![](/img/thinking.png){fig-align="center" width="600"}
+
+## Big Data Problems {.scrollable}
+
+[**The Annals of Applied Statistics (2018); Xiao Li Meng,**](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-2/Statistical-paradises-and-paradoxes-in-big-data-I--Law/10.1214/18-AOAS1161SF.full)
+
+```{=html}
+<br><center><span><em>The Big Data Paradox: </em></span></center>
+```
+
+. . .
+
+```{=html}
+<center><span style="color:#FF0000";><em>
+"the bigger the data, the surer we fool ourselves”</em></span> ... when we fail to account for our sampling process. </center>
+```
+
+. . .
+
+<br>
+<center>
+Sampling Processes == Human Design
+</center>
+
+
+## Big Data Problems
+
+<br>
+
+![[Bradley et al. 2021 (Nature)](https://www.nature.com/articles/s41586-021-04198-4)](Information_files/survey.data.png){fig-align="center" width="1000"}
+
+```{=html}
+<br><center><span style="color:#FF0000";><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
+```
+## Big Data Problems {.scrollable}
+
+Using eBird data w/o accounting for sampling biases.
+
+. . .
+
+![](/img/ebird.png){fig-align="center" fig-width="500"}
+
+[Link1](https://www.pnas.org/doi/10.1073/pnas.2023170118). [Link2](https://www.pnas.org/doi/10.1073/pnas.2113862119). 
+
+
+<!-- ```{=html} -->
+<!-- <br><center><span style="color:#FF0000";><em>"eBird reporting rates also depend heavily on species’ overlap with the activity of eBird users, which also varies by region, time, and habitat."</em></span>   </center> -->
+<!-- ``` -->
+
+
+
+## The Questioning Scientist {.scrollable}
+
+<br>
+
+In regard to *data* and *statistical models*, [21^st^ century scientists should be pragmatic, excited, and questioning.]{style="color:red"}
+
+::: {.fragment .fade-in-then-semi-out}
+-   How and why did these data come to be?
+    -   *understand how the data came to be*
+    -   *ask this even when you design the study, after data collection*
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   What do these data look like?
+    -   *visualize the data in many dimensions*
+    -   *keep in mind - not all outcomes are visible in data -- example?*
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   How does this statistical model work?
+    -   *statistical notation, explicit and implicit assumptions*, *optimization*
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   How does this statistical model fail in theory and in practice?
+    -   *statistical robustness and identifiability*
+:::
+
+## Data vs. Information
+
+```{=html}
+<span style="color:#FF0000";><center>Data = Numbers/Groupings<br><br>
+Data ≠ Information
+</center>
+</span>
+```
+
+. . .
+
+
+![](/img/info_diagram.png){fig-align="center"}
+
+## Information
+
+```{=html}
+Data contains <span><u>information</u></span>, depending on ...
+```
+
+-   the question being asked of the data
+
+-   how the data came to be
+
+-   the goal of the question
+
+
+## The question and the data
+
+<br>
+
+Ecological surveillance monitoring will often have *low quality information* regarding post-hoc hypotheses.
+
+<br>
+
+```{=html}
+<span style="color:#FF0000";><center>
+Example?
+</center>
+</span>
+```
+
+. . .
+
+![](/img/banding.png){fig-align="center" width="494"}
+
+## The goal of the question
+
+::: incremental
+-   learn about the data (<span style="color:red">data summary</span>)
+-   apply learning outside of the data (<span style="color:red">inference</span>)
+-   learn about conditions relevant to but not observed in the data (<span style="color:red">prediction</span>)
+:::
+
+<br>
+
+. . .
+
+```{=html}
+<center>
+<span style="color:#FF0000";>
+<em>inference</em></span></span> and <span style="color:#FF0000";><em>prediction</em></span> are different goals, <em>optimally</em> requiring different data, statistical modeling proecdures. <br>
+</span>
+</center>
+```
+
+. . .
+
+```{=html}
+<br>
+<center>
+BUT, are also <u>not mutually exclusive</u>.
+</center>
+```
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    Big Data and Sampling
+
+
+##  {background-image="/img/wetlands.png"}
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px";><b>Inference and Prediction </b></span></center>
+```
+
+## Which is worse?
+
+-   unbiased imprecise result
+-   precise biased result
+
+
+![](/img/tragets.png){fig-align="center" width="600"}
+
+## Inference and Prediction 
+
+```{=html}
+<br>
+<p style="font-size:45px; font-family:Garamond;">
+<a href="https://www.jstor.org/stable/27836590">From "The strategy of model building in population biology" by Richard Levins (American Scientists, 1966) </a>:
+</p>
+<br>
+```
+```{=html}
+"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000";><u>understanding</u></span>, <span style="color:#FF0000";><u>predicting</u></span>, and <span style="color:#FF0000";><u>modifying nature</u></span>. But this cannot be done."
+```
+
+## Inference and Prediction {.scrollable}
+
+```{=html}
+<br>
+<p style="font-size:45px; font-family:Garamond;">
+<a href="https://projecteuclid.org/journals/statistical-science/volume-25/issue-3/To-Explain-or-to-Predict/10.1214/10-STS330.full">From "To Explain or to Predict" by Galit Shmueli (Statistical Science, 2010)</a>:
+</p>
+```
+
+Explanatory modeling focuses on minimizing (statistical) bias to obtain the most accurate representation of the underlying theory.
+
+<br>
+
+. . .
+
+Predictive modeling focuses on minimizing both bias and estimation variance; this may sacrifice theoretical accuracy for improved empirical precision.
+
+## Inference and Prediction
+
+```{=html}
+<span style="color:#0000FF";>This leads to a strange result: </span>
+```
+<br>
+
+```{=html}
+the <span style="color:#FF0000";>"wrong" </span> statistical model can predict better than the correct one.
+```
+
+<br>
+
+. . .
+
+BUT ...
+
+```{=html}
+<span style="color:#0000FF";>Explanatory models will likely perform better when predicting outside of the sample space and the model has the core underlying processes</span>
+```
+
+## Inference and Prediction
+
+```{=html}
+
+<p style="font-size:30px; ">Trade-Off between prediction accuracy and model interpretability; from <a href="/readings/ISLRv2_website.pdf">James et al. 2013. An Introduction to Statistical Learning</a></p>
+
+```
+
+
+![](/img/interpretability.png)
+
+##  {background-image="/img/wetlands.png"}
+
+```{=html}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><span style="color:#FFFFFF; font-size:65px";><b>Design- and Model-Based Sampling/Inference</b></span></center>
+```
+
+
+<!-- A question of the *sampling frame* -->
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    <span style="color:#899499;">Big Data and Sampling</span>
+
+**3.**    Inference and Prediction
+
+
+## 
+
+```{=html}
+<br>
+<br>
+<br>
+<center>
+<span style="color:#FF0000";>
+<p style="font-size:60px">
+When do we need statistics?
+</p>
+</span>
+</center>
+```
+
+
+## Design-Based
+
+![](/img/srs.png){height=450 fig-align=center}
+
+[Thompson, 2012. Sampling.](https://students.aiu.edu/submissions/profiles/resources/onlineBook/Q2T8G7_Sampling-_3rd.pdf)
+
+The sample and population are what??
+
+## Design-Based 
+
+![](/img/srs.png){height=450 fig-align=center}
+
+
+-   inference relies on randomly assigning some units to be in the sample (e.g., random sampling).
+
+
+## Design-Based 
+
+![](/img/srs.png){height=450 fig-align=center}
+
+-   the values themselves are held to be **fixed**, whereas the sampling process is random.
+
+## Design-Based {.scrollable}
+
+-   <span style="color:red">Key Strengths</span>: the population of interest is often defined (e.g., grid area); does not relying on stochastic models representing the structure of the data for reliable inference
+
+. . .
+
+-   <span style="color:red">Key Weaknesses</span>: limited in application; still requires models to accommodate observational processes, such as detection probability
+
+
+
+## Design-Based
+
+- $\textbf{Y}$ = [$y_1$,...,$y_N$]
+
+. . .
+
+<span style="color:red">This means something different</span>: 
+
+- $\textbf{Y}$ = ($y_1$,...,$y_N$)
+
+. . .
+
+- (stuff) is exclusive of end points
+
+- [stuff] is inclusive of end points
+
+## Design-Based {.scrollable}
+
+- $\textbf{Y}$ = [$y_1$,...,$y_N$]
+
+- The mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
+
+. . .
+
+- The population mean describes ....?
+
+. . .
+
+- $\textbf{y}$ is a random vector that has $n$ random variables. One sample of 4 cells. 
+
+. . .
+
+
+$\boldsymbol{y} = \begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\end{matrix}$
+
+. . .
+
+$\boldsymbol{y}' = \boldsymbol{y}^{T}  = \begin{bmatrix} y_{1} & \\y_{2} &\\  y_{3}  & \\y_{4 }\end{bmatrix}$
+
+
+## Random Variable 
+
+[Wikipedia:](https://en.wikipedia.org/wiki/Random_variable) A random variable (also called 'random quantity' or 
+'stochastic variable') is a mathematical formalization of a quantity or object which depends on random events.
+
+<br>
+
+. . .
+
+We observe samples from the domain or population or sampling frame.
+
+<br>
+
+. . .
+
+**Samples** are observed with some probability.
+
+## Statistic
+
+- $\hat{\bar{y}}$ is a 'statistic' (# computed from a sample) and is also a random variable 
+
+. . .
+
+- statistics have a sampling distribution, describing the probability associated to observing different values of the statistic
+
+
+
+
+## Design-Based Code 
+
+### TRUTH
+```{r design.sim, echo=TRUE, eval=TRUE}
+#random discrete uniform sampler
+rdu<-function(n,lower,upper){sample(lower:upper,n,replace=T)}
+
+mat = matrix(rdu(25, 
+                 lower = 0, 
+                 upper = 400
+                 ),
+             nrow=5, ncol=5
+             )
+mat
+```
+
+## Design-Based Code 
+
+### Random Sampling
+```{r design.sim2, echo=TRUE, eval=TRUE}
+  n = 10
+  y = sample(
+             c(mat),
+             10, 
+             replace = TRUE
+             )
+  y
+```
+
+<br>
+
+::: {.fragment}
+
+### Estimator for the population mean
+
+```{r design.sim4, echo=TRUE, eval=TRUE}  
+  mean(y)
+
+```
+
+:::
+
+## Design-Based Code 
+
+### Sampling Distribution
+
+```{r sampling dist, eval=TRUE, echo=TRUE}
+# How many ways can we uniquely sample 10 things from 25
+combs = function(n, x) {
+  factorial(n) / factorial(n-x) / factorial(x)
+}
+
+combs(25, 10)
+```
+
+
+## Design-Based Code 
+
+Get Every combination and then calcualte the mean for each sample of 10
+
+```{r sampling dist2, eval=TRUE, echo=TRUE, cache=TRUE}
+  set.seed(5435)
+  all.combs = utils::combn(c(mat), 10)
+  dim(all.combs)
+  mean.all.combs = apply(all.combs,2,mean)
+```
+
+## Design-Based Code 
+
+OR, we can sample enough times to approximate it
+
+```{r sampling dist3, eval=TRUE, echo=TRUE, cache=TRUE}
+  set.seed(5435)
+  sim.sampling.dist=replicate(2000,
+                              sample(c(mat),10)
+                              )
+  dim(sim.sampling.dist)
+  mean.samples = apply(sim.sampling.dist,2,mean)
+```
+
+## Design-Based Code 
+
+```{r sampling dist4, eval=TRUE, echo=FALSE}
+  hist(mean.all.combs,
+       freq=FALSE, 
+       main="Sampling Distributiuon of the Mean",
+       breaks=10,
+       xlab="Means"
+       )
+  hist(mean.samples,
+       add=TRUE,
+       freq=FALSE,
+       col=grDevices::adjustcolor("red", alpha.f=0.5),
+       breaks=10
+       )
+  legend("topright",lwd=5,col=c(grDevices::adjustcolor("black", alpha.f=0.5),grDevices::adjustcolor("red", alpha.f=0.5)),legend = c("Complete", "Approximated"))
+```
+
+## Model-Based {.scrollable}
+
+**Inference relies on ...**
+
+<span style="color:red"> "a statistical model describing how observations on population units are thought to have been generated from a super‐population with potentially infinitely many observations for each unit;"</span> [Williams and Brown, 2019](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279)
+
+<br>
+
+. . .
+
+<span style="color:red">"The analysis need not account for sampling randomization, because the sample is considered fixed. However, the unit values are considered random."</span> [Williams and Brown, 2019](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13279)
+
+## Model-Based
+
+<span style="color:red">BUT</span>....
+
+when linking 'unit values' in a model, we need to account for their dependence.
+
+<br>
+
+. . .
+
+Randomization allows us to make conditional independence claims among data in our sample, thus the model is simpler. 
+
+. . .
+
+<br>
+
+$P(y_{2}|y_{1}) = P(y_{2})$
+
+## Model-Based 
+
+-   <span style="color:red">Key Strengths</span>: Very flexible. Modeling is *magic*.
+
+. . .
+
+-   <span style="color:red">Key Weaknesses</span>: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear
+
+
+## Model-Based
+
+- $\textbf{y} \sim$ Poisson($\lambda$) [Wikipedia link](https://en.wikipedia.org/wiki/Poisson_distribution)
+
+- $y_{i} \sim$ Poisson($\lambda$)
+
+. . .
+
+- $\lambda$ is the population mean and variance
+
+. . .
+
+- Sample mean Estimator $\hat{\lambda} = \sum_{i=1}^n y_{i}/n$
+
+. . .
+
+- Maximum-Likelihood Estimate (MLE)
+
+## Model-Based Code
+
+```{r model.sim, echo=TRUE, eval=TRUE}
+#Create a function, to be replicated
+  lambda=200
+  n.sim=500
+  mat.fn = function(lambda){matrix(rpois(25, lambda=lambda),
+                               nrow=5, ncol=5
+                               )
+  }
+```
+
+## Model-Based Code
+
+```{r model.sim2, echo=TRUE, eval=TRUE}
+# repeat the function n.sim times
+  list.mat = replicate(n.sim, 
+                       mat.fn(lambda), 
+                       simplify=FALSE
+                       )
+  length(list.mat)
+```
+
+. . .
+
+```{r model.sim3, echo=TRUE, eval=TRUE}
+#One realization
+  list.mat[[1]]
+
+
+# Sample mean for the first realization
+  mean(list.mat[[1]])
+```
+
+## Model-Based Code
+
+#### Sampling Distribution
+
+```{r model.sim4, echo=TRUE, eval=TRUE}
+lambda.hat = unlist(lapply(list.mat,FUN=mean))
+```
+
+```{r model.sim5, echo=FALSE, eval=TRUE}
+hist(lambda.hat,
+     xlab=bquote(lambda-hat),
+     main=bquote("Sampling Distribution of"~lambda-hat)
+     )
+#abline(v=lambda, lwd=3, col=4)
+```
+
+## Statistical Bias
+
+the difference b/w the true value and the mean of the sampling distribution of all possible values; applies to design- and model-based sampling
+
+
+## Statistical Bias (Code) {.scrollable}
+
+```{r bias22,eval=TRUE, echo=TRUE}
+# Bias
+  mean(lambda.hat) - lambda
+
+# relative bias
+  (mean(lambda.hat) - lambda)/lambda
+```
+
+. . .
+
+```{r bias3,eval=TRUE, echo=FALSE}
+  hist(lambda.hat,xlab=bquote(lambda), breaks=20)
+  abline(v=mean(lambda.hat),lwd=4,col=4,lty=2)
+  abline(v=lambda,lwd=4,col=3,lty=3)
+  legend("topright",legend=c("mean","truth"),lwd=3,col=c(4,3),lty=c(2,3))
+```
+
+## Precision of the mean (Code)
+
+What is the probability that we will observe a mean within 5% of the truth?
+
+. . .
+
+We can calculate this using *Monte Carlo integration*
+
+. . .
+
+```{r bias4,eval=TRUE, echo=TRUE}
+  diff = 0.025*lambda
+  diff
+  lower = lambda-diff
+  upper = lambda+diff
+
+  index = which(lambda.hat>=lower & lambda.hat <= upper)
+
+#Probability of getting a mean within 5% of the truth
+  length(index)/n.sim
+```
+
+
+
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    <span style="color:#899499;">Big Data and Sampling</span>
+
+**3.**    <span style="color:#899499;">Inference and Prediction</span>
+
+**4.**    Model-Based vs Design-Based Inference
+
+
+## Lab
+
+**Objectives**
+
+- Introduce R Markdown
+
+- Use simulation and design-based sampling to investigate bias and precision
+
+
+<!-- ## Statistical Bias -->
+
+<!-- -   $y \sim \text{Poisson}(\lambda)$ -->
+
+<!-- . . . -->
+
+<!-- -   $\text{Bias}(\lambda) = E_{y|\lambda}[\hat{\lambda}] - \lambda$ -->
+
+<!-- . . . -->
+
+<!-- -   $E_{y|\lambda}[\hat{\lambda}]$ is the expected over the distribution P($y|\lambda$) (i.e., averaging over all possible observations y). [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+
+<!-- . . . -->
+
+<!-- -   An estimator is said to be unbiased if the expected value of the estimator matches that of the parameter. [Wikipedia](https://en.wikipedia.org/wiki/Bias_of_an_estimator) -->
+
+
+
+## Lab Setup {.scrollable}
+
+Let's add some more *reality* in our work while using design-based sampling in R.
+
+. . .
+
+<br>
+
+**Objective**: Evaluate sample size trade-offs for estimating white-tailed deer abundance throughout Rhode Island.
+
+. . .
+
+**Methodology**: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter.
+
+![](/img/flir.png){fig-align="center" width="483"}
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **Sampling Frame**
+
+    -   all of RI or some subset
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/RI.png){fig-align="center"  width="483"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **"Truth"**
+
+    -   how many deer per cell; how variable
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/deermap.png){fig-align="center"  width="650"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+-   **Sampling Process**
+
+    -   how to pick each cell
+
+:::
+
+::: {.column width="70%"}
+
+![](/img/deermap.png){fig-align="center" width="650"}
+:::
+
+::::
+
+## Lab Setup
+
+<span style="color:blue">Steps to consider</span>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+-   **Estimation Process**
+
+    -   estimate total deer population from the sample
+
+-   **Criteria to Evaluate**
+
+    -   use sampling distribution of deer abundance estimate or some other statistic\
+:::
+
+::: {.column width="50%"}
+
+![](/img/samplingdistribution.png){fig-align="center"}
+:::
+
+::::
+
+## Go to code
+
