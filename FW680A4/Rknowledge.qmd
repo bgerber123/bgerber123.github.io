@@ -1,10 +1,6 @@
 ---
 title:  " "
-format:
-  html: 
-    theme: cosmo
-    fontsize: 1.5em
-    linestretch: 1.15
+format: revealjs
 ---
 
 
