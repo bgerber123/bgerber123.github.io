@@ -65,17 +65,7 @@ title: ""
 
 #### [Using Code from Stats4Ecologists]{style="color:red;"}
 
-You will need to install an R package from Github....
-
 ```{r, eval=FALSE, echo=TRUE}
-# This requires devtools
-  install.packages("devtools")
-  devtools::install_github("jfieberg/Data4Ecologists")
-
-# You may need a Personal Acces Token (PAT), If you know your token, you can enter it like this
-  devtools::install_github("username/repo", auth_token = "your_token_here")
-
-# To Generate a PAT
-  usethis::create_github_token()
-  gitcreds::gitcreds_set() # Choose #2 and "Replace these credentials", eventually copy/paste token (long string) from the Github website
+# You will need to install this package:
+  remotes::install_github("jfieberg/Data4Ecologists")
 ```

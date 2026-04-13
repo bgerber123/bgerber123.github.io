@@ -39,6 +39,20 @@ format: html
 # https://cran.r-project.org/web/packages/grateful/index.html
 ```
 
+
+To install an R package from Github, you may need a Personal Acces Token (PAT)
+
+```{r, eval=FALSE, echo=TRUE}
+# If you know your token, you can enter it like this
+  devtools::install_github("username/repo", auth_token = "your_token_here")
+
+# To Generate a PAT
+  usethis::create_github_token()
+  gitcreds::gitcreds_set() # Choose #2 and "Replace these credentials", eventually copy/paste token (long string) from the Github website
+```
+
+
+
 ##### **In Class Discussion Questions for Zitomer et al. 2022**
 
  - Rule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?
