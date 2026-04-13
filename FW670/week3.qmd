@@ -8,7 +8,7 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   <p style="color:red;">University Holiday / No class today</p>
+-   University Holiday / No class today
 
 #### [Assigned]{style="color:red;"}
 
@@ -19,9 +19,9 @@ title: ""
 
 -   Lecture: <a href="/FW670/likelihood.qmd">Likelihood and Optimization</a>
 
--   Lecture Code: <a href="/FW670/likelihood.R">Likelihood.R</a>
-
 -   Lecture: <a href="/FW670/regression.qmd">Regression</a>
+
+-   Lecture Code: <a href="/FW670/likelihood.R">Likelihood.R</a> and <a href="/FW670/regression.R">regression.R</a>
 
 -   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Files</a>
 
@@ -32,10 +32,17 @@ title: ""
   install.packages(c("marginaleffects","ggResidpanel"))
 ```
 
+
+#### [Assigned]{style="color:red;"}
+- <a href="https://statistics4ecologists-v3.netlify.app/14-generalizedlinearmodels">Fieberg Ch 14</a>
+
+
 ##### **In Class Discussion Questions for Duscoff et al.2019**
 
 -   What is biological significance and statistical significance?
 -   What is a p-value and what are the issues with null hypothesis testing?
+
+
 
 
 

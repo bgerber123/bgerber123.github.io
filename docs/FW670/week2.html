@@ -230,13 +230,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="../readings/Kery and Kellner Chapter 2.pdf">Kery and Kellner Chapter 2 (sections 2.5-2.6)</a></li>
 <li><a href="../readings/Dushoff et al. 2019.pdf">Dushoff et al.&nbsp;2019</a></li>
-<li><a href="https://statistics4ecologists-v2.netlify.app/linreg#hypothesis-tests-and-p-values">Fieberg, Chapter 1.10</a></li>
+<li><a href="https://statistics4ecologists-v3.netlify.app/01-linearregression#hypothesis-tests-and-p-values">Fieberg, Chapter 1.10</a></li>
 </ul>
 </li>
+<li>Background Reading on the Likelihood and Optimization (not required):
+<ul>
+<li><a href="..\readings/Bolker 2007 Chapter 6.pdf">Bolker Ch. 6</a></li>
+<li><a href="..\readings/Bolker 2007 Chapter 7.pdf">Bolker Ch. 7</a></li>
+<li><a href="https://statistics4ecologists-v3.netlify.app/10-maximumlikelihood">Fieberg Ch. 10</a></li>
 </ul>
+</li>
+<li>Background Reading on regression (not required):
+<ul>
+<li><a href="https://statistics4ecologists-v2.netlify.app/linreg">Fieberg, Ch. 1</a></li>
+<li><a href="..\readings/Zurr et al Chapter 2.pdf">Zurr Ch. 2</a></li>
+</ul>
+</li>
+</ul></section><section id="using-code-from-stats4ecologists" class="level4"><h4 class="anchored" data-anchor-id="using-code-from-stats4ecologists"><span style="color:red;">Using Code from Stats4Ecologists</span></h4>
+<p>You will need to install an R package from Github….</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># To use code from Stats4Ecologists, you will need to install the package from GitHub,</span></span>
-<span><span class="co"># This requires devtools</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># This requires devtools</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"jfieberg/Data4Ecologists"</span><span class="op">)</span></span>
 <span></span>
@@ -247,18 +260,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/github-token.html">create_github_token</a></span><span class="op">(</span><span class="op">)</span></span>
 <span>  <span class="fu">gitcreds</span><span class="fu">::</span><span class="fu"><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html">gitcreds_set</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># Choose #2 and "Replace these credentials", eventually copy/paste token (long string) from the Github website</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<ul>
-<li>Background Reading on the Likelihood and Optimization (not required):
-<ul>
-<li><a href="..\readings/Bolker 2007 Chapter 6.pdf">Bolker Ch. 6</a></li>
-<li><a href="..\readings/Bolker 2007 Chapter 7.pdf">Bolker Ch. 7</a></li>
-<li><a href="https://statistics4ecologists-v3.netlify.app/10-maximumlikelihood">Fieberg Ch. 10</a></li>
-</ul>
-</li>
-<li>Background Reading on regression (not required):</li>
-<li><a href="https://statistics4ecologists-v2.netlify.app/linreg">Fieberg, Ch. 1</a></li>
-<li><a href="..\readings/Zurr et al Chapter 2.pdf">Zurr Ch. 2</a></li>
-</ul>
 
 
 </section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

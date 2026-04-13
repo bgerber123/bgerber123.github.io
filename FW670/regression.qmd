@@ -10,7 +10,7 @@ format:
 
 ## Objectives
 
-<!-- knitr::purl("./FW670/regression.qmd", output="./classfiles/regressionlab/regression.R") -->
+<!-- knitr::purl("./FW670/regression.qmd", output="./FW670/regression.R") -->
 
 -   fundamentals
 -   assumptions
