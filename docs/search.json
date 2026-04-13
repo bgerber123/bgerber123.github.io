@@ -14298,7 +14298,7 @@
     "href": "FW670/schedule.html#schedule",
     "title": "\nFW670  Wildlife Ecology Modeling  (Fall 2026)\n",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n1\nMo\n24-Aug\nClass Intro\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n28-Aug\nBig Picture\nLab 1: Sampling\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nMo\n31-Aug\nProbability Functions\nProbability Quiz\nKery and Kellner Ch. 2.0-2.4\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n4-Sep\nProbability Functions\nLab 2: Simulation & Prob. Functions\nDushoff et al. 2019; Fieberg, Ch. 1.10; Kery and Kellner Ch. 2.5-2.6\nFieberg Ch. 1 and 10; Bolker Ch. 6 and 7; Zurr et al. Ch. 2\n\n\n3\nMo\n7-Sep\n\n\n\n\n\n\n \nFr\n11-Sep\nLikelihood / Optimization /Regression\nLab 3: Regression\nFieberg Ch. 14\n\n\n\n4\nMo\n14-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n18-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8; Tredennick et al. 2021\n\n\n\n5\nMo\n21-Sep\nModeling Strategies\n\n\nGelman and Hill Ch. 11 and 12\n\n\n \nFr\n25-Sep\nHierarchical Models / GLMM\nLab 5: GLMM\nKery and Kellner Ch. 2.7-2.10\n\n\n\n6\nMo\n28-Sep\nBayesian Inference\n\nEllison 2004\nHobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12\n\n\n \nFr\n2-Oct\nBayesian Inference and Computation\nLab 6: Bayes; Bayes Quiz\n\nKurz, 2023\n\n\n7\nMo\n5-Oct\nHierarchical Bayesian\n\n\n\n\n\n \nFr\n9-Oct\nHierarchical Bayesian\nLab 7\nWidmer et al 2021; Guillera-Arroita et al. 2015\nSoley-Guardia et al. 2024; Valavi et al. 2021\n\n\n8\nMo\n12-Oct\nSpecies Distribution Modeling\n\nKery and Schaub Ch 7\n\n\n\n \nFr\n16-Oct\nMark Recapture\nLab 8: CJS\nRoyle et al. 2018\n\n\n\n9\nMo\n19-Oct\nSpatial Capture Recapture\n\nKery and Schaub Ch 13\n\n\n\n \nFr\n23-Oct\nHierarchical Bayesian Occupancy\nLab 9:HB Occu.\nZipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18\n\n\n\n10\nMo\n26-Oct\nN-Mixture and Integrated Data Models\n\nMcCaffery et al. 2016; Kery and Kellner Ch20\n\n\n\n \nFr\n30-Oct\nIntegrated Data Models\nLab 10: ISDM\nWittemyer et al. 2019; Huggler et al. 2022\n\n\n\n11\nMo\n2-Nov\nAnimal Movement\n\n\nNathan et al 2008 and 2022; Signer et al 2018; and more\n\n\n \nFr\n6-Nov\nAnimal Movement\nLab 11: AMT; Nothing to submit\nSmith et al. 2022; Northrup et al. 2022\n\n\n\n12\nMo\n9-Nov\nHabitat Selection\n\nDraft guidance paper\n\n\n\n \nFr\n13-Nov\nHabitat Selection\nLab 12: HabSel\nWright et al 2020\n\n\n\n13\nMo\n16-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n20-Nov\n\nLab 13:\n\n\n\n\n14\nMo\n23-Nov\nNo Class\n\n\n\n\n\n \nFr\n27-Nov\nNo Class\n\n\n\n\n\n15\nMo\n30-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n4-Dec\nGroup Project work\n\n\n\n\n\n16\nMo\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDay\nDate\nLecture Topic\nAssignments\nReadings\nBackground Materials\n\n\n\n\n1\nMo\n24-Aug\nClass Intro\nDiscussion Post\nZitomer et al. 2022; Wolcott et al. 2019\n\n\n\n \nFr\n28-Aug\nBig Picture\nLab 1: Sampling\nBetts et al. 2022; Dumelle et al. 2021; Williams and Brown 2019\nShmueli 2010; Arif and MacNeil 2022\n\n\n2\nMo\n31-Aug\nProbability Functions\nProbability Quiz\nKery and Kellner Ch. 2.0-2.4\nHobbs and Hooten Ch.3; Bolker Ch. 4\n\n\n \nFr\n4-Sep\nProbability Functions\nLab 2: Simulation & Prob. Functions\nDushoff et al. 2019; Fieberg, Ch. 1.10; Kery and Kellner Ch. 2.5-2.6\nFieberg Ch. 1 and 10; Bolker Ch. 6 and 7; Zurr et al. Ch. 2\n\n\n3\nMo\n7-Sep\n\n\n\n\n\n\n \nFr\n11-Sep\nLikelihood / Optimization /Regression\nLab 3: Regression\nFieberg Ch. 14\n\n\n\n4\nMo\n14-Sep\nGLM I\n\nZurr and Iano, 2016\n\n\n\n \nFr\n18-Sep\nGLM II\nLab 4: GLM\nFieberg, Ch. 8; Tredennick et al. 2021\n\n\n\nWeek 5\nMo\n21-Sep\nModeling Strategies\n\n\nGelman and Hill Ch. 11 and 12\n\n\n \nFr\n25-Sep\nHierarchical Models / GLMM\nLab 5: GLMM\nKery and Kellner Ch. 2.7-2.10\n\n\n\nWeek 6\nMo\n28-Sep\nBayesian Inference\n\nEllison 2004\nHobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12\n\n\n \nFr\n2-Oct\nBayesian Inference and Computation\nLab 6: Bayes; Bayes Quiz\n\nKurz, 2023\n\n\nWeek 7\nMo\n5-Oct\nHierarchical Bayesian\n\n\n\n\n\n \nFr\n9-Oct\nHierarchical Bayesian\nLab 7\nWidmer et al 2021; Guillera-Arroita et al. 2015\nSoley-Guardia et al. 2024; Valavi et al. 2021\n\n\nWeek 8\nMo\n12-Oct\nSpecies Distribution Modeling\n\nKery and Schaub Ch 7\n\n\n\n \nFr\n16-Oct\nMark Recapture\nLab 8: CJS\nRoyle et al. 2018\n\n\n\nWeek 9\nMo\n19-Oct\nSpatial Capture Recapture\n\nKery and Schaub Ch 13\n\n\n\n \nFr\n23-Oct\nHierarchical Bayesian Occupancy\nLab 9:HB Occu.\nZipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18\n\n\n\nWeek 10\nMo\n26-Oct\nN-Mixture and Integrated Data Models\n\nMcCaffery et al. 2016; Kery and Kellner Ch20\n\n\n\n \nFr\n30-Oct\nIntegrated Data Models\nLab 10: ISDM\nWittemyer et al. 2019; Huggler et al. 2022\n\n\n\nWeek 11\nMo\n2-Nov\nAnimal Movement\n\n\nNathan et al 2008 and 2022; Signer et al 2018; and more\n\n\n \nFr\n6-Nov\nAnimal Movement\nLab 11: AMT; Nothing to submit\nSmith et al. 2022; Northrup et al. 2022\n\n\n\nWeek 12\nMo\n9-Nov\nHabitat Selection\n\nDraft guidance paper\n\n\n\n \nFr\n13-Nov\nHabitat Selection\nLab 12: HabSel\nWright et al 2020\n\n\n\nWeek 13\nMo\n16-Nov\nCommunity Modeling\n\n\n\n\n\n \nFr\n20-Nov\n\nLab 13:\n\n\n\n\nWeek 14\nMo\n23-Nov\nNo Class\n\n\n\n\n\n \nFr\n27-Nov\nNo Class\n\n\n\n\n\n15\nMo\n30-Nov\nGroup Project work\n\n\n\n\n\n \nFr\n4-Dec\nGroup Project work\n\n\n\n\n\nWeek 16\nMo\n3-Dec\nPresent Group Project\n\n\n\n\n\n \nFr\n6-Dec\nPresent Group Project"
   },
   {
     "objectID": "FW670/bayesian.html#all-things-bayesian",
@@ -16551,8 +16551,8 @@
     "objectID": "FW670/regression.html#objectives",
     "href": "FW670/regression.html#objectives",
     "title": "Linear Regression",
-    "section": "Objectives",
-    "text": "Objectives\n\n\nfundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
+    "section": "",
+    "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
   },
   {
     "objectID": "FW670/regression.html#section",
@@ -16635,8 +16635,8 @@
     "objectID": "FW670/regression.html#sampling-distributions-of-hatmu",
     "href": "FW670/regression.html#sampling-distributions-of-hatmu",
     "title": "Linear Regression",
-    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)",
-    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
+    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)\n",
+    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/regression.html#section-1",
@@ -16671,14 +16671,14 @@
     "href": "FW670/regression.html#assumptions-3",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nLinearity\n \\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
+    "text": "Assumptions\nLinearity\n\\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
   },
   {
     "objectID": "FW670/regression.html#assumptions-4",
     "href": "FW670/regression.html#assumptions-4",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nNormality\n \\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
+    "text": "Assumptions\nNormality\n\\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
   },
   {
     "objectID": "FW670/regression.html#assumption-violations",
@@ -16741,7 +16741,7 @@
     "href": "FW670/regression.html#what-is-a-ci",
     "title": "Linear Regression",
     "section": "What is a CI?",
-    "text": "What is a CI?\n\n“A confidence interval for a parameter is an interval computed using sample data …\n\n\n“… by a method that will contain the parameter for a specified proportion of all samples.\n\n\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
+    "text": "What is a CI?\n. . .\n“A confidence interval for a parameter is an interval computed using sample data …\n. . .\n“… by a method that will contain the parameter for a specified proportion of all samples.\n. . .\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
   },
   {
     "objectID": "FW670/regression.html#what-is-a-ci-1",
@@ -16832,7 +16832,7 @@
     "href": "FW670/regression.html#prairie-dog-calling",
     "title": "Linear Regression",
     "section": "Prairie Dog Calling",
-    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
+    "text": "Prairie Dog Calling\n\n\n\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
   },
   {
     "objectID": "FW670/regression.html#exploratory",
@@ -16937,28 +16937,28 @@
     "href": "FW670/regression.html#linearity-assumption",
     "title": "Linear Regression",
     "section": "Linearity Assumption",
-    "text": "Linearity Assumption\n\nplot(model,1)\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
+    "text": "Linearity Assumption\n\nplot(model,1)\n\n\n\n\n\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
   },
   {
     "objectID": "FW670/regression.html#homogeneity-of-variance",
     "href": "FW670/regression.html#homogeneity-of-variance",
     "title": "Linear Regression",
     "section": "Homogeneity of Variance",
-    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
+    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\n\n\n\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
   },
   {
     "objectID": "FW670/regression.html#normality-of-residuals",
     "href": "FW670/regression.html#normality-of-residuals",
     "title": "Linear Regression",
     "section": "Normality of Residuals",
-    "text": "Normality of Residuals\n\nplot(model,2)\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
+    "text": "Normality of Residuals\n\nplot(model,2)\n\n\n\n\n\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
   },
   {
     "objectID": "FW670/regression.html#outliers",
     "href": "FW670/regression.html#outliers",
     "title": "Linear Regression",
     "section": "Outliers",
-    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
+    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\n\n\n\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
   },
   {
     "objectID": "FW670/regression.html#exploring-assumptions",
@@ -18814,5 +18814,12 @@
     "title": "Brian D. Gerber",
     "section": "",
     "text": "Reading Discussion (Arif and MacNeil 2022 and Nichols and Cooch 2025)\n\nDiscussion Points\n\nWhen is prediction useful for causal inference?\n\n\n\n\n\n\n\nClass reflections: come prepared with thoughts on the class and material\n\nWhat were some take-aways?\nWhat info/material was new for you or different than you have learned before?\nHow did the level of effort compare to other graduate classes?\nShould a Sampling class be mandatory in FWCB for graduate students?\nClass organization?\nImprovements?"
+  },
+  {
+    "objectID": "FW670/regression.html",
+    "href": "FW670/regression.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
   }
 ]
