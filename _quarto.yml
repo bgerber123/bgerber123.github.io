@@ -22,8 +22,8 @@ website:
         href: publications/publications.qmd
       - text: "CV"
         href: cv/index.qmd
-      - text: "FW680A4"
-        href: FW680A4/index.qmd
+      - text: "FW670"
+        href: FW670/index.qmd
       - text: "FW552"
         href: FW552/index.qmd
 
