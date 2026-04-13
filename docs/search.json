@@ -14949,14 +14949,14 @@
     "href": "FW670/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  323    4  237  133  105\n[2,]   19   54  288   75  304\n[3,]  189   10  268  298  116\n[4,]  296  254  359  335  325\n[5,]  144  276  269   18  331"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu&lt;-function(n,lower,upper){sample(lower:upper,n,replace=T)}\n\nmat = matrix(rdu(25, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  166  168  124  312  112\n[2,]   12  317  138  150   58\n[3,]  385  113   97  240  137\n[4,]  254  374  108   53   76\n[5,]  152  279   56  274   96"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-1",
     "href": "FW670/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 288 254 116  75 323 296 268 268  18 331\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 223.7"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1]  96 279 150  53  97  56 274 274 240 274\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 179.3"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-2",
@@ -15908,7 +15908,7 @@
     "href": "FW670/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
     "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Mo 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n670-001 (CRN 77992) and FW 670-L01 (CRN 77993)"
   },
   {
     "objectID": "FW670/Introduction.html#what-is-this-course",
@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.09572176 -1.10848106 -0.27225384 -0.08550137  0.52097298 -0.33746197\n [7]  0.10698254 -0.25837889  0.40497825  0.33936762\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.0 0.0 0.3 0.3 0.1 0.3 0.1 0.3 0.0"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.182422388 -0.596101795  0.303677706  0.008212004  0.115152042\n [6]  0.155218644  0.047569049  0.572687309  0.444714842  0.546801221\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.0 0.2 0.3 0.3 0.1 0.2 0.3 0.1 0.2"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",
@@ -18624,14 +18624,14 @@
     "href": "FW670/week1.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\nTo install an R package from Github, you may need a Personal Acces Token (PAT)\n\n# If you know your token, you can enter it like this\n  devtools::install_github(\"username/repo\", auth_token = \"your_token_here\")\n\n# To Generate a PAT\n  usethis::create_github_token()\n  gitcreds::gitcreds_set() # Choose #2 and \"Replace these credentials\", eventually copy/paste token (long string) from the Github website\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nLecture Code: BigPicture_code.R\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\nTo install an R package from Github, you may need a Personal Acces Token (PAT)\n\n# If you know your token, you can enter it like this\n  devtools::install_github(\"username/repo\", auth_token = \"your_token_here\")\n\n# To Generate a PAT\n  usethis::create_github_token()\n  gitcreds::gitcreds_set() # Choose #2 and \"Replace these credentials\", eventually copy/paste token (long string) from the Github website\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW670/week1.html#week-1",
     "href": "FW670/week1.html#week-1",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\nTo install an R package from Github, you may need a Personal Acces Token (PAT)\n\n# If you know your token, you can enter it like this\n  devtools::install_github(\"username/repo\", auth_token = \"your_token_here\")\n\n# To Generate a PAT\n  usethis::create_github_token()\n  gitcreds::gitcreds_set() # Choose #2 and \"Replace these credentials\", eventually copy/paste token (long string) from the Github website\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
+    "text": "Lecture: Introduction\n\n\n\nDiscussion Post on Canvas\n\nReadings for next class:\n\nZitomer et al. 2022 PLOS Computation Biology\n\nWolcott et al. 2019 Book Chapter.\n\n\n\n\n\nLecture: Big Picture\nLecture Code: BigPicture_code.R\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"sf\",\"ggplot2\", \"spsurvey\", \"remotes\"))\n\n# Github package install\n  remotes::install_github(\"Pakillo/grateful\")\n\n# OR, download the zip file here and manually install:\n# https://cran.r-project.org/web/packages/grateful/index.html\n\nTo install an R package from Github, you may need a Personal Acces Token (PAT)\n\n# If you know your token, you can enter it like this\n  devtools::install_github(\"username/repo\", auth_token = \"your_token_here\")\n\n# To Generate a PAT\n  usethis::create_github_token()\n  gitcreds::gitcreds_set() # Choose #2 and \"Replace these credentials\", eventually copy/paste token (long string) from the Github website\n\n\n\nRule #2 - Can you describe differences in the type of learning we achieve from 1) manipulative experiments, 2) observational studies, and 3) descriptive/ natural history studies?\nRule #4 - Do you agree?\nRule #7 - What determines a p-value? What does it mean?\nRule #10 - How to do this?\nWhat was a good takeaway from this paper? What was confusing or you disagreed with?\n\n\nWhat is the connection between general linear models and t-test/ANOVA?\nWhat is a fixed and random effect?\nCan you describe elements of a Bayesian or frequentist framework?\nWhat is model selection?\nWhat was a good takeaway from this? What was confusing or you disagreed with?\n\n\nAssigned Readings:\n\nBetts et al. 2022\n\nDumelle et al 2021. Only sections 1 to 1.1.2.\n\nWilliams and Brown 2019. Only sections 1 and 2.\n\n\nBackground Reading (not required):\n\n\nShmueli 2010.\n\nArif and MacNeil 2022."
   },
   {
     "objectID": "FW670/week2.html",
@@ -18821,5 +18821,12 @@
     "title": "Linear Regression",
     "section": "",
     "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
+  },
+  {
+    "objectID": "FW670/Introduction.html",
+    "href": "FW670/Introduction.html",
+    "title": "Wildlife Ecology Modeling",
+    "section": "",
+    "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
   }
 ]

@@ -3,16 +3,13 @@ title:  <span style="color:black"><u>Big Picture</u> <br> Science and Modeling</
 title-slide-attributes:
   data-background-image: /img/thinking.png
   background-opacity: "0.45"
-format:
-  revealjs:
-    chalkboard: true
-    multiplex: true
+format: revealjs
 ---
 
 
 ## What's the point of statistics?
 
-<!-- knitr::purl("./FW670/BigPicture.qmd", output="./classfiles/deerlab/BigPicture_code.R") -->
+<!-- knitr::purl("./FW670/BigPicture.qmd", output="./FW670/BigPicture_code.R") -->
 
 
 ```{=html}
