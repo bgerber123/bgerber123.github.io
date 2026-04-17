@@ -270,7 +270,7 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 ## Big Data Problems
 
 
-["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+["*The hidden Biases of Big Data*" by Kate Crawford  (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
 "with enough data, the numbers speak for themselves"- Wired Magazine Editor
 
@@ -278,19 +278,19 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 
 ## Big Data Problems
 
-["*The hidden Biases of Big Data*" by Kate Crawford in Harvard Business Review (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
+["*The hidden Biases of Big Data*" by Kate Crawford (2013)](https://hbr.org/2013/04/the-hidden-biases-in-big-data)
 
 
 
 ```{=html}
-<br><span style="color:#FF0000";><center><em>"Data and data sets are not objective;"</center></em></span>
+<br><span style="color:#FF0000";><center><em>"Data and data sets are not objective"</center></em></span>
 ```
 . . .
 
 ```{=html}
 <span style="color:#FF0000";><center><em>"they are creations of human design."</center></em></span>
 ```
-![](/img/thinking.png){fig-align="center" width="600"}
+
 
 ## Big Data Problems {.scrollable}
 
@@ -381,9 +381,9 @@ Data ≠ Information
 . . .
 
 
-![](/img/info_diagram.png){fig-align="center"}
+<!-- ![](/img/info_diagram.png){fig-align="center"} -->
 
-## Information
+. . .
 
 ```{=html}
 Data contains <span><u>information</u></span>, depending on ...
@@ -534,6 +534,16 @@ BUT ...
 
 ![](/img/interpretability.png)
 
+## Take-Aways
+
+**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
+
+
+**2.**    <span style="color:#899499;">Big Data and Sampling</span>
+
+**3.**    Inference and Prediction
+
+
 ##  {background-image="/img/wetlands.png"}
 
 ```{=html}
@@ -549,14 +559,6 @@ BUT ...
 
 <!-- A question of the *sampling frame* -->
 
-## Take-Aways
-
-**1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
-
-
-**2.**    <span style="color:#899499;">Big Data and Sampling</span>
-
-**3.**    Inference and Prediction
 
 
 ## 
@@ -613,21 +615,23 @@ The sample and population are what??
 
 . . .
 
-<span style="color:red">This means something different</span>: 
+- $\textbf{u}$ = [$y_1$,...,$y_n$]
 
-- $\textbf{Y}$ = ($y_1$,...,$y_N$)
+<!-- <span style="color:red">This means something different</span>:  -->
 
-. . .
+<!-- - $\textbf{Y}$ = ($y_1$,...,$y_N$) -->
 
-- (stuff) is exclusive of end points
+<!-- . . . -->
 
-- [stuff] is inclusive of end points
+<!-- - (stuff) is exclusive of end points -->
+
+<!-- - [stuff] is inclusive of end points -->
 
 ## Design-Based {.scrollable}
 
 - $\textbf{Y}$ = [$y_1$,...,$y_N$]
 
-- The mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
+- The population mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
 
 . . .
 
@@ -635,7 +639,7 @@ The sample and population are what??
 
 . . .
 
-- $\textbf{y}$ is a random vector that has $n$ random variables. One sample of 4 cells. 
+- $\textbf{y}$ is a random vector that has $n$ random values One sample of 4 cells. 
 
 . . .
 
@@ -680,7 +684,7 @@ We observe samples from the domain or population or sampling frame.
 ### TRUTH
 ```{r design.sim, echo=TRUE, eval=TRUE}
 #random discrete uniform sampler
-rdu<-function(n,lower,upper){sample(lower:upper,n,replace=T)}
+rdu<-function(n,lower,upper){sample(lower:upper,n,replace=TRUE)}
 
 mat = matrix(rdu(25, 
                  lower = 0, 

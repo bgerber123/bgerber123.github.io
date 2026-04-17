@@ -356,21 +356,16 @@ pre {
 </section>
 <section id="big-data-problems" class="slide level2">
 <h2>Big Data Problems</h2>
-<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford (2013)</a></p>
 <p>“with enough data, the numbers speak for themselves”- Wired Magazine Editor</p>
 
 <img data-src="..\img/spreadsheet.png" class="quarto-figure quarto-figure-center r-stretch" width="600"></section>
 <section id="big-data-problems-1" class="slide level2">
 <h2>Big Data Problems</h2>
-<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford in Harvard Business Review (2013)</a></p>
-<br><span style="color:#FF0000" ;=""><center><em>"Data and data sets are not objective;"</em></center></span>
+<p><a href="https://hbr.org/2013/04/the-hidden-biases-in-big-data">“<em>The hidden Biases of Big Data</em>” by Kate Crawford (2013)</a></p>
+<br><span style="color:#FF0000" ;=""><center><em>"Data and data sets are not objective"</em></center></span>
 <div class="fragment">
 <span style="color:#FF0000" ;=""><center><em>"they are creations of human design."</em></center></span>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="..\img/thinking.png" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
 </div>
 </section>
 <section id="big-data-problems-2" class="slide level2 scrollable">
@@ -455,21 +450,16 @@ Data ≠ Information
 </center>
 </span>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="..\img/info_diagram.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<!-- ![](/img/info_diagram.png){fig-align="center"} -->
 </div>
-</div>
-</section>
-<section id="information" class="slide level2">
-<h2>Information</h2>
+<div class="fragment">
 Data contains <span><u>information</u></span>, depending on ...
 <ul>
 <li><p>the question being asked of the data</p></li>
 <li><p>how the data came to be</p></li>
 <li><p>the goal of the question</p></li>
 </ul>
+</div>
 </section>
 <section id="the-question-and-the-data" class="slide level2">
 <h2>The question and the data</h2>
@@ -572,6 +562,12 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 
 
 <img data-src="..\img/interpretability.png" class="r-stretch"></section>
+<section id="take-aways-2" class="slide level2">
+<h2>Take-Aways</h2>
+<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
+<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
+<p><strong>3.</strong> Inference and Prediction</p>
+</section>
 <section id="section-3" class="slide level2" data-background-image="../img/wetlands.png">
 <h2></h2>
 
@@ -582,12 +578,6 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <br>
 <center><span style="color:#FFFFFF; font-size:65px" ;=""><b>Design- and Model-Based Sampling/Inference</b></span></center>
 <!-- A question of the *sampling frame* -->
-</section>
-<section id="take-aways-2" class="slide level2">
-<h2>Take-Aways</h2>
-<p><strong>1.</strong> <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span></p>
-<p><strong>2.</strong> <span style="color:#899499;">Big Data and Sampling</span></p>
-<p><strong>3.</strong> Inference and Prediction</p>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
@@ -651,23 +641,21 @@ When do we need statistics?
 <li><span class="math inline">\(\textbf{Y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</li>
 </ul>
 <div class="fragment">
-<p><span style="color:red">This means something different</span>:</p>
 <ul>
-<li><span class="math inline">\(\textbf{Y}\)</span> = (<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>)</li>
+<li><span class="math inline">\(\textbf{u}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_n\)</span>]</li>
 </ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p>(stuff) is exclusive of end points</p></li>
-<li><p>[stuff] is inclusive of end points</p></li>
-</ul>
+<!-- <span style="color:red">This means something different</span>:  -->
+<!-- - $\textbf{Y}$ = ($y_1$,...,$y_N$) -->
+<!-- . . . -->
+<!-- - (stuff) is exclusive of end points -->
+<!-- - [stuff] is inclusive of end points -->
 </div>
 </section>
 <section id="design-based-5" class="slide level2 scrollable">
 <h2>Design-Based</h2>
 <ul>
 <li><p><span class="math inline">\(\textbf{Y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</p></li>
-<li><p>The mean is <span class="math inline">\(\bar{Y} = \sum_{i=1}^N Y_i / N\)</span> and the sample mean is <span class="math inline">\(\hat{\bar{y}} = \sum_{i=1}^n y_i / n\)</span></p></li>
+<li><p>The population mean is <span class="math inline">\(\bar{Y} = \sum_{i=1}^N Y_i / N\)</span> and the sample mean is <span class="math inline">\(\hat{\bar{y}} = \sum_{i=1}^n y_i / n\)</span></p></li>
 </ul>
 <div class="fragment">
 <ul>
@@ -676,7 +664,7 @@ When do we need statistics?
 </div>
 <div class="fragment">
 <ul>
-<li><span class="math inline">\(\textbf{y}\)</span> is a random vector that has <span class="math inline">\(n\)</span> random variables. One sample of 4 cells.</li>
+<li><span class="math inline">\(\textbf{y}\)</span> is a random vector that has <span class="math inline">\(n\)</span> random values One sample of 4 cells.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -714,7 +702,7 @@ When do we need statistics?
 <h3 id="truth">TRUTH</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co">#random discrete uniform sampler</span></span>
-<span id="cb1-2"><a></a>rdu<span class="ot">&lt;-</span><span class="cf">function</span>(n,lower,upper){<span class="fu">sample</span>(lower<span class="sc">:</span>upper,n,<span class="at">replace=</span>T)}</span>
+<span id="cb1-2"><a></a>rdu<span class="ot">&lt;-</span><span class="cf">function</span>(n,lower,upper){<span class="fu">sample</span>(lower<span class="sc">:</span>upper,n,<span class="at">replace=</span><span class="cn">TRUE</span>)}</span>
 <span id="cb1-3"><a></a></span>
 <span id="cb1-4"><a></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rdu</span>(<span class="dv">25</span>, </span>
 <span id="cb1-5"><a></a>                 <span class="at">lower =</span> <span class="dv">0</span>, </span>
@@ -725,11 +713,11 @@ When do we need statistics?
 <span id="cb1-10"><a></a>mat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  166  168  124  312  112
-[2,]   12  317  138  150   58
-[3,]  385  113   97  240  137
-[4,]  254  374  108   53   76
-[5,]  152  279   56  274   96</code></pre>
+[1,]  253   34  131  168  309
+[2,]  259   14  102  110  396
+[3,]  326  296  222  261  178
+[4,]  253  303  204  255   16
+[5,]  355  247    2   13  108</code></pre>
 </div>
 </div>
 </section>
@@ -745,7 +733,7 @@ When do we need statistics?
 <span id="cb3-6"><a></a>             )</span>
 <span id="cb3-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  96 279 150  53  97  56 274 274 240 274</code></pre>
+<pre><code> [1] 326 178 253 396   2 296   2 247 108 303</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -754,7 +742,7 @@ When do we need statistics?
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 179.3</code></pre>
+<pre><code>[1] 211.1</code></pre>
 </div>
 </div>
 </div>
