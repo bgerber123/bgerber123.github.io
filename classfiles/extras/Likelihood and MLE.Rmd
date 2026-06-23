@@ -1,0 +1,407 @@
+---
+title: "Likelihood and MLE"
+author: "Brian D. Gerber"
+date: "2026-06-23"
+output: 
+  html_document:
+    toc: true
+---
+
+
+<style type="text/css">
+  body {
+    font-size: 20px; /* Changes main body text */
+  }
+  code.r {
+    font-size: 20px; /* Changes code chunk text */
+  }
+  pre {
+    font-size: 20px;
+  }
+  h2 {
+  color: #800080;
+}
+  h1 {
+  color: #FFAE42;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Example 1 (Gaussian Distribution)
+
+
+## The Setup
+
+The goal is to introduce the idea of the likelihood function and maximum likelihood estimate.
+
+
+```{r, include=TRUE}
+#Load R packages
+  library(rgl)
+  library(utils)
+```
+
+Here is the true population of mongoose weights (lbs). "Population" indicates that this is the complete set of all weigth values that exist for however a 'population' is being defined. We don't usually get to see the true population, but only a single sample
+
+```{r, include=TRUE}
+weights = c(3.5948031, 2.9389464, 2.3039952, 4.4335746, 3.2380551, 5.9372273, 2.1879513, 4.6909930, 4.8180454, 2.6620834,
+                2.6278748, 1.8681733, 1.7627187, 1.9559691, 3.2443797, 2.7432778, 4.1115911, 1.7454118, 2.9869501, 0.872889,
+                3.7688900, 3.1523219, 3.3175419, 3.4007622, 3.2842763, 1.1695005, 3.2339664, 2.5641397, 3.0828627, 1.491542,
+                3.7889264, 3.0619933, 1.9634965, 3.7793706, 4.0577525, 3.5826062, 2.8607450, 2.1597275, 3.4563558, 2.8209301
+            )
+```
+
+What is the population mean?
+
+```{r}
+  mean(weights)
+```
+
+How many indivdiauls are in this population?
+```{r}
+  length(weights)
+```
+
+## The Sample
+
+Lets take a random sample. In this sample we only get to observe 10 individual's weights
+```{r}
+  set.seed(4534)
+  sample.weights = sample(weights,10)
+```
+
+We now want to estimate the population mean ($\mu$) from our sample. Lets consider possible values that the mean could take. For now, we will ignore estimating the sample variance ($\sigma$) by fixing it to 1. We come back to this below.  
+
+```{r}
+  possible.mu = seq(0.01,10,0.01)  
+  sigma1 = 1
+```
+
+That's a lot of possible $\mu$, but still not all the possible mu, right?
+  
+## Brute force optimization (single parameter)
+  
+Now, let's do a brute force search of lots possible values of the population mean where we assume
+$$
+y \sim \text{Normal}(\mu, \sigma=1)
+$$
+
+We will calculate the likelihood (product of the probability density for a given value of $\mu$). We can do this by searching over different values of $\mu$, where we want to evaluate the value of $\mu$ that maximizes the probability of observing the data. Or, more simply, we want to get the likelihood of the data and find the maximum value.
+
+```{r}
+# Create an object to store the likelihood value for each possible.mu
+  save.likelihood = rep(0, length(possible.mu))
+
+# Next, loop over possible.mu values and calculate the likelihood of the data
+  for(i in 1:length(possible.mu)){
+      save.likelihood[i] = prod(
+                                dnorm(sample.weights, possible.mu[i], sigma1)
+                                )
+    }
+```
+
+Now, lets visualize the likelihood for each value of $\mu$ by $\mu$.
+```{r}
+  plot(possible.mu,save.likelihood, main="N = 10")
+```
+  
+To find the maximum liklihood estiamte of $\mu$, we first need to find the index of the the maximum likelihood value
+
+```{r}
+  which.max(save.likelihood)
+```
+
+Not, extract the maximum likelihood value and plot it
+```{r}  
+  mle=possible.mu[which.max(save.likelihood)]
+  plot(possible.mu,save.likelihood, main="N =10")
+  abline(v=mle,col=2,lwd=3)
+```
+
+This is our best estimate of $\mu$ - the population mean of mongoose weights:
+```{r}  
+  mle
+```
+
+## More elegant optimization (single parameter)
+
+Now, lets get fancy and use an optimization algorithm, which will be more accurate than our brute force search.
+  
+Specifcally, we will use the optimize function in stats package. This function will aim to minimize any function that you provide it.
+
+First, we need to specify our likelihood function. Note the "-1" which will  mean we will find the maximum likeihood value by actually finding the minimum likelihood value
+
+```{r}
+normal.likelihood = function(x){
+                                (-1)*prod(dnorm(sample.weights,x,1))
+                                }
+optimize(f = normal.likelihood,
+         interval = c(0,10)
+         )
+```
+
+The best estimate is what? Is it similar to our brute force search that is the mle object?
+
+
+Let's help out the algorithim. Taking products can cause issues when values get really small. Computers don't like really small or really large numbers. So, let's change this to summing the log of the probability densities. This is not an issue here, but is with more complex models.
+
+```{r}
+normal.likelihood = function(x){
+                                (-1)*sum(dnorm(sample.weights,x,1,log=TRUE))
+                                }
+
+optimize(f = normal.likelihood,interval=c(0,10))
+```
+
+Note how our objective value changed, but we get the same mle.
+
+## glm comparison
+
+Let's compare our estimates with using the glm function
+```{r}
+  glm.out = glm(sample.weights~1,family=gaussian)
+  glm.out$coefficients
+```
+
+Is the same value as in the brute force and our fancy optimization?
+
+## What about the sample mean?
+
+```{r}
+  mean(sample.weights)
+```
+
+If we get the same answer, why should we bother with finding the mle via optimization? 
+  
+The answer is many reasons. First, we can estiamte the sample variance as well (below). Second, because for most statistiacl models, we will need a general process to estimate parameters because we are interested in parameters beyond a single mean.
+
+## mle vs. truth
+
+```{r}
+  plot(possible.mu,save.likelihood, main="N =10")
+  abline(v=mle,col=2,lwd=3)
+  abline(v=mean(weights),col=3,lwd=3)
+```
+
+Consider the difference between the mle and truth. Is our estimate (mle) biased?
+
+No, this is not statisical bias. Only estimators can be biased. What is it called then? It is actually not a bad thing. It is an expected property of a sample.
+
+
+## The mle and more data
+
+Lets investigate how the likelihood changes when the data changes.
+
+Lets now sample 25 (out of 30) mongoose randomly and brute force the likelihood profile
+```{r}
+  set.seed(654654)
+  sample.weights2=sample(weights,25)
+
+#store values in this object:
+  save.likelihood2=rep(0, length(possible.mu))
+
+#loop over possible.mu
+  for(i in 1:length(possible.mu)){
+                save.likelihood2[i]=prod(
+                                         dnorm(
+                                                sample.weights2, possible.mu[i], sigma1
+                                                )
+                                         )
+}
+```
+
+Lets plot the likelihood profile using the two data sets
+
+```{r}
+par(mfrow=c(1,2))
+  plot(possible.mu,save.likelihood, main="N =10")
+  abline(v=mle,col=2,lwd=3)
+  abline(v=mean(weights),col=3,lwd=3)
+
+  plot(possible.mu,save.likelihood2, main="N = 25")
+  mle2 = possible.mu[which.max(save.likelihood2)]
+  abline(v=mle2,col=2,lwd=3)
+  abline(v=mean(weights),col=3,lwd=3)
+```
+
+What is the most noticable difference? The spread, right?
+
+Let's measure the variation of the likelihood
+
+```{r}
+sd(save.likelihood) #  N=10
+sd(save.likelihood2)  #N=25
+```
+
+The likelihood profile is more precise with more data! The width (variation) of the likelihood profile holds information about the uncertainty of our parameters. This is where we are getting measures of standard error.
+
+
+## Brute force optimization (two parameters)
+
+Above, we ignored $\sigma$. Now, lets jointly estimate it with $\mu$.
+
+This requires us to find the joint likelihood of both parameters simultanesouly.
+
+```{r}
+# Consider possible value of mu and sigma
+  possible.mu=seq(0.01,4,0.05)  
+  possible.sigma=seq(0.5,4,0.05)
+```
+
+```{r}
+# Find all possible combinations of mu and sigma
+ possible.combs=expand.grid(possible.mu,possible.sigma)
+ head(possible.combs)
+```
+
+```{r}
+# New storage object
+ save.likelihood=rep(0, dim(possible.combs)[1])
+# loop over each combination of both possible mu and sigma, calculating the joint likelihood of the data
+  for(i in 1:length(save.likelihood)){
+            save.likelihood[i]=sum(dnorm(sample.weights, 
+                                         possible.combs[i,1], 
+                                         possible.combs[i,2],
+                                         log=TRUE)
+                                   )
+}
+
+# Maximum likelihood value
+  save.likelihood[which.max(save.likelihood)]
+
+# mle for mu and sigma
+  possible.combs[which.max(save.likelihood),]
+
+
+# Let's plot the 3d likelihood surface
+# First we need cool colors- create a vector or rainnow colors
+  cols <- rainbow(10000)[as.numeric(cut(save.likelihood,breaks = 10000))]
+
+# Now find the values that are > -20, which is near the mle and make them black to stand out visually
+  cols[which(save.likelihood>-20)]="black"
+
+# What is the index for the mle and then turn it white
+  which.max(save.likelihood)
+  cols[373]="white"
+
+# Create the 3D plot
+rgl::plot3d(possible.combs[,1],possible.combs[,2],save.likelihood,xlab="mu",ylab="sigma",col=cols,size=10)
+
+```
+
+## Fancy optimization (two parameters)
+
+Define the likelihood function that we want to minimize
+
+```{r}
+normal.likelihood=function(x){(-1)*sum(
+                                      dnorm(sample.weights,
+                                            x[1],
+                                            x[2],
+                                            log=TRUE)
+                                      )
+                              }
+
+#use the function optim with 0.5 as starting values for mu and sigma
+max.optim = optim(c(0.5,0.5),
+                  normal.likelihood,
+                  method="Nelder-Mead"
+                  )
+#here are the mle's
+max.optim$par
+```
+
+# Example 2 (Bernoulli Distribution)
+
+## The Setup
+
+Now for another MLE example, but this time with survival data (1= survive, 0 = dead).
+
+Imagine a GPS tracking study that you record whether an animal survived the winter or died. 0 and 1 data don't make sense to use the Normal distribution. We will use the Bernoulli likelihood.
+
+Let's first define two functions to use, the logit and expit functions. The logit function maps probabilities to the real number line and then the expit function maps the real number line estimates back to probabilities. These are the same as the function, qlogis and plogis in the stats package
+
+```{r}
+# Load functions
+ logit=function(x){log(x)/(1-x)}
+ expit=function(x){exp(x)/(exp(x)+1)}
+```
+
+## The Sample
+```{r}
+survival.data=c(1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 
+                1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 
+                0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0)
+```
+
+## Brute force optimization
+
+We need to consider all the possible survival probabilities
+```{r}
+  possible.p = seq(0.01,1,0.01)
+```
+
+Next, create a storage object and loop over all possible.p with the survival data and find the parameter that is most likely, given the data
+```{r}  
+  save.likelihood3=rep(0, length(possible.p))
+  
+  for(i in 1:length(possible.p)){
+          save.likelihood3[i]=sum(dbinom(survival.data,
+                                         1, 
+                                         possible.p[i],
+                                         log=TRUE)
+                                  )
+      }
+```
+
+Lets look at the likelihood profile
+```{r}  
+  plot(possible.p,save.likelihood3)
+```
+
+What is the mle?
+
+```{r}
+  possible.p[which.max(save.likelihood3)]
+```
+
+## Fancy optimzation
+
+```{r}
+
+  binomial.likelihood=function(x){
+                  (-1)*sum(dbinom(survival.data,1,x,log=TRUE))
+                  }
+
+  optimize(f = binomial.likelihood,interval=c(0,1))
+```
+
+Do you get the same or similar answer?
+
+## glm comparison
+
+Compare our above estimates to fitting a logistic regression model with the glm function.
+  
+```{r}  
+  glm.logisitic=glm(survival.data~1, family="binomial")
+  summary(glm.logisitic)
+```
+
+Where is the predicted probability of survival (y==1)? Well, ee need to backtransform out estimate take the inverse-logit of the beta coefficient.
+
+```{r}
+expit(glm.logisitic$coefficients[1])
+```
+
+Or, we can ask R to do it for us. We only need the first prediction, as they are all the same under this model
+
+```{r}
+  predict(glm.logisitic,type = "response")[1]
+```
+
+
+# THE END
+
