@@ -225,7 +225,9 @@ Evaluation will be based on the clarity and organization of the materials presen
 #### **Articles**
 
 -   [Probability Does Not Exist](/readings/Prob.not.exist.pdf)
--   [Public Trust in Scientists](/readings/PublicDistrustScientists.pdf)
+-   [Public Trust in Scientists (2026)](https://www.pewresearch.org/science/2026/01/15/americans-confidence-in-scientists/)
+-   [Public Trust in Scientists (2024)](/readings/PublicDistrustScientists.pdf)
+
 
 #### **Learning R**
 
@@ -256,6 +258,7 @@ Evaluation will be based on the clarity and organization of the materials presen
 ::: {.column width="60%"}
 
 #### **Learning Stats/Modeling**
+-   [TWS Biometrics Working Group Information Hub](https://sites.google.com/view/bwg-resource-hub/home)
 -   [Probability Playground: Interactive Probability Distributions](https://www.acsu.buffalo.edu/~adamcunn/probability/probability.html)
 -   [An Introduction to Statistical Learning](https://www.statlearning.com/)
 -   [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/). [Download](https://hastie.su.domains/ElemStatLearn/printings/ESLII_print12_toc.pdf).
@@ -268,6 +271,7 @@ Evaluation will be based on the clarity and organization of the materials presen
 -   [Bayesian Statistical Methods](https://bayessm.wordpress.ncsu.edu/)
 
 #### **Ecological Statistics**
+-   [Population Ecology Modeling in R](https://github.com/gbarrile/PopEcoModeling)
 -   [Ecological Models and Data in R](https://ms.mcmaster.ca/~bolker/emdbook/book.pdf)
 -   [Animal Movement: Statistical Models for Telemetry Data](https://www.amazon.com/Animal-Movement-Statistical-Models-Telemetry/dp/1032097183)
 -   [Mixed Effects Models and Extensions in Ecology with R](https://www.highstat.com/index.php?view=article&id=17&catid=18)

@@ -10,7 +10,7 @@ format: html
 
 **Name**:  [Brian D. Gerber](https://bgerber123.github.io/)
 
-**Position/Affiliation** Research Scientist and Assistant Unit Leader at U.S. Geological Survey, [Colorado Cooperative Research Unit](https://www1.usgs.gov/coopunits/unit/Colorado) and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University. 
+**Position/Affiliation** Research Scientist and Assistant Unit Leader at U.S. Geological Survey, [Colorado Cooperative Research Unit](https://www1.usgs.gov/coopunits/unit/Colorado), and Associate Professor in the Department of Fish, Wildlife, and Conservation Biology at Colorado State University. 
 
 **Office:**  202A Wagar, Colorado Cooperative Research Unit
 
@@ -31,8 +31,7 @@ format: html
 
 **Schedule:** [Subject to Change](/FW670/schedule.qmd)
 
-**Prerequisites:**  A basic statistics course is required. Being comfortable coding in the R programming language. See [here](/FW670/Rknowledge.qmd) for the type of R knowledge I am expecting. For learning R, see [R resources under 'Learning R' tab](/FW670/)).
-
+**Prerequisites:**  1) A basic graduate-level statistics course, and 2) being comfortable coding in the R programming language. See [here](/FW670/Rknowledge.qmd) for the type of R knowledge I am expecting. For learning R, see [R resources under 'Learning R' tab](/FW670/)).
 
 **Text and Readings:** All lecture and course materials will be provided. 
 
@@ -41,7 +40,7 @@ format: html
 
 ## Course Description
 
-Students will gain knowledge and skills focused on 1) modeling data to make inference/predictions on wildlife and their habitat, 2) understanding and communicating results, 3) evaluating modeling frameworks based on data and study goals, and 4) implementing models and report writing through the R programming language. The format will include lectures, discussions, in-class labs, out of class assigned labs, and readings. Students are strongly encouraged to have base-level knowledge of coding in R.
+Students will gain knowledge and skills focused on 1) modeling data to make inference/predictions on wildlife and their habitat, 2) understanding and communicating statistical results, 3) evaluating modeling frameworks based on data and study goals, and 4) implementing models and report writing through the R programming language. The format will include lectures, discussions, in-class labs, out of class assigned labs, and readings. 
 
 ## Course Learning Objectives
 
@@ -91,7 +90,7 @@ Table 1: Grade scheme from [CSU](https://canvas.colostate.edu/grading-schemes/)
 
 ## Student Experiences and Pedagogical Techniques
 
-**In-class lectures:** Most class periods will include a lecture that will take 1/4 to 1/2 of the course period. Lectures will often incorporate brief instructor-led questions and short discussions.
+**In-class lectures:** Most class periods will include a lecture that will vary in length and incorporate instructor-led questions and short discussions.
 
 **In-class student-led discussions:** Small groups (~2 students) will be assigned to co-lead discussions on assigned readings. These discussions will occur prior to any lecture for that class. This will provide students with an opportunity to communicate about the assigned readings content, raise questions for themselves and learn to elicit thoughts and questions from others. 
 
@@ -105,5 +104,5 @@ Table 1: Grade scheme from [CSU](https://canvas.colostate.edu/grading-schemes/)
 
 **Out-of-class quizzes:** Short quizzes on Canvas will be used to gauge student comprehension of assigned reading and provide accountability for out-of-class preparation. 
 
-**Group project:** A group project will be used as a final assessment of the student's integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develops a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation.
+**Group project:** A group project will be used as a final assessment of the student's integration of knowledge through the application of learned material. A group of 2-3 students will either 1) develop an independent research project (ideally connected to their graduate research topic), or 2) develop a short lecture along with a lab case-study that showcases a statistical application relevant to wildlife ecology and conservation.
 
