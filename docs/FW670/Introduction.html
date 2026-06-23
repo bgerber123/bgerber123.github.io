@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <title>Brian D. Gerber – Wildlife Ecology Modeling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -95,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -384,6 +387,9 @@ statistical thinking have not changed, but their implementation has."</em></span
 <!--   - plots -->
 <!--   - R -->
 </section>
+<section id="how-to-use-generative-ai" class="slide level2">
+<h2><span style="color:#078BCD;">How to use generative AI?</span></h2>
+</section>
 <section id="a-graduate-students-dilemma" class="slide level2 smaller">
 <h2><span style="color:#078BCD">A Graduate Student’s Dilemma</span></h2>
 <p><strong>You need to know….</strong></p>
@@ -467,11 +473,6 @@ statistical thinking have not changed, but their implementation has."</em></span
 </div>
 <div class="fragment">
 <div style="text-align: center;">
-<p>There are more ways to do <strong><em>meh</em></strong> science</p>
-</div>
-</div>
-<div class="fragment">
-<div style="text-align: center;">
 <p>Disciplines have conventions</p>
 </div>
 </div>
@@ -494,7 +495,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <section id="teaching-philosophy" class="slide level2">
 <h2><span style="color:#078BCD">Teaching Philosophy</span></h2>
 <ul>
-<li class="fragment"><p>Learning is a choice (in every movement)</p></li>
+<li class="fragment"><p>Learning is a choice, in each movement</p></li>
 <li class="fragment"><p>An inclusive environment is paramount for learning</p></li>
 <li class="fragment"><p>Communication is key</p></li>
 <li class="fragment"><p>Everyone has something to teach and something to learn</p></li>
@@ -513,11 +514,11 @@ statistical thinking have not changed, but their implementation has."</em></span
 </section>
 <section id="website" class="slide level2">
 <h2><span style="color:#078BCD">Website</span></h2>
-<p><a href="https://bgerber123.github.io/FW670/index.html">https://bgerber123.github.io/FW670/index.html</a></p>
+<p><a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a></p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<h3 id="class-questions"><span style="color:#078BCD;">Class Questions</span></h3>
+<h3 id="section-1"></h3>
 
 <img data-src="..\img/question.png" class="quarto-figure quarto-figure-center r-stretch" width="200"></section>
 <section id="rstudio" class="slide level2">
@@ -638,8 +639,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 <span id="cb10-2"><a></a></span>
 <span id="cb10-3"><a></a><span class="fu">apply</span>(mat, <span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.182422388 -0.596101795  0.303677706  0.008212004  0.115152042
- [6]  0.155218644  0.047569049  0.572687309  0.444714842  0.546801221</code></pre>
+<pre><code> [1] -0.10478960  0.01999684  0.19401389  0.02926707  0.49270095  0.32052280
+ [7]  0.02451462 -0.14279799  0.10761668  0.57760324</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -650,7 +651,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <span id="cb12-4"><a></a>  </span>
 <span id="cb12-5"><a></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.0 0.0 0.2 0.3 0.3 0.1 0.2 0.3 0.1 0.2</code></pre>
+<pre><code> [1] 0.3 0.0 0.0 0.3 0.3 0.2 0.3 0.3 0.1 0.3</code></pre>
 </div>
 </div>
 </div>
@@ -709,7 +710,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <span id="cb15-23"><a></a>    } <span class="co">#End species loop</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 
 

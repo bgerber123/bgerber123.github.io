@@ -16048,21 +16048,21 @@
     "href": "FW670/Introduction.html#science-practice",
     "title": "Wildlife Ecology Modeling",
     "section": "Science Practice",
-    "text": "Science Practice\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nThere are more ways to do meh science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
+    "text": "Science Practice\n\nI am a pragmatist\n\n\n\nThere are many ways to do great science\n\n\n\n\nDisciplines have conventions\n\n\n\n\nThere are foundations of scientific and statistical learning\n\n\n\n\nKnow the why of your decisions\n\n\n\n\nAsk lots of questions to everybody all the time"
   },
   {
     "objectID": "FW670/Introduction.html#teaching-philosophy",
     "href": "FW670/Introduction.html#teaching-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Teaching Philosophy",
-    "text": "Teaching Philosophy\n\nLearning is a choice (in every movement)\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
+    "text": "Teaching Philosophy\n\nLearning is a choice, in each movement\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
   },
   {
     "objectID": "FW670/Introduction.html#website",
     "href": "FW670/Introduction.html#website",
     "title": "Wildlife Ecology Modeling",
     "section": "Website",
-    "text": "Website\nhttps://bgerber123.github.io/FW670/index.html"
+    "text": "Website\nhttps://bgerber123.github.io/FW670/"
   },
   {
     "objectID": "FW670/Introduction.html#section",
@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.182422388 -0.596101795  0.303677706  0.008212004  0.115152042\n [6]  0.155218644  0.047569049  0.572687309  0.444714842  0.546801221\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.0 0.2 0.3 0.3 0.1 0.2 0.3 0.1 0.2"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.10478960  0.01999684  0.19401389  0.02926707  0.49270095  0.32052280\n [7]  0.02451462 -0.14279799  0.10761668  0.57760324\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.3 0.0 0.0 0.3 0.3 0.2 0.3 0.3 0.1 0.3"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",
@@ -18828,5 +18828,12 @@
     "title": "Wildlife Ecology Modeling",
     "section": "",
     "text": "Instructor: Brian Gerber\n\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\n\nWhen: Tu 11am - 12:15pm and Fr 10am - 1pm\n\n. . .\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n. . .\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\n\n\nRegistration:\n\n680A4 001 (CRN 77149) and 680A4 L01 (CRN 77150)"
+  },
+  {
+    "objectID": "FW670/Introduction.html#how-to-use-generative-ai",
+    "href": "FW670/Introduction.html#how-to-use-generative-ai",
+    "title": "Wildlife Ecology Modeling",
+    "section": "How to use generative AI?",
+    "text": "How to use generative AI?"
   }
 ]
