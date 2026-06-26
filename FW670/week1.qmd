@@ -1,6 +1,5 @@
 ---
 title: ""
-format: html
 ---
 
 ## Week 1
@@ -13,12 +12,15 @@ format: html
 
 #### [Assigned]{style="color:red;"}
 
--   [Discussion Post on Canvas](https://colostate.instructure.com/courses/193678/discussion_topics/1963784)
+-   [Discussion Post on Canvas](https://colostate.instructure.com/courses/228738/discussion_topics/2398478)
 
 -   Readings for next class: 
     - <a href="/readings/Zitomer et al. 2022 PLOS Computation Biology.pdf">Zitomer et al. 2022 PLOS Computation Biology</a>
-    - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>. 
+    - <a href="/readings/Statistical Inference Book Chapter.pdf">Wolcott et al. 2019 Book Chapter</a>
 
+-   Background Reading (not required): 
+    - <a href="/readings/Ellison and Dennis 2010.pdf">Ellison and Dennis 2010</a>
+    
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
@@ -30,6 +32,7 @@ format: html
 -   Downloads: <a href="/classfiles/deerlab/week1files.zip">Files</a>
 
 -   Install R packages:
+
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
   install.packages(c("sf","ggplot2", "spsurvey", "remotes"))
