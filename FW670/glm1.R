@@ -1,35 +1,35 @@
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 y <- matrix(c(1,2,3),nrow=3,ncol=1)
 t(y)%*%y
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 first=t(y)
 dim(first)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 second=y
 dim(second)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 #When this is true
   ncol(first)==nrow(second)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 t(y)%*%y
 
 y%*%t(y)
 
 
-## ----echo=FALSE,eval=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE-------------------------------------------------------
 dat = read.csv("elephant.study2.csv")
 head(dat[,1:2], n = 3)
 
 
-## ----echo=TRUE,eval=TRUE------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE,eval=TRUE--------------------------------------------------------
 model = glm(weight~sex, 
             data=dat,
             family=gaussian(link = identity)
@@ -37,28 +37,28 @@ model = glm(weight~sex,
 summary(model)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # GLM coefs
   X = model.matrix(~sex+age.years,data=dat)
   head(X)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
   glm(weight~0+X,data=dat)
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
 # GLM coefs
   coef(glm(weight~0+X,data=dat))
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Linear Algebra Maximum Likelihood Estimate
   y=dat$weight
   c(solve(t(X)%*%X)%*%t(X)%*%y)
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
    n=100
    set.seed(43243)
   x=rnorm(n,1,0.6)
@@ -68,7 +68,7 @@ summary(model)
     abline(h=c(0,1),lwd=3,col='purple')
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
   plot(x,p,xlab="Variable",ylab="Probability",
        ylim=c(-0.5,1.5),xlim=c(-2,3),cex=1.5)
   abline(h=c(0,1),lwd=3,col='purple')
@@ -83,7 +83,7 @@ summary(model)
   lines(newdata$x,UCL,lwd=3,col=3)
 
 
-## ----eval=TRUE,echo=TRUE, fig.align='center'----------------------------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
 p=seq(0.001,0.999,by=0.01)
 logit.p=qlogis(p)
 par(cex.lab=1.5,cex.axis=1.5)
@@ -91,7 +91,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 
 
-## ----eval=TRUE,echo=TRUE, fig.align='center'----------------------------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
 #Design matrix
   set.seed(43534)
   Var1 = rnorm(100)
@@ -99,7 +99,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   head(X)
 
 
-## ----eval=TRUE,echo=TRUE, fig.align='center'----------------------------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
 # marginal coefficients (on logit-scale)
   beta=c(-2,4)
 
@@ -116,7 +116,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   y
 
 
-## ----eval=TRUE,echo=TRUE, fig.align='center'----------------------------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
 #Plot the linear 'terms'  and explantory variable
   par(cex.lab=1.2,cex.axis=1.2)
   plot(Var1,lt,type="b",lwd=3,col=2,
@@ -126,13 +126,13 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   plot(Var1[index],p[index],type="b",lwd=3,col=2,xlab="x",ylab="Probability")  
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Fit model to sample 
   model1=glm(y~0+X, family = binomial(link = "logit"))
   summary(model1)
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
  #sample many times  
   n.sim=1000
   y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))
@@ -148,7 +148,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   dim(coef.est)
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
   plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[0]),
        xlab=bquote(beta[0]))
@@ -156,7 +156,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
             legend("topright",lwd=3,col=2,legend="True Value")
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
        xlab=bquote(beta[0]))
@@ -164,23 +164,23 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
         legend("topright",lwd=3,col=2,legend="True Value")
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Relative Bias
   (mean(coef.est[1,])-beta[1])/beta[1]
   (mean(coef.est[2,])-beta[2])/beta[2]
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Probability of estimating a coef sign correctly
   length(which(coef.est[1,]<0))/n.sim
   length(which(coef.est[2,]>0))/n.sim
 
 
-## ----eval=FALSE, echo=TRUE----------------------------------------------------------------------------------------------------------------------
-## brglm::brglm(y~0+X, family = binomial(link = "logit"))
+## ----eval=FALSE, echo=TRUE------------------------------------------------------
+# brglm::brglm(y~0+X, family = binomial(link = "logit"))
 
 
-## ----eval=TRUE, echo=FALSE----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE------------------------------------------------------
  #sample many times  
  #Estimate coefs for all 100 samples
   coef.est=apply(y.many,2,FUN=function(y){
@@ -190,7 +190,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
   })
 
 
-## ----eval=TRUE, echo=TRUE-----------------------------------------------------------------------------------------------------------------------
+## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Relative Bias
   (mean(coef.est[1,])-beta[1])/beta[1]
   (mean(coef.est[2,])-beta[2])/beta[2]
