@@ -28,7 +28,7 @@ library(ggplot2)
 ## Objectives / Exercises
 
 -   Objective 1) Get acquainted with the [Bernoulli/Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) probability mass function (PMF)
--   Exercise 1a) Evaluate sample size requirements for tagging studies to asses survival
+-   Exercise 1a) Evaluate sample size requirements for tagging studies to estimate survival
 -   Exercise 1b) Evaluate the robustness of our findings by varying the true value
 
 \hline

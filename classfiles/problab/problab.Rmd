@@ -30,8 +30,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Objectives / Exercises
 
 -   Objective 1) Get acquainted with the [Bernoulli/Binomial](https://en.wikipedia.org/wiki/Binomial_distribution) probability mass function (PMF)
--   Exercise 1a) Evaluate sample size requirements for tagging studies to asses survival
--   Exercise 1b) Evaluate the robustness of our findings by varying the true value
+-   Exercise 1a) Evaluate sample size requirements for tagging studies to estimate survival
+-   Exercise 1b) Evaluate the robustness of your findings by varying the true value
 
 \hline
 
@@ -118,31 +118,31 @@ to approximate the sampling distribution of the estimator. Once you have each sa
 Note: make sure you use enough replicates such that the sampling distribution appears well approximated (i.e., symmetric and does not change with increasing replicates). 
 
 ```{r, echo=TRUE, eval=TRUE}
-# Simulate data
+# Simulate data here
 
 ```
 
 The estimated bias and relative bias show that the estimator is unbiased. 
 ```{r, echo=TRUE, eval=TRUE}
-# Calculate Bias
+# Calculate Bias here
 ```
 
 ```{r, echo=TRUE, eval=TRUE}
-# Calculate Relative Bias
+# Calculate Relative Bias here
 ```
 
 A sample size of 250 tags is the best choice to minimize costs and meet the objective of having a 0.90 probability of being within 10% of the true value of $\theta$.
 
 ```{r, echo=TRUE, eval=TRUE}
-  # Code to estimat probability here.
+  # Estimate probability here.
 ```
 
 
 ### Exercise 1b
 
-What if we are wrong about the assumed probability of survival? Well, we can evaluate this assumption! Rather than considering a single truth ($\theta = 0.80$), we can instead consider a range of true values. This way we can evaluate the **robustness** of our findings. Meaning, if we find that a sample size of 250 meets our objective (0.90 probability of being within 10% of the true $\theta$) across a range of assumed survival probabilities, we are can be confident in our recommendation of tagging 250 cranes. Keep in mind there is a lot of real world factors we have not accounted for yet! 
+What if we are wrong about the assumed probability of survival? Well, we can evaluate this assumption! Rather than considering a single truth ($\theta = 0.80$), we can instead consider a range of true values. This way we can evaluate the **robustness** of our findings. Meaning, if we find that a sample size of 250 meets our objective (0.90 probability of being within 10% of the true $\theta$) across a range of assumed survival probabilities, we  can be confident in our recommendation of tagging 250 cranes. Keep in mind there is a lot of real world factors we have not accounted for yet! This is how design-based simulation manuscripts start - a simple test of sample size and then adding in realistic factors until you have nicely captured a bunch of realworld situations that could help other in their design of a study. 
 
-Using a sample size of 250, evaluate whether there is at least 0.90 probability of being within 10% of the true $\theta$ where $\theta$ varies from 0.80 to 1.0 by increments of 0.05. For example, `theta = seq(0.7, 1, by = 0.05)`.
+Using a sample size of 250, evaluate whether there is at least 0.90 probability of being within 10% of the true $\theta$ where $\theta$ varies from 0.80 to 1.0 by increments of 0.05. For example, `theta = seq(0.8, 1, by = 0.05)`.
 
 -   for each value of $\theta$, generate the sampling distribution of estimates of $\theta$ and then calculate the probability of being within 10% of that given values of $\theta$
 -   plot these probabilities on a x-y line graph where the x axis is the true value ($\theta$) and the y-axis is the estimated probabilities of interest
@@ -152,7 +152,7 @@ Using a sample size of 250, evaluate whether there is at least 0.90 probability 
 # Simulation and plotting code here
 ```
 
-We see that our objective (green horizontal line) is met or is higher at all values of $\theta$ ranging from 0.80 to 1.0. 
+**Summarize your findings here**
 
 
 ## Objective 2
@@ -193,17 +193,18 @@ So, when using the Poisson distribution, we need to consider that the mean and v
 Evaluate the sampling distribution of the estimator $\sum(y_{i})/N$, where `y` are the counts and `N` is the number of counts. Assuming $\lambda = 100$, determine how many sample plots are needed such that the probability a sample is within 5% of the mean is at least 95% (0.95 probability a single mean is within these bounds). Once this is completed, change to $\lambda  = 25$. How does your evaluation of the sample size change? Do you need the same, more, or less samples to achieve the same objective?
 
 ```{r, echo=TRUE, eval=TRUE, cache=TRUE}
-# Simulation Code
+# Simulation Code here
 ```
 
 ```{r, echo=TRUE, eval=TRUE, cache=TRUE}
 # Estimate probability and plot results
 ```
 
+**Summarize your findings here**
 
 ## Objective 3
 
-There are a lot of probability functions that are commonly used in wildlife and ecological modeling. Generally, a lot these functions fall within the [exponential family](https://en.wikipedia.org/wiki/Exponential_family) of probability functions. The objective is to become a bit more familiar with a new probability function and to use the nice features of markdown to describe the function and its various properties. 
+There are a lot of probability functions that are commonly used in wildlife and ecological modeling. Generally, a lot these functions fall within the [exponential family](https://en.wikipedia.org/wiki/Exponential_family) of probability functions. This objective is to become a bit more familiar with a new probability function and to use the nice features of markdown to describe the function and its various properties. 
 
 ### Exercise 3
 
@@ -219,9 +220,9 @@ Follow the example below for the Discrete Uniform probability distribution and .
 -   Demonstrate using code how to calculate the probability of data over certain ranges  (e.g. pnorm).
 -   Demonstrate how to find the values of data pertaining to a certain probability (e.g. qnorm).
 -   Plot a small and  large sample from the distribution. Comment on whether the samples looks like the PDF.
--   Provide an example of what type of data this probability function could be useful for
+-   Provide an example of what type of data this probability function could be useful for in ecological studies.
 
-For simplicity, you can use the setup below and swap in code and notation for your chosen probability function. Also, see the markdown file shared for the Normal Distribution as another exmaple.
+For simplicity, you can use the setup below and swap in code and notation for your chosen probability function. Also, see the markdown file shared for the Normal Distribution as another example.
 
 ---
 

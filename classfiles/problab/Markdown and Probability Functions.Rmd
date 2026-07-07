@@ -1,7 +1,7 @@
 ---
 title: "Markdown and the Normal Distribution"
 author: "Brian Gerber"
-date: "8/1/2024"
+date: "7/7/2026"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 RStudio can help you use Markdown to create HTML/PDF/Word documents that can embed R code, HTML, CSS, latex (type setting language), and more. This is a good [website](https://www.markdownguide.org/) to checkout for markdown coding.
 
-Markdown is quite useful for developing reports or doing homeework. Anytime you want to combile code, plotting, or analyses with text, markdown can help. We will use markdown as a way accomplish homework. This way you can provide code and document it simultaneously. I would suggest to not try and get too fancy at first. Keep it simple. Write-text in RStudio as you would in any word processor. Write R code in R chunks. Use "echo=FALSE" and "echo=TRUE" for a code chink to either not print the code or to print the code. 
+Markdown is quite useful for developing reports or doing homeework. Anytime you want to combile code, plotting, or analyses with text, markdown can help. We will use markdown as a way accomplish homework. This way you can provide code and document it simultaneously. I would suggest to not try and get too fancy at first. Keep it simple. Write-text in RStudio as you would in any word processor. Write R code in R chunks. Use "echo=FALSE" and "echo=TRUE" for a code chunk to either not print the code or to print the code. 
 
 ### The Normal Distribution
 
@@ -45,7 +45,10 @@ $$f(y;\mu, \sigma) = [y|\mu, \theta].$$
 ```{r, chunk1}
 # Simulate data from a standard normal distribution (mu = 10, sd = 1)
   set.seed(54235)
-  y=rnorm(100,10,1)
+  y = rnorm(n = 100,
+            mean = 10,
+            sd = 1
+            )
 
 # Create a histogram
   hist(y,xlim=c(6,14))
@@ -79,7 +82,9 @@ $$
 
 <hr style="border:2px solid gray">
 
-But what is the *expected value? Summarizing [wikipedia](https://en.wikipedia.org/wiki/Expected_value), the expected value (also called expectation, expectancy, expectation operator, mathematical expectation, mean, expectation value, or first moment of a probabilit function) is a generalization of the weighted average. Informally, the expected value is the arithmetic mean of the possible values a random variable can take, weighted by the probability of those outcomes. For symmetric distributions, like the Normal, the expected value is in the middle of the distribution, thus it is also the mode probable (i.e. mode). This is not the case for non-symmetric values.
+But what is the *expected value*? Summarizing [wikipedia](https://en.wikipedia.org/wiki/Expected_value), the expected value (also called expectation, expectancy, expectation operator, mathematical expectation, mean, expectation value, or first moment of a probability function) is a generalization of the weighted average.
+
+Informally, the expected value is the arithmetic mean of the possible values a random variable can take, weighted by the probability of those outcomes. For symmetric distributions, like the Normal, the expected value is in the middle of the distribution, thus it is also the mode probable (i.e. mode). This is not the case for non-symmetric distributions (i.e., left side of the distribution has a long tail and the right side does not have the same long tail).
 
 ## Approximating an Integral
 
