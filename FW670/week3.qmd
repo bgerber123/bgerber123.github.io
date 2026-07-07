@@ -23,13 +23,14 @@ title: ""
 
 -   Lecture Code: <a href="/FW670/likelihood.R">Likelihood.R</a> and <a href="/FW670/regression.R">regression.R</a>
 
--   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Files</a>
+-   Downloads: <a href="/classfiles/regressionlab/week3files.zip">Lab Files</a>
 
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-  install.packages(c("marginaleffects","ggResidpanel"))
+  install.packages(c("marginaleffects"))
+  remotes::install_github("goodekat/ggResidpanel")
 ```
 
 

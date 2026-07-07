@@ -16551,8 +16551,8 @@
     "objectID": "FW670/regression.html#objectives",
     "href": "FW670/regression.html#objectives",
     "title": "Linear Regression",
-    "section": "",
-    "text": "fundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
+    "section": "Objectives",
+    "text": "Objectives\n\n\nfundamentals\nassumptions\nlm / glm functions\nconfidence intervals\ncase study"
   },
   {
     "objectID": "FW670/regression.html#section",
@@ -16635,8 +16635,8 @@
     "objectID": "FW670/regression.html#sampling-distributions-of-hatmu",
     "href": "FW670/regression.html#sampling-distributions-of-hatmu",
     "title": "Linear Regression",
-    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)\n",
-    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
+    "section": "Sampling Distributions of \\(\\hat{\\mu}\\)",
+    "text": "Sampling Distributions of \\(\\hat{\\mu}\\)\n\\[\n\\begin{align*}\n\\mu_{i} = 1 + 0.5 \\times x_{i}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/regression.html#section-1",
@@ -16671,14 +16671,14 @@
     "href": "FW670/regression.html#assumptions-3",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nLinearity\n\\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
+    "text": "Assumptions\nLinearity\n \\[\nE[y_i|x_i] = \\mu_i = \\beta_0 + \\beta_1 \\times x_i \\\\\n\\] \nThe hypothesis about the variables included in the model (e.g., \\(x_i\\)) characterizes the mean well."
   },
   {
     "objectID": "FW670/regression.html#assumptions-4",
     "href": "FW670/regression.html#assumptions-4",
     "title": "Linear Regression",
     "section": "Assumptions",
-    "text": "Assumptions\nNormality\n\\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
+    "text": "Assumptions\nNormality\n \\[\n\\epsilon_i \\sim \\text{Normal}(0,\\sigma)\n\\] \nEach \\(i^{th}\\) residual\n\ncomes from a Normal distribution with a mean of zero\nis symmetrically disributed around zero\nvaries around zero by \\(\\sigma\\), which is the same for each residual."
   },
   {
     "objectID": "FW670/regression.html#assumption-violations",
@@ -16741,7 +16741,7 @@
     "href": "FW670/regression.html#what-is-a-ci",
     "title": "Linear Regression",
     "section": "What is a CI?",
-    "text": "What is a CI?\n. . .\n“A confidence interval for a parameter is an interval computed using sample data …\n. . .\n“… by a method that will contain the parameter for a specified proportion of all samples.\n. . .\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
+    "text": "What is a CI?\n\n“A confidence interval for a parameter is an interval computed using sample data …\n\n\n“… by a method that will contain the parameter for a specified proportion of all samples.\n\n\nThe success rate (proportion of all samples whose intervals contain the parameter) is known as the confidence level.” R. H. Lock et al. (2020)"
   },
   {
     "objectID": "FW670/regression.html#what-is-a-ci-1",
@@ -16832,7 +16832,7 @@
     "href": "FW670/regression.html#prairie-dog-calling",
     "title": "Linear Regression",
     "section": "Prairie Dog Calling",
-    "text": "Prairie Dog Calling\n\n\n\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
+    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
   },
   {
     "objectID": "FW670/regression.html#exploratory",
@@ -16937,28 +16937,28 @@
     "href": "FW670/regression.html#linearity-assumption",
     "title": "Linear Regression",
     "section": "Linearity Assumption",
-    "text": "Linearity Assumption\n\nplot(model,1)\n\n\n\n\n\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
+    "text": "Linearity Assumption\n\nplot(model,1)\n\n\nIdeally, there will be no pattern and the red line should be roughly horizontal near zero."
   },
   {
     "objectID": "FW670/regression.html#homogeneity-of-variance",
     "href": "FW670/regression.html#homogeneity-of-variance",
     "title": "Linear Regression",
     "section": "Homogeneity of Variance",
-    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\n\n\n\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
+    "text": "Homogeneity of Variance\n\nplot(model,3)\n\n\nResiduals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity)."
   },
   {
     "objectID": "FW670/regression.html#normality-of-residuals",
     "href": "FW670/regression.html#normality-of-residuals",
     "title": "Linear Regression",
     "section": "Normality of Residuals",
-    "text": "Normality of Residuals\n\nplot(model,2)\n\n\n\n\n\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
+    "text": "Normality of Residuals\n\nplot(model,2)\n\n\nShows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line."
   },
   {
     "objectID": "FW670/regression.html#outliers",
     "href": "FW670/regression.html#outliers",
     "title": "Linear Regression",
     "section": "Outliers",
-    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\n\n\n\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
+    "text": "Outliers\n\npar(mfrow=c(1,2))\nplot(model,4)\nplot(model,5)\n\n\nOutlier: extreme value that can affect the \\(\\beta\\) estimate. Leverage plot: points in the upper right and lower right corner."
   },
   {
     "objectID": "FW670/regression.html#exploring-assumptions",
@@ -18652,14 +18652,14 @@
     "href": "FW670/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "University Holiday / No class today\n\n\n\n\nLecture: Likelihood and Optimization\nLecture: Regression\nLecture Code: Likelihood.R and regression.R\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "University Holiday / No class today\n\n\n\n\nLecture: Likelihood and Optimization\nLecture: Regression\nLecture Code: Likelihood.R and regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW670/week3.html#week-3",
     "href": "FW670/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "University Holiday / No class today\n\n\n\n\nLecture: Likelihood and Optimization\nLecture: Regression\nLecture Code: Likelihood.R and regression.R\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\",\"ggResidpanel\"))\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "University Holiday / No class today\n\n\n\n\nLecture: Likelihood and Optimization\nLecture: Regression\nLecture Code: Likelihood.R and regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
   },
   {
     "objectID": "FW670/week4.html",
