@@ -1,6 +1,7 @@
 # Author: Brian D. Gerber
 # Date Created: August, 29, 2022
-# Updated last: 9/9/2022
+# Updated last: 6/26/2026
+
 # Objective: Evaluate sampling designs for counting 
 #            white-tailed deer in Rhode Island (RI)
 

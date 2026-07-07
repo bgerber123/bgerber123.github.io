@@ -74,7 +74,7 @@ What you want to accomplish; can have multiple related objectives in a single ma
 <summary>Example</summary>
 ```
 
-To understand the space-use of coyotes because ....
+Our objective is to understand the space-use of urban living coyotes.
 
 ![](/img/coyote.png){width=300}
 
@@ -134,7 +134,7 @@ phenomenon". [(Betts et al. 2021)](https://doi.org/10.1002/ece3.7365)
 <summary>Example</summary>
 ```
 
-Coyotes have small home ranges in urban areas because food resource density is high
+Coyotes have small home ranges in urban areas because resource density is high, leading to reduced ranging.
 
 ```{=html}
 </details>
@@ -142,7 +142,7 @@ Coyotes have small home ranges in urban areas because food resource density is h
 
 ::: {.fragment}
 ```{=html}
-<span style="color:#FF0000";><b>Non-hypothesis hypothesis:</b></span>  We hypothesize variation in coyote home range size.
+<span style="color:#FF0000";><b>Non-hypothesis hypothesis:</b></span>  We hypothesize there to be a lot of variation in coyote home range size.
 ```
 :::
 
@@ -375,6 +375,7 @@ In regard to *data* and *statistical models*, [21^st^ century scientists should 
 <span style="color:#FF0000";><center>Data = Numbers/Groupings<br><br>
 Data ≠ Information
 </center>
+<br>
 </span>
 ```
 
@@ -383,35 +384,23 @@ Data ≠ Information
 
 <!-- ![](/img/info_diagram.png){fig-align="center"} -->
 
-. . .
-
 ```{=html}
-Data contains <span><u>information</u></span>, depending on ...
+<b>Statistical thinking about data: </b> data contains <span><u>information</u></span>, depending on ...<br>
 ```
 
 -   the question being asked of the data
 
 -   how the data came to be
 
--   the goal of the question
-
 
 ## The question and the data
 
 <br>
 
-Ecological surveillance monitoring will often have *low quality information* regarding post-hoc hypotheses.
+Surveillance monitoring data will generally have *lower quality information* to answer post-hoc hypotheses when compared to a designed study with a priori hypotheses.
 
 <br>
 
-```{=html}
-<span style="color:#FF0000";><center>
-Example?
-</center>
-</span>
-```
-
-. . .
 
 ![](/img/banding.png){fig-align="center" width="494"}
 
@@ -419,7 +408,7 @@ Example?
 
 ::: incremental
 -   learn about the data (<span style="color:red">data summary</span>)
--   apply learning outside of the data (<span style="color:red">inference</span>)
+-   apply learning outside of the data to a 'population' (<span style="color:red">inference</span>)
 -   learn about conditions relevant to but not observed in the data (<span style="color:red">prediction</span>)
 :::
 
@@ -472,18 +461,18 @@ BUT, are also <u>not mutually exclusive</u>.
 
 ![](/img/tragets.png){fig-align="center" width="600"}
 
-## Inference and Prediction 
+<!-- ## Inference and Prediction  -->
 
-```{=html}
-<br>
-<p style="font-size:45px; font-family:Garamond;">
-<a href="https://www.jstor.org/stable/27836590">From "The strategy of model building in population biology" by Richard Levins (American Scientists, 1966) </a>:
-</p>
-<br>
-```
-```{=html}
-"It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000";><u>understanding</u></span>, <span style="color:#FF0000";><u>predicting</u></span>, and <span style="color:#FF0000";><u>modifying nature</u></span>. But this cannot be done."
-```
+<!-- ```{=html} -->
+<!-- <br> -->
+<!-- <p style="font-size:45px; font-family:Garamond;"> -->
+<!-- <a href="https://www.jstor.org/stable/27836590">From "The strategy of model building in population biology" by Richard Levins (American Scientists, 1966) </a>: -->
+<!-- </p> -->
+<!-- <br> -->
+<!-- ``` -->
+<!-- ```{=html} -->
+<!-- "It is of course desirable to work with manageable models which maximize generality, realism, and precision toward the overlapping but not identical goals of <span style="color:#FF0000";><u>understanding</u></span>, <span style="color:#FF0000";><u>predicting</u></span>, and <span style="color:#FF0000";><u>modifying nature</u></span>. But this cannot be done." -->
+<!-- ``` -->
 
 ## Inference and Prediction {.scrollable}
 
@@ -561,20 +550,20 @@ BUT ...
 
 
 
-## 
+<!-- ##  -->
 
-```{=html}
-<br>
-<br>
-<br>
-<center>
-<span style="color:#FF0000";>
-<p style="font-size:60px">
-When do we need statistics?
-</p>
-</span>
-</center>
-```
+<!-- ```{=html} -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <center> -->
+<!-- <span style="color:#FF0000";> -->
+<!-- <p style="font-size:60px"> -->
+<!-- When do we need statistics? -->
+<!-- </p> -->
+<!-- </span> -->
+<!-- </center> -->
+<!-- ``` -->
 
 
 ## Design-Based
@@ -589,8 +578,7 @@ The sample and population are what??
 
 ![](/img/srs.png){height=450 fig-align=center}
 
-
--   inference relies on randomly assigning some units to be in the sample (e.g., random sampling).
+-   inference relies on probabilistic assigning some units to be in the sample (e.g., random sampling).
 
 
 ## Design-Based 
@@ -598,6 +586,12 @@ The sample and population are what??
 ![](/img/srs.png){height=450 fig-align=center}
 
 -   the values themselves are held to be **fixed**, whereas the sampling process is random.
+
+
+## Two types of Inference
+
+![](../img/design_super.png){fig-align="center" width="75%"}
+
 
 ## Design-Based {.scrollable}
 
@@ -639,7 +633,7 @@ The sample and population are what??
 
 . . .
 
-- $\textbf{y}$ is a random vector that has $n$ random values One sample of 4 cells. 
+- $\textbf{y}$ is a random vector that has $n$ random values, e.g., one sample of 4 cells. 
 
 . . .
 
@@ -684,9 +678,16 @@ We observe samples from the domain or population or sampling frame.
 ### TRUTH
 ```{r design.sim, echo=TRUE, eval=TRUE}
 #random discrete uniform sampler
-rdu<-function(n,lower,upper){sample(lower:upper,n,replace=TRUE)}
+rdu <- function(n,lower,upper){
+                               sample(lower:upper,
+                                      n,
+                                      replace=TRUE
+                                      )
+                              }
 
-mat = matrix(rdu(25, 
+N = 25
+
+mat = matrix(rdu(N, 
                  lower = 0, 
                  upper = 400
                  ),
@@ -731,20 +732,39 @@ combs = function(n, x) {
   factorial(n) / factorial(n-x) / factorial(x)
 }
 
-combs(25, 10)
+combs(N, n)
 ```
 
 
-## Design-Based Code 
+## Design-Based Code
 
-Get Every combination and then calcualte the mean for each sample of 10
+Get every combination and then calculate the mean for each sample of 10
 
 ```{r sampling dist2, eval=TRUE, echo=TRUE, cache=TRUE}
   set.seed(5435)
-  all.combs = utils::combn(c(mat), 10)
+  all.combs = utils::combn(c(mat), 
+                           n
+                           )
   dim(all.combs)
-  mean.all.combs = apply(all.combs,2,mean)
+  mean.all.combs = apply(all.combs,
+                         2,
+                         mean
+                         )
+  
 ```
+
+## Design-Based Code
+
+```{r,eval=TRUE, echo=FALSE}
+
+  hist(mean.all.combs,
+       freq=FALSE, 
+       main="Sampling Distributiuon of the Mean",
+       breaks=10,
+       xlab="Means"
+       )
+```
+
 
 ## Design-Based Code 
 
@@ -753,7 +773,7 @@ OR, we can sample enough times to approximate it
 ```{r sampling dist3, eval=TRUE, echo=TRUE, cache=TRUE}
   set.seed(5435)
   sim.sampling.dist=replicate(2000,
-                              sample(c(mat),10)
+                              sample(c(mat),n)
                               )
   dim(sim.sampling.dist)
   mean.samples = apply(sim.sampling.dist,2,mean)
@@ -776,6 +796,11 @@ OR, we can sample enough times to approximate it
        )
   legend("topright",lwd=5,col=c(grDevices::adjustcolor("black", alpha.f=0.5),grDevices::adjustcolor("red", alpha.f=0.5)),legend = c("Complete", "Approximated"))
 ```
+
+## Two types of Inference
+
+![](../img/design_super.png){fig-align="center" width="75%"}
+
 
 ## Model-Based {.scrollable}
 
@@ -818,7 +843,9 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 
 ## Model-Based
 
-- $\textbf{y} \sim$ Poisson($\lambda$) [Wikipedia link](https://en.wikipedia.org/wiki/Poisson_distribution)
+[Wikipedia link for Poisson](https://en.wikipedia.org/wiki/Poisson_distribution)
+
+- $\textbf{y} \sim$ Poisson($\lambda$)  
 
 - $y_{i} \sim$ Poisson($\lambda$)
 
@@ -828,7 +855,9 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 
 . . .
 
-- Sample mean Estimator $\hat{\lambda} = \sum_{i=1}^n y_{i}/n$
+- Population mean estimator $\lambda = \sum_{i=1}^N Y_{i}/N$
+
+- Sample mean estimator $\hat{\lambda} = \sum_{i=1}^n y_{i}/n$
 
 . . .
 
@@ -837,19 +866,21 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 ## Model-Based Code
 
 ```{r model.sim, echo=TRUE, eval=TRUE}
-#Create a function, to be replicated
-  lambda=200
-  n.sim=500
-  mat.fn = function(lambda){matrix(rpois(25, lambda=lambda),
-                               nrow=5, ncol=5
-                               )
-  }
+# Create a function, to be replicated
+  lambda = 200
+
+  mat.fn = function(lambda){matrix(
+                                   rpois(N, lambda=lambda),
+                                   nrow=5, ncol=5
+                                  )
+                           }
 ```
 
 ## Model-Based Code
 
 ```{r model.sim2, echo=TRUE, eval=TRUE}
-# repeat the function n.sim times
+# Repeat the function n.sim times
+  n.sim = 1000
   list.mat = replicate(n.sim, 
                        mat.fn(lambda), 
                        simplify=FALSE
@@ -860,11 +891,11 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 . . .
 
 ```{r model.sim3, echo=TRUE, eval=TRUE}
-#One realization
+# One realization from the super-population
   list.mat[[1]]
 
 
-# Sample mean for the first realization
+# Population mean for the first realization
   mean(list.mat[[1]])
 ```
 
@@ -872,16 +903,17 @@ $P(y_{2}|y_{1}) = P(y_{2})$
 
 #### Sampling Distribution
 
-```{r model.sim4, echo=TRUE, eval=TRUE}
-lambda.hat = unlist(lapply(list.mat,FUN=mean))
+```{r, model.sim4,echo=TRUE, eval=TRUE}
+samples.list = lapply(list.mat,FUN=function(x){sample(x,size=n)})
+lambda.hat = unlist(lapply(samples.list,FUN=mean))
 ```
 
 ```{r model.sim5, echo=FALSE, eval=TRUE}
 hist(lambda.hat,
      xlab=bquote(lambda-hat),
-     main=bquote("Sampling Distribution of"~lambda-hat)
+     main=bquote("Sampling distribution of"~hat(lambda))
      )
-#abline(v=lambda, lwd=3, col=4)
+abline(v=lambda, lwd=3, col=4)
 ```
 
 ## Statistical Bias
@@ -892,14 +924,12 @@ the difference b/w the true value and the mean of the sampling distribution of a
 ## Statistical Bias (Code) {.scrollable}
 
 ```{r bias22,eval=TRUE, echo=TRUE}
-# Bias
+# Bias (in this case, Monte Carlo error)
   mean(lambda.hat) - lambda
 
 # relative bias
   (mean(lambda.hat) - lambda)/lambda
 ```
-
-. . .
 
 ```{r bias3,eval=TRUE, echo=FALSE}
   hist(lambda.hat,xlab=bquote(lambda), breaks=20)
@@ -908,6 +938,27 @@ the difference b/w the true value and the mean of the sampling distribution of a
   legend("topright",legend=c("mean","truth"),lwd=3,col=c(4,3),lty=c(2,3))
 ```
 
+<!-- ## Many samples per Population -->
+
+<!-- ```{r,echo=TRUE} -->
+<!-- n.sim = 10000 -->
+<!-- samples.list = lapply(list.mat,FUN=function(x){matrix(replicate(n.sim, -->
+<!--                                                                 sample(x,size=n) -->
+<!--                                                                 ), -->
+<!--                                                       nrow=n -->
+<!--                                                       )}) -->
+<!-- length(samples.list) -->
+<!-- dim(samples.list[[1]]) -->
+<!-- lambda.hat = lapply(samples.list, -->
+<!--                     FUN=function(x){apply(x,1,mean)}) -->
+<!-- lambda.hat=unlist(lambda.hat) -->
+<!-- length(lambda.hat) -->
+
+<!-- # Bias (in this case, Monte Carlo error) -->
+<!--   mean(lambda.hat) - lambda -->
+
+
+<!-- ``` -->
 ## Precision of the mean (Code)
 
 What is the probability that we will observe a mean within 5% of the truth?
@@ -926,8 +977,8 @@ We can calculate this using *Monte Carlo integration*
 
   index = which(lambda.hat>=lower & lambda.hat <= upper)
 
-#Probability of getting a mean within 5% of the truth
-  length(index)/n.sim
+# Probability of getting a mean within 5% of the truth
+  length(index)/length(lambda.hat)
 ```
 
 
@@ -935,7 +986,6 @@ We can calculate this using *Monte Carlo integration*
 ## Take-Aways
 
 **1.**    <span style="color:#899499;">Study Objectives, Hypotheses, and Predictions</span>
-
 
 **2.**    <span style="color:#899499;">Big Data and Sampling</span>
 

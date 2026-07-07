@@ -18,6 +18,8 @@ pre {
 }
 </style>
 
+<span style="color: red;">**From Brian:**</span> Below I have setup the context and scenarios to conduct a stochastic simulation to evaluate whether realistic sample sizes will achieve a project object of estimating white-tail deer abundance, considering deer densities that are low and high. You will have to complete the code and resample the two 'truths' and then evaluate whether the project objective is met using Monte Carlo integration. 
+
 
 # **Report**
 
@@ -34,7 +36,6 @@ In this report, I evaluate sampling design trade-offs in estimating total white-
 
 # Clear workingspace
   rm(list=ls())
-
 
 # Load Packages
   library(sf)
@@ -59,13 +60,13 @@ I considered the sampling frame to include all one square mile blocks of contigu
 
 ```{r plot.sampling.frame,echo=TRUE, eval=TRUE}  
 # find values of high development  
-  index=which(RI$Devel_area>0.8)
+  index = which(RI$Devel_area>0.8)
 
 # drop values of high development and make a new spatial object
-  RI=RI[-index,]
+  RI = RI[-index,]
 
   # Update the id column
-  RI$Id=1:nrow(RI)
+  RI$Id = 1:nrow(RI)
 
 # plot updated map
   plot(RI["Devel_area"])
@@ -76,33 +77,33 @@ There are no current studies to suggest the true mean deer density or the spatia
 
 ```{r truth, echo = TRUE, eval = TRUE}
 # Mean deer per square mile (1 cell)
-  deer.dens=c(1,20)
+  deer.dens = c(1,20)
 
 # Total expected deer populations
   deer.dens*nrow(RI)
 
 # Simulate deer densities
   set.seed(434343)
-  deer1=rpois(nrow(RI),deer.dens[1])
-  deer2=rpois(nrow(RI),deer.dens[2])
+  deer1 = rpois(nrow(RI),deer.dens[1])
+  deer2 = rpois(nrow(RI),deer.dens[2])
   
   par(mfrow=c(1,2))
   hist(deer1,freq=FALSE, main="True distribution - mean 1 mi^2")
   hist(deer2,freq=FALSE, main="True distribution - mean 20 mi^2")
 ```
 
-The assumed true total population size for both scenarios are `r sum(deer1)` and `r sum(deer2)`, respectively. These populations include random spatial variation. Considering additional spatial structure, such as variation in deer density by the percentage of development (`Devel_area`) could be a useful exercise. 
+The assumed true total population size for both scenarios are `r sum(deer1)` and `r sum(deer2)`, respectively. These populations include random spatial variation. Considering additional spatial structure, such as variation in deer density by the percentage of development (`Devel_area`) could be a useful exercise, but not taken here. 
 
 
 ```{r truth2, echo = FALSE, eval = TRUE}
 
 # Include these values in RI  
-  RI$Deer1=deer1
-  RI$Deer2=deer2
+  RI$Deer1 = deer1
+  RI$Deer2 = deer2
   
 # True simulated total population
-  true.total1=sum(RI$Deer1)  
-  true.total2=sum(RI$Deer2)  
+  true.total1 = sum(RI$Deer1)  
+  true.total2 = sum(RI$Deer2)  
   
 ```
 
@@ -131,25 +132,26 @@ I will consider sampling both populations with three different samples sizes (10
   deer.total.abundance2 = matrix(0,length(sample.sizes),n.sim)
 ```
 
-The below code is shown to make it clear how exactly the sampling and estimation is done There are two for loops. One (index `z`) that loops through the number of sample sizes and the other (index `i`) that loops through the the number of simulation iterations within each sample sample. 
+<span style="color: red;">**From Brian:**</span> This is where you will need to modify the code to conduct the simulation and get samples for the two 'truths'. 
 
-The important code is the use of the function `grts` that selects a spatially balanced sample from the areal sampling frame and the estimation of the mean deer size for each cell using the function `mean`.  There is no model used to estimate and predict the total deer abundanec. Rather, I am using the mean as the estimator. 
+The important code is the use of the function `grts` that selects a spatially balanced sample from the areal sampling frame and the estimation of the mean deer size for each cell using the function `mean`.  There is no model used to estimate and predict the total deer abundance. Rather, we will be using the mean as the estimator. 
 
 ```{r sim, eval = TRUE, echo=TRUE, cache=TRUE, cache.path="cache/", results='hide'}
 
 # Here, I am demonstrating random sampling one time and for one sample size and then using that random sample to estimate the total deer population for low and high scenarios.
-  sample.size=10
+  sample.size = 10
   eqprob <- grts(RI, n_base = sample.size)
-  y1=eqprob$sites_base$Deer1
-  y2=eqprob$sites_base$Deer2
-  est1=mean(y1)
-  est2=mean(y2)
-  deer.total.abundance1=est1*nrow(RI)
-  deer.total.abundance2=est2*nrow(RI)
-
+  y1 = eqprob$sites_base$Deer1
+  y2 = eqprob$sites_base$Deer2
+  est1 = mean(y1)
+  est2 = mean(y2)
+  deer.total.abundance1 = est1*nrow(RI)
+  deer.total.abundance2 = est2*nrow(RI)
 ```
 
 ## Results
+<span style="color: red;">**From Brian:**</span>  Please fill out the results, specifically answering the sentences I have setup, as well as other things you wish to note.
+
 
 First, examining the absolute bias of the estimator, we see . . .
 
@@ -164,6 +166,7 @@ To specifically address the objective of this study, I used Monte Carlo integrat
 
 
 ## Conclusion
+<span style="color: red;">**From Brian:**</span> Please fill out the conclusion using my sentence below as a start.
 
 Considering low and high deer densities, I found that the objective to be highly certain (0.90 probability) that a single estimate of the total population estimate is within 10% of the true value....
 
@@ -175,6 +178,6 @@ Considering low and high deer densities, I found that the objective to be highly
 This report was generated from the R Statistical Software (v4.2.2; R Core Team 2021) using the [Markdown language](https://www.markdownguide.org/) and [RStudio](https://posit.co/products/open-source/rstudio/). The R packages used are acknowledged below. 
 
 ```{r packages, eval=TRUE, echo=FALSE}
-  pkgs <- cite_packages(output = "table", out.dir = ".")
+  pkgs <- cite_packages(output = "table", out.dir = ".",pkgs="Session")
   knitr::kable(pkgs)
 ```

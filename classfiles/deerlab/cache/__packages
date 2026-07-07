@@ -4,8 +4,5 @@ Matrix
 survival
 survey
 spsurvey
-foreach
-iterators
-doParallel
-tictoc
 grateful
+tictoc
