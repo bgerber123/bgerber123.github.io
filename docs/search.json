@@ -16321,7 +16321,7 @@
     "href": "FW670/Probability.html#motivation",
     "title": "Probability",
     "section": "Motivation",
-    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models\n\n\n\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\nmathematical connections and notation"
+    "text": "Motivation\n\nWhy learn about RVs and probability math?\n\n\nFoundations of:\n\nlinear regression\ngeneralized linear models\nmixed models / hierarchical models\n\n\n\nOur Goal:\n\nconceptual framework to think about data, probabilities, and parameters\nmathematical connections and notation"
   },
   {
     "objectID": "FW670/Probability.html#not-random-variables",
@@ -16342,14 +16342,14 @@
     "href": "FW670/Probability.html#frequency-probabilitities",
     "title": "Probability",
     "section": "Frequency / Probabilitities",
-    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main)\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main)\n\n\n\n\n\n\n\n\n\nWe often only get to see ONE sample from this distribution."
+    "text": "Frequency / Probabilitities\n\npar(mfrow=c(1,2))\nhist(y, breaks=20,xlim=c(0,25),main=main,xlab=\"y / Counts of plants in a plot\")\nhist(y, breaks=20,xlim=c(0,25),freq = FALSE,main=main,xlab=\"y / Counts of plants in a plot\")\n\n\n\n\n\n\n\n\n\nWe often only get to see ONE sample from this distribution."
   },
   {
     "objectID": "FW670/Probability.html#random-variables-1",
     "href": "FW670/Probability.html#random-variables-1",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) =0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
+    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) = 0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
   },
   {
     "objectID": "FW670/Probability.html#philosophy",
@@ -16398,7 +16398,7 @@
     "href": "FW670/Probability.html#pmf-1",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{0-0}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{1-1}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
   },
   {
     "objectID": "FW670/Probability.html#bernoulli-pmf",
@@ -16412,14 +16412,14 @@
     "href": "FW670/Probability.html#bernoulli-pmf-code",
     "title": "Probability",
     "section": "Bernoulli PMF (Code)",
-    "text": "Bernoulli PMF (Code)\nWhat would our data look like for 10 ducks that had a probability of survival (Y=1) of 0.20?\n\n#Define inputs\n  theta=0.2;  N=1 \n\n#Random sample - 1 duck\n  rbinom(n=1,size=N,theta)\n\n[1] 0\n\n#Random sample - 10 ducks\n  rbinom(n=10,size=N,theta)\n\n [1] 1 0 0 0 1 0 1 0 1 0"
+    "text": "Bernoulli PMF (Code)\nWhat would our data look like for 10 ducks that had a probability of survival (Y = 1) of 0.20?\n\n\n# Define inputs\n  theta = 0.2 \n  N = 1\n\n# Random sample - 1 duck\n  rbinom(n = 1,\n         size = N,\n         prob = theta\n         )\n\n[1] 0\n\n\n\n\n\n# Random sample - 10 ducks\n  rbinom(n = 10,\n         size = N,\n         prob = theta\n         )\n\n [1] 1 0 0 0 1 0 1 0 1 0"
   },
   {
     "objectID": "FW670/Probability.html#why-is-this-useful-to-us",
     "href": "FW670/Probability.html#why-is-this-useful-to-us",
     "title": "Probability",
     "section": "Why is this useful to us?",
-    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000,rbinom(n = 10,size=N,theta))\ntheta.hat = apply(y.mat, 2, mean)"
+    "text": "Why is this useful to us?\nHow about to evaluate the sample size of ducks needed to estimate \\(\\theta\\)?\n\n\ny.mat = replicate(1000, rbinom(n = 10,size = N, prob = theta))\ntheta.hat = apply(y.mat, 2, mean)"
   },
   {
     "objectID": "FW670/Probability.html#binomial-pmf",
@@ -16433,7 +16433,7 @@
     "href": "FW670/Probability.html#binomial-pmf-code",
     "title": "Probability",
     "section": "Binomial PMF (Code)",
-    "text": "Binomial PMF (Code)\n\n# 1 duck tagged/released and one simulation\n  theta=0.2;  N=1 \n  rbinom(n=1,size=N,theta)\n\n[1] 1\n\n\n\n\n# 1000 ducks tagged/released and one simulation\n  theta=0.2;  N=1000 \n  rbinom(n=1,size=N,theta)\n\n[1] 198\n\n\n\n\n\n# 1000 ducks tagged/released and 10 simulation\n  theta=0.2;  N=1000 \n  rbinom(n=10,size=N,theta)\n\n [1] 180 190 198 192 169 192 192 217 206 216\n\n\n\n\n\n# 1 duck tagged for each of 1000 simulations\n  theta=0.2;  N=1\n  y = rbinom(n=1000,size=N,theta)\n  y\n\n   [1] 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0\n  [38] 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0\n  [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n [112] 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0\n [149] 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0\n [186] 1 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [223] 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0\n [260] 0 1 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0\n [297] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\n [334] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0\n [371] 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1\n [408] 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0\n [445] 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0\n [482] 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1\n [519] 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 1 0 0\n [556] 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0\n [593] 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0\n [630] 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 1\n [667] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0\n [704] 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0\n [741] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1\n [778] 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1\n [815] 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0\n [852] 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [889] 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0\n [926] 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n [963] 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0\n[1000] 0\n\n\n\n\n\nsum(y)\n\n[1] 186"
+    "text": "Binomial PMF (Code)\n\n# 1 duck tagged/released and one simulation\n  theta = 0.2;  N = 1 \n  rbinom(n = 1,\n         size = N,\n         prob = theta\n         )\n\n[1] 1\n\n\n\n\n# 1000 ducks tagged/released and one simulation\n  theta = 0.2;  N = 1000 \n  rbinom(n = 1,\n         size = N, \n         prob = theta\n         )\n\n[1] 198\n\n\n\n\n\n# 1000 ducks tagged/released and 10 simulation\n  theta = 0.2;  N = 1000 \n  rbinom(n = 10,\n         size = N,\n         prob = theta\n         )\n\n [1] 180 190 198 192 169 192 192 217 206 216\n\n\n\n\n\n# 1 duck tagged for each of 1000 simulations\n  theta = 0.2;  N = 1\n  y = rbinom(n = 1000,\n             size = N,\n             prob = theta\n             )\n  y\n\n   [1] 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0\n  [38] 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0\n  [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n [112] 1 1 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0\n [149] 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0\n [186] 1 0 0 1 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [223] 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0\n [260] 0 1 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0\n [297] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0\n [334] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0\n [371] 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 1\n [408] 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0\n [445] 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0\n [482] 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1\n [519] 0 0 1 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 0 1 0 0\n [556] 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0\n [593] 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0\n [630] 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 0 1\n [667] 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0\n [704] 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0\n [741] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1\n [778] 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1\n [815] 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0\n [852] 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0\n [889] 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0\n [926] 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n [963] 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0\n[1000] 0\n\n\n\n\n\nsum(y)\n\n[1] 186"
   },
   {
     "objectID": "FW670/Probability.html#support",
@@ -16468,7 +16468,7 @@
     "href": "FW670/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(120,mean=100,sd=10,lower.tail = FALSE)\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(0.02275,100,10,lower.tail = FALSE)\n\n[1] 120"
+    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(q = 120,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(p = 0.02275,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 120"
   },
   {
     "objectID": "FW670/Probability.html#pdf-2",
@@ -16517,14 +16517,14 @@
     "href": "FW670/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\sim& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW670/Probability.html#gamma-distribution-pdf-code",
     "href": "FW670/Probability.html#gamma-distribution-pdf-code",
     "title": "Probability",
     "section": "Gamma Distribution (PDF Code)",
-    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape =10\nscale = 2\n\nmean1 = shape*scale\nmean1\n\n[1] 20\n\nmode1 = (shape-1)*scale\nmode1\n\n[1] 18\n\nstdev = sqrt(shape*scale^2)\nstdev\n\n[1] 6.324555"
+    "text": "Gamma Distribution (PDF Code)\nGamma Wikipedia\n\nshape = 10\nscale = 2\n\nmean1 = shape*scale\nmean1\n\n[1] 20\n\nmode1 = (shape-1)*scale\nmode1\n\n[1] 18\n\nstdev = sqrt(shape*scale^2)\nstdev\n\n[1] 6.324555"
   },
   {
     "objectID": "FW670/Probability.html#gamma-distribution-pdf-code-1",
@@ -16538,7 +16538,7 @@
     "href": "FW670/Probability.html#gamma-distribution-1",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q=40, shape=10, scale=2,lower.tail=FALSE)\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.5420703\n\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q=40,shape=10, scale=2,lower.tail=TRUE)-\npgamma(q=20,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=TRUE)\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p=0.025,shape=10, scale=2,lower.tail=FALSE)\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q = 40, \n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q = 20,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.5420703\n\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q = 40,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )-\npgamma(q = 20, \n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma( p = 0.025,\n        shape = 10, \n        scale = 2,\n        lower.tail = TRUE\n        )\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p = 0.025,\n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
   },
   {
     "objectID": "FW670/Probability.html#the-others-side-of-the-coin",
@@ -18975,5 +18975,33 @@
     "title": "Big Picture  Science and Modeling",
     "section": "Many samples per Population",
     "text": "Many samples per Population\n\nn.sim = 10000\nsamples.list = lapply(list.mat,FUN=function(x){matrix(replicate(n.sim,\n                                                                sample(x,size=n)\n                                                                ),\n                                                      nrow=n\n                                                      )})\nlength(samples.list)\n\n[1] 1000\n\ndim(samples.list[[1]])\n\n[1]    10 10000\n\nlambda.hat = lapply(samples.list,\n                    FUN=function(x){apply(x,1,mean)})\nlambda.hat=unlist(lambda.hat)\nlength(lambda.hat)\n\n[1] 10000\n\n# Bias (in this case, Monte Carlo error)\n  mean(lambda.hat) - lambda\n\n[1] 0.05542569"
+  },
+  {
+    "objectID": "FW670/Probability.html#frequency-probabilities",
+    "href": "FW670/Probability.html#frequency-probabilities",
+    "title": "Probability",
+    "section": "Frequency / Probabilities",
+    "text": "Frequency / Probabilities\n\nhist(y, xlim=c(0,25),main=main,xlab=\"y / Counts of plants in a plot\")"
+  },
+  {
+    "objectID": "FW670/Probability.html#frequency-probabilities-1",
+    "href": "FW670/Probability.html#frequency-probabilities-1",
+    "title": "Probability",
+    "section": "Frequency / Probabilities",
+    "text": "Frequency / Probabilities\n\nhist.values=hist(y,breaks = seq(from=0, to=25, by = 1),freq = FALSE,\n                 ylab=\"Probability\",\n                 main=\"Distribution of the P(y)\",\n                 xlab=\"y / Counts of plants in a plot\")\n\nsum(hist.values$density)\n\n[1] 1"
+  },
+  {
+    "objectID": "FW670/Probability.html#sampling",
+    "href": "FW670/Probability.html#sampling",
+    "title": "Probability",
+    "section": "Sampling",
+    "text": "Sampling\nWe often only get to see ONE sample from this distribution."
+  },
+  {
+    "objectID": "FW670/Probability.html#frequency-probabilities-2",
+    "href": "FW670/Probability.html#frequency-probabilities-2",
+    "title": "Probability",
+    "section": "Frequency / Probabilities",
+    "text": "Frequency / Probabilities\n\nhist.values=hist(y,freq = FALSE, plot= FALSE,\n                 ylab=\"Probabilities\",\n                 main=\"Distribution of the P(y)\",\n                 xlab=\"Counts of plants in a plot\")\nhist.values$density\n\n [1] 0.0130 0.0500 0.1075 0.1200 0.1020 0.0610 0.0295 0.0140 0.0020 0.0005\n[11] 0.0005\n\nhist.values$breaks\n\n [1]  2  4  6  8 10 12 14 16 18 20 22 24\n\ndiff(hist.values$breaks)\n\n [1] 2 2 2 2 2 2 2 2 2 2 2\n\nsum(hist.values$density * diff(hist.values$breaks))\n\n[1] 1\n\n\n\n\n\n$breaks\n [1]  2  4  6  8 10 12 14 16 18 20 22 24\n\n$counts\n [1]  26 100 215 240 204 122  59  28   4   1   1\n\n$density\n [1] 0.0130 0.0500 0.1075 0.1200 0.1020 0.0610 0.0295 0.0140 0.0020 0.0005\n[11] 0.0005\n\n$mids\n [1]  3  5  7  9 11 13 15 17 19 21 23\n\n$xname\n[1] \"y\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\""
   }
 ]
