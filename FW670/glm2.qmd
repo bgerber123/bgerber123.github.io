@@ -84,8 +84,8 @@ library(ggplot2)
 <span style="color:purple">Interpret the Coefficients</span>
 
 ```{r eval=TRUE,echo=TRUE}
-model = glm(y~site,
-            data=dat, 
+model = glm(y ~ site,
+            data = dat, 
             family = poisson(link = 'log')
             )
 
@@ -114,25 +114,29 @@ model$control
 
 #### Negative Log-Likelihood Function 
 
+Here is the negative log-likelihood function with three parameters, $\beta_0, \beta_1, \beta_2$, along with the inputs $y$ and $\mathbf{X}$ 
+
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
-  #Here is our negative log-likelihood function with three
-  #parameters - beta0, beta1, and beta2 (1)
-  #inputs = design matrix X
   neg.log.like = function(par,X) {
     
-    #linear model of parameters par and design matrix (X)
-    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]
+    # linear model of parameters par and design matrix (X)
+    lam = par[1]*X[,1] + par[2]*X[,2] + par[3]*X[,3]
     
-    #neg log-likelihood
-    sum(-dpois(y,lambda = exp(lam),log = TRUE))
+    # negative log-likelihood
+    sum(-dpois(y, lambda = exp(lam),
+               log = TRUE)
+        )
   }
 ```
 
 
 ## Numerical Optim. for MLEs
 
+We can use the optim function with initial values and define the lower and upper limits of the possible values
+
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}
-#Use optim function with initial values and define the lower and upper limits of the possible values
+
   fit1 <- optim(
     par = c(0,0,0), #start
     X = X,
@@ -150,7 +154,7 @@ model$control
 #### <span style="color:purple">Comparison</span>
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}
-a =rbind(fit1$par,
+a = rbind(fit1$par,
       coef(model)
       )
 rownames(a)=c("glm.fit","ours")
@@ -165,7 +169,9 @@ a
 <span style="color:purple">Make 'Site 2' the intercept</span>
 
 ```{r eval=TRUE,echo=TRUE}
-dat$site.re = relevel(dat$site,ref="Site 2")
+dat$site.re = relevel(dat$site,
+                      ref="Site 2"
+                      )
 levels(dat$site.re) 
 ```
 
@@ -174,7 +180,7 @@ levels(dat$site.re)
 ::: {.fragment}
 
 ```{r eval=TRUE,echo=TRUE}
-model2 = glm(y~site.re,
+model2 = glm(y ~ site.re,
              data = dat, 
              family = poisson(link = 'log')
             )
@@ -222,7 +228,7 @@ model.matrix(~dat$site.re)[1:5,]
 [Lots of options](https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/)
 
 ```{r, echo=TRUE, eval=TRUE}
-  model3=glm(y~site, 
+  model3=glm(y ~ site, 
              data = dat, 
              family = poisson(link = 'log'),
              contrasts = list(site = contr.sum)
@@ -235,7 +241,7 @@ model.matrix(~dat$site.re)[1:5,]
 coef(model3)
 ```
 
-Intercept = `grand` mean of site-means (log-scale), not mean of all observations
+Intercept = `grand mean`  of site-means (log-scale), not mean of all observations
 
 ::: {.fragment}
 $\beta_{0} + \beta_{1} \times 1 + \beta_{2}\times 0$ 
@@ -268,44 +274,64 @@ sum(coef(model3)[-1]*(-1))
 ## Intuition Check {.scrollable}
 
 ```{r, echo=TRUE, eval=TRUE}
-mean.group = aggregate(y, by=list(site=site),FUN=mean)
+mean.group = aggregate(y, 
+                       by = list(site=site),
+                       FUN=mean
+                       )
 mean.group
 ```
 
 
 ::: {.fragment}
 
+### Site 1
+
 ```{r, echo=TRUE, eval=TRUE}
-#Site 1
 exp(0.3584266 + 0.2964994)
 as.numeric(predict(model3,type="response")[1])
 ```
 
 :::
 
-<br>
 
-::: {.fragment}
+## Intuition Check {.scrollable}
 
 ```{r, echo=TRUE, eval=TRUE}
-#Site 2
-exp(0.3584266 + -0.7151015 )
+mean.group = aggregate(y, 
+                       by = list(site=site),
+                       FUN=mean
+                       )
+mean.group
+```
+
+
+
+### Site 2
+
+```{r, echo=TRUE, eval=TRUE}
+exp(0.3584266 + -0.7151015)
 as.numeric(predict(model3,type="response")[2])
 ```
 
-:::
 
-<br>
-
-::: {.fragment}
+## Intuition Check {.scrollable}
 
 ```{r, echo=TRUE, eval=TRUE}
-#Site 3
+mean.group = aggregate(y, 
+                       by = list(site=site),
+                       FUN=mean
+                       )
+mean.group
+```
+
+### Site 3
+
+```{r, echo=TRUE, eval=TRUE}
 exp(0.3584266 + 0.4186021)
 as.numeric(predict(model3,type="response")[3])
 ```
 
-:::
+
 
 ## More Control Again
 
@@ -314,8 +340,8 @@ as.numeric(predict(model3,type="response")[3])
 No shared connection among these partial intercepts
 
 ```{r, echo=TRUE, eval=TRUE}
-  model4=glm(y~0+site, 
-             data=dat, 
+  model4=glm(y ~ 0 + site, 
+             data = dat, 
              family = poisson(link = 'log')
             )
 
@@ -353,13 +379,13 @@ d
 
 ```
 
-#### <span style="color:purple">Deviance</span>
+#### <span style="color:purple">AIC</span>
 
 ```{r eval=TRUE,echo=FALSE}
-d=rbind(model$deviance,
-      model2$deviance,
-      model3$deviance,
-      model4$deviance
+d=rbind(model$aic,
+      model2$aic,
+      model3$aic,
+      model4$aic
       )
 rownames(d)=c("Model1","Model2","Model3","Model4")
 d
@@ -371,15 +397,13 @@ d
 
 ```{r, eval=FALSE, echo=TRUE}
 
-X = model.matrix(~Independent Variables)
-
-#all variables in dat (additive)
+# All variables in dat (additive)
 X = model.matrix(~., data = dat)
 
-#all variables in dat (pair-wise interactions)
+# All variables in dat (pair-wise interactions)
 X = model.matrix(~.^2, data = dat)
 
-#all variables in dat (three way- interactions)
+# All variables in dat (three way- interactions)
 X = model.matrix(~.^3, data = dat) 
 
 model = glm(y~ 0 + X, ...)
@@ -391,7 +415,7 @@ model = glm(y~ 0 + X, ...)
 What if our counts of pika are at plots with different sizes?
 
 ::: {.fragment}
-Plot size ($\textbf{A}$) needs to be controlled for. But, we don't want to estimate an effect as it's part of the design. Rather, we want to model the rate - counts per unit area.
+Plot size ($\textbf{A}$) needs to be controlled for. But, we don't want to estimate an effect as it's part of the design. Rather, we want to model our data as a **rate** - counts per unit area.
 :::
 
 
@@ -426,17 +450,21 @@ $$
 
 ```{r,echo=TRUE,eval=TRUE}
 
-model.rate1 = glm(y~site+offset(log(area)),
-            data=dat, 
+model.rate1 = glm(y ~ site + offset(log(area)),
+            data = dat, 
             family = poisson(link = 'log')
             )
 
-model.rate2 = glm(y~site,
+model.rate2 = glm(y ~ site,
             offset = log(area),
-            data=dat, 
+            data = dat, 
             family = poisson(link = 'log')
             )
+```
 
+. . .
+
+```{r,echo=TRUE,eval=TRUE}
 coef(model.rate1)
 coef(model.rate2)
 
@@ -478,8 +506,15 @@ head(dat)
 #### <span style="color:purple">Linear Combination on log-scale</span>
 
 ```{r,echo=TRUE,eval=TRUE}
-m1 = glm(y~site+herb.cover,data=dat,family = poisson(link = 'log'))
-marginaleffects::plot_predictions(m1, condition=c("herb.cover","site"),type="link")
+m1 = glm(y ~ site + herb.cover, 
+         data = dat,
+         family = poisson(link = 'log')
+         )
+
+marginaleffects::plot_predictions(m1, 
+                                  condition=c("herb.cover","site"),
+                                  type="link"
+                                  )
 ```
 
 #### <span style="color:purple">Linear Combination on response-scale</span>
@@ -492,22 +527,28 @@ marginaleffects::plot_predictions(m1,
 
 ## Additive {.scrollable}
 
-### Continuous and Continuous</span>
+### Continuous and Continuous
 
 #### <span style="color:purple">Linear Combination on log-scale</span>
 
 ```{r,echo=TRUE,eval=TRUE}
-m2 = glm(y~dist.trail+herb.cover,data=dat,family = poisson(link = 'log'))
+m2 = glm(y ~ dist.trail + herb.cover,
+         data = dat, 
+         family = poisson(link = 'log')
+         )
+
 marginaleffects::plot_predictions(m2, 
-                                  condition=c("dist.trail","herb.cover"),
-                                  type="link")
+                                  condition = c("dist.trail","herb.cover"),
+                                  type="link"
+                                  )
 ```
+
 
 #### <span style="color:purple">Linear Combination on response-scale</span>
 
-```{r,echo=TRUE,eval=TRUE, fig.width=5, fig.height=5}
+```{r,echo=TRUE,eval=TRUE}
 marginaleffects::plot_predictions(m2, 
-                                  condition=c("dist.trail","herb.cover"),
+                                  condition = c("dist.trail","herb.cover"),
                                   type="response")
 ```
 
@@ -516,9 +557,20 @@ marginaleffects::plot_predictions(m2,
 #### Continuous and Categorical
 
 ```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
-m3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))
-m3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))
-head(model.matrix(~site*herb.cover,data=dat))
+m3 = glm(y ~ site*herb.cover,
+         data=dat,
+         family = poisson(link = 'log')
+         )
+
+m3 = glm(y ~ site + herb.cover + site:herb.cover,
+         data = dat, 
+         family = poisson(link = 'log')
+         )
+
+head(model.matrix(~site*herb.cover,
+                  data = dat
+                  )
+     )
 ```
 
 ## Interaction {.scrollable}
@@ -544,8 +596,22 @@ marginaleffects::plot_predictions(m3,condition=c("herb.cover","site"))
 #### Continuous and Continuous
 
 ```{r,echo=TRUE,eval=TRUE}
-m4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))
-m4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))
+m4 = glm(y ~ herb.cover*dist.trail,
+         data = dat, 
+         family = poisson(link = 'log')
+         )
+
+m4 = glm(y ~ herb.cover + dist.trail + herb.cover:dist.trail,
+         data = dat,
+         family = poisson(link = 'log')
+         )
+```
+
+## Interaction {.scrollable}
+
+#### Continuous and Continuous
+
+```{r,echo=TRUE,eval=TRUE}
 marginaleffects::plot_predictions(m4, condition=c("herb.cover","dist.trail"))
 ```
 
@@ -555,20 +621,30 @@ marginaleffects::plot_predictions(m4, condition=c("herb.cover","dist.trail"))
 
 
 ```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
-m5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))
-m5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))
-marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="link")
+m5 = glm(y ~ poly(dist.trail,2),
+         data = dat,
+         family = poisson(link = 'log')
+         )
+
+m5 = glm(y ~ dist.trail + I(dist.trail^2),
+         data = dat,
+         family = poisson(link = 'log')
+         )
 ```
+
+## Polynomial {.scrollable}
+
+#### Quadratic
+
 ```{r,echo=TRUE,eval=TRUE, fig.width=10, fig.height=5}
-m5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))
-m5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))
+marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="link")
+
 marginaleffects::plot_predictions(m5,condition=c("dist.trail"),type="response")
+
 ```
 
 
 ## Recap
-
-. . .
 
 -   Poisson Regression
 -   Numerical Optimization

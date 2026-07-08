@@ -14,7 +14,6 @@ dim(second)
 
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
-#When this is true
   ncol(first)==nrow(second)
 
 
@@ -26,25 +25,28 @@ y%*%t(y)
 
 ## ----echo=FALSE,eval=TRUE-------------------------------------------------------
 dat = read.csv("elephant.study2.csv")
-head(dat[,1:2], n = 3)
+head(dat[,1:3], n = 3)
 
 
 ## ----echo=TRUE,eval=TRUE--------------------------------------------------------
-model = glm(weight~sex, 
-            data=dat,
-            family=gaussian(link = identity)
+model = glm(weight ~ sex + age.years, 
+            data = dat,
+            family = gaussian(link = identity)
             )
 summary(model)
 
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
-# GLM coefs
-  X = model.matrix(~sex+age.years,data=dat)
+  X = model.matrix(~ sex + age.years,
+                   data = dat
+                   )
   head(X)
 
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
-  glm(weight~0+X,data=dat)
+  glm(weight ~ 0 + X, 
+      data = dat
+      )
 
 
 ## ----eval=TRUE, echo=FALSE------------------------------------------------------
@@ -53,8 +55,7 @@ summary(model)
 
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
-# Linear Algebra Maximum Likelihood Estimate
-  y=dat$weight
+  y = dat$weight
   c(solve(t(X)%*%X)%*%t(X)%*%y)
 
 
@@ -84,15 +85,17 @@ summary(model)
 
 
 ## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
-p=seq(0.001,0.999,by=0.01)
-logit.p=qlogis(p)
+p = seq(0.001,0.999,
+        by = 0.01
+        )
+logit.p = qlogis(p)
 par(cex.lab=1.5,cex.axis=1.5)
 plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 
 
 ## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
-#Design matrix
+# Design matrix
   set.seed(43534)
   Var1 = rnorm(100)
   X = model.matrix(~Var1)
@@ -101,16 +104,22 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 ## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
 # marginal coefficients (on logit-scale)
-  beta=c(-2,4)
+  beta = c(-2,4)
 
 #linear terms
   lt = X%*%beta
 
-#transformation via link function to probability scale
-  p=plogis(lt)
+
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
+
+# transformation via link function to probability scale
+  p = plogis(lt)
   head(round(p,digits=2))
 
-#sample
+
+## ----eval=TRUE,echo=TRUE, fig.align='center'------------------------------------
+
+# generate a sample dataset
   set.seed(14353)
   y = rbinom(n=length(p),size=1,p)
   y
@@ -128,19 +137,27 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
 # Fit model to sample 
-  model1=glm(y~0+X, family = binomial(link = "logit"))
+  model1 = glm(y ~ 0 + X, 
+               family = binomial(link = "logit")
+               )
   summary(model1)
 
 
 ## ----eval=TRUE, echo=TRUE-------------------------------------------------------
  #sample many times  
   n.sim=1000
-  y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))
+  y.many = replicate(n.sim,
+                     rbinom(n = length(p),
+                            size=1,
+                            p)
+                     )
   dim(y.many)
   
  #Estimate coefs for all 100 samples
   coef.est=apply(y.many,2,FUN=function(y){
-          model1=glm(y~0+X, family = binomial(link = "logit"))
+          model1=glm(y ~ 0 + X, 
+                     family = binomial(link = "logit")
+                     )
           
   model1$coefficients
   })
@@ -159,7 +176,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ## ----eval=TRUE, echo=FALSE------------------------------------------------------
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
-       xlab=bquote(beta[0]))
+       xlab=bquote(beta[1]))
   abline(v=beta[2],col=2,lwd=4)
         legend("topright",lwd=3,col=2,legend="True Value")
 
@@ -177,7 +194,9 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 
 ## ----eval=FALSE, echo=TRUE------------------------------------------------------
-# brglm::brglm(y~0+X, family = binomial(link = "logit"))
+# brglm::brglm(y ~ 0 + X,
+#              family = binomial(link = "logit")
+#              )
 
 
 ## ----eval=TRUE, echo=FALSE------------------------------------------------------

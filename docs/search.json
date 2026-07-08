@@ -15411,7 +15411,7 @@
     "href": "FW670/glm2.html#fit-model",
     "title": "Generalized Linear Models II ",
     "section": "Fit Model",
-    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y~site,\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\n\n\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   0.6549     0.1140   5.747 9.09e-09 ***\nsiteSite 2   -1.0116     0.2207  -4.584 4.56e-06 ***\nsiteSite 3    0.1221     0.1565   0.780    0.435    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
+    "text": "Fit Model\nInterpret the Coefficients\n\nmodel = glm(y ~ site,\n            data = dat, \n            family = poisson(link = 'log')\n            )\n\n\n\nsummary(model)\n\n\nCall:\nglm(formula = y ~ site, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   0.6549     0.1140   5.747 9.09e-09 ***\nsiteSite 2   -1.0116     0.2207  -4.584 4.56e-06 ***\nsiteSite 3    0.1221     0.1565   0.780    0.435    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
   },
   {
     "objectID": "FW670/glm2.html#numerical-optimization-of-likelihood",
@@ -15425,21 +15425,21 @@
     "href": "FW670/glm2.html#side-bar",
     "title": "Generalized Linear Models II ",
     "section": "Side-Bar",
-    "text": "Side-Bar\nNegative Log-Likelihood Function\n\n  #Here is our negative log-likelihood function with three\n  #parameters - beta0, beta1, and beta2 (1)\n  #inputs = design matrix X\n  neg.log.like = function(par,X) {\n    \n    #linear model of parameters par and design matrix (X)\n    lam=par[1]*X[,1]+par[2]*X[,2]+par[3]*X[,3]\n    \n    #neg log-likelihood\n    sum(-dpois(y,lambda = exp(lam),log = TRUE))\n  }"
+    "text": "Side-Bar\nNegative Log-Likelihood Function\nHere is the negative log-likelihood function with three parameters, \\(\\beta_0, \\beta_1, \\beta_2\\), along with the inputs \\(y\\) and \\(\\mathbf{X}\\)\n\n  neg.log.like = function(par,X) {\n    \n    # linear model of parameters par and design matrix (X)\n    lam = par[1]*X[,1] + par[2]*X[,2] + par[3]*X[,3]\n    \n    # negative log-likelihood\n    sum(-dpois(y, lambda = exp(lam),\n               log = TRUE)\n        )\n  }"
   },
   {
     "objectID": "FW670/glm2.html#numerical-optim.-for-mles",
     "href": "FW670/glm2.html#numerical-optim.-for-mles",
     "title": "Generalized Linear Models II ",
     "section": "Numerical Optim. for MLEs",
-    "text": "Numerical Optim. for MLEs\n\n#Use optim function with initial values and define the lower and upper limits of the possible values\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X = X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\nComparison\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit   0.6549253  -1.011598  0.1221050\nours      0.6549260  -1.011601  0.1221027"
+    "text": "Numerical Optim. for MLEs\nWe can use the optim function with initial values and define the lower and upper limits of the possible values\n\n  fit1 &lt;- optim(\n    par = c(0,0,0), #start\n    X = X,\n    fn = neg.log.like,\n    method = \"L-BFGS-B\",\n    lower = c(-10, -10, -10),\n    upper = c(10, 10, 10)\n  )\n\n\nComparison\n\n\n        (Intercept) siteSite 2 siteSite 3\nglm.fit   0.6549253  -1.011598  0.1221050\nours      0.6549260  -1.011601  0.1221027"
   },
   {
     "objectID": "FW670/glm2.html#control-over-dummy-coding",
     "href": "FW670/glm2.html#control-over-dummy-coding",
     "title": "Generalized Linear Models II ",
     "section": "Control over Dummy Coding",
-    "text": "Control over Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re = relevel(dat$site,ref=\"Site 2\")\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y~site.re,\n             data = dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -0.3567     0.1890  -1.887   0.0591 .  \nsite.reSite 1   1.0116     0.2207   4.584 4.56e-06 ***\nsite.reSite 3   1.1337     0.2173   5.218 1.81e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
+    "text": "Control over Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re = relevel(dat$site,\n                      ref=\"Site 2\"\n                      )\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y ~ site.re,\n             data = dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -0.3567     0.1890  -1.887   0.0591 .  \nsite.reSite 1   1.0116     0.2207   4.584 4.56e-06 ***\nsite.reSite 3   1.1337     0.2173   5.218 1.81e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
   },
   {
     "objectID": "FW670/glm2.html#same-model-different-estimates",
@@ -15453,7 +15453,7 @@
     "href": "FW670/glm2.html#more-control",
     "title": "Generalized Linear Models II ",
     "section": "More Control!",
-    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y~site, \n             data = dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
+    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y ~ site, \n             data = dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
   },
   {
     "objectID": "FW670/glm2.html#deviation-coding-interpretation",
@@ -15467,35 +15467,35 @@
     "href": "FW670/glm2.html#intuition-check",
     "title": "Generalized Linear Models II ",
     "section": "Intuition Check",
-    "text": "Intuition Check\n\nmean.group = aggregate(y, by=list(site=site),FUN=mean)\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\n\n\n#Site 1\nexp(0.3584266 + 0.2964994)\n\n[1] 1.925\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 1.925\n\n\n\n\n\n\n#Site 2\nexp(0.3584266 + -0.7151015 )\n\n[1] 0.7\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 0.7\n\n\n\n\n\n\n#Site 3\nexp(0.3584266 + 0.4186021)\n\n[1] 2.175\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 2.175"
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\n\nSite 1\n\nexp(0.3584266 + 0.2964994)\n\n[1] 1.925\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 1.925"
   },
   {
     "objectID": "FW670/glm2.html#more-control-again",
     "href": "FW670/glm2.html#more-control-again",
     "title": "Generalized Linear Models II ",
     "section": "More Control Again",
-    "text": "More Control Again\nContrasts\nNo shared connection among these partial intercepts\n\n  model4=glm(y~0+site, \n             data=dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0 + site, data = dat), n = 6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
+    "text": "More Control Again\nContrasts\nNo shared connection among these partial intercepts\n\n  model4=glm(y ~ 0 + site, \n             data = dat, \n             family = poisson(link = 'log')\n            )\n\n# No shared intercept\nhead(model.matrix(~0 + site, data = dat), n = 6)\n\n  siteSite 1 siteSite 2 siteSite 3\n1          1          0          0\n2          0          1          0\n3          0          0          1\n4          1          0          0\n5          0          1          0\n6          0          0          1"
   },
   {
     "objectID": "FW670/glm2.html#same-model-different-estimates-1",
     "href": "FW670/glm2.html#same-model-different-estimates-1",
     "title": "Generalized Linear Models II ",
     "section": "Same Model Different Estimates",
-    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   0.6549260 -1.0116009  0.1221027\nModel2  -0.3566749  1.0116009  1.1337036\nModel3   0.3584266  0.2964994 -0.7151015\nModel4   0.6549260 -0.3566749  0.7770287\n\n\nPredictions\n\n\n           1   2     3     4   5\nModel1 1.925 0.7 2.175 1.925 0.7\nModel2 1.925 0.7 2.175 1.925 0.7\nModel3 1.925 0.7 2.175 1.925 0.7\nModel4 1.925 0.7 2.175 1.925 0.7\n\n\nDeviance\n\n\n           [,1]\nModel1 305.7557\nModel2 305.7557\nModel3 305.7557\nModel4 305.7557"
+    "text": "Same Model Different Estimates\nCoeficients\n\n\n       (Intercept) siteSite 2 siteSite 3\nModel1   0.6549260 -1.0116009  0.1221027\nModel2  -0.3566749  1.0116009  1.1337036\nModel3   0.3584266  0.2964994 -0.7151015\nModel4   0.6549260 -0.3566749  0.7770287\n\n\nPredictions\n\n\n           1   2     3     4   5\nModel1 1.925 0.7 2.175 1.925 0.7\nModel2 1.925 0.7 2.175 1.925 0.7\nModel3 1.925 0.7 2.175 1.925 0.7\nModel4 1.925 0.7 2.175 1.925 0.7\n\n\nAIC\n\n\n           [,1]\nModel1 496.3342\nModel2 496.3342\nModel3 496.3342\nModel4 496.3342"
   },
   {
     "objectID": "FW670/glm2.html#taking-control",
     "href": "FW670/glm2.html#taking-control",
     "title": "Generalized Linear Models II ",
     "section": "Taking Control",
-    "text": "Taking Control\n\nX = model.matrix(~Independent Variables)\n\n#all variables in dat (additive)\nX = model.matrix(~., data = dat)\n\n#all variables in dat (pair-wise interactions)\nX = model.matrix(~.^2, data = dat)\n\n#all variables in dat (three way- interactions)\nX = model.matrix(~.^3, data = dat) \n\nmodel = glm(y~ 0 + X, ...)"
+    "text": "Taking Control\n\n# All variables in dat (additive)\nX = model.matrix(~., data = dat)\n\n# All variables in dat (pair-wise interactions)\nX = model.matrix(~.^2, data = dat)\n\n# All variables in dat (three way- interactions)\nX = model.matrix(~.^3, data = dat) \n\nmodel = glm(y~ 0 + X, ...)"
   },
   {
     "objectID": "FW670/glm2.html#poisson-regression-offset",
     "href": "FW670/glm2.html#poisson-regression-offset",
     "title": "Generalized Linear Models II ",
     "section": "Poisson Regression (offset)",
-    "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\n\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design. Rather, we want to model the rate - counts per unit area.\n\n\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
+    "text": "Poisson Regression (offset)\nWhat if our counts of pika are at plots with different sizes?\n\nPlot size (\\(\\textbf{A}\\)) needs to be controlled for. But, we don’t want to estimate an effect as it’s part of the design. Rather, we want to model our data as a rate - counts per unit area.\n\n\n\\[\n\\begin{align*}\n\\textbf{y} \\sim & \\text{Poisson}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}})\\\\\n\\text{log}(\\frac{\\boldsymbol{\\lambda}}{\\textbf{A}}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/glm2.html#offset",
@@ -15509,7 +15509,7 @@
     "href": "FW670/glm2.html#offset-code",
     "title": "Generalized Linear Models II ",
     "section": "Offset Code",
-    "text": "Offset Code\n\nmodel.rate1 = glm(y~site+offset(log(area)),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y~site,\n            offset = log(area),\n            data=dat, \n            family = poisson(link = 'log')\n            )\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790"
+    "text": "Offset Code\n\nmodel.rate1 = glm(y ~ site + offset(log(area)),\n            data = dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y ~ site,\n            offset = log(area),\n            data = dat, \n            family = poisson(link = 'log')\n            )\n\n\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790"
   },
   {
     "objectID": "FW670/glm2.html#section",
@@ -15530,21 +15530,21 @@
     "href": "FW670/glm2.html#additive",
     "title": "Generalized Linear Models II ",
     "section": "Additive",
-    "text": "Additive\nContinuous and Categorical\nLinear Combination on log-scale\n\nm1 = glm(y~site+herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m1, condition=c(\"herb.cover\",\"site\"),type=\"link\")\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m1, \n                                  condition=c(\"herb.cover\",\"site\"),\n                                  type=\"response\")"
+    "text": "Additive\nContinuous and Categorical\nLinear Combination on log-scale\n\nm1 = glm(y ~ site + herb.cover, \n         data = dat,\n         family = poisson(link = 'log')\n         )\n\nmarginaleffects::plot_predictions(m1, \n                                  condition=c(\"herb.cover\",\"site\"),\n                                  type=\"link\"\n                                  )\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m1, \n                                  condition=c(\"herb.cover\",\"site\"),\n                                  type=\"response\")"
   },
   {
     "objectID": "FW670/glm2.html#additive-1",
     "href": "FW670/glm2.html#additive-1",
     "title": "Generalized Linear Models II ",
     "section": "Additive",
-    "text": "Additive\nContinuous and Continuous\nLinear Combination on log-scale\n\nm2 = glm(y~dist.trail+herb.cover,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m2, \n                                  condition=c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"link\")\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m2, \n                                  condition=c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"response\")"
+    "text": "Additive\nContinuous and Continuous\nLinear Combination on log-scale\n\nm2 = glm(y ~ dist.trail + herb.cover,\n         data = dat, \n         family = poisson(link = 'log')\n         )\n\nmarginaleffects::plot_predictions(m2, \n                                  condition = c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"link\"\n                                  )\n\n\n\n\n\n\n\n\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m2, \n                                  condition = c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"response\")"
   },
   {
     "objectID": "FW670/glm2.html#interaction",
     "href": "FW670/glm2.html#interaction",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Categorical\n\nm3 = glm(y~site*herb.cover,data=dat,family = poisson(link = 'log'))\nm3 = glm(y~site+herb.cover+site:herb.cover,data=dat,family = poisson(link = 'log'))\nhead(model.matrix(~site*herb.cover,data=dat))\n\n  (Intercept) siteSite 2 siteSite 3  herb.cover siteSite 2:herb.cover\n1           1          0          0 -0.22630093            0.00000000\n2           1          1          0  0.02221148            0.02221148\n3           1          0          1 -1.01517375            0.00000000\n4           1          0          0  1.18038309            0.00000000\n5           1          1          0 -2.04470642           -2.04470642\n6           1          0          1  2.44433686            0.00000000\n  siteSite 3:herb.cover\n1              0.000000\n2              0.000000\n3             -1.015174\n4              0.000000\n5              0.000000\n6              2.444337"
+    "text": "Interaction\nContinuous and Categorical\n\nm3 = glm(y ~ site*herb.cover,\n         data=dat,\n         family = poisson(link = 'log')\n         )\n\nm3 = glm(y ~ site + herb.cover + site:herb.cover,\n         data = dat, \n         family = poisson(link = 'log')\n         )\n\nhead(model.matrix(~site*herb.cover,\n                  data = dat\n                  )\n     )\n\n  (Intercept) siteSite 2 siteSite 3  herb.cover siteSite 2:herb.cover\n1           1          0          0 -0.22630093            0.00000000\n2           1          1          0  0.02221148            0.02221148\n3           1          0          1 -1.01517375            0.00000000\n4           1          0          0  1.18038309            0.00000000\n5           1          1          0 -2.04470642           -2.04470642\n6           1          0          1  2.44433686            0.00000000\n  siteSite 3:herb.cover\n1              0.000000\n2              0.000000\n3             -1.015174\n4              0.000000\n5              0.000000\n6              2.444337"
   },
   {
     "objectID": "FW670/glm2.html#interaction-1",
@@ -15565,21 +15565,21 @@
     "href": "FW670/glm2.html#interaction-3",
     "title": "Generalized Linear Models II ",
     "section": "Interaction",
-    "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y~herb.cover*dist.trail,data=dat, family = poisson(link = 'log'))\nm4 = glm(y~herb.cover+dist.trail+herb.cover:dist.trail,data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
+    "text": "Interaction\nContinuous and Continuous\n\nm4 = glm(y ~ herb.cover*dist.trail,\n         data = dat, \n         family = poisson(link = 'log')\n         )\n\nm4 = glm(y ~ herb.cover + dist.trail + herb.cover:dist.trail,\n         data = dat,\n         family = poisson(link = 'log')\n         )"
   },
   {
     "objectID": "FW670/glm2.html#polynomial",
     "href": "FW670/glm2.html#polynomial",
     "title": "Generalized Linear Models II ",
     "section": "Polynomial",
-    "text": "Polynomial\nQuadratic\n\nm5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))\nm5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"link\")\n\n\n\n\n\n\n\n\n\nm5 = glm(y~poly(dist.trail,2),data=dat,family = poisson(link = 'log'))\nm5 = glm(y~dist.trail+I(dist.trail^2),data=dat,family = poisson(link = 'log'))\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"response\")"
+    "text": "Polynomial\nQuadratic\n\nm5 = glm(y ~ poly(dist.trail,2),\n         data = dat,\n         family = poisson(link = 'log')\n         )\n\nm5 = glm(y ~ dist.trail + I(dist.trail^2),\n         data = dat,\n         family = poisson(link = 'log')\n         )"
   },
   {
     "objectID": "FW670/glm2.html#recap",
     "href": "FW670/glm2.html#recap",
     "title": "Generalized Linear Models II ",
     "section": "Recap",
-    "text": "Recap\n\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
+    "text": "Recap\n\nPoisson Regression\nNumerical Optimization\nCategorical variables &gt;2 levels\nEffect Coding\nVariable Combinations"
   },
   {
     "objectID": "FW670/glm2.html#section-1",
@@ -19073,5 +19073,40 @@
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Simulation",
     "text": "Logistic Regression Simulation\n\n#Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
+  },
+  {
+    "objectID": "FW670/glm2.html#intuition-check-1",
+    "href": "FW670/glm2.html#intuition-check-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Intuition Check",
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 2\n\nexp(0.3584266 + -0.7151015)\n\n[1] 0.7\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 0.7"
+  },
+  {
+    "objectID": "FW670/glm2.html#intuition-check-2",
+    "href": "FW670/glm2.html#intuition-check-2",
+    "title": "Generalized Linear Models II ",
+    "section": "Intuition Check",
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 3\n\nexp(0.3584266 + 0.4186021)\n\n[1] 2.175\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 2.175"
+  },
+  {
+    "objectID": "FW670/glm2.html#additive-2",
+    "href": "FW670/glm2.html#additive-2",
+    "title": "Generalized Linear Models II ",
+    "section": "Additive",
+    "text": "Additive\nContinuous and Continuous\nLinear Combination on response-scale\n\nmarginaleffects::plot_predictions(m2, \n                                  condition = c(\"dist.trail\",\"herb.cover\"),\n                                  type=\"response\")"
+  },
+  {
+    "objectID": "FW670/glm2.html#interaction-4",
+    "href": "FW670/glm2.html#interaction-4",
+    "title": "Generalized Linear Models II ",
+    "section": "Interaction",
+    "text": "Interaction\nContinuous and Continuous\n\nmarginaleffects::plot_predictions(m4, condition=c(\"herb.cover\",\"dist.trail\"))"
+  },
+  {
+    "objectID": "FW670/glm2.html#polynomial-1",
+    "href": "FW670/glm2.html#polynomial-1",
+    "title": "Generalized Linear Models II ",
+    "section": "Polynomial",
+    "text": "Polynomial\nQuadratic\n\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"link\")\n\n\n\n\n\n\n\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"response\")"
   }
 ]
