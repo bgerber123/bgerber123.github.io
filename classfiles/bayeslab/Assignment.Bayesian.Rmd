@@ -1,7 +1,7 @@
 ---
 title: "Bayesian Assignment"
 author: "Brian D. Gerber"
-date: "2024-8-27"
+date: "2026-7-8"
 output: html_document
 ---
 
@@ -69,7 +69,7 @@ To decide on your two different prior probability distributions, you need to und
 
 ### **Part 2**
 
-Here, the goal is to replicate one of the analyses from above (1 data set and 1 set of priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'; if you use rstanarm, setting the priors is rather complicated. For the the purpose of this exercise, it is okay to use the default priors. Looking the attributes of the fitted model object from stan to figure out what the default prior is and plot it. 
+Here, the goal is to replicate one of the analyses from above (1 data set and 1 set of priors) using JAGS via the r pacakge 'rjags' or Stan via the rpackage 'rstanarm'; if you use rstanarm, setting the priors is rather complicated. For the the purpose of this exercise, it is okay to use the default priors. Look at the attributes of the fitted model object from stan to figure out what the default prior is and plot it. 
 
 For JAGS, you will need to setup a model.jags file that has the likelihood and prior. Note, that the probability density functions in JAGS for Gamma and Poisson are dgamma, and dpois, respectively.
 

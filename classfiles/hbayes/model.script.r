@@ -28,16 +28,16 @@
                 sample_prior = TRUE
                 )
 
-#save(brm.fit,file="brm.fit")
-#load("brm.fit")
+# save(brm.fit,file="brm.fit")
+# load("brm.fit")
   
-#See underlying model
+# See underlying model
   brm.fit$model
 
-#See default priors
+# See default priors
   get_prior(brm.fit)
 
-#Get values of prior distributions
+# Get values of prior distributions
   draws = prior_draws(brm.fit)
   head(draws)
   plot(density(draws[,1]),lwd=4)
@@ -52,7 +52,6 @@
 #Extract 'fixed' and 'random effects'
   ranef(brm.fit)
   fixef(brm.fit)
-
 
 #Trace Plots
   mcmc_plot(brm.fit, 
@@ -71,66 +70,75 @@
 #####################################
 # Fit the same model in JAGS (parameterized the same - Version 2; see pdf)
 
-  #JAGS data list
-  data=list(
-    y = dat$occur,
-    N = length(dat$occur),
-    dist.human = dat$dist.human,
-    PA = sub('..', '', dat$PA),
-    N.PA = length(unique(dat$PA))
-  )
+# JAGS data list
+  data = list(
+              y = dat$occur,
+              N = length(dat$occur),
+              dist.human = dat$dist.human,
+              PA = sub('..', '', dat$PA),
+              N.PA = length(unique(dat$PA))
+              )
   
-  #MCMC inputs  
+  # MCMC inputs  
   n.chains=3
   n.adapt=1000
   n.iter=5000
   thin=2
   burn=1000
   
-  # Model Parameters to save values of
+# Model Parameters to save values of
   parms=c("b0","b1","b2","sigma.b1")	
   
   
-  # Look at logistic prior
+# Look at logistic prior
   samps = rlogis(100000, location = 0, scale = 1)
   plot(density(samps),lwd=3)
-  # Look at logistic prior on probability scale
+  
+# Look at logistic prior on probability scale
   plot(density(plogis(samps)),lwd=3)
   
-  # Look at normal prior with large std. deviation
+# Look at normal prior with large std. deviation
   samps = rnorm(100000,0,10)
   plot(density(samps),lwd=3)
-  # Look at logistic prior on probability scale
+# Look at logistic prior on probability scale
   plot(density(plogis(samps)),lwd=3)
   
 #TAKE-AWAY!!
-# Priors are not invariant to transformations - in this case, the transformatino is the logit/expit
+# Priors are not invariant to transformations - in this case, the transformation is the logit/expit
   
-  # Setup the Model
-  jm=jags.model(file="model.jags.version2.r", data=data,n.chains=n.chains,n.adapt=n.adapt)
+# Setup the Model
+  jm = jags.model(file="model.jags.version2.r", 
+                  data = data,
+                  n.chains = n.chains,
+                  n.adapt = n.adapt
+                  )
   
-  # Update the model with the burnin
+# Update the model with the burnin
   update(jm, n.iter=burn)
   
-  #Fit the modedl  
-  post=coda.samples(jm, variable.names=parms, n.iter=n.iter, thin=thin)
+# Fit the modedl  
+  post=coda.samples(jm, 
+                    variable.names = parms, 
+                    n.iter = n.iter, 
+                    thin = thin
+                    )
   
-  #save(post,file="post1")
-  #load("post1")
+# save(post,file="post1")
+# load("post1")
   
-  #Look at chains
-  #Plot all chains MCMC iterations
+# Look at chains
+# Plot all chains MCMC iterations
   color_scheme_set("viridis")
   mcmc_trace(post)
   
-  #Fancy plot of posterior
+# Fancy plot of posterior
   mcmc_areas(as.matrix(post))
   
-  #Posterior mean and median
+# Posterior mean and median
   apply(as.matrix(post),2,mean)
   apply(as.matrix(post),2,median)
   
-  #95% Credible Intervals
+# 95% Credible Intervals
   apply(as.matrix(post),2,quantile, probs=c(0.025,0.5,0.975))
   
 # Compare with brms mode fit  
@@ -157,27 +165,35 @@
             )
 
 #MCMC inputs  
-  n.chains=3
-  n.adapt=1000
-  n.iter=5000
-  thin=2
-  burn=1000
+  n.chains = 3
+  n.adapt = 1000
+  n.iter = 5000
+  thin = 2
+  burn = 1000
 
 # Model Parameters to save values of
-  parms=c("b0","b1","mu.b1","sigma.b1")	
+  parms = c("b0","b1","mu.b1","sigma.b1")	
 
   
   # Setup the Model
-  jm=jags.model(file="model.jags.version1.r", data=data,n.chains=n.chains,n.adapt=n.adapt)
+  jm = jags.model(file="model.jags.version1.r", 
+                  data = data,
+                  n.chains = n.chains,
+                  n.adapt = n.adapt
+                  )
 
 # Update the model with the burnin
   update(jm, n.iter=burn)
   
-#Fit the modedl  
-  post=coda.samples(jm, variable.names=parms, n.iter=n.iter, thin=thin)
+# Fit the modedl  
+  post = coda.samples(jm, 
+                      variable.names = parms, 
+                      n.iter = n.iter, 
+                      thin = thin
+                      )
 
-#save(post,file="post2")
-#load("post2")
+# save(post,file="post2")
+# load("post2")
   
 #Look at chains
   #Plot all chains MCMC iterations

@@ -18694,14 +18694,14 @@
     "href": "FW670/week6.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\",\"coda\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
   },
   {
     "objectID": "FW670/week6.html#week-6",
     "href": "FW670/week6.html#week-6",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\",\"coda\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
   },
   {
     "objectID": "FW670/week7.html",

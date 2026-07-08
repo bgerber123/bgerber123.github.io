@@ -5,7 +5,8 @@
 
 # Hippo survival data 
   y=c(0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
-     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0)
+     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+     )
 
 #JAGS data list
   data=list(
@@ -14,24 +15,32 @@
             )
 
 #MCMC inputs  
-  n.chains=3
-  n.adapt=1000
-  n.iter=5000
-  thin=2
-  burn=1000
+  n.chains = 3
+  n.adapt = 1000 #trains the MCMC algorithim for better mixture
+  n.iter = 5000
+  thin = 2
+  burn = 1000
 
 # Model Parameters to save values of
-  parms=c("p")	
+  parms = c("p")	
 
 
 # Setup the Model
-  jm=jags.model(file="model.jags.r", data=data,n.chains=n.chains,n.adapt=n.adapt)
+  jm = jags.model(file = "model.jags.r", 
+                  data = data,
+                  n.chains = n.chains,
+                  n.adapt = n.adapt
+                  )
 
 # Update the model with the burnin
   update(jm, n.iter=burn)
   
-#Fit the modedl  
-  post=coda.samples(jm, variable.names=parms, n.iter=n.iter, thin=thin)
+# Fit the modedl  
+  post = coda.samples(jm, 
+                      variable.names = parms, 
+                      n.iter = n.iter, 
+                      thin = thin
+                      )
 
 #Basic Plot of posterior
   hist(as.matrix(post))

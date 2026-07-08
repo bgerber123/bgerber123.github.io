@@ -16,12 +16,12 @@
 
 \Large
 
-We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in protected area $j$ is modeled as,
 
 \begin{align*}
 y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
 \text{logit}(p_{i,j}) &= \beta_{0} + \beta_{1}\times \text{dist.human}_{i,j}+ \epsilon_{i,j}\\
-\epsilon_{i,j} \sim \text{Normal}(0,\sigma)
+\epsilon_{i,j} &\sim \text{Normal}(0,\sigma)
 \end{align*}
 
 \subsubsection{Priors}
@@ -64,12 +64,12 @@ model {
 
 \Large
 
-We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+We want to fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in protected area $j$ is modeled as,
 
 \begin{align*}
-y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+y_{i,j} &\sim \text{Bernoulli}(p_{i,j})\\
 \text{logit}(p_{i,j}) &= \beta_{0} + \beta_{1}\times \text{dist.human}_{i,j}+ \epsilon_{j}\\
-\epsilon_{j} &\sim \text{Normal}(0,\sigma)
+\epsilon_{j} \sim& \text{Normal}(0,\sigma)
 \end{align*}
 
 \subsubsection{Priors}
