@@ -218,7 +218,7 @@ code.r{
 Bayesian Inference
 </p></li>
 <li><p style="color:orange">
-Bayes Thereom
+Bayes Theorem
 </p></li>
 <li><p style="color:orange">
 Bayesian Components
@@ -280,8 +280,36 @@ Do we want to make probability statements about our parameters?
 <section id="likelihood-inference" class="slide level2">
 <h2>Likelihood Inference</h2>
 <p>Estimate of the population size of hedgehogs at two sites.</p>
+<div class="cell" data-layout-align="center">
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Site</th>
+<th style="text-align: right;">Pop.Size</th>
+<th style="text-align: right;">lowerCI</th>
+<th style="text-align: right;">upperCI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Site 1</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Site 2</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">120</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="bayesian-inference" class="slide level2">
 <h2>Bayesian Inference</h2>
 <p><span style="color:orange">Posterior Samples</span></p>
@@ -304,35 +332,60 @@ Do we want to make probability statements about our parameters?
  [8]  83.99927  64.74208  26.93133</code></pre>
 </div>
 </div>
-
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-5-2.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="bayesian-inference-2" class="slide level2">
 <h2>Bayesian Inference</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diff<span class="ot">=</span>post2<span class="sc">-</span>post1</span>
-<span id="cb3-2"><a></a><span class="fu">length</span>(<span class="fu">which</span>(diff<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(diff)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="bayesian-inference-3" class="slide level2">
+<h2>Bayesian Inference</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diff <span class="ot">=</span> post2<span class="sc">-</span>post1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
+<p>P(Pop Size 2 &gt; Pop Size 1) =</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">length</span>(<span class="fu">which</span>(diff<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(diff)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8362</code></pre>
 </div>
 </div>
+</div>
 </section>
-<section id="likelihood-inference-coeficient" class="slide level2 scrollable">
-<h2>Likelihood Inference (coeficient)</h2>
+<section id="likelihood-inference-coefficient" class="slide level2 scrollable">
+<h2>Likelihood Inference (coefficient)</h2>
 <p>y is Body size of a beetle species</p>
 <p>x is elevation</p>
 <div class="fragment">
+<p>Interpret the p-values…</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">summary</span>(<span class="fu">glm</span>(y<span class="sc">~</span>x))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">summary</span>(<span class="fu">glm</span>(b.size<span class="sc">~</span>elev))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-glm(formula = y ~ x)
+glm(formula = b.size ~ elev)
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
 (Intercept)   0.9862     0.2435   4.049 0.000684 ***
-x             0.5089     0.4022   1.265 0.221093    
+elev          0.5089     0.4022   1.265 0.221093    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -347,45 +400,75 @@ Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 </div>
 </section>
-<section id="bayesian-inference-coeficient" class="slide level2">
-<h2>Bayesian Inference (coeficient)</h2>
+<section id="bayesian-inference-coefficient" class="slide level2">
+<h2>Bayesian Inference (coefficient)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="bayesian-inference-coeficient-1" class="slide level2 scrollable">
-<h2>Bayesian Inference (coeficient)</h2>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="describing-the-posterior" class="slide level2 scrollable">
+<h2>Describing the posterior</h2>
+<p><strong>Central Tendency:</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co">#Posterior Mean</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">mean</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>  <span class="fu">mean</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5185186</code></pre>
 </div>
 </div>
-<p><br></p>
-<div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co">#Credible/Probability Intervals </span></span>
-<span id="cb9-2"><a></a>  <span class="fu">quantile</span>(post,<span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>  <span class="fu">quantile</span>(post,<span class="at">prob=</span><span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      50% 
+0.5319192 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>  modeest<span class="sc">::</span><span class="fu">shorth</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5438012</code></pre>
+</div>
+</div>
+</section>
+<section id="describing-the-posterior-1" class="slide level2 scrollable">
+<h2>Describing the posterior</h2>
+<p><strong>Probability Intervals</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Quantile Credible Intervals:</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">quantile</span>(post,</span>
+<span id="cb14-3"><a></a>           <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.025</span>,<span class="fl">0.975</span>)</span>
+<span id="cb14-4"><a></a>           )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     2.5%     97.5% 
 -1.461887  2.403232 </code></pre>
 </div>
 </div>
-<p><br></p>
-</div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># #Probabilty of a postive effect</span></span>
-<span id="cb11-2"><a></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Highest Posterior Density Intervals (HPDI)</span></span>
+<span id="cb16-2"><a></a>  coda<span class="sc">::</span><span class="fu">HPDinterval</span>(coda<span class="sc">::</span><span class="fu">as.mcmc</span>(post),</span>
+<span id="cb16-3"><a></a>                    <span class="at">prob =</span> <span class="fl">0.95</span></span>
+<span id="cb16-4"><a></a>                    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         lower    upper
+var1 -1.534921 2.283981
+attr(,"Probability")
+[1] 0.95</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="describing-the-posterior-2" class="slide level2 scrollable">
+<h2>Describing the posterior</h2>
+<p><strong>Derived Probabilities</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># Probability of a positive effect (exact p-value)</span></span>
+<span id="cb18-2"><a></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&gt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.709</code></pre>
 </div>
 </div>
-<p><br></p>
-</div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># #Probabilty of a negative effect</span></span>
-<span id="cb13-2"><a></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Probability of a negative effect (exact p-value)</span></span>
+<span id="cb20-2"><a></a> <span class="fu">length</span>(<span class="fu">which</span>(post<span class="sc">&lt;</span><span class="dv">0</span>))<span class="sc">/</span><span class="fu">length</span>(post)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.291</code></pre>
 </div>
@@ -419,11 +502,11 @@ Marginal Probability
 <div class="cell">
 <details class="code-fold">
 <summary>Click for Answer</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co">#P(A)</span></span>
-<span id="cb15-2"><a></a><span class="dv">3</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.3</span></span>
-<span id="cb15-3"><a></a></span>
-<span id="cb15-4"><a></a><span class="co">#P(B)</span></span>
-<span id="cb15-5"><a></a><span class="dv">5</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># P(A)</span></span>
+<span id="cb22-2"><a></a><span class="dv">3</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.3</span></span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a><span class="co"># P(B)</span></span>
+<span id="cb22-5"><a></a><span class="dv">5</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div><div class="column" style="width:60%;">
@@ -454,8 +537,8 @@ Joint Probability
 <div class="cell">
 <details class="code-fold">
 <summary>Click for Answer</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co">#P(A and B)</span></span>
-<span id="cb16-2"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># P(A and B)</span></span>
+<span id="cb23-2"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">10</span> <span class="ot">=</span> <span class="fl">0.2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div><div class="column" style="width:60%;">
@@ -487,11 +570,11 @@ Conditional Probability
 <div class="cell">
 <details class="code-fold">
 <summary>Click for Answer</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co">#P(A|B)</span></span>
-<span id="cb17-2"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">5</span> <span class="ot">=</span> <span class="fl">0.4</span></span>
-<span id="cb17-3"><a></a></span>
-<span id="cb17-4"><a></a><span class="co">#P(B|A)</span></span>
-<span id="cb17-5"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="ot">=</span> <span class="fl">0.6666</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co"># P(A|B)</span></span>
+<span id="cb24-2"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">5</span> <span class="ot">=</span> <span class="fl">0.4</span></span>
+<span id="cb24-3"><a></a></span>
+<span id="cb24-4"><a></a><span class="co"># P(B|A)</span></span>
+<span id="cb24-5"><a></a><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span> <span class="ot">=</span> <span class="fl">0.6666</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div><div class="column" style="width:60%;">
@@ -522,10 +605,10 @@ OR Probability
 <div class="cell">
 <details class="code-fold">
 <summary>Click for Answer</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># P(A or B)</span></span>
-<span id="cb18-2"><a></a><span class="co"># P(A) + P(B) - P(A and B)</span></span>
-<span id="cb18-3"><a></a></span>
-<span id="cb18-4"><a></a><span class="fl">0.3</span> <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">-</span> <span class="fl">0.2</span> <span class="ot">=</span> <span class="fl">0.6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># P(A or B)</span></span>
+<span id="cb25-2"><a></a><span class="co"># P(A) + P(B) - P(A and B)</span></span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a><span class="fl">0.3</span> <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">-</span> <span class="fl">0.2</span> <span class="ot">=</span> <span class="fl">0.6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div><div class="column" style="width:60%;">
@@ -670,7 +753,7 @@ Evidence or Marginal Likelihood
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x, <span class="dv">4</span>,<span class="dv">2</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x, <span class="dv">4</span>,<span class="dv">2</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -686,7 +769,7 @@ Evidence or Marginal Likelihood
 <p><span class="math inline">\(\theta \sim \text{Beta}(\alpha = 1, \beta=1)\)</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x, <span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x, <span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -775,12 +858,12 @@ p \sim \text{Beta}( \alpha, \beta) \\
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x,<span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"p"</span>,</span>
-<span id="cb21-2"><a></a>      <span class="at">ylab =</span> <span class="st">"Prior Probability Density"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x,<span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">"p"</span>,</span>
+<span id="cb28-2"><a></a>      <span class="at">ylab =</span> <span class="st">"Prior Probability Density"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -867,11 +950,11 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)
 \]</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># Survival outcomes of three adult hippos</span></span>
-<span id="cb22-2"><a></a>  y1<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb22-3"><a></a>  N1<span class="ot">=</span><span class="fu">length</span>(y1)</span>
-<span id="cb22-4"><a></a>  mle.p<span class="ot">=</span><span class="fu">mean</span>(y1)</span>
-<span id="cb22-5"><a></a>  mle.p</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co"># Survival outcomes of three adult hippos</span></span>
+<span id="cb29-2"><a></a>  y1 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb29-3"><a></a>  N1 <span class="ot">=</span> <span class="fu">length</span>(y1)</span>
+<span id="cb29-4"><a></a>  mle.p <span class="ot">=</span> <span class="fu">mean</span>(y1)</span>
+<span id="cb29-5"><a></a>  mle.p</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2222222</code></pre>
 </div>
@@ -887,15 +970,15 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 \end{align*}
 \]</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>  alpha.prior1<span class="ot">=</span><span class="dv">1</span></span>
-<span id="cb24-2"><a></a>  beta.prior1<span class="ot">=</span><span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>  alpha.prior1 <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb31-2"><a></a>  beta.prior1 <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -905,19 +988,19 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 <section id="hippos-bayesian-model-prior-2" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Prior 2)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  alpha.prior2<span class="ot">=</span><span class="dv">10</span></span>
-<span id="cb25-2"><a></a>  beta.prior2<span class="ot">=</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>  alpha.prior2 <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb32-2"><a></a>  beta.prior2 <span class="ot">=</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-prior-3" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Prior 3)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>  alpha.prior3<span class="ot">=</span><span class="dv">150</span></span>
-<span id="cb26-2"><a></a>  beta.prior3<span class="ot">=</span><span class="dv">15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>  alpha.prior3 <span class="ot">=</span> <span class="dv">150</span></span>
+<span id="cb33-2"><a></a>  beta.prior3 <span class="ot">=</span> <span class="dv">15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 <p><span class="math display">\[
@@ -926,31 +1009,31 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 \beta^* = \beta + N - \sum_{i=1}^{N}y_i \\
 \]</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="co"># Note- the data are the same, but the prior is changing.</span></span>
-<span id="cb27-2"><a></a><span class="co"># Gibbs sampler</span></span>
-<span id="cb27-3"><a></a>  post<span class="fl">.1</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior1<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb27-4"><a></a>  post<span class="fl">.2</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior2<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
-<span id="cb27-5"><a></a>  post<span class="fl">.3</span><span class="ot">=</span><span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior3<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="co"># Note how the data are the same, but the prior is changing.</span></span>
+<span id="cb34-2"><a></a><span class="co"># Gibbs sampler</span></span>
+<span id="cb34-3"><a></a>  post<span class="fl">.1</span> <span class="ot">=</span> <span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior1<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior1<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb34-4"><a></a>  post<span class="fl">.2</span> <span class="ot">=</span> <span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior2<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior2<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span>
+<span id="cb34-5"><a></a>  post<span class="fl">.3</span> <span class="ot">=</span> <span class="fu">rbeta</span>(<span class="dv">10000</span>,alpha.prior3<span class="sc">+</span><span class="fu">sum</span>(y1),beta.prior3<span class="sc">+</span>N1<span class="sc">-</span><span class="fu">sum</span>(y1))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="hippos-bayesian-model-posteriors-1" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-2" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-3" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-1" class="slide level2">
 <h2>Hippos: More data! (Prior 1)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>y2<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,</span>
-<span id="cb28-2"><a></a>     <span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb28-3"><a></a><span class="fu">length</span>(y2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>y2 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,</span>
+<span id="cb35-2"><a></a>       <span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb35-3"><a></a><span class="fu">length</span>(y2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 40</code></pre>
 </div>
@@ -960,7 +1043,7 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -970,15 +1053,15 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="hippos-more-data-prior-2" class="slide level2">
 <h2>Hippos: More data! (Prior 2)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-3" class="slide level2">
 <h2>Hippos: More data! (Prior 3)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-dataprior-comparison" class="slide level2 scollable">
 <h2>Hippos: Data/prior Comparison</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
 <section id="section-5" class="slide level2">
 <h2></h2>
 
@@ -992,38 +1075,84 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="markov-chain-monte-carlo" class="slide level2 scrollable">
 <h2>Markov Chain Monte Carlo</h2>
 <p>Often don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.</p>
-<p><strong>Class of algorithim</strong></p>
+<p><strong>Class of algorithm</strong></p>
 <ul>
 <li>Metropolis-Hastings</li>
 <li>Gibbs</li>
 <li>Reversible-Juno</li>
 <li>No U-turn Sampling</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="markov-chain-monte-carlo-1" class="slide level2 scrollable">
+<h2>Markov Chain Monte Carlo</h2>
 <p><span class="math display">\[
 P(p|y) = \frac{\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)} }{\int_{p}(\text{numerator})}
 \]</span></p>
-</div>
 <div class="fragment">
 <p><span class="math display">\[
 P(p|y) \propto\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}
 \]</span></p>
 </div>
 </section>
-<section id="mcmc-sampling" class="slide level2">
-<h2>MCMC Sampling</h2>
+<section id="mcmc-sampling-language" class="slide level2">
+<h2>MCMC Sampling language</h2>
 <ul>
-<li>number of sample (iterations)</li>
-<li>thinning (which iterations to keep), every one (1), ever other one (2), every third one (3)</li>
-<li>burn-in (how many of the first samples to remove)</li>
-<li>chains (unique sets of samples; needed for convergence tests)</li>
+<li><span style="color:purple">iterations:</span> number of samples to draw/generate from a posterior distribution</li>
+</ul>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
+<section id="mcmc-sampling-language-1" class="slide level2">
+<h2>MCMC Sampling language</h2>
+<ul>
+<li><span style="color:purple">thinning:</span> which iterations to keep, every one (1), ever other one (2), every third one (3)</li>
+</ul>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
+<section id="mcmc-sampling-language-2" class="slide level2">
+<h2>MCMC Sampling language</h2>
+<ul>
+<li><span style="color:purple">burn-in:</span> how many of the initial samples to remove; depends on distance from initial value and the posterior distribution</li>
+</ul>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section>
+<section id="mcmc-sampling-language-3" class="slide level2">
+<h2>MCMC Sampling language</h2>
+<ul>
+<li><span style="color:purple">chains</span>: (unique sets of samples; needed for convergence tests)</li>
+</ul>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"></section>
+<section id="software-options" class="slide level2">
+<h2>Software Options</h2>
+<ul>
+<li>Write your own algorithm</li>
+<li>WinBUGS/OpenBUGS, JAGS, Stan, Nimble</li>
 </ul>
 </section>
-<section id="sofware-options" class="slide level2">
-<h2>Sofware Options</h2>
+<section id="follow-up" class="slide level2">
+<h2>Follow up</h2>
 <ul>
-<li>Write your own algorithim</li>
-<li>WinBUGS/OpenBUGS, JAGS, Stan, Nimble</li>
+<li><p style="color:orange">
+Bayesian Inference
+</p></li>
+<li><p style="color:orange">
+Bayes Thereom
+</p></li>
+<li><p style="color:orange">
+Bayesian Components
+</p>
+<ul>
+<li>likelihood, prior, evidence, posterior</li>
+</ul></li>
+<li><p style="color:orange">
+Conjugacy
+</p></li>
+<li><p style="color:orange">
+Hippo Case Study
+</p></li>
+<li><p style="color:orange">
+Bayesian Computation
+</p></li>
 </ul>
 
 

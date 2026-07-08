@@ -46,7 +46,7 @@ title: ""
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("rjags","bayesplot","rstanarm"))
+install.packages(c("rjags","bayesplot","rstanarm","coda"))
 ```
 
 - Install External Software Program [JAGS](https://sourceforge.net/projects/mcmc-jags/files/)
