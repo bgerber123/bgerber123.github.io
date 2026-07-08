@@ -15187,14 +15187,14 @@
     "href": "FW670/glm1.html#glm-1",
     "title": "Generalized Linear Models",
     "section": "GLM",
-    "text": "GLM\n\nGeneralized linear model framework\n\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma] \\\\\n\\text{g}(\\boldsymbol{\\mu}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nElements\n\nprob. function to define the RV (\\(\\textbf{y}\\))\nparameters or moments of the prob. function (\\(\\boldsymbol{\\mu},\\sigma\\))\nlink function (\\(\\text{g}(\\boldsymbol{\\mu})\\)); deterministic transformation of parameters to new scale\ninverse-link function (\\(\\text{g}^{-1}(\\boldsymbol{\\textbf{X}\\boldsymbol{\\beta}})\\)); deterministic transformation of linear combination back to parameter scale\ndesign matrix of the explanatory variables (\\(\\textbf{X}\\)); these are known\ncoefficient parameters (\\(\\boldsymbol{\\beta}\\)); needs estimating"
+    "text": "GLM\n\nGeneralized linear model framework\n\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma] \\\\\n\\text{g}(\\boldsymbol{\\mu}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nElements\n\nprob. function to define the RV (\\(\\textbf{y}\\))\nparameters or moments of the prob. function (\\(\\boldsymbol{\\mu},\\sigma\\))\nlink function (\\(\\text{g}(\\boldsymbol{\\mu})\\)); deterministic transformation of parameters to new scale"
   },
   {
     "objectID": "FW670/glm1.html#linear-regression",
     "href": "FW670/glm1.html#linear-regression",
     "title": "Generalized Linear Models",
     "section": "Linear Regression",
-    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\\\\n\\text{g}(\\boldsymbol{\\mu}) =&   \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n}  \n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x_{1,2} & x_{1,3} \\\\\n1 & x_{2,2} & x_{2,3} \\\\\n1 & x_{3,2} & x_{3,3} \\\\\n. & . .\\\\\n. & . .\\\\\nn & x_{n,2} & x_{n,3}\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size x\\(_{2}\\) & x\\(_{3}\\) are independent variables"
+    "text": "Linear Regression\nindex notation\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Normal}(\\mu_{i},\\sigma) \\\\\n\\mu_{i} =& \\beta_{0} + \\beta_{1}x_{1i} + \\beta_{2}x_{2i}\n\\end{align*}\n\\]\n\nmatrix notation\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& \\text{Normal}(\\boldsymbol{\\mu},\\sigma)\\\\\n\\boldsymbol{\\mu} =& \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\\\\n\\text{g}(\\boldsymbol{\\mu}) =&   \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\n\n\n\\[\\begin{align*}\n\n\\textbf{y} =\n\\begin{bmatrix}\ny_{1} \\\\\ny_{2} \\\\\ny_{3} \\\\\n. \\\\\n. \\\\\ny_{n}  \n\\end{bmatrix}\n\n\n\\textbf{X} =\n\\begin{bmatrix}\n1 & x_{1,2} & x_{1,3} \\\\\n1 & x_{2,2} & x_{2,3} \\\\\n1 & x_{3,2} & x_{3,3} \\\\\n. & . &.\\\\\n. & . &.\\\\\nn & x_{n,2} & x_{n,3}\n\\end{bmatrix}\n\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n\\beta_0 \\\\\n\\beta_1 \\\\\n\\beta_2 \\\\\n\\end{bmatrix}\n\\end{align*}\\]\nn = sample size x\\(_{2}\\) & x\\(_{3}\\) are independent variables"
   },
   {
     "objectID": "FW670/glm1.html#linear-algebra",
@@ -15215,7 +15215,7 @@
     "href": "FW670/glm1.html#linear-algebra-2",
     "title": "Generalized Linear Models",
     "section": "Linear Algebra",
-    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 3 1\n\n\n\n\n\n#When this is true\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
+    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 3 1\n\n\n\n\nWhen this is true…\n\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
   },
   {
     "objectID": "FW670/glm1.html#linear-algebra-3",
@@ -15229,14 +15229,14 @@
     "href": "FW670/glm1.html#elephant-linear-regression-example",
     "title": "Generalized Linear Models",
     "section": "Elephant Linear Regression Example",
-    "text": "Elephant Linear Regression Example\nCategorical Variable\n\n\n     weight    sex\n1 11488.991   Male\n2  4105.442 Female\n3  4299.308 Female"
+    "text": "Elephant Linear Regression Example\n\nCategorical Variable\n\n\n     weight    sex age.years\n1 11488.991   Male        10\n2  4105.442 Female        12\n3  4299.308 Female        15"
   },
   {
     "objectID": "FW670/glm1.html#elephant-linear-regression-example-1",
     "href": "FW670/glm1.html#elephant-linear-regression-example-1",
     "title": "Generalized Linear Models",
     "section": "Elephant Linear Regression Example",
-    "text": "Elephant Linear Regression Example\nCategorical Variable\n\nmodel = glm(weight~sex, \n            data=dat,\n            family=gaussian(link = identity)\n            )\nsummary(model)\n\n\nCall:\nglm(formula = weight ~ sex, family = gaussian(link = identity), \n    data = dat)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   4970.9      120.9   41.11   &lt;2e-16 ***\nsexMale       6848.1      180.2   37.99   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 1608053)\n\n    Null deviance: 2639772182  on 199  degrees of freedom\nResidual deviance:  318394574  on 198  degrees of freedom\nAIC: 3429.7\n\nNumber of Fisher Scoring iterations: 2"
+    "text": "Elephant Linear Regression Example\nCategorical Variable\n\nmodel = glm(weight ~ sex + age.years, \n            data = dat,\n            family = gaussian(link = identity)\n            )\nsummary(model)\n\n\nCall:\nglm(formula = weight ~ sex + age.years, family = gaussian(link = identity), \n    data = dat)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 2552.820    112.577   22.68   &lt;2e-16 ***\nsexMale     6828.965     87.891   77.70   &lt;2e-16 ***\nage.years    145.748      5.781   25.21   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 382352.1)\n\n    Null deviance: 2639772182  on 199  degrees of freedom\nResidual deviance:   75323364  on 197  degrees of freedom\nAIC: 3143.4\n\nNumber of Fisher Scoring iterations: 2"
   },
   {
     "objectID": "FW670/glm1.html#elephant-linear-regression-example-2",
@@ -15250,7 +15250,7 @@
     "href": "FW670/glm1.html#glm-and-design-matix",
     "title": "Generalized Linear Models",
     "section": "glm and design matix",
-    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~sex+age.years,data=dat)\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n\n\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\n\nSex variable is arranged by ‘Dummy Coding’"
+    "text": "glm and design matix\n\n# GLM coefs\n  X = model.matrix(~ sex + age.years,\n                   data = dat\n                   )\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n\n\n\n  glm(weight~0+X,data=dat)\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\n\nSex variable is arranged by ‘Dummy Coding’"
   },
   {
     "objectID": "FW670/glm1.html#mle-estimator-with-linear-algebra",
@@ -15264,14 +15264,14 @@
     "href": "FW670/glm1.html#link-functions",
     "title": "Generalized Linear Models",
     "section": "Link functions",
-    "text": "Link functions\n\n\\(\\text{g}(\\boldsymbol{\\mu}) = \\textbf{X}\\boldsymbol{\\beta}\\)\n\\(\\boldsymbol{\\mu} = \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\)\n\n\nLink functions map parameters from one support to another.\n\n\n\nWhy is that important for us?\n\n\n\nTo put a linear model on parameters of interest and ensure the parameter support is maintained.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputers do not like boundaries (e.g., 0 or 1). It’s easier to guess values to evaluate in a maximum liklihood optimization when there are no bounds. (\\(-\\infty\\), \\(\\infty\\))"
+    "text": "Link functions\n\n\\(\\text{g}(\\boldsymbol{\\mu}) = \\textbf{X}\\boldsymbol{\\beta}\\)\n\\(\\boldsymbol{\\mu} = \\text{g}^{-1}(\\textbf{X}\\boldsymbol{\\beta})\\)\n\n\nLink functions map parameters from one support to another.\n\n\n\nWhy is that important for us?"
   },
   {
     "objectID": "FW670/glm1.html#link-functions-1",
     "href": "FW670/glm1.html#link-functions-1",
     "title": "Generalized Linear Models",
     "section": "Link functions",
-    "text": "Link functions\nIdentity \nNo transformation is needed because the parameter support is maintained. \\[\n\\begin{align*}\n\\boldsymbol{\\mu} \\in& (-\\infty,\\infty)\\\\\n\\textbf{X}\\boldsymbol{\\beta} \\in& (-\\infty,\\infty)\n\\end{align*}\n\\]"
+    "text": "Link functions\nTo put a linear model on parameters of interest and ensure the parameter support is maintained."
   },
   {
     "objectID": "FW670/glm1.html#a-model-by-another-name",
@@ -15306,28 +15306,28 @@
     "href": "FW670/glm1.html#logitp-mapping",
     "title": "Generalized Linear Models",
     "section": "logit/p mapping",
-    "text": "logit/p mapping\n\np=seq(0.001,0.999,by=0.01)\nlogit.p=qlogis(p)\npar(cex.lab=1.5,cex.axis=1.5)\nplot(p,logit.p,type=\"l\",lwd=4,col=3,xlab='p',ylab=\"logit(p)\")"
+    "text": "logit/p mapping\n\np = seq(0.001,0.999,\n        by = 0.01\n        )\nlogit.p = qlogis(p)\npar(cex.lab=1.5,cex.axis=1.5)\nplot(p,logit.p,type=\"l\",lwd=4,col=3,xlab='p',ylab=\"logit(p)\")"
   },
   {
     "objectID": "FW670/glm1.html#logistic-regression-simulation",
     "href": "FW670/glm1.html#logistic-regression-simulation",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Simulation",
-    "text": "Logistic Regression Simulation\n\n\n#Design matrix\n  set.seed(43534)\n  Var1 = rnorm(100)\n  X = model.matrix(~Var1)\n  head(X)\n\n  (Intercept)       Var1\n1           1  1.4371396\n2           1 -0.4835090\n3           1  1.0370452\n4           1 -0.5894099\n5           1  1.2633564\n6           1 -1.9008071\n\n\n\n\n\n# marginal coefficients (on logit-scale)\n  beta=c(-2,4)\n\n#linear terms\n  lt = X%*%beta\n\n#transformation via link function to probability scale\n  p=plogis(lt)\n  head(round(p,digits=2))\n\n  [,1]\n1 0.98\n2 0.02\n3 0.90\n4 0.01\n5 0.95\n6 0.00\n\n#sample\n  set.seed(14353)\n  y = rbinom(n=length(p),size=1,p)\n  y\n\n  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0\n [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0\n [75] 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0\n\n\n\n\n\n#Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
+    "text": "Logistic Regression Simulation\n\n\n# Design matrix\n  set.seed(43534)\n  Var1 = rnorm(100)\n  X = model.matrix(~Var1)\n  head(X)\n\n  (Intercept)       Var1\n1           1  1.4371396\n2           1 -0.4835090\n3           1  1.0370452\n4           1 -0.5894099\n5           1  1.2633564\n6           1 -1.9008071"
   },
   {
     "objectID": "FW670/glm1.html#logistic-regression-estimation",
     "href": "FW670/glm1.html#logistic-regression-estimation",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Estimation",
-    "text": "Logistic Regression Estimation\n\n# Fit model to sample \n  model1=glm(y~0+X, family = binomial(link = \"logit\"))\n  summary(model1)\n\n\nCall:\nglm(formula = y ~ 0 + X, family = binomial(link = \"logit\"))\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \nX(Intercept)  -2.5304     0.6473  -3.909 9.25e-05 ***\nXVar1          5.4198     1.2232   4.431 9.38e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 138.63  on 100  degrees of freedom\nResidual deviance:  39.14  on  98  degrees of freedom\nAIC: 43.14\n\nNumber of Fisher Scoring iterations: 7"
+    "text": "Logistic Regression Estimation\n\n# Fit model to sample \n  model1 = glm(y ~ 0 + X, \n               family = binomial(link = \"logit\")\n               )\n  summary(model1)\n\n\nCall:\nglm(formula = y ~ 0 + X, family = binomial(link = \"logit\"))\n\nCoefficients:\n             Estimate Std. Error z value Pr(&gt;|z|)    \nX(Intercept)  -2.5304     0.6473  -3.909 9.25e-05 ***\nXVar1          5.4198     1.2232   4.431 9.38e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for binomial family taken to be 1)\n\n    Null deviance: 138.63  on 100  degrees of freedom\nResidual deviance:  39.14  on  98  degrees of freedom\nAIC: 43.14\n\nNumber of Fisher Scoring iterations: 7"
   },
   {
     "objectID": "FW670/glm1.html#logistic-regression-evaluation",
     "href": "FW670/glm1.html#logistic-regression-evaluation",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Evaluation",
-    "text": "Logistic Regression Evaluation\n\n #sample many times  \n  n.sim=1000\n  y.many = replicate(n.sim,rbinom(n=length(p),size=1,p))\n  dim(y.many)\n\n[1]  100 1000\n\n #Estimate coefs for all 100 samples\n  coef.est=apply(y.many,2,FUN=function(y){\n          model1=glm(y~0+X, family = binomial(link = \"logit\"))\n          \n  model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
+    "text": "Logistic Regression Evaluation\n\n #sample many times  \n  n.sim=1000\n  y.many = replicate(n.sim,\n                     rbinom(n = length(p),\n                            size=1,\n                            p)\n                     )\n  dim(y.many)\n\n[1]  100 1000\n\n #Estimate coefs for all 100 samples\n  coef.est=apply(y.many,2,FUN=function(y){\n          model1=glm(y ~ 0 + X, \n                     family = binomial(link = \"logit\")\n                     )\n          \n  model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
   },
   {
     "objectID": "FW670/glm1.html#plot-intercept",
@@ -15362,7 +15362,7 @@
     "href": "FW670/glm1.html#logistic-regression-biased-correction",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Biased Correction",
-    "text": "Logistic Regression Biased Correction\nbrglm: Bias Reduction in Binomial-Response Generalized Linear Models\n\nbrglm::brglm(y~0+X, family = binomial(link = \"logit\"))\n\n\n\n# Relative Bias\n  (mean(coef.est[1,])-beta[1])/beta[1]\n\n[1] 0.007785692\n\n  (mean(coef.est[2,])-beta[2])/beta[2]\n\n[1] 0.008799186"
+    "text": "Logistic Regression Biased Correction\nbrglm: Bias Reduction in Binomial-Response Generalized Linear Models\n\nbrglm::brglm(y ~ 0 + X, \n             family = binomial(link = \"logit\")\n             )\n\n\n\n# Relative Bias\n  (mean(coef.est[1,])-beta[1])/beta[1]\n\n[1] 0.007785692\n\n  (mean(coef.est[2,])-beta[2])/beta[2]\n\n[1] 0.008799186"
   },
   {
     "objectID": "FW670/glm1.html#recap",
@@ -15754,35 +15754,35 @@
     "href": "FW670/hierarchical.html#model-1-complete-pooling",
     "title": "Hierarchical Models",
     "section": "Model 1 (Complete Pooling)",
-    "text": "Model 1 (Complete Pooling)\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y~1, family=poisson(link=\"log\"),data=dat)\n\n\n\n\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n   532.2    534.4   -265.1    530.2       61 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.91165    0.02962   98.31   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 1 (Complete Pooling)\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y~1, family=poisson(link=\"log\"),data=dat)\n\n\n\n\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    532.2     534.4    -265.1     530.2        61 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.91165    0.02962   98.31   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-1-complete-pooling-1",
     "href": "FW670/hierarchical.html#model-1-complete-pooling-1",
     "title": "Hierarchical Models",
     "section": "Model 1 (Complete Pooling)",
-    "text": "Model 1 (Complete Pooling)\n\nmarginaleffects::predictions(model1,type = \"response\")\n\n\n Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n--- 52 rows omitted. See ?avg_predictions and ?print.marginaleffects --- \n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\nType:  response \nColumns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, y"
+    "text": "Model 1 (Complete Pooling)\n\nmarginaleffects::predictions(model1,type = \"response\")\n\n\n Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n--- 52 rows omitted. See ?print.marginaleffects ---\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\nType: response"
   },
   {
     "objectID": "FW670/hierarchical.html#model-2-no-pooling",
     "href": "FW670/hierarchical.html#model-2-no-pooling",
     "title": "Hierarchical Models",
     "section": "Model 2 (No Pooling)",
-    "text": "Model 2 (No Pooling)\n\nmodel2 = glmmTMB(y~veg, family=poisson(link=\"log\"),data=dat,\n                 contrasts = list(veg = \"contr.sum\"))\n\n\n\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ veg\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n   369.4    380.1   -179.7    359.4       57 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.93764    0.04235   69.37  &lt; 2e-16 ***\nveg1        -0.13427    0.14133   -0.95    0.342    \nveg2        -0.42398    0.06498   -6.52 6.82e-11 ***\nveg3        -0.29146    0.06262   -4.65 3.25e-06 ***\nveg4         0.47681    0.06138    7.77 7.94e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 2 (No Pooling)\n\nmodel2 = glmmTMB(y~veg, family=poisson(link=\"log\"),data=dat,\n                 contrasts = list(veg = \"contr.sum\"))\n\n\n\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ veg\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    369.4     380.1    -179.7     359.4        57 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.93764    0.04235   69.37  &lt; 2e-16 ***\nveg1        -0.13427    0.14133   -0.95    0.342    \nveg2        -0.42398    0.06498   -6.52 6.82e-11 ***\nveg3        -0.29146    0.06262   -4.65 3.25e-06 ***\nveg4         0.47681    0.06138    7.77 7.94e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-2-no-pooling-1",
     "href": "FW670/hierarchical.html#model-2-no-pooling-1",
     "title": "Hierarchical Models",
     "section": "Model 2 (No Pooling)",
-    "text": "Model 2 (No Pooling)\n\nmarginaleffects::predictions(model2, \n                             newdata = data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                             re.form=NA)\n\n\n Estimate Std. Error     z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     16.5      2.872  5.74   &lt;0.001  26.7  10.9   22.1\n     12.4      0.786 15.72   &lt;0.001 182.5  10.8   13.9\n     14.1      0.840 16.79   &lt;0.001 207.8  12.5   15.7\n     30.4      1.744 17.44   &lt;0.001 223.7  27.0   33.8\n     27.4      1.655 16.55   &lt;0.001 202.0  24.2   30.6\n\nType:  response \nColumns: rowid, estimate, std.error, statistic, p.value, s.value, conf.low, conf.high, veg, y"
+    "text": "Model 2 (No Pooling)\n\nmarginaleffects::predictions(model2, \n                             newdata = data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                             re.form=NA)\n\n\n Estimate Std. Error     z Pr(&gt;|z|)     S 2.5 % 97.5 %  veg\n     16.5      2.872  5.74   &lt;0.001  26.7  10.9   22.1 Veg1\n     12.4      0.786 15.72   &lt;0.001 182.5  10.8   13.9 Veg2\n     14.1      0.840 16.79   &lt;0.001 207.8  12.5   15.7 Veg3\n     30.4      1.744 17.44   &lt;0.001 223.7  27.0   33.8 Veg4\n     27.4      1.655 16.55   &lt;0.001 202.0  24.2   30.6 Veg5\n\nType: response"
   },
   {
     "objectID": "FW670/hierarchical.html#model-3-partial-pooling",
     "href": "FW670/hierarchical.html#model-3-partial-pooling",
     "title": "Hierarchical Models",
     "section": "Model 3 (Partial Pooling)",
-    "text": "Model 3 (Partial Pooling)\n\nmodel3 = glmmTMB(y~1+(1|veg), family=poisson(link=\"log\"),data=dat)\n\n\n\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | veg)\nData: dat\n\n     AIC      BIC   logLik deviance df.resid \n   384.4    388.6   -190.2    380.4       60 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n veg    (Intercept) 0.1299   0.3604  \nNumber of obs: 62, groups:  veg, 5\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.9391     0.1662   17.69   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 3 (Partial Pooling)\n\nmodel3 = glmmTMB(y~1+(1|veg), family=poisson(link=\"log\"),data=dat)\n\n\n\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | veg)\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    384.4     388.6    -190.2     380.4        60 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n veg    (Intercept) 0.1299   0.3604  \nNumber of obs: 62, groups:  veg, 5\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.9391     0.1662   17.69   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-3-partial-pooling-1",
@@ -15838,7 +15838,7 @@
     "href": "FW670/hierarchical.html#random-intercept-slope-1",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\nre.model = glmer(y~cov+(cov|veg), family=poisson(link=\"log\"),data=dat2)\n\n\n\nsummary(re.model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: poisson  ( log )\nFormula: y ~ cov + (cov | veg)\n   Data: dat2\n\n     AIC      BIC   logLik deviance df.resid \n 14274.7  14295.8  -7132.4  14264.7      495 \n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n -4.798  -2.443  -1.630  -0.946 145.188 \n\nRandom effects:\n Groups Name        Variance Std.Dev. Corr\n veg    (Intercept) 0.4896   0.6997       \n        cov         0.1392   0.3732   0.14\nNumber of obs: 500, groups:  veg, 5\n\nFixed effects:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   1.6210     0.3137   5.166 2.39e-07 ***\ncov           0.1121     0.1683   0.666    0.505    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n    (Intr)\ncov 0.140"
+    "text": "Random Intercept + Slope\n\nre.model = glmer(y~cov+(cov|veg), family=poisson(link=\"log\"),data=dat2)\n\n\n\nsummary(re.model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: poisson  ( log )\nFormula: y ~ cov + (cov | veg)\n   Data: dat2\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n  14274.7   14295.8   -7132.4   14264.7       495 \n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n -4.798  -2.443  -1.630  -0.946 145.188 \n\nRandom effects:\n Groups Name        Variance Std.Dev. Corr \n veg    (Intercept) 0.4896   0.6997        \n        cov         0.1392   0.3732   0.14 \nNumber of obs: 500, groups:  veg, 5\n\nFixed effects:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   1.6210     0.3137   5.166 2.39e-07 ***\ncov           0.1121     0.1683   0.666    0.505    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n    (Intr)\ncov 0.140"
   },
   {
     "objectID": "FW670/hierarchical.html#random-intercept-slope-2",
@@ -18680,14 +18680,14 @@
     "href": "FW670/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW670/week5.html#week-5",
     "href": "FW670/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW670/week6.html",
@@ -19003,5 +19003,75 @@
     "title": "Probability",
     "section": "Frequency / Probabilities",
     "text": "Frequency / Probabilities\n\nhist.values=hist(y,freq = FALSE, plot= FALSE,\n                 ylab=\"Probabilities\",\n                 main=\"Distribution of the P(y)\",\n                 xlab=\"Counts of plants in a plot\")\nhist.values$density\n\n [1] 0.0130 0.0500 0.1075 0.1200 0.1020 0.0610 0.0295 0.0140 0.0020 0.0005\n[11] 0.0005\n\nhist.values$breaks\n\n [1]  2  4  6  8 10 12 14 16 18 20 22 24\n\ndiff(hist.values$breaks)\n\n [1] 2 2 2 2 2 2 2 2 2 2 2\n\nsum(hist.values$density * diff(hist.values$breaks))\n\n[1] 1\n\n\n\n\n\n$breaks\n [1]  2  4  6  8 10 12 14 16 18 20 22 24\n\n$counts\n [1]  26 100 215 240 204 122  59  28   4   1   1\n\n$density\n [1] 0.0130 0.0500 0.1075 0.1200 0.1020 0.0610 0.0295 0.0140 0.0020 0.0005\n[11] 0.0005\n\n$mids\n [1]  3  5  7  9 11 13 15 17 19 21 23\n\n$xname\n[1] \"y\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\""
+  },
+  {
+    "objectID": "FW670/glm1.html#glm-2",
+    "href": "FW670/glm1.html#glm-2",
+    "title": "Generalized Linear Models",
+    "section": "GLM",
+    "text": "GLM\n\nGeneralized linear model framework\n\n\\[\n\\begin{align*}\n\\textbf{y}\\sim& [\\textbf{y}|\\boldsymbol{\\mu},\\sigma] \\\\\n\\text{g}(\\boldsymbol{\\mu}) =& \\textbf{X}\\boldsymbol{\\beta}\n\\end{align*}\n\\]\nElements\n\ninverse-link function (\\(\\text{g}^{-1}(\\boldsymbol{\\textbf{X}\\boldsymbol{\\beta}})\\)); deterministic transformation of linear combination back to parameter scale\ndesign matrix of the known explanatory variables (\\(\\textbf{X}\\))\ncoefficient parameters (\\(\\boldsymbol{\\beta}\\)); needs estimating"
+  },
+  {
+    "objectID": "FW670/glm1.html#glm-and-design-matrix",
+    "href": "FW670/glm1.html#glm-and-design-matrix",
+    "title": "Generalized Linear Models",
+    "section": "glm and design matrix",
+    "text": "glm and design matrix\n\n  X = model.matrix(~ sex + age.years,\n                   data = dat\n                   )\n  head(X)\n\n  (Intercept) sexMale age.years\n1           1       1        10\n2           1       0        12\n3           1       0        15\n4           1       0        12\n5           1       1        20\n6           1       1         4\n\n\n\n\n  glm(weight ~ 0 + X, \n      data = dat\n      )\n\n\nCall:  glm(formula = weight ~ 0 + X, data = dat)\n\nCoefficients:\nX(Intercept)      XsexMale    Xage.years  \n      2552.8        6829.0         145.7  \n\nDegrees of Freedom: 200 Total (i.e. Null);  197 Residual\nNull Deviance:      1.561e+10 \nResidual Deviance: 75320000     AIC: 3143\n\n\n\nSex variable is arranged by ‘Dummy Coding’"
+  },
+  {
+    "objectID": "FW670/glm1.html#closed-form-estimator-with-linear-algebra",
+    "href": "FW670/glm1.html#closed-form-estimator-with-linear-algebra",
+    "title": "Generalized Linear Models",
+    "section": "Closed Form Estimator with Linear Algebra",
+    "text": "Closed Form Estimator with Linear Algebra\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\textbf{X}'\\textbf{X})^{-1}\\textbf{X}'\\textbf{y}\n\\]\n\n\n\nX(Intercept)     XsexMale   Xage.years \n   2552.8203    6828.9645     145.7483 \n\n\n\n\n\nLinear Algebra Ordinary Least Squares Estimator\n\n  y = dat$weight\n  c(solve(t(X)%*%X)%*%t(X)%*%y)\n\n[1] 2552.8203 6828.9645  145.7483"
+  },
+  {
+    "objectID": "FW670/glm1.html#linear-algebra-ordinary-least-squares-estimator",
+    "href": "FW670/glm1.html#linear-algebra-ordinary-least-squares-estimator",
+    "title": "Generalized Linear Models",
+    "section": "Linear Algebra Ordinary Least Squares Estimator",
+    "text": "Linear Algebra Ordinary Least Squares Estimator\n\n  y = dat$weight\n  c(solve(t(X)%*%X)%*%t(X)%*%y)\n\n[1] 2552.8203 6828.9645  145.7483"
+  },
+  {
+    "objectID": "FW670/glm1.html#closed-form-estimator",
+    "href": "FW670/glm1.html#closed-form-estimator",
+    "title": "Generalized Linear Models",
+    "section": "Closed Form Estimator",
+    "text": "Closed Form Estimator\nOrdinary Least Squares Estimator\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\textbf{X}'\\textbf{X})^{-1}\\textbf{X}'\\textbf{y}\n\\]\n\n\n\nX(Intercept)     XsexMale   Xage.years \n   2552.8203    6828.9645     145.7483 \n\n\n\n\n\n\n  y = dat$weight\n  c(solve(t(X)%*%X)%*%t(X)%*%y)\n\n[1] 2552.8203 6828.9645  145.7483"
+  },
+  {
+    "objectID": "FW670/glm1.html#link-functions-2",
+    "href": "FW670/glm1.html#link-functions-2",
+    "title": "Generalized Linear Models",
+    "section": "Link functions",
+    "text": "Link functions\nTo put a linear model on parameters of interest and ensure the parameter support is maintained."
+  },
+  {
+    "objectID": "FW670/glm1.html#link-functions-3",
+    "href": "FW670/glm1.html#link-functions-3",
+    "title": "Generalized Linear Models",
+    "section": "Link functions",
+    "text": "Link functions\nOptimization algorithims do not like boundaries (e.g., 0 or 1). It’s easier to guess values to evaluate in a maximum likelihood optimization when there are no bounds. (\\(-\\infty\\), \\(\\infty\\))"
+  },
+  {
+    "objectID": "FW670/glm1.html#link-functions-4",
+    "href": "FW670/glm1.html#link-functions-4",
+    "title": "Generalized Linear Models",
+    "section": "Link functions",
+    "text": "Link functions\nIdentity \nNo transformation is needed because the parameter support is maintained. \\[\n\\begin{align*}\n\\boldsymbol{\\mu} \\in& (-\\infty,\\infty)\\\\\n\\textbf{X}\\boldsymbol{\\beta} \\in& (-\\infty,\\infty)\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW670/glm1.html#logistic-regression-simulation-1",
+    "href": "FW670/glm1.html#logistic-regression-simulation-1",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Simulation",
+    "text": "Logistic Regression Simulation\n\n# marginal coefficients (on logit-scale)\n  beta = c(-2,4)\n\n#linear terms\n  lt = X%*%beta\n\n\n\n# transformation via link function to probability scale\n  p = plogis(lt)\n  head(round(p,digits=2))\n\n  [,1]\n1 0.98\n2 0.02\n3 0.90\n4 0.01\n5 0.95\n6 0.00\n\n\n\n\n\n# generate a sample dataset\n  set.seed(14353)\n  y = rbinom(n=length(p),size=1,p)\n  y\n\n  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0\n [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0\n [75] 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0"
+  },
+  {
+    "objectID": "FW670/glm1.html#logistic-regression-simulation-2",
+    "href": "FW670/glm1.html#logistic-regression-simulation-2",
+    "title": "Generalized Linear Models",
+    "section": "Logistic Regression Simulation",
+    "text": "Logistic Regression Simulation\n\n#Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
   }
 ]
