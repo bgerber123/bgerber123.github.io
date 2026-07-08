@@ -1,5 +1,4 @@
 model {
-  
   # Priors
   phi ~ dbeta(1, 1)
   p ~ dbeta(1, 1)
@@ -18,4 +17,4 @@ model {
       y[i,t] ~ dbern(p * z[i,t])
     } #end loop t
   } #end loop i
-}
+} #end model

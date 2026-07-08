@@ -32,9 +32,9 @@ title: ""
 
 - What are the types of data used and how does that change the inference/predictions?
 
-- What are the three joint probabilities that determine whether a site is recorded as a detection in a dataset?
+- What are the three joint probabilities that determine whether a site is recorded as a detection in a data set?
 
-- What is the difference/importance of being able to estimate occurrence probability and occurence relative likelihood?
+- What is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?
 
 - What are some specific model types or algorithms commonly used for fitting a SDM?
 
@@ -49,7 +49,7 @@ title: ""
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class:
-     - <a href="/readings/Wildman et al 2024.pdf">Wildman et al 2024</a>
+     - <a href="/readings/">Student led paper</a>
      - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch 7 (sections 7.1-7.3)</a>
 
  
@@ -57,7 +57,7 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of Wildman et al 2024, led by Alex Badeaux, Noel Clark, Elke Tukker**
+##### **In Class Discussion of student led manuscript, led by X and X**
 
 -   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
 

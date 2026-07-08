@@ -10,7 +10,7 @@ title: ""
 
 ##### **In Class Discussion of Royle et al. 2018**
 
-- How are data different than a typical capture-recapture study?
+- How are SCR data different than a typical capture-recapture study?
 
 - What is an 'activity center'?
 
@@ -24,7 +24,7 @@ title: ""
 
 #####
 
--   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Files</a>
+-   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Lab Files</a>
 
 
 -   Install R packages:
@@ -45,7 +45,7 @@ install.packages(c("secr","sf"))
 
 -   Board work defining the occupancy model hierarchically
 
--   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Files</a>
+-   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Lab Files</a>
 
 -   Install R packages:
 

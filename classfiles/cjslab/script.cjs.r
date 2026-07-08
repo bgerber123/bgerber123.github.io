@@ -2,10 +2,10 @@
 # Estimation of survival probabilities using capture-recapture data
 # Implementing the cormack-jolly-seber model
 #################################
-
-library(stringr)
-library(rjags)
-library(coda)
+# load libraries
+  library(stringr)
+  library(rjags)
+  library(coda)
 
 # We will use capture recapture data on the European Dipper which is
 # available from Program MARK
@@ -64,13 +64,22 @@ library(coda)
 
 # Call JAGS from R 
 # Setup the Model
-  jm=jags.model(file="cjs1.r", data=jags.data,n.chains=nc,n.adapt=na,inits=inits)
+  jm = jags.model(file = "cjs1.r", 
+                  data = jags.data,
+                  n.chains = nc,
+                  n.adapt = na,
+                  inits = inits
+                  )
 
 # Update the model with the burnin
   update(jm, n.iter=nb)
 
 #Fit the model
-  post=coda.samples(jm, variable.names=parameters, n.iter=ni, thin=nt)
+  post = coda.samples(jm, 
+                      variable.names = parameters, 
+                      n.iter = ni, 
+                      thin = nt
+                      )
 
 # save(post,file="post.cjs")  
 # load("post.cjs")  
@@ -83,15 +92,16 @@ library(coda)
 # Highest posterior density intervals  ('credible intervals')
   browseURL("https://mathematica.stackexchange.com/questions/173282/computing-credible-region-highest-posterior-density-from-empirical-distributio")  
   coda::HPDinterval(post[[1]], prob = 0.95)
+  
 # Quantile posterior intervals ('credible intervals')
   apply(post[[1]],2,quantile, prob=c(0.025,0.975))
 ########################################################  
 
 # Lab Assignment
   
-#  Create a Markdown file and compiled HTML showing the code
-#  and results for the below steps. Make sure to add text to describe what 
-#  you are doing, why, and the result.
+# Create a Markdown file and compiled HTML showing the code
+# and results for the below steps. Make sure to add text to describe what 
+# you are doing, why, and the result.
 
   
 # Step 1  

@@ -1,5 +1,3 @@
-# This file controls the settings for your Quarto template from www.marvinschmitt.com
-
 # website settings
 website:
   title: "Brian D. Gerber"                                
@@ -48,7 +46,7 @@ website:
     type: textbox
   page-footer: 
     left: |
-      <span class="faux-block">&#169; 2023 Brian D. Gerber CC BY-SA 4.0</span>
+      <span class="faux-block">&#169; 2026 Brian D. Gerber CC BY-SA 4.0</span>
 
 project:
   type: website
