@@ -1,4 +1,4 @@
-## ----echo=FALSE, eval=TRUE----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE, eval=TRUE---------------------------------------
 N.groups = 5
 n.group = c(2,20,20,10,10)
 
@@ -21,78 +21,88 @@ dat = data.frame(y=y,veg=x, effort = 5)
 
 
 
-## ----echo=FALSE, eval=TRUE----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE, eval=TRUE---------------------------------------
 head(dat)
 table(dat$veg)
 
 
-## ----echo=FALSE, eval=TRUE, fig.height=5--------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE, eval=TRUE, fig.height=5-------------------------
 library(ggplot2)
 ggplot(dat, aes(x=veg, y=y, fill=veg)) + 
     geom_boxplot()+theme(text = element_text(size = 20)) 
 
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 library(glmmTMB)
 library(broom.mixed)
 
-model1 = glmmTMB(y~1, family=poisson(link="log"),data=dat)
+model1 = glmmTMB(y ~ 1, 
+                 family = poisson(link="log"),
+                 data = dat
+                 )
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 summary(model1)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-marginaleffects::predictions(model1,type = "response")
+## ----echo=TRUE, eval=TRUE----------------------------------------
+marginaleffects::predictions(model1, type = "response")
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-model2 = glmmTMB(y~veg, family=poisson(link="log"),data=dat,
-                 contrasts = list(veg = "contr.sum"))
+## ----echo=TRUE, eval=TRUE----------------------------------------
+model2 = glmmTMB(y ~ veg, 
+                 family = poisson(link="log"),
+                 data=dat,
+                 contrasts = list(veg = "contr.sum")
+                 )
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 summary(model2)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 marginaleffects::predictions(model2, 
                              newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
-                             re.form=NA)
+                             re.form = NA,
+                             type = "response")
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-model3 = glmmTMB(y~1+(1|veg), family=poisson(link="log"),data=dat)
+## ----echo=TRUE, eval=TRUE----------------------------------------
+model3 = glmmTMB(y ~ 1 + (1|veg), 
+                 family = poisson(link="log"),
+                 data = dat
+                 )
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 summary(model3)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-ranef(model3)
-
-
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-broom.mixed::tidy(model3, effects = "ran_vals", conf.int = TRUE)
-
-
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 confint(model3, component = c("all"))
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
+ranef(model3)
+
+
+## ----echo=TRUE, eval=TRUE----------------------------------------
+broom.mixed::tidy(model3, effects = "ran_vals", conf.int = TRUE)
+
+
+## ----echo=TRUE, eval=TRUE----------------------------------------
 fixef(model3)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 #Predictions - does not include RE uncertainty
 preds = predict(model3,
-                newdata=data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
-                type="link",
-                re.form=NULL,
+                newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                type = "link",
+                re.form = NULL,
                 se.fit = TRUE
                 )
 
@@ -104,27 +114,28 @@ preds$fit = exp(preds$fit)
 data.frame(preds)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 #A typical site (non an average site)
 # Done by setting the random effect mean to 0
 predict(model3,type="response",re.form=NA)[1]
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 library(lme4)
-model3b = glmer(y~1+(1|veg), family=poisson(link="log"),data=dat)
+model3b = glmer(y ~ 1 + (1|veg), 
+                family = poisson(link = "log"),
+                data = dat
+                )
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 equatiomatic::extract_eq(model3b)
 
 
-## ----echo=FALSE,eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE----------------------------------------
 library(plotrix)
 
-
 m1.est=data.frame(confint(model1))
-
 
 plot(1:5,rep(-50,5),ylim=c(2,4.2),xaxt='n',xlab="Vegetation",ylab="Coeficient",main="Estimates")
 axis(1,at=1:5,lab=c("Veg1","Veg2","Veg3","Veg4","Veg5"))
@@ -136,7 +147,7 @@ legend("topright",lwd=3,col=1,legend=c("Model 1, (y~1), Complete Pooling"))
 
 
 
-## ----echo=FALSE,eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE----------------------------------------
 m2.est=marginaleffects::predictions(model2, 
                              newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
                              re.form=NA,type="link")
@@ -160,7 +171,7 @@ legend("topright",lwd=3,col=c(1,"purple"),legend=c("Model 1, (y~1), Complete Poo
 
 
 
-## ----echo=FALSE,eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE----------------------------------------
 
 
 m3.est = predict(model3,
@@ -212,7 +223,7 @@ legend("topright",lwd=3,col=c(1,"purple","green"),legend=c("Model 1, (y~1), Comp
 
 
 
-## ----echo=FALSE, eval=TRUE----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=FALSE, eval=TRUE---------------------------------------
 N.groups = 10
 n.group = 50
 
@@ -244,24 +255,27 @@ dat2 = data.frame(y=y,cov=x,veg=veg)
 head(dat2)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-re.model = glmer(y~cov+(cov|veg), family=poisson(link="log"),data=dat2)
+## ----echo=TRUE, eval=TRUE----------------------------------------
+re.model = glmer(y ~ cov + (cov||veg), 
+                 family = poisson(link = "log"),
+                 data = dat2
+                 )
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 summary(re.model)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
+marginaleffects::plot_predictions(re.model, condition = c("cov","veg"),
+                                  type = "link", re.form = NULL)
+
+
+## ----echo=TRUE, eval=TRUE----------------------------------------
 marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
-                                  type="link", re.form=NULL)
+                                  type = "link", re.form = NA)
 
 
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
-marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
-                                  type="link", re.form=NA)
-
-
-## ----echo=TRUE, eval=TRUE-----------------------------------------------------------------------------------------------------------------------------------
+## ----echo=TRUE, eval=TRUE----------------------------------------
 equatiomatic::extract_eq(re.model)
 

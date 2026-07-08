@@ -10,7 +10,7 @@ title: ""
 
 -   Lecture: <a href="/FW670/glm1.qmd">Generalized Linear Models I</a>
 
--   Lecture Code: <a href="/FW670/glm1.R">GLM1.R</a>
+-   Lecture Code: <a href="/FW670/glm1.R">glm1.R</a>
 
 -   Install R packages:
 
@@ -37,6 +37,8 @@ install.packages(c("equatiomatic","brglm"))
 -   Discuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic
 
 -   Lecture: <a href="/FW670/glm2.qmd">Generalized Linear Models II</a>
+
+-   Lecture Code: <a href="/FW670/glm2.R">glm2.R</a>
 
 -   Downloads: <a href="/classfiles/glmlab/week4files1.zip">Lab Files</a>
 

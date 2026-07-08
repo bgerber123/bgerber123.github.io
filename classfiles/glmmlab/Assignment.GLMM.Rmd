@@ -1,7 +1,7 @@
 ---
 title: "GLMM Assignment"
 author: "Brian D. Gerber"
-date: "2024-8-22"
+date: "2026-7-8"
 output: html_document
 ---
 
@@ -26,7 +26,7 @@ This is not real data. However, the basic premise has been adopted from the pape
 
 
 ### **Overview**
-The Annamite striped rabbit is a forest-dwelling lagomorph that was discovered by science in the mid-1990s. Little is known about this species. What has been done indicates that hunting pressure is a primary driver of its distribution. As such, protected areas are paramount to their conservation. However, protected areas vary in their effectiveness in limiting hunting and some protected areas are founded on multi-use, such that hunting is still allowed. 
+The Annamite striped rabbit is a forest-dwelling lagomorph that was discovered by science in the mid-1990s. Little is known about this species. What has been done indicates that hunting pressure is a primary driver of its distribution. As such, protected areas are paramount to their conservation. However, protected areas vary in their effectiveness in limiting hunting and some protected areas are founded on multi-use, such that hunting is allowed. 
 
 
 <p align="center">

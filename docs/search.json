@@ -15698,14 +15698,14 @@
     "href": "FW670/hierarchical.html#complete-pooling",
     "title": "Hierarchical Models",
     "section": "Complete Pooling",
-    "text": "Complete Pooling\n\nIgnores variance across sites, which is a goal of study\nData within sampling site might not be independent, leading to pseudoreplication (depressed variance)"
+    "text": "Complete Pooling\n\n\n\nIgnores variance across sites, which is a goal of study\nData within sampling site might not be independent, leading to pseudoreplication (depressed variance)"
   },
   {
     "objectID": "FW670/hierarchical.html#no-pooling",
     "href": "FW670/hierarchical.html#no-pooling",
     "title": "Hierarchical Models",
     "section": "No Pooling",
-    "text": "No Pooling\n\nNo state-level estimate\nEstimator for each site may be biased, particularly at low sample sizes"
+    "text": "No Pooling\n\n\n\nNo state-level estimate\nEstimator for each site may be biased, particularly at low sample sizes"
   },
   {
     "objectID": "FW670/hierarchical.html#partial-pooling-hierarhical-model",
@@ -15754,42 +15754,42 @@
     "href": "FW670/hierarchical.html#model-1-complete-pooling",
     "title": "Hierarchical Models",
     "section": "Model 1 (Complete Pooling)",
-    "text": "Model 1 (Complete Pooling)\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y~1, family=poisson(link=\"log\"),data=dat)\n\n\n\n\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    532.2     534.4    -265.1     530.2        61 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.91165    0.02962   98.31   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 1 (Complete Pooling)\n\nlibrary(glmmTMB)\nlibrary(broom.mixed)\n\nmodel1 = glmmTMB(y ~ 1, \n                 family = poisson(link=\"log\"),\n                 data = dat\n                 )\n\n\n\\[\n\\begin{align*}\ny_i \\sim& \\text{Poisson}(\\lambda_i)\\\\\n\\text{log}(\\lambda_i) =& \\beta_0\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/hierarchical.html#model-1-complete-pooling-1",
     "href": "FW670/hierarchical.html#model-1-complete-pooling-1",
     "title": "Hierarchical Models",
     "section": "Model 1 (Complete Pooling)",
-    "text": "Model 1 (Complete Pooling)\n\nmarginaleffects::predictions(model1,type = \"response\")\n\n\n Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n--- 52 rows omitted. See ?print.marginaleffects ---\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\nType: response"
+    "text": "Model 1 (Complete Pooling)\n\nsummary(model1)\n\n Family: poisson  ( log )\nFormula:          y ~ 1\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    532.2     534.4    -265.1     530.2        61 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.91165    0.02962   98.31   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-2-no-pooling",
     "href": "FW670/hierarchical.html#model-2-no-pooling",
     "title": "Hierarchical Models",
     "section": "Model 2 (No Pooling)",
-    "text": "Model 2 (No Pooling)\n\nmodel2 = glmmTMB(y~veg, family=poisson(link=\"log\"),data=dat,\n                 contrasts = list(veg = \"contr.sum\"))\n\n\n\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ veg\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    369.4     380.1    -179.7     359.4        57 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.93764    0.04235   69.37  &lt; 2e-16 ***\nveg1        -0.13427    0.14133   -0.95    0.342    \nveg2        -0.42398    0.06498   -6.52 6.82e-11 ***\nveg3        -0.29146    0.06262   -4.65 3.25e-06 ***\nveg4         0.47681    0.06138    7.77 7.94e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 2 (No Pooling)\n\nmodel2 = glmmTMB(y ~ veg, \n                 family = poisson(link=\"log\"),\n                 data=dat,\n                 contrasts = list(veg = \"contr.sum\")\n                 )\n\n\n\\[\n\\begin{align*}\ny_i \\sim& \\text{Poisson}(\\lambda_i)\\\\\n\\text{log}(\\lambda_i) =& \\beta_0 + \\beta_1\\times \\text{veg}_{1} + \\beta_2\\times \\text{veg}_{2}+ \\beta_3\\times \\text{veg}_{3}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/hierarchical.html#model-2-no-pooling-1",
     "href": "FW670/hierarchical.html#model-2-no-pooling-1",
     "title": "Hierarchical Models",
     "section": "Model 2 (No Pooling)",
-    "text": "Model 2 (No Pooling)\n\nmarginaleffects::predictions(model2, \n                             newdata = data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                             re.form=NA)\n\n\n Estimate Std. Error     z Pr(&gt;|z|)     S 2.5 % 97.5 %  veg\n     16.5      2.872  5.74   &lt;0.001  26.7  10.9   22.1 Veg1\n     12.4      0.786 15.72   &lt;0.001 182.5  10.8   13.9 Veg2\n     14.1      0.840 16.79   &lt;0.001 207.8  12.5   15.7 Veg3\n     30.4      1.744 17.44   &lt;0.001 223.7  27.0   33.8 Veg4\n     27.4      1.655 16.55   &lt;0.001 202.0  24.2   30.6 Veg5\n\nType: response"
+    "text": "Model 2 (No Pooling)\n\nsummary(model2)\n\n Family: poisson  ( log )\nFormula:          y ~ veg\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    369.4     380.1    -179.7     359.4        57 \n\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)  2.93764    0.04235   69.37  &lt; 2e-16 ***\nveg1        -0.13427    0.14133   -0.95    0.342    \nveg2        -0.42398    0.06498   -6.52 6.82e-11 ***\nveg3        -0.29146    0.06262   -4.65 3.25e-06 ***\nveg4         0.47681    0.06138    7.77 7.94e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-3-partial-pooling",
     "href": "FW670/hierarchical.html#model-3-partial-pooling",
     "title": "Hierarchical Models",
     "section": "Model 3 (Partial Pooling)",
-    "text": "Model 3 (Partial Pooling)\n\nmodel3 = glmmTMB(y~1+(1|veg), family=poisson(link=\"log\"),data=dat)\n\n\n\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | veg)\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    384.4     388.6    -190.2     380.4        60 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n veg    (Intercept) 0.1299   0.3604  \nNumber of obs: 62, groups:  veg, 5\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.9391     0.1662   17.69   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Model 3 (Partial Pooling)\n\nmodel3 = glmmTMB(y ~ 1 + (1|veg), \n                 family = poisson(link=\"log\"),\n                 data = dat\n                 )\n\ni = counts j = vegetation type\n\\[\\begin{align*}\ny_{i} \\sim& \\text{Poisson}(\\lambda_{i})\\\\\n\\text{log}(\\lambda_{i}) =& \\mu + \\beta_{j[i]}\\\\\n\\beta_{j} \\sim& \\text{Normal}(0, \\sigma^2_{\\beta})\n\n\\end{align*}\\]"
   },
   {
     "objectID": "FW670/hierarchical.html#model-3-partial-pooling-1",
     "href": "FW670/hierarchical.html#model-3-partial-pooling-1",
     "title": "Hierarchical Models",
     "section": "Model 3 (Partial Pooling)",
-    "text": "Model 3 (Partial Pooling)\n\nranef(model3)\n\n$veg\n     (Intercept)\nVeg1  -0.1103110\nVeg2  -0.4126484\nVeg3  -0.2851561\nVeg4   0.4635429\nVeg5   0.3612502\n\n\n\n\n\nbroom.mixed::tidy(model3, effects = \"ran_vals\", conf.int = TRUE)\n\n# A tibble: 5 × 9\n  effect   component group level term      estimate std.error conf.low conf.high\n  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 ran_vals cond      veg   Veg1  (Interce…   -0.110     0.206  -0.514     0.294 \n2 ran_vals cond      veg   Veg2  (Interce…   -0.413     0.173  -0.751    -0.0738\n3 ran_vals cond      veg   Veg3  (Interce…   -0.285     0.172  -0.622     0.0520\n4 ran_vals cond      veg   Veg4  (Interce…    0.464     0.172   0.126     0.801 \n5 ran_vals cond      veg   Veg5  (Interce…    0.361     0.173   0.0230    0.699 \n\n\n\n\n\n\nconfint(model3, component = c(\"all\"))\n\n                            2.5 %    97.5 %  Estimate\n(Intercept)             2.6134002 3.2647754 2.9390878\nStd.Dev.(Intercept)|veg 0.1896794 0.6846043 0.3603545\n\n\n\n\n\n\n\n\n\n\n\n\nfixef(model3)\n\n\nConditional model:\n(Intercept)  \n      2.939  \n\n\n\n\n\n\n#Predictions - does not include RE uncertainty\npreds = predict(model3,\n                newdata=data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                type=\"link\",\n                re.form=NULL,\n                se.fit = TRUE\n                )\n\n\npreds$LCL = exp(preds$fit-1.96*preds$se.fit)\npreds$UCL = exp(preds$fit+1.96*preds$se.fit)\npreds$fit = exp(preds$fit)\n\ndata.frame(preds)\n\n       fit     se.fit      LCL      UCL\n1 16.92475 0.15877885 12.39843 23.10348\n2 12.50889 0.06300056 11.05583 14.15291\n3 14.20980 0.05890828 12.66030 15.94893\n4 30.04303 0.05761047 26.83519 33.63433\n5 27.12181 0.06039730 24.09392 30.53021\n\n\n\n\n\n\n#A typical site (non an average site)\n# Done by setting the random effect mean to 0\npredict(model3,type=\"response\",re.form=NA)[1]\n\n[1] 18.8986"
+    "text": "Model 3 (Partial Pooling)\n\nsummary(model3)\n\n Family: poisson  ( log )\nFormula:          y ~ 1 + (1 | veg)\nData: dat\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n    384.4     388.6    -190.2     380.4        60 \n\nRandom effects:\n\nConditional model:\n Groups Name        Variance Std.Dev.\n veg    (Intercept) 0.1299   0.3604  \nNumber of obs: 62, groups:  veg, 5\n\nConditional model:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   2.9391     0.1662   17.69   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "FW670/hierarchical.html#model-3b",
@@ -15831,35 +15831,35 @@
     "href": "FW670/hierarchical.html#random-intercept-slope",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\nLeopard detection varies by cover and veg, where the effect of cover comes from a shared distribution\n\n\n  y         cov  veg\n1 3  0.40161608 Veg1\n2 0 -0.12360373 Veg1\n3 3  0.62883136 Veg1\n4 0  0.07607150 Veg1\n5 2  0.04150764 Veg1\n6 0 -0.39289231 Veg1"
+    "text": "Random Intercept + Slope\nNew hypothesis: Leopard detection varies by cover and vegetation, where the effect of cover comes from a shared distribution\n\n\n  y         cov  veg\n1 3  0.40161608 Veg1\n2 0 -0.12360373 Veg1\n3 3  0.62883136 Veg1\n4 0  0.07607150 Veg1\n5 2  0.04150764 Veg1\n6 0 -0.39289231 Veg1"
   },
   {
     "objectID": "FW670/hierarchical.html#random-intercept-slope-1",
     "href": "FW670/hierarchical.html#random-intercept-slope-1",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\nre.model = glmer(y~cov+(cov|veg), family=poisson(link=\"log\"),data=dat2)\n\n\n\nsummary(re.model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: poisson  ( log )\nFormula: y ~ cov + (cov | veg)\n   Data: dat2\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n  14274.7   14295.8   -7132.4   14264.7       495 \n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n -4.798  -2.443  -1.630  -0.946 145.188 \n\nRandom effects:\n Groups Name        Variance Std.Dev. Corr \n veg    (Intercept) 0.4896   0.6997        \n        cov         0.1392   0.3732   0.14 \nNumber of obs: 500, groups:  veg, 5\n\nFixed effects:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   1.6210     0.3137   5.166 2.39e-07 ***\ncov           0.1121     0.1683   0.666    0.505    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n    (Intr)\ncov 0.140"
+    "text": "Random Intercept + Slope\n\nre.model = glmer(y ~ cov + (cov||veg), \n                 family = poisson(link = \"log\"),\n                 data = dat2\n                 )\n\n\ni = counts j = vegetation type\n\\[\\begin{align*}\ny_{i} \\sim& \\text{Poisson}(\\lambda_{i})\\\\\n\\text{log}(\\lambda_{i}) =& \\mu_{\\text{veg}} + \\beta_{\\text{veg}_{j[i]}} + \\mu_{\\text{cov}}+ \\beta_{\\text{cov}_{j[i]}}\\\\\n\\beta_{\\text{veg}_j} \\sim& \\text{Normal}(0, \\sigma^2_{\\text{veg}})\\\\\n\\beta_{\\text{cov}_j} \\sim& \\text{Normal}(0, \\sigma^2_{\\text{cov}})\n\n\\end{align*}\\]"
   },
   {
     "objectID": "FW670/hierarchical.html#random-intercept-slope-2",
     "href": "FW670/hierarchical.html#random-intercept-slope-2",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\nCalled conditional mean predictions\n\n\nmarginaleffects::plot_predictions(re.model, condition=c(\"cov\",\"veg\"),\n                                  type=\"link\", re.form=NULL)"
+    "text": "Random Intercept + Slope\n\nsummary(re.model)\n\nGeneralized linear mixed model fit by maximum likelihood (Laplace\n  Approximation) [glmerMod]\n Family: poisson  ( log )\nFormula: y ~ cov + ((1 | veg) + (0 + cov | veg))\n   Data: dat2\n\n      AIC       BIC    logLik -2*log(L)  df.resid \n  14272.8   14289.7   -7132.4   14264.8       496 \n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n -4.796  -2.443  -1.631  -0.946 145.194 \n\nRandom effects:\n Groups Name        Variance Std.Dev.\n veg    (Intercept) 0.4896   0.6997  \n veg.1  cov         0.1393   0.3732  \nNumber of obs: 500, groups:  veg, 5\n\nFixed effects:\n            Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)   1.6210     0.3137   5.167 2.38e-07 ***\ncov           0.1128     0.1683   0.670    0.503    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n    (Intr)\ncov 0.000"
   },
   {
     "objectID": "FW670/hierarchical.html#random-intercept-slope-3",
     "href": "FW670/hierarchical.html#random-intercept-slope-3",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\npredictions for a ‘typical site’; not an average site Stats4Ecologists\n\n\nmarginaleffects::plot_predictions(re.model, condition=c(\"cov\",\"veg\"),\n                                  type=\"link\", re.form=NA)"
+    "text": "Random Intercept + Slope\n\nCalled conditional mean predictions\n\n\nmarginaleffects::plot_predictions(re.model, condition = c(\"cov\",\"veg\"),\n                                  type = \"link\", re.form = NULL)"
   },
   {
     "objectID": "FW670/hierarchical.html#random-intercept-slope-4",
     "href": "FW670/hierarchical.html#random-intercept-slope-4",
     "title": "Hierarchical Models",
     "section": "Random Intercept + Slope",
-    "text": "Random Intercept + Slope\n\nequatiomatic::extract_eq(re.model)\n\n\\[\n\\begin{aligned}\n  \\operatorname{y}_{i}  &\\sim \\operatorname{Poisson}(\\lambda_i) \\\\\n    \\log(\\lambda_i) &=\\alpha_{j[i]} + \\beta_{1j[i]}(\\operatorname{cov}) \\\\    \n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\alpha_{j} \\\\\n      &\\beta_{1j}\n    \\end{aligned}\n  \\end{array}\n\\right)\n  &\\sim N \\left(\n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\mu_{\\alpha_{j}} \\\\\n      &\\mu_{\\beta_{1j}}\n    \\end{aligned}\n  \\end{array}\n\\right)\n,\n\\left(\n  \\begin{array}{cc}\n     \\sigma^2_{\\alpha_{j}} & \\rho_{\\alpha_{j}\\beta_{1j}} \\\\\n     \\rho_{\\beta_{1j}\\alpha_{j}} & \\sigma^2_{\\beta_{1j}}\n  \\end{array}\n\\right)\n\\right)\n    \\text{, for veg j = 1,} \\dots \\text{,J}\n\\end{aligned}\n\\]"
+    "text": "Random Intercept + Slope\n\npredictions for a ‘typical site’; not an average site Stats4Ecologists\n\n\nmarginaleffects::plot_predictions(re.model, condition=c(\"cov\",\"veg\"),\n                                  type = \"link\", re.form = NA)"
   },
   {
     "objectID": "FW670/hierarchical.html#faq",
@@ -18666,42 +18666,42 @@
     "href": "FW670/week4.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Lab Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: glm1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nLecture Code: glm2.R\nDownloads: Lab Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
   },
   {
     "objectID": "FW670/week4.html#week-4",
     "href": "FW670/week4.html#week-4",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Generalized Linear Models I\nLecture Code: GLM1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nDownloads: Lab Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
+    "text": "Lecture: Generalized Linear Models I\nLecture Code: glm1.R\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"equatiomatic\",\"brglm\"))\n\n\n\nReadings for next class:\n\nZurr and Iano, 2016\n\n\nBackground Reading (not required):\n\n\n Zurr et al Chapter 9.\n\n\n\n\n\nDiscuss: Zurr and Iano, 2016 and assignment to co-lead application paper on topic\nLecture: Generalized Linear Models II\nLecture Code: glm2.R\nDownloads: Lab Files\n\n\nReadings for next class:\n\nFieberg, Ch. 8\nTredennick et al. 2021"
   },
   {
     "objectID": "FW670/week5.html",
     "href": "FW670/week5.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nLecture Code: hierarchical.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW670/week5.html#week-5",
     "href": "FW670/week5.html#week-5",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models\nLecture Code: hierarchical.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW670/week6.html",
     "href": "FW670/week6.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
   },
   {
     "objectID": "FW670/week6.html#week-6",
     "href": "FW670/week6.html#week-6",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
+    "text": "Lecture: Bayesian Inference\nLecture Code: bayesian.R\n\n\n Ellison 2004.\n\nBackground Reading (not required):\n\n\n Hobbs and Hooten Ch5.\n\n Fieberg Chapter 11.\n\n Fieberg Chapter 12.\n\n\n\n\n\n\nLecture: Continue with: Bayesian Inference\nDownloads: Lab Files (9/27)\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"rjags\",\"bayesplot\",\"rstanarm\"))\n\n\nInstall External Software Program JAGS\n\n\n\nBayes Quiz on Canvas\n\n\nBackground Reading (not required):\n\nKurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse"
   },
   {
     "objectID": "FW670/week7.html",
@@ -19108,5 +19108,47 @@
     "title": "Generalized Linear Models II ",
     "section": "Polynomial",
     "text": "Polynomial\nQuadratic\n\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"link\")\n\n\n\n\n\n\n\nmarginaleffects::plot_predictions(m5,condition=c(\"dist.trail\"),type=\"response\")"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#latent-state-1",
+    "href": "FW670/hierarchical.html#latent-state-1",
+    "title": "Hierarchical Models",
+    "section": "Latent State",
+    "text": "Latent State"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#model-1-complete-pooling-2",
+    "href": "FW670/hierarchical.html#model-1-complete-pooling-2",
+    "title": "Hierarchical Models",
+    "section": "Model 1 (Complete Pooling)",
+    "text": "Model 1 (Complete Pooling)\n\nmarginaleffects::predictions(model1, type = \"response\")\n\n\n Estimate Std. Error    z Pr(&gt;|z|)     S 2.5 % 97.5 %\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n--- 52 rows omitted. See ?print.marginaleffects ---\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\n     18.4      0.545 33.8   &lt;0.001 827.7  17.3   19.5\nType: response"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#model-2-no-pooling-2",
+    "href": "FW670/hierarchical.html#model-2-no-pooling-2",
+    "title": "Hierarchical Models",
+    "section": "Model 2 (No Pooling)",
+    "text": "Model 2 (No Pooling)\n\nmarginaleffects::predictions(model2, \n                             newdata = data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                             re.form = NA,\n                             type = \"response\")\n\n\n Estimate Std. Error     z Pr(&gt;|z|)     S 2.5 % 97.5 %  veg\n     16.5      2.872  5.74   &lt;0.001  26.7  10.9   22.1 Veg1\n     12.4      0.786 15.72   &lt;0.001 182.5  10.8   13.9 Veg2\n     14.1      0.840 16.79   &lt;0.001 207.8  12.5   15.7 Veg3\n     30.4      1.744 17.44   &lt;0.001 223.7  27.0   33.8 Veg4\n     27.4      1.655 16.55   &lt;0.001 202.0  24.2   30.6 Veg5\n\nType: response"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#model-3-partial-pooling-2",
+    "href": "FW670/hierarchical.html#model-3-partial-pooling-2",
+    "title": "Hierarchical Models",
+    "section": "Model 3 (Partial Pooling)",
+    "text": "Model 3 (Partial Pooling)\n\nconfint(model3, component = c(\"all\"))\n\n                            2.5 %    97.5 %  Estimate\n(Intercept)             2.6134002 3.2647754 2.9390878\nStd.Dev.(Intercept)|veg 0.1896794 0.6846043 0.3603545\n\n\n\n\n\nranef(model3)\n\n$veg\n     (Intercept)\nVeg1  -0.1103110\nVeg2  -0.4126484\nVeg3  -0.2851561\nVeg4   0.4635429\nVeg5   0.3612502\n\n\n\n\n\n\nbroom.mixed::tidy(model3, effects = \"ran_vals\", conf.int = TRUE)\n\n# A tibble: 5 × 9\n  effect   component group level term      estimate std.error conf.low conf.high\n  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 ran_vals cond      veg   Veg1  (Interce…   -0.110     0.206  -0.514     0.294 \n2 ran_vals cond      veg   Veg2  (Interce…   -0.413     0.173  -0.751    -0.0738\n3 ran_vals cond      veg   Veg3  (Interce…   -0.285     0.172  -0.622     0.0520\n4 ran_vals cond      veg   Veg4  (Interce…    0.464     0.172   0.126     0.801 \n5 ran_vals cond      veg   Veg5  (Interce…    0.361     0.173   0.0230    0.699 \n\n\n\n\n\n\n\n\n\n\n\nfixef(model3)\n\n\nConditional model:\n(Intercept)  \n      2.939  \n\n\n\n\n\n\n#Predictions - does not include RE uncertainty\npreds = predict(model3,\n                newdata = data.frame(veg=c(\"Veg1\",\"Veg2\",\"Veg3\",\"Veg4\",\"Veg5\")),\n                type = \"link\",\n                re.form = NULL,\n                se.fit = TRUE\n                )\n\n\npreds$LCL = exp(preds$fit-1.96*preds$se.fit)\npreds$UCL = exp(preds$fit+1.96*preds$se.fit)\npreds$fit = exp(preds$fit)\n\ndata.frame(preds)\n\n       fit     se.fit      LCL      UCL\n1 16.92475 0.15877885 12.39843 23.10348\n2 12.50889 0.06300056 11.05583 14.15291\n3 14.20980 0.05890828 12.66030 15.94893\n4 30.04303 0.05761047 26.83519 33.63433\n5 27.12181 0.06039730 24.09392 30.53021\n\n\n\n\n\n\n#A typical site (non an average site)\n# Done by setting the random effect mean to 0\npredict(model3,type=\"response\",re.form=NA)[1]\n\n[1] 18.8986"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#model-3b-lme4",
+    "href": "FW670/hierarchical.html#model-3b-lme4",
+    "title": "Hierarchical Models",
+    "section": "Model 3b (lme4)",
+    "text": "Model 3b (lme4)\n\nlibrary(lme4)\nmodel3b = glmer(y ~ 1 + (1|veg), \n                family = poisson(link = \"log\"),\n                data = dat\n                )\n\n\n\nequatiomatic::extract_eq(model3b)\n\n\\[\n\\begin{aligned}\n  \\operatorname{y}_{i}  &\\sim \\operatorname{Poisson}(\\lambda_i) \\\\\n    \\log(\\lambda_i) &=\\alpha_{j[i]} \\\\\n    \\alpha_{j}  &\\sim N \\left(\\mu_{\\alpha_{j}}, \\sigma^2_{\\alpha_{j}} \\right)\n    \\text{, for veg j = 1,} \\dots \\text{,J}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "FW670/hierarchical.html#random-intercept-slope-5",
+    "href": "FW670/hierarchical.html#random-intercept-slope-5",
+    "title": "Hierarchical Models",
+    "section": "Random Intercept + Slope",
+    "text": "Random Intercept + Slope\n\nequatiomatic::extract_eq(re.model)\n\n\\[\n\\begin{aligned}\n  \\operatorname{y}_{i}  &\\sim \\operatorname{Poisson}(\\lambda_i) \\\\\n    \\log(\\lambda_i) &=\\alpha_{j[i]} + \\beta_{1j[i]}(\\operatorname{cov}) \\\\    \n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\alpha_{j} \\\\\n      &\\beta_{1j}\n    \\end{aligned}\n  \\end{array}\n\\right)\n  &\\sim N \\left(\n\\left(\n  \\begin{array}{c}\n    \\begin{aligned}\n      &\\mu_{\\alpha_{j}} \\\\\n      &\\mu_{\\beta_{1j}}\n    \\end{aligned}\n  \\end{array}\n\\right)\n,\n\\left(\n  \\begin{array}{cc}\n     \\sigma^2_{\\alpha_{j}} & 0 \\\\\n     0 & \\sigma^2_{\\beta_{1j}}\n  \\end{array}\n\\right)\n\\right)\n    \\text{, for veg j = 1,} \\dots \\text{,J}\n\\end{aligned}\n\\]"
   }
 ]

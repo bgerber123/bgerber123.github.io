@@ -34,14 +34,10 @@ title: ""
   - <a href="/readings/Gelman and Hill Chapters 11 and 12.pdf"> Gelman and Hill Ch. 11 and 12</a>.
 
 
-
-
 <!-- #### [Assigned]{style="color:red;"} -->
 
 <!-- -   Readings for next class:  -->
 <!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
-
-
 
 
 
@@ -50,6 +46,8 @@ title: ""
 #### [Today]{style="color:red;"}
 
 -   Lecture: <a href="/FW670/hierarchical.qmd">Hierarchical Models</a>
+
+-   Lecture Code: <a href="/FW670/hierarchical.R">hierarchical.R</a>
 
 -   Downloads: <a href="/classfiles/glmmlab/week5files.zip">Lab Files</a>
 

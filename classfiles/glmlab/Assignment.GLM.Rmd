@@ -18,7 +18,7 @@ pre{
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### **Objective**: Create a report using Markdown that presents code, results, and summarized findings that evaluates a hypothesis reagarding the occurence of lynx (*Lynx canadensis*) in the southern Rocky Mountains.
+### **Objective**: Create a report using Markdown that presents code, results, and summarized findings that evaluates a hypothesis regarding the occurrence of lynx (*Lynx canadensis*) in the southern Rocky Mountains.
 
 ### **Overview**
 A colleague sampled the occurrence (0 or 1) of Canada lynx at 75 grid cells using camera-traps. They are interested in you helping fit a model to estimate the occurrence probability of lynx and evaluate their hypothesis.

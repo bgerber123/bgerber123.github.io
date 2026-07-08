@@ -132,18 +132,26 @@ format:
 
 ## Complete Pooling
 
+![](/img/mouse3.png)
+
+. . .
+
 - Ignores variance across sites, which is a goal of study
 - Data within sampling site might not be independent, leading to pseudoreplication (depressed variance)
 
-![](/img/mouse3.png)
+
 
 
 ## No Pooling
 
+![](/img/mouse4.png)
+
+. . .
+
 - No state-level estimate
 - Estimator for each site may be biased, particularly at low sample sizes
 
-![](/img/mouse4.png)
+
 
 ##  Partial Pooling (Hierarhical Model)
 
@@ -155,6 +163,8 @@ format:
 <center>
 ![](/img/obs.latent.cube.png){width=50%}
 </center>
+
+## Latent State {.scrollable}
 
 ![](/img/occupancy1.png){width=75%}
 
@@ -239,49 +249,73 @@ ggplot(dat, aes(x=veg, y=y, fill=veg)) +
 library(glmmTMB)
 library(broom.mixed)
 
-model1 = glmmTMB(y~1, family=poisson(link="log"),data=dat)
+model1 = glmmTMB(y ~ 1, 
+                 family = poisson(link="log"),
+                 data = dat
+                 )
 ```
 
-<br>
+. . .
 
-::: {.fragment}
-
-```{r echo=TRUE, eval=TRUE}
-summary(model1)
-```
-
-:::
+$$
+\begin{align*}
+y_i \sim& \text{Poisson}(\lambda_i)\\
+\text{log}(\lambda_i) =& \beta_0 
+\end{align*}
+$$
 
 ## Model 1 (Complete Pooling) {.scrollable}
 
 
 ```{r echo=TRUE, eval=TRUE}
-marginaleffects::predictions(model1,type = "response")
+summary(model1)
+```
+
+
+## Model 1 (Complete Pooling) {.scrollable}
+
+
+```{r echo=TRUE, eval=TRUE}
+marginaleffects::predictions(model1, type = "response")
 ```
 
 
 ## Model 2 (No Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
-model2 = glmmTMB(y~veg, family=poisson(link="log"),data=dat,
-                 contrasts = list(veg = "contr.sum"))
+model2 = glmmTMB(y ~ veg, 
+                 family = poisson(link="log"),
+                 data=dat,
+                 contrasts = list(veg = "contr.sum")
+                 )
 ```
 
+. . .
 
-::: {.fragment}
+$$
+\begin{align*}
+y_i \sim& \text{Poisson}(\lambda_i)\\
+\text{log}(\lambda_i) =& \beta_0 + \beta_1\times \text{veg}_{1} + \beta_2\times \text{veg}_{2}+ \beta_3\times \text{veg}_{3}
+\end{align*}
+$$
+
+
+
+
+## Model 2 (No Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
 summary(model2)
 ```
 
-::: 
 
 ## Model 2 (No Pooling)
 
 ```{r echo=TRUE, eval=TRUE}
 marginaleffects::predictions(model2, 
                              newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
-                             re.form=NA)
+                             re.form = NA,
+                             type = "response")
 ```
 
 
@@ -291,24 +325,50 @@ marginaleffects::predictions(model2,
 ## Model 3 (Partial Pooling) {.scrollable}
 
 ```{r echo=TRUE, eval=TRUE}
-model3 = glmmTMB(y~1+(1|veg), family=poisson(link="log"),data=dat)
+model3 = glmmTMB(y ~ 1 + (1|veg), 
+                 family = poisson(link="log"),
+                 data = dat
+                 )
 ```
 
-::: {.fragment}
+
+i =  counts
+j = vegetation type
+
+\begin{align*}
+y_{i} \sim& \text{Poisson}(\lambda_{i})\\
+\text{log}(\lambda_{i}) =& \mu + \beta_{j[i]}\\
+ \beta_{j} \sim& \text{Normal}(0, \sigma^2_{\beta})
+
+\end{align*}
+
+
+
+## Model 3 (Partial Pooling) {.scrollable}
 
 
 ```{r echo=TRUE, eval=TRUE}
 summary(model3)
 ```
 
-:::
 
 ## Model 3 (Partial Pooling) {.scrollable}
+
+
+```{r echo=TRUE, eval=TRUE}
+confint(model3, component = c("all"))
+```
+
+
+<br>
+
+::: {.fragment}
 
 ```{r echo=TRUE, eval=TRUE}
 ranef(model3)
 ```
 
+:::
 <br>
 
 
@@ -320,18 +380,6 @@ broom.mixed::tidy(model3, effects = "ran_vals", conf.int = TRUE)
 
 :::
 
-<br>
-
-
-::: {.fragment}
-
-```{r echo=TRUE, eval=TRUE}
-confint(model3, component = c("all"))
-```
-
-:::
-
-<br>
 
 <!-- ::: {.fragment} -->
 
@@ -358,9 +406,9 @@ fixef(model3)
 ```{r echo=TRUE, eval=TRUE}
 #Predictions - does not include RE uncertainty
 preds = predict(model3,
-                newdata=data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
-                type="link",
-                re.form=NULL,
+                newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                type = "link",
+                re.form = NULL,
                 se.fit = TRUE
                 )
 
@@ -389,11 +437,14 @@ predict(model3,type="response",re.form=NA)[1]
 
 
 
-## Model 3b
+## Model 3b (lme4)
 
 ```{r echo=TRUE, eval=TRUE}
 library(lme4)
-model3b = glmer(y~1+(1|veg), family=poisson(link="log"),data=dat)
+model3b = glmer(y ~ 1 + (1|veg), 
+                family = poisson(link = "log"),
+                data = dat
+                )
 ```
 
 ::: {.fragment}
@@ -404,15 +455,7 @@ equatiomatic::extract_eq(model3b)
 
 :::
 
-## Alt Model Notation
 
-
-\begin{align*}
-y_{i} \sim& \text{Poisson}(\lambda_{i})\\
-\text{log}(\lambda_{i}) =& \mu + \alpha_{j[i]}\\
- \alpha_{j} \sim& \text{Normal}(0, \sigma^2_{\alpha})
-
-\end{align*}
 
 
 ## Pooling Information
@@ -420,9 +463,7 @@ y_{i} \sim& \text{Poisson}(\lambda_{i})\\
 ```{r echo=FALSE,eval=TRUE}
 library(plotrix)
 
-
 m1.est=data.frame(confint(model1))
-
 
 plot(1:5,rep(-50,5),ylim=c(2,4.2),xaxt='n',xlab="Vegetation",ylab="Coeficient",main="Estimates")
 axis(1,at=1:5,lab=c("Veg1","Veg2","Veg3","Veg4","Veg5"))
@@ -520,7 +561,7 @@ legend("topright",lwd=3,col=c(1,"purple","green"),legend=c("Model 1, (y~1), Comp
 
 ## Random Intercept + Slope
 
-Leopard detection varies by cover and veg, where the effect of cover comes from a shared distribution
+New hypothesis: Leopard detection varies by cover and vegetation, where the effect of cover comes from a shared distribution
 
 ```{r echo=FALSE, eval=TRUE}
 N.groups = 10
@@ -558,25 +599,40 @@ head(dat2)
 ## Random Intercept + Slope
 
 ```{r echo=TRUE, eval=TRUE}
-re.model = glmer(y~cov+(cov|veg), family=poisson(link="log"),data=dat2)
+re.model = glmer(y ~ cov + (cov||veg), 
+                 family = poisson(link = "log"),
+                 data = dat2
+                 )
 ```
 
+. . .
 
-::: {.fragment}
+i =  counts
+j = vegetation type
+
+\begin{align*}
+y_{i} \sim& \text{Poisson}(\lambda_{i})\\
+\text{log}(\lambda_{i}) =& \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + \mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}}\\
+ \beta_{\text{veg}_j} \sim& \text{Normal}(0, \sigma^2_{\text{veg}})\\
+ \beta_{\text{cov}_j} \sim& \text{Normal}(0, \sigma^2_{\text{cov}})
+
+\end{align*}
+
+## Random Intercept + Slope
+
 
 ```{r echo=TRUE, eval=TRUE}
 summary(re.model)
 ```
 
-:::
 
 ## Random Intercept + Slope
 
 - Called conditional mean predictions
 
 ```{r echo=TRUE, eval=TRUE}
-marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
-                                  type="link", re.form=NULL)
+marginaleffects::plot_predictions(re.model, condition = c("cov","veg"),
+                                  type = "link", re.form = NULL)
 ```
 
 
@@ -587,7 +643,7 @@ marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
 
 ```{r echo=TRUE, eval=TRUE}
 marginaleffects::plot_predictions(re.model, condition=c("cov","veg"),
-                                  type="link", re.form=NA)
+                                  type = "link", re.form = NA)
 ```
 
 ## Random Intercept + Slope
