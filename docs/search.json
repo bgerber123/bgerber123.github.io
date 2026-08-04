@@ -14718,7 +14718,7 @@
     "href": "FW670/BigPicture.html#prediction",
     "title": "Big Picture  Science and Modeling",
     "section": "Prediction",
-    "text": "Prediction\n\nDefinition\nThe expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.\n\n\nExample 1\n\nOkay: Coyote home ranges are smaller in urban areas compared to non-urban areas\n\n\n\nExample 2\n\nBetter: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas"
+    "text": "Prediction\n\nDefinition\nThe expected outcome from a hypothesis. If agrees with data, it would support the hypothesis or at least not reject it.\n\n\nExample 1\n\nOkay: Coyote home ranges are smaller in urban areas compared to non-urban areas\n\n\n\nExample 2\n\nBetter: Coyote home ranges in urban areas with high available food resources are smaller than coyote home ranges in urban areas with low available food resources and smaller than coyotes living in non-urban areas"
   },
   {
     "objectID": "FW670/BigPicture.html#types-of-studies",
@@ -14921,7 +14921,7 @@
     "href": "FW670/BigPicture.html#design-based-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n\n\n\\(\\textbf{u}\\) = [\\(y_1\\),…,\\(y_n\\)]"
+    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\n\n\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_n\\)]"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-5",
@@ -14949,14 +14949,14 @@
     "href": "FW670/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  322  116  288  180  129\n[2,]   63  387   54  389  103\n[3,]  387   47  293  206  315\n[4,]  296  144  206   37  398\n[5,]  158   98  370  377   59"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  399  106   70   98  318\n[2,]  299  199   27   89   18\n[3,]   35   24   60   80  286\n[4,]  204  155  126  185  270\n[5,]  112  222  151  300  269"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-1",
     "href": "FW670/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 206 116 288  47 180 387 293 180 389 370\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 245.6"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 155  35 185  70  70  98 199 112  80 126\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 113"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-2",

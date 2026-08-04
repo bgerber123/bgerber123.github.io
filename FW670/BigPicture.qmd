@@ -221,7 +221,7 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 <summary>Example 2</summary>
 ```
 
-2. <span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas
+2. <span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources are smaller than coyote home ranges in urban areas with low available food resources and smaller than coyotes living in non-urban areas
 
 ```{=html}
 </details>
@@ -236,14 +236,14 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 
 - Hypothetico-Deductive Experimental
 
-## Manuscript Writing
+<!-- ## Manuscript Writing -->
 
-<span style="color:red">Where do you put these?</span>
+<!-- <span style="color:red">Where do you put these?</span> -->
 
-- objectives 
-- justification of objectives
-- hypotheses
-- predictions
+<!-- - objectives  -->
+<!-- - justification of objectives -->
+<!-- - hypotheses -->
+<!-- - predictions -->
 
 
 ## Take-Aways?
@@ -609,7 +609,7 @@ The sample and population are what??
 
 . . .
 
-- $\textbf{u}$ = [$y_1$,...,$y_n$]
+- $\textbf{y}$ = [$y_1$,...,$y_n$]
 
 <!-- <span style="color:red">This means something different</span>:  -->
 
@@ -673,7 +673,7 @@ We observe samples from the domain or population or sampling frame.
 
 
 
-## Design-Based Code 
+## Design-Based Code {.scrollable}
 
 ### TRUTH
 ```{r design.sim, echo=TRUE, eval=TRUE}

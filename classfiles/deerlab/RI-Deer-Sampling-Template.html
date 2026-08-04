@@ -371,9 +371,10 @@ font-size: 16px
 have setup the context and scenarios to conduct a stochastic simulation
 to evaluate whether realistic sample sizes will achieve a project object
 of estimating white-tail deer abundance, considering deer densities that
-are low and high. You will have to complete the code and resample the
-two ‘truths’ and then evaluate whether the project objective is met
-using Monte Carlo integration.</p>
+are low and high. We will take a design-based approach in that we will
+consider two ‘truths’ and not a superpopulation. You will have to
+complete the code and resample the two ‘truths’ and then evaluate
+whether the project objective is met using Monte Carlo integration.</p>
 <div id="report" class="section level1">
 <h1><strong>Report</strong></h1>
 <p><strong>Main Take-Away:</strong></p>
@@ -420,7 +421,7 @@ deer/mi<span class="math inline">\(^2\)</span>).</p>
 # Total expected deer populations
   deer.dens*nrow(RI)</code></pre>
 <pre><code>## [1]   944 18880</code></pre>
-<pre class="r"><code># Simulate deer densities
+<pre class="r"><code># Simulate deer densities (single truths, but from a stochastic process model)
   set.seed(434343)
   deer1 = rpois(nrow(RI),deer.dens[1])
   deer2 = rpois(nrow(RI),deer.dens[2])
@@ -508,7 +509,7 @@ packages used are acknowledged below.</p>
 <tbody>
 <tr class="odd">
 <td align="left">base</td>
-<td align="left">4.5.3</td>
+<td align="left">4.6.1</td>
 <td align="left"><span class="citation">@base</span></td>
 </tr>
 <tr class="even">
@@ -518,12 +519,12 @@ packages used are acknowledged below.</p>
 </tr>
 <tr class="odd">
 <td align="left">sf</td>
-<td align="left">1.1.0</td>
+<td align="left">1.1.2</td>
 <td align="left"><span class="citation">@sf2018</span>; <span class="citation">@sf2023</span></td>
 </tr>
 <tr class="even">
 <td align="left">spsurvey</td>
-<td align="left">5.6.0</td>
+<td align="left">5.6.1</td>
 <td align="left"><span class="citation">@spsurvey</span></td>
 </tr>
 <tr class="odd">

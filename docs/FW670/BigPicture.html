@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Brian D. Gerber – Big Picture   Science and Modeling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -321,7 +321,7 @@ pre {
 <details>
 <summary>Example 2</summary>
 <ol start="2" type="1">
-<li><span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources is smaller than coyote home ranges in urban areas with less available food resources and smaller than coyotes living in non-urban areas</li>
+<li><span style="color:red">Better</span>: Coyote home ranges in urban areas with high available food resources are smaller than coyote home ranges in urban areas with low available food resources and smaller than coyotes living in non-urban areas</li>
 </ol>
 </details>
 </section>
@@ -332,16 +332,12 @@ pre {
 <li><p>Hypothetico-Deductive Observational</p></li>
 <li><p>Hypothetico-Deductive Experimental</p></li>
 </ul>
-</section>
-<section id="manuscript-writing" class="slide level2">
-<h2>Manuscript Writing</h2>
-<p><span style="color:red">Where do you put these?</span></p>
-<ul>
-<li>objectives</li>
-<li>justification of objectives</li>
-<li>hypotheses</li>
-<li>predictions</li>
-</ul>
+<!-- ## Manuscript Writing -->
+<!-- <span style="color:red">Where do you put these?</span> -->
+<!-- - objectives  -->
+<!-- - justification of objectives -->
+<!-- - hypotheses -->
+<!-- - predictions -->
 </section>
 <section id="take-aways" class="slide level2">
 <h2>Take-Aways?</h2>
@@ -639,7 +635,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 </ul>
 <div class="fragment">
 <ul>
-<li><span class="math inline">\(\textbf{u}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_n\)</span>]</li>
+<li><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_n\)</span>]</li>
 </ul>
 <!-- <span style="color:red">This means something different</span>:  -->
 <!-- - $\textbf{Y}$ = ($y_1$,...,$y_N$) -->
@@ -694,7 +690,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 </ul>
 </div>
 </section>
-<section id="design-based-code" class="slide level2">
+<section id="design-based-code" class="slide level2 scrollable">
 <h2>Design-Based Code</h2>
 <h3 id="truth">TRUTH</h3>
 <div class="cell">
@@ -717,11 +713,11 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span id="cb1-17"><a></a>mat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  322  116  288  180  129
-[2,]   63  387   54  389  103
-[3,]  387   47  293  206  315
-[4,]  296  144  206   37  398
-[5,]  158   98  370  377   59</code></pre>
+[1,]  399  106   70   98  318
+[2,]  299  199   27   89   18
+[3,]   35   24   60   80  286
+[4,]  204  155  126  185  270
+[5,]  112  222  151  300  269</code></pre>
 </div>
 </div>
 </section>
@@ -737,7 +733,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span id="cb3-6"><a></a>             )</span>
 <span id="cb3-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 206 116 288  47 180 387 293 180 389 370</code></pre>
+<pre><code> [1] 155  35 185  70  70  98 199 112  80 126</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -746,7 +742,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 245.6</code></pre>
+<pre><code>[1] 113</code></pre>
 </div>
 </div>
 </div>
