@@ -15929,7 +15929,7 @@
     "href": "FW670/Introduction.html#project",
     "title": "Wildlife Ecology Modeling",
     "section": "Project",
-    "text": "Project\n\nindependent research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation\n\n* more on the main site"
+    "text": "Project\n\nindependent research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation\n\n* more on the main site (5th tab)"
   },
   {
     "objectID": "FW670/Introduction.html#course-learning-objectives",
@@ -15964,7 +15964,7 @@
     "href": "FW670/Introduction.html#why-use-r",
     "title": "Wildlife Ecology Modeling",
     "section": "Why use R?",
-    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nfind help online, e.g., stackoverflow\ndata management\nstatistics\nplotting / graphics"
+    "text": "Why use R?\n\n\nopen-source and free\nsmall total user base / large in ecology and statistics\nlots of resources online\ndata management (meh)\nstatistics\nplotting / graphics"
   },
   {
     "objectID": "FW670/Introduction.html#why-use-rstudio",
@@ -15992,7 +15992,7 @@
     "href": "FW670/Introduction.html#coding-in-the-modern-age",
     "title": "Wildlife Ecology Modeling",
     "section": "Coding in the Modern Age",
-    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower than packages\nDocument/Annotate code and publish it online\nFile management is important; use sub-folders"
+    "text": "Coding in the Modern Age\n\nSoftware changes all the time\nCode will become obsolete\nBase R functions change slower than packages\nDocument/Annotate code and publish it online\nOrganize your files! Use sub-folders"
   },
   {
     "objectID": "FW670/Introduction.html#a-graduate-students-dilemma",
@@ -16020,7 +16020,7 @@
     "href": "FW670/Introduction.html#think-statistically",
     "title": "Wildlife Ecology Modeling",
     "section": "Think Statistically",
-    "text": "Think Statistically\nKnow…\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nand have justification for modeling decisions\n\nrequires reading literature\nrequires evaluating assumptions yourself"
+    "text": "Think Statistically\nKnow…\n\nyour objective in fitting a model\nthe model and its properties (not just the name)\nhow to interpret ALL the parameters\nhow the parameters are being optimized\nthe consequences of your modeling decisions\n\nrequires reading statistical literature\nrequires evaluating assumptions yourself"
   },
   {
     "objectID": "FW670/Introduction.html#why-is-statistics-and-ecological-modeling-so-difficult",
@@ -16055,7 +16055,7 @@
     "href": "FW670/Introduction.html#teaching-philosophy",
     "title": "Wildlife Ecology Modeling",
     "section": "Teaching Philosophy",
-    "text": "Teaching Philosophy\n\nLearning is a choice, in each movement\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
+    "text": "Teaching Philosophy\n\nLearning is a choice (in each moment)\nAn inclusive environment is paramount for learning\nCommunication is key\nEveryone has something to teach and something to learn\nStruggle is good. Solving problems leads to learning\nBUT…."
   },
   {
     "objectID": "FW670/Introduction.html#website",
@@ -16118,7 +16118,7 @@
     "href": "FW670/Introduction.html#some-useful-functions",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\nfor loops\n\nsave.this=c()\nfor(i in 1:10){\n  save.this[i] =  1-i\n}"
+    "text": "Some useful functions\nfor loops\n\nsave.this = c()\nfor(i in 1:10){\n  save.this[i] =  1-i\n}"
   },
   {
     "objectID": "FW670/Introduction.html#some-useful-functions-1",
@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.19196881  0.92704234  0.02697399  0.01572182 -0.26998103 -0.09087106\n [7] -0.21337480 -0.01731869  0.32699526  0.08688225\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.5 0.3 0.1 0.1 0.0 0.4 0.1 0.2 0.2"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow = 10, ncol = 10)\n\napply(mat, 2, FUN = median)\n\n [1] -0.10180681  0.47657071 -0.74613796 -1.22749855 -0.75314186 -0.42093655\n [7]  0.16072314  0.35684436 -0.04281841  0.65578569\n\n\n\n\napply(mat, 2, FUN = function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.0 0.2 0.1 0.0 0.1 0.0 0.3 0.3 0.1 0.3"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",
@@ -16146,7 +16146,7 @@
     "href": "FW670/Introduction.html#better",
     "title": "Wildlife Ecology Modeling",
     "section": "Better…",
-    "text": "Better…\n\n# Create Storage objects\n  cor.sp.route.cor=vector(\"list\",n.species)\n  cor.sp=rep(NA,n.species)\n\n#loop over species    \n  for(s in 1:n.species)\n    {\n      route=new.cov.species.long.scaled[[s]]$routeID\n                        \n      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],\n                      patch.count20.species.scaled.mat.center.route[s,]\n                      )\n        # loop over species and routes                    \n        for(i in 1:nroutes)\n          {\n            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n            if(length(temp1)&gt;5){\n                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n                                } #End if statement\n          } #End routes loop\n                       \n    } #End species loop"
+    "text": "Better…\n\n# Create Storage objects\n  cor.sp.route.cor=vector(\"list\",n.species)\n  cor.sp=rep(NA,n.species)\n\n#loop over species    \n  for(s in 1:n.species)\n    {\n      route = new.cov.species.long.scaled[[s]]$routeID\n                        \n      cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],\n                      patch.count20.species.scaled.mat.center.route[s,]\n                      )\n        # loop over species and routes                    \n        for(i in 1:nroutes)\n          {\n            temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]\n            temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]\n            if(length(temp1)&gt;5){\n                                cor.sp.route.cor[[s]] =abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))\n                                } #End if statement \n          } #End routes loop\n                       \n    } #End species loop"
   },
   {
     "objectID": "FW670/likelihood.html#objectives",
@@ -19325,5 +19325,19 @@
     "title": "Wildlife Ecology Modeling",
     "section": "",
     "text": "{js, echo=FALSE} window.addEventListener(‘hashchange’, function() { var hash = window.location.hash; if (hash) { var tabTrigger = document.querySelector(‘button[data-bs-target=“’ + hash + ’”], a[href=“’ + hash + ’”]’); if (tabTrigger) { var tab = new bootstrap.Tab(tabTrigger); tab.show(); } } });"
+  },
+  {
+    "objectID": "FW670/Introduction.html#how-do-you-use-generative-ai",
+    "href": "FW670/Introduction.html#how-do-you-use-generative-ai",
+    "title": "Wildlife Ecology Modeling",
+    "section": "How do you use generative AI?",
+    "text": "How do you use generative AI?"
+  },
+  {
+    "objectID": "FW670/Introduction.html#course-website",
+    "href": "FW670/Introduction.html#course-website",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Course Website",
+    "text": "Course Website\n\nLectures, code, readings, schedule, etc.\n\nhttps://bgerber123.github.io/FW670/\n\nHomework, Discussion Posts, Quizzes, and Grading: \n\nhttps://colostate.instructure.com/courses/228738"
   }
 ]

@@ -292,7 +292,7 @@ code.r{
 <li><p>independent research project - highlighting a modeling application, data/code transparency, and communication of results</p></li>
 <li><p>group development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation</p></li>
 </ol>
-<p><a href="index.html#tab-proj">* more on the main site</a></p>
+<p><a href="../FW670/index.html#tab-proj">* more on the main site (5th tab)</a></p>
 </section>
 <section id="course-learning-objectives" class="slide level2">
 <h2><span style="color:#078BCD;">Course Learning Objectives</span></h2>
@@ -337,8 +337,8 @@ code.r{
 <ul>
 <li>open-source and free</li>
 <li>small total user base / large in ecology and statistics</li>
-<li>find help online, e.g., <a href="https://stackoverflow.com/">stack<strong>overflow</strong></a></li>
-<li>data management</li>
+<li>lots of resources online</li>
+<li>data management (meh)</li>
 <li>statistics</li>
 <li>plotting / graphics</li>
 </ul>
@@ -379,7 +379,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <li><p>Code will become obsolete</p></li>
 <li><p>Base R functions change slower than packages</p></li>
 <li><p>Document/Annotate code and publish it online</p></li>
-<li><p>File management is important; use sub-folders</p></li>
+<li><p>Organize your files! Use sub-folders</p></li>
 </ul>
 <!-- ## [File management]{style="color:#078BCD;"} -->
 <!-- **Project Folder** -->
@@ -389,8 +389,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 <!--   - plots -->
 <!--   - R -->
 </section>
-<section id="how-to-use-generative-ai" class="slide level2">
-<h2><span style="color:#078BCD;">How to use generative AI?</span></h2>
+<section id="how-do-you-use-generative-ai" class="slide level2">
+<h2><span style="color:#078BCD;">How do you use generative AI?</span></h2>
 </section>
 <section id="a-graduate-students-dilemma" class="slide level2 smaller">
 <h2><span style="color:#078BCD">A Graduate Student’s Dilemma</span></h2>
@@ -426,7 +426,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <h2><span style="color:#078BCD;">Learning</span></h2>
 
 <img data-src="..\img/learning.graph.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><div style="text-align: center;">
-<p><em>I do not know where you are starting</em></p>
+<p><span style="color:red;">I do not know where you are starting</span></p>
 </div>
 </section>
 <section id="our-aim" class="slide level2">
@@ -445,9 +445,9 @@ statistical thinking have not changed, but their implementation has."</em></span
 <li class="fragment"><p>the model and its properties (not just the name)</p></li>
 <li class="fragment"><p>how to interpret ALL the parameters</p></li>
 <li class="fragment"><p>how the parameters are being optimized</p></li>
-<li class="fragment"><p>and have justification for modeling decisions</p>
+<li class="fragment"><p>the consequences of your modeling decisions</p>
 <ul>
-<li class="fragment">requires reading literature</li>
+<li class="fragment">requires reading statistical literature</li>
 <li class="fragment">requires evaluating assumptions yourself</li>
 </ul></li>
 </ul>
@@ -497,7 +497,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <section id="teaching-philosophy" class="slide level2">
 <h2><span style="color:#078BCD">Teaching Philosophy</span></h2>
 <ul>
-<li class="fragment"><p>Learning is a choice, in each movement</p></li>
+<li class="fragment"><p>Learning is a choice (in each moment)</p></li>
 <li class="fragment"><p>An inclusive environment is paramount for learning</p></li>
 <li class="fragment"><p>Communication is key</p></li>
 <li class="fragment"><p>Everyone has something to teach and something to learn</p></li>
@@ -514,9 +514,18 @@ statistical thinking have not changed, but their implementation has."</em></span
 <!-- </ul> -->
 <!-- </span> -->
 </section>
-<section id="website" class="slide level2">
-<h2><span style="color:#078BCD">Website</span></h2>
-<p><a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a></p>
+<section id="course-website" class="slide level2">
+<h2><span style="color:#078BCD">Course Website</span></h2>
+<ul>
+<li><strong>Lectures, code, readings, schedule, etc.</strong>
+<ul>
+<li><a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a></li>
+</ul></li>
+<li><strong>Homework, Discussion Posts, Quizzes, and Grading: </strong>
+<ul>
+<li><a href="https://colostate.instructure.com/courses/228738">https://colostate.instructure.com/courses/228738</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
@@ -611,7 +620,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <h2><span style="color:green;">Some useful functions</span></h2>
 <p>for loops</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>save.this<span class="ot">=</span><span class="fu">c</span>()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>save.this <span class="ot">=</span> <span class="fu">c</span>()</span>
 <span id="cb7-2"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
 <span id="cb7-3"><a></a>  save.this[i] <span class="ot">=</span>  <span class="dv">1</span><span class="sc">-</span>i</span>
 <span id="cb7-4"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -637,23 +646,23 @@ statistical thinking have not changed, but their implementation has."</em></span
 <h2><span style="color:green;">Some useful functions</span></h2>
 <p>apply/sapply/lapply/vapply</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>mat<span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>),<span class="at">nrow=</span><span class="dv">10</span>, <span class="at">ncol=</span><span class="dv">10</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>mat<span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>),<span class="at">nrow =</span> <span class="dv">10</span>, <span class="at">ncol =</span> <span class="dv">10</span>)</span>
 <span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a><span class="fu">apply</span>(mat, <span class="dv">2</span>, <span class="at">FUN=</span>median)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-3"><a></a><span class="fu">apply</span>(mat, <span class="dv">2</span>, <span class="at">FUN =</span> median)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.19196881  0.92704234  0.02697399  0.01572182 -0.26998103 -0.09087106
- [7] -0.21337480 -0.01731869  0.32699526  0.08688225</code></pre>
+<pre><code> [1] -0.10180681  0.47657071 -0.74613796 -1.22749855 -0.75314186 -0.42093655
+ [7]  0.16072314  0.35684436 -0.04281841  0.65578569</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">apply</span>(mat, <span class="dv">2</span>, <span class="at">FUN=</span><span class="cf">function</span>(x){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">apply</span>(mat, <span class="dv">2</span>, <span class="at">FUN =</span> <span class="cf">function</span>(x){</span>
 <span id="cb12-2"><a></a>  </span>
 <span id="cb12-3"><a></a>  <span class="fu">length</span>(<span class="fu">which</span>(x<span class="sc">&gt;</span><span class="dv">1</span>))<span class="sc">/</span><span class="fu">length</span>(x)</span>
 <span id="cb12-4"><a></a>  </span>
 <span id="cb12-5"><a></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.0 0.5 0.3 0.1 0.1 0.0 0.4 0.1 0.2 0.2</code></pre>
+<pre><code> [1] 0.0 0.2 0.1 0.0 0.1 0.0 0.3 0.3 0.1 0.3</code></pre>
 </div>
 </div>
 </div>
@@ -694,7 +703,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <span id="cb15-5"><a></a><span class="co">#loop over species    </span></span>
 <span id="cb15-6"><a></a>  <span class="cf">for</span>(s <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n.species)</span>
 <span id="cb15-7"><a></a>    {</span>
-<span id="cb15-8"><a></a>      route<span class="ot">=</span>new.cov.species.long.scaled[[s]]<span class="sc">$</span>routeID</span>
+<span id="cb15-8"><a></a>      route <span class="ot">=</span> new.cov.species.long.scaled[[s]]<span class="sc">$</span>routeID</span>
 <span id="cb15-9"><a></a>                        </span>
 <span id="cb15-10"><a></a>      cor.sp[s] <span class="ot">=</span> <span class="fu">cor</span>(patch.size20.species.scaled.mat.center.route[s,],</span>
 <span id="cb15-11"><a></a>                      patch.count20.species.scaled.mat.center.route[s,]</span>
@@ -705,8 +714,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 <span id="cb15-16"><a></a>            temp1 <span class="ot">=</span> patch.size20.species.scaled.mat.center.route[s,<span class="fu">which</span>(route<span class="sc">==</span>route.id[i])]</span>
 <span id="cb15-17"><a></a>            temp2 <span class="ot">=</span> patch.count20.species.scaled.mat.center.route[,][s,<span class="fu">which</span>(route<span class="sc">==</span>route.id[i])]</span>
 <span id="cb15-18"><a></a>            <span class="cf">if</span>(<span class="fu">length</span>(temp1)<span class="sc">&gt;</span><span class="dv">5</span>){</span>
-<span id="cb15-19"><a></a>                                cor.sp.route.cor[[s]]<span class="ot">=</span><span class="fu">abs</span>(<span class="fu">c</span>(cor.sp.route.cor[[s]],<span class="fu">cor</span>(temp1,temp2)))</span>
-<span id="cb15-20"><a></a>                                } <span class="co">#End if statement</span></span>
+<span id="cb15-19"><a></a>                                cor.sp.route.cor[[s]] <span class="ot">=</span><span class="fu">abs</span>(<span class="fu">c</span>(cor.sp.route.cor[[s]],<span class="fu">cor</span>(temp1,temp2)))</span>
+<span id="cb15-20"><a></a>                                } <span class="co">#End if statement </span></span>
 <span id="cb15-21"><a></a>          } <span class="co">#End routes loop</span></span>
 <span id="cb15-22"><a></a>                       </span>
 <span id="cb15-23"><a></a>    } <span class="co">#End species loop</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -715,10 +724,9 @@ statistical thinking have not changed, but their implementation has."</em></span
 <section id="section-2" class="slide level2">
 <h2></h2>
 
-<img data-src="..\img/question.png" class="quarto-figure quarto-figure-center r-stretch" width="300"><p>{js, echo=FALSE} window.addEventListener(‘hashchange’, function() { var hash = window.location.hash; if (hash) { var tabTrigger = document.querySelector(‘button[data-bs-target=“’ + hash + ’”], a[href=“’ + hash + ’”]’); if (tabTrigger) { var tab = new bootstrap.Tab(tabTrigger); tab.show(); } } });</p>
 
 
-</section>
+<img data-src="..\img/question.png" class="quarto-figure quarto-figure-center r-stretch" width="300"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

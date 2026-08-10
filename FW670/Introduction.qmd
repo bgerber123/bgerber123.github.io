@@ -73,7 +73,7 @@ Project                | 30%
 
 2) group development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation
 
-[* more on the main site](index.html#tab-proj)
+[* more on the main site (5th tab)](index.qmd#tab-proj)
 
 ## [Course Learning Objectives]{style="color:#078BCD;"}
 
@@ -130,8 +130,8 @@ Upon successful completion of this course students will be able to:
 ::: fragment
 -   open-source and free
 -   small total user base / large in ecology and statistics
--   find help online, e.g., [stack**overflow**](https://stackoverflow.com/)
--   data management
+-   lots of resources online
+-   data management (meh)
 -   statistics
 -   plotting / graphics
 :::
@@ -180,7 +180,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 - Document/Annotate code and publish it online
 
-- File management is important; use sub-folders
+- Organize your files! Use sub-folders
 
 <!-- ## [File management]{style="color:#078BCD;"} -->
 
@@ -193,7 +193,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 <!--   - plots -->
 <!--   - R -->
 
-## [How to use generative AI?]{style="color:#078BCD;"}
+## [How do you use generative AI?]{style="color:#078BCD;"}
 
 ## [A Graduate Student's Dilemma ]{style="color:#078BCD"}{.smaller}
 
@@ -234,7 +234,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 :::: {style="text-align: center;"}
 
-*I do not know where you are starting*
+[I do not know where you are starting]{style="color:red;"}
+
 
 ::::
 
@@ -265,8 +266,8 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 - how the parameters are being optimized
 
-- and have justification for modeling decisions
-  - requires reading literature
+- the consequences of your modeling decisions
+  - requires reading statistical literature
   - requires evaluating assumptions yourself
 :::
 
@@ -325,7 +326,7 @@ Know the *why* of your decisions
 ## [Teaching Philosophy]{style="color:#078BCD"}
 
 ::: incremental
--   Learning is a choice, in each movement
+-   Learning is a choice (in each moment)
 
 -   An inclusive environment is paramount for learning
 
@@ -358,10 +359,13 @@ Know the *why* of your decisions
 <!-- </span> -->
 
 
-## [Website]{style="color:#078BCD"}
+## [Course Website]{style="color:#078BCD"}
 
-<a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a>
+- **Lectures, code, readings, schedule, etc.**
+  - <a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a>
 
+- **Homework, Discussion Posts, Quizzes, and Grading: **
+  - <a href="https://colostate.instructure.com/courses/228738">https://colostate.instructure.com/courses/228738</a>
 
 ## 
 
@@ -475,7 +479,7 @@ for loops
 ```{r}
 #| echo: TRUE
 #| eval: TRUE
-save.this=c()
+save.this = c()
 for(i in 1:10){
   save.this[i] =  1-i
 }
@@ -505,9 +509,9 @@ apply/sapply/lapply/vapply
 #| echo: TRUE
 #| eval: TRUE
 
-mat= matrix(rnorm(100),nrow=10, ncol=10)
+mat= matrix(rnorm(100),nrow = 10, ncol = 10)
 
-apply(mat, 2, FUN=median)
+apply(mat, 2, FUN = median)
 ```
 ::: {.fragment}
 
@@ -515,7 +519,7 @@ apply(mat, 2, FUN=median)
 #| echo: TRUE
 #| eval: TRUE
 
-apply(mat, 2, FUN=function(x){
+apply(mat, 2, FUN = function(x){
   
   length(which(x>1))/length(x)
   
@@ -558,7 +562,7 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 ## [Better...]{style="color:green;"}
 
-```{r, echo = TRUE}
+```{r}
 #| echo: TRUE
 #| eval: FALSE
 
@@ -569,7 +573,7 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 #loop over species    
   for(s in 1:n.species)
     {
-      route=new.cov.species.long.scaled[[s]]$routeID
+      route = new.cov.species.long.scaled[[s]]$routeID
                         
       cor.sp[s] = cor(patch.size20.species.scaled.mat.center.route[s,],
                       patch.count20.species.scaled.mat.center.route[s,]
@@ -580,8 +584,8 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
             temp1 = patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
             temp2 = patch.count20.species.scaled.mat.center.route[,][s,which(route==route.id[i])]
             if(length(temp1)>5){
-                                cor.sp.route.cor[[s]]=abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
-                                } #End if statement
+                                cor.sp.route.cor[[s]] =abs(c(cor.sp.route.cor[[s]],cor(temp1,temp2)))
+                                } #End if statement 
           } #End routes loop
                        
     } #End species loop
@@ -592,5 +596,3 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 ![](/img/question.png){fig-align="center" width="300"}
 
-
-{js, echo=FALSE} window.addEventListener('hashchange', function() { var hash = window.location.hash; if (hash) { var tabTrigger = document.querySelector('button[data-bs-target="' + hash + '"], a[href="' + hash + '"]'); if (tabTrigger) { var tab = new bootstrap.Tab(tabTrigger); tab.show(); } } });
