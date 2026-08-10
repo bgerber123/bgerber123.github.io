@@ -154,6 +154,7 @@ visualize.it(dist = 'norm', stat = c(120),
 
 
 ## ----echo=TRUE----------------------------
+# The cumulative distribution function for the Normal distribution
 pnorm(q = 120,
       mean = 100,
       sd = 10,
@@ -212,6 +213,7 @@ legend("topright",lty=3, col=c(1,2),legend=c("Mean","Mode"),lwd=3)
 
 
 ## ----eval=TRUE, echo=TRUE-----------------
+# Cumulative distribution function for the Gamma distribution
 pgamma(q = 40, 
        shape = 10, 
        scale = 2,

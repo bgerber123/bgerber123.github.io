@@ -782,6 +782,7 @@ Read this as "the integral of the probability density function between 120 and i
 
 The code
 ```{r, echo=TRUE}
+# The cumulative distribution function for the Normal distribution
 pnorm(q = 120,
       mean = 100,
       sd = 10,
@@ -1015,6 +1016,7 @@ $$
 
 
 ```{r,eval=TRUE, echo=TRUE}
+# Cumulative distribution function for the Gamma distribution
 pgamma(q = 40, 
        shape = 10, 
        scale = 2,

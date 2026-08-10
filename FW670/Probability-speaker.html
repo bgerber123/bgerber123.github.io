@@ -874,11 +874,12 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <div class="fragment">
 <p>The code</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">120</span>,</span>
-<span id="cb25-2"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
-<span id="cb25-3"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
-<span id="cb25-4"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb25-5"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># The cumulative distribution function for the Normal distribution</span></span>
+<span id="cb25-2"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">120</span>,</span>
+<span id="cb25-3"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
+<span id="cb25-4"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
+<span id="cb25-5"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb25-6"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.02275013</code></pre>
 </div>
@@ -1063,11 +1064,12 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>, </span>
-<span id="cb38-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb38-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb38-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb38-5"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="co"># Cumulative distribution function for the Gamma distribution</span></span>
+<span id="cb38-2"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>, </span>
+<span id="cb38-3"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb38-4"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb38-5"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb38-6"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.004995412</code></pre>
 </div>
