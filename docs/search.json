@@ -15908,14 +15908,14 @@
     "href": "FW670/Introduction.html#class-stuff",
     "title": "Wildlife Ecology Modeling",
     "section": "Class Stuff",
-    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Mo 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu\n\n\n\n\n\nComputers: Bring laptop to class\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n670-001 (CRN 77992) and FW 670-L01 (CRN 77993)"
+    "text": "Class Stuff\n\n\nInstructor: Brian Gerber\nClassroom: NR 243\n\nLecture/Lab/Discussion\n\nWhen: Mo 11am - 12:15pm and Fr 10am - 1pm\n\n\n\nMy Office: 202A Wagar, Colorado Cooperative Research Unit\n\nOffice hours: TU 1:30pm - 2:30pm and by appointment\nbrian.gerber@colostate.edu"
   },
   {
     "objectID": "FW670/Introduction.html#what-is-this-course",
     "href": "FW670/Introduction.html#what-is-this-course",
     "title": "Wildlife Ecology Modeling",
     "section": "What is this course?",
-    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\ncoding\nmath / notation\nscience philosophy\nwildlife ecology and conservation"
+    "text": "What is this course?\nA mix of…\n\nstatistics\nmodeling\nmath / notation\ncoding\nscience philosophy\nwildlife ecology and conservation"
   },
   {
     "objectID": "FW670/Introduction.html#assessment",
@@ -15929,7 +15929,7 @@
     "href": "FW670/Introduction.html#project",
     "title": "Wildlife Ecology Modeling",
     "section": "Project",
-    "text": "Project\n\nindependent or group research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation"
+    "text": "Project\n\nindependent research project - highlighting a modeling application, data/code transparency, and communication of results\ngroup development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation\n\n* more on the main site"
   },
   {
     "objectID": "FW670/Introduction.html#course-learning-objectives",
@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1] -0.10478960  0.01999684  0.19401389  0.02926707  0.49270095  0.32052280\n [7]  0.02451462 -0.14279799  0.10761668  0.57760324\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.3 0.0 0.0 0.3 0.3 0.2 0.3 0.3 0.1 0.3"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.02150201 -0.31948532  0.08358996 -0.99404809 -0.06072863  0.02096362\n [7] -0.32272030 -0.81436451  0.43129422 -0.28539961\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.2 0.1 0.1 0.4 0.1 0.1 0.2 0.1 0.1 0.0"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",
@@ -19311,5 +19311,12 @@
     "title": "Study Design Evaluation of Estimating White-tailed Deer Abundance in Rhode Island, USA",
     "section": "Software",
     "text": "Software\nThis report was generated from the R Statistical Software (v4.2.2; R Core Team 2021) using the Markdown language and RStudio. The R packages used are acknowledged below.\n\n\n\n\nPackage\nVersion\nCitation\n\n\n\nbase\n4.5.3\n@base\n\n\ndoParallel\n1.0.17\n@doParallel\n\n\nforeach\n1.5.2\n@foreach\n\n\nknitr\n1.51\n\n@knitr2014; @knitr2015; @knitr2025\n\n\n\nrmarkdown\n2.31\n\n@rmarkdown2018; @rmarkdown2020; @rmarkdown2026\n\n\n\nsf\n1.1.0\n\n@sf2018; @sf2023\n\n\n\nspsurvey\n5.6.0\n@spsurvey\n\n\ntictoc\n1.2.1\n@tictoc\n\n\ntidyverse\n2.0.0\n@tidyverse"
+  },
+  {
+    "objectID": "FW670/Introduction.html#class-stuff-1",
+    "href": "FW670/Introduction.html#class-stuff-1",
+    "title": "Wildlife Ecology Modeling",
+    "section": "Class Stuff",
+    "text": "Class Stuff\n\nComputers: Bring laptop to class (especially Friday)\n\nSoftware/R Packages should be installed prior to lab (posted on website)\n\nRegistration:\n\n670-001 (CRN 77992) and FW 670-L01 (CRN 77993)"
   }
 ]

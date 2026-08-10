@@ -7,7 +7,7 @@ title-slide-attributes:
 ---
 
 
-## [Class Stuff]{style="color:#078BCD;"}{.scrollable}
+## [Class Stuff]{style="color:#078BCD;"}
 ```{=html}
 <style type="text/css">
 
@@ -33,10 +33,10 @@ code.r{
 
     -   brian.gerber@colostate.edu
 
-. . .
+## [Class Stuff]{style="color:#078BCD;"}
 
 
--   **Computers**: Bring laptop to class
+-   **Computers**: Bring laptop to class (especially Friday)
 
     -   Software/R Packages should be installed prior to lab (posted on website)
 
@@ -49,10 +49,10 @@ code.r{
 
 A mix of...
 
-- statistics
+- statistics 
 - modeling
-- coding
 - math / notation
+- coding
 - science philosophy
 - wildlife ecology and conservation
 
@@ -69,11 +69,11 @@ Project                | 30%
 
 ## [Project]{style="color:#078BCD;"}
 
-1) independent or group research project - highlighting a modeling application, data/code transparency, and communication of results
+1) independent research project - highlighting a modeling application, data/code transparency, and communication of results
 
-2) group development of a lecture and lab case-study that showcases a statistical application relevant to wildlife ecology and conservation
+2) group development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation
 
-
+[* more on the main site](index.qmd#tab-proj)
 
 ## [Course Learning Objectives]{style="color:#078BCD;"}
 
