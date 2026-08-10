@@ -16307,7 +16307,7 @@
     "href": "FW670/Probability.html#objectives",
     "title": "Probability",
     "section": "Objectives",
-    "text": "Objectives\n\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nlearn some notation"
+    "text": "Objectives\n\n\nConnect random variables, probabilities, and parameters\ndefine prob. functions\n\ndiscrete and continuous random variables\n\nuse/plot prob. functions\nnotation"
   },
   {
     "objectID": "FW670/Probability.html#probabilitystatistics",
@@ -16335,7 +16335,7 @@
     "href": "FW670/Probability.html#random-variables",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n\n\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\).\n\n\n\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot \n\n\n\n\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
+    "text": "Random Variables\n\\[\ny \\sim f(y)\n\\]\n\\(y\\) is a random variable which may change values each observation; it changes based on a probability function, \\(f(y)\\).\n\n\nThe tilde (\\(\\sim\\)) denotes “has the probability distribution of”.\n\n\n\nWhich value (y) is observed is predictable. Need to know parameters (\\(\\theta\\)) of the probability function \\(f(y)\\)."
   },
   {
     "objectID": "FW670/Probability.html#frequency-probabilitities",
@@ -16349,7 +16349,7 @@
     "href": "FW670/Probability.html#random-variables-1",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) = 0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
+    "text": "Random Variables\n\\[\ny \\sim f(y|\\theta)\n\\]\nSpecifically, \\(f(y|\\theta)\\), where ‘|’ is read as ‘given’.\n\n\nToss of a coin  Roll of a die  Weight of a captured elk  Count of plants in a sampled plot \n\n\n\n\n\nThe values observed can be understand based on the frequency within the population or presumed super-population. These frequencies can be described by probabilities."
   },
   {
     "objectID": "FW670/Probability.html#philosophy",
@@ -16363,7 +16363,7 @@
     "href": "FW670/Probability.html#random-variables-2",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
+    "text": "Random Variables\nWe are often interested in the characteristics of the whole population of frequencies,\n\ncentral tendency (mean, mode, median)\nvariability (var, sd)\nproportion of the population that meets some condition P(\\(8 \\leq y \\leq\\) 12) = 0.68\n\n\nWe infer what these are based on our sample (i.e., statistical inference)."
   },
   {
     "objectID": "FW670/Probability.html#functions",
@@ -16377,14 +16377,14 @@
     "href": "FW670/Probability.html#random-variables-3",
     "title": "Probability",
     "section": "Random Variables",
-    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+    "text": "Random Variables\n\\[\ny \\sim  f(y|\\boldsymbol{\\theta})\\\\\n\\]\n\\[\n\\begin{align*}\ny =& \\text{ event/outcome} \\\\\nf(y|\\boldsymbol{\\theta}) =& [y|\\boldsymbol{\\theta}]=  \\text{ process governing the value of } y \\\\\n\\boldsymbol{\\theta} =& \\text{ parameters} \\\\\n\\end{align*}\n\\]\n\n\\(f()\\) or [ ] is conveying a function (math).\n\n\nIt is called a PDF when \\(y\\) is continuous and a PMF when \\(y\\) is discrete.\n\nPDF: probability density function\nPMF: probability mass function"
   },
   {
     "objectID": "FW670/Probability.html#probability-functions",
     "href": "FW670/Probability.html#probability-functions",
     "title": "Probability",
     "section": "Probability Functions",
-    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead, 1 = alive\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied, 1 = site occupied w/o young, 2 = site occupied with young\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\n\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\\(y \\in  \\{0,1\\}\\)\n\n0 = dead,\n1 = alive"
   },
   {
     "objectID": "FW670/Probability.html#pmf",
@@ -16454,28 +16454,28 @@
     "href": "FW670/Probability.html#normal-distribution",
     "title": "Probability",
     "section": "Normal Distribution",
-    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean?  \n\n\n\nDoes the support of our data match the support of the PDF?\n\n\n\n\nWhat PDF does?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre they exactly the same?\n\n\n\n\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
+    "text": "Normal Distribution\nWe collect data on adult alligator lengths (in).\n\n\n [1]  90.30  83.02 103.67  85.17  99.20 106.74  90.76 105.28  99.41 101.72\n\n\n\n\n Should we use the Normal Distribution to estimate the mean?  \n\n\n\nDoes the support of our data match the support of the PDF?\n\n\n\n\nWhat PDF does?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre they the same?\n\n\n\n\nThe issue is when the data are near 0, we might estimate non-sensical values (e.g. negative)."
   },
   {
     "objectID": "FW670/Probability.html#pdf",
     "href": "FW670/Probability.html#pdf",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\nGamma: \\(y \\in  (0,\\infty)\\)\nBeta: \\(y \\in  (0,1)\\)\nContinuous Uniform: \\(y \\in  [a,b]\\)"
+    "text": "PDF\nContinuous RVs\n\\(y\\) are an uncountable set of values.\n\n\nProvide ecological data examples that match the support?\n\n\nGamma: \\(y \\in  [0,\\infty)\\)\nBeta: \\(y \\in  [0,1]\\) or \\((0,1)\\)\nContinuous Uniform: \\(y \\in  [a,b]\\)"
   },
   {
     "objectID": "FW670/Probability.html#pdf-1",
     "href": "FW670/Probability.html#pdf-1",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nPDFs of continious RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(q = 120,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(p = 0.02275,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 120"
+    "text": "PDF\nPDFs of continuous RVs follow the same rules as PMFs.\nConfusing Differences\n\nAxiom 1:\n\n\\(f(y) \\geq 0\\)\n\nPDFs output probability densities, not probabilities.\n\n\n\nset.seed(4); x = rnorm(100,2)\nh=hist(x,freq=FALSE) #probabilities=TRUE does the same thing; not a probability!\n\n\n\n\n\n\n\nsum(h$density)\n\n[1] 2"
   },
   {
     "objectID": "FW670/Probability.html#pdf-2",
     "href": "FW670/Probability.html#pdf-2",
     "title": "Probability",
     "section": "PDF",
-    "text": "PDF\nAxiom 3:\n\n\\(\\int_{\\text{lower support}}^{\\text{upper suppport}}f(y)dy = 1\\)\n\nThe sum of the probability densities of all possible outcomes is equal to 1."
+    "text": "PDF\nAxiom 2:\n\nProbs are the area b/w a lower and upper value of \\(y\\); i.e, area under the curve\n\n\n\\[\ny \\sim \\text{Normal}(\\mu, \\sigma) \\\\\nf(y|\\mu,\\sigma ) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{\\frac{1}{2}(\\frac{y-\\mu}{\\sigma})^{2}} \\\\\n\\]\n\n\n\nvisualize.it(dist = 'norm', stat = c(100),\n             list(mu = 100 , sd = 10), section = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe math,\n\\[\n\\int_{120}^{\\infty} f(y| \\mu, \\sigma)dy = P(120&lt;Y&lt;\\infty)\n\\]\n\n\nRead this as “the integral of the probability density function between 120 and infinity (on the left-hand side) is equal to the probability that the outcome of the random variable is between 120 and infinity (on the right-hand side)”.\n\n\n\nThe code\n\npnorm(q = 120,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 0.02275013\n\n\n\n\n\nOr, we could reverse the question.\n\nqnorm(p = 0.02275,\n      mean = 100,\n      sd = 10,\n      lower.tail = FALSE\n      )\n\n[1] 120"
   },
   {
     "objectID": "FW670/Probability.html#normal-distribution-pdf-code",
@@ -16517,7 +16517,7 @@
     "href": "FW670/Probability.html#gamma-distribution",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\sim& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in (0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
+    "text": "Gamma Distribution\nProbability: Interested in the variation of y, \\[\n\\begin{align*}\ny \\sim& f(y|\\boldsymbol{\\theta'}) \\\\\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\boldsymbol{\\theta'}  =& \\begin{matrix} [\\kappa & \\theta] \\end{matrix} \\\\\nf(y|\\boldsymbol{\\theta}') &= \\text{Gamma(}\\kappa, \\theta) \\\\\n\\end{align*}\n\\]\n\n\n\\[\n\\begin{align*}\nf(y|\\boldsymbol{\\theta}') &= \\frac{1}{\\Gamma(\\kappa)\\theta^{\\kappa}}y^{\\kappa-1} e^{-y/\\theta} \\\\\n\\end{align*}\n\\]\n\n\nSample/parameter Support:\n\n\\(y \\in [0,\\infty)\\)\n\\(\\kappa \\in (0,\\infty)\\)\n\\(\\theta \\in (0,\\infty)\\)"
   },
   {
     "objectID": "FW670/Probability.html#gamma-distribution-pdf-code",
@@ -16538,7 +16538,7 @@
     "href": "FW670/Probability.html#gamma-distribution-1",
     "title": "Probability",
     "section": "Gamma Distribution",
-    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\npgamma(q = 40, \n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 0.004995412\n\n\n\n\n\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q = 20,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.5420703\n\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q = 40,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )-\npgamma(q = 20, \n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma( p = 0.025,\n        shape = 10, \n        scale = 2,\n        lower.tail = TRUE\n        )\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p = 0.025,\n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
+    "text": "Gamma Distribution\nWhat is the probability we would sample a value &gt;40?  In this population, how common is a value &gt;40?\n\n\\[\n\\begin{align*}\np(y&gt;40) = \\int_{40}^{\\infty} f(y|\\boldsymbol{\\theta}) \\,dy\n\\end{align*}\n\\]\n\n\n\npgamma(q = 40, \n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 0.004995412\n\n\n\n\n\nNote: watch the equal sign and check the function!"
   },
   {
     "objectID": "FW670/Probability.html#the-others-side-of-the-coin",
@@ -18988,7 +18988,7 @@
     "href": "FW670/Probability.html#frequency-probabilities-1",
     "title": "Probability",
     "section": "Frequency / Probabilities",
-    "text": "Frequency / Probabilities\n\nhist.values=hist(y,breaks = seq(from=0, to=25, by = 1),freq = FALSE,\n                 ylab=\"Probability\",\n                 main=\"Distribution of the P(y)\",\n                 xlab=\"y / Counts of plants in a plot\")\n\nsum(hist.values$density)\n\n[1] 1"
+    "text": "Frequency / Probabilities\n\nhist.values=hist(y,breaks = seq(from=0, to=25, by = 1),freq = FALSE,\n                 ylab=\"Probability\",\n                 main=\"Distribution of the P(y)\",\n                 xlab=\"y / Counts of plants in a plot\")\n\n\n\n\n\n\n\nsum(hist.values$density)\n\n[1] 1"
   },
   {
     "objectID": "FW670/Probability.html#sampling",
@@ -19360,5 +19360,54 @@
     "title": "Big Picture  Science and Modeling",
     "section": "The Questioning Scientist",
     "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
+  },
+  {
+    "objectID": "FW670/Probability.html#random-variables-4",
+    "href": "FW670/Probability.html#random-variables-4",
+    "title": "Probability",
+    "section": "Random Variables",
+    "text": "Random Variables\nProbability: Interested in \\(y\\), the data, and the probability function that “generates” the data. \\[\n\\begin{align*}\ny \\leftarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]\n\nStatistics: Interested in population characteristics of \\(y\\); i.e., the parameters,\n\\[\n\\begin{align*}\ny \\rightarrow& f(y|\\boldsymbol{\\theta}) \\\\\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW670/Probability.html#probability-functions-1",
+    "href": "FW670/Probability.html#probability-functions-1",
+    "title": "Probability",
+    "section": "Probability Functions",
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\\(y \\in  \\{0,1, 2\\}\\)\n\n0 = site unoccupied\n1 = site occupied w/o young\n2 = site occupied with young"
+  },
+  {
+    "objectID": "FW670/Probability.html#probability-functions-2",
+    "href": "FW670/Probability.html#probability-functions-2",
+    "title": "Probability",
+    "section": "Probability Functions",
+    "text": "Probability Functions\nSpecial functions with rules to guarantee our logic of probabilities are maintained.\nDiscrete RVs\n\\(y\\) can only be a certain set of values.\n\n\\(y \\in  \\{0, 1, 2, ..., 15\\}\\)\n\ncount of pups in a litter; max could by physiological constraint\n\n\n\nThese sets are called the sample space (\\(\\Omega\\)) or the support of the RV."
+  },
+  {
+    "objectID": "FW670/Probability.html#pmf-2",
+    "href": "FW670/Probability.html#pmf-2",
+    "title": "Probability",
+    "section": "PMF",
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        \\theta^{y}\\times(1-\\theta)^{1-y}\n  \\end{align}\n\\]\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2^{1}\\times(1-0.2)^{1-1}\n  \\end{align}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]=\n  \\begin{align}\n        = 0.2 \\times (0.8)^{0} = 0.2\n  \\end{align}\n\\]"
+  },
+  {
+    "objectID": "FW670/Probability.html#probability-density-functions-pdf",
+    "href": "FW670/Probability.html#probability-density-functions-pdf",
+    "title": "Probability",
+    "section": "Probability Density Functions (PDF)",
+    "text": "Probability Density Functions (PDF)\nFor example, the Normal/Gaussian distribution describes the sample space for all values on the real number line.\n\\[y \\sim \\text{Normal}(\\mu, \\sigma) \\\\ y \\in (-\\infty, \\infty) \\\\ y \\in \\mathbb{R}\\]\nWhat is the parameter space for \\(\\mu\\) and \\(\\sigma\\)?"
+  },
+  {
+    "objectID": "FW670/Probability.html#pdf-3",
+    "href": "FW670/Probability.html#pdf-3",
+    "title": "Probability",
+    "section": "PDF",
+    "text": "PDF\nAxiom 3:\n\n\\(\\int_{\\text{lower support}}^{\\text{upper suppport}}f(y)dy = 1\\)\n\nThe sum of the probability densities of all possible outcomes is equal to 1."
+  },
+  {
+    "objectID": "FW670/Probability.html#gamma-distribution-2",
+    "href": "FW670/Probability.html#gamma-distribution-2",
+    "title": "Probability",
+    "section": "Gamma Distribution",
+    "text": "Gamma Distribution\nWhat is the probability of observing \\(y\\) &lt; 20\n\npgamma(q = 20,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.5420703\n\n\n\n\nWhat is the probability of observing 20 &lt; \\(y\\) &lt; 40\n\npgamma(q = 40,\n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )-\npgamma(q = 20, \n       shape = 10, \n       scale = 2,\n       lower.tail = TRUE\n       )\n\n[1] 0.4529343\n\n\n\n\n\nReverse the question: What values of \\(y\\) and lower have a probability of 0.025\n\nqgamma( p = 0.025,\n        shape = 10, \n        scale = 2,\n        lower.tail = TRUE\n        )\n\n[1] 9.590777\n\n\n\n\n\nWhat values of \\(y\\) and higher have a probability of 0.025\n\nqgamma(p = 0.025,\n       shape = 10, \n       scale = 2,\n       lower.tail = FALSE\n       )\n\n[1] 34.16961\n\n\n\n\n\ncurve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,\n      xlab=\"y\", ylab=\"dgamma(x,shape=10, scale=2)\")\nabline(v=c(9.590777,34.16961),lwd=3,col=2)\n\n\n\n\n\n\n\n\n\n\nWe can consider samples from this population,\n\nset.seed(154434)\ny &lt;- rgamma(100, shape=10, scale=2)"
   }
 ]
