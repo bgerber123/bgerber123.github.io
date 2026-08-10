@@ -50,7 +50,7 @@ $$
   
   -   A probability function for $\textbf{y}$:
   
-      -   $f(\textbf{y};\theta)$ or $[\textbf{y}|\theta]$ or $P(\textbf{y}|\theta)$
+      -   $f(\textbf{y}|\theta)$ or $f(\textbf{y};\theta)$ or $[\textbf{y}|\theta]$ or $P(\textbf{y}|\theta)$
   
       -   the unknown parameter(s) ($\theta$) of the probability function
   
@@ -60,7 +60,7 @@ $$
 
 $$
 \begin{align*}
-\mathcal{L}(\boldsymbol{\theta}|y) = P(y|\boldsymbol{\theta})  = f(y|\boldsymbol{\theta})
+\mathcal{L}(\boldsymbol{\theta}|y) = f(y|\boldsymbol{\theta})
 \end{align*}
 $$
 
@@ -77,7 +77,7 @@ CODE:
 # A data point
   y = c(10)
 
-#the likelihood the mean is 8, given our data
+# The likelihood the mean is 8, given our data
   dnorm(y, mean = 8)
 ```  
 
@@ -102,7 +102,7 @@ The **key** is to understand that the likelihood values are relative, which mean
 
 
 ```{r,eval=TRUE,echo=TRUE}
-#the likelihood the mean is 9, given our data
+# The likelihood the mean is 9, given our data
   dnorm(y, mean = 9)
 ```  
 
@@ -113,7 +113,7 @@ The **key** is to understand that the likelihood values are relative, which mean
 #### Grid Search
 
 ```{r,eval=TRUE,echo=TRUE}
-  means = seq(0, 20,by = 0.1) # many guesses of the mean
+  means = seq(0, 20, by = 0.1) # many guesses of the mean
   likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean
 ```
 
@@ -157,7 +157,7 @@ The **key** is to understand that the likelihood values are relative, which mean
 
 - Parameters are not RVs. They are not defined by a PDF/PMF.
 
-- MLEs are <span style="color:red">consistent</span>. As sample size increases, they will converge to the true parameter value.
+- MLEs are <span style="color:red">consistent</span>. As sample size increases, they will converge towards (get closer) the true parameter value.
 
 - MLEs are <span style="color:red">asymptotically unbiased</span>. The $E[\hat{\theta}]$ converges to $\theta$ as the sample size gets larger.
 

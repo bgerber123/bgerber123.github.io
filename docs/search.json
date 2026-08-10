@@ -16174,35 +16174,35 @@
     "href": "FW670/likelihood.html#the-pieces",
     "title": "Likelihood / Optimization",
     "section": "The pieces",
-    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
+    "text": "The pieces\n\nThe sample data, \\(\\textbf{y}\\)\nA probability function for \\(\\textbf{y}\\):\n\n\\(f(\\textbf{y}|\\theta)\\) or \\(f(\\textbf{y};\\theta)\\) or \\([\\textbf{y}|\\theta]\\) or \\(P(\\textbf{y}|\\theta)\\)\nthe unknown parameter(s) (\\(\\theta\\)) of the probability function"
   },
   {
     "objectID": "FW670/likelihood.html#the-likelihood-function",
     "href": "FW670/likelihood.html#the-likelihood-function",
     "title": "Likelihood / Optimization",
     "section": "The Likelihood Function",
-    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = P(y|\\boldsymbol{\\theta})  = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
+    "text": "The Likelihood Function\n\\[\n\\begin{align*}\n\\mathcal{L}(\\boldsymbol{\\theta}|y) = f(y|\\boldsymbol{\\theta})\n\\end{align*}\n\\]\n\nThe likelihood (\\(\\mathcal{L}\\)) of the unknown parameters, given our data, can be calculated using our probability function."
   },
   {
     "objectID": "FW670/likelihood.html#the-likelihood-function-1",
     "href": "FW670/likelihood.html#the-likelihood-function-1",
     "title": "Likelihood / Optimization",
     "section": "The Likelihood Function",
-    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n#the likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n\n\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n\n\n\n#the likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
+    "text": "The Likelihood Function\nFor example, for \\(y_{1} \\sim \\text{Normal}(\\mu,\\sigma)\\)\nCODE:\n\n# A data point\n  y = c(10)\n\n# The likelihood the mean is 8, given our data\n  dnorm(y, mean = 8)\n\n[1] 0.05399097\n\n\n\n\nIf we knew the mean is truly 8, it would also be the probability density of the observation y = 10. But, we don’t know what the mean truly is.\n\n\n\nThe key is to understand that the likelihood values are relative, which means we need many guesses.\n\n\n\n\n# The likelihood the mean is 9, given our data\n  dnorm(y, mean = 9)\n\n[1] 0.2419707"
   },
   {
     "objectID": "FW670/likelihood.html#optimization",
     "href": "FW670/likelihood.html#optimization",
     "title": "Likelihood / Optimization",
     "section": "Optimization",
-    "text": "Optimization\nGrid Search\n\n  means = seq(0, 20,by = 0.1) # many guesses of the mean\n  likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean"
+    "text": "Optimization\nGrid Search\n\n  means = seq(0, 20, by = 0.1) # many guesses of the mean\n  likelihood = dnorm(y, mean = means, sd = 1) # likelihood of each guess of the mean"
   },
   {
     "objectID": "FW670/likelihood.html#maximum-likelihood-properties",
     "href": "FW670/likelihood.html#maximum-likelihood-properties",
     "title": "Likelihood / Optimization",
     "section": "Maximum Likelihood Properties",
-    "text": "Maximum Likelihood Properties\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge to the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased at small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
+    "text": "Maximum Likelihood Properties\n\nCentral Tenet: evidence is relative.\nParameters are not RVs. They are not defined by a PDF/PMF.\nMLEs are consistent. As sample size increases, they will converge towards (get closer) the true parameter value.\nMLEs are asymptotically unbiased. The \\(E[\\hat{\\theta}]\\) converges to \\(\\theta\\) as the sample size gets larger.\nNo guarantee that MLE is unbiased at small sample size. Can be tested!\nMLEs will have the minimum variance among all estimators, as the sample size gets larger."
   },
   {
     "objectID": "FW670/likelihood.html#mle-with-n-1",
