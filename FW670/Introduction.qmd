@@ -591,3 +591,6 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 ## 
 
 ![](/img/question.png){fig-align="center" width="300"}
+
+
+{js, echo=FALSE} window.addEventListener('hashchange', function() { var hash = window.location.hash; if (hash) { var tabTrigger = document.querySelector('button[data-bs-target="' + hash + '"], a[href="' + hash + '"]'); if (tabTrigger) { var tab = new bootstrap.Tab(tabTrigger); tab.show(); } } });

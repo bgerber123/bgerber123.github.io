@@ -11,7 +11,7 @@ title: ""
 
 ::: {.panel-tabset}
 
-### Weeks 
+### Weeks {#tab-week}
 
 :::: {.columns}
 
@@ -74,7 +74,7 @@ title: ""
 
 ::::
 
-### Software
+### Software {#tab-soft}
 
 Install the most recent versions of <a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a>.
 
@@ -84,7 +84,7 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 
 <!-- <br> -->
 
-### Additional
+### Additional {#tab-add}
 
 #### Notes
 -   **To download lectures:** Go to lecture html. Click 'e'. This should connect all slides into one page. Right Click Mouse on page. Click 'Print". Choose printer "Adobe PDF"; might need Adobe Acrobat installed. 
@@ -151,7 +151,7 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 
 
 
-### Co-lead Discussion
+### Co-led Discussion {#tab-coleddiscus}
 
 - Students will be grouped and assigned a topic (e.g., mark-recapture). 
 
@@ -181,7 +181,7 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 <!-- **Community Modeling (11/12):**		Cat Adams, Bijoya Paul		 -->
 
 
-### Project{#tab-proj}
+### Project {#tab-proj}
 
 #### **Project Type** 
 
@@ -219,7 +219,7 @@ Aim for the lecture/lab to be around 25-30 minutes. <span style="color:purple"><
 
 Evaluation will be based on the clarity and organization of the materials presented and the preparedness of the instructors in engaging with the class. 
 
-### Learning
+### Learning {#tab-learn}
 
 :::: {.columns}
 
