@@ -49,7 +49,7 @@ Lets explore the [Bernoulli/Binomial](https://en.wikipedia.org/wiki/Binomial_dis
 Imagine doing a tagging study to estimate the survival of [sandhill cranes](https://www.allaboutbirds.org/guide/Sandhill_Crane/overview) 
 in New Mexico over the winter. We want to use the PMF to connect the ideas of generating data via a probability distribution that is defined by parameters. 
 
-In this situation, we are interested in simulating samples or observations  (or more generally, generate synthetic data) of where cranes either lived ($y = 1$) or died ($y = 0$) over our period of interest (winter). If we use the Bernoulli PMF our focus is typically on each $i^{th}$ crane, while if we are interested in the sum of the number of cranes that lived ($\sum_{i}^n y_i$) than we would use the Binomial PMF. Either way, we need to define the parameter associeted with both functions, which is the probability of observing a 1 ($P(Y=1)$), which we will define here as $\theta$. To make this a useful exercise, we want to decide on $\theta$ could be *in real life*. 
+In this situation, we are interested in simulating samples or observations  (or more generally, generate synthetic data) of where cranes either lived ($y = 1$) or died ($y = 0$) over our period of interest (winter). If we use the Bernoulli PMF our focus is typically on each $i^{th}$ crane, while if we are interested in the sum of the number of cranes that lived ($\sum_{i}^n y_i$) than we would use the Binomial PMF; note that the binomial/Bernoulli are implemented in R using the same functions (e.g., dbinom, size >1 or size = 1, respectively), but it is important to keep them separate in our thinking. Either way, we need to define the parameter associated with both functions, which is the probability of observing a 1 ($P(Y=1)$), which we will define here as $\theta$. To make this a useful exercise, we want to decide on a value of $\theta$ that could be *realistic*. 
 
 Remember, estimation is turning the process around and having data to inform the parameter. Before we do estimation, we want to understand probability functions through simulating/generating synthetic data so we have a better idea of what we are assuming about our empirical data when we use probability functions to estimate parameters. Plus, this process can help us guide our design of future studies. 
 
@@ -61,7 +61,7 @@ Remember, estimation is turning the process around and having data to inform the
 
 The Bernoulli PMF is useful when thinking about a single event, happening once. Remember, this is a limiting case of the Binomial PMF. We will use the same function, but change the inputs.
 
-Lets observe/generate a single data point where a crane dies (y = 0) or lives (y = 1). In a sense, we are flipping a theoretical coin with probability theta (i.e., $P(Y = 1) = \theta$) to observe/sample whether this tagged crane dies or lives.
+Let's observe/generate a single data point where a crane dies (y = 0) or lives (y = 1). In a sense, we are flipping a theoretical coin with probability theta (i.e., $P(Y = 1) = \theta$) to observe/sample whether this tagged crane dies or lives.
 
 ```{r, echo=TRUE, eval=TRUE}
 rbinom(n = 1, size = 1,prob = theta)
@@ -91,7 +91,7 @@ rbinom(n = 10, size = 1,prob = theta)
 
 What  is `rbinom` really doing? Well, the [code](https://github.com/SurajGupta/r-source/blob/master/src/nmath/rbinom.c) is actually calling a function using the C programming language because it is fast. But, we can understand more simply what the binomial sampling process looks like by using the generic `sample` function.
 
-The code here defines the outcomes of the stochastic process as either a 0 or 1; `x` is the argument name of the function. We are asking for 10 trials using `size`. The `replace` argument is telling the sampler that we are allowing it to sample each outcome (0 and 1) more than one time. Lastly, we are defining the $P(y = 1)$ to be 0.80 and the $P(y = 0)$ to be 0.20. This code replicates the same process as the code above: `rbinom(n = 10, size = 1,prob = theta)`.
+The code here defines the outcomes of the stochastic process as either a 0 or 1; `x` is the argument name of the function. We are asking for 10 trials using `size`. The `replace` argument is telling the sampler that we are allowing it to sample each outcome (0 and 1) more than one time. Lastly, we are defining the $P(Y = 1)$ to be 0.80 and the $P(Y = 0)$ to be 0.20. This code replicates the same process as the code above: `rbinom(n = 10, size = 1, prob = theta)`.
 
 ```{r}
 sample(x = c(1,0),
@@ -159,7 +159,7 @@ Using a sample size of 250, evaluate whether there is at least 0.90 probability 
 
 The [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution) PMF is often the distribution used first when considering count data. For example, counts of plants or animals within a given area. It is also a good choice when needing to consider rates, such as counts per unit effort. Note that we are not going to think about detection probability at this point. Assuming constant detection probability, we can think of these counts as a measure of relative abundance. 
 
-Let's say we are interested in counts of [American Pika](American Pika) in 10x10 m plots throughout boulder fields in the Rocky Mountains. First, we need to define the mean count, defined as $\lambda$. Then, we need to decide on how many plots to sample (`n`).
+Let's say we are interested in counts of [American Pika](American Pika) in 10x10 m plots throughout boulder fields in the Rocky Mountains. First, we need to define the mean count, often represented as $\lambda$. Then, we need to decide on how many plots to sample (`n`).
 
 
 Sample 10 plots, count pika in each, where the true mean is 100.
@@ -175,7 +175,7 @@ rpois(n = 10, lambda = 2)
 
 When considering the Poisson distribution, notice how few plots have zero pika. In ecological and wildlife sampling, zero counts are common for a variety of reasons. This is one reason people tend to model counts with two components - a Poisson distribution and a zero-inflated part. More about this later. 
 
-One of the interesting properties of the Poisson PMF is that it can be fully described with only one parameter ($\lambda$), which defines the mean and variance as equivalent. This parameter governs the central tendency of the observations and how much it varies.
+One of the interesting properties of the Poisson PMF is that it can be fully described with only one parameter ($\lambda$), which defines the mean and variance as equivalent (the first and second moments of this distribution). This parameter governs the central tendency of the observations and how much it varies.
 
 Lets look at this property by simulating 10000 counts and estimating the mean and variance.
 
@@ -261,10 +261,10 @@ $$
 Example 1
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
-  a=1; b=5
+  a = 1; b = 5
 # Sample Space of RV
-  x=seq(a,b,by=1)
-  n=length(x)
+  x = seq(a,b,by=1)
+  n = length(x)
 #plotting probability mass  
   plot(x,dunif(x,a,b),col=2,pch=18,cex=2,
       type= 'b',
@@ -277,10 +277,10 @@ Example 1
 Example 2
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
-  a=10; b=100
+  a = 10; b = 100
 #Sample Space
-  x=seq(a,b,by=1)
-  n=length(x)
+  x = seq(a,b,by=1)
+  n = length(x)
 #plotting probability mass    
   plot(x,dunif(x,a,b),col=2,pch=18,cex=2,
        type="b",
@@ -295,7 +295,7 @@ The probability of observing samples $>$ 60 when $a$ = 10 and $b$ =100 is,
 
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
-  a=10; b=100
+  a = 10; b = 100
 
   punif(60,a,b,lower.tail = FALSE)
 
@@ -305,7 +305,7 @@ The value associated with the upper tail probability of 0.4444444 when $a$ = 10 
 
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
-  a=10; b=100
+  a = 10; b = 100
 
   qunif(0.4444444,a,b,lower.tail = FALSE)
 
@@ -315,14 +315,14 @@ The value associated with the upper tail probability of 0.4444444 when $a$ = 10 
 ### **Sampling**
 ```{r,echo = TRUE, eval=TRUE}
 #Parameters
-  a=10; b=100
+  a = 10; b = 100
 
 #Sample at different sample sizes
-  sample.size=100
-  sample.size2=10000
+  sample.size = 100
+  sample.size2 = 10000
   
-  y=round(runif(sample.size,a,b),digits=0)
-  y2=round(runif(sample.size2,a,b),digits=0)
+  y = round(runif(sample.size,a,b),digits=0)
+  y2 = round(runif(sample.size2,a,b),digits=0)
 
 #plotting samples with True probability
   par(mfrow=c(1,2))
