@@ -73,7 +73,7 @@ Project                | 30%
 
 2) group development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation
 
-[* more on the main site](index.qmd#tab-proj)
+[* more on the main site](index.html#tab-proj)
 
 ## [Course Learning Objectives]{style="color:#078BCD;"}
 
@@ -539,7 +539,7 @@ apply(mat, 2, FUN=function(x){
 
 **Help! My code doesn't work**...
 
-```{r, echo = TRUE}
+```{r}
 #| echo: TRUE
 #| eval: FALSE
                 cor.sp.route.cor=vector("list",n.species)

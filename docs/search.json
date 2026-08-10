@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.02150201 -0.31948532  0.08358996 -0.99404809 -0.06072863  0.02096362\n [7] -0.32272030 -0.81436451  0.43129422 -0.28539961\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.2 0.1 0.1 0.4 0.1 0.1 0.2 0.1 0.1 0.0"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow=10, ncol=10)\n\napply(mat, 2, FUN=median)\n\n [1]  0.05711276  0.64994691  0.27447683  0.25819257 -0.02178515  0.15465417\n [7] -0.21793045  0.33005821  0.40002038  0.02753738\n\n\n\n\napply(mat, 2, FUN=function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.2 0.1 0.3 0.2 0.1 0.1 0.2 0.3 0.3"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",
