@@ -14788,14 +14788,14 @@
     "href": "FW670/BigPicture.html#the-questioning-scientist",
     "title": "Big Picture  Science and Modeling",
     "section": "The Questioning Scientist",
-    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\n\nHow and why did these data come to be?\n\nunderstand how the data came to be\nask this even when you design the study, after data collection\n\n\n\n\n\nWhat do these data look like?\n\nvisualize the data in many dimensions\nkeep in mind - not all outcomes are visible in data – example?\n\n\n\n\n\nHow does this statistical model work?\n\nstatistical notation, explicit and implicit assumptions, optimization\n\n\n\n\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\n\nHow and why did these data come to be?\n\nunderstand how the data came to be\nask this even when you design the study, after data collection"
   },
   {
     "objectID": "FW670/BigPicture.html#data-vs.-information",
     "href": "FW670/BigPicture.html#data-vs.-information",
     "title": "Big Picture  Science and Modeling",
     "section": "Data vs. Information",
-    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n\n\n\nStatistical thinking about data:  data contains information, depending on ...\n\nthe question being asked of the data\nhow the data came to be"
+    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n\n\n\nStatistical thinking:  data contains information, depending on \n\nthe question being asked of the data\nhow the data came to be"
   },
   {
     "objectID": "FW670/BigPicture.html#information",
@@ -14949,14 +14949,14 @@
     "href": "FW670/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  399  106   70   98  318\n[2,]  299  199   27   89   18\n[3,]   35   24   60   80  286\n[4,]  204  155  126  185  270\n[5,]  112  222  151  300  269"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   97  239   24  323   29\n[2,]  167  309  152  271  344\n[3,]  251  154  318  268  217\n[4,]  117  141   73  182  171\n[5,]  170  400  203  137   27"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-1",
     "href": "FW670/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             10, \n             replace = TRUE\n             )\n  y\n\n [1] 155  35 185  70  70  98 199 112  80 126\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 113"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             n, \n             replace = TRUE\n             )\n  y\n\n [1] 203 203 268  97 171  73 309 182 271 182\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 195.9"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-2",
@@ -14984,7 +14984,7 @@
     "href": "FW670/BigPicture.html#design-based-code-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nOR, we can sample enough times to approximate it\n\n  set.seed(5435)\n  sim.sampling.dist=replicate(2000,\n                              sample(c(mat),n)\n                              )\n  dim(sim.sampling.dist)\n\n[1]   10 2000\n\n  mean.samples = apply(sim.sampling.dist,2,mean)"
+    "text": "Design-Based Code\nOR, we can sample enough times to approximate it\n\n  set.seed(54352)\n  sim.sampling.dist=replicate(2000,\n                              sample(c(mat),n)\n                              )\n  dim(sim.sampling.dist)\n\n[1]   10 2000\n\n  mean.samples = apply(sim.sampling.dist,2,mean)"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based",
@@ -15005,7 +15005,7 @@
     "href": "FW670/BigPicture.html#model-based-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based",
-    "text": "Model-Based\n\nKey Strengths: Very flexible. Modeling is magic.\n\n\n\nKey Weaknesses: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear"
+    "text": "Model-Based\n\nKey Strengths: Very flexible. Modeling is magic.\n\n\n\nKey Weaknesses:\n\nCan be difficult to assess assumptions\nSampling frame is not always clear and thus the population you are infering to is not entirely clear"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based-3",
@@ -15026,7 +15026,7 @@
     "href": "FW670/BigPicture.html#model-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# Repeat the function n.sim times\n  n.sim = 1000\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 1000\n\n\n\n\n# One realization from the super-population\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  213  221  202  204  173\n[2,]  195  182  193  190  215\n[3,]  221  216  187  182  179\n[4,]  176  196  218  210  211\n[5,]  218  182  193  229  188\n\n# Population mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 199.76"
+    "text": "Model-Based Code\n\n# Repeat the function n.sim times\n  n.sim = 1000\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 1000\n\n\n\n\n# One realization from the super-population\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  209  223  208  189  181\n[2,]  222  175  194  187  190\n[3,]  203  193  184  227  220\n[4,]  199  210  203  212  198\n[5,]  217  211  183  194  197\n\n# Population mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 201.16"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based-code-2",
@@ -15047,14 +15047,14 @@
     "href": "FW670/BigPicture.html#statistical-bias-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Bias (Code)",
-    "text": "Statistical Bias (Code)\n\n# Bias (in this case, Monte Carlo error)\n  mean(lambda.hat) - lambda\n\n[1] -0.0384\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] -0.000192"
+    "text": "Statistical Bias (Code)\n\n# Bias (in this case, Monte Carlo error)\n  mean(lambda.hat) - lambda\n\n[1] 0.1076\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 0.000538"
   },
   {
     "objectID": "FW670/BigPicture.html#precision-of-the-mean-code",
     "href": "FW670/BigPicture.html#precision-of-the-mean-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Precision of the mean (Code)",
-    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n# Probability of getting a mean within 5% of the truth\n  length(index)/length(lambda.hat)\n\n[1] 0.732"
+    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n# Probability of getting a mean within 5% of the truth\n  length(index)/length(lambda.hat)\n\n[1] 0.754"
   },
   {
     "objectID": "FW670/BigPicture.html#take-aways-3",
@@ -19339,5 +19339,26 @@
     "title": "Wildlife Ecology Modeling",
     "section": "Course Website",
     "text": "Course Website\n\nLectures, code, readings, schedule, etc.\n\nhttps://bgerber123.github.io/FW670/\n\nHomework, Discussion Posts, Quizzes, and Grading: \n\nhttps://colostate.instructure.com/courses/228738"
+  },
+  {
+    "objectID": "FW670/BigPicture.html#the-questioning-scientist-1",
+    "href": "FW670/BigPicture.html#the-questioning-scientist-1",
+    "title": "Big Picture  Science and Modeling",
+    "section": "The Questioning Scientist",
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\nWhat do these data look like?\n\nvisualize the data in many dimensions\nkeep in mind - not all outcomes are visible in data – example?"
+  },
+  {
+    "objectID": "FW670/BigPicture.html#the-questioning-scientist-2",
+    "href": "FW670/BigPicture.html#the-questioning-scientist-2",
+    "title": "Big Picture  Science and Modeling",
+    "section": "The Questioning Scientist",
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\nHow does this statistical model work?\n\nstatistical notation, explicit and implicit assumptions, optimization"
+  },
+  {
+    "objectID": "FW670/BigPicture.html#the-questioning-scientist-3",
+    "href": "FW670/BigPicture.html#the-questioning-scientist-3",
+    "title": "Big Picture  Science and Modeling",
+    "section": "The Questioning Scientist",
+    "text": "The Questioning Scientist\n\nIn regard to data and statistical models, 21st century scientists should be pragmatic, excited, and questioning.\n\nHow does this statistical model fail in theory and in practice?\n\nstatistical robustness and identifiability"
   }
 ]

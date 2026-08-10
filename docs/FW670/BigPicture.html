@@ -403,11 +403,11 @@ Sampling Processes == Human Design
 <!-- ``` -->
 </div>
 </section>
-<section id="the-questioning-scientist" class="slide level2 scrollable">
+<section id="the-questioning-scientist" class="slide level2">
 <h2>The Questioning Scientist</h2>
 <p><br></p>
 <p>In regard to <em>data</em> and <em>statistical models</em>, <span style="color:red">21<sup>st</sup> century scientists should be pragmatic, excited, and questioning.</span></p>
-<div class="fragment fade-in-then-semi-out">
+<div class="fragment">
 <ul>
 <li>How and why did these data come to be?
 <ul>
@@ -416,7 +416,11 @@ Sampling Processes == Human Design
 </ul></li>
 </ul>
 </div>
-<div class="fragment fade-in-then-semi-out">
+</section>
+<section id="the-questioning-scientist-1" class="slide level2">
+<h2>The Questioning Scientist</h2>
+<p><br></p>
+<p>In regard to <em>data</em> and <em>statistical models</em>, <span style="color:red">21<sup>st</sup> century scientists should be pragmatic, excited, and questioning.</span></p>
 <ul>
 <li>What do these data look like?
 <ul>
@@ -424,23 +428,49 @@ Sampling Processes == Human Design
 <li><em>keep in mind - not all outcomes are visible in data – example?</em></li>
 </ul></li>
 </ul>
-</div>
-<div class="fragment fade-in-then-semi-out">
+</section>
+<section id="the-questioning-scientist-2" class="slide level2">
+<h2>The Questioning Scientist</h2>
+<p><br></p>
+<p>In regard to <em>data</em> and <em>statistical models</em>, <span style="color:red">21<sup>st</sup> century scientists should be pragmatic, excited, and questioning.</span></p>
 <ul>
 <li>How does this statistical model work?
 <ul>
 <li><em>statistical notation, explicit and implicit assumptions</em>, <em>optimization</em></li>
 </ul></li>
 </ul>
-</div>
-<div class="fragment fade-in-then-semi-out">
+</section>
+<section id="the-questioning-scientist-3" class="slide level2">
+<h2>The Questioning Scientist</h2>
+<p><br></p>
+<p>In regard to <em>data</em> and <em>statistical models</em>, <span style="color:red">21<sup>st</sup> century scientists should be pragmatic, excited, and questioning.</span></p>
 <ul>
 <li>How does this statistical model fail in theory and in practice?
 <ul>
 <li><em>statistical robustness and identifiability</em></li>
 </ul></li>
 </ul>
-</div>
+<!-- ## The Questioning Scientist {.scrollable} -->
+<!-- <br> -->
+<!-- In regard to *data* and *statistical models*, [21^st^ century scientists should be pragmatic, excited, and questioning.]{style="color:red"} -->
+<!-- ::: {.fragment .fade-in-then-semi-out} -->
+<!-- -   How and why did these data come to be? -->
+<!--     -   *understand how the data came to be* -->
+<!--     -   *ask this even when you design the study, after data collection* -->
+<!-- ::: -->
+<!-- ::: {.fragment .fade-in-then-semi-out} -->
+<!-- -   What do these data look like? -->
+<!--     -   *visualize the data in many dimensions* -->
+<!--     -   *keep in mind - not all outcomes are visible in data -- example?* -->
+<!-- ::: -->
+<!-- ::: {.fragment .fade-in-then-semi-out} -->
+<!-- -   How does this statistical model work? -->
+<!--     -   *statistical notation, explicit and implicit assumptions*, *optimization* -->
+<!-- ::: -->
+<!-- ::: {.fragment .fade-in-then-semi-out} -->
+<!-- -   How does this statistical model fail in theory and in practice? -->
+<!--     -   *statistical robustness and identifiability* -->
+<!-- ::: -->
 </section>
 <section id="data-vs.-information" class="slide level2">
 <h2>Data vs.&nbsp;Information</h2>
@@ -451,7 +481,7 @@ Data ≠ Information
 </span>
 <div class="fragment">
 <!-- ![](/img/info_diagram.png){fig-align="center"} -->
-<b>Statistical thinking about data: </b> data contains <span><u>information</u></span>, depending on ...<br>
+<b>Statistical thinking: </b> data contains <span><u>information</u></span>, depending on <br>
 <ul>
 <li><p>the question being asked of the data</p></li>
 <li><p>how the data came to be</p></li>
@@ -713,11 +743,11 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span id="cb1-17"><a></a>mat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  399  106   70   98  318
-[2,]  299  199   27   89   18
-[3,]   35   24   60   80  286
-[4,]  204  155  126  185  270
-[5,]  112  222  151  300  269</code></pre>
+[1,]   97  239   24  323   29
+[2,]  167  309  152  271  344
+[3,]  251  154  318  268  217
+[4,]  117  141   73  182  171
+[5,]  170  400  203  137   27</code></pre>
 </div>
 </div>
 </section>
@@ -728,12 +758,12 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
 <span id="cb3-2"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(</span>
 <span id="cb3-3"><a></a>             <span class="fu">c</span>(mat),</span>
-<span id="cb3-4"><a></a>             <span class="dv">10</span>, </span>
+<span id="cb3-4"><a></a>             n, </span>
 <span id="cb3-5"><a></a>             <span class="at">replace =</span> <span class="cn">TRUE</span></span>
 <span id="cb3-6"><a></a>             )</span>
 <span id="cb3-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 155  35 185  70  70  98 199 112  80 126</code></pre>
+<pre><code> [1] 203 203 268  97 171  73 309 182 271 182</code></pre>
 </div>
 </div>
 <p><br></p>
@@ -742,7 +772,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 113</code></pre>
+<pre><code>[1] 195.9</code></pre>
 </div>
 </div>
 </div>
@@ -788,7 +818,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <h2>Design-Based Code</h2>
 <p>OR, we can sample enough times to approximate it</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">54352</span>)</span>
 <span id="cb12-2"><a></a>  sim.sampling.dist<span class="ot">=</span><span class="fu">replicate</span>(<span class="dv">2000</span>,</span>
 <span id="cb12-3"><a></a>                              <span class="fu">sample</span>(<span class="fu">c</span>(mat),n)</span>
 <span id="cb12-4"><a></a>                              )</span>
@@ -836,7 +866,11 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 </ul>
 <div class="fragment">
 <ul>
-<li><span style="color:red">Key Weaknesses</span>: 1) Can be difficult to assess assumptions and 2) sampling frame is not always clear and thus the population you are infering to is not entirely clear</li>
+<li><span style="color:red">Key Weaknesses</span>:
+<ul>
+<li>Can be difficult to assess assumptions</li>
+<li>Sampling frame is not always clear and thus the population you are infering to is not entirely clear</li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -897,16 +931,16 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span id="cb18-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  213  221  202  204  173
-[2,]  195  182  193  190  215
-[3,]  221  216  187  182  179
-[4,]  176  196  218  210  211
-[5,]  218  182  193  229  188</code></pre>
+[1,]  209  223  208  189  181
+[2,]  222  175  194  187  190
+[3,]  203  193  184  227  220
+[4,]  199  210  203  212  198
+[5,]  217  211  183  194  197</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Population mean for the first realization</span></span>
 <span id="cb20-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 199.76</code></pre>
+<pre><code>[1] 201.16</code></pre>
 </div>
 </div>
 </div>
@@ -930,12 +964,12 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Bias (in this case, Monte Carlo error)</span></span>
 <span id="cb23-2"><a></a>  <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.0384</code></pre>
+<pre><code>[1] 0.1076</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># relative bias</span></span>
 <span id="cb25-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.000192</code></pre>
+<pre><code>[1] 0.000538</code></pre>
 </div>
 </div>
 
@@ -978,7 +1012,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <span id="cb29-6"><a></a><span class="co"># Probability of getting a mean within 5% of the truth</span></span>
 <span id="cb29-7"><a></a>  <span class="fu">length</span>(index)<span class="sc">/</span><span class="fu">length</span>(lambda.hat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.732</code></pre>
+<pre><code>[1] 0.754</code></pre>
 </div>
 </div>
 </div>
