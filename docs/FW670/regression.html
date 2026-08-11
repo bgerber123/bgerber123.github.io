@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Brian D. Gerber – Linear Regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -422,7 +422,7 @@ y_{i} \sim \text{Normal}(\mu_{i}, \sigma^2)\\
 <section id="fit-intercept-only-model" class="slide level2">
 <h2>Fit Intercept-Only Model</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Fit model/hypothesis using maximum likelihood</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Fit model/hypothesis using ordinary least squares or maximum likelihood</span></span>
 <span id="cb3-2"><a></a>  model1<span class="fl">.0</span> <span class="ot">=</span> <span class="fu">lm</span>(y<span class="sc">~</span><span class="dv">1</span>)</span>
 <span id="cb3-3"><a></a></span>
 <span id="cb3-4"><a></a>  model1<span class="fl">.1</span> <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span><span class="dv">1</span>)</span>
@@ -566,14 +566,15 @@ $residual.scale
 <h2>What is a CI?</h2>
 
 <img data-src="..\img/CI.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="confidence-intervals" class="slide level2">
+<section id="confidence-intervals" class="slide level2 scrollable">
 <h2>Confidence Intervals</h2>
 <h4 id="normal-approximation">Normal Approximation</h4>
+<p>Assume the sampling distribution of the parameter is Normal</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Get 90% confidence intervals (Type I error = 0.1)</span></span>
 <span id="cb9-2"><a></a>  <span class="fu">c</span>(</span>
-<span id="cb9-3"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
-<span id="cb9-4"><a></a>    (preds<span class="sc">$</span>fit<span class="sc">+</span>preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
+<span id="cb9-3"><a></a>    (preds<span class="sc">$</span>fit <span class="sc">+</span> preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
+<span id="cb9-4"><a></a>    (preds<span class="sc">$</span>fit <span class="sc">+</span> preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
 <span id="cb9-5"><a></a>   )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        1         1 
@@ -581,9 +582,22 @@ $residual.scale
 </div>
 </div>
 <div class="fragment">
+<p>Use the t-distribution instead</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  CI.Normal<span class="ot">=</span><span class="fu">confint</span>(model1<span class="fl">.0</span>, <span class="at">level=</span><span class="fl">0.9</span>)</span>
-<span id="cb11-2"><a></a>  CI.Normal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  <span class="fu">c</span>(</span>
+<span id="cb11-2"><a></a>    (preds<span class="sc">$</span>fit <span class="sc">+</span> preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qt</span>(<span class="fl">0.05</span>,<span class="at">df=</span>(n<span class="dv">-1</span>)))[<span class="dv">1</span>],</span>
+<span id="cb11-3"><a></a>    (preds<span class="sc">$</span>fit <span class="sc">+</span> preds<span class="sc">$</span>se.fit<span class="sc">*</span><span class="fu">qt</span>(<span class="fl">0.95</span>,<span class="at">df=</span>(n<span class="dv">-1</span>)))[<span class="dv">1</span>]</span>
+<span id="cb11-4"><a></a>   )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        1         1 
+ 9.620705 10.206937 </code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>  CI.Normal<span class="ot">=</span><span class="fu">confint</span>(model1<span class="fl">.0</span>, <span class="at">level=</span><span class="fl">0.9</span>)</span>
+<span id="cb13-2"><a></a>  CI.Normal</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 5 %     95 %
 (Intercept) 9.620705 10.20694</code></pre>
@@ -593,7 +607,7 @@ $residual.scale
 </section>
 <section id="bootstrapping" class="slide level2">
 <h2>Bootstrapping</h2>
-<p>Instead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by resampling our data.</p>
+<p>Instead of relying on the 95% intervals from an assumed normal/t distribution, we will create an empirical distribution by resampling our data.</p>
 <p><br></p>
 <p>See, <a href="https://fw8051statistics4ecologists.netlify.app/boot.html">Stats4Ecologists</a></p>
 </section>
@@ -612,45 +626,45 @@ $residual.scale
 <section id="bootstrapping-code" class="slide level2">
 <h2>Bootstrapping (code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Setup</span></span>
-<span id="cb13-2"><a></a>  nboot <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># number of bootstrap samples</span></span>
-<span id="cb13-3"><a></a>  nobs <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
-<span id="cb13-4"><a></a>  bootcoefs <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, nboot)</span>
-<span id="cb13-5"><a></a><span class="co"># Start loop  </span></span>
-<span id="cb13-6"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nboot){</span>
-<span id="cb13-7"><a></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span><span class="sc">+</span>i)</span>
-<span id="cb13-8"><a></a>  <span class="co"># Create bootstrap data set by sampling original observations w/ replacement  </span></span>
-<span id="cb13-9"><a></a>  bootdat <span class="ot">&lt;-</span> y[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>nobs, nobs, <span class="at">replace=</span><span class="cn">TRUE</span>)] </span>
-<span id="cb13-10"><a></a>  <span class="co"># Calculate bootstrap statistic</span></span>
-<span id="cb13-11"><a></a>  glmboot <span class="ot">&lt;-</span> <span class="fu">glm</span>(bootdat <span class="sc">~</span> <span class="dv">1</span>)</span>
-<span id="cb13-12"><a></a>  bootcoefs[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(glmboot)</span>
-<span id="cb13-13"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Setup</span></span>
+<span id="cb15-2"><a></a>  nboot <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># number of bootstrap samples</span></span>
+<span id="cb15-3"><a></a>  nobs <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
+<span id="cb15-4"><a></a>  bootcoefs <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, nboot)</span>
+<span id="cb15-5"><a></a><span class="co"># Start loop  </span></span>
+<span id="cb15-6"><a></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>nboot){</span>
+<span id="cb15-7"><a></a>  <span class="fu">set.seed</span>(<span class="dv">43243</span><span class="sc">+</span>i)</span>
+<span id="cb15-8"><a></a>  <span class="co"># Create bootstrap data set by sampling original observations w/ replacement  </span></span>
+<span id="cb15-9"><a></a>  bootdat <span class="ot">&lt;-</span> y[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>nobs, nobs, <span class="at">replace=</span><span class="cn">TRUE</span>)] </span>
+<span id="cb15-10"><a></a>  <span class="co"># Calculate bootstrap statistic</span></span>
+<span id="cb15-11"><a></a>  glmboot <span class="ot">&lt;-</span> <span class="fu">glm</span>(bootdat <span class="sc">~</span> <span class="dv">1</span>)</span>
+<span id="cb15-12"><a></a>  bootcoefs[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(glmboot)</span>
+<span id="cb15-13"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="bootstrapping-code-1" class="slide level2">
 <h2>Bootstrapping (code)</h2>
 
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
 <section id="bootstrapping-code-2" class="slide level2">
 <h2>Bootstrapping (code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Calculate bootstrap standard errors</span></span>
-<span id="cb14-2"><a></a>  boot.se <span class="ot">=</span> <span class="fu">sd</span>(bootcoefs)</span>
-<span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a><span class="co"># boostrap-normal CI</span></span>
-<span id="cb14-5"><a></a>  boot.normal <span class="ot">=</span> <span class="fu">c</span>(</span>
-<span id="cb14-6"><a></a>        (preds<span class="sc">$</span>fit<span class="sc">+</span>boot.se<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
-<span id="cb14-7"><a></a>        (preds<span class="sc">$</span>fit<span class="sc">+</span>boot.se<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
-<span id="cb14-8"><a></a>        )</span>
-<span id="cb14-9"><a></a></span>
-<span id="cb14-10"><a></a><span class="co"># bootstrap percentile</span></span>
-<span id="cb14-11"><a></a>confdat.boot.pct <span class="ot">&lt;-</span> <span class="fu">quantile</span>(bootcoefs, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Calculate bootstrap standard errors</span></span>
+<span id="cb16-2"><a></a>  boot.se <span class="ot">=</span> <span class="fu">sd</span>(bootcoefs)</span>
+<span id="cb16-3"><a></a></span>
+<span id="cb16-4"><a></a><span class="co"># boostrap-normal CI</span></span>
+<span id="cb16-5"><a></a>  boot.normal <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb16-6"><a></a>        (preds<span class="sc">$</span>fit<span class="sc">+</span>boot.se<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.05</span>))[<span class="dv">1</span>],</span>
+<span id="cb16-7"><a></a>        (preds<span class="sc">$</span>fit<span class="sc">+</span>boot.se<span class="sc">*</span><span class="fu">qnorm</span>(<span class="fl">0.95</span>))[<span class="dv">1</span>]</span>
+<span id="cb16-8"><a></a>        )</span>
+<span id="cb16-9"><a></a></span>
+<span id="cb16-10"><a></a><span class="co"># bootstrap percentile</span></span>
+<span id="cb16-11"><a></a>confdat.boot.pct <span class="ot">&lt;-</span> <span class="fu">quantile</span>(bootcoefs, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="comparison" class="slide level2">
 <h2>Comparison</h2>
 
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="section-4" class="slide level2">
 <h2></h2>
 
@@ -661,15 +675,19 @@ $residual.scale
 <br>
 <center><span style="color:#C70039; font-size: 65px;" ;=""><b>Case Study /<br> Independent Variables</b></span></center>
 </section>
-<section id="prairie-dog-calling" class="slide level2 scrollable">
+<section id="prairie-dog-calling" class="slide level2">
 <h2>Prairie Dog Calling</h2>
-
-<img data-src="..\img/pdog.png" class="quarto-figure quarto-figure-center r-stretch" width="1200"><p>y = # of calls per 5 minute at a prairie dog colony</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="..\img/pdog.png" class="quarto-figure quarto-figure-center" style="width:40.0%;height:40.0%"></p>
+</figure>
+</div>
+<p>y = # of calls per 5 minute at a prairie dog colony</p>
 <p>temp = temperature, degrees F</p>
 <p>dist.human = distance of nearest human activity to colony</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>  <span class="fu">head</span>(dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>  <span class="fu">head</span>(dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           y     temp dist.human
 1 0.38129119 39.96298   11.75578
@@ -688,21 +706,21 @@ $residual.scale
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-25-2.png" width="960"></p>
+<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-26-2.png" width="960"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-25-3.png" width="960"></p>
+<p><img data-src="regression_files/figure-revealjs/unnamed-chunk-26-3.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -711,8 +729,8 @@ $residual.scale
 <section id="model-fitting-1" class="slide level2">
 <h2>Model Fitting 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp<span class="sc">+</span>dist.human, <span class="at">data=</span>dat)</span>
-<span id="cb17-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp<span class="sc">+</span>dist.human, <span class="at">data=</span>dat)</span>
+<span id="cb19-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -739,13 +757,13 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="model-notation-1" class="slide level2">
 <h2>Model Notation 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
 \operatorname{y} = \alpha + \beta_{1}(\operatorname{temp}) + \beta_{2}(\operatorname{dist.human}) + \epsilon
 \]</span></p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model, <span class="at">use_coefs =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>equatiomatic<span class="sc">::</span><span class="fu">extract_eq</span>(model, <span class="at">use_coefs =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <p><span class="math display">\[
 \operatorname{\widehat{y}} = -8.31 + 0.16(\operatorname{temp}) + 0.04(\operatorname{dist.human})
@@ -757,8 +775,8 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Model Fitting 2</h2>
 <p>Mean-center the intercept. Slopes do not change.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">I</span>(temp <span class="sc">-</span> <span class="fu">mean</span>(temp)) <span class="sc">+</span> dist.human, <span class="at">data=</span>dat)</span>
-<span id="cb21-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> <span class="fu">I</span>(temp <span class="sc">-</span> <span class="fu">mean</span>(temp)) <span class="sc">+</span> dist.human, <span class="at">data=</span>dat)</span>
+<span id="cb23-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -786,16 +804,16 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h2>Normalizing x</h2>
 <p>Mean-center and standardize by std. deviation</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>  dat<span class="sc">$</span>temp.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>temp, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.human, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  dat<span class="sc">$</span>temp.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>temp, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb25-2"><a></a>  dat<span class="sc">$</span>dist.sc <span class="ot">=</span> <span class="fu">scale</span>(dat<span class="sc">$</span>dist.human, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>  <span class="fu">mean</span>(dat<span class="sc">$</span>temp.sc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>  <span class="fu">mean</span>(dat<span class="sc">$</span>temp.sc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.40337e-16</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>  <span class="fu">sd</span>(dat<span class="sc">$</span>temp.sc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>  <span class="fu">sd</span>(dat<span class="sc">$</span>temp.sc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
@@ -805,7 +823,7 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="comparison-1" class="slide level2">
 <h2>Comparison</h2>
 
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section>
 <section id="model-fitting-3" class="slide level2 scrollable">
 <h2>Model Fitting 3</h2>
 <p>What does the slope mean now?</p>
@@ -813,8 +831,8 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 \mu_{i} = \beta_0 + \beta_1 \times 1 + \beta_2 \times 0
 \]</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp.sc <span class="sc">+</span> dist.sc, <span class="at">data=</span>dat)</span>
-<span id="cb28-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>  model <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> temp.sc <span class="sc">+</span> dist.sc, <span class="at">data=</span>dat)</span>
+<span id="cb30-2"><a></a>  <span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -844,103 +862,103 @@ F-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 \hat{\mu_{i}} = \hat{\beta_{0}} + \hat{\beta_{1}}\times 0 +  \hat{\beta_{2}} \times \text{dist.human}_i
 \]</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
-<span id="cb30-2"><a></a>  marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
-<section id="add-data-points" class="slide level2">
-<h2>Add data points</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
-<span id="cb31-2"><a></a>  plot1 <span class="ot">=</span> marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span>
-<span id="cb31-3"><a></a>  plot1<span class="sc">+</span><span class="fu">geom_point</span>(<span class="at">data=</span>dat, <span class="fu">aes</span>(<span class="at">x=</span>dist.human,<span class="at">y=</span>y))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
+<span id="cb32-2"><a></a>  marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
-<section id="combined-predictions" class="slide level2">
-<h2>Combined Predictions</h2>
+<section id="add-data-points" class="slide level2">
+<h2>Add data points</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="co"># Plot marginal predictions of dist.human</span></span>
+<span id="cb33-2"><a></a>  plot1 <span class="ot">=</span> marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">c</span>(<span class="st">"dist.human"</span>))</span>
+<span id="cb33-3"><a></a>  plot1<span class="sc">+</span><span class="fu">geom_point</span>(<span class="at">data=</span>dat, <span class="fu">aes</span>(<span class="at">x=</span>dist.human,<span class="at">y=</span>y))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
-<section id="combined-predictions-1" class="slide level2">
+<section id="combined-predictions" class="slide level2">
 <h2>Combined Predictions</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span> <span class="ot">=</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="regression_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
+<section id="combined-predictions-1" class="slide level2">
+<h2>Combined Predictions</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>marginaleffects<span class="sc">::</span><span class="fu">plot_predictions</span>(model, <span class="at">condition=</span><span class="fu">list</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span> <span class="ot">=</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+</div>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
 <section id="taking-control" class="slide level2">
 <h2>Taking Control</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>newdata <span class="ot">=</span> <span class="fu">expand.grid</span>(dat<span class="sc">$</span>temp,<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb34-2"><a></a><span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>)</span>
-<span id="cb34-3"><a></a></span>
-<span id="cb34-4"><a></a>preds <span class="ot">=</span> <span class="fu">predict</span>(model,<span class="at">newdata =</span> newdata,<span class="at">interval=</span><span class="st">"confidence"</span>, <span class="at">level=</span><span class="fl">0.95</span>)</span>
-<span id="cb34-5"><a></a></span>
-<span id="cb34-6"><a></a>pred.plot <span class="ot">=</span> <span class="fu">data.frame</span>(newdata,preds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>newdata <span class="ot">=</span> <span class="fu">expand.grid</span>(dat<span class="sc">$</span>temp,<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb36-2"><a></a><span class="fu">colnames</span>(newdata)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"temp"</span>,<span class="st">"dist.human"</span>)</span>
+<span id="cb36-3"><a></a></span>
+<span id="cb36-4"><a></a>preds <span class="ot">=</span> <span class="fu">predict</span>(model,<span class="at">newdata =</span> newdata,<span class="at">interval=</span><span class="st">"confidence"</span>, <span class="at">level=</span><span class="fl">0.95</span>)</span>
+<span id="cb36-5"><a></a></span>
+<span id="cb36-6"><a></a>pred.plot <span class="ot">=</span> <span class="fu">data.frame</span>(newdata,preds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="combined-predictions-2" class="slide level2 scrollable">
 <h2>Combined Predictions 2</h2>
 
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
 <section id="evaluating-assumptions" class="slide level2">
 <h2>Evaluating Assumptions</h2>
 <h3 id="largely-done-based-on-the-residuals">Largely done based on the residuals</h3>
 <p><span class="math inline">\(y_{i} - \hat{y}_{i}\)</span></p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">hist</span>(model<span class="sc">$</span>residuals)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">hist</span>(model<span class="sc">$</span>residuals)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <!-- ## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r) -->
 <!-- ![](/img/assumptions2.png){fig-align="center" width="1000"} -->
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-40-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="linearity-assumption" class="slide level2">
 <h2>Linearity Assumption</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">plot</span>(model,<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">plot</span>(model,<span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-41-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Ideally, there will be no pattern and the red line should be roughly horizontal near zero.</p>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-42-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Ideally, there will be no pattern and the red line should be roughly horizontal near zero.</p>
 </section>
 <section id="homogeneity-of-variance" class="slide level2">
 <h2>Homogeneity of Variance</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">plot</span>(model,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">plot</span>(model,<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-42-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Residuals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity).</p>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-43-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Residuals should be spread equally along the ranges of predictors. We want a horizontal red line; otherwise, suggests a non-constant variances in the residuals (i.e., heteroscedasticity).</p>
 </section>
 <section id="normality-of-residuals" class="slide level2">
 <h2>Normality of Residuals</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">plot</span>(model,<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">plot</span>(model,<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-43-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Shows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line.</p>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-44-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Shows theoretical quantiles versus empirical quantiles of the residuals. We want to see cicles on the dotted line.</p>
 </section>
 <section id="outliers" class="slide level2">
 <h2>Outliers</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
-<span id="cb39-2"><a></a><span class="fu">plot</span>(model,<span class="dv">4</span>)</span>
-<span id="cb39-3"><a></a><span class="fu">plot</span>(model,<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb41-2"><a></a><span class="fu">plot</span>(model,<span class="dv">4</span>)</span>
+<span id="cb41-3"><a></a><span class="fu">plot</span>(model,<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-44-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Outlier: extreme value that can affect the <span class="math inline">\(\beta\)</span> estimate. Leverage plot: points in the upper right and lower right corner.</p>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-45-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Outlier: extreme value that can affect the <span class="math inline">\(\beta\)</span> estimate. Leverage plot: points in the upper right and lower right corner.</p>
 </section>
 <section id="exploring-assumptions" class="slide level2 scrollable">
 <h2>Exploring Assumptions</h2>
 <p>Nicer looking Plots</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">library</span>(ggResidpanel)</span>
-<span id="cb40-2"><a></a><span class="fu">resid_panel</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">library</span>(ggResidpanel)</span>
+<span id="cb42-2"><a></a><span class="fu">resid_panel</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="regression_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section>
+<img data-src="regression_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section>
 <section id="go-to-lab" class="slide level2">
 <h2>Go to Lab</h2>
 

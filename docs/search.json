@@ -16713,7 +16713,7 @@
     "href": "FW670/regression.html#fit-intercept-only-model",
     "title": "Linear Regression",
     "section": "Fit Intercept-Only Model",
-    "text": "Fit Intercept-Only Model\n\n# Fit model/hypothesis using maximum likelihood\n  model1.0 = lm(y~1)\n\n  model1.1 = glm(y~1)\n\n  model1.2 = glm(y~1, family=gaussian(link = identity))\n\n  \n  \n# Compare Results  \n  data.frame(intercept=c(model1.0$coefficients,model1.1$coefficients, model1.2$coefficients),\n             SE = c(summary(model1.0)$coefficients[, 2], summary(model1.1)$coefficients[, 2],summary(model1.2)$coefficients[, 2])\n            )\n\n  intercept        SE\n1  9.913821 0.1765343\n2  9.913821 0.1765343\n3  9.913821 0.1765343"
+    "text": "Fit Intercept-Only Model\n\n# Fit model/hypothesis using ordinary least squares or maximum likelihood\n  model1.0 = lm(y~1)\n\n  model1.1 = glm(y~1)\n\n  model1.2 = glm(y~1, family=gaussian(link = identity))\n\n  \n  \n# Compare Results  \n  data.frame(intercept=c(model1.0$coefficients,model1.1$coefficients, model1.2$coefficients),\n             SE = c(summary(model1.0)$coefficients[, 2], summary(model1.1)$coefficients[, 2],summary(model1.2)$coefficients[, 2])\n            )\n\n  intercept        SE\n1  9.913821 0.1765343\n2  9.913821 0.1765343\n3  9.913821 0.1765343"
   },
   {
     "objectID": "FW670/regression.html#fit-intercept-only-model-1",
@@ -16762,14 +16762,14 @@
     "href": "FW670/regression.html#confidence-intervals",
     "title": "Linear Regression",
     "section": "Confidence Intervals",
-    "text": "Confidence Intervals\nNormal Approximation\n\n# Get 90% confidence intervals (Type I error = 0.1)\n  c(\n    (preds$fit+preds$se.fit*qnorm(0.05))[1],\n    (preds$fit+preds$se.fit*qnorm(0.95))[1]\n   )\n\n        1         1 \n 9.623448 10.204195 \n\n\n\n\n  CI.Normal=confint(model1.0, level=0.9)\n  CI.Normal\n\n                 5 %     95 %\n(Intercept) 9.620705 10.20694"
+    "text": "Confidence Intervals\nNormal Approximation\nAssume the sampling distribution of the parameter is Normal\n\n# Get 90% confidence intervals (Type I error = 0.1)\n  c(\n    (preds$fit + preds$se.fit*qnorm(0.05))[1],\n    (preds$fit + preds$se.fit*qnorm(0.95))[1]\n   )\n\n        1         1 \n 9.623448 10.204195 \n\n\n\nUse the t-distribution instead\n\n  c(\n    (preds$fit + preds$se.fit*qt(0.05,df=(n-1)))[1],\n    (preds$fit + preds$se.fit*qt(0.95,df=(n-1)))[1]\n   )\n\n        1         1 \n 9.620705 10.206937 \n\n\n\n\n\n  CI.Normal=confint(model1.0, level=0.9)\n  CI.Normal\n\n                 5 %     95 %\n(Intercept) 9.620705 10.20694"
   },
   {
     "objectID": "FW670/regression.html#bootstrapping",
     "href": "FW670/regression.html#bootstrapping",
     "title": "Linear Regression",
     "section": "Bootstrapping",
-    "text": "Bootstrapping\nInstead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by resampling our data.\n\nSee, Stats4Ecologists"
+    "text": "Bootstrapping\nInstead of relying on the 95% intervals from an assumed normal/t distribution, we will create an empirical distribution by resampling our data.\n\nSee, Stats4Ecologists"
   },
   {
     "objectID": "FW670/regression.html#bootstrapping-idea",
@@ -16832,7 +16832,7 @@
     "href": "FW670/regression.html#prairie-dog-calling",
     "title": "Linear Regression",
     "section": "Prairie Dog Calling",
-    "text": "Prairie Dog Calling\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
+    "text": "Prairie Dog Calling\n\n\n\n\n\ny = # of calls per 5 minute at a prairie dog colony\ntemp = temperature, degrees F\ndist.human = distance of nearest human activity to colony\n\n\n  head(dat)\n\n           y     temp dist.human\n1 0.38129119 39.96298   11.75578\n2 0.57770546 47.95317   14.63583\n3 0.00347806 56.13182   22.89228\n4 0.00000000 29.76491   21.14168\n5 2.67643282 40.25998   32.41442\n6 1.71519689 38.31469   35.99573"
   },
   {
     "objectID": "FW670/regression.html#exploratory",

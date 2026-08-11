@@ -408,7 +408,7 @@ $$
 ## Fit Intercept-Only Model 
 
 ```{r,eval=TRUE,echo=TRUE}
-# Fit model/hypothesis using maximum likelihood
+# Fit model/hypothesis using ordinary least squares or maximum likelihood
   model1.0 = lm(y~1)
 
   model1.1 = glm(y~1)
@@ -486,16 +486,31 @@ The success rate (proportion of all samples whose intervals contain the paramete
 
 
 
-## Confidence Intervals 
+## Confidence Intervals {.scrollable}
 #### Normal Approximation
+
+Assume the sampling distribution of the parameter is Normal
 
 ```{r,eval=TRUE,echo=TRUE}
 # Get 90% confidence intervals (Type I error = 0.1)
   c(
-    (preds$fit+preds$se.fit*qnorm(0.05))[1],
-    (preds$fit+preds$se.fit*qnorm(0.95))[1]
+    (preds$fit + preds$se.fit*qnorm(0.05))[1],
+    (preds$fit + preds$se.fit*qnorm(0.95))[1]
    )
 ```
+
+:::{.fragment}
+
+Use the t-distribution instead
+
+```{r,eval=TRUE,echo=TRUE}
+  c(
+    (preds$fit + preds$se.fit*qt(0.05,df=(n-1)))[1],
+    (preds$fit + preds$se.fit*qt(0.95,df=(n-1)))[1]
+   )
+```
+:::  
+
 
 :::{.fragment}
 ```{r,eval=TRUE,echo=TRUE}
@@ -510,8 +525,7 @@ The success rate (proportion of all samples whose intervals contain the paramete
 ## Bootstrapping 
 
 
-Instead of relying on the 95% intervals from an assumed normal distribution, we will create a distribution by 
-resampling our data.
+Instead of relying on the 95% intervals from an assumed normal/t distribution, we will create an empirical  distribution by resampling our data.
 
 <br>
 
@@ -598,7 +612,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 ```
 
 
-## Prairie Dog Calling {.scrollable}
+## Prairie Dog Calling 
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
 n = 100
@@ -624,7 +638,7 @@ dat = data.frame(y=y,
                  )
 ```
 
-![](/img/pdog.png){fig-align="center" width="1200"}
+![](/img/pdog.png){fig-align="center" width="40%" height="40%"}
 
  y = # of calls per 5 minute at a prairie dog colony
  
