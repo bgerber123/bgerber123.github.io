@@ -170,7 +170,7 @@ a
 
 ```{r eval=TRUE,echo=TRUE}
 dat$site.re = relevel(dat$site,
-                      ref="Site 2"
+                      ref = "Site 2"
                       )
 levels(dat$site.re) 
 ```
@@ -228,10 +228,10 @@ model.matrix(~dat$site.re)[1:5,]
 [Lots of options](https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/)
 
 ```{r, echo=TRUE, eval=TRUE}
-  model3=glm(y ~ site, 
-             data = dat, 
-             family = poisson(link = 'log'),
-             contrasts = list(site = contr.sum)
+  model3 = glm(y ~ site, 
+               data = dat, 
+               family = poisson(link = 'log'),
+               contrasts = list(site = contr.sum)
             )
 ```
 
@@ -275,8 +275,8 @@ sum(coef(model3)[-1]*(-1))
 
 ```{r, echo=TRUE, eval=TRUE}
 mean.group = aggregate(y, 
-                       by = list(site=site),
-                       FUN=mean
+                       by = list(site = site),
+                       FUN = mean
                        )
 mean.group
 ```
@@ -299,7 +299,7 @@ as.numeric(predict(model3,type="response")[1])
 ```{r, echo=TRUE, eval=TRUE}
 mean.group = aggregate(y, 
                        by = list(site=site),
-                       FUN=mean
+                       FUN = mean
                        )
 mean.group
 ```
@@ -310,7 +310,7 @@ mean.group
 
 ```{r, echo=TRUE, eval=TRUE}
 exp(0.3584266 + -0.7151015)
-as.numeric(predict(model3,type="response")[2])
+as.numeric(predict(model3, type = "response")[2])
 ```
 
 
@@ -319,7 +319,7 @@ as.numeric(predict(model3,type="response")[2])
 ```{r, echo=TRUE, eval=TRUE}
 mean.group = aggregate(y, 
                        by = list(site=site),
-                       FUN=mean
+                       FUN = mean
                        )
 mean.group
 ```
@@ -382,10 +382,10 @@ d
 #### <span style="color:purple">AIC</span>
 
 ```{r eval=TRUE,echo=FALSE}
-d=rbind(model$aic,
-      model2$aic,
-      model3$aic,
-      model4$aic
+d = rbind(model$aic,
+          model2$aic,
+          model3$aic,
+          model4$aic
       )
 rownames(d)=c("Model1","Model2","Model3","Model4")
 d
@@ -406,6 +406,7 @@ X = model.matrix(~.^2, data = dat)
 # All variables in dat (three way- interactions)
 X = model.matrix(~.^3, data = dat) 
 
+# Use X in the glm function to estimate coefs
 model = glm(y~ 0 + X, ...)
 
 ```
@@ -451,15 +452,15 @@ $$
 ```{r,echo=TRUE,eval=TRUE}
 
 model.rate1 = glm(y ~ site + offset(log(area)),
-            data = dat, 
-            family = poisson(link = 'log')
-            )
+                  data = dat, 
+                  family = poisson(link = 'log')
+                  )
 
 model.rate2 = glm(y ~ site,
-            offset = log(area),
-            data = dat, 
-            family = poisson(link = 'log')
-            )
+                  offset = log(area),
+                  data = dat, 
+                  family = poisson(link = 'log')
+                  )
 ```
 
 . . .

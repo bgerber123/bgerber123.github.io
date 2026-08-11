@@ -15439,7 +15439,7 @@
     "href": "FW670/glm2.html#control-over-dummy-coding",
     "title": "Generalized Linear Models II ",
     "section": "Control over Dummy Coding",
-    "text": "Control over Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re = relevel(dat$site,\n                      ref=\"Site 2\"\n                      )\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y ~ site.re,\n             data = dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -0.3567     0.1890  -1.887   0.0591 .  \nsite.reSite 1   1.0116     0.2207   4.584 4.56e-06 ***\nsite.reSite 3   1.1337     0.2173   5.218 1.81e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
+    "text": "Control over Dummy Coding\nMake ‘Site 2’ the intercept\n\ndat$site.re = relevel(dat$site,\n                      ref = \"Site 2\"\n                      )\nlevels(dat$site.re) \n\n[1] \"Site 2\" \"Site 1\" \"Site 3\"\n\n\n\n\n\nmodel2 = glm(y ~ site.re,\n             data = dat, \n             family = poisson(link = 'log')\n            )\nsummary(model2)\n\n\nCall:\nglm(formula = y ~ site.re, family = poisson(link = \"log\"), data = dat)\n\nCoefficients:\n              Estimate Std. Error z value Pr(&gt;|z|)    \n(Intercept)    -0.3567     0.1890  -1.887   0.0591 .  \nsite.reSite 1   1.0116     0.2207   4.584 4.56e-06 ***\nsite.reSite 3   1.1337     0.2173   5.218 1.81e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\n    Null deviance: 341.36  on 119  degrees of freedom\nResidual deviance: 305.76  on 117  degrees of freedom\nAIC: 496.33\n\nNumber of Fisher Scoring iterations: 6"
   },
   {
     "objectID": "FW670/glm2.html#same-model-different-estimates",
@@ -15453,7 +15453,7 @@
     "href": "FW670/glm2.html#more-control",
     "title": "Generalized Linear Models II ",
     "section": "More Control!",
-    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3=glm(y ~ site, \n             data = dat, \n             family = poisson(link = 'log'),\n             contrasts = list(site = contr.sum)\n            )"
+    "text": "More Control!\nDeviation/Effect Coding Link\nLots of options\n\n  model3 = glm(y ~ site, \n               data = dat, \n               family = poisson(link = 'log'),\n               contrasts = list(site = contr.sum)\n            )"
   },
   {
     "objectID": "FW670/glm2.html#deviation-coding-interpretation",
@@ -15467,7 +15467,7 @@
     "href": "FW670/glm2.html#intuition-check",
     "title": "Generalized Linear Models II ",
     "section": "Intuition Check",
-    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\n\nSite 1\n\nexp(0.3584266 + 0.2964994)\n\n[1] 1.925\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 1.925"
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site = site),\n                       FUN = mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\n\nSite 1\n\nexp(0.3584266 + 0.2964994)\n\n[1] 1.925\n\nas.numeric(predict(model3,type=\"response\")[1])\n\n[1] 1.925"
   },
   {
     "objectID": "FW670/glm2.html#more-control-again",
@@ -15488,7 +15488,7 @@
     "href": "FW670/glm2.html#taking-control",
     "title": "Generalized Linear Models II ",
     "section": "Taking Control",
-    "text": "Taking Control\n\n# All variables in dat (additive)\nX = model.matrix(~., data = dat)\n\n# All variables in dat (pair-wise interactions)\nX = model.matrix(~.^2, data = dat)\n\n# All variables in dat (three way- interactions)\nX = model.matrix(~.^3, data = dat) \n\nmodel = glm(y~ 0 + X, ...)"
+    "text": "Taking Control\n\n# All variables in dat (additive)\nX = model.matrix(~., data = dat)\n\n# All variables in dat (pair-wise interactions)\nX = model.matrix(~.^2, data = dat)\n\n# All variables in dat (three way- interactions)\nX = model.matrix(~.^3, data = dat) \n\n# Use X in the glm function to estimate coefs\nmodel = glm(y~ 0 + X, ...)"
   },
   {
     "objectID": "FW670/glm2.html#poisson-regression-offset",
@@ -15509,7 +15509,7 @@
     "href": "FW670/glm2.html#offset-code",
     "title": "Generalized Linear Models II ",
     "section": "Offset Code",
-    "text": "Offset Code\n\nmodel.rate1 = glm(y ~ site + offset(log(area)),\n            data = dat, \n            family = poisson(link = 'log')\n            )\n\nmodel.rate2 = glm(y ~ site,\n            offset = log(area),\n            data = dat, \n            family = poisson(link = 'log')\n            )\n\n\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790"
+    "text": "Offset Code\n\nmodel.rate1 = glm(y ~ site + offset(log(area)),\n                  data = dat, \n                  family = poisson(link = 'log')\n                  )\n\nmodel.rate2 = glm(y ~ site,\n                  offset = log(area),\n                  data = dat, \n                  family = poisson(link = 'log')\n                  )\n\n\n\ncoef(model.rate1)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790 \n\ncoef(model.rate2)\n\n(Intercept)  siteSite 2  siteSite 3 \n -0.8036891  -0.4692766  -0.0582790"
   },
   {
     "objectID": "FW670/glm2.html#section",
@@ -19079,14 +19079,14 @@
     "href": "FW670/glm2.html#intuition-check-1",
     "title": "Generalized Linear Models II ",
     "section": "Intuition Check",
-    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 2\n\nexp(0.3584266 + -0.7151015)\n\n[1] 0.7\n\nas.numeric(predict(model3,type=\"response\")[2])\n\n[1] 0.7"
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN = mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 2\n\nexp(0.3584266 + -0.7151015)\n\n[1] 0.7\n\nas.numeric(predict(model3, type = \"response\")[2])\n\n[1] 0.7"
   },
   {
     "objectID": "FW670/glm2.html#intuition-check-2",
     "href": "FW670/glm2.html#intuition-check-2",
     "title": "Generalized Linear Models II ",
     "section": "Intuition Check",
-    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN=mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 3\n\nexp(0.3584266 + 0.4186021)\n\n[1] 2.175\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 2.175"
+    "text": "Intuition Check\n\nmean.group = aggregate(y, \n                       by = list(site=site),\n                       FUN = mean\n                       )\nmean.group\n\n    site     x\n1 Site 1 1.925\n2 Site 2 0.700\n3 Site 3 2.175\n\n\nSite 3\n\nexp(0.3584266 + 0.4186021)\n\n[1] 2.175\n\nas.numeric(predict(model3,type=\"response\")[3])\n\n[1] 2.175"
   },
   {
     "objectID": "FW670/glm2.html#additive-2",

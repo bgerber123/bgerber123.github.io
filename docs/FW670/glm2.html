@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Brian D. Gerber – Generalized Linear Models II  </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -365,7 +365,7 @@ ours      0.6549260  -1.011601  0.1221027</code></pre>
 <p><span style="color:purple">Make ‘Site 2’ the intercept</span></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>dat<span class="sc">$</span>site.re <span class="ot">=</span> <span class="fu">relevel</span>(dat<span class="sc">$</span>site,</span>
-<span id="cb17-2"><a></a>                      <span class="at">ref=</span><span class="st">"Site 2"</span></span>
+<span id="cb17-2"><a></a>                      <span class="at">ref =</span> <span class="st">"Site 2"</span></span>
 <span id="cb17-3"><a></a>                      )</span>
 <span id="cb17-4"><a></a><span class="fu">levels</span>(dat<span class="sc">$</span>site.re) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -449,10 +449,10 @@ Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 <p><a href="https://stats.stackexchange.com/questions/52132/how-to-do-regression-with-effect-coding-instead-of-dummy-coding-in-r">Deviation/Effect Coding Link</a></p>
 <p><a href="https://stats.oarc.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/">Lots of options</a></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  model3<span class="ot">=</span><span class="fu">glm</span>(y <span class="sc">~</span> site, </span>
-<span id="cb25-2"><a></a>             <span class="at">data =</span> dat, </span>
-<span id="cb25-3"><a></a>             <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>),</span>
-<span id="cb25-4"><a></a>             <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">site =</span> contr.sum)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>  model3 <span class="ot">=</span> <span class="fu">glm</span>(y <span class="sc">~</span> site, </span>
+<span id="cb25-2"><a></a>               <span class="at">data =</span> dat, </span>
+<span id="cb25-3"><a></a>               <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>),</span>
+<span id="cb25-4"><a></a>               <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">site =</span> contr.sum)</span>
 <span id="cb25-5"><a></a>            )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -492,8 +492,8 @@ Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 <h2>Intuition Check</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>mean.group <span class="ot">=</span> <span class="fu">aggregate</span>(y, </span>
-<span id="cb30-2"><a></a>                       <span class="at">by =</span> <span class="fu">list</span>(<span class="at">site=</span>site),</span>
-<span id="cb30-3"><a></a>                       <span class="at">FUN=</span>mean</span>
+<span id="cb30-2"><a></a>                       <span class="at">by =</span> <span class="fu">list</span>(<span class="at">site =</span> site),</span>
+<span id="cb30-3"><a></a>                       <span class="at">FUN =</span> mean</span>
 <span id="cb30-4"><a></a>                       )</span>
 <span id="cb30-5"><a></a>mean.group</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -522,7 +522,7 @@ Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>mean.group <span class="ot">=</span> <span class="fu">aggregate</span>(y, </span>
 <span id="cb36-2"><a></a>                       <span class="at">by =</span> <span class="fu">list</span>(<span class="at">site=</span>site),</span>
-<span id="cb36-3"><a></a>                       <span class="at">FUN=</span>mean</span>
+<span id="cb36-3"><a></a>                       <span class="at">FUN =</span> mean</span>
 <span id="cb36-4"><a></a>                       )</span>
 <span id="cb36-5"><a></a>mean.group</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -538,7 +538,7 @@ Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">predict</span>(model3,<span class="at">type=</span><span class="st">"response"</span>)[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">as.numeric</span>(<span class="fu">predict</span>(model3, <span class="at">type =</span> <span class="st">"response"</span>)[<span class="dv">2</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7</code></pre>
 </div>
@@ -549,7 +549,7 @@ Model2 1.925 0.7 2.175 1.925 0.7</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>mean.group <span class="ot">=</span> <span class="fu">aggregate</span>(y, </span>
 <span id="cb42-2"><a></a>                       <span class="at">by =</span> <span class="fu">list</span>(<span class="at">site=</span>site),</span>
-<span id="cb42-3"><a></a>                       <span class="at">FUN=</span>mean</span>
+<span id="cb42-3"><a></a>                       <span class="at">FUN =</span> mean</span>
 <span id="cb42-4"><a></a>                       )</span>
 <span id="cb42-5"><a></a>mean.group</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -639,7 +639,8 @@ Model4 496.3342</code></pre>
 <span id="cb53-7"><a></a><span class="co"># All variables in dat (three way- interactions)</span></span>
 <span id="cb53-8"><a></a>X <span class="ot">=</span> <span class="fu">model.matrix</span>(<span class="sc">~</span>.<span class="sc">^</span><span class="dv">3</span>, <span class="at">data =</span> dat) </span>
 <span id="cb53-9"><a></a></span>
-<span id="cb53-10"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> X, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb53-10"><a></a><span class="co"># Use X in the glm function to estimate coefs</span></span>
+<span id="cb53-11"><a></a>model <span class="ot">=</span> <span class="fu">glm</span>(y<span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> X, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="poisson-regression-offset" class="slide level2">
@@ -671,15 +672,15 @@ Model4 496.3342</code></pre>
 <h2>Offset Code</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a>model.rate1 <span class="ot">=</span> <span class="fu">glm</span>(y <span class="sc">~</span> site <span class="sc">+</span> <span class="fu">offset</span>(<span class="fu">log</span>(area)),</span>
-<span id="cb54-2"><a></a>            <span class="at">data =</span> dat, </span>
-<span id="cb54-3"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb54-4"><a></a>            )</span>
+<span id="cb54-2"><a></a>                  <span class="at">data =</span> dat, </span>
+<span id="cb54-3"><a></a>                  <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb54-4"><a></a>                  )</span>
 <span id="cb54-5"><a></a></span>
 <span id="cb54-6"><a></a>model.rate2 <span class="ot">=</span> <span class="fu">glm</span>(y <span class="sc">~</span> site,</span>
-<span id="cb54-7"><a></a>            <span class="at">offset =</span> <span class="fu">log</span>(area),</span>
-<span id="cb54-8"><a></a>            <span class="at">data =</span> dat, </span>
-<span id="cb54-9"><a></a>            <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
-<span id="cb54-10"><a></a>            )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb54-7"><a></a>                  <span class="at">offset =</span> <span class="fu">log</span>(area),</span>
+<span id="cb54-8"><a></a>                  <span class="at">data =</span> dat, </span>
+<span id="cb54-9"><a></a>                  <span class="at">family =</span> <span class="fu">poisson</span>(<span class="at">link =</span> <span class="st">'log'</span>)</span>
+<span id="cb54-10"><a></a>                  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="cell">
