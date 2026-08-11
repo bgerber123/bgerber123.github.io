@@ -30,12 +30,12 @@ format:
 
 ## Sort of definitions
 
-
+::: {.incremental}
 - models where parameters vary at more than one level
 - models in which lower levels are sorted under a hierarchy of successive higher-level units
 - Generalization of linear and generalized linear modeling in which regression coefficients are themselves given a model whose parameters are also estimated from data (Gelman)
 - Model where unobserved parameters are estimated as a function of other unobserved parameters
-
+:::
 
 ## Hobbs and Hooten 2015 (pg. 109)
 
@@ -285,7 +285,7 @@ marginaleffects::predictions(model1, type = "response")
 ```{r echo=TRUE, eval=TRUE}
 model2 = glmmTMB(y ~ veg, 
                  family = poisson(link="log"),
-                 data=dat,
+                 data = dat,
                  contrasts = list(veg = "contr.sum")
                  )
 ```
@@ -313,7 +313,7 @@ summary(model2)
 
 ```{r echo=TRUE, eval=TRUE}
 marginaleffects::predictions(model2, 
-                             newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                             newdata = data.frame(veg = c("Veg1","Veg2","Veg3","Veg4","Veg5")),
                              re.form = NA,
                              type = "response")
 ```
@@ -406,15 +406,15 @@ fixef(model3)
 ```{r echo=TRUE, eval=TRUE}
 #Predictions - does not include RE uncertainty
 preds = predict(model3,
-                newdata = data.frame(veg=c("Veg1","Veg2","Veg3","Veg4","Veg5")),
+                newdata = data.frame(veg = c("Veg1","Veg2","Veg3","Veg4","Veg5")),
                 type = "link",
                 re.form = NULL,
                 se.fit = TRUE
                 )
 
 
-preds$LCL = exp(preds$fit-1.96*preds$se.fit)
-preds$UCL = exp(preds$fit+1.96*preds$se.fit)
+preds$LCL = exp(preds$fit - 1.96 * preds$se.fit)
+preds$UCL = exp(preds$fit + 1.96 * preds$se.fit)
 preds$fit = exp(preds$fit)
 
 data.frame(preds)
@@ -429,7 +429,7 @@ data.frame(preds)
 ```{r echo=TRUE, eval=TRUE}
 #A typical site (non an average site)
 # Done by setting the random effect mean to 0
-predict(model3,type="response",re.form=NA)[1]
+predict(model3,type="response",re.form = NA)[1]
 ```
 
 

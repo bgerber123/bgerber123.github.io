@@ -380,10 +380,10 @@ font-size: 18px
 <div id="what-model-syntax-allows-for-the-effect-of-age.years-to-be-different-at-each-level-of-site" class="section level3">
 <h3>1. What model syntax allows for the effect of age.years to be
 different at each level of site?</h3>
-<pre class="r"><code>first = glm(weight~age.years+site+age.years:site
-second = glm(weight~age.years+site)
-third = glm(weight~age.years*site)
-fourth = glm(weight~poly(age.years,2)+site</code></pre>
+<pre class="r"><code>first =  glm(weight ~ age.years + site + age.years:site
+second = glm(weight ~ age.years + site)
+third =  glm(weight ~ age.years * site)
+fourth = glm(weight ~ poly(age.years,2) + site</code></pre>
 <p><br></p>
 </div>
 <div id="draw-an-x-y-plot-showing-the-relationship-bw-weight-and-the-additive-effect-of-site-and-age.years.-assume-a-negative-slope-of-age.years-with-weight-and-two-levels-of-the-variable-site.-assume-the-intercept-mle-is-13000-and-the-estimated-effect-of-sitesite2--2000.-label-axes-and-slopes-for-each-site." class="section level3">

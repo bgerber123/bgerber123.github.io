@@ -380,10 +380,10 @@ font-size: 18px
 <div id="what-model-syntax-allows-for-the-effect-of-age.years-to-be-different-at-each-level-of-site" class="section level3">
 <h3>1. What model syntax allows for the effect of age.years to be
 different at each level of site?</h3>
-<pre class="r"><code>first = glm(weight~age.years+site+age.years:site
-second = glm(weight~age.years+site)
-third = glm(weight~age.years*site)
-fourth = glm(weight~poly(age.years,2)+site</code></pre>
+<pre class="r"><code>first =  glm(weight ~ age.years + site + age.years:site
+second = glm(weight ~ age.years + site)
+third =  glm(weight ~ age.years * site)
+fourth = glm(weight ~ poly(age.years,2) + site</code></pre>
 <p><br></p>
 </div>
 <div id="draw-an-x-y-plot-showing-the-relationship-bw-weight-and-the-additive-effect-of-site-and-age.years.-assume-a-negative-slope-of-age.years-with-weight-and-two-levels-of-the-variable-site.-assume-the-intercept-mle-is-13000-and-the-estimated-effect-of-sitesite2--2000.-label-axes-and-slopes-for-each-site." class="section level3">
@@ -392,14 +392,14 @@ additive effect of site and age.years. Assume a negative slope of
 age.years with weight and two levels of the variable site. Assume the
 intercept mle is 13000 and the estimated effect of siteSite2 = -2000.
 Label axes and slopes for each site.</h3>
-<pre class="r"><code>glm(weight~age.years+site)</code></pre>
+<pre class="r"><code>glm(weight ~ age.years + site)</code></pre>
 <p><br></p>
 </div>
 <div id="looking-at-the-data-table-above-write-out-the-design-matrix-for-the-two-models-below." class="section level3">
 <h3>3. Looking at the data table above, write out the design matrix for
 the two models below.</h3>
-<pre class="r"><code>glm(weight~age.years+site)
-glm(weight~age.years*site)</code></pre>
+<pre class="r"><code>glm(weight ~ age.years + site)
+glm(weight ~ age.years * site)</code></pre>
 </div>
 <div id="when-might-it-be-good-to-assume-an-additive-effect-bw-a-categorical-and-continuous-variable-over-an-interaction" class="section level3">
 <h3>4. When might it be good to assume an additive effect b/w a
@@ -410,7 +410,7 @@ categorical and continuous variable over an interaction?</h3>
 <h3>5. Define what each coefficient means. Make sure to make clear the
 units.</h3>
 <pre class="r"><code>dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
-summary(glm(weight~age.yeras.sc*site,data=dat))</code></pre>
+summary(glm(weight ~ age.yeras.sc * site, data = dat))</code></pre>
 <pre><code>## 
 ## Call:
 ## glm(formula = weight ~ age.yeras.sc * site, data = dat)

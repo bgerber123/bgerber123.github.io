@@ -37,10 +37,10 @@ head(dat)
 ### 1. What model syntax allows for the effect of age.years to be different at each level of  site?
 
 ```{r echo=TRUE,eval=FALSE}
-first = glm(weight~age.years+site+age.years:site
-second = glm(weight~age.years+site)
-third = glm(weight~age.years*site)
-fourth = glm(weight~poly(age.years,2)+site
+first =  glm(weight ~ age.years + site + age.years:site
+second = glm(weight ~ age.years + site)
+third =  glm(weight ~ age.years * site)
+fourth = glm(weight ~ poly(age.years,2) + site
 ```
 
 <br>
@@ -48,7 +48,7 @@ fourth = glm(weight~poly(age.years,2)+site
 ### 2. Draw an x-y plot showing the relationship b/w weight and the additive effect of site and age.years. Assume a negative slope of age.years with weight and two levels of the variable site. Assume the intercept mle is 13000 and the estimated effect of siteSite2 = -2000. Label axes and slopes for each site.
 
 ```{r echo=TRUE,eval=FALSE}
-glm(weight~age.years+site)
+glm(weight ~ age.years + site)
 ```
 
 <br>
@@ -56,8 +56,8 @@ glm(weight~age.years+site)
 ### 3. Looking at the data table above, write out the design matrix for the two models below.
 
 ```{r echo=TRUE,eval=FALSE}
-glm(weight~age.years+site)
-glm(weight~age.years*site)
+glm(weight ~ age.years + site)
+glm(weight ~ age.years * site)
 ```
 
 
@@ -69,7 +69,7 @@ glm(weight~age.years*site)
 
 ```{r echo=TRUE,eval=TRUE}
 dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
-summary(glm(weight~age.yeras.sc*site,data=dat))
+summary(glm(weight ~ age.yeras.sc * site, data = dat))
 ```
 
 
