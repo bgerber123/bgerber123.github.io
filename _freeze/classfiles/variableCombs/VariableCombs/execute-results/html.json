@@ -1,0 +1,15 @@
+{
+  "hash": "c51998a8d37855240e028d2aa270c8ce",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Variable Combinations\"\noutput: html_document\n---\n\n<style type=\"text/css\">\n\nbody, td {\n   font-size: 16px;\n}\ncode.r{\n  font-size: 18px;\n}\npre {\n  font-size: 18px\n}\n</style>\n\n\n\n\n# Data\n\n![](elephant.png){width=500}\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n    weight age.years        lat   site\n1 12615.13        41   2.690077 Site 1\n2 12539.55        50   2.974857 Site 2\n3 13753.97        21  -4.868759 Site 1\n4 17269.26        50 -28.437431 Site 2\n5 16945.27        16 -26.414605 Site 1\n6 14723.24        39 -11.392111 Site 2\n```\n\n\n:::\n:::\n\n\n# Questions\n\n### 1. What model syntax allows for the effect of age.years to be different at each level of  site?\n\n\n::: {.cell}\n\n```{.r .cell-code}\nfirst =  glm(weight ~ age.years + site + age.years:site\nsecond = glm(weight ~ age.years + site)\nthird =  glm(weight ~ age.years * site)\nfourth = glm(weight ~ poly(age.years,2) + site\n```\n:::\n\n\n<br>\n\n### 2. Draw an x-y plot showing the relationship b/w weight and the additive effect of site and age.years. Assume a negative slope of age.years with weight and two levels of the variable site. Assume the intercept mle is 13000 and the estimated effect of siteSite2 = -2000. Label axes and slopes for each site.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglm(weight ~ age.years + site)\n```\n:::\n\n\n<br>\n\n### 3. Looking at the data table above, write out the design matrix for the two models below.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglm(weight ~ age.years + site)\nglm(weight ~ age.years * site)\n```\n:::\n\n\n\n### 4. When might it be good to assume an additive effect b/w a categorical and continuous variable over an interaction? \n\n<br>\n\n### 5. Define what each coefficient means. Make sure to make clear the units.\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)\nsummary(glm(weight ~ age.yeras.sc * site, data = dat))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\nCall:\nglm(formula = weight ~ age.yeras.sc * site, data = dat)\n\nCoefficients:\n                        Estimate Std. Error t value Pr(>|t|)    \n(Intercept)              14574.8      241.9  60.245  < 2e-16 ***\nage.yeras.sc              -706.4      263.3  -2.682  0.00861 ** \nsiteSite 2                -188.1      342.0  -0.550  0.58367    \nage.yeras.sc:siteSite 2   1173.1      347.5   3.375  0.00107 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for gaussian family taken to be 2908337)\n\n    Null deviance: 313494594  on 99  degrees of freedom\nResidual deviance: 279200364  on 96  degrees of freedom\nAIC: 1778\n\nNumber of Fisher Scoring iterations: 2\n```\n\n\n:::\n:::\n\n\n\n<br>\n<br>",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
