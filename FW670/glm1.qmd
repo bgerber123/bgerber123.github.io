@@ -76,8 +76,8 @@ $$
 $$
 
 ### Elements
-::: {.incremental}
 
+::: {.incremental}
 -   prob. function to define the RV ($\textbf{y}$)
 -   parameters or moments of the prob. function ($\boldsymbol{\mu},\sigma$)
 -   link function ($\text{g}(\boldsymbol{\mu})$); deterministic transformation of parameters to new scale
@@ -99,7 +99,6 @@ $$
 
 ::: {.incremental}
 -   inverse-link function ($\text{g}^{-1}(\boldsymbol{\textbf{X}\boldsymbol{\beta}})$); deterministic transformation of linear combination back to parameter scale
-
 -   design matrix of the known explanatory variables ($\textbf{X}$)
 -   coefficient parameters ($\boldsymbol{\beta}$); needs estimating
 :::
@@ -331,14 +330,14 @@ When can we do matrix multiplication?
 . . .
 
 ```{r, eval=TRUE, echo=TRUE}
-first=t(y)
+first = t(y)
 dim(first)
 ```
 
 . . .
 
 ```{r, eval=TRUE, echo=TRUE}
-second=y
+second = y
 dim(second)
 ```
 
@@ -777,10 +776,10 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ## Logistic Regression Simulation {.scrollable}
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
-# marginal coefficients (on logit-scale)
+# Marginal coefficients (on logit-scale)
   beta = c(-2,4)
 
-#linear terms
+# Linear terms
   lt = X%*%beta
 ```
 
@@ -788,7 +787,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
 
-# transformation via link function to probability scale
+# Transformation via link function to probability scale
   p = plogis(lt)
   head(round(p,digits=2))
 ```
@@ -797,7 +796,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
 
-# generate a sample dataset
+# Generate a sample dataset
   set.seed(14353)
   y = rbinom(n=length(p),size=1,p)
   y
@@ -806,7 +805,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ## Logistic Regression Simulation {.scrollable}
 
 ```{r, eval=TRUE,echo=TRUE, fig.align='center'}
-#Plot the linear 'terms'  and explantory variable
+# Plot the linear 'terms'  and explantory variable
   par(cex.lab=1.2,cex.axis=1.2)
   plot(Var1,lt,type="b",lwd=3,col=2,
        xlab="x",ylab="Linear Terms (logit-value)")  
@@ -827,18 +826,22 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ## Logistic Regression Evaluation {.scrollable}
 
 ```{r, eval=TRUE, echo=TRUE}
- #sample many times  
-  n.sim=1000
+ # Sample many times  
+  n.sim = 1000
   y.many = replicate(n.sim,
                      rbinom(n = length(p),
-                            size=1,
+                            size = 1,
                             p)
                      )
   dim(y.many)
-  
- #Estimate coefs for all 100 samples
-  coef.est=apply(y.many,2,FUN=function(y){
-          model1=glm(y ~ 0 + X, 
+```
+
+. . .
+
+```{r, eval=TRUE, echo=TRUE}
+ # Estimate coefs for all 100 samples
+  coef.est = apply(y.many,2,FUN = function(y){
+          model1 = glm(y ~ 0 + X, 
                      family = binomial(link = "logit")
                      )
           
@@ -857,7 +860,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ```{r, eval=TRUE, echo=FALSE}  
   plot(density(coef.est[1,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[0]),
-       xlab=bquote(beta[0]))
+       xlab=bquote(beta[0]),xlim=c(-5,0))
       abline(v=beta[1],col=2,lwd=4)
             legend("topright",lwd=3,col=2,legend="True Value")
 ```
@@ -866,7 +869,7 @@ plot(p,logit.p,type="l",lwd=4,col=3,xlab='p',ylab="logit(p)")
 ```{r, eval=TRUE, echo=FALSE}  
   plot(density(coef.est[2,],adjust=2),type="l",lwd=2,
        main=bquote("Sampling Distribution"~beta[1]),
-       xlab=bquote(beta[1]))
+       xlab=bquote(beta[1]),xlim=c(-1,10))
   abline(v=beta[2],col=2,lwd=4)
         legend("topright",lwd=3,col=2,legend="True Value")
 ```

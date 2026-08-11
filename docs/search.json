@@ -15215,7 +15215,7 @@
     "href": "FW670/glm1.html#linear-algebra-2",
     "title": "Generalized Linear Models",
     "section": "Linear Algebra",
-    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst=t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond=y\ndim(second)\n\n[1] 3 1\n\n\n\n\nWhen this is true…\n\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
+    "text": "Linear Algebra\nWhen can we do matrix multiplication?\n\n\nfirst = t(y)\ndim(first)\n\n[1] 1 3\n\n\n\n\n\nsecond = y\ndim(second)\n\n[1] 3 1\n\n\n\n\nWhen this is true…\n\n  ncol(first)==nrow(second)\n\n[1] TRUE\n\n\n(1 x 3) (3 x 1)"
   },
   {
     "objectID": "FW670/glm1.html#linear-algebra-3",
@@ -15327,7 +15327,7 @@
     "href": "FW670/glm1.html#logistic-regression-evaluation",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Evaluation",
-    "text": "Logistic Regression Evaluation\n\n #sample many times  \n  n.sim=1000\n  y.many = replicate(n.sim,\n                     rbinom(n = length(p),\n                            size=1,\n                            p)\n                     )\n  dim(y.many)\n\n[1]  100 1000\n\n #Estimate coefs for all 100 samples\n  coef.est=apply(y.many,2,FUN=function(y){\n          model1=glm(y ~ 0 + X, \n                     family = binomial(link = \"logit\")\n                     )\n          \n  model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
+    "text": "Logistic Regression Evaluation\n\n # Sample many times  \n  n.sim = 1000\n  y.many = replicate(n.sim,\n                     rbinom(n = length(p),\n                            size = 1,\n                            p)\n                     )\n  dim(y.many)\n\n[1]  100 1000\n\n\n\n\n # Estimate coefs for all 100 samples\n  coef.est = apply(y.many,2,FUN = function(y){\n          model1 = glm(y ~ 0 + X, \n                     family = binomial(link = \"logit\")\n                     )\n          \n  model1$coefficients\n  })\n\n  dim(coef.est)\n\n[1]    2 1000"
   },
   {
     "objectID": "FW670/glm1.html#plot-intercept",
@@ -19065,14 +19065,14 @@
     "href": "FW670/glm1.html#logistic-regression-simulation-1",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Simulation",
-    "text": "Logistic Regression Simulation\n\n# marginal coefficients (on logit-scale)\n  beta = c(-2,4)\n\n#linear terms\n  lt = X%*%beta\n\n\n\n# transformation via link function to probability scale\n  p = plogis(lt)\n  head(round(p,digits=2))\n\n  [,1]\n1 0.98\n2 0.02\n3 0.90\n4 0.01\n5 0.95\n6 0.00\n\n\n\n\n\n# generate a sample dataset\n  set.seed(14353)\n  y = rbinom(n=length(p),size=1,p)\n  y\n\n  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0\n [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0\n [75] 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0"
+    "text": "Logistic Regression Simulation\n\n# Marginal coefficients (on logit-scale)\n  beta = c(-2,4)\n\n# Linear terms\n  lt = X%*%beta\n\n\n\n# Transformation via link function to probability scale\n  p = plogis(lt)\n  head(round(p,digits=2))\n\n  [,1]\n1 0.98\n2 0.02\n3 0.90\n4 0.01\n5 0.95\n6 0.00\n\n\n\n\n\n# Generate a sample dataset\n  set.seed(14353)\n  y = rbinom(n=length(p),size=1,p)\n  y\n\n  [1] 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0\n [38] 0 1 1 0 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0\n [75] 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0"
   },
   {
     "objectID": "FW670/glm1.html#logistic-regression-simulation-2",
     "href": "FW670/glm1.html#logistic-regression-simulation-2",
     "title": "Generalized Linear Models",
     "section": "Logistic Regression Simulation",
-    "text": "Logistic Regression Simulation\n\n#Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
+    "text": "Logistic Regression Simulation\n\n# Plot the linear 'terms'  and explantory variable\n  par(cex.lab=1.2,cex.axis=1.2)\n  plot(Var1,lt,type=\"b\",lwd=3,col=2,\n       xlab=\"x\",ylab=\"Linear Terms (logit-value)\")  \n\n\n\n\n\n\n\n  index=order(Var1)\n  plot(Var1[index],p[index],type=\"b\",lwd=3,col=2,xlab=\"x\",ylab=\"Probability\")"
   },
   {
     "objectID": "FW670/glm2.html#intuition-check-1",
