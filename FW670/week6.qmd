@@ -19,8 +19,8 @@ title: ""
 
 - Background Reading (not required):
   - <a href="/readings/Hobbs_and_Hooten Ch5.pdf"> Hobbs and Hooten Ch5</a>.
-  - <a href="https://fw8051statistics4ecologists.netlify.app/bayes"> Fieberg Chapter 11</a>.
-  - <a href="https://fw8051statistics4ecologists.netlify.app/a-brief-introduction-to-mcmc-sampling-and-jags"> Fieberg Chapter 12</a>.
+  - <a href="https://statistics4ecologists-v3.netlify.app/11-introbayesmod"> Fieberg Chapter 11</a>.
+  - <a href="https://statistics4ecologists-v3.netlify.app/12-bayesmcmc"> Fieberg Chapter 12</a>.
 
 
 
@@ -29,9 +29,6 @@ title: ""
 
 <!-- -   Readings for next class:  -->
 <!--     - <a href="/readings/Zurr and Iano 2016.pdf">Zurr and Iano, 2016</a> -->
-
-
-
 
 
 ### Day 2 (lab)
@@ -61,7 +58,7 @@ install.packages(c("rjags","bayesplot","rstanarm","coda"))
 
 
 - Background Reading (not required): 
-  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/3686/) 
+  - [Kurz, 2023; Doing Bayesian Data Analysis in brms and the tidyverse](https://bookdown.org/content/8ba612b7-90f2-4ebc-b329-0159008e2340/) 
 
 
 

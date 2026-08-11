@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.37">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Brian D. Gerber –  Bayes the way</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -261,7 +261,7 @@ Do we want to make probability statements about our data?
 <p><br></p>
 </div>
 <div class="fragment">
-<p><strong>90% CI</strong>: the long-run proportion of corresponding CIs that will contain the true value 90% of the time.</p>
+<p><strong>90% CI</strong>: the long-run proportion of re-sampling a population such that considering all the CI’s will contain the true value 90% of the time.</p>
 </div>
 </section>
 <section id="probability-data-and-parameters-1" class="slide level2">
@@ -356,7 +356,7 @@ Do we want to make probability statements about our parameters?
 <section id="bayesian-inference-3" class="slide level2">
 <h2>Bayesian Inference</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diff <span class="ot">=</span> post2<span class="sc">-</span>post1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diff <span class="ot">=</span> post2 <span class="sc">-</span> post1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <img data-src="bayesian_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="fragment">
@@ -747,9 +747,9 @@ Evidence or Marginal Likelihood
 <section id="the-prior" class="slide level2 scrollable">
 <h2>The Prior</h2>
 <p>All parameters in a Bayesian model require a prior specified; parameters are random variables.</p>
-<p><span class="math inline">\(y_{i} \sim \text{Binom}(N, \theta)\)</span></p>
+<p><span class="math inline">\(y_{i} \sim \text{Binom}(N, p)\)</span></p>
 <div class="fragment">
-<p><span class="math inline">\(\theta \sim \text{Beta}(\alpha = 4, \beta=2)\)</span></p>
+<p><span class="math inline">\(p \sim \text{Beta}(\alpha = 4, \beta=2)\)</span></p>
 </div>
 <div class="fragment">
 <div class="cell">
@@ -766,7 +766,7 @@ Evidence or Marginal Likelihood
 </section>
 <section id="the-prior-1" class="slide level2 scrollable">
 <h2>The Prior</h2>
-<p><span class="math inline">\(\theta \sim \text{Beta}(\alpha = 1, \beta=1)\)</span></p>
+<p><span class="math inline">\(p \sim \text{Beta}(\alpha = 1, \beta=1)\)</span></p>
 <div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">curve</span>(<span class="fu">dbeta</span>(x, <span class="dv">1</span>,<span class="dv">1</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="at">lwd=</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -787,6 +787,7 @@ Evidence or Marginal Likelihood
 <li class="fragment"><p>Priors can contain a lot of information (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>)</p></li>
 <li class="fragment"><p>Well-constructed priors can also improve the behavior of our models (computational advantage)</p></li>
 <li class="fragment"><p>No such thing as a ‘non-informative’ prior</p></li>
+<li class="fragment"><p>Diffuse priors on one scale can be very informative on another</p></li>
 </ul>
 </section>
 <section id="the-prior-3" class="slide level2">
@@ -823,6 +824,44 @@ Evidence or Marginal Likelihood
 <div class="fragment">
 <p>Does changing the prior change your posterior inference? If not, don’t sweat it. If it does, you’ll need to return to point 2 and justify your prior choice</p>
 </div>
+</section>
+<section id="the-prior-8" class="slide level2 scrollable">
+<h2>The Prior</h2>
+<p><span style="color:purple">Priors are mostly not invariant to transformation of scale</span></p>
+<p><span class="math display">\[
+\begin{align*}
+\textbf{y}_{i} \sim&amp; \text{Bernoulli}(p_{i})\\
+\text{logit}(p_{i}) =&amp; \beta_0\\
+\beta_0 \sim&amp; \text{Normal(0,100)}
+\end{align*}
+\]</span></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-prior-9" class="slide level2 scrollable">
+<h2>The Prior</h2>
+<p><span style="color:purple">Priors are mostly not invariant to transformation of scale</span></p>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="the-prior-10" class="slide level2">
+<h2>The Prior</h2>
+<p><span style="color:purple">There are intermediate solutions</span></p>
+<p><span class="math display">\[
+\begin{align*}
+\beta_0 \sim&amp; \text{Logistic(0,1)}
+\end{align*}
+\]</span></p>
+
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1440"><p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819">Link</a></p>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
@@ -863,7 +902,7 @@ p \sim \text{Beta}( \alpha, \beta) \\
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -978,7 +1017,7 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -992,7 +1031,7 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 <span id="cb32-2"><a></a>  beta.prior2 <span class="ot">=</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-prior-3" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Prior 3)</h2>
 <div class="cell">
@@ -1000,7 +1039,7 @@ p \sim&amp; \text{Beta}(\alpha,\beta)
 <span id="cb33-2"><a></a>  beta.prior3 <span class="ot">=</span> <span class="dv">15</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors" class="slide level2 scrollable">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 <p><span class="math display">\[
@@ -1019,15 +1058,15 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="hippos-bayesian-model-posteriors-1" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-2" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-bayesian-model-posteriors-3" class="slide level2">
 <h2>Hippos: Bayesian Model (Posteriors)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-1" class="slide level2">
 <h2>Hippos: More data! (Prior 1)</h2>
 <div class="cell">
@@ -1043,7 +1082,7 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+<p><img data-src="bayesian_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1053,15 +1092,15 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="hippos-more-data-prior-2" class="slide level2">
 <h2>Hippos: More data! (Prior 2)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-more-data-prior-3" class="slide level2">
 <h2>Hippos: More data! (Prior 3)</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
 <section id="hippos-dataprior-comparison" class="slide level2 scollable">
 <h2>Hippos: Data/prior Comparison</h2>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section>
 <section id="section-5" class="slide level2">
 <h2></h2>
 
@@ -1075,13 +1114,15 @@ P(p|y) \sim \text{Beta}(\alpha^*,\beta^*)\\
 <section id="markov-chain-monte-carlo" class="slide level2 scrollable">
 <h2>Markov Chain Monte Carlo</h2>
 <p>Often don’t have conjugate likelihood and priors, so we use MCMC algorithims to sample posteriors.</p>
+<div class="fragment">
 <p><strong>Class of algorithm</strong></p>
 <ul>
 <li>Metropolis-Hastings</li>
 <li>Gibbs</li>
-<li>Reversible-Juno</li>
+<li>Reversible-Jump</li>
 <li>No U-turn Sampling</li>
 </ul>
+</div>
 </section>
 <section id="markov-chain-monte-carlo-1" class="slide level2 scrollable">
 <h2>Markov Chain Monte Carlo</h2>
@@ -1100,28 +1141,28 @@ P(p|y) \propto\prod_{i=1}^{N}(p^{y}(1-p)^{1-y_{i}}) \times \frac{p^{\alpha-1}(1-
 <li><span style="color:purple">iterations:</span> number of samples to draw/generate from a posterior distribution</li>
 </ul>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"></section>
 <section id="mcmc-sampling-language-1" class="slide level2">
 <h2>MCMC Sampling language</h2>
 <ul>
 <li><span style="color:purple">thinning:</span> which iterations to keep, every one (1), ever other one (2), every third one (3)</li>
 </ul>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section>
 <section id="mcmc-sampling-language-2" class="slide level2">
 <h2>MCMC Sampling language</h2>
 <ul>
 <li><span style="color:purple">burn-in:</span> how many of the initial samples to remove; depends on distance from initial value and the posterior distribution</li>
 </ul>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section>
 <section id="mcmc-sampling-language-3" class="slide level2">
 <h2>MCMC Sampling language</h2>
 <ul>
 <li><span style="color:purple">chains</span>: (unique sets of samples; needed for convergence tests)</li>
 </ul>
 
-<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"></section>
+<img data-src="bayesian_files/figure-revealjs/unnamed-chunk-47-1.png" width="960" class="r-stretch"></section>
 <section id="software-options" class="slide level2">
 <h2>Software Options</h2>
 <ul>
