@@ -4,14 +4,14 @@
   library(bayesplot)
 
 # Hippo survival data 
-  y=c(0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
-     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-     )
+  y = c(0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+        )
 
 #JAGS data list
-  data=list(
-            y=y,
-            N=length(y)
+  data = list(
+              y = y,
+              N = length(y)
             )
 
 #MCMC inputs  

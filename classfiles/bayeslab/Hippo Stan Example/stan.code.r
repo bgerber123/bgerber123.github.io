@@ -12,7 +12,7 @@
   dat = data.frame(y = y)
 
 #Fit model in stan_glm function. Note, the lack of a prior specification.
-  post1 <- stan_glm(y~1, 
+  post1 <- stan_glm(y ~ 1, 
                     data = dat,
                     family = binomial(link = "logit")
                     )

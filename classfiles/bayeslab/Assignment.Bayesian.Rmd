@@ -1,7 +1,7 @@
 ---
 title: "Bayesian Assignment"
-author: "Brian D. Gerber"
-date: "2026-7-8"
+author: "Name"
+date: "Date"
 output: html_document
 ---
 
@@ -32,7 +32,7 @@ $$
 \lambda \sim& \text{Gamma}(\kappa,\theta)
 \end{align*}
 $$
-where, the posterior distribution of lambda is
+where, the posterior distribution of $\lambda$ is
 
 $$
 \begin{align*}
@@ -79,6 +79,6 @@ For Stan, use the code provided and adapt it based on what you know from the GLM
 
 -   code of the model fitting
 
--   A plot of the posterior distribution of lambda .
+-   A plot of the posterior distribution of $\lambda$.
 
-
+<br>

@@ -22,12 +22,12 @@ y = c(0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
 
   
 #Function argument order: y,alpha,beta,p.tune,n.mcmc
-####  y: vector of binomial successes of N=1
-####  p: probability of success
-####  alpha: prior Beta shape parameter
-####  beta: prior Beta shape parameter
-####  p.tune: tuning parameter (chosen to enhance mixing)
-####          How much jumping around does the proposal value does
+  ####  y: vector of binomial successes of N=1
+  ####  p: probability of success
+  ####  alpha: prior Beta shape parameter
+  ####  beta: prior Beta shape parameter
+  ####  p.tune: tuning parameter (chosen to enhance mixing)
+  ####          How much jumping around does the proposal value does
 
 binom.logit.out = binom.logit.mcmc(y,
                                    alpha,
