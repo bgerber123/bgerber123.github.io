@@ -632,7 +632,7 @@ set.seed(43441)
 y = rnorm(n, mu,sigma)
 y[which(y<0)]=0
 
-dat = data.frame(y=y,
+dat = data.frame(y = y,
                  temp = x1,
                  dist.human = x2
                  )
@@ -664,7 +664,7 @@ dat = data.frame(y=y,
 ## Model Fitting 1
 
 ```{r, echo=TRUE, include=TRUE, eval=TRUE}  
-  model = lm(y ~ temp+dist.human, data=dat)
+  model = lm(y ~ temp + dist.human, data=dat)
   summary(model)
 ```
 

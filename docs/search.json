@@ -16846,7 +16846,7 @@
     "href": "FW670/regression.html#model-fitting-1",
     "title": "Linear Regression",
     "section": "Model Fitting 1",
-    "text": "Model Fitting 1\n\n  model = lm(y ~ temp+dist.human, data=dat)\n  summary(model)\n\n\nCall:\nlm(formula = y ~ temp + dist.human, data = dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5.6714 -1.6690 -0.1506  1.4910  5.0041 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -8.312197   1.074281  -7.737 9.65e-12 ***\ntemp         0.156393   0.024605   6.356 6.75e-09 ***\ndist.human   0.036010   0.003388  10.629  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.338 on 97 degrees of freedom\nMultiple R-squared:  0.9233,    Adjusted R-squared:  0.9217 \nF-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
+    "text": "Model Fitting 1\n\n  model = lm(y ~ temp + dist.human, data=dat)\n  summary(model)\n\n\nCall:\nlm(formula = y ~ temp + dist.human, data = dat)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5.6714 -1.6690 -0.1506  1.4910  5.0041 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -8.312197   1.074281  -7.737 9.65e-12 ***\ntemp         0.156393   0.024605   6.356 6.75e-09 ***\ndist.human   0.036010   0.003388  10.629  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.338 on 97 degrees of freedom\nMultiple R-squared:  0.9233,    Adjusted R-squared:  0.9217 \nF-statistic: 583.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "FW670/regression.html#model-notation-1",

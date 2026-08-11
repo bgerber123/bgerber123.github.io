@@ -1,4 +1,4 @@
-## ----echo=FALSE,eval=TRUE--------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------------
   n = 1000
   b0 = 10
   b1 = 2
@@ -9,7 +9,7 @@
   plot(x,y,xlim=c(0,70))
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-----------------------------------------------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"----
 #" (beta0) = 9.06 \n Slope of x (beta1) = 2.0")
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 
@@ -20,7 +20,7 @@ legend("topleft",col=c("green"),lty=2,legend=c("Mean"),lwd=4)
 
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-----------------------------------------------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"----
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
@@ -35,7 +35,7 @@ legend("topleft",col=c("green","blue"),lty=2,legend=c("Mean","95% Confidence Int
 
 
 
-## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"-----------------------------------------------
+## ----echo=FALSE,eval=TRUE, fig.align='center',width="1000"----
 plot(x,y,cex.lab=1.3,cex.axis=1.3, main = expression(paste("Intercept (",hat(beta[0]),") = 9.06, Slope of x (",hat(beta[1]),") = 2.0")),xlim=c(0,80))
 lm.out=lm(y~x)
 
@@ -55,7 +55,7 @@ legend("topleft",col=c("green","blue","purple"),lty=2,legend=c("Mean","95% Confi
 
 
 
-## --------------------------------------------------------------------------------------------------------
+## -----------------------------------------
 library(ggplot2)
 library(ggthemes)
 m1=broom::augment(lm.out)
@@ -67,7 +67,7 @@ ggplot(m1, aes(x, y)) +
 
 
 
-## ----eval=TRUE, echo=FALSE,fig.align='center'------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE,fig.align='center'----
 # x variable (independent and known)
   x = seq(0,2,by=0.1)
 
@@ -94,13 +94,13 @@ ggplot(m1, aes(x, y)) +
 
 
 
-## ----eval=TRUE, echo=FALSE, cache=TRUE-------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE, cache=TRUE----
 #sample many times  
   y.many = replicate(1000,rnorm(length(mu),mu, sigma))
 #  dim(y.many)
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE----------------
 #plot all samples with true mu
   par(cex.axis=1.3,cex.lab=1.3)
   matplot(y.many,type="p",pch=18,xaxt="n",col=2,cex=2,xlab="x",ylab="y",ylim=c(-2,4))
@@ -111,7 +111,7 @@ ggplot(m1, aes(x, y)) +
   legend("bottomright",lwd=2, col=c(1,4,2),legend=c("Truth","Sample","Sampling Distributions"))
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE----------------
 temp.x=x
 preds.many = apply(y.many,2,FUN=function(x){
                     predict(lm(x~temp.x)
@@ -127,7 +127,7 @@ legend("bottomright",lwd=3, col=c(2,grDevices::adjustcolor("black",alpha.f = 0.0
 
 
 
-## ----eval=TRUE,echo=FALSE, width = 200-------------------------------------------------------------------
+## ----eval=TRUE,echo=FALSE, width = 200----
 
 n = 1000
 b0 = 10
@@ -140,7 +140,7 @@ plot(x,y,xlim=c(0,70))
 
 
 
-## ----eval=TRUE,echo=FALSE,fig.align='center'-------------------------------------------------------------
+## ----eval=TRUE,echo=FALSE,fig.align='center'----
 n = 1000
 b0 = 10
 b1 = 20
@@ -155,7 +155,7 @@ plot(x,y,xlim=c(0,70))
 
 
 
-## ----eval=TRUE,echo=TRUE,fig.align='center'--------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE,fig.align='center'----
 #Setup parameters
   n = 100 # sample size
   beta0 = 10 # true mean
@@ -166,12 +166,12 @@ plot(x,y,xlim=c(0,70))
   y = rnorm(n, mean = beta0, sd = sigma)
 
 
-## ----eval=TRUE,echo=TRUE,fig.align='center'--------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE,fig.align='center'----
   hist(y)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------------------------------------------
-# Fit model/hypothesis using maximum likelihood
+## ----eval=TRUE,echo=TRUE------------------
+# Fit model/hypothesis using ordinary least squares or maximum likelihood
   model1.0 = lm(y~1)
 
   model1.1 = glm(y~1)
@@ -186,32 +186,39 @@ plot(x,y,xlim=c(0,70))
             )
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
     
 # Summary of model results  
   summary(model1.0)
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
 #Predict response for all data
   preds = predict(model1.0, se.fit = TRUE)
   preds
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
 # Get 90% confidence intervals (Type I error = 0.1)
   c(
-    (preds$fit+preds$se.fit*qnorm(0.05))[1],
-    (preds$fit+preds$se.fit*qnorm(0.95))[1]
+    (preds$fit + preds$se.fit*qnorm(0.05))[1],
+    (preds$fit + preds$se.fit*qnorm(0.95))[1]
    )
 
 
-## ----eval=TRUE,echo=TRUE---------------------------------------------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
+  c(
+    (preds$fit + preds$se.fit*qt(0.05,df=(n-1)))[1],
+    (preds$fit + preds$se.fit*qt(0.95,df=(n-1)))[1]
+   )
+
+
+## ----eval=TRUE,echo=TRUE------------------
   CI.Normal=confint(model1.0, level=0.9)
   CI.Normal
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 
 # Setup
   nboot <- 1000 # number of bootstrap samples
@@ -228,12 +235,12 @@ for(i in 1:nboot){
 }
 
 
-## --------------------------------------------------------------------------------------------------------
+## -----------------------------------------
 par(mfrow = c(1, 1))
 hist(bootcoefs, main = expression(paste("Bootstrap distribution of ", hat(beta)[0])), xlab = "")
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 # Calculate bootstrap standard errors
   boot.se = sd(bootcoefs)
 
@@ -248,7 +255,7 @@ confdat.boot.pct <- quantile(bootcoefs, probs = c(0.05, 0.95))
 
 
 
-## ----eval=TRUE, echo=FALSE-------------------------------------------------------------------------------
+## ----eval=TRUE, echo=FALSE----------------
 confdata <- data.frame(LCL=c(boot.normal[1],CI.Normal[1],confdat.boot.pct[1]),
            UCL=c(boot.normal[2],CI.Normal[2],confdat.boot.pct[2]),
            method=c("Normal Assumption", "Bootstrap-Normal", "Bootstrap-percentile")
@@ -262,7 +269,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 
 
 
-## ----echo=FALSE, include=TRUE, eval=TRUE-----------------------------------------------------------------
+## ----echo=FALSE, include=TRUE, eval=TRUE----
 n = 100
 b0=1
 b1=-0.01
@@ -280,84 +287,84 @@ set.seed(43441)
 y = rnorm(n, mu,sigma)
 y[which(y<0)]=0
 
-dat = data.frame(y=y,
+dat = data.frame(y = y,
                  temp = x1,
                  dist.human = x2
                  )
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
   head(dat)
 
 
-## ----echo=FALSE, include=TRUE, eval=TRUE-----------------------------------------------------------------
+## ----echo=FALSE, include=TRUE, eval=TRUE----
   hist(dat$y)
   hist(dat$temp)
   hist(dat$dist.human)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
-  model = lm(y ~ temp+dist.human, data=dat)
+## ----echo=TRUE, include=TRUE, eval=TRUE----
+  model = lm(y ~ temp + dist.human, data=dat)
   summary(model)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 equatiomatic::extract_eq(model)
 
 equatiomatic::extract_eq(model, use_coefs = TRUE)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
   model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
   summary(model)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
   dat$temp.sc = scale(dat$temp, center=TRUE, scale = TRUE)
   dat$dist.sc = scale(dat$dist.human, center=TRUE, scale = TRUE)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
   mean(dat$temp.sc)
   sd(dat$temp.sc)
 
 
-## ----echo=FALSE, include=TRUE, eval=TRUE-----------------------------------------------------------------
+## ----echo=FALSE, include=TRUE, eval=TRUE----
   par(mfrow=c(1,2))
   hist(dat$temp)
   hist(dat$temp.sc)
   
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
   model = lm(y ~ temp.sc + dist.sc, data=dat)
   summary(model)
 
 
-## ----echo=FALSE,eval=TRUE--------------------------------------------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------------
 model = lm(y ~ I(temp - mean(temp)) + dist.human, data=dat)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 # Plot marginal predictions of dist.human
   marginaleffects::plot_predictions(model, condition=c("dist.human"))
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 # Plot marginal predictions of dist.human
   plot1 = marginaleffects::plot_predictions(model, condition=c("dist.human"))
   plot1+geom_point(data=dat, aes(x=dist.human,y=y))
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 marginaleffects::plot_predictions(model, condition=list("temp","dist.human"))
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 marginaleffects::plot_predictions(model, condition=list("temp","dist.human" = 0:5))
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 newdata = expand.grid(dat$temp,0:5)
 colnames(newdata)=c("temp","dist.human")
 
@@ -366,7 +373,7 @@ preds = predict(model,newdata = newdata,interval="confidence", level=0.95)
 pred.plot = data.frame(newdata,preds)
 
 
-## ----echo=FALSE, include=TRUE, eval=TRUE-----------------------------------------------------------------
+## ----echo=FALSE, include=TRUE, eval=TRUE----
 
 ggplot(data=pred.plot) +
   geom_line(aes(temp, fit, group = dist.human,color = dist.human), linewidth = 1.1)+ 
@@ -375,29 +382,29 @@ ggplot(data=pred.plot) +
                        
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'-----------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'----
 hist(model$residuals)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'-----------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'----
 plot(model,1)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'-----------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'----
 plot(model,3)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'-----------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'----
 plot(model,2)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'-----------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE,fig.align='center'----
 par(mfrow=c(1,2))
 plot(model,4)
 plot(model,5)
 
 
-## ----echo=TRUE, include=TRUE, eval=TRUE------------------------------------------------------------------
+## ----echo=TRUE, include=TRUE, eval=TRUE----
 library(ggResidpanel)
 resid_panel(model)
 
