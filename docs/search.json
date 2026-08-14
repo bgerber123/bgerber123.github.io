@@ -19597,7 +19597,7 @@
     "href": "FW670/monitoring.html#modeling-option-4a",
     "title": "Modeling for Monitoring",
     "section": "Modeling Option 4a",
-    "text": "Modeling Option 4a\nPredictions from a spatial occupancy model at the whole sampling frame. For example, intrinsic conditional autoregressive model (ICAR).\n\n\n\n\n\n\n\ncovariates are not needed\nleverages ‘closeness’ of the data to estimate occupancy"
+    "text": "Modeling Option 4a\nPredictions from a spatial occupancy model at the whole sampling frame. For example, intrinsic conditional autoregressive model (ICAR).\n\ncovariates are not needed\nleverages ‘closeness’ of the detection data to estimate occupancy"
   },
   {
     "objectID": "FW670/monitoring.html#modeling-option-4b",
@@ -19618,7 +19618,7 @@
     "href": "FW670/monitoring.html#to-do",
     "title": "Modeling for Monitoring",
     "section": "To do",
-    "text": "To do\n\nGroup up\nWhat are the benefits and costs of each option, in terms of objectives 1 and 2.\nWhat option would you pick? Why?\n\nIf you make your own chimera option (mix match model type and model fitting), you need to say why it’s better and how practical it is to accomplish.\n\nCan ask me questions"
+    "text": "To do\n\nGroup up and discuss\nList out the benefits/costs of each option, in terms of objectives 1 and 2.\nWhat option would you pick? Why?\n\nIf you make your own chimera option (mix match model type and model fitting), you need to say why it’s better and how practical it is to accomplish.\n\nCan ask me questions"
   },
   {
     "objectID": "FW670/monitoring.html#options-again",

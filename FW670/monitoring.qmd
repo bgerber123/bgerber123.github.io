@@ -116,12 +116,14 @@ knitr::kable(aic.tab)
 
 <span style="color:orange">**Predictions from a spatial occupancy model at the whole sampling frame**</span>. For example, intrinsic conditional autoregressive model (ICAR). 
 
+- covariates are not needed
+- leverages 'closeness' of the detection data to estimate occupancy
+
+
 . . .
 
 ![](/img//spatial_occ_map.png){fig-align="center" width=80% .nostretch}
 
-- covariates are not needed
-- leverages 'closeness' of the data to estimate occupancy
 
 
 ## Modeling Option 4b {.scrollable}
@@ -144,8 +146,8 @@ knitr::kable(aic.tab)
 
 ## To do
 
-- Group up
-- What are the benefits and costs of each option, in terms of objectives 1 and 2.
+- Group up and discuss
+- List out the benefits/costs of each option, in terms of objectives 1 and 2.
 - What option would you pick? Why?  
     - If you make your own chimera option (mix match model type and model fitting), you need to say why it's better and how practical it is to accomplish. 
 - Can ask me questions
