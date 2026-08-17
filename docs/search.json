@@ -18,7 +18,7 @@
     "href": "projects/index.html",
     "title": "Current Projects",
     "section": "",
-    "text": "Multi-state occurence monitoring of wolverine (Gulo gulo)\nObjective To survey for wolverine across the western U.S. and Canada to monitor changes in distribution.\nTeam: Western Association of Fish and Wildlife Agencies (WAFWA) Forest Carnivore Monitoring Group; Brian Gerber (USGS CRU / CSU) is the statistical ecologist.\n\n\n\nDesigning long-term ecological research studies to understand community effects following gray wolf recovery in Colorado\nObjective To evaluate monitoring designs to understand indirect effects from predator changes affecting primary consumers (elk/deer) to mountain shrub communities (sagebrush/bitterbrush/serviceberry) in Colorado.\nTeam: Michael Peyton (Postdoctoral Researcher), Brian Gerber (USGS CRU / CSU), Ellen Brandell (Colorado Parks and Wildlife), and Danielle Bilyeu (Colorado Parks and Wildlife).\n\n\n\nIdentifying areas of avian abundance and richness to minimize effects from renewable energy in Colorado\nObjectives 1) Use eBird occurrence and richness predictions to evaluate spatial overlap with predicted renewable energy development in Colorado, and 2) create a decision tool to evaluate tradeoffs in optimizing renewable energy development areas that minimizes conflicts with birds.\nTeam: Jonathan Crossley (M.S. Student), Brian Gerber (USGS CRU / CSU), and Casey Setash (Colorado Parks and Wildlife).\n\n\n\nUsing non-individual based data and modeling to estimate New England Cottaintail Abundance \nObjectives 1) Evaluate the attributes of the spatial count statistical model to estimate abundance using simulation, and 2) integrate spatial count and telemetry data to estimate the abundance of New England cottontails to inform translocation decisions.\nTeam: Edwige Bellier (Postdoctoral Researcher), Amy Mayer (Research Associate), Brian Gerber (USGS CRU / CSU), David Kalb (Rhode Island DEM) and Dylan Ferreira (Rhode Island DEM).\n\n\n\nAnimal Diel Ecology\n\nObjective: 1) To understand how wild animal’s change their activity and behavior across the 24-hour light-dark cycle to carryout their life history strategy and 2) to develop flexible and conceptually-based modeling approaches to make inference and predictions on animals diel activity use and selection.\nTeam: Brian Gerber (USGS CRU / CSU), Mason Fidino (Lincoln Park Zoo), Kadambari Devarajan, Zach Farris (Appalachian State Unveristy), and many more."
+    "text": "Prey and habitat limitations of Canada Lynx in Colorado\nObjective To estimate snowshow hare density and forest characteristics in lynx habitat and predicted but not used habitat in Colorado.\nTeam: Holly Hermanson (CSU), Jake Ivan (Colorado Parks and Wildlife), and Brian Gerber (USGS CRU / CSU).\n\n\nMesocarnivore distributions in Colorado\nObjective To estimate the distribution and habitat use of poorly known species in Colorado, including rintails, fox,a and skunk.\nTeam: Jess Burr (CSU), Jake Ivan (Colorado Parks and Wildlife), and Brian Gerber (USGS CRU / CSU).\n\n\n\nDeveloping and evaluating AI workflows to classify age/sex of ungulates from aerial imagery\nObjective To improve age and sex estimates of mule deer and elk used to inform population monitoring and harvest.\nTeam: Taylor Beach (CSU), Mat Allredge (Colorado Parks and Wildlife), Rachel Smiley, and Brian Gerber (USGS CRU / CSU).\n\n\n\nMulti-state occurence monitoring of wolverine (Gulo gulo)\nObjective To survey for wolverine across the western U.S. and Canada to monitor changes in distribution.\nTeam: Western Association of Fish and Wildlife Agencies (WAFWA) Forest Carnivore Monitoring Group; Brian Gerber (USGS CRU / CSU) is the statistical ecologist.\n\n\n\nDesigning long-term ecological research studies to understand community effects following gray wolf recovery in Colorado\nObjective To evaluate monitoring designs to understand indirect effects from predator changes affecting primary consumers (elk/deer) to mountain shrub communities (sagebrush/bitterbrush/serviceberry) in Colorado.\nTeam: Michael Peyton (Postdoctoral Researcher), Brian Gerber (USGS CRU / CSU), Ellen Brandell (Colorado Parks and Wildlife), and Danielle Bilyeu (Colorado Parks and Wildlife).\n\n\n\nIdentifying areas of avian abundance and richness to minimize effects from renewable energy in Colorado\nObjectives 1) Use eBird occurrence and richness predictions to evaluate spatial overlap with predicted renewable energy development in Colorado, and 2) create a decision tool to evaluate tradeoffs in optimizing renewable energy development areas that minimizes conflicts with birds.\nTeam: Jonathan Crossley (M.S. Student), Brian Gerber (USGS CRU / CSU), and Casey Setash (Colorado Parks and Wildlife).\n\n\n\nUsing non-individual based data and modeling to estimate New England Cottaintail Abundance \nObjectives 1) Evaluate the attributes of the spatial count statistical model to estimate abundance using simulation, and 2) integrate spatial count and telemetry data to estimate the abundance of New England cottontails to inform translocation decisions.\nTeam: Edwige Bellier (Postdoctoral Researcher), Amy Mayer (Research Associate), Brian Gerber (USGS CRU / CSU), David Kalb (Rhode Island DEM) and Dylan Ferreira (Rhode Island DEM).\n\n\n\nAnimal Diel Ecology\n\nObjective: 1) To understand how wild animal’s change their activity and behavior across the 24-hour light-dark cycle to carryout their life history strategy and 2) to develop flexible and conceptually-based modeling approaches to make inference and predictions on animals diel activity use and selection.\nTeam: Brian Gerber (USGS CRU / CSU), Mason Fidino (Lincoln Park Zoo), Kadambari Devarajan, Zach Farris (Appalachian State Unveristy), and many more."
   },
   {
     "objectID": "projects/index.html#the-languages-of-middle-earth",
@@ -14830,7 +14830,7 @@
     "href": "FW670/BigPicture.html#section-2",
     "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "Inference and Prediction"
+    "text": "- Correia et al. 2026. Best practices for moving from correlation to causation in ecological research. Nature Communications."
   },
   {
     "objectID": "FW670/BigPicture.html#which-is-worse",
@@ -14872,7 +14872,7 @@
     "href": "FW670/BigPicture.html#section-3",
     "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "Design- and Model-Based Sampling/Inference"
+    "text": "Inference and Prediction"
   },
   {
     "objectID": "FW670/BigPicture.html#take-aways-2",
@@ -14886,7 +14886,7 @@
     "href": "FW670/BigPicture.html#section-4",
     "title": "Big Picture  Science and Modeling",
     "section": "",
-    "text": "When do we need statistics?"
+    "text": "Design- and Model-Based Sampling/Inference"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based",
@@ -14949,14 +14949,14 @@
     "href": "FW670/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   97  239   24  323   29\n[2,]  167  309  152  271  344\n[3,]  251  154  318  268  217\n[4,]  117  141   73  182  171\n[5,]  170  400  203  137   27"
+    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  188  310  233  312  304\n[2,]  260  194  302  113   15\n[3,]  308  282  357  356   95\n[4,]   88  129  105  221  278\n[5,]  169  354  344   19  317"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-1",
     "href": "FW670/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             n, \n             replace = TRUE\n             )\n  y\n\n [1] 203 203 268  97 171  73 309 182 271 182\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 195.9"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             n, \n             replace = TRUE\n             )\n  y\n\n [1] 105 310 260  19 278 113 302 129 304 312\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 213.2"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-2",
