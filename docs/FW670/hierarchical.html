@@ -273,14 +273,14 @@
 <li>student grades within classroom, within school</li>
 </ul>
 
-<img data-src="..\img/school.png" class="r-stretch"></section>
+<img data-src="../img/school.png" class="r-stretch"></section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
 <ul>
 <li>forest cover effect on occurrence of bobcats at different protected areas</li>
 </ul>
 
-<img data-src="..\img/bobcat.png" class="r-stretch"></section>
+<img data-src="../img/bobcat.png" class="r-stretch"></section>
 <section id="random-effect-multi-level-model" class="slide level2">
 <h2>Random Effect / Multi-level Model</h2>
 <ul>
@@ -291,19 +291,19 @@
 <section id="hierarchical-structure-to-data" class="slide level2">
 <h2>Hierarchical Structure to Data</h2>
 
-<img data-src="..\img/HM1.png" class="r-stretch"></section>
+<img data-src="../img/HM1.png" class="r-stretch"></section>
 <section id="hierarchical-structure-to-data-1" class="slide level2">
 <h2>Hierarchical Structure to Data</h2>
 
-<img data-src="..\img/HM2.png" class="r-stretch"></section>
+<img data-src="../img/HM2.png" class="r-stretch"></section>
 <section id="hierarchical-structure-to-data-2" class="slide level2">
 <h2>Hierarchical Structure to Data</h2>
 
-<img data-src="..\img/HM.png" class="r-stretch"></section>
+<img data-src="../img/HM.png" class="r-stretch"></section>
 <section id="hierarchical-structure-to-data-3" class="slide level2">
 <h2>Hierarchical Structure to Data</h2>
 
-<img data-src="..\img/HM-general.png" class="r-stretch"></section>
+<img data-src="../img/HM-general.png" class="r-stretch"></section>
 <section id="hierarchical-structure-example" class="slide level2">
 <h2>Hierarchical Structure Example</h2>
 <p><strong>Study goals</strong></p>
@@ -312,15 +312,15 @@
 <li><p>Understand site-level variation</p></li>
 </ul>
 
-<img data-src="..\img/mouse1.png" class="r-stretch"></section>
+<img data-src="../img/mouse1.png" class="r-stretch"></section>
 <section id="hierarchical-structure-example-1" class="slide level2">
 <h2>Hierarchical Structure Example</h2>
 
-<img data-src="..\img/mouse2.png" class="r-stretch"></section>
+<img data-src="../img/mouse2.png" class="r-stretch"></section>
 <section id="complete-pooling" class="slide level2">
 <h2>Complete Pooling</h2>
 
-<img data-src="..\img/mouse3.png" class="r-stretch"><div class="fragment">
+<img data-src="../img/mouse3.png" class="r-stretch"><div class="fragment">
 <ul>
 <li>Ignores variance across sites, which is a goal of study</li>
 <li>Data within sampling site might not be independent, leading to pseudoreplication (depressed variance)</li>
@@ -330,7 +330,7 @@
 <section id="no-pooling" class="slide level2">
 <h2>No Pooling</h2>
 
-<img data-src="..\img/mouse4.png" class="r-stretch"><div class="fragment">
+<img data-src="../img/mouse4.png" class="r-stretch"><div class="fragment">
 <ul>
 <li>No state-level estimate</li>
 <li>Estimator for each site may be biased, particularly at low sample sizes</li>
@@ -340,17 +340,17 @@
 <section id="partial-pooling-hierarhical-model" class="slide level2">
 <h2>Partial Pooling (Hierarhical Model)</h2>
 
-<img data-src="..\img/mouse5.png" class="r-stretch"></section>
+<img data-src="../img/mouse5.png" class="r-stretch"></section>
 <section id="latent-state" class="slide level2 scrollable">
 <h2>Latent State</h2>
 <center>
-<img data-src="..\img/obs.latent.cube.png" style="width:50.0%">
+<img data-src="../img/obs.latent.cube.png" style="width:50.0%">
 </center>
 </section>
 <section id="latent-state-1" class="slide level2 scrollable">
 <h2>Latent State</h2>
 
-<img data-src="..\img/occupancy1.png" style="width:75.0%" class="r-stretch"></section>
+<img data-src="../img/occupancy1.png" style="width:75.0%" class="r-stretch"></section>
 <section id="section" class="slide level2">
 <h2></h2>
 
@@ -365,13 +365,13 @@
 <h2>Data and Problem</h2>
 <p>We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.</p>
 
-<img data-src="..\img/Amur Leopard.png" class="quarto-figure quarto-figure-center r-stretch"><p>Interested in detection rate by vegetation type and overall.</p>
+<img data-src="../img/Amur Leopard.png" class="quarto-figure quarto-figure-center r-stretch"><p>Interested in detection rate by vegetation type and overall.</p>
 </section>
 <section id="data-and-problem-1" class="slide level2">
 <h2>Data and Problem</h2>
 <p>We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park.</p>
 
-<img data-src="..\img/Amur Leopard.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Detection Rate = Independent Counts / Effort</strong></p>
+<img data-src="../img/Amur Leopard.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Detection Rate = Independent Counts / Effort</strong></p>
 </section>
 <section id="data" class="slide level2 scrollable">
 <h2>Data</h2>
@@ -540,12 +540,13 @@ Type: response</code></pre>
 <span id="cb13-4"><a></a>                 )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>i = counts j = vegetation type</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
+\begin{align*}
 y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
 \text{log}(\lambda_{i}) =&amp; \mu + \beta_{j[i]}\\
 \beta_{j} \sim&amp; \text{Normal}(0, \sigma^2_{\beta})
-
-\end{align*}\]</span></p>
+\end{align*}
+\]</span></p>
 </section>
 <section id="model-3-partial-pooling-1" class="slide level2 scrollable">
 <h2>Model 3 (Partial Pooling)</h2>
@@ -733,13 +734,14 @@ Conditional model:
 </div>
 <div class="fragment">
 <p>i = counts j = vegetation type</p>
-<p><span class="math display">\[\begin{align*}
+<p><span class="math display">\[
+\begin{align*}
 y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
 \text{log}(\lambda_{i}) =&amp; \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + \mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}}\\
 \beta_{\text{veg}_j} \sim&amp; \text{Normal}(0, \sigma^2_{\text{veg}})\\
 \beta_{\text{cov}_j} \sim&amp; \text{Normal}(0, \sigma^2_{\text{cov}})
-
-\end{align*}\]</span></p>
+\end{align*}
+\]</span></p>
 </div>
 </section>
 <section id="random-intercept-slope-2" class="slide level2">

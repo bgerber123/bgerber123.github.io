@@ -1,7 +1,7 @@
 ---
 title:  <span style="color:purple"><br><br><br>Bayes the way</span>
 title-slide-attributes:
-  data-background-image: /img//background4.png
+  data-background-image: ../img/background4.png
   background-opacity: "0.45"
 format:
   revealjs:
@@ -324,7 +324,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](/img/bayes.png){fig-align="center" width="700"}
+![](../img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -356,7 +356,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](/img/bayes.png){fig-align="center" width="700"}
+![](../img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -390,7 +390,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](/img/bayes.png){fig-align="center" width="700"}
+![](../img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -426,7 +426,7 @@ legend("topleft",col=c(2,3),lwd=4,legend=c("No Effect", "Posterior Mean"))
 
 <span><center>Sampled N = 10 locations</center></span>
 
-![](/img/bayes.png){fig-align="center" width="700"}
+![](../img/bayes.png){fig-align="center" width="700"}
 
 :::
 :::
@@ -837,7 +837,7 @@ $$
 
 We do a small study on hippo survival and get these data...
 
-![](/img/hippos.png){fig-align="center" width="300"}
+![](../img/hippos.png){fig-align="center" width="300"}
 
 <span><center>7 Hippos Died </center></span>
 <span><center>2 Hippos Lived</center></span>

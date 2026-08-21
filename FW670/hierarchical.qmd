@@ -1,7 +1,7 @@
 ---
 title: <span style="color:white">Hierarchical Models</span>
 title-slide-attributes:
-    data-background-image: /img/background3.png
+    data-background-image: ../img/background3.png
 format:
   revealjs:
     chalkboard: true
@@ -84,14 +84,14 @@ format:
 
 - student grades within classroom, within school
 
-![](/img/school.png)
+![](../img/school.png)
 
 
 ## Example 2
 
 - forest cover effect on occurrence of bobcats at different protected areas
 
-![](/img/bobcat.png)
+![](../img/bobcat.png)
 
 ## Random Effect / Multi-level Model
 
@@ -102,19 +102,19 @@ format:
 
 ## Hierarchical Structure to Data
 
-![](/img/HM1.png)
+![](../img/HM1.png)
 
 ## Hierarchical Structure to Data
 
-![](/img/HM2.png)
+![](../img/HM2.png)
 
 ## Hierarchical Structure to Data
 
-![](/img/HM.png)
+![](../img/HM.png)
 
 ## Hierarchical Structure to Data
 
-![](/img/HM-general.png)
+![](../img/HM-general.png)
 
 ## Hierarchical Structure Example
 
@@ -124,15 +124,15 @@ format:
 
 - Understand site-level variation 
 
-![](/img/mouse1.png)
+![](../img/mouse1.png)
 
 ## Hierarchical Structure Example
 
-![](/img/mouse2.png)
+![](../img/mouse2.png)
 
 ## Complete Pooling
 
-![](/img/mouse3.png)
+![](../img/mouse3.png)
 
 . . .
 
@@ -144,7 +144,7 @@ format:
 
 ## No Pooling
 
-![](/img/mouse4.png)
+![](../img/mouse4.png)
 
 . . .
 
@@ -156,19 +156,20 @@ format:
 ##  Partial Pooling (Hierarhical Model)
 
 
-![](/img/mouse5.png)
+![](../img/mouse5.png)
 
 ## Latent State {.scrollable}
 
 <center>
-![](/img/obs.latent.cube.png){width=50%}
+![](../img/obs.latent.cube.png){width=50%}
 </center>
 
 ## Latent State {.scrollable}
 
-![](/img/occupancy1.png){width=75%}
+![](../img/occupancy1.png){width=75%}
 
 ##
+
 ```{=html}
 
 <br>
@@ -184,7 +185,7 @@ format:
 
 We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park. 
 
-![](/img/Amur Leopard.png){fig-align="center"}
+![](../img/Amur Leopard.png){fig-align="center"}
 
 Interested in detection rate by vegetation type and overall. 
 
@@ -192,7 +193,7 @@ Interested in detection rate by vegetation type and overall.
 
 We sample Amur Leopards in five different vegetation types of Land of the Leopard National Park. 
 
-![](/img/Amur Leopard.png){fig-align="center"}
+![](../img/Amur Leopard.png){fig-align="center"}
 
 **Detection Rate = Independent Counts / Effort**
 
@@ -335,13 +336,13 @@ model3 = glmmTMB(y ~ 1 + (1|veg),
 i =  counts
 j = vegetation type
 
+$$
 \begin{align*}
 y_{i} \sim& \text{Poisson}(\lambda_{i})\\
 \text{log}(\lambda_{i}) =& \mu + \beta_{j[i]}\\
  \beta_{j} \sim& \text{Normal}(0, \sigma^2_{\beta})
-
 \end{align*}
-
+$$
 
 
 ## Model 3 (Partial Pooling) {.scrollable}
@@ -610,13 +611,14 @@ re.model = glmer(y ~ cov + (cov||veg),
 i =  counts
 j = vegetation type
 
+$$
 \begin{align*}
 y_{i} \sim& \text{Poisson}(\lambda_{i})\\
 \text{log}(\lambda_{i}) =& \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + \mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}}\\
  \beta_{\text{veg}_j} \sim& \text{Normal}(0, \sigma^2_{\text{veg}})\\
  \beta_{\text{cov}_j} \sim& \text{Normal}(0, \sigma^2_{\text{cov}})
-
 \end{align*}
+$$
 
 ## Random Intercept + Slope
 
