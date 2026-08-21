@@ -18652,14 +18652,14 @@
     "href": "FW670/week3.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization (PDF)\nLecture Code: Likelihood.R\n\n\n\n\n\nLecture: Regression (PDF)\nLecture Code: regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "What is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\nLecture: Likelihood and Optimization (PDF)\nLecture Code: Likelihood.R\n\n\n\n\nLecture: Regression (PDF)\nLecture Code: regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14"
   },
   {
     "objectID": "FW670/week3.html#week-3",
     "href": "FW670/week3.html#week-3",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Lecture: Likelihood and Optimization (PDF)\nLecture Code: Likelihood.R\n\n\n\n\n\nLecture: Regression (PDF)\nLecture Code: regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14\n\n\n\nWhat is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?"
+    "text": "What is biological significance and statistical significance?\nWhat is a p-value and what are the issues with null hypothesis testing?\nLecture: Likelihood and Optimization (PDF)\nLecture Code: Likelihood.R\n\n\n\n\nLecture: Regression (PDF)\nLecture Code: regression.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\n  install.packages(c(\"marginaleffects\"))\n  remotes::install_github(\"goodekat/ggResidpanel\")\n\n\n\nFieberg Ch 14"
   },
   {
     "objectID": "FW670/week4.html",
