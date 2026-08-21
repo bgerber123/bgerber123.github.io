@@ -516,41 +516,29 @@ f(y) = P(Y=y)
 <p>Still need to define <span class="math inline">\(f()\)</span>, our PMF for <span class="math inline">\(y \in  \{0,1\}\)</span></p>
 <div class="fragment">
 <p>The <a href="https://en.wikipedia.org/wiki/Bernoulli_distribution">Bernoulli distribution</a></p>
-<p><span class="math display">\[
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        \theta^{y}\times(1-\theta)^{1-y}
-  \end{align}
-\]</span></p>
+<p>$$ f(y|) = [y|]=</p>
+<pre><code>    \theta^{y}\times(1-\theta)^{1-y}</code></pre>
+<p>$$</p>
 <div class="fragment">
 <p><span class="math inline">\(\theta\)</span> = P(Y = 1) = 0.2</p>
 </div>
 <div class="fragment">
-<p><span class="math display">\[
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        = 0.2^{1}\times(1-0.2)^{1-1}
-  \end{align}
-\]</span></p>
+<p>$$ f(y|) = [y|]</p>
+<pre><code>    = 0.2^{1}\times(1-0.2)^{1-1} </code></pre>
+<p>$$</p>
 </div>
 <div class="fragment">
-<p><span class="math display">\[
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        = 0.2 \times (0.8)^{0} = 0.2
-  \end{align}
-\]</span></p>
+<p>$$ f(y|) = [y|]=</p>
+<pre><code>    = 0.2 \times (0.8)^{0} = 0.2</code></pre>
+<p>$$</p>
 </div>
 </div>
 </section>
 <section id="bernoulli-pmf" class="slide level2">
 <h2>Bernoulli PMF</h2>
-<p><span class="math display">\[
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        \theta^{y}\times(1-\theta)^{1-y}
-  \end{align}
-\]</span></p>
+<p>$$ f(y|) = [y|]=</p>
+<pre><code>    \theta^{y}\times(1-\theta)^{1-y}</code></pre>
+<p>$$</p>
 <p>Sample space support (<span class="math inline">\(\Omega\)</span>):</p>
 <ul>
 <li><span class="math inline">\(y \in  \{0,1\}\)</span></li>
@@ -568,15 +556,15 @@ f(y|\theta) = [y|\theta]=
 <p>What would our data look like for 10 ducks that had a probability of survival (Y = 1) of 0.20?</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Define inputs</span></span>
-<span id="cb5-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span> </span>
-<span id="cb5-3"><a></a>  N <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a><span class="co"># Random sample - 1 duck</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
-<span id="cb5-7"><a></a>         <span class="at">size =</span> N,</span>
-<span id="cb5-8"><a></a>         <span class="at">prob =</span> theta</span>
-<span id="cb5-9"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Define inputs</span></span>
+<span id="cb9-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span> </span>
+<span id="cb9-3"><a></a>  N <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a><span class="co"># Random sample - 1 duck</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
+<span id="cb9-7"><a></a>         <span class="at">size =</span> N,</span>
+<span id="cb9-8"><a></a>         <span class="at">prob =</span> theta</span>
+<span id="cb9-9"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0</code></pre>
 </div>
@@ -584,11 +572,11 @@ f(y|\theta) = [y|\theta]=
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Random sample - 10 ducks</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,</span>
-<span id="cb7-3"><a></a>         <span class="at">size =</span> N,</span>
-<span id="cb7-4"><a></a>         <span class="at">prob =</span> theta</span>
-<span id="cb7-5"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Random sample - 10 ducks</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,</span>
+<span id="cb11-3"><a></a>         <span class="at">size =</span> N,</span>
+<span id="cb11-4"><a></a>         <span class="at">prob =</span> theta</span>
+<span id="cb11-5"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 0 0 0 1 0 1 0 1 0</code></pre>
 </div>
@@ -600,8 +588,8 @@ f(y|\theta) = [y|\theta]=
 <p>How about to evaluate the sample size of ducks needed to estimate <span class="math inline">\(\theta\)</span>?</p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>y.mat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,<span class="at">size =</span> N, <span class="at">prob =</span> theta))</span>
-<span id="cb9-2"><a></a>theta.hat <span class="ot">=</span> <span class="fu">apply</span>(y.mat, <span class="dv">2</span>, mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>y.mat <span class="ot">=</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,<span class="at">size =</span> N, <span class="at">prob =</span> theta))</span>
+<span id="cb13-2"><a></a>theta.hat <span class="ot">=</span> <span class="fu">apply</span>(y.mat, <span class="dv">2</span>, mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -617,12 +605,9 @@ f(y|\theta) = [y|\theta]=
 <section id="binomial-pmf" class="slide level2">
 <h2>Binomial PMF</h2>
 <p>The Bernoulli is a special case of the <a href="https://en.wikipedia.org/wiki/Binomial_distribution">Binomial Distribution</a>.</p>
-<p><span class="math display">\[
-f(y|\theta) = [y|\theta]=
-  \begin{align}
-        {N\choose y} \theta^{y}\times(1-\theta)^{N-y}
-  \end{align}
-\]</span></p>
+<p>$$ f(y|) = [y|]=</p>
+<pre><code>    {N\choose y} \theta^{y}\times(1-\theta)^{N-y}</code></pre>
+<p>$$</p>
 <div class="fragment">
 <p><span class="math inline">\(N\)</span> = total trials / tagged and released animals</p>
 </div>
@@ -634,24 +619,24 @@ f(y|\theta) = [y|\theta]=
 <section id="binomial-pmf-code" class="slide level2 scrollable">
 <h2>Binomial PMF (Code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># 1 duck tagged/released and one simulation</span></span>
-<span id="cb10-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1</span> </span>
-<span id="cb10-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
-<span id="cb10-4"><a></a>         <span class="at">size =</span> N,</span>
-<span id="cb10-5"><a></a>         <span class="at">prob =</span> theta</span>
-<span id="cb10-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># 1 duck tagged/released and one simulation</span></span>
+<span id="cb15-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1</span> </span>
+<span id="cb15-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
+<span id="cb15-4"><a></a>         <span class="at">size =</span> N,</span>
+<span id="cb15-5"><a></a>         <span class="at">prob =</span> theta</span>
+<span id="cb15-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># 1000 ducks tagged/released and one simulation</span></span>
-<span id="cb12-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1000</span> </span>
-<span id="cb12-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
-<span id="cb12-4"><a></a>         <span class="at">size =</span> N, </span>
-<span id="cb12-5"><a></a>         <span class="at">prob =</span> theta</span>
-<span id="cb12-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># 1000 ducks tagged/released and one simulation</span></span>
+<span id="cb17-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1000</span> </span>
+<span id="cb17-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1</span>,</span>
+<span id="cb17-4"><a></a>         <span class="at">size =</span> N, </span>
+<span id="cb17-5"><a></a>         <span class="at">prob =</span> theta</span>
+<span id="cb17-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 198</code></pre>
 </div>
@@ -659,12 +644,12 @@ f(y|\theta) = [y|\theta]=
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># 1000 ducks tagged/released and 10 simulation</span></span>
-<span id="cb14-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1000</span> </span>
-<span id="cb14-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,</span>
-<span id="cb14-4"><a></a>         <span class="at">size =</span> N,</span>
-<span id="cb14-5"><a></a>         <span class="at">prob =</span> theta</span>
-<span id="cb14-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># 1000 ducks tagged/released and 10 simulation</span></span>
+<span id="cb19-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1000</span> </span>
+<span id="cb19-3"><a></a>  <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">10</span>,</span>
+<span id="cb19-4"><a></a>         <span class="at">size =</span> N,</span>
+<span id="cb19-5"><a></a>         <span class="at">prob =</span> theta</span>
+<span id="cb19-6"><a></a>         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 180 190 198 192 169 192 192 217 206 216</code></pre>
 </div>
@@ -672,13 +657,13 @@ f(y|\theta) = [y|\theta]=
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># 1 duck tagged for each of 1000 simulations</span></span>
-<span id="cb16-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb16-3"><a></a>  y <span class="ot">=</span> <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1000</span>,</span>
-<span id="cb16-4"><a></a>             <span class="at">size =</span> N,</span>
-<span id="cb16-5"><a></a>             <span class="at">prob =</span> theta</span>
-<span id="cb16-6"><a></a>             )</span>
-<span id="cb16-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># 1 duck tagged for each of 1000 simulations</span></span>
+<span id="cb21-2"><a></a>  theta <span class="ot">=</span> <span class="fl">0.2</span>;  N <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb21-3"><a></a>  y <span class="ot">=</span> <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">1000</span>,</span>
+<span id="cb21-4"><a></a>             <span class="at">size =</span> N,</span>
+<span id="cb21-5"><a></a>             <span class="at">prob =</span> theta</span>
+<span id="cb21-6"><a></a>             )</span>
+<span id="cb21-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   [1] 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0
   [38] 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0
@@ -713,7 +698,7 @@ f(y|\theta) = [y|\theta]=
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">sum</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">sum</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 186</code></pre>
 </div>
@@ -809,8 +794,8 @@ What PDF does?
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">set.seed</span>(<span class="dv">4</span>); x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">2</span>)</span>
-<span id="cb21-2"><a></a>h<span class="ot">=</span><span class="fu">hist</span>(x,<span class="at">freq=</span><span class="cn">FALSE</span>) <span class="co">#probabilities=TRUE does the same thing; not a probability!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">set.seed</span>(<span class="dv">4</span>); x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">2</span>)</span>
+<span id="cb26-2"><a></a>h<span class="ot">=</span><span class="fu">hist</span>(x,<span class="at">freq=</span><span class="cn">FALSE</span>) <span class="co">#probabilities=TRUE does the same thing; not a probability!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -818,7 +803,7 @@ What PDF does?
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">sum</span>(h<span class="sc">$</span>density)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">sum</span>(h<span class="sc">$</span>density)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -839,8 +824,8 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">visualize.it</span>(<span class="at">dist =</span> <span class="st">'norm'</span>, <span class="at">stat =</span> <span class="fu">c</span>(<span class="dv">100</span>),</span>
-<span id="cb24-2"><a></a>             <span class="fu">list</span>(<span class="at">mu =</span> <span class="dv">100</span> , <span class="at">sd =</span> <span class="dv">10</span>), <span class="at">section =</span> <span class="st">"upper"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">visualize.it</span>(<span class="at">dist =</span> <span class="st">'norm'</span>, <span class="at">stat =</span> <span class="fu">c</span>(<span class="dv">100</span>),</span>
+<span id="cb29-2"><a></a>             <span class="fu">list</span>(<span class="at">mu =</span> <span class="dv">100</span> , <span class="at">sd =</span> <span class="dv">10</span>), <span class="at">section =</span> <span class="st">"upper"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -874,12 +859,12 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <div class="fragment">
 <p>The code</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># The cumulative distribution function for the Normal distribution</span></span>
-<span id="cb25-2"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">120</span>,</span>
-<span id="cb25-3"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
-<span id="cb25-4"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
-<span id="cb25-5"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb25-6"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="co"># The cumulative distribution function for the Normal distribution</span></span>
+<span id="cb30-2"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">120</span>,</span>
+<span id="cb30-3"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
+<span id="cb30-4"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
+<span id="cb30-5"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb30-6"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.02275013</code></pre>
 </div>
@@ -889,11 +874,11 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <div class="fragment">
 <p>Or, we could reverse the question.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="fl">0.02275</span>,</span>
-<span id="cb27-2"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
-<span id="cb27-3"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
-<span id="cb27-4"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb27-5"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">qnorm</span>(<span class="at">p =</span> <span class="fl">0.02275</span>,</span>
+<span id="cb32-2"><a></a>      <span class="at">mean =</span> <span class="dv">100</span>,</span>
+<span id="cb32-3"><a></a>      <span class="at">sd =</span> <span class="dv">10</span>,</span>
+<span id="cb32-4"><a></a>      <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb32-5"><a></a>      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 120</code></pre>
 </div>
@@ -939,25 +924,25 @@ f(y|\mu,\sigma ) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{1}{2}(\frac{y-\mu}{\sigma
 <section id="normal-distribution-pdf-code" class="slide level2">
 <h2>Normal Distribution (PDF Code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>y <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
-<span id="cb29-2"><a></a><span class="fu">hist</span>(y,<span class="at">freq=</span><span class="cn">FALSE</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.14</span>))</span>
-<span id="cb29-3"><a></a><span class="fu">lines</span>(<span class="fu">density</span>(y),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>y <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>)</span>
+<span id="cb34-2"><a></a><span class="fu">hist</span>(y,<span class="at">freq=</span><span class="cn">FALSE</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.14</span>))</span>
+<span id="cb34-3"><a></a><span class="fu">lines</span>(<span class="fu">density</span>(y),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="Probability_files/figure-revealjs/pdf1-1.png" width="960" class="r-stretch"></section>
 <section id="normal-distribution-pdf-code-1" class="slide level2">
 <h2>Normal Distribution (PDF Code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean=</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>),</span>
-<span id="cb30-2"><a></a>      <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">ylab=</span><span class="st">"Probability Density"</span>,<span class="at">xlab=</span><span class="st">"y"</span>)</span>
-<span id="cb30-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">20</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">1</span>, <span class="at">lty=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean=</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>),</span>
+<span id="cb35-2"><a></a>      <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>,<span class="at">ylab=</span><span class="st">"Probability Density"</span>,<span class="at">xlab=</span><span class="st">"y"</span>)</span>
+<span id="cb35-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">20</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="dv">1</span>, <span class="at">lty=</span><span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="Probability_files/figure-revealjs/pdf1b-1.png" width="960" class="r-stretch"></section>
 <section id="normal-distribution-pdf-code-2" class="slide level2">
 <h2>Normal Distribution (PDF Code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">3</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">3</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>),<span class="at">lwd=</span><span class="dv">4</span>,<span class="at">col=</span><span class="dv">3</span>,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <img data-src="Probability_files/figure-revealjs/pdf2b-1.png" width="960" class="r-stretch"></section>
@@ -1028,21 +1013,21 @@ f(y|\boldsymbol{\theta}') &amp;= \frac{1}{\Gamma(\kappa)\theta^{\kappa}}y^{\kapp
 <h2>Gamma Distribution (PDF Code)</h2>
 <p><a href="https://en.wikipedia.org/wiki/Gamma_distribution">Gamma Wikipedia</a></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>shape <span class="ot">=</span> <span class="dv">10</span></span>
-<span id="cb32-2"><a></a>scale <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb32-3"><a></a></span>
-<span id="cb32-4"><a></a>mean1 <span class="ot">=</span> shape<span class="sc">*</span>scale</span>
-<span id="cb32-5"><a></a>mean1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>shape <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb37-2"><a></a>scale <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb37-3"><a></a></span>
+<span id="cb37-4"><a></a>mean1 <span class="ot">=</span> shape<span class="sc">*</span>scale</span>
+<span id="cb37-5"><a></a>mean1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 20</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>mode1 <span class="ot">=</span> (shape<span class="dv">-1</span>)<span class="sc">*</span>scale</span>
-<span id="cb34-2"><a></a>mode1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>mode1 <span class="ot">=</span> (shape<span class="dv">-1</span>)<span class="sc">*</span>scale</span>
+<span id="cb39-2"><a></a>mode1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 18</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>stdev <span class="ot">=</span> <span class="fu">sqrt</span>(shape<span class="sc">*</span>scale<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb36-2"><a></a>stdev</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>stdev <span class="ot">=</span> <span class="fu">sqrt</span>(shape<span class="sc">*</span>scale<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb41-2"><a></a>stdev</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.324555</code></pre>
 </div>
@@ -1064,12 +1049,12 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="co"># Cumulative distribution function for the Gamma distribution</span></span>
-<span id="cb38-2"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>, </span>
-<span id="cb38-3"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb38-4"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb38-5"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb38-6"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="co"># Cumulative distribution function for the Gamma distribution</span></span>
+<span id="cb43-2"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>, </span>
+<span id="cb43-3"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb43-4"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb43-5"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb43-6"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.004995412</code></pre>
 </div>
@@ -1084,11 +1069,11 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <h2>Gamma Distribution</h2>
 <p>What is the probability of observing <span class="math inline">\(y\)</span> &lt; 20</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">20</span>,</span>
-<span id="cb40-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb40-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb40-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
-<span id="cb40-5"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">20</span>,</span>
+<span id="cb45-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb45-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb45-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
+<span id="cb45-5"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.5420703</code></pre>
 </div>
@@ -1097,16 +1082,16 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="fragment">
 <p>What is the probability of observing 20 &lt; <span class="math inline">\(y\)</span> &lt; 40</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>,</span>
-<span id="cb42-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb42-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb42-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
-<span id="cb42-5"><a></a>       )<span class="sc">-</span></span>
-<span id="cb42-6"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">20</span>, </span>
-<span id="cb42-7"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb42-8"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb42-9"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
-<span id="cb42-10"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">40</span>,</span>
+<span id="cb47-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb47-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb47-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
+<span id="cb47-5"><a></a>       )<span class="sc">-</span></span>
+<span id="cb47-6"><a></a><span class="fu">pgamma</span>(<span class="at">q =</span> <span class="dv">20</span>, </span>
+<span id="cb47-7"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb47-8"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb47-9"><a></a>       <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
+<span id="cb47-10"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4529343</code></pre>
 </div>
@@ -1116,11 +1101,11 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="fragment">
 <p>Reverse the question: What values of <span class="math inline">\(y\)</span> and lower have a probability of 0.025</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">qgamma</span>( <span class="at">p =</span> <span class="fl">0.025</span>,</span>
-<span id="cb44-2"><a></a>        <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb44-3"><a></a>        <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb44-4"><a></a>        <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
-<span id="cb44-5"><a></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">qgamma</span>( <span class="at">p =</span> <span class="fl">0.025</span>,</span>
+<span id="cb49-2"><a></a>        <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb49-3"><a></a>        <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb49-4"><a></a>        <span class="at">lower.tail =</span> <span class="cn">TRUE</span></span>
+<span id="cb49-5"><a></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9.590777</code></pre>
 </div>
@@ -1130,11 +1115,11 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="fragment">
 <p>What values of <span class="math inline">\(y\)</span> and higher have a probability of 0.025</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">qgamma</span>(<span class="at">p =</span> <span class="fl">0.025</span>,</span>
-<span id="cb46-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
-<span id="cb46-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
-<span id="cb46-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
-<span id="cb46-5"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">qgamma</span>(<span class="at">p =</span> <span class="fl">0.025</span>,</span>
+<span id="cb51-2"><a></a>       <span class="at">shape =</span> <span class="dv">10</span>, </span>
+<span id="cb51-3"><a></a>       <span class="at">scale =</span> <span class="dv">2</span>,</span>
+<span id="cb51-4"><a></a>       <span class="at">lower.tail =</span> <span class="cn">FALSE</span></span>
+<span id="cb51-5"><a></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 34.16961</code></pre>
 </div>
@@ -1142,9 +1127,9 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">curve</span>(<span class="fu">dgamma</span>(x,<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span><span class="dv">2</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),<span class="at">lwd=</span><span class="dv">3</span>,</span>
-<span id="cb48-2"><a></a>      <span class="at">xlab=</span><span class="st">"y"</span>, <span class="at">ylab=</span><span class="st">"dgamma(x,shape=10, scale=2)"</span>)</span>
-<span id="cb48-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="fl">9.590777</span>,<span class="fl">34.16961</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">curve</span>(<span class="fu">dgamma</span>(x,<span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span><span class="dv">2</span>),<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>),<span class="at">lwd=</span><span class="dv">3</span>,</span>
+<span id="cb53-2"><a></a>      <span class="at">xlab=</span><span class="st">"y"</span>, <span class="at">ylab=</span><span class="st">"dgamma(x,shape=10, scale=2)"</span>)</span>
+<span id="cb53-3"><a></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="fl">9.590777</span>,<span class="fl">34.16961</span>),<span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1157,8 +1142,8 @@ p(y&gt;40) = \int_{40}^{\infty} f(y|\boldsymbol{\theta}) \,dy
 <div class="fragment">
 <p>We can consider samples from this population,</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">set.seed</span>(<span class="dv">154434</span>)</span>
-<span id="cb49-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(<span class="dv">100</span>, <span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">set.seed</span>(<span class="dv">154434</span>)</span>
+<span id="cb54-2"><a></a>y <span class="ot">&lt;-</span> <span class="fu">rgamma</span>(<span class="dv">100</span>, <span class="at">shape=</span><span class="dv">10</span>, <span class="at">scale=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">

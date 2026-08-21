@@ -1,7 +1,7 @@
 ---
 title: <span style="color:white">Linear Regression</span>
 title-slide-attributes:
-    data-background-image: /img/backgroundforest.png
+    data-background-image: ../img/backgroundforest.png
 format:
   revealjs:
     chalkboard: true
@@ -59,7 +59,7 @@ In ecology, we use models to,
 
 ## Linear Regression (Equation)
 
-![](/img/index.notation.png){fig-align="center" width="400"}
+![](../img/index.notation.png){fig-align="center" width="400"}
 
 ## Linear Regression (Equation 2) 
 
@@ -146,7 +146,7 @@ ggplot(m1, aes(x, y)) +
 
 
 <!-- ## Visual -->
-<!-- ![](/img/regression.png){fig-align="center" width="450"} -->
+<!-- ![](../img/regression.png){fig-align="center" width="450"} -->
 
 
 ## One Sample
@@ -482,7 +482,7 @@ The success rate (proportion of all samples whose intervals contain the paramete
 
 ## What is a CI?
 
-![](/img/CI.png){fig-align="center"}
+![](../img/CI.png){fig-align="center"}
 
 
 
@@ -532,14 +532,14 @@ Instead of relying on the 95% intervals from an assumed normal/t distribution, w
 See, [Stats4Ecologists](https://fw8051statistics4ecologists.netlify.app/boot.html)   
 
 ## Bootstrapping (idea)
-![](/img/fieberg0.png){fig-align="center" width="450"}
+![](../img/fieberg0.png){fig-align="center" width="450"}
 
 ## Bootstrapping (idea)
 
-![](/img/fieberg1.png){fig-align="center" width="450"}
+![](../img/fieberg1.png){fig-align="center" width="450"}
 
 ## Bootstrapping (idea)
-![](/img/fieberg3.png){fig-align="center" width="450"}
+![](../img/fieberg3.png){fig-align="center" width="450"}
 
 ## Bootstrapping (code)
 
@@ -638,7 +638,7 @@ dat = data.frame(y = y,
                  )
 ```
 
-![](/img/pdog.png){fig-align="center" width="40%" height="40%"}
+![](../img/pdog.png){fig-align="center" width="40%" height="40%"}
 
  y = # of calls per 5 minute at a prairie dog colony
  
@@ -801,7 +801,7 @@ hist(model$residuals)
 
 <!-- ## [Linearity & Variance Assumption](https://fw8051statistics4ecologists.netlify.app/linreg.html#exploring-assumptions-using-r) -->
 
-<!-- ![](/img/assumptions2.png){fig-align="center" width="1000"} -->
+<!-- ![](../img/assumptions2.png){fig-align="center" width="1000"} -->
 
 
 ## Linearity Assumption

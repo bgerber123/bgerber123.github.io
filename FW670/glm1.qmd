@@ -1,7 +1,7 @@
 ---
 title:  <span style="color:black">Generalized Linear Models</span>
 title-slide-attributes:
-   data-background-image: /img/background2.png
+   data-background-image: ../img/background2.png
 format:
   revealjs:
     chalkboard: true
@@ -47,7 +47,7 @@ $$
 \end{align*}
 $$
 
-![](/img/tada.png){fig-align="center" width="275"}
+![](../img/tada.png){fig-align="center" width="275"}
 
 ## Motivation
 
@@ -126,11 +126,11 @@ $$
 
 :::
 
+<!-- BDG: Note that this fragment fails in creating a pdf if the equations are together -->
+
 ::: {.fragment}
 
-
-\begin{align*}
-
+$$
 \textbf{y} =
 \begin{bmatrix}
 y_{1} \\
@@ -140,8 +140,6 @@ y_{3} \\
 . \\
 y_{n}  
 \end{bmatrix}
-
-
 \textbf{X} =
 \begin{bmatrix}
 1 & x_{1,2} & x_{1,3} \\
@@ -151,16 +149,17 @@ y_{n}
 . & . &.\\
 n & x_{n,2} & x_{n,3}
 \end{bmatrix}
-
 \boldsymbol{\beta} = \begin{bmatrix}
 \beta_0 \\
 \beta_1 \\
 \beta_2 \\
 \end{bmatrix}
-\end{align*}
+$$
+
 
 n = sample size
-x$_{2}$ & x$_{3}$ are independent variables
+$x_{2}$ & $x_{3}$ are independent variables
+
 
 :::
 
@@ -372,7 +371,7 @@ y%*%t(y)
 
 ## Elephant Linear Regression Example {.scrollable}
 
-![](/img/elephant.jpg)
+![](../img/elephant.jpg)
 
 #### Categorical Variable
 

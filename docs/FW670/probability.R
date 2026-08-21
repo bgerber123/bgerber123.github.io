@@ -1,14 +1,19 @@
-## ----eval=TRUE,echo=FALSE----------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------------
 set.seed(452)
 y=rpois(1000,10)
 main="Distribution of counts of plants \nin all possible plots"
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
 hist(y, xlim=c(0,25),main=main,xlab="y / Counts of plants in a plot")
 
 
-## ----eval=TRUE,echo=TRUE-----------------------------------------------
+## ----eval=TRUE,echo=TRUE------------------
+#| fig-width: 7
+#| fig-height: 5
+#| out-width: "80%"
+#| out-height: "80%"
+
 hist.values=hist(y,breaks = seq(from=0, to=25, by = 1),freq = FALSE,
                  ylab="Probability",
                  main="Distribution of the P(y)",
@@ -16,7 +21,7 @@ hist.values=hist(y,breaks = seq(from=0, to=25, by = 1),freq = FALSE,
 sum(hist.values$density)
 
 
-## ----eval=TRUE,echo=FALSE----------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------------
 par(mfrow=c(1,2))
 set.seed(452)
 y=rpois(50,10)
@@ -25,7 +30,7 @@ hist(y, main="Sample of counts of plants (n = 50)",breaks=seq(from=0, to=25, by 
 hist(y, main="Sample of counts of plants (n = 50)",breaks=seq(from=0, to=25, by = 1),xlim=c(0,25),freq = FALSE,ylab="Probability",xlab="y / Counts of plants in a plot")
 
 
-## ----bern, echo=TRUE, eval=TRUE----------------------------------------
+## ----bern, echo=TRUE, eval=TRUE-----------
 # Define inputs
   theta = 0.2 
   N = 1
@@ -37,7 +42,7 @@ hist(y, main="Sample of counts of plants (n = 50)",breaks=seq(from=0, to=25, by 
          )
 
 
-## ----echo=TRUE, eval=TRUE----------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------------
 # Random sample - 10 ducks
   rbinom(n = 10,
          size = N,
@@ -45,16 +50,16 @@ hist(y, main="Sample of counts of plants (n = 50)",breaks=seq(from=0, to=25, by 
          )
 
 
-## ----bern2, echo=TRUE, eval=TRUE---------------------------------------
+## ----bern2, echo=TRUE, eval=TRUE----------
 y.mat = replicate(1000, rbinom(n = 10,size = N, prob = theta))
 theta.hat = apply(y.mat, 2, mean)
 
 
-## ----bern3, echo=FALSE, eval=TRUE,  out.width="75%"--------------------
+## ----bern3, echo=FALSE, eval=TRUE,  out.width="75%"----
 hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta),xlab=expression(theta))
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 # 1 duck tagged/released and one simulation
   theta = 0.2;  N = 1 
   rbinom(n = 1,
@@ -63,7 +68,7 @@ hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta
          )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 # 1000 ducks tagged/released and one simulation
   theta = 0.2;  N = 1000 
   rbinom(n = 1,
@@ -72,7 +77,7 @@ hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta
          )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 # 1000 ducks tagged/released and 10 simulation
   theta = 0.2;  N = 1000 
   rbinom(n = 10,
@@ -81,7 +86,7 @@ hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta
          )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 # 1 duck tagged for each of 1000 simulations
   theta = 0.2;  N = 1
   y = rbinom(n = 1000,
@@ -91,11 +96,11 @@ hist(theta.hat,freq=TRUE,breaks=40, main=bquote("Sampling Distribution of"~theta
   y
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 sum(y)
 
 
-## ----eval=TRUE,echo=FALSE----------------------------------------------
+## ----eval=TRUE,echo=FALSE-----------------
 shape=100
 rate=1
 scale=1/rate
@@ -105,7 +110,7 @@ round(rgamma(10,shape,rate),digits=2)
 
 
 
-## ----echo=FALSE,eval=TRUE----------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------------
 mu=shape*scale
 var=shape*scale^2
 curve(dgamma(x, shape=shape,rate=rate),xlim=c(0,200),lwd=4,xlab="y",
@@ -114,7 +119,7 @@ curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
 legend("topright",legend = c("Gamma PDF (shape = 100, rate = 1)", "Normal PDF (mu = 100, var = 100)"),lwd=3,col=c(1,2))
 
 
-## ----echo=FALSE,eval=TRUE----------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------------
 shape=1
 rate=1
 scale=1/rate
@@ -127,22 +132,29 @@ curve(dnorm(x, mu,sqrt(var)),add=TRUE,col=2,lwd=4,lty=2)
 legend("topright",legend = c("Gamma PDF (shape = 1, rate = 1)", "Normal PDF (mu = 1, var = 1)"),lwd=3,col=c(1,2))
 
 
-## ----echo=FALSE,eval=TRUE----------------------------------------------
+## ----echo=TRUE----------------------------
+set.seed(4); x = rnorm(100,2)
+h=hist(x,freq=FALSE) #probabilities=TRUE does the same thing; not a probability!
+sum(h$density)
+
+
+## ----echo=FALSE,eval=TRUE-----------------
 library(visualize)
 
 
-## ----echo=TRUE,eval=TRUE-----------------------------------------------
+## ----echo=TRUE,eval=TRUE------------------
 visualize.it(dist = 'norm', stat = c(100),
              list(mu = 100 , sd = 10), section = "upper")
 
 
-## ----echo=FALSE,eval=TRUE----------------------------------------------
+## ----echo=FALSE,eval=TRUE-----------------
 library(visualize)
 visualize.it(dist = 'norm', stat = c(120),
              list(mu = 100 , sd = 10), section = "upper")
 
 
-## ----echo=TRUE---------------------------------------------------------
+## ----echo=TRUE----------------------------
+# The cumulative distribution function for the Normal distribution
 pnorm(q = 120,
       mean = 100,
       sd = 10,
@@ -150,7 +162,7 @@ pnorm(q = 120,
       )
 
 
-## ----echo=TRUE---------------------------------------------------------
+## ----echo=TRUE----------------------------
 qnorm(p = 0.02275,
       mean = 100,
       sd = 10,
@@ -158,29 +170,29 @@ qnorm(p = 0.02275,
       )
 
 
-## ----pdf1, echo=TRUE, eval=TRUE----------------------------------------
+## ----pdf1, echo=TRUE, eval=TRUE-----------
 y = rnorm(1000, mean = 20, sd = 3)
 hist(y,freq=FALSE,ylim=c(0,0.14))
 lines(density(y),lwd=3,col=4)
 
 
-## ----pdf1b, echo=TRUE, eval=TRUE---------------------------------------
+## ----pdf1b, echo=TRUE, eval=TRUE----------
 curve(dnorm(x, mean= 20, sd = 3),
       xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
 abline(v=20, lwd=3, col=1, lty=4)
 
 
-## ----pdf2a, echo=TRUE, eval=FALSE--------------------------------------
+## ----pdf2a, echo=TRUE, eval=FALSE---------
 # curve(dnorm(x, mean = 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 
 
-## ----pdf2b, echo=FALSE, eval=TRUE--------------------------------------
+## ----pdf2b, echo=FALSE, eval=TRUE---------
 curve(dnorm(x, mean = 20, sd = 3),xlim=c(0,40),lwd=3,col=2,ylab="Probability Density",xlab="y")
 abline(v=20, lwd=3, col=1, lty=4)
 curve(dnorm(x, mean= 10, sd = 3),xlim=c(0,40),lwd=4,col=3,add=TRUE)
 
 
-## ----pdf3, echo=TRUE, eval=TRUE----------------------------------------
+## ----pdf3, echo=TRUE, eval=TRUE-----------
 shape = 10
 scale = 2
 
@@ -194,13 +206,14 @@ stdev = sqrt(shape*scale^2)
 stdev
 
 
-## ----pdf4, echo=FALSE, eval=TRUE---------------------------------------
+## ----pdf4, echo=FALSE, eval=TRUE----------
 curve(dgamma(x, shape = shape, scale=scale),xlim=c(0,50),lwd=3,col=2,ylab="Probability Density",xlab="y")
-abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=3, col=3, lty=4)
+abline(v=mean1, lwd=3, col=1, lty=4); abline(v=mode1, lwd=4, col=2, lty=4)
 legend("topright",lty=3, col=c(1,2),legend=c("Mean","Mode"),lwd=3)
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
+# Cumulative distribution function for the Gamma distribution
 pgamma(q = 40, 
        shape = 10, 
        scale = 2,
@@ -208,7 +221,7 @@ pgamma(q = 40,
        )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 pgamma(q = 20,
        shape = 10, 
        scale = 2,
@@ -216,7 +229,7 @@ pgamma(q = 20,
        )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 pgamma(q = 40,
        shape = 10, 
        scale = 2,
@@ -229,7 +242,7 @@ pgamma(q = 20,
        )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 qgamma( p = 0.025,
         shape = 10, 
         scale = 2,
@@ -237,7 +250,7 @@ qgamma( p = 0.025,
         )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 qgamma(p = 0.025,
        shape = 10, 
        scale = 2,
@@ -245,18 +258,18 @@ qgamma(p = 0.025,
        )
 
 
-## ----eval=TRUE, echo=TRUE----------------------------------------------
+## ----eval=TRUE, echo=TRUE-----------------
 curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3,
       xlab="y", ylab="dgamma(x,shape=10, scale=2)")
 abline(v=c(9.590777,34.16961),lwd=3,col=2)
 
 
-## ----echo=TRUE, eval=TRUE----------------------------------------------
+## ----echo=TRUE, eval=TRUE-----------------
 set.seed(154434)
 y <- rgamma(100, shape=10, scale=2)
 
 
-## ----echo=FALSE, eval=TRUE---------------------------------------------
+## ----echo=FALSE, eval=TRUE----------------
 curve(dgamma(x,shape=10, scale=2),xlim=c(0,50),lwd=3)
 hist(y,col=adjustcolor("red",alpha.f = 0.5),freq=FALSE,add=TRUE,breaks=100)
 

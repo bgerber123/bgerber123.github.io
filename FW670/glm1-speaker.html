@@ -243,7 +243,7 @@ Generalized linear model framework using matrix notation
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="..\img/tada.png" class="quarto-figure quarto-figure-center" width="275"></p>
+<p><img data-src="../img/tada.png" class="quarto-figure quarto-figure-center" width="275"></p>
 </figure>
 </div>
 </div>
@@ -319,9 +319,9 @@ y_{i} \sim&amp; \text{Normal}(\mu_{i},\sigma) \\
 \end{align*}
 \]</span></p>
 </div>
+<!-- BDG: Note that this fragment fails in creating a pdf if the equations are together -->
 <div class="fragment">
-<p><span class="math display">\[\begin{align*}
-
+<p><span class="math display">\[
 \textbf{y} =
 \begin{bmatrix}
 y_{1} \\
@@ -331,8 +331,6 @@ y_{3} \\
 . \\
 y_{n}  
 \end{bmatrix}
-
-
 \textbf{X} =
 \begin{bmatrix}
 1 &amp; x_{1,2} &amp; x_{1,3} \\
@@ -342,14 +340,13 @@ y_{n}
 . &amp; . &amp;.\\
 n &amp; x_{n,2} &amp; x_{n,3}
 \end{bmatrix}
-
 \boldsymbol{\beta} = \begin{bmatrix}
 \beta_0 \\
 \beta_1 \\
 \beta_2 \\
 \end{bmatrix}
-\end{align*}\]</span></p>
-<p>n = sample size x<span class="math inline">\(_{2}\)</span> &amp; x<span class="math inline">\(_{3}\)</span> are independent variables</p>
+\]</span></p>
+<p>n = sample size <span class="math inline">\(x_{2}\)</span> &amp; <span class="math inline">\(x_{3}\)</span> are independent variables</p>
 </div>
 </section>
 <section id="linear-algebra" class="slide level2 scrollable">
@@ -537,7 +534,7 @@ n &amp; x_{n,2} &amp; x_{n,3}
 <section id="elephant-linear-regression-example" class="slide level2 scrollable">
 <h2>Elephant Linear Regression Example</h2>
 
-<img data-src="..\img/elephant.jpg" class="r-stretch"><h4 id="categorical-variable">Categorical Variable</h4>
+<img data-src="../img/elephant.jpg" class="r-stretch"><h4 id="categorical-variable">Categorical Variable</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>     weight    sex age.years
