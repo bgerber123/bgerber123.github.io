@@ -15950,7 +15950,7 @@
     "href": "FW670/Introduction.html#software",
     "title": "Wildlife Ecology Modeling",
     "section": "Software",
-    "text": "Software\n\n\nFigure 1: R and RStudio logos"
+    "text": "Software"
   },
   {
     "objectID": "FW670/Introduction.html#why-learn-to-code",
@@ -16006,14 +16006,14 @@
     "href": "FW670/Introduction.html#learning",
     "title": "Wildlife Ecology Modeling",
     "section": "Learning",
-    "text": "Learning\n\nXY visualization of students and knowledge\nI do not know where you are starting"
+    "text": "Learning\n\n\nI do not know where you are starting"
   },
   {
     "objectID": "FW670/Introduction.html#our-aim",
     "href": "FW670/Introduction.html#our-aim",
     "title": "Wildlife Ecology Modeling",
     "section": "Our Aim",
-    "text": "Our Aim\nWhat model did you fit? Why? How?\n\n\n\n\n\nExtremes of how and what models get fit\n\n\n\n\n\n\n\nExtremes of how and what models get fit full"
+    "text": "Our Aim\nWhat model did you fit? Why? How?"
   },
   {
     "objectID": "FW670/Introduction.html#think-statistically",
@@ -16034,14 +16034,14 @@
     "href": "FW670/Introduction.html#my-background",
     "title": "Wildlife Ecology Modeling",
     "section": "My Background",
-    "text": "My Background\n\nBrian doing fieldwork"
+    "text": "My Background"
   },
   {
     "objectID": "FW670/Introduction.html#my-background-1",
     "href": "FW670/Introduction.html#my-background-1",
     "title": "Wildlife Ecology Modeling",
     "section": "My Background",
-    "text": "My Background\n\nContributing to workshops"
+    "text": "My Background"
   },
   {
     "objectID": "FW670/Introduction.html#science-practice",
@@ -16076,7 +16076,7 @@
     "href": "FW670/Introduction.html#rstudio",
     "title": "Wildlife Ecology Modeling",
     "section": "RStudio",
-    "text": "RStudio\nWhat does each panel do?\n\nRStudio 4 panels"
+    "text": "RStudio\nWhat does each panel do?"
   },
   {
     "objectID": "FW670/Introduction.html#the-language-of-r",
@@ -16132,7 +16132,7 @@
     "href": "FW670/Introduction.html#some-useful-functions-2",
     "title": "Wildlife Ecology Modeling",
     "section": "Some useful functions",
-    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow = 10, ncol = 10)\n\napply(mat, 2, FUN = median)\n\n [1] -0.64743972 -0.83455918  0.60251018  0.01680552  0.12390477  0.01941709\n [7]  0.40291215 -0.20778856 -0.68293816 -0.29441944\n\n\n\n\napply(mat, 2, FUN = function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.1 0.1 0.3 0.1 0.3 0.2 0.1 0.0 0.2 0.0"
+    "text": "Some useful functions\napply/sapply/lapply/vapply\n\nmat= matrix(rnorm(100),nrow = 10, ncol = 10)\n\napply(mat, 2, FUN = median)\n\n [1]  0.203833619  0.020783666 -0.001107994 -0.261937947  0.863675641\n [6]  0.536544199 -0.176864542 -0.381718079  0.209984599 -0.330439441\n\n\n\n\napply(mat, 2, FUN = function(x){\n  \n  length(which(x&gt;1))/length(x)\n  \n})\n\n [1] 0.3 0.1 0.1 0.0 0.4 0.0 0.2 0.1 0.2 0.0"
   },
   {
     "objectID": "FW670/Introduction.html#code-organization",

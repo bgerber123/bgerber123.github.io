@@ -1,7 +1,7 @@
 ---
 title: <span style="color:white">Wildlife Ecology Modeling</span>
 title-slide-attributes:
-  data-background-image: /img/background1.png
+  data-background-image: ../img/background1.png
   data-caption: "Animal Forest Scene."
   background-opacity: "0.45"
 format:
@@ -116,7 +116,7 @@ Upon successful completion of this course students will be able to:
 
 ## [Software]{style="color:#078BCD;"}
 
-![R and RStudio logos](../img/logosR.png){#fig-R-RStudio-logos}
+![](../img/logosR.png)
 
 
 ## [Why learn to code?]{style="color:#078BCD;"}
@@ -235,7 +235,7 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 ## [Learning]{style="color:#078BCD;"}
 
-![XY visualization of students and knowledge](../img/learning.graph.png){fig-align="center" width=50%}
+![](../img/learning.graph.png){fig-align="center" width=50%}
 
 
 :::: {style="text-align: center;"}
@@ -251,9 +251,9 @@ statistical thinking have not changed, but their implementation has."</em></span
 #### What model did you fit? Why? How?
 
 ::: {.r-stack}
-![Extremes of how and what models get fit](../img/modeling.knowledge0.png){.fragment height="580"}
+![](../img/modeling.knowledge0.png){.fragment height="580"}
 
-![Extremes of how and what models get fit full](../img/modeling.knowledge.png){.fragment height="580"}
+![](../img/modeling.knowledge.png){.fragment height="580"}
 :::
 
 
@@ -281,11 +281,11 @@ statistical thinking have not changed, but their implementation has."</em></span
 
 ## [My Background]{style="color:#078BCD"}
 
-![Brian doing fieldwork](../img/me.png)
+![](../img/me.png)
 
 ## [My Background]{style="color:#078BCD"}
 
-![Contributing to workshops](../img/me2.png)
+![](../img/me2.png)
 
 
 
@@ -384,7 +384,7 @@ Know the *why* of your decisions
 
 What does each panel do?
 
-![RStudio 4 panels](../img/rstudio.png){width="95%" fig-align="center"}
+![](../img/rstudio.png){width="95%" fig-align="center"}
 
 
 ## [The language of R]{style="color:green;"}
