@@ -1,7 +1,7 @@
 ---
 title:  <span style="color:black"><u>Big Picture</u> <br> Science and Modeling</span>
 title-slide-attributes:
-  data-background-image: /img/thinking.png
+  data-background-image: ../img/thinking.png
   background-opacity: "0.45"
 format: revealjs
 ---
@@ -76,7 +76,7 @@ What you want to accomplish; can have multiple related objectives in a single ma
 
 Our objective is to understand the space-use of urban living coyotes.
 
-![](/img/coyote.png){width=300}
+![](../img/coyote.png){width=300}
 
 
 ::: {.fragment}
@@ -253,7 +253,7 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 
 
 
-##  {background-image="/img/BigData.png"}
+##  {background-image="../img/BigData.png"}
 
 
 
@@ -274,11 +274,11 @@ The expected outcome from a hypothesis. If agrees with data, it would support th
 
 "with enough data, the numbers speak for themselves"- Wired Magazine Editor
 
-![](/img/spreadsheet.png){fig-align="center" width="600"}
+![](../img/spreadsheet.png){fig-align="center" width="600"}
 
 ##
 
-![](/img/dataspeak.png){fig-align="center" width="1200"}
+![](../img/dataspeak.png){fig-align="center" width="1200"}
 <br>
 
 [- Correia et al. 2026. Best practices for moving from correlation to causation in ecological research. Nature Communications.](https://www.nature.com/articles/s41467-026-69878-z)
@@ -326,18 +326,21 @@ Sampling Processes == Human Design
 
 <br>
 
-![[Bradley et al. 2021 (Nature)](https://www.nature.com/articles/s41586-021-04198-4)](Information_files/survey.data.png){fig-align="center" width="1000"}
+![[Bradley et al. 2021 (Nature)](https://www.nature.com/articles/s41586-021-04198-4)]
+
+<!-- (../Information_files/survey.data.png){fig-align="center" width="1000"} -->
 
 ```{=html}
 <br><center><span style="color:#FF0000";><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
 ```
+
 ## Big Data Problems {.scrollable}
 
 Using eBird data w/o accounting for sampling biases.
 
 . . .
 
-![](/img/ebird.png){fig-align="center" fig-width="500"}
+![](../img/ebird.png){fig-align="center" fig-width="500"}
 
 [Link1](https://www.pnas.org/doi/10.1073/pnas.2023170118). [Link2](https://www.pnas.org/doi/10.1073/pnas.2113862119). 
 
@@ -436,7 +439,7 @@ Data ≠ Information
 . . .
 
 
-<!-- ![](/img/info_diagram.png){fig-align="center"} -->
+<!-- ![](../img/info_diagram.png){fig-align="center"} -->
 
 ```{=html}
 <b>Statistical thinking: </b> data contains <span><u>information</u></span>, depending on <br>
@@ -456,7 +459,7 @@ Surveillance monitoring data will generally have *lower quality information* to 
 <br>
 
 
-![](/img/banding.png){fig-align="center" width="494"}
+![](../img/banding.png){fig-align="center" width="494"}
 
 ## The goal of the question
 
@@ -495,7 +498,7 @@ BUT, are also <u>not mutually exclusive</u>.
 **2.**    Big Data and Sampling
 
 
-##  {background-image="/img/wetlands.png"}
+##  {background-image="../img/wetlands.png"}
 
 ```{=html}
 
@@ -513,7 +516,7 @@ BUT, are also <u>not mutually exclusive</u>.
 -   precise biased result
 
 
-![](/img/tragets.png){fig-align="center" width="600"}
+![](../img/tragets.png){fig-align="center" width="600"}
 
 <!-- ## Inference and Prediction  -->
 
@@ -575,7 +578,7 @@ BUT ...
 ```
 
 
-![](/img/interpretability.png)
+![](../img/interpretability.png)
 
 ## Take-Aways
 
@@ -587,7 +590,7 @@ BUT ...
 **3.**    Inference and Prediction
 
 
-##  {background-image="/img/wetlands.png"}
+##  {background-image="../img/wetlands.png"}
 
 ```{=html}
 
@@ -622,7 +625,7 @@ BUT ...
 
 ## Design-Based
 
-![](/img/srs.png){height=450 fig-align=center}
+![](../img/srs.png){height=450 fig-align=center}
 
 [Thompson, 2012. Sampling.](https://students.aiu.edu/submissions/profiles/resources/onlineBook/Q2T8G7_Sampling-_3rd.pdf)
 
@@ -630,14 +633,14 @@ The sample and population are what??
 
 ## Design-Based 
 
-![](/img/srs.png){height=450 fig-align=center}
+![](../img/srs.png){height=450 fig-align=center}
 
 -   inference relies on probabilistic assigning some units to be in the sample (e.g., random sampling).
 
 
 ## Design-Based 
 
-![](/img/srs.png){height=450 fig-align=center}
+![](../img/srs.png){height=450 fig-align=center}
 
 -   the values themselves are held to be **fixed**, whereas the sampling process is random.
 
@@ -1093,7 +1096,7 @@ Let's add some more *reality* in our work while using design-based sampling in R
 
 **Methodology**: Count deer in 1 sq. mile cells using FLIR technology attached to a helicopter.
 
-![](/img/flir.png){fig-align="center" width="483"}
+![](../img/flir.png){fig-align="center" width="483"}
 
 ## Lab Setup
 
@@ -1111,7 +1114,7 @@ Let's add some more *reality* in our work while using design-based sampling in R
 
 ::: {.column width="70%"}
 
-![](/img/RI.png){fig-align="center"  width="483"}
+![](../img/RI.png){fig-align="center"  width="483"}
 :::
 
 ::::
@@ -1132,7 +1135,7 @@ Let's add some more *reality* in our work while using design-based sampling in R
 
 ::: {.column width="70%"}
 
-![](/img/deermap.png){fig-align="center"  width="650"}
+![](../img/deermap.png){fig-align="center"  width="650"}
 :::
 
 ::::
@@ -1153,7 +1156,7 @@ Let's add some more *reality* in our work while using design-based sampling in R
 
 ::: {.column width="70%"}
 
-![](/img/deermap.png){fig-align="center" width="650"}
+![](../img/deermap.png){fig-align="center" width="650"}
 :::
 
 ::::
@@ -1177,7 +1180,7 @@ Let's add some more *reality* in our work while using design-based sampling in R
 
 ::: {.column width="50%"}
 
-![](/img/samplingdistribution.png){fig-align="center"}
+![](../img/samplingdistribution.png){fig-align="center"}
 :::
 
 ::::
