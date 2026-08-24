@@ -390,7 +390,7 @@ Sampling Processes == Human Design
 <section id="big-data-problems-3" class="slide level2">
 <h2>Big Data Problems</h2>
 <p><br></p>
-<p>![<a href="https://www.nature.com/articles/s41586-021-04198-4">Bradley et al.&nbsp;2021 (Nature)</a>]</p>
+<p><a href="https://www.nature.com/articles/s41586-021-04198-4"><strong>Bradley et al.&nbsp;2021 (Nature)</strong></a></p>
 <!-- (../Information_files/survey.data.png){fig-align="center" width="1000"} -->
 <br><center><span style="color:#FF0000" ;=""><em>"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."</em></span>   </center>
 </section>
@@ -487,7 +487,7 @@ Data ≠ Information
 </span>
 <div class="fragment">
 <!-- ![](../img/info_diagram.png){fig-align="center"} -->
-<b>Statistical thinking: </b> data contains <span><u>information</u></span>, depending on <br>
+<b>Statistical thinking: </b> data contain <span><u>information</u></span>, depending on <br>
 <ul>
 <li><p>the question being asked of the data</p></li>
 <li><p>how the data came to be</p></li>
@@ -542,7 +542,7 @@ BUT, are also <u>not mutually exclusive</u>.
 <h2>Which is worse?</h2>
 <ul>
 <li>unbiased imprecise result</li>
-<li>precise biased result</li>
+<li>biased precise result</li>
 </ul>
 
 <!-- ## Inference and Prediction  -->
@@ -684,6 +684,7 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <h2>Design-Based</h2>
 <ul>
 <li><p><span class="math inline">\(\textbf{Y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_N\)</span>]</p></li>
+<li><p><span class="math inline">\(\textbf{y}\)</span> = [<span class="math inline">\(y_1\)</span>,…,<span class="math inline">\(y_n\)</span>]</p></li>
 <li><p>The population mean is <span class="math inline">\(\bar{Y} = \sum_{i=1}^N Y_i / N\)</span> and the sample mean is <span class="math inline">\(\hat{\bar{y}} = \sum_{i=1}^n y_i / n\)</span></p></li>
 </ul>
 <div class="fragment">
@@ -730,112 +731,153 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <h2>Design-Based Code</h2>
 <h3 id="truth">TRUTH</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co">#random discrete uniform sampler</span></span>
-<span id="cb1-2"><a></a>rdu <span class="ot">&lt;-</span> <span class="cf">function</span>(n,lower,upper){</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Random discrete uniform sampler</span></span>
+<span id="cb1-2"><a></a>rdu <span class="ot">&lt;-</span> <span class="cf">function</span>(n, lower, upper){</span>
 <span id="cb1-3"><a></a>                               <span class="fu">sample</span>(lower<span class="sc">:</span>upper,</span>
 <span id="cb1-4"><a></a>                                      n,</span>
 <span id="cb1-5"><a></a>                                      <span class="at">replace=</span><span class="cn">TRUE</span></span>
 <span id="cb1-6"><a></a>                                      )</span>
 <span id="cb1-7"><a></a>                              }</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a>N <span class="ot">=</span> <span class="dv">25</span></span>
-<span id="cb1-10"><a></a></span>
-<span id="cb1-11"><a></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rdu</span>(N, </span>
-<span id="cb1-12"><a></a>                 <span class="at">lower =</span> <span class="dv">0</span>, </span>
-<span id="cb1-13"><a></a>                 <span class="at">upper =</span> <span class="dv">400</span></span>
-<span id="cb1-14"><a></a>                 ),</span>
-<span id="cb1-15"><a></a>             <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
-<span id="cb1-16"><a></a>             )</span>
-<span id="cb1-17"><a></a>mat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a></a>N <span class="ot">=</span> <span class="dv">25</span></span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="co"># This is our truth, which we will sample from</span></span>
+<span id="cb1-11"><a></a><span class="fu">set.seed</span>(<span class="dv">4343</span>)</span>
+<span id="cb1-12"><a></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">rdu</span>(N, </span>
+<span id="cb1-13"><a></a>                 <span class="at">lower =</span> <span class="dv">0</span>, </span>
+<span id="cb1-14"><a></a>                 <span class="at">upper =</span> <span class="dv">400</span></span>
+<span id="cb1-15"><a></a>                 ),</span>
+<span id="cb1-16"><a></a>             <span class="at">nrow =</span> <span class="dv">5</span>, </span>
+<span id="cb1-17"><a></a>             <span class="at">ncol =</span> <span class="dv">5</span></span>
+<span id="cb1-18"><a></a>             )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="design-based-code-1" class="slide level2 scrollable">
+<h2>Design-Based Code</h2>
+<h3 id="truth-1">TRUTH</h3>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  290  200  315  295    0
-[2,]  340  335  132  334   19
-[3,]  188  196  138  190  223
-[4,]  281  399  358  300  383
-[5,]  205  157  220  173  368</code></pre>
+[1,]   63  390  209  376  331
+[2,]  318  368   51  222  105
+[3,]  296  288   82  200  217
+[4,]  267   78   82  139  236
+[5,]  360  139  369   97  339</code></pre>
 </div>
 </div>
-</section>
-<section id="design-based-code-1" class="slide level2">
-<h2>Design-Based Code</h2>
-<h3 id="random-sampling">Random Sampling</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
-<span id="cb3-2"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(</span>
-<span id="cb3-3"><a></a>             <span class="fu">c</span>(mat),</span>
-<span id="cb3-4"><a></a>             n, </span>
-<span id="cb3-5"><a></a>             <span class="at">replace =</span> <span class="cn">TRUE</span></span>
-<span id="cb3-6"><a></a>             )</span>
-<span id="cb3-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] 220 399 358 315 173 281 358 340   0  19</code></pre>
-</div>
-</div>
-<p><br></p>
 <div class="fragment">
-<h3 id="estimator-for-the-population-mean">Estimator for the population mean</h3>
+<p>What is the population mean for this truth?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>  <span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">mean</span>(mat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 246.3</code></pre>
+<pre><code>[1] 224.88</code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="design-based-code-2" class="slide level2">
+<section id="design-based-code-2" class="slide level2 scrollable">
 <h2>Design-Based Code</h2>
-<h3 id="sampling-distribution">Sampling Distribution</h3>
+<p>What is the theoretical population mean that generated these values?</p>
+<div class="fragment">
+<p><span class="math display">\[
+E[Y] = \sum_{i=1}^{N} y\times P(Y=y) = \sum_{i=1}^{N} y \times 1/N \\
+\]</span></p>
+<div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># How many ways can we uniquely sample 10 things from 25</span></span>
-<span id="cb7-2"><a></a>combs <span class="ot">=</span> <span class="cf">function</span>(n, x) {</span>
-<span id="cb7-3"><a></a>  <span class="fu">factorial</span>(n) <span class="sc">/</span> <span class="fu">factorial</span>(n<span class="sc">-</span>x) <span class="sc">/</span> <span class="fu">factorial</span>(x)</span>
-<span id="cb7-4"><a></a>}</span>
-<span id="cb7-5"><a></a></span>
-<span id="cb7-6"><a></a><span class="fu">combs</span>(N, n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">sum</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">400</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">401</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3268760</code></pre>
+<pre><code>[1] 200</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+E[Y] = \frac{0+400}{2} = 200
+\]</span></p>
+<p><a href="https://en.wikipedia.org/wiki/Discrete_uniform_distribution">Wikipedia</a></p>
 </div>
 </div>
 </section>
 <section id="design-based-code-3" class="slide level2">
 <h2>Design-Based Code</h2>
-<p>Get every combination and then calculate the mean for each sample of 10</p>
+<h3 id="random-sampling">Random Sampling</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5435</span>)</span>
-<span id="cb9-2"><a></a>  all.combs <span class="ot">=</span> utils<span class="sc">::</span><span class="fu">combn</span>(<span class="fu">c</span>(mat), </span>
-<span id="cb9-3"><a></a>                           n</span>
-<span id="cb9-4"><a></a>                           )</span>
-<span id="cb9-5"><a></a>  <span class="fu">dim</span>(all.combs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>  n <span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb7-2"><a></a>  y <span class="ot">=</span> <span class="fu">sample</span>(</span>
+<span id="cb7-3"><a></a>             <span class="fu">c</span>(mat),</span>
+<span id="cb7-4"><a></a>             n, </span>
+<span id="cb7-5"><a></a>             <span class="at">replace =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-6"><a></a>             )</span>
+<span id="cb7-7"><a></a>  y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]      10 3268760</code></pre>
+<pre><code> [1] 139 209 139 200 390 368  97 288 105 267</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>  mean.all.combs <span class="ot">=</span> <span class="fu">apply</span>(all.combs,</span>
-<span id="cb11-2"><a></a>                         <span class="dv">2</span>,</span>
-<span id="cb11-3"><a></a>                         mean</span>
-<span id="cb11-4"><a></a>                         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br></p>
+<div class="fragment">
+<h3 id="estimator-for-this-truths-population-mean">Estimator for this truth’s population mean</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>  <span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 220.2</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="design-based-code-4" class="slide level2">
 <h2>Design-Based Code</h2>
-
-<img data-src="BigPicture_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<h3 id="sampling-distribution">Sampling Distribution</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># How many ways can we uniquely sample 10 things from 25</span></span>
+<span id="cb11-2"><a></a>combs <span class="ot">=</span> <span class="cf">function</span>(n, x) {</span>
+<span id="cb11-3"><a></a>  <span class="fu">factorial</span>(n) <span class="sc">/</span> <span class="fu">factorial</span>(n<span class="sc">-</span>x) <span class="sc">/</span> <span class="fu">factorial</span>(x)</span>
+<span id="cb11-4"><a></a>}</span>
+<span id="cb11-5"><a></a></span>
+<span id="cb11-6"><a></a><span class="fu">combs</span>(N, n)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3268760</code></pre>
+</div>
+</div>
+</section>
 <section id="design-based-code-5" class="slide level2">
 <h2>Design-Based Code</h2>
-<p>OR, we can sample enough times to approximate it</p>
+<p>Get every combination and then calculate the mean for each sample of 10</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">54352</span>)</span>
-<span id="cb12-2"><a></a>  sim.sampling.dist<span class="ot">=</span><span class="fu">replicate</span>(<span class="dv">2000</span>,</span>
-<span id="cb12-3"><a></a>                              <span class="fu">sample</span>(<span class="fu">c</span>(mat),n)</span>
-<span id="cb12-4"><a></a>                              )</span>
-<span id="cb12-5"><a></a>  <span class="fu">dim</span>(sim.sampling.dist)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">5411</span>)</span>
+<span id="cb13-2"><a></a>  all.combs <span class="ot">=</span> utils<span class="sc">::</span><span class="fu">combn</span>(<span class="fu">c</span>(mat), </span>
+<span id="cb13-3"><a></a>                           n,</span>
+<span id="cb13-4"><a></a>                           <span class="at">simplify =</span> <span class="cn">TRUE</span></span>
+<span id="cb13-5"><a></a>                           )</span>
+<span id="cb13-6"><a></a>  <span class="fu">dim</span>(all.combs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]   10 2000</code></pre>
+<pre><code>[1]      10 3268760</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>  mean.samples <span class="ot">=</span> <span class="fu">apply</span>(sim.sampling.dist,<span class="dv">2</span>,mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>  mean.all.combs <span class="ot">=</span> <span class="fu">apply</span>(all.combs,</span>
+<span id="cb15-2"><a></a>                         <span class="dv">2</span>,</span>
+<span id="cb15-3"><a></a>                         mean</span>
+<span id="cb15-4"><a></a>                         )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="design-based-code-6" class="slide level2">
+<h2>Design-Based Code</h2>
+
+<img data-src="BigPicture_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="design-based-code-7" class="slide level2">
+<h2>Design-Based Code</h2>
+<p>OR, we can sample enough times to approximate it</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>  <span class="fu">set.seed</span>(<span class="dv">54352</span>)</span>
+<span id="cb16-2"><a></a>  sim.sampling.dist<span class="ot">=</span><span class="fu">replicate</span>(<span class="dv">3000</span>,</span>
+<span id="cb16-3"><a></a>                              <span class="fu">sample</span>(<span class="fu">c</span>(mat),n)</span>
+<span id="cb16-4"><a></a>                              )</span>
+<span id="cb16-5"><a></a>  </span>
+<span id="cb16-6"><a></a>  <span class="fu">dim</span>(sim.sampling.dist)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   10 3000</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>  mean.samples <span class="ot">=</span> <span class="fu">apply</span>(sim.sampling.dist,<span class="dv">2</span>,mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="design-based-code-8" class="slide level2">
 <h2>Design-Based Code</h2>
 
 <img data-src="BigPicture_files/figure-revealjs/sampling dist4-1.png" width="960" class="r-stretch"></section>
@@ -907,46 +949,47 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <section id="model-based-code" class="slide level2">
 <h2>Model-Based Code</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Create a function, to be replicated</span></span>
-<span id="cb15-2"><a></a>  lambda <span class="ot">=</span> <span class="dv">200</span></span>
-<span id="cb15-3"><a></a></span>
-<span id="cb15-4"><a></a>  mat.fn <span class="ot">=</span> <span class="cf">function</span>(lambda){<span class="fu">matrix</span>(</span>
-<span id="cb15-5"><a></a>                                   <span class="fu">rpois</span>(N, <span class="at">lambda=</span>lambda),</span>
-<span id="cb15-6"><a></a>                                   <span class="at">nrow=</span><span class="dv">5</span>, <span class="at">ncol=</span><span class="dv">5</span></span>
-<span id="cb15-7"><a></a>                                  )</span>
-<span id="cb15-8"><a></a>                           }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># Create a function, to be replicated</span></span>
+<span id="cb19-2"><a></a>  lambda <span class="ot">=</span> <span class="dv">200</span></span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a>  mat.fn <span class="ot">=</span> <span class="cf">function</span>(lambda){<span class="fu">matrix</span>(</span>
+<span id="cb19-5"><a></a>                                   <span class="fu">rpois</span>(N, <span class="at">lambda =</span> lambda),</span>
+<span id="cb19-6"><a></a>                                   <span class="at">nrow =</span> <span class="dv">5</span>, </span>
+<span id="cb19-7"><a></a>                                   <span class="at">ncol =</span> <span class="dv">5</span></span>
+<span id="cb19-8"><a></a>                                  )</span>
+<span id="cb19-9"><a></a>                           }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="model-based-code-1" class="slide level2">
 <h2>Model-Based Code</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Repeat the function n.sim times</span></span>
-<span id="cb16-2"><a></a>  n.sim <span class="ot">=</span> <span class="dv">1000</span></span>
-<span id="cb16-3"><a></a>  list.mat <span class="ot">=</span> <span class="fu">replicate</span>(n.sim, </span>
-<span id="cb16-4"><a></a>                       <span class="fu">mat.fn</span>(lambda), </span>
-<span id="cb16-5"><a></a>                       <span class="at">simplify=</span><span class="cn">FALSE</span></span>
-<span id="cb16-6"><a></a>                       )</span>
-<span id="cb16-7"><a></a>  <span class="fu">length</span>(list.mat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Repeat the function n.sim times</span></span>
+<span id="cb20-2"><a></a>  n.sim <span class="ot">=</span> <span class="dv">1000</span></span>
+<span id="cb20-3"><a></a>  list.mat <span class="ot">=</span> <span class="fu">replicate</span>(n.sim, </span>
+<span id="cb20-4"><a></a>                       <span class="fu">mat.fn</span>(lambda), </span>
+<span id="cb20-5"><a></a>                       <span class="at">simplify =</span> <span class="cn">FALSE</span></span>
+<span id="cb20-6"><a></a>                       )</span>
+<span id="cb20-7"><a></a>  <span class="fu">length</span>(list.mat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1000</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co"># One realization from the super-population</span></span>
-<span id="cb18-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># One realization from the super-population</span></span>
+<span id="cb22-2"><a></a>  list.mat[[<span class="dv">1</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]  209  223  208  189  181
-[2,]  222  175  194  187  190
-[3,]  203  193  184  227  220
-[4,]  199  210  203  212  198
-[5,]  217  211  183  194  197</code></pre>
+[1,]  170  196  179  214  197
+[2,]  214  201  217  216  189
+[3,]  176  195  176  212  190
+[4,]  201  194  191  210  212
+[5,]  195  205  203  208  192</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Population mean for the first realization</span></span>
-<span id="cb20-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="co"># Population mean for the first realization</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">mean</span>(list.mat[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 201.16</code></pre>
+<pre><code>[1] 198.12</code></pre>
 </div>
 </div>
 </div>
@@ -955,8 +998,8 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <h2>Model-Based Code</h2>
 <h4 id="sampling-distribution-1">Sampling Distribution</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>samples.list <span class="ot">=</span> <span class="fu">lapply</span>(list.mat,<span class="at">FUN=</span><span class="cf">function</span>(x){<span class="fu">sample</span>(x,<span class="at">size=</span>n)})</span>
-<span id="cb22-2"><a></a>lambda.hat <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(samples.list,<span class="at">FUN=</span>mean))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>samples.list <span class="ot">=</span> <span class="fu">lapply</span>(list.mat,<span class="at">FUN=</span><span class="cf">function</span>(x){<span class="fu">sample</span>(x,<span class="at">size=</span>n)})</span>
+<span id="cb26-2"><a></a>lambda.hat <span class="ot">=</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(samples.list,<span class="at">FUN=</span>mean))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <img data-src="BigPicture_files/figure-revealjs/model.sim5-1.png" width="960" class="r-stretch"></section>
@@ -967,15 +1010,15 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 <section id="statistical-bias-code" class="slide level2 scrollable">
 <h2>Statistical Bias (Code)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Bias (in this case, Monte Carlo error)</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="co"># Bias (in this case, Monte Carlo error)</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1076</code></pre>
+<pre><code>[1] -0.1286</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># relative bias</span></span>
-<span id="cb25-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="co"># relative bias</span></span>
+<span id="cb29-2"><a></a>  (<span class="fu">mean</span>(lambda.hat) <span class="sc">-</span> lambda)<span class="sc">/</span>lambda</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.000538</code></pre>
+<pre><code>[1] -0.000643</code></pre>
 </div>
 </div>
 
@@ -1005,20 +1048,20 @@ the <span style="color:#FF0000" ;="">"wrong" </span> statistical model can predi
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>  diff <span class="ot">=</span> <span class="fl">0.025</span><span class="sc">*</span>lambda</span>
-<span id="cb27-2"><a></a>  diff</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>  diff <span class="ot">=</span> <span class="fl">0.025</span><span class="sc">*</span>lambda</span>
+<span id="cb31-2"><a></a>  diff</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>  lower <span class="ot">=</span> lambda<span class="sc">-</span>diff</span>
-<span id="cb29-2"><a></a>  upper <span class="ot">=</span> lambda<span class="sc">+</span>diff</span>
-<span id="cb29-3"><a></a></span>
-<span id="cb29-4"><a></a>  index <span class="ot">=</span> <span class="fu">which</span>(lambda.hat<span class="sc">&gt;=</span>lower <span class="sc">&amp;</span> lambda.hat <span class="sc">&lt;=</span> upper)</span>
-<span id="cb29-5"><a></a></span>
-<span id="cb29-6"><a></a><span class="co"># Probability of getting a mean within 5% of the truth</span></span>
-<span id="cb29-7"><a></a>  <span class="fu">length</span>(index)<span class="sc">/</span><span class="fu">length</span>(lambda.hat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>  lower <span class="ot">=</span> lambda<span class="sc">-</span>diff</span>
+<span id="cb33-2"><a></a>  upper <span class="ot">=</span> lambda<span class="sc">+</span>diff</span>
+<span id="cb33-3"><a></a></span>
+<span id="cb33-4"><a></a>  index <span class="ot">=</span> <span class="fu">which</span>(lambda.hat<span class="sc">&gt;=</span>lower <span class="sc">&amp;</span> lambda.hat <span class="sc">&lt;=</span> upper)</span>
+<span id="cb33-5"><a></a></span>
+<span id="cb33-6"><a></a><span class="co"># Probability of getting a mean within 5% of the truth</span></span>
+<span id="cb33-7"><a></a>  <span class="fu">length</span>(index)<span class="sc">/</span><span class="fu">length</span>(lambda.hat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.754</code></pre>
+<pre><code>[1] 0.715</code></pre>
 </div>
 </div>
 </div>

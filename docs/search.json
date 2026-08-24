@@ -14774,7 +14774,7 @@
     "href": "FW670/BigPicture.html#big-data-problems-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Big Data Problems",
-    "text": "Big Data Problems\n\n![Bradley et al. 2021 (Nature)]\n\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
+    "text": "Big Data Problems\n\nBradley et al. 2021 (Nature)\n\n\"...data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition.\""
   },
   {
     "objectID": "FW670/BigPicture.html#big-data-problems-4",
@@ -14795,7 +14795,7 @@
     "href": "FW670/BigPicture.html#data-vs.-information",
     "title": "Big Picture  Science and Modeling",
     "section": "Data vs. Information",
-    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n\n\n\nStatistical thinking:  data contains information, depending on \n\nthe question being asked of the data\nhow the data came to be"
+    "text": "Data vs. Information\nData = Numbers/Groupings\nData ≠ Information\n\n\n\n\n\nStatistical thinking:  data contain information, depending on \n\nthe question being asked of the data\nhow the data came to be"
   },
   {
     "objectID": "FW670/BigPicture.html#information",
@@ -14837,7 +14837,7 @@
     "href": "FW670/BigPicture.html#which-is-worse",
     "title": "Big Picture  Science and Modeling",
     "section": "Which is worse?",
-    "text": "Which is worse?\n\nunbiased imprecise result\nprecise biased result"
+    "text": "Which is worse?\n\nunbiased imprecise result\nbiased precise result"
   },
   {
     "objectID": "FW670/BigPicture.html#inference-and-prediction",
@@ -14928,7 +14928,7 @@
     "href": "FW670/BigPicture.html#design-based-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based",
-    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\nThe population mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random values, e.g., one sample of 4 cells.\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
+    "text": "Design-Based\n\n\\(\\textbf{Y}\\) = [\\(y_1\\),…,\\(y_N\\)]\n\\(\\textbf{y}\\) = [\\(y_1\\),…,\\(y_n\\)]\nThe population mean is \\(\\bar{Y} = \\sum_{i=1}^N Y_i / N\\) and the sample mean is \\(\\hat{\\bar{y}} = \\sum_{i=1}^n y_i / n\\)\n\n\n\nThe population mean describes ….?\n\n\n\n\n\\(\\textbf{y}\\) is a random vector that has \\(n\\) random values, e.g., one sample of 4 cells.\n\n\n\n\\(\\boldsymbol{y} = \\begin{matrix} [y_{1} & y_{2} & y_{3} & y_{4 }]\\end{matrix}\\)\n\n\n\\(\\boldsymbol{y}' = \\boldsymbol{y}^{T}  = \\begin{bmatrix} y_{1} & \\\\y_{2} &\\\\  y_{3}  & \\\\y_{4 }\\end{bmatrix}\\)"
   },
   {
     "objectID": "FW670/BigPicture.html#random-variable",
@@ -14949,42 +14949,42 @@
     "href": "FW670/BigPicture.html#design-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nTRUTH\n\n#random discrete uniform sampler\nrdu &lt;- function(n,lower,upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\n\nN = 25\n\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow=5, ncol=5\n             )\nmat\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  290  200  315  295    0\n[2,]  340  335  132  334   19\n[3,]  188  196  138  190  223\n[4,]  281  399  358  300  383\n[5,]  205  157  220  173  368"
+    "text": "Design-Based Code\nTRUTH\n\n# Random discrete uniform sampler\nrdu &lt;- function(n, lower, upper){\n                               sample(lower:upper,\n                                      n,\n                                      replace=TRUE\n                                      )\n                              }\nN = 25\n\n# This is our truth, which we will sample from\nset.seed(4343)\nmat = matrix(rdu(N, \n                 lower = 0, \n                 upper = 400\n                 ),\n             nrow = 5, \n             ncol = 5\n             )"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-1",
     "href": "FW670/BigPicture.html#design-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             n, \n             replace = TRUE\n             )\n  y\n\n [1] 220 399 358 315 173 281 358 340   0  19\n\n\n\n\nEstimator for the population mean\n\n  mean(y)\n\n[1] 246.3"
+    "text": "Design-Based Code\nTRUTH\n\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   63  390  209  376  331\n[2,]  318  368   51  222  105\n[3,]  296  288   82  200  217\n[4,]  267   78   82  139  236\n[5,]  360  139  369   97  339\n\n\n\nWhat is the population mean for this truth?\n\nmean(mat)\n\n[1] 224.88"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-2",
     "href": "FW670/BigPicture.html#design-based-code-2",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nSampling Distribution\n\n# How many ways can we uniquely sample 10 things from 25\ncombs = function(n, x) {\n  factorial(n) / factorial(n-x) / factorial(x)\n}\n\ncombs(N, n)\n\n[1] 3268760"
+    "text": "Design-Based Code\nWhat is the theoretical population mean that generated these values?\n\n\\[\nE[Y] = \\sum_{i=1}^{N} y\\times P(Y=y) = \\sum_{i=1}^{N} y \\times 1/N \\\\\n\\]\n\n\nsum(0:400 * 1/401)\n\n[1] 200\n\n\n\n\n\\[\nE[Y] = \\frac{0+400}{2} = 200\n\\]\nWikipedia"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-3",
     "href": "FW670/BigPicture.html#design-based-code-3",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nGet every combination and then calculate the mean for each sample of 10\n\n  set.seed(5435)\n  all.combs = utils::combn(c(mat), \n                           n\n                           )\n  dim(all.combs)\n\n[1]      10 3268760\n\n  mean.all.combs = apply(all.combs,\n                         2,\n                         mean\n                         )"
+    "text": "Design-Based Code\nRandom Sampling\n\n  n = 10\n  y = sample(\n             c(mat),\n             n, \n             replace = TRUE\n             )\n  y\n\n [1] 139 209 139 200 390 368  97 288 105 267\n\n\n\n\nEstimator for this truth’s population mean\n\n  mean(y)\n\n[1] 220.2"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-4",
     "href": "FW670/BigPicture.html#design-based-code-4",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code"
+    "text": "Design-Based Code\nSampling Distribution\n\n# How many ways can we uniquely sample 10 things from 25\ncombs = function(n, x) {\n  factorial(n) / factorial(n-x) / factorial(x)\n}\n\ncombs(N, n)\n\n[1] 3268760"
   },
   {
     "objectID": "FW670/BigPicture.html#design-based-code-5",
     "href": "FW670/BigPicture.html#design-based-code-5",
     "title": "Big Picture  Science and Modeling",
     "section": "Design-Based Code",
-    "text": "Design-Based Code\nOR, we can sample enough times to approximate it\n\n  set.seed(54352)\n  sim.sampling.dist=replicate(2000,\n                              sample(c(mat),n)\n                              )\n  dim(sim.sampling.dist)\n\n[1]   10 2000\n\n  mean.samples = apply(sim.sampling.dist,2,mean)"
+    "text": "Design-Based Code\nGet every combination and then calculate the mean for each sample of 10\n\n  set.seed(5411)\n  all.combs = utils::combn(c(mat), \n                           n,\n                           simplify = TRUE\n                           )\n  dim(all.combs)\n\n[1]      10 3268760\n\n  mean.all.combs = apply(all.combs,\n                         2,\n                         mean\n                         )"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based",
@@ -15019,14 +15019,14 @@
     "href": "FW670/BigPicture.html#model-based-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# Create a function, to be replicated\n  lambda = 200\n\n  mat.fn = function(lambda){matrix(\n                                   rpois(N, lambda=lambda),\n                                   nrow=5, ncol=5\n                                  )\n                           }"
+    "text": "Model-Based Code\n\n# Create a function, to be replicated\n  lambda = 200\n\n  mat.fn = function(lambda){matrix(\n                                   rpois(N, lambda = lambda),\n                                   nrow = 5, \n                                   ncol = 5\n                                  )\n                           }"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based-code-1",
     "href": "FW670/BigPicture.html#model-based-code-1",
     "title": "Big Picture  Science and Modeling",
     "section": "Model-Based Code",
-    "text": "Model-Based Code\n\n# Repeat the function n.sim times\n  n.sim = 1000\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify=FALSE\n                       )\n  length(list.mat)\n\n[1] 1000\n\n\n\n\n# One realization from the super-population\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  209  223  208  189  181\n[2,]  222  175  194  187  190\n[3,]  203  193  184  227  220\n[4,]  199  210  203  212  198\n[5,]  217  211  183  194  197\n\n# Population mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 201.16"
+    "text": "Model-Based Code\n\n# Repeat the function n.sim times\n  n.sim = 1000\n  list.mat = replicate(n.sim, \n                       mat.fn(lambda), \n                       simplify = FALSE\n                       )\n  length(list.mat)\n\n[1] 1000\n\n\n\n\n# One realization from the super-population\n  list.mat[[1]]\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]  170  196  179  214  197\n[2,]  214  201  217  216  189\n[3,]  176  195  176  212  190\n[4,]  201  194  191  210  212\n[5,]  195  205  203  208  192\n\n# Population mean for the first realization\n  mean(list.mat[[1]])\n\n[1] 198.12"
   },
   {
     "objectID": "FW670/BigPicture.html#model-based-code-2",
@@ -15047,14 +15047,14 @@
     "href": "FW670/BigPicture.html#statistical-bias-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Statistical Bias (Code)",
-    "text": "Statistical Bias (Code)\n\n# Bias (in this case, Monte Carlo error)\n  mean(lambda.hat) - lambda\n\n[1] 0.1076\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] 0.000538"
+    "text": "Statistical Bias (Code)\n\n# Bias (in this case, Monte Carlo error)\n  mean(lambda.hat) - lambda\n\n[1] -0.1286\n\n# relative bias\n  (mean(lambda.hat) - lambda)/lambda\n\n[1] -0.000643"
   },
   {
     "objectID": "FW670/BigPicture.html#precision-of-the-mean-code",
     "href": "FW670/BigPicture.html#precision-of-the-mean-code",
     "title": "Big Picture  Science and Modeling",
     "section": "Precision of the mean (Code)",
-    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n# Probability of getting a mean within 5% of the truth\n  length(index)/length(lambda.hat)\n\n[1] 0.754"
+    "text": "Precision of the mean (Code)\nWhat is the probability that we will observe a mean within 5% of the truth?\n\nWe can calculate this using Monte Carlo integration\n\n\n\n  diff = 0.025*lambda\n  diff\n\n[1] 5\n\n  lower = lambda-diff\n  upper = lambda+diff\n\n  index = which(lambda.hat&gt;=lower & lambda.hat &lt;= upper)\n\n# Probability of getting a mean within 5% of the truth\n  length(index)/length(lambda.hat)\n\n[1] 0.715"
   },
   {
     "objectID": "FW670/BigPicture.html#take-aways-3",
@@ -19654,5 +19654,19 @@
     "title": "Microclimate mediates the strength and direction of avianbiotic interactions",
     "section": "Abstract",
     "text": "Abstract\nTheory predicts that the strength and direction of species interactions can shift frombeing competitive in benign environments toward being facilitative in stressful envi-ronments. However, the environmental context dependency of species interactions hasrarely been tested in animal communities. We capitalized on a 15-year, landscape-scaledataset, collected annually in a relatively stable old-growth forest environment, to testthe long-held hypothesis that the strength and direction of species interactions mightbe mediated by climatic conditions. It is generally accepted that competitive and facili-tative interactions drive the distributions of many species, but are rarely included inclimate envelope models, and may partly explain poor predictive performance of spe-cies distribution models in the face of climate change. Using multi-species dynamicoccupancy models applied to long-term data, we tested whether annual settlementby bird species could affect either the persistence or settlement by other phylogeneti-cally related species, and whether these interactions are mediated by microclimate. Wefound that species interactions were influenced by microclimate for a high proportionof species pairs (80%). Related species pairs more often showed settlement dynamicsthat were indicative of attraction rather than repulsion (55 versus 30%, respectively).In some cases, competitive interactions in colder microclimates flipped to becomefacilitative in warmer ones (15%) and vice versa (5%). Furthermore, species pairsthat were closely related were more likely to exhibit competitive relationships along atleast part of the microclimatic gradient. Our results highlight the importance of usinglong-term data to incorporate competitive and facilitative interactions into species dis-tribution models, and support the notion that the strength and direction of speciesinteractions can be dependent on microclimatic conditions."
+  },
+  {
+    "objectID": "FW670/BigPicture.html#design-based-code-7",
+    "href": "FW670/BigPicture.html#design-based-code-7",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code\nOR, we can sample enough times to approximate it\n\n  set.seed(54352)\n  sim.sampling.dist=replicate(3000,\n                              sample(c(mat),n)\n                              )\n  \n  dim(sim.sampling.dist)\n\n[1]   10 3000\n\n  mean.samples = apply(sim.sampling.dist,2,mean)"
+  },
+  {
+    "objectID": "FW670/BigPicture.html#design-based-code-8",
+    "href": "FW670/BigPicture.html#design-based-code-8",
+    "title": "Big Picture  Science and Modeling",
+    "section": "Design-Based Code",
+    "text": "Design-Based Code"
   }
 ]

@@ -326,7 +326,7 @@ Sampling Processes == Human Design
 
 <br>
 
-![[Bradley et al. 2021 (Nature)](https://www.nature.com/articles/s41586-021-04198-4)]
+[**Bradley et al. 2021 (Nature)**](https://www.nature.com/articles/s41586-021-04198-4)
 
 <!-- (../Information_files/survey.data.png){fig-align="center" width="1000"} -->
 
@@ -442,7 +442,7 @@ Data ≠ Information
 <!-- ![](../img/info_diagram.png){fig-align="center"} -->
 
 ```{=html}
-<b>Statistical thinking: </b> data contains <span><u>information</u></span>, depending on <br>
+<b>Statistical thinking: </b> data contain <span><u>information</u></span>, depending on <br>
 ```
 
 -   the question being asked of the data
@@ -513,7 +513,7 @@ BUT, are also <u>not mutually exclusive</u>.
 ## Which is worse?
 
 -   unbiased imprecise result
--   precise biased result
+-   biased precise result
 
 
 ![](../img/tragets.png){fig-align="center" width="600"}
@@ -682,6 +682,8 @@ The sample and population are what??
 
 - $\textbf{Y}$ = [$y_1$,...,$y_N$]
 
+- $\textbf{y}$ = [$y_1$,...,$y_n$]
+
 - The population mean is $\bar{Y} = \sum_{i=1}^N Y_i / N$ and the sample mean is $\hat{\bar{y}} = \sum_{i=1}^n y_i / n$
 
 . . .
@@ -733,30 +735,80 @@ We observe samples from the domain or population or sampling frame.
 ## Design-Based Code {.scrollable}
 
 ### TRUTH
-```{r design.sim, echo=TRUE, eval=TRUE}
-#random discrete uniform sampler
-rdu <- function(n,lower,upper){
+
+```{r, echo=TRUE, eval=TRUE}
+# Random discrete uniform sampler
+rdu <- function(n, lower, upper){
                                sample(lower:upper,
                                       n,
                                       replace=TRUE
                                       )
                               }
-
 N = 25
 
+# This is our truth, which we will sample from
+set.seed(4343)
 mat = matrix(rdu(N, 
                  lower = 0, 
                  upper = 400
                  ),
-             nrow=5, ncol=5
+             nrow = 5, 
+             ncol = 5
              )
+```
+
+## Design-Based Code {.scrollable}
+
+### TRUTH
+
+
+```{r, echo=FALSE, eval=TRUE}
 mat
 ```
+
+
+
+:::{.fragment}
+
+What is the population mean for this truth?
+
+```{r, echo=TRUE, eval=TRUE}
+mean(mat)
+```
+:::
+
+## Design-Based Code {.scrollable}
+
+What is the theoretical population mean that generated these values?
+
+. . .
+
+$$
+E[Y] = \sum_{i=1}^{N} y\times P(Y=y) = \sum_{i=1}^{N} y \times 1/N \\
+$$
+
+::: {.fragment}
+```{r, echo=TRUE, eval=TRUE}
+sum(0:400 * 1/401)
+```
+:::
+
+:::{.fragment}
+
+$$
+E[Y] = \frac{0+400}{2} = 200
+$$
+
+
+
+[Wikipedia](https://en.wikipedia.org/wiki/Discrete_uniform_distribution)
+
+:::
 
 ## Design-Based Code 
 
 ### Random Sampling
-```{r design.sim2, echo=TRUE, eval=TRUE}
+```{r, echo=TRUE, eval=TRUE}
   n = 10
   y = sample(
              c(mat),
@@ -770,11 +822,10 @@ mat
 
 ::: {.fragment}
 
-### Estimator for the population mean
+### Estimator for this truth's population mean
 
-```{r design.sim4, echo=TRUE, eval=TRUE}  
+```{r, echo=TRUE, eval=TRUE}  
   mean(y)
-
 ```
 
 :::
@@ -798,16 +849,16 @@ combs(N, n)
 Get every combination and then calculate the mean for each sample of 10
 
 ```{r sampling dist2, eval=TRUE, echo=TRUE, cache=TRUE}
-  set.seed(5435)
+  set.seed(5411)
   all.combs = utils::combn(c(mat), 
-                           n
+                           n,
+                           simplify = TRUE
                            )
   dim(all.combs)
   mean.all.combs = apply(all.combs,
                          2,
                          mean
                          )
-  
 ```
 
 ## Design-Based Code
@@ -820,7 +871,10 @@ Get every combination and then calculate the mean for each sample of 10
        breaks=10,
        xlab="Means"
        )
+legend("topright",legend=c("Truth","Mean of means"),lwd=3,col=c(2,3))
 abline(v=mean(mat),col=2,lwd=3)
+abline(v=mean(mean.all.combs),col=3,lwd=3,lty=3)
+
 ```
 
 
@@ -830,9 +884,10 @@ OR, we can sample enough times to approximate it
 
 ```{r sampling dist3, eval=TRUE, echo=TRUE, cache=TRUE}
   set.seed(54352)
-  sim.sampling.dist=replicate(2000,
+  sim.sampling.dist=replicate(3000,
                               sample(c(mat),n)
                               )
+  
   dim(sim.sampling.dist)
   mean.samples = apply(sim.sampling.dist,2,mean)
 ```
@@ -843,16 +898,19 @@ OR, we can sample enough times to approximate it
   hist(mean.all.combs,
        freq=FALSE, 
        main="Sampling Distributiuon of the Mean",
-       breaks=10,
+       breaks=20,
        xlab="Means"
        )
   hist(mean.samples,
        add=TRUE,
        freq=FALSE,
        col=grDevices::adjustcolor("red", alpha.f=0.5),
-       breaks=10
+       breaks=20
        )
-  abline(v=mean(mat),col=2,lwd=3)
+  # legend("topright",legend=c("Truth","Mean of means"),lwd=3,col=c(2,3))
+  abline(v=mean(mat),col=3,lwd=3)
+  abline(v=mean(mean.samples),col=4,lwd=3,lty=3)
+
   legend("topright",lwd=5,col=c(grDevices::adjustcolor("black", alpha.f=0.5),grDevices::adjustcolor("red", alpha.f=0.5)),legend = c("Complete", "Approximated"))
 ```
 
@@ -931,8 +989,9 @@ $P(y_{2}|y_{1}) = P(y_{2})$
   lambda = 200
 
   mat.fn = function(lambda){matrix(
-                                   rpois(N, lambda=lambda),
-                                   nrow=5, ncol=5
+                                   rpois(N, lambda = lambda),
+                                   nrow = 5, 
+                                   ncol = 5
                                   )
                            }
 ```
@@ -944,7 +1003,7 @@ $P(y_{2}|y_{1}) = P(y_{2})$
   n.sim = 1000
   list.mat = replicate(n.sim, 
                        mat.fn(lambda), 
-                       simplify=FALSE
+                       simplify = FALSE
                        )
   length(list.mat)
 ```
