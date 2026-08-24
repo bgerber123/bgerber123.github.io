@@ -377,7 +377,7 @@ Know the *why* of your decisions
 
 ### 
 
-![Question Mark](../img/question.png){fig-align="center" width="200"}
+![](../img/question.png){fig-align="center" width="200"}
 
 
 ## [RStudio]{style="color:green;"}
@@ -610,5 +610,5 @@ temp1=patch.size20.species.scaled.mat.center.route[s,which(route==route.id[i])]
 
 ## 
 
-![Question Mark](../img/question.png){fig-align="center" width="300"}
+![](../img/question.png){fig-align="center" width="300"}
 
