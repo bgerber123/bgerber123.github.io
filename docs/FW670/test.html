@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Untitled – Brian D. Gerber</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0dae33556e06936b61e81b5092568542.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+</head>
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Brian D. Gerber</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lab/index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../FW670/index.html"> 
+<span class="menu-text">FW670</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../FW552/index.html"> 
+<span class="menu-text">FW552</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ep25z9AAAAAJ&amp;hl=en"> <i class="bi bi-google" role="img">
+</i> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.researchgate.net/profile/Brian-Gerber-4"> <i class="bi bi-r-square-fill" role="img">
+</i> 
+<span class="menu-text">RG</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bgerber123"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:brian.gerber@colostate.edu"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#class-stuff" id="toc-class-stuff" class="nav-link active" data-scroll-target="#class-stuff"><span style="color:#078BCD;">Class Stuff</span></a></li>
+  <li><a href="#class-stuff-1" id="toc-class-stuff-1" class="nav-link" data-scroll-target="#class-stuff-1"><span style="color:#078BCD;">Class Stuff</span></a></li>
+  <li><a href="#what-is-this-course" id="toc-what-is-this-course" class="nav-link" data-scroll-target="#what-is-this-course"><span style="color:#078BCD;">What is this course?</span></a></li>
+  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment"><span style="color:#078BCD;">Assessment</span></a></li>
+  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project"><span style="color:#078BCD;">Project</span></a></li>
+  <li><a href="#course-learning-objectives" id="toc-course-learning-objectives" class="nav-link" data-scroll-target="#course-learning-objectives"><span style="color:#078BCD;">Course Learning Objectives</span></a></li>
+  <li><a href="#why-is-this-class-useful" id="toc-why-is-this-class-useful" class="nav-link" data-scroll-target="#why-is-this-class-useful"><span style="color:#078BCD;">Why is this class useful?</span></a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span style="color:#078BCD;">Software</span></a></li>
+  <li><a href="#why-learn-to-code" id="toc-why-learn-to-code" class="nav-link" data-scroll-target="#why-learn-to-code"><span style="color:#078BCD;">Why learn to code?</span></a></li>
+  <li><a href="#why-use-r" id="toc-why-use-r" class="nav-link" data-scroll-target="#why-use-r"><span style="color:#078BCD;">Why use R?</span></a></li>
+  <li><a href="#why-use-rstudio" id="toc-why-use-rstudio" class="nav-link" data-scroll-target="#why-use-rstudio"><span style="color:#078BCD;">Why use RStudio?</span></a></li>
+  <li><a href="#type-of-modeling" id="toc-type-of-modeling" class="nav-link" data-scroll-target="#type-of-modeling"><span style="color:#078BCD;">Type of Modeling</span></a></li>
+  <li><a href="#statistics-in-the-modern-age" id="toc-statistics-in-the-modern-age" class="nav-link" data-scroll-target="#statistics-in-the-modern-age"><span style="color:#078BCD;">Statistics in the Modern Age</span></a></li>
+  <li><a href="#coding-in-the-modern-age" id="toc-coding-in-the-modern-age" class="nav-link" data-scroll-target="#coding-in-the-modern-age"><span style="color:#078BCD;">Coding in the Modern Age</span></a></li>
+  <li><a href="#how-do-you-use-generative-ai" id="toc-how-do-you-use-generative-ai" class="nav-link" data-scroll-target="#how-do-you-use-generative-ai"><span style="color:#078BCD;">How do you use generative AI?</span></a></li>
+  <li><a href="#a-graduate-students-dilemma" id="toc-a-graduate-students-dilemma" class="nav-link" data-scroll-target="#a-graduate-students-dilemma"><span style="color:#078BCD">A Graduate Student’s Dilemma</span></a></li>
+  <li><a href="#learning" id="toc-learning" class="nav-link" data-scroll-target="#learning"><span style="color:#078BCD;">Learning</span></a></li>
+  <li><a href="#our-aim" id="toc-our-aim" class="nav-link" data-scroll-target="#our-aim"><span style="color:#078BCD">Our Aim</span></a></li>
+  <li>
+<a href="#think-statistically" id="toc-think-statistically" class="nav-link" data-scroll-target="#think-statistically"><span style="color:#078BCD">Think Statistically</span></a>
+  <ul class="collapse">
+<li><a href="#know" id="toc-know" class="nav-link" data-scroll-target="#know">Know…</a></li>
+  </ul>
+</li>
+  <li><a href="#why-is-statistics-and-ecological-modeling-so-difficult" id="toc-why-is-statistics-and-ecological-modeling-so-difficult" class="nav-link" data-scroll-target="#why-is-statistics-and-ecological-modeling-so-difficult"><span style="color:#078BCD">Why is statistics and ecological modeling so difficult?</span></a></li>
+  <li><a href="#my-background" id="toc-my-background" class="nav-link" data-scroll-target="#my-background"><span style="color:#078BCD">My Background</span></a></li>
+  <li><a href="#my-background-1" id="toc-my-background-1" class="nav-link" data-scroll-target="#my-background-1"><span style="color:#078BCD">My Background</span></a></li>
+  <li><a href="#science-practice" id="toc-science-practice" class="nav-link" data-scroll-target="#science-practice"><span style="color:#078BCD">Science Practice</span></a></li>
+  <li><a href="#teaching-philosophy" id="toc-teaching-philosophy" class="nav-link" data-scroll-target="#teaching-philosophy"><span style="color:#078BCD">Teaching Philosophy</span></a></li>
+  <li><a href="#course-website" id="toc-course-website" class="nav-link" data-scroll-target="#course-website"><span style="color:#078BCD">Course Website</span></a></li>
+  <li>
+<a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <ul class="collapse">
+<li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul>
+</li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span style="color:green;">RStudio</span></a></li>
+  <li>
+<a href="#the-language-of-r" id="toc-the-language-of-r" class="nav-link" data-scroll-target="#the-language-of-r"><span style="color:green;">The language of R</span></a>
+  <ul class="collapse">
+<li><a href="#objects" id="toc-objects" class="nav-link" data-scroll-target="#objects"><span style="color:blue;"><strong>Objects</strong></span></a></li>
+  </ul>
+</li>
+  <li>
+<a href="#the-language-of-r-1" id="toc-the-language-of-r-1" class="nav-link" data-scroll-target="#the-language-of-r-1"><span style="color:green;">The language of R</span></a>
+  <ul class="collapse">
+<li><a href="#objects-1" id="toc-objects-1" class="nav-link" data-scroll-target="#objects-1"><span style="color:blue;"><strong>Objects</strong></span></a></li>
+  </ul>
+</li>
+  <li><a href="#the-language-of-r-2" id="toc-the-language-of-r-2" class="nav-link" data-scroll-target="#the-language-of-r-2"><span style="color:green;">The language of R</span></a></li>
+  <li>
+<a href="#the-language-of-r-3" id="toc-the-language-of-r-3" class="nav-link" data-scroll-target="#the-language-of-r-3"><span style="color:green;">The language of R</span></a>
+  <ul class="collapse">
+<li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span style="color:blue;"><strong>Functions</strong></span></a></li>
+  </ul>
+</li>
+  <li><a href="#the-language-of-r-4" id="toc-the-language-of-r-4" class="nav-link" data-scroll-target="#the-language-of-r-4"><span style="color:green;">The language of R</span></a></li>
+  <li><a href="#some-useful-functions" id="toc-some-useful-functions" class="nav-link" data-scroll-target="#some-useful-functions"><span style="color:green;">Some useful functions</span></a></li>
+  <li><a href="#some-useful-functions-1" id="toc-some-useful-functions-1" class="nav-link" data-scroll-target="#some-useful-functions-1"><span style="color:green;">Some useful functions</span></a></li>
+  <li><a href="#some-useful-functions-2" id="toc-some-useful-functions-2" class="nav-link" data-scroll-target="#some-useful-functions-2"><span style="color:green;">Some useful functions</span></a></li>
+  <li><a href="#code-organization" id="toc-code-organization" class="nav-link" data-scroll-target="#code-organization"><span style="color:green;">Code Organization</span></a></li>
+  <li><a href="#better" id="toc-better" class="nav-link" data-scroll-target="#better"><span style="color:green;">Better…</span></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  </ul><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="test.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Untitled</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="class-stuff" class="level2"><h2 class="anchored" data-anchor-id="class-stuff"><span style="color:#078BCD;">Class Stuff</span></h2>
+<style type="text/css">
+
+code.r{
+  font-size: 30px;
+}
+</style>
+<ul>
+<li><p><strong>Instructor:</strong> Brian Gerber</p></li>
+<li>
+<p><strong>Classroom</strong>: NR 243</p>
+<ul>
+<li>Lecture/Lab/Discussion</li>
+</ul>
+</li>
+<li><p><strong>When</strong>: Mo 11am - 12:15pm and Fr 10am - 1pm</p></li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>
+<p><strong>My Office</strong>: 202A Wagar, Colorado Cooperative Research Unit</p>
+<ul>
+<li><p>Office hours: TU 1:30pm - 2:30pm and by appointment</p></li>
+<li><p>brian.gerber@colostate.edu</p></li>
+</ul>
+</li>
+</ul></section><section id="class-stuff-1" class="level2"><h2 class="anchored" data-anchor-id="class-stuff-1"><span style="color:#078BCD;">Class Stuff</span></h2>
+<ul>
+<li>
+<p><strong>Computers</strong>: Bring laptop to class (especially Friday)</p>
+<ul>
+<li>Software/R Packages should be installed prior to lab (posted on website)</li>
+</ul>
+</li>
+<li>
+<p><strong>Registration</strong>:</p>
+<ul>
+<li>670-001 (CRN 77992) and FW 670-L01 (CRN 77993)</li>
+</ul>
+</li>
+</ul></section><section id="what-is-this-course" class="level2"><h2 class="anchored" data-anchor-id="what-is-this-course"><span style="color:#078BCD;">What is this course?</span></h2>
+<p>A mix of…</p>
+<ul>
+<li>statistics</li>
+<li>modeling</li>
+<li>math / notation</li>
+<li>coding</li>
+<li>science philosophy</li>
+<li>wildlife ecology and conservation</li>
+</ul></section><section id="assessment" class="level2"><h2 class="anchored" data-anchor-id="assessment"><span style="color:#078BCD;">Assessment</span></h2>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Assessment Components</th>
+<th>Percentage of Grade</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Course Engagement</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Lab Assignments</td>
+<td>40%</td>
+</tr>
+<tr class="odd">
+<td>Discussions</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Quizzes</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>Project</td>
+<td>30%</td>
+</tr>
+</tbody>
+</table></section><section id="project" class="level2"><h2 class="anchored" data-anchor-id="project"><span style="color:#078BCD;">Project</span></h2>
+<ol type="1">
+<li><p>independent research project - highlighting a modeling application, data/code transparency, and communication of results</p></li>
+<li><p>group development of a lecture and lab case-study that showcases a statistical application relevant to animal ecology and conservation</p></li>
+</ol>
+<p><a href="../FW670/index.html#tab-proj">* more on the main site (5th tab)</a></p>
+</section><section id="course-learning-objectives" class="level2"><h2 class="anchored" data-anchor-id="course-learning-objectives"><span style="color:#078BCD;">Course Learning Objectives</span></h2>
+<p>Upon successful completion of this course students will be able to:</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>think ‘statistically’</p></li>
+<li><p>read quantitative ecology literature</p></li>
+<li><p>write code to fit and interpret complex statistical models relevant to wildlife ecology and conservation</p></li>
+<li><p>communicate statistical approaches and results</p></li>
+</ul>
+</div>
+</section><section id="why-is-this-class-useful" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="why-is-this-class-useful"><span style="color:#078BCD;">Why is this class useful?</span></h2>
+<ul>
+<li><p>Able to read modern ecological literature</p></li>
+<li><p>Understand what you are doing when using data and models; <strong>coding/statistics/modeling are related but not the same</strong></p></li>
+<li><p>Statistical modeling and coding skills are highly marketable</p></li>
+<li><p>Taking control of your analyses</p></li>
+<li><p>Collaborate with colleagues/statisticians</p></li>
+</ul></section><section id="software" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="software"><span style="color:#078BCD;">Software</span></h2>
+<div id="fig-R-RStudio-logos" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full"><div aria-describedby="fig-R-RStudio-logos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="..\img/logosR.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-R-RStudio-logos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: R and RStudio logos
+</figcaption></figure>
+</div>
+</section><section id="why-learn-to-code" class="level2"><h2 class="anchored" data-anchor-id="why-learn-to-code"><span style="color:#078BCD;">Why learn to code?</span></h2>
+<div class="fragment">
+<ul>
+<li>efficiency</li>
+<li>transparency</li>
+<li>flexibility in application</li>
+<li>shareable</li>
+<li>marketable skill</li>
+<li>needed for publications</li>
+</ul>
+</div>
+</section><section id="why-use-r" class="level2"><h2 class="anchored" data-anchor-id="why-use-r"><span style="color:#078BCD;">Why use R?</span></h2>
+<div class="fragment">
+<ul>
+<li>open-source and free</li>
+<li>small total user base / large in ecology and statistics</li>
+<li>lots of resources online</li>
+<li>data management (meh)</li>
+<li>statistics</li>
+<li>plotting / graphics</li>
+</ul>
+</div>
+</section><section id="why-use-rstudio" class="level2"><h2 class="anchored" data-anchor-id="why-use-rstudio"><span style="color:#078BCD;">Why use RStudio?</span></h2>
+<ul>
+<li>Makes using R easier</li>
+<li><a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Projects (file mgmt)</a></li>
+<li>
+<a href="https://www.rstudio.com/products/shiny/">R Shiny</a>: Interactive online apps</li>
+<li>
+<a href="https://rmarkdown.rstudio.com/">R Markdown</a>: Interactive documents</li>
+<li>
+<a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto</a>: interactive articles, websites, blog, …</li>
+<li>
+<a href="https://posit.co/">Posit</a> - Certified B corp</li>
+</ul></section><section id="type-of-modeling" class="level2"><h2 class="anchored" data-anchor-id="type-of-modeling"><span style="color:#078BCD;">Type of Modeling</span></h2>
+<ul>
+<li><p>parametric</p></li>
+<li><p>probabilistic</p></li>
+<li><p>generative</p></li>
+<li><p>inferential and/or predictive</p></li>
+</ul></section><section id="statistics-in-the-modern-age" class="level2"><h2 class="anchored" data-anchor-id="statistics-in-the-modern-age"><span style="color:#078BCD;">Statistics in the Modern Age</span></h2>
+<p>. . .</p>
+<center>
+<span style="color:#FF0000"><em>
+"The theory and practice of computer-age statistics are, for the most part, a case of new wine in old bottles: The fundamental tenets of good
+statistical thinking have not changed, but their implementation has."</em></span> <br><span>- Cox and Efron, Sci. Adv. 2017;3: e1700768.</span>
+</center>
+</section><section id="coding-in-the-modern-age" class="level2"><h2 class="anchored" data-anchor-id="coding-in-the-modern-age"><span style="color:#078BCD;">Coding in the Modern Age</span></h2>
+<ul>
+<li><p>Software changes all the time</p></li>
+<li><p>Code will become obsolete</p></li>
+<li><p>Base R functions change slower than packages</p></li>
+<li><p>Document/Annotate code and publish it online</p></li>
+<li><p>Organize your files! Use sub-folders</p></li>
+</ul>
+<!-- ## [File management]{style="color:#078BCD;"} --><!-- **Project Folder** --><!-- *Subfolders:* --><!--   - data --><!--   - outputs --><!--   - plots --><!--   - R --></section><section id="how-do-you-use-generative-ai" class="level2"><h2 class="anchored" data-anchor-id="how-do-you-use-generative-ai"><span style="color:#078BCD;">How do you use generative AI?</span></h2>
+</section><section id="a-graduate-students-dilemma" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="a-graduate-students-dilemma"><span style="color:#078BCD">A Graduate Student’s Dilemma</span></h2>
+<p><strong>You need to know….</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>field techniques</li>
+<li>logistics / planning</li>
+<li>people/advisor management</li>
+<li>institutional bureaucracy</li>
+<li>ecological theory</li>
+<li>wildlife mgmt principles</li>
+<li>conservation biology principles</li>
+<li>study design</li>
+<li>data management</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>public speaking</li>
+<li>independent and team work</li>
+<li>graphic/visual arts</li>
+<li>‘the literature’</li>
+<li>the job market</li>
+<li>how to write a manuscript/thesis</li>
+<li>writing/sharing coding</li>
+<li>statistical modeling</li>
+<li>…</li>
+</ul>
+</div>
+</div>
+</section><section id="learning" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="learning"><span style="color:#078BCD;">Learning</span></h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/learning.graph.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="margin-caption">XY visualization of students and knowledge</figcaption></figure>
+</div>
+<div style="text-align: center;">
+<p><span style="color:red;">I do not know where you are starting</span></p>
+</div>
+</section><section id="our-aim" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="our-aim"><span style="color:#078BCD">Our Aim</span></h2>
+<section id="what-model-did-you-fit-why-how" class="level4 page-columns page-full"><h4 class="anchored" data-anchor-id="what-model-did-you-fit-why-how">What model did you fit? Why? How?</h4>
+<div class="r-stack page-columns page-full">
+<div class="fragment page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/modeling.knowledge0.png" class="figure-img" height="580"></p>
+<figcaption class="margin-caption">Extremes of how and what models get fit</figcaption></figure>
+</div>
+</div>
+<div class="fragment page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/modeling.knowledge.png" class="figure-img" height="580"></p>
+<figcaption class="margin-caption">Extremes of how and what models get fit full</figcaption></figure>
+</div>
+</div>
+</div>
+</section></section><section id="think-statistically" class="level2"><h2 class="anchored" data-anchor-id="think-statistically"><span style="color:#078BCD">Think Statistically</span></h2>
+<section id="know" class="level3"><h3 class="anchored" data-anchor-id="know">Know…</h3>
+<div class="incremental">
+<ul class="incremental">
+<li><p>your objective in fitting a model</p></li>
+<li><p>the model and its properties (not just the name)</p></li>
+<li><p>how to interpret ALL the parameters</p></li>
+<li><p>how the parameters are being optimized</p></li>
+<li>
+<p>the consequences of your modeling decisions</p>
+<ul class="incremental">
+<li>requires reading statistical literature</li>
+<li>requires evaluating assumptions yourself</li>
+</ul>
+</li>
+</ul>
+</div>
+</section></section><section id="why-is-statistics-and-ecological-modeling-so-difficult" class="level2"><h2 class="anchored" data-anchor-id="why-is-statistics-and-ecological-modeling-so-difficult"><span style="color:#078BCD">Why is statistics and ecological modeling so difficult?</span></h2>
+</section><section id="my-background" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="my-background"><span style="color:#078BCD">My Background</span></h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/me.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Brian doing fieldwork</figcaption></figure>
+</div>
+</section><section id="my-background-1" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="my-background-1"><span style="color:#078BCD">My Background</span></h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/me2.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Contributing to workshops</figcaption></figure>
+</div>
+</section><section id="science-practice" class="level2"><h2 class="anchored" data-anchor-id="science-practice"><span style="color:#078BCD">Science Practice</span></h2>
+<div style="text-align: center;">
+<p><strong>I am a pragmatist</strong></p>
+</div>
+<p>. . .</p>
+<div style="text-align: center;">
+<p>There are many ways to do <strong><em>great</em></strong> science</p>
+</div>
+<p>. . .</p>
+<div style="text-align: center;">
+<p>Disciplines have conventions</p>
+</div>
+<p>. . .</p>
+<div style="text-align: center;">
+<p>There are foundations of scientific and statistical learning</p>
+</div>
+<p>. . .</p>
+<div style="text-align: center;">
+<p>Know the <em>why</em> of your decisions</p>
+</div>
+<p>. . .</p>
+<div style="text-align: center;">
+<p><strong>Ask lots of questions to everybody all the time</strong></p>
+</div>
+</section><section id="teaching-philosophy" class="level2"><h2 class="anchored" data-anchor-id="teaching-philosophy"><span style="color:#078BCD">Teaching Philosophy</span></h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Learning is a choice (in each moment)</p></li>
+<li><p>An inclusive environment is paramount for learning</p></li>
+<li><p>Communication is key</p></li>
+<li><p>Everyone has something to teach and something to learn</p></li>
+<li><p>Struggle is good. Solving problems leads to learning</p></li>
+<li><p>BUT….</p></li>
+</ul>
+</div>
+<!-- ## And you... -->
+<!-- <span style="color:#078BCD"> -->
+<!-- <ul> -->
+<!-- <li>What is your name?</li> -->
+<!-- <li>What is your program/project/field of study?</li> -->
+<!-- <li>Why do you want to learn more about 'quantitative techniques'?</li> -->
+<!-- <li>What is your first emotion when you hear **statistics**, **math**, or **coding**?</li> -->
+<!-- </ul> -->
+<!-- </span> -->
+</section><section id="course-website" class="level2"><h2 class="anchored" data-anchor-id="course-website"><span style="color:#078BCD">Course Website</span></h2>
+<ul>
+<li>
+<strong>Lectures, code, readings, schedule, etc.</strong>
+<ul>
+<li><a href="https://bgerber123.github.io/FW670/">https://bgerber123.github.io/FW670/</a></li>
+</ul>
+</li>
+<li>
+<strong>Homework, Discussion Posts, Quizzes, and Grading: </strong>
+<ul>
+<li><a href="https://colostate.instructure.com/courses/228738">https://colostate.instructure.com/courses/228738</a></li>
+</ul>
+</li>
+</ul></section><section id="section" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="section"></h2>
+<section id="section-1" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="section-1"></h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/question.png" class="img-fluid figure-img" width="200"></p>
+<figcaption class="margin-caption">Question Mark</figcaption></figure>
+</div>
+</section></section><section id="rstudio" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="rstudio"><span style="color:green;">RStudio</span></h2>
+<p>What does each panel do?</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/rstudio.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption class="margin-caption">RStudio 4 panels</figcaption></figure>
+</div>
+</section><section id="the-language-of-r" class="level2"><h2 class="anchored" data-anchor-id="the-language-of-r"><span style="color:green;">The language of R</span></h2>
+<p>. . .</p>
+<section id="objects" class="level3"><h3 class="anchored" data-anchor-id="objects"><span style="color:blue;"><strong>Objects</strong></span></h3>
+<p>A storage place for information; stored in the “Environment”</p>
+<p><br></p>
+<div class="fragment">
+<p><em>‘Attributes’</em> describes the structure or information of the object</p>
+</div>
+</section></section><section id="the-language-of-r-1" class="level2"><h2 class="anchored" data-anchor-id="the-language-of-r-1"><span style="color:green;">The language of R</span></h2>
+<section id="objects-1" class="level3"><h3 class="anchored" data-anchor-id="objects-1"><span style="color:blue;"><strong>Objects</strong></span></h3>
+<div id="code-object">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># y is an 'object' that is assigned the value 3</span></span>
+<span><span class="va">y</span> <span class="op">=</span> <span class="fl">3</span></span>
+<span><span class="va">y</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</div>
+</section></section><section id="the-language-of-r-2" class="level2"><h2 class="anchored" data-anchor-id="the-language-of-r-2"><span style="color:green;">The language of R</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="values" class="level3"><h3 class="anchored" data-anchor-id="values"><span style="color:blue;"><strong>Values</strong></span></h3>
+<ul>
+<li>numeric</li>
+<li>integer</li>
+<li>character</li>
+<li>factor</li>
+</ul></section>
+</div><div class="column" style="width:50%;">
+<section id="objects-2" class="level3"><h3 class="anchored" data-anchor-id="objects-2"><span style="color:blue;"><strong>Objects</strong></span></h3>
+<ul>
+<li>vector</li>
+<li>matrix</li>
+<li>array</li>
+<li>list</li>
+<li>dataframe</li>
+<li>S3, S4, S5, and beyond</li>
+</ul></section>
+</div>
+</div>
+</section><section id="the-language-of-r-3" class="level2"><h2 class="anchored" data-anchor-id="the-language-of-r-3"><span style="color:green;">The language of R</span></h2>
+<section id="functions" class="level3"><h3 class="anchored" data-anchor-id="functions"><span style="color:blue;"><strong>Functions</strong></span></h3>
+<p>‘does stuff’; creates or manipulates objects</p>
+<div class="fragment">
+<p><em>‘Arguments’</em> are the types of things a function is asking for; the inputs</p>
+</div>
+</section></section><section id="the-language-of-r-4" class="level2"><h2 class="anchored" data-anchor-id="the-language-of-r-4"><span style="color:green;">The language of R</span></h2>
+<p><span style="color:orange;"><strong>object</strong></span> = <span style="color:blue;">function</span>(<span style="color:purple;">argument1</span> = input1, <span style="color:purple;">argument1</span> = input2)</p>
+<p><br></p>
+<p>. . .</p>
+<p><span style="color:orange;"><strong>object</strong></span> = <span style="color:blue;">function</span>(input1, input2)</p>
+<p><br></p>
+<p>. . .</p>
+<p><span style="color:orange;"><strong>this</strong></span> = <span style="color:blue;">sign</span>(<span style="color:purple;">x</span> = -5)</p>
+<p><br></p>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sign.html">sign</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sign.html">sign</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+</div>
+</section><section id="some-useful-functions" class="level2"><h2 class="anchored" data-anchor-id="some-useful-functions"><span style="color:green;">Some useful functions</span></h2>
+<p>for loops</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">save.this</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">save.this</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">=</span>  <span class="fl">1</span><span class="op">-</span><span class="va">i</span></span>
+<span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="some-useful-functions-1" class="level2"><h2 class="anchored" data-anchor-id="some-useful-functions-1"><span style="color:green;">Some useful functions</span></h2>
+<p>Create your own function</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my.mean.func</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span></span>
+<span>                           <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span>                          <span class="op">}</span></span>
+<span></span>
+<span><span class="fu">my.mean.func</span><span class="op">(</span></span>
+<span>             <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">7</span>,<span class="fl">2</span>,<span class="fl">7</span>,<span class="fl">1</span><span class="op">)</span></span>
+<span>             <span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.333333</code></pre>
+</div>
+</div>
+</section><section id="some-useful-functions-2" class="level2"><h2 class="anchored" data-anchor-id="some-useful-functions-2"><span style="color:green;">Some useful functions</span></h2>
+<p>apply/sapply/lapply/vapply</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mat</span><span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>,nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">mat</span>, <span class="fl">2</span>, FUN <span class="op">=</span> <span class="va">median</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0.8207114445  0.2910498919  0.1592611844 -0.3495255364 -0.0912471395
+ [6] -0.3580363572 -0.2128188577  0.8444110383 -0.0001707873 -0.4168540467</code></pre>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">mat</span>, <span class="fl">2</span>, FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">x</span><span class="op">&gt;</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span>  </span>
+<span><span class="op">}</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0.3 0.0 0.3 0.0 0.1 0.2 0.2 0.2 0.2 0.1</code></pre>
+</div>
+</div>
+</div>
+</section><section id="code-organization" class="level2"><h2 class="anchored" data-anchor-id="code-organization"><span style="color:green;">Code Organization</span></h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>Hierarchical code organization</p>
+<ul class="incremental">
+<li>code structure using indenting</li>
+<li>top –&gt; bottom execution</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>. . .</p>
+<p><strong>Help! My code doesn’t work</strong>…</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>                <span class="va">cor.sp.route.cor</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/vector.html">vector</a></span><span class="op">(</span><span class="st">"list"</span>,<span class="va">n.species</span><span class="op">)</span></span>
+<span><span class="va">cor.sp</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="va">n.species</span><span class="op">)</span></span>
+<span>            <span class="kw">for</span><span class="op">(</span><span class="va">s</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">n.species</span><span class="op">)</span><span class="op">{</span></span>
+<span><span class="va">route</span><span class="op">=</span><span class="va">new.cov.species.long.scaled</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">routeID</span></span>
+<span><span class="va">cor.sp</span><span class="op">[</span><span class="va">s</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">patch.size20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="op">]</span>,<span class="va">patch.count20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="op">]</span><span class="op">)</span></span>
+<span>    <span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">nroutes</span><span class="op">)</span><span class="op">{</span></span>
+<span><span class="va">temp1</span><span class="op">=</span><span class="va">patch.size20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">route</span><span class="op">==</span><span class="va">route.id</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span><span class="op">]</span></span>
+<span>  <span class="va">temp2</span><span class="op">=</span><span class="va">patch.count20.species.scaled.mat.center.route</span><span class="op">[</span>,<span class="op">]</span><span class="op">[</span><span class="va">s</span>,<span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">route</span><span class="op">==</span><span class="va">route.id</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span><span class="op">]</span></span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">temp1</span><span class="op">)</span><span class="op">&gt;</span><span class="fl">5</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">cor.sp.route.cor</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">cor.sp.route.cor</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span>,<span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">temp1</span>,<span class="va">temp2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span><span class="op">}</span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="better" class="level2"><h2 class="anchored" data-anchor-id="better"><span style="color:green;">Better…</span></h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create Storage objects</span></span>
+<span>  <span class="va">cor.sp.route.cor</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/vector.html">vector</a></span><span class="op">(</span><span class="st">"list"</span>,<span class="va">n.species</span><span class="op">)</span></span>
+<span>  <span class="va">cor.sp</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="va">n.species</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#loop over species    </span></span>
+<span>  <span class="kw">for</span><span class="op">(</span><span class="va">s</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">n.species</span><span class="op">)</span></span>
+<span>    <span class="op">{</span></span>
+<span>      <span class="va">route</span> <span class="op">=</span> <span class="va">new.cov.species.long.scaled</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">routeID</span></span>
+<span>                        </span>
+<span>      <span class="va">cor.sp</span><span class="op">[</span><span class="va">s</span><span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">patch.size20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="op">]</span>,</span>
+<span>                      <span class="va">patch.count20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="op">]</span></span>
+<span>                      <span class="op">)</span></span>
+<span>        <span class="co"># loop over species and routes                    </span></span>
+<span>        <span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">nroutes</span><span class="op">)</span></span>
+<span>          <span class="op">{</span></span>
+<span>            <span class="va">temp1</span> <span class="op">=</span> <span class="va">patch.size20.species.scaled.mat.center.route</span><span class="op">[</span><span class="va">s</span>,<span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">route</span><span class="op">==</span><span class="va">route.id</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span><span class="op">]</span></span>
+<span>            <span class="va">temp2</span> <span class="op">=</span> <span class="va">patch.count20.species.scaled.mat.center.route</span><span class="op">[</span>,<span class="op">]</span><span class="op">[</span><span class="va">s</span>,<span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">route</span><span class="op">==</span><span class="va">route.id</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span><span class="op">]</span></span>
+<span>            <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">temp1</span><span class="op">)</span><span class="op">&gt;</span><span class="fl">5</span><span class="op">)</span><span class="op">{</span></span>
+<span>                                <span class="va">cor.sp.route.cor</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span> <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">cor.sp.route.cor</span><span class="op">[[</span><span class="va">s</span><span class="op">]</span><span class="op">]</span>,<span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">temp1</span>,<span class="va">temp2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>                                <span class="op">}</span> <span class="co">#End if statement </span></span>
+<span>          <span class="op">}</span> <span class="co">#End routes loop</span></span>
+<span>                       </span>
+<span>    <span class="op">}</span> <span class="co">#End species loop</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="section-2" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="section-2"></h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="..\img/question.png" class="img-fluid figure-img" width="300"></p>
+<figcaption class="margin-caption">Question Mark</figcaption></figure>
+</div>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block">© 2026 Brian D. Gerber CC BY-SA 4.0</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
