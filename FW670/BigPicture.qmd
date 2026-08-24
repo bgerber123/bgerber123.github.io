@@ -893,7 +893,6 @@ OR, we can sample enough times to approximate it
 ```
 
 ## Design-Based Code 
-
 ```{r sampling dist4, eval=TRUE, echo=FALSE}
   hist(mean.all.combs,
        freq=FALSE, 
