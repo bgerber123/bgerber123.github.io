@@ -16398,14 +16398,14 @@
     "href": "FW670/Probability.html#pmf-1",
     "title": "Probability",
     "section": "PMF",
-    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n$$ f(y|) = [y|]=\n    \\theta^{y}\\times(1-\\theta)^{1-y}\n$$\n\n\\(\\theta\\) = P(Y = 1) = 0.2\n\n\n$$ f(y|) = [y|]\n    = 0.2^{1}\\times(1-0.2)^{1-1} \n$$\n\n\n$$ f(y|) = [y|]=\n    = 0.2 \\times (0.8)^{0} = 0.2\n$$"
+    "text": "PMF\nStill need to define \\(f()\\), our PMF for \\(y \\in  \\{0,1\\}\\)\n\nThe Bernoulli distribution\n\\[\nf(y|\\theta) = [y|\\theta]=\\theta^{y}\\times(1-\\theta)^{1-y}\n\\]\n\n\\[\\theta = P(Y = 1) = 0.2 \\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta] = 0.2^{1}\\times(1-0.2)^{1-1}\n\\]\n\n\n\\[\nf(y|\\theta) = [y|\\theta]= 0.2 \\times (0.8)^{0} = 0.2\n\\]"
   },
   {
     "objectID": "FW670/Probability.html#bernoulli-pmf",
     "href": "FW670/Probability.html#bernoulli-pmf",
     "title": "Probability",
     "section": "Bernoulli PMF",
-    "text": "Bernoulli PMF\n$$ f(y|) = [y|]=\n    \\theta^{y}\\times(1-\\theta)^{1-y}\n$$\nSample space support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
+    "text": "Bernoulli PMF\n\\[\nf(y|\\theta) = [y|\\theta] = \\theta^{y}\\times(1-\\theta)^{1-y}\n\\]\nSample space support (\\(\\Omega\\)):\n\n\\(y \\in  \\{0,1\\}\\)\n\n\nParameter space support (\\(\\Theta\\)):\n\n\\(\\theta \\in  [0,1]\\)\nGeneral: \\(\\theta \\in \\Theta\\)"
   },
   {
     "objectID": "FW670/Probability.html#bernoulli-pmf-code",
@@ -16426,7 +16426,7 @@
     "href": "FW670/Probability.html#binomial-pmf",
     "title": "Probability",
     "section": "Binomial PMF",
-    "text": "Binomial PMF\nThe Bernoulli is a special case of the Binomial Distribution.\n$$ f(y|) = [y|]=\n    {N\\choose y} \\theta^{y}\\times(1-\\theta)^{N-y}\n$$\n\n\\(N\\) = total trials / tagged and released animals\n\n\n\n\\(y\\) = number of successes / number of alive animals at the of the study."
+    "text": "Binomial PMF\nThe Bernoulli is a special case of the Binomial Distribution.\n\\[\nf(y|\\theta) = [y|\\theta]=\n        {N\\choose y} \\theta^{y}\\times(1-\\theta)^{N-y}\n\\]\n\n\\(N\\) = total trials / tagged and released animals\n\n\n\n\\(y\\) = number of successes / number of alive animals at the of the study."
   },
   {
     "objectID": "FW670/Probability.html#binomial-pmf-code",

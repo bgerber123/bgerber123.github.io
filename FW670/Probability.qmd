@@ -126,7 +126,7 @@ Which value (y) is observed is predictable. Need to know *parameters* ($\theta$)
 
 <br>
 
-## Random Variables
+## Random Variables {.scrollable}
 
 $$
 y \sim f(y|\theta)
@@ -218,7 +218,7 @@ Data (e.g., $y$) are random variables that can be described by probability distr
 
 Data (e.g., $y$) are random variables that can be described by probability functions where the unknown parameters (e.g., $\theta$) are also random variables that have probability functions that describe them.
 
-## Random Variables 
+## Random Variables {.scrollable}
 
 $$
 y \sim  f(y|\boldsymbol{\theta})\\
@@ -385,38 +385,28 @@ Example,
 
 Still need to define $f()$, our PMF for $y \in  \{0,1\}$
 
-
 . . .
 
 The [Bernoulli distribution](https://en.wikipedia.org/wiki/Bernoulli_distribution)
 
 $$
-f(y|\theta) = [y|\theta]=
- 
-        \theta^{y}\times(1-\theta)^{1-y}
- 
+f(y|\theta) = [y|\theta]=\theta^{y}\times(1-\theta)^{1-y}
 $$
 
 ::: {.fragment}
-$\theta$ = P(Y = 1) = 0.2 
+$$\theta = P(Y = 1) = 0.2 $$
 :::
 
 ::: {.fragment}
 $$
-f(y|\theta) = [y|\theta]
-  
-        = 0.2^{1}\times(1-0.2)^{1-1} 
-  
+f(y|\theta) = [y|\theta] = 0.2^{1}\times(1-0.2)^{1-1} 
 $$
 :::
 
 
 ::: {.fragment}
 $$
-f(y|\theta) = [y|\theta]=
-  
-        = 0.2 \times (0.8)^{0} = 0.2
-  
+f(y|\theta) = [y|\theta]= 0.2 \times (0.8)^{0} = 0.2
 $$
 :::
 
@@ -424,10 +414,7 @@ $$
 ## Bernoulli PMF
 
 $$
-f(y|\theta) = [y|\theta]=
-  
-        \theta^{y}\times(1-\theta)^{1-y}
-  
+f(y|\theta) = [y|\theta] = \theta^{y}\times(1-\theta)^{1-y}
 $$
 
 
@@ -495,9 +482,7 @@ The Bernoulli is a special case of the [Binomial Distribution](https://en.wikipe
 
 $$
 f(y|\theta) = [y|\theta]=
-
         {N\choose y} \theta^{y}\times(1-\theta)^{N-y}
-
 $$
 
 ::: {.fragment}
