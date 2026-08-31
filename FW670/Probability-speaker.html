@@ -319,7 +319,7 @@ The values observed can be understand based on the frequency within the <span st
 <section id="frequency-probabilities" class="slide level2 scrollable">
 <h2>Frequency / Probabilities</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">hist</span>(y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">25</span>),<span class="at">main=</span>main,<span class="at">xlab=</span><span class="st">"y / Counts of plants in a plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">hist</span>(y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">25</span>),<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="dv">0</span>, <span class="at">to=</span><span class="dv">25</span>, <span class="at">by =</span> <span class="dv">1</span>),<span class="at">main=</span>main,<span class="at">xlab=</span><span class="st">"y / Counts of plants in a plot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="Probability_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>

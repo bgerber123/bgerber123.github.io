@@ -18981,7 +18981,7 @@
     "href": "FW670/Probability.html#frequency-probabilities",
     "title": "Probability",
     "section": "Frequency / Probabilities",
-    "text": "Frequency / Probabilities\n\nhist(y, xlim=c(0,25),main=main,xlab=\"y / Counts of plants in a plot\")"
+    "text": "Frequency / Probabilities\n\nhist(y, xlim=c(0,25),breaks = seq(from=0, to=25, by = 1),main=main,xlab=\"y / Counts of plants in a plot\")"
   },
   {
     "objectID": "FW670/Probability.html#frequency-probabilities-1",
