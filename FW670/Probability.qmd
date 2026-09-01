@@ -792,6 +792,11 @@ qnorm(p = 0.02275,
 
 ::: 
 
+. . .
+
+Note: watch the equal sign and check the function when it is a PMF
+
+
 <!-- How do we use quantiles/probabilities to justify 95\% confidencen intervals? -->
 
 <!-- ```{r,echo=FALSE,eval=TRUE} -->
@@ -1010,10 +1015,6 @@ pgamma(q = 40,
 ```
 
 <br>
-
-. . .
-
-Note: [watch the equal sign and check the function!](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/GammaDist.html)
 
 
 ## Gamma Distribution {.scrollable}
