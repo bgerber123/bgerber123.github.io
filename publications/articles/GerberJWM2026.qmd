@@ -1,0 +1,29 @@
+---
+title: "Monitoring wolverine (Gulo gulo) distribution across the western United States for regional and national assessment"
+type: "article"
+author: "Brian D Gerber, Jacob S. Ivan, Paul M. Lukacs, Jeffrey C. Lewis, Nathan P. Kluge, Cory E. Mosby, Kalysta I. Adkins, Justin A. Gude, Kimberly Asmus Hersey, Robert M. Inman, Robert A. Long, Heather O'Brien, Andrew C. Gygli, Eric Odell, Benjamin J. Padilla, John S. Waller, Kathleen A. Carroll"
+year: "2026"
+publication: "Journal of Wildlife Management"
+doi: "https://doi.org/10.1002/jwmg.70270"
+materials: "https://github.com/bgerber123/Wolverine-WAFWA-Survey2022-Manuscript"
+download: "../publications/Gerber et al 2026 JWM.pdf"
+toc: false
+categories:
+  - monitoring
+  - camera trapping
+  - occupancy
+  - mammal
+  - Bayesian
+  - journal article
+  - species distribution
+---
+
+## Citation 
+
+> Gerber, B. D., J. S. Ivan, P. M. Lukacs, J. C. Lewis, N. P. Kluge, C. E. Mosby, K. I. Adkins, J. A. Gude, K. A. Hersey, R. M. Inman, et al. 2026. Monitoring wolverine (Gulo gulo) distribution across the western United States for regional and national assessment. Journal of Wildlife Management e70270. https://doi.org/10.1002/jwmg.70270
+
+## Abstract
+
+Population monitoring of at-risk species is fundamental to directing effective and timely conservation actions. For wide-ranging threatened species, such as the wolverine (Gulo gulo), monitoring across multiple jurisdictions is necessary to track their distribution to inform collaborative regional and national management and policy. We repeated a landscape-scale, multi-jurisdictional remote camera survey first completed in 2017 to evaluate wolverine occupancy throughout the western United States in 2022. Our objectives were to 1) expand the sampling frame to include areas of potential recolonization (Colorado, Oregon, Utah, USA), 2) evaluate whether overall and state-specific occurrence has changed from 2017 in the common sampling frame of Idaho, Montana, Washington, and Wyoming, USA, and 3) evaluate spatial drivers of wolverine occurrence in 2022. From a sampling frame of 770 sites (15 × 15-km cells) identified as potential wolverine habitat, 229 sites were surveyed in 2022; no wolverines were detected in Colorado, Oregon, or Utah. We predicted wolverine occupancy and 95% highest posterior density intervals (HPDI) in states with detections to be 0.47 (0.37–0.58) in Idaho, 0.35 (0.21–0.52) in Montana, 0.29 (0.09–0.54) in Washington, and 0.35 (0.27–0.47) in Wyoming. We found weak to moderate evidence of a small decline in overall occupancy (𝜓
+) from the common sampling frame (2017: 0.44 [0.37–0.52]; 2022: 0.39 [0.30–0.49]; P(𝜓2022<𝜓2017
+) = 0.81), driven by lower occurrences in Montana and Washington. However, this finding is complicated by a change in detection methodology that may have contributed to lower occurrences in Montana and Washington. Lastly, we found strong support (probability of an effect >0.95) that within areas of predicted wolverine habitat, increasing habitat connectivity and the proportion of a site that was previously burned (2001–2015) were associated with increased wolverine occupancy, while increasing normalized difference vegetation index (NDVI) was associated with decreased wolverine occupancy. Our expanded sampling frame provides the means to track wolverine occupancy and range extent—including recolonizations and contractions—across the western United States, providing insights at both the state and national scales.
