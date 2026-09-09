@@ -23,11 +23,11 @@ pre {
 
 # **Report**
 
-**Main Take-Away:** 
+**Main Take-Away: PLEASE FILL THIS IN** 
 
 ## Context
 
-In this report, I evaluate sampling design trade-offs in estimating total white-tailed deer abundance in the state of Rhode Island, USA. I consider two extremes of deer density - 1 deer/mi$^2$ and 20 deer/mi$^2$. For each deer density, I use a random sampling process to choose blocks of 1 mi$^2$ to conduct a forward-looking infrared-red (FLIR) count of deer. The count is presumed to be done by helicopter with a FLIR camera attachment. Flights are assumed to occur in the winter and at night to increase the heat signature of deer. As such, detection probability within a block is assumed to be one (this however should be evaluated). I evaluated three sample sizes of 10, 20, and 40 blocks. The objective is to find the sample size that minimizes costs while being highly certain (0.90 probability) that the total population estimate is within 10% of the true value. This study design evaluation is done by using design-based sampling and inference. 
+In this report, I evaluate sampling design trade-offs in estimating total white-tailed deer abundance in the state of Rhode Island, USA. I consider two extremes of deer density - 1 deer/mi$^2$ and 20 deer/mi$^2$. For each deer density, I use a random sampling process to choose blocks of 1 mi$^2$ to conduct a forward-looking infrared-red (FLIR) count of deer. The count is presumed to be done by helicopter with a FLIR camera attachment. Flights are assumed to occur in the winter and at night to increase the heat signature of deer. As such, detection probability within a block is assumed to be one (this however should be evaluated). I evaluated three sample sizes of 10, 20, and 40 blocks. The objective is to find the sample size that minimizes costs while being highly certain (0.90 probability) that the total population abundance estimate is within 10% of the true value. This study design evaluation is done by using design-based sampling and inference. 
 
 ## Setup
 
@@ -118,7 +118,7 @@ The assumed true total population size for both scenarios are `r sum(deer1)` and
   
 ## Simulation
 
-I will consider sampling both populations with three different samples sizes (10, 20, and 40 blocks). For each sample size, I will simulate random samples 1000 times. This will not evaluate all possible combinations of samples for each size, but it will be enough to approximate the sampling distribution. This can be evaluated by looking at the symmetry of the sampling distribution. Highly skewed and non-symmetric sampling distributions will require a higher number of simulations. 
+I will consider sampling both populations with three different samples sizes (10, 20, and 40 blocks). For each sample size, I will simulate random samples 1000 times. This will not evaluate all possible combinations of samples for each size, but it will hopefully be enough to approximate the sampling distribution. This can be evaluated by looking at the symmetry of the sampling distribution. Highly skewed and non-symmetric sampling distributions will require a higher number of simulations. 
 ```{r sample sizes, eval = TRUE, echo=TRUE}
 # Setup the simulation factors
   sample.sizes = c(10, 20, 40)
@@ -136,7 +136,6 @@ I will consider sampling both populations with three different samples sizes (10
 The important code is the use of the function `grts` that selects a spatially balanced sample from the areal sampling frame and the estimation of the mean deer size for each cell using the function `mean`.  There is no model used to estimate and predict the total deer abundance. Rather, we will be using the sample mean as the estimator. 
 
 ```{r sim, eval = TRUE, echo=TRUE, cache=TRUE, cache.path="cache/", results='hide'}
-
 # Here, I am demonstrating random sampling one time and for one sample size and then using that random sample to estimate the total deer population for low and high scenarios.
   sample.size = 10
   eqprob = grts(RI, n_base = sample.size)
@@ -161,14 +160,14 @@ Looking at the sampling distributions for low and high deer density, we see ....
 The range (min-max) of possible total deer population estimates at low and high deer density for sample sizes (10, 20, and 40) are: 
 
 
-To specifically address the objective of this study, I used Monte Carlo integration to estimate the probability a single total deer density would be within 10% of truth. I found....
+To specifically address the objective of this study, I used Monte Carlo integration to estimate the probability a single total deer abundance would be within 10% of truth. I found....
 
 
 ## Conclusion
 
 <span style="color: red;">**From Brian:**</span> Please fill out the conclusion using my sentence below as a start.
 
-Considering low and high deer densities, I found that the objective to be highly certain (0.90 probability) that a single estimate of the total population estimate is within 10% of the true value....
+Considering low and high deer densities, I found that the objective to be highly certain (0.90 probability) that a single estimate of the total population abundance estimate is within 10% of the true value....
 
 # **Appendix**
 
