@@ -612,7 +612,7 @@ ggplot(confdata, aes(y = estimate, x = " ", col = method)) +
 ```
 
 
-## Prairie Dog Calling 
+## Prairie Dog Calling {.scrollable}
 
 ```{r, echo=FALSE, include=TRUE, eval=TRUE}  
 n = 100
