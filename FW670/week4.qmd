@@ -8,9 +8,14 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
--   Lecture: <a href="/FW670/glm1.qmd">Generalized Linear Models I</a>
+-   Lecture: <a href="/FW670/glm1.qmd">Generalized Linear Models I</a> (<a href="/FW670/glm1.pdf">PDF</a>)
 
--   Lecture Code: <a href="/FW670/glm1.R">glm1.R</a> (<a href="/FW670/glm1.pdf">PDF</a>)
+-   Lecture Code: <a href="/FW670/glm1.R">glm1.R</a> and  <a href="/FW670/elephant.study2.csv">data file</a>
+
+
+
+
+
 
 -   Install R packages:
 
