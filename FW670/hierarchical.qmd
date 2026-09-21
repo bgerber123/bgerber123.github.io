@@ -11,7 +11,7 @@ format:
 
 ## Objectives
 
-<!-- knitr::purl("./FW670/hierarchical.qmd", output="./classfiles/glmmlab/hierarchical.R") -->
+<!-- knitr::purl("./FW670/hierarchical.qmd", output="./FW670/hierarchical.R") -->
 
 -   General Use and Language
 -   Examples
