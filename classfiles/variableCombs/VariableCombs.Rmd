@@ -72,6 +72,13 @@ dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
 summary(glm(weight ~ age.yeras.sc * site, data = dat))
 ```
 
+### 6. Is this a statement about data or the parameters? 
+
+$$
+[\textbf{y}|\mathbf{\theta}]
+$$
+
+### 7. Would you like your statistical analysis make a statement about your data or about the parameters?
 
 <br>
 <br>
