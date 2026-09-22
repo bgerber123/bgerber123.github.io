@@ -18686,8 +18686,8 @@
     "objectID": "FW670/week5.html#week-5",
     "href": "FW670/week5.html#week-5",
     "title": "Brian D. Gerber",
-    "section": "Week 5",
-    "text": "Week 5\nDay 1\nToday\nIn Class Discussion Questions for Fieberg, Ch. 8 and Tredennick et al. 2021\n\nSummarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nIn-Class Group Exercise\nVariable Combinations\nAssigned\n\nWalk through this website on hierarchical models\nBackground Reading (not required):\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\nDay 2 (lab)\nToday\n\nLecture: Hierarchical Models (PDF)\nLecture Code: hierarchical.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\nAssigned\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
+    "section": "",
+    "text": "Summarize exploration, inference/explain, and prediction (Table 8.1) or Table 2\nWhat is stepwise selection? How does it perform?\nWhy fit only one model? Drawbacks? How to decide on how many variables?\nWhat is AIC?\nWhat is Regularization using penalization?\n“Model selection is the Black Hole of Statistics”. What do you think?\nCovariate selection vs. model selection?\n\nVariable Combinations\n\n\nWalk through this website on hierarchical models\n\nBackground Reading (not required):\n\n\n Gelman and Hill Ch. 11 and 12.\n\n\n\n\n\n\nLecture: Hierarchical Models (PDF)\nLecture Code: hierarchical.R\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"glmmTMB\",\"broom.mixed\",\"lme4\"))\n\n\n\n\n Kery and Kellner Ch. 2, sections 2.7-2.10."
   },
   {
     "objectID": "FW670/week6.html",
