@@ -68,8 +68,8 @@ glm(weight ~ age.years * site)
 ### 5. Define what each coefficient means. Make sure to make clear the units.
 
 ```{r echo=TRUE,eval=TRUE}
-dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
-summary(glm(weight ~ age.yeras.sc * site, data = dat))
+dat$age.years.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
+summary(glm(weight ~ age.years.sc * site, data = dat))
 ```
 
 ### 6. Is this a statement about data or the parameters? 

@@ -409,18 +409,18 @@ categorical and continuous variable over an interaction?</h3>
 <div id="define-what-each-coefficient-means.-make-sure-to-make-clear-the-units." class="section level3">
 <h3>5. Define what each coefficient means. Make sure to make clear the
 units.</h3>
-<pre class="r"><code>dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
-summary(glm(weight ~ age.yeras.sc * site, data = dat))</code></pre>
+<pre class="r"><code>dat$age.years.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
+summary(glm(weight ~ age.years.sc * site, data = dat))</code></pre>
 <pre><code>## 
 ## Call:
-## glm(formula = weight ~ age.yeras.sc * site, data = dat)
+## glm(formula = weight ~ age.years.sc * site, data = dat)
 ## 
 ## Coefficients:
 ##                         Estimate Std. Error t value Pr(&gt;|t|)    
 ## (Intercept)              14574.8      241.9  60.245  &lt; 2e-16 ***
-## age.yeras.sc              -706.4      263.3  -2.682  0.00861 ** 
+## age.years.sc              -706.4      263.3  -2.682  0.00861 ** 
 ## siteSite 2                -188.1      342.0  -0.550  0.58367    
-## age.yeras.sc:siteSite 2   1173.1      347.5   3.375  0.00107 ** 
+## age.years.sc:siteSite 2   1173.1      347.5   3.375  0.00107 ** 
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 

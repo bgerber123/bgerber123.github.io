@@ -88,8 +88,8 @@ head(model.matrix(weight~age.years*site,data=dat))
 ### 5. Define what each coefficient means. Make sure to make clear the units.
 
 ```{r echo=TRUE,eval=TRUE}
-dat$age.yeras.sc = scale(dat$age.years,center=TRUE, scale=FALSE)
-summary(glm(weight~age.yeras.sc*site,data=dat))
+dat$age.years.sc = scale(dat$age.years,center=TRUE, scale=FALSE)
+summary(glm(weight~age.years.sc*site,data=dat))
 ```
 
 <b><span style="color:purple">Intercept = the mean weight of elephants at the observed mean age of elephants at site 1</span></b>
@@ -101,4 +101,24 @@ summary(glm(weight~age.yeras.sc*site,data=dat))
 <b><span style="color:purple">age.yeras.sc:siteSite 2 - the change in the slope or one year change in mean weight of elephants at site 2 from site 1</span></b>
 
 <br>
+
+
+### 6. Is this a statement about data or the parameters? 
+
+$$
+[\textbf{y}|\mathbf{\theta}]
+$$
+
+
+<b><span style="color:purple"> It is a statement about the data. If we know what $\theta$ is than it is the probability of observing the data ($\textbf{y}$), given $\theta$. If we do not know what $\theta$ is than it is likelihood of observing the data ($\textbf{y}$), given our guess of $\theta$.
+</span></b>
+
+### 7. Would you like your statistical analysis make a statement about your data or about the parameters?
+
+<b><span style="color:purple"> I personally want to know about the probability of an unknown parameter, given the data we observe because it is the reason why I am fitting a model to data. I can learn about parameters either way, but the parameters is my focus and quantity of interest, so I'd rather make statements directly about them.
+</span></b>
+
 <br>
+
+
+
