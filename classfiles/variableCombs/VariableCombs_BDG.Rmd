@@ -88,7 +88,7 @@ head(model.matrix(weight~age.years*site,data=dat))
 ### 5. Define what each coefficient means. Make sure to make clear the units.
 
 ```{r echo=TRUE,eval=TRUE}
-dat$age.years.sc = scale(dat$age.years,center=TRUE, scale=FALSE)
+dat$age.years.sc = scale(dat$age.years,center=TRUE, scale=TRUE)
 summary(glm(weight~age.years.sc*site,data=dat))
 ```
 

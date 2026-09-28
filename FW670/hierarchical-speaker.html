@@ -206,7 +206,7 @@
 </section>
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
-<!-- knitr::purl("./FW670/hierarchical.qmd", output="./classfiles/glmmlab/hierarchical.R") -->
+<!-- knitr::purl("./FW670/hierarchical.qmd", output="./FW670/hierarchical.R") -->
 <ul>
 <li>General Use and Language</li>
 <li>Examples</li>
@@ -737,7 +737,7 @@ Conditional model:
 <p><span class="math display">\[
 \begin{align*}
 y_{i} \sim&amp; \text{Poisson}(\lambda_{i})\\
-\text{log}(\lambda_{i}) =&amp; \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + \mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}}\\
+\text{log}(\lambda_{i}) =&amp; \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + (\mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}})\times cov_i\\
 \beta_{\text{veg}_j} \sim&amp; \text{Normal}(0, \sigma^2_{\text{veg}})\\
 \beta_{\text{cov}_j} \sim&amp; \text{Normal}(0, \sigma^2_{\text{cov}})
 \end{align*}

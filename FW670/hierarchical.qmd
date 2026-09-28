@@ -614,7 +614,7 @@ j = vegetation type
 $$
 \begin{align*}
 y_{i} \sim& \text{Poisson}(\lambda_{i})\\
-\text{log}(\lambda_{i}) =& \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + \mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}}\\
+\text{log}(\lambda_{i}) =& \mu_{\text{veg}} + \beta_{\text{veg}_{j[i]}} + (\mu_{\text{cov}}+ \beta_{\text{cov}_{j[i]}})\times cov_i\\
  \beta_{\text{veg}_j} \sim& \text{Normal}(0, \sigma^2_{\text{veg}})\\
  \beta_{\text{cov}_j} \sim& \text{Normal}(0, \sigma^2_{\text{cov}})
 \end{align*}
