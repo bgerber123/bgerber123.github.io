@@ -8,35 +8,51 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### Discuss XXX; led by XXX.
+##### Discussion led by Galen and Cristina
 
-##### Discuss Northrup et al. 2022
+##### Discussion led by Ryan and Lindsay
 
 #### [Assigned]{style="color:red;"}
- -   Readings for next class:
-     - A plain language review for modeling animal habitat-selection 
+-   Readings for next class: 
+    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
 
-The assigned reading is a draft manuscript that I am looking for feedback. Please feel free to make comments directly on the google doc. I am looking for areas of confusion, areas of flow or introduction of concepts that may be out of order, and areas that we can cut/de-emphasize, and areas that need expanding. This manuscript is not so much a review, but a modern synthesis to give some important context/opinion and then point the reader to modern papers.
+- Background Reading (not required):
+  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
+  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
 
  
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of draft manuscript**
+##### **In Class Discussion of Royle et al. 2018**
 
--   Downloads: <a href="/classfiles/habsel/habsel.lab.zip">Files</a>
+- How are SCR data different than a typical capture-recapture study?
+
+- What is an 'activity center'?
+
+- What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume?
+
+- What are the two components that control 'detection probability'?
+
+- If using a SCR model, how might your sampling strategy change?
+
+- What is the exact meaning of abundance in this type of model?
+
+#####
+
+-   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Lab Files</a>
+
 
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("terra","raster","amt","MASS","sp"))
+install.packages(c("secr","sf"))
 ```
 
-
 #### [Assigned]{style="color:red;"}
-- <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a>
+<!-- - <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a> -->
 
 
 

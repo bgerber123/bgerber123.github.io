@@ -8,77 +8,60 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of XXXX, led by XXX and XXX**
+-   Please bring your laptop today
 
-- What was the objective of the modeling, and how do you feel the authors did in addressing the objective?
+##### **In Class Discussion led by Maddie and Camilla**
 
-- How did the authors address potential problems that come from using presence-only data (e.g., spatial autocorrelation, pseudo-absences)? Was this effort adequate?
-
-- What other aspects of ecological processes are not addressed by the objectives? Could these have been incorporated in this study?
-
-- Were their any findings you found particularly important? Anything that stood out to you, good or bad, in the methodology or interpretation?
-
-- Is the study area and scale of analysis relevant to each of the 4 salamanders?
-
-- Are the prediction maps useful or relevant for salamander conservation?
-
-<br>
+  <br>
  
-##### **In Class Discussion of Guillera-Arroita et al. 2015**
-
-- What is a SDM?
-
-- What are they used for?
-
-- What are the types of data used and how does that change the inference/predictions?
-
-- What are the three joint probabilities that determine whether a site is recorded as a detection in a data set?
-
-- What is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?
-
-- What are some specific model types or algorithms commonly used for fitting a SDM?
-
-<!-- -   Lecture (Code): <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a> -->
-
-<!-- -   Install R packages: -->
-
-<!-- ```{r, eval=FALSE, echo=TRUE} -->
-<!-- # CRAN packages -->
-<!-- install.packages(c("brms","bayesplot")) -->
-<!-- ``` -->
+##### **In Class: Simulating and fitting a Bayesian GLMM**
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class:
-     - <a href="/readings/">Student led paper</a>
-     - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch 7 (sections 7.1-7.3)</a>
+     - <a href="/readings/Betts et al. 2022.pdf">Betts et al. 2022</a>
+     - <a href="/readings/Betts et al. 2020.pdf">Betts et al. 2020</a>
+     - <a href="/readings/Latif et al. 2024.pdf">Latif et al. 2024</a>
 
  
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of student led manuscript, led by X and X**
+- Brian is absent today.
 
--   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
+- No lab assigned.
 
--   Downloads: <a href="/classfiles/cjslab/cjslabfiles.zip">Files</a>
+##### **In Class Discussion:** Dr. Quresh Latif, research scientist from [Bird Conservancy of the Rockies](https://www.birdconservancy.org/about-us/staff/), will be visiting (10am-11:30am) to lead a discussion on his paper <a href="/readings/Latif et al. 2024.pdf">Designing count-based studies in a world of hierarchical models</a>.
 
--   Install R packages:
+**Some questions to think about**:
 
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("stringr","coda","runjags"))
-```
+- How do "hierarchical models place greater demands on data"?
+- What exactly is a "sub-model"?
+- The authors distinguish between ecological processes and observation processes. Why is it important to model these processes separately, and what problems arise when they are confounded?
+- Under what conditions does detectability confound estimation of environmental relationships?
+- What advantages and disadvantages are there between data from unmarked and marked populations?
+- What influences one's choice of 'population metric'? For example, how should researchers choose between abundance, density, occupancy, or occupancy dynamics as the primary population metric for a study?
+- How can poor sampling design affect the validity of a hierarchical model, even when the statistical model appropriately accounts for imperfect detection?
 
+##### **In Class Discussion:** Dr. Mattew Betts, Professor from Oregon State University [Department of Forest Ecosystems & Society](https://directory.forestry.oregonstate.edu/people/betts-matthew), will be visiting (11:45am-12:45am) to lead a discussion on his papers <a href="/readings/Betts et al. 2022.pdf">When are hypotheses useful in ecology and evolution?</a> and <a href="/readings/Betts et al. 2020.pdf">Squeezed by a habitat split</a>.
+
+**Some questions to think about**:
+
+- What is a dynamic occupancy model? Specifically what is 'settlement' and 'vacancy' in terms of the model and ecological meaning and why is this fundamentally different than modeling occupancy?
+
+- How did the authors test whether ocean conditions and old-forest loss worked together to affect murrelet occupancy?
+
+- How could murrelet movement between sites affect the model’s estimates of colonization and vacancy?
+
+- What are the advantages and disadvantages of using AICc to compare the different models in this study?
+
+- How did the authors ensure paramters converged?
 
 #### [Assigned]{style="color:red;"}
+-   Following the discussion, post on the dicussion board on  [canvas](https://colostate.instructure.com/courses/228738/discussion_topics/2507933).
 -   Readings for next class: 
-    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
-
-- Background Reading (not required):
-  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
-  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
-
+    -   <a href="/readings/">Student led discussion paper</a>
+    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
 
 
 

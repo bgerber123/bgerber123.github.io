@@ -36,11 +36,11 @@ Write a report that presents code and results that evaluates the below hypothese
 
 - Explore/present the data; use plots/histograms. Make summary (short) comments on what you see that is important
 - Write model notation or use equatiomatic
-- Fit the model with lm or glm to get MLEs and CI's. Define Type I error rate
-- Interpret results. Make statements about 'statistical clarity' and support or not for the hypotheses
+- Fit the model with lm or glm to get coefficients and their confidence intervals. Define what Type I error rate is and what value you are using
+- Interpret results, including what the estimated coefficients mean; make sure their units are clearly articulated. Make statements about 'statistical clarity' and support or not for the hypotheses
 - Make prediction plots
 - Evaluate model assumptions
-- Conclusions and caveats (think about what we have not considered)
+- Conclusions and caveats (think about what we have not considered, in terms of elephants and modeling choices)
 - Appendix: present a summary of the R packages you used using `grateful`.
 
 Throughout, add text around your code and results to allow the reader to follow your thinking. The text however should be minimal and to the point.

@@ -8,19 +8,28 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### Lecture XXX
+##### **In Class Discussion led by Emma	and DiDi**
 
-- <a href="/classfiles/IMlab/Nmixdataintegration.pptx">Lecture (updated) </a>
+##### **In Class Discussion of Guillera-Arroita et al. 2015**
 
-- <a href="/classfiles/IMlab/ipm_script.R">IPM Script </a>
+- What is a SDM?
 
+- What are they used for?
+
+- What are the types of data used and how does that change the inference/predictions?
+
+- What are the three joint probabilities that determine whether a site is recorded as a detection in a data set?
+
+- What is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?
+
+- What are some specific model types or algorithms commonly used for fitting a SDM?
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class:
-     - <a href="/readings/McCaffery et al. 2016.pdf">McCaffery et al. 2016 </a>
-     - <a href="/readings/Kery and Kellner ch20.pdf">Kery and Kellner ch20 (section 20.1) </a>
-
+     - <a href="/readings/Kery and Kellner ch20.pdf">Kery and Kellner ch20</a>
+     - <a href="/readings/Manica  et al. 2019.pdf">Manica  et al. 2019</a>
 - Background Reading (not required):
+  - <a href="/readings/Madsen and Royle 2023.pdf">Madsen and Royle 2023</a>
   - <a href="/readings/Kery et al 2018.pdf">Kery 2018</a>
   - <a href="/readings/Link et al 2018.pdf">Link et al 2018</a>
   - <a href="/readings/Barker et al 2018.pdf">Barker et al 2018</a>
@@ -29,8 +38,6 @@ title: ""
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
-
-##### **In Class Discussion of XXXX, led by XXX and XXX**
 
 -   Downloads: <a href="/classfiles/IMlab/IMLab.files.zip">Files</a>
 
@@ -42,11 +49,10 @@ install.packages(c("VGAM"))
 ```
 
 
-#### [Assigned]{style="color:red;"}
-- Readings for next class:
-  - <a href="/readings/Huggler et al. 2022.pdf"> Huggler et al. 2022 </a>
-  - <a href="/readings/Wittemyer et al. 2019.pdf"> Wittemyer et al. 2019 </a>
 
+#### [Assigned]{style="color:red;"}
+-   Readings for next class: 
+    - <a href="/readings/"> Student Assigned</a>
 
 
 

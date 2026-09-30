@@ -27,7 +27,7 @@ title: ""
 
 -   Fit models specified in the previous class
 
--   No lab to turn in next week.
+<!-- -   No lab to turn in next week. -->
 
 -   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
@@ -44,12 +44,17 @@ install.packages(c("brms","bayesplot"))
 
 -   Readings for next class:
     -   <a href="/readings/">Student led discussion paper</a>
-    -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a>
 
-- Background Reading (not required):
-  - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
-  - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
-  - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>.
+
+
+<!-- -   Readings for next class: -->
+<!--     -   <a href="/readings/">Student led discussion paper</a> -->
+<!--     -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a> -->
+
+<!-- - Background Reading (not required): -->
+<!--   - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a> -->
+<!--   - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>. -->
+<!--   - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>. -->
 
 
 

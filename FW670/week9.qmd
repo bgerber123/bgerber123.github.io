@@ -8,42 +8,24 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of Royle et al. 2018**
+##### **In Class Discussion led by James and Mairin**
 
-- How are SCR data different than a typical capture-recapture study?
+-   Board work defining the occupancy model hierarchically
 
-- What is an 'activity center'?
+<!-- -   Install R packages: -->
 
-- What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume?
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c()) -->
+<!-- ``` -->
 
-- What are the two components that control 'detection probability'?
-
-- If using a SCR model, how might your sampling strategy change?
-
-- What is the exact meaning of abundance in this type of model?
-
-#####
-
--   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Lab Files</a>
-
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("secr","sf"))
-```
-
-#### [Assigned]{style="color:red;"}
--   Readings for next class:
-    - <a href="/readings/Kery and Schaub Ch13.pdf">Kery and Schaub Ch13 (sections 13.1 to 13.4)</a>
-
+<!-- #### [Assigned]{style="color:red;"} -->
+<!-- -   Readings for next class: -->
+    
 
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
-
--   Board work defining the occupancy model hierarchically
 
 -   Downloads: <a href="/classfiles/occlab/hbocclab.zip">Lab Files</a>
 
@@ -54,18 +36,11 @@ install.packages(c("secr","sf"))
 install.packages(c("ubms","unmarked"))
 ```
 
+-   Readings for next class:
+    -   <a href="/readings/">Student led discussion paper</a>
+    -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a>
 
-#### [Assigned]{style="color:red;"}
-- Readings for next class:
-  - <a href="/readings/Zipkin and Saunders 2018.pdf">Zipkin and Saunders 2018 (lines 153-208, AKA section 3)</a>
-  - <a href="/readings/Zipkin et al. 2021.pdf">Zipkin et al. 2021</a>
-  - <a href="/readings/Powell and Gale 2015 Ch 18.pdf">Powell and Gale ch 18</a>
-
-
-<!-- - Background Reading (not required): -->
-
-
-
-
-
-
+- Background Reading (not required):
+  - <a href="/readings/Soley-Guardia et al. 2024.pdf">Soley-Guardia et al. 2024</a>
+  - <a href="/readings/Valavi et al. 2021.pdf"> Valavi et al. 2021 (assessment of modeling methods)</a>.
+  - <a href="/readings/Moudry et al. 2024.pdf"> Moudry et al. 2024 (data considerations)</a>.

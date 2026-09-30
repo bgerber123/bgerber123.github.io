@@ -39,23 +39,34 @@ Week                              |	Day|	Date   | 	Lecture Topic                
 &nbsp;                            |	Fr | 25-Sep	 | Hierarchical Models / GLMM              | Lab 5: GLMM       | Kery and Kellner Ch. 2.7-2.10 |                                
 <a href="/FW670/week6.qmd">6</a>  |	Tu | 29-Sep	 | Bayesian Inference                      |                   | Ellison 2004                  | Hobbs and Hooten Ch.5.;Fieberg Ch. 11 & 12 
 &nbsp;                            |	Fr | 2-Oct	 | Bayesian Inference and Computation      | Lab 6: Bayes; <br> Bayes Quiz  |                   |  Kurz, 2023                                
-<a href="/FW670/week7.qmd">7</a>  |	Tu | 6-Oct	 | Hierarchical Bayesian                   |                   |                               |                                            
-&nbsp;                            |	Fr | 9-Oct	 | Hierarchical Bayesian                   | Lab  7: HBayes    | Widmer et al 2021; Guillera-Arroita et al. 2015 | Soley-Guardia et al. 2024; Valavi et al. 2021 
-8                                 |	Tu | 13-Oct	 | Species Distribution Modeling           |                   | Kery and Schaub Ch 7          |                                             			
-&nbsp;                            |	Fr | 16-Oct	 | Mark Recapture                          | Lab 8: CJS        | Royle et al. 2018             |                                             			
-9                                 |	Tu | 20-Oct	 | Spatial Capture Recapture               |                   | Kery and Schaub Ch 13         |                                            
-&nbsp;                            |	Fr | 23-Oct	 | Hierarchical Bayesian Occupancy         | Lab 9:<br>HB Occu.| Zipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18  |
-10                                | Tu | 27-Oct  | N-Mixture and Integrated Data Models    |                   | McCaffery et al. 2016; Kery and Kellner Ch20         |                                               
-&nbsp;                            | Fr | 30-Oct	 | Integrated Data Models                  | Lab 10: ISDM      | Wittemyer et al. 2019; Huggler et al. 2022                               	
-11                                | Tu | 3-Nov	 | Animal Movement                         |                   |                               | Nathan et al 2008 and 2022; Signer et al 2018; and more  
-&nbsp;                            | Fr | 6-Nov	 | Animal Movement                         | Lab 11: AMT  | Smith et al. 2022; Northrup et al. 2022|
-12                                | Tu | 10-Nov	 | Habitat Selection                       |                   | Draft guidance paper          |              
-&nbsp;                            | Fr | 13-Nov	 | Habitat Selection                       | Lab 12: HabSel    | Wright et al 2020             |              
-13                                | Tu | 17-Nov	 | Community Modeling                      |                   |                               |              
-&nbsp;                            | Fr | 20-Nov	 |                                         | Lab 13:           |                           |              
+<a href="/FW670/week7.qmd">7</a>  |	Tu | 6-Oct	 | Hierarchical Bayesian                   |                   |           |
+&nbsp;                            |	Fr | 9-Oct	 | Hierarchical Bayesian                   | Lab  7: HBayes    | Student Assigned |
+<a href="/FW670/week8 .qmd">8</a> |	Tu | 13-Oct	 | Hierarchical Bayesian                   |                   | Betts et al. 2020, 2022; Latif et al. 2024 |   
+&nbsp;                            |	Fr | 16-Oct	 | Dr. Latif and Betts Discussion   |  Discussion Post  |  Student Paper and Kery and Schaub Ch13 (sections 13.1 to 13.4)  |   
+<a href="/FW670/week9 .qmd">9</a> |	Tu | 20-Oct	 | Hierarchical Bayesian Occupancy  |                   |          |                           
+&nbsp;                            |	Fr | 23-Oct	 | Hierarchical Bayesian Occupancy  | Lab 8:<br>HB Occu.| Student Assigned & Guillera-Arroita et al. 2015 | Soley-Guardia et al. 2024; Valavi et al. 2021  |
+<a href="/FW670/week10.qmd">10</a>| Tu | 27-Oct  | Species Distribution Modeling   |     |  Manica  et al. 2019 & Kery and Kellner Ch20| Madsen and Royle 2023
+&nbsp;                            | Fr | 30-Oct	 | N-Mixture / ISDM                       | Lab 9: IMLAB      | Student Assigned
+<a href="/FW670/week11.qmd">11</a>| Tu | 3-Nov	 | Discussion                       |      | Kery and Schaub Ch 7          | 
+&nbsp;                            | Fr | 6-Nov	 | Mark Recapture                          | Lab 10: CJS  | Student Assigned                 |
+<a href="/FW670/week12.qmd">12</a>| Tu | 10-Nov	 | Discussion                              |    | Royle et al 2018 | Borchers and Marques 2017; Royle et al 2011  
+&nbsp;                            | Fr | 13-Nov	 | Spatial Capture Recapture               | In class lab      |                           |              
+13                                | Tu | 17-Nov	 | Animal Movement                         | In class lab      |                               |              
+&nbsp;                            | Fr | 20-Nov	 | Habitat Selection                       |  In class lab    |                           |              
 14                                | Tu | 24-Nov	 | <span style="color:red">No Class</span> |                   |                               |              
 &nbsp;                            | Fr | 27-Nov	 | <span style="color:red">No Class</span> |                   |                               |              
 15                                | Tu | 1-Dec	 |  Group Project work|                    |                   |              
 &nbsp;                            | Fr | 4-Dec	 | Group Project work  |                   |                   |              
 16                                | Tu | 8-Dec	 | Present Group Project                   |                   |                               |              
 &nbsp;                            | Fr | 11-Dec	 | Present Group Project                   |                   |                               |              
+
+
+
+
+
+
+<!-- Zipkin and Saunders 2018; Zipkin et al. 2021; Powell and Gale Ch 18  -->
+<!-- McCaffery et al. 2016;  -->
+
+<!-- Animal Movement; Wittemyer et al. 2019; Huggler et al. 2022     V -->
+<!-- Nathan et al 2008 and 2022; Signer et al 2018; and more   -->
