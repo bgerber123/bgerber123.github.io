@@ -595,9 +595,9 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 
 ## The Prior
 
-::: {.incremental}
-
 -   The prior describes what we know about the parameter before we collect any data
+
+::: {.incremental}
 
 -   Priors can contain a lot of information  (<span style="color:purple">informative priors </span>) or very little (<span style="color:purple">diffuse priors </span>)
 
@@ -614,7 +614,6 @@ curve(dbeta(x, 1,1),xlim=c(0,1),lwd=5)
 
 <span style="color:purple">Use diffuse priors as a starting point</span>
 
-. . .
 
 It's fine to use diffuse priors as you develop your model but you should always prefer to use "appropriate, well-contructed informative priors" (Hobbs \& Hooten, 2015)
 
@@ -623,7 +622,6 @@ It's fine to use diffuse priors as you develop your model but you should always 
 
 <span style="color:purple">Use your "domain knowledge"</span>
 
-. . .
 
 We can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters.
 
@@ -631,7 +629,6 @@ We can often come up with weakly informative priors just by knowing something ab
 
 <span style="color:purple">Dive into the literature</span>
 
-. . .
 
 Find published estimates and use moment matching and other methods to convert published estimates into prior distributions
 
@@ -639,7 +636,6 @@ Find published estimates and use moment matching and other methods to convert pu
 
 <span style="color:purple">Visualize your prior distribution</span>
 
-. . .
 
 Be sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)
 
@@ -647,7 +643,6 @@ Be sure to look at the prior in terms of the parameters you want to make inferen
 
 <span style="color:purple">Do a sensitivity analysis</span>
 
-. . .
 
 Does changing the prior change your posterior inference? If not, don't sweat it. If it does, you'll need to return to point 2 and justify your prior choice
 
@@ -658,7 +653,7 @@ Does changing the prior change your posterior inference? If not, don't sweat it.
 
 $$
 \begin{align*}
-\textbf{y}_{i} \sim& \text{Bernoulli}(p_{i})\\
+y_{i} \sim& \text{Bernoulli}(p_{i})\\
 \text{logit}(p_{i}) =& \beta_0\\
 \beta_0 \sim& \text{Normal(0,100)}
 \end{align*}

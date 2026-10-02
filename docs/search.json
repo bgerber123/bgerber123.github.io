@@ -14473,42 +14473,42 @@
     "href": "FW670/bayesian.html#the-prior-2",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)\nNo such thing as a ‘non-informative’ prior\nDiffuse priors on one scale can be very informative on another"
+    "text": "The Prior\n\nThe prior describes what we know about the parameter before we collect any data\n\n\nPriors can contain a lot of information (informative priors ) or very little (diffuse priors )\nWell-constructed priors can also improve the behavior of our models (computational advantage)\nNo such thing as a ‘non-informative’ prior\nDiffuse priors on one scale can be very informative on another"
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-3",
     "href": "FW670/bayesian.html#the-prior-3",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nUse diffuse priors as a starting point\n\nIt’s fine to use diffuse priors as you develop your model but you should always prefer to use “appropriate, well-contructed informative priors” (Hobbs & Hooten, 2015)"
+    "text": "The Prior\nUse diffuse priors as a starting point\nIt’s fine to use diffuse priors as you develop your model but you should always prefer to use “appropriate, well-contructed informative priors” (Hobbs & Hooten, 2015)"
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-4",
     "href": "FW670/bayesian.html#the-prior-4",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nUse your “domain knowledge”\n\nWe can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters."
+    "text": "The Prior\nUse your “domain knowledge”\nWe can often come up with weakly informative priors just by knowing something about the range of plausible values of our parameters."
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-5",
     "href": "FW670/bayesian.html#the-prior-5",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nDive into the literature\n\nFind published estimates and use moment matching and other methods to convert published estimates into prior distributions"
+    "text": "The Prior\nDive into the literature\nFind published estimates and use moment matching and other methods to convert published estimates into prior distributions"
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-6",
     "href": "FW670/bayesian.html#the-prior-6",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nVisualize your prior distribution\n\nBe sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)"
+    "text": "The Prior\nVisualize your prior distribution\nBe sure to look at the prior in terms of the parameters you want to make inferences about (use simulation!)"
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-7",
     "href": "FW670/bayesian.html#the-prior-7",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nDo a sensitivity analysis\n\nDoes changing the prior change your posterior inference? If not, don’t sweat it. If it does, you’ll need to return to point 2 and justify your prior choice"
+    "text": "The Prior\nDo a sensitivity analysis\nDoes changing the prior change your posterior inference? If not, don’t sweat it. If it does, you’ll need to return to point 2 and justify your prior choice"
   },
   {
     "objectID": "FW670/bayesian.html#section-3",
@@ -19422,7 +19422,7 @@
     "href": "FW670/bayesian.html#the-prior-8",
     "title": "Bayes the way",
     "section": "The Prior",
-    "text": "The Prior\nPriors are mostly not invariant to transformation of scale\n\\[\n\\begin{align*}\n\\textbf{y}_{i} \\sim& \\text{Bernoulli}(p_{i})\\\\\n\\text{logit}(p_{i}) =& \\beta_0\\\\\n\\beta_0 \\sim& \\text{Normal(0,100)}\n\\end{align*}\n\\]"
+    "text": "The Prior\nPriors are mostly not invariant to transformation of scale\n\\[\n\\begin{align*}\ny_{i} \\sim& \\text{Bernoulli}(p_{i})\\\\\n\\text{logit}(p_{i}) =& \\beta_0\\\\\n\\beta_0 \\sim& \\text{Normal(0,100)}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "FW670/bayesian.html#the-prior-9",
