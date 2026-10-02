@@ -18736,14 +18736,14 @@
     "href": "FW670/week9.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Board work defining the occupancy model hierarchically\n\n\n\n\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Board work defining the occupancy model hierarchically\n\n\n\n\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\nReadings for next class:\n\nStudent led discussion paper\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods).\n\n Moudry et al. 2024 (data considerations)."
   },
   {
     "objectID": "FW670/week9.html#week-9",
     "href": "FW670/week9.html#week-9",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Board work defining the occupancy model hierarchically\n\n\n\n\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\n\nReadings for next class:\n\nZipkin and Saunders 2018 (lines 153-208, AKA section 3)\nZipkin et al. 2021\nPowell and Gale ch 18"
+    "text": "Board work defining the occupancy model hierarchically\n\n\n\n\nDownloads: Lab Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"ubms\",\"unmarked\"))\n\n\nReadings for next class:\n\nStudent led discussion paper\nGuillera‐Arroita et al. 2015\n\n\nBackground Reading (not required):\n\nSoley-Guardia et al. 2024\n\n Valavi et al. 2021 (assessment of modeling methods).\n\n Moudry et al. 2024 (data considerations)."
   },
   {
     "objectID": "FW670/week10.html",
