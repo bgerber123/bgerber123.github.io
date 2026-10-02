@@ -710,6 +710,25 @@ hist(plogis(x),main="probability-scale",xlab="Probability")
 
 [Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819)
 
+## The Prior
+
+<span style="color:purple">There are intermediate solutions</span>
+
+$$
+\begin{align*}
+\beta_0 \sim& \text{t(df = 7.763, ncp = 1.566)} \\
+\beta_0 \sim& \text{Cauchy(location = 0, scale = 2.5)} \\
+\beta_0 \sim& \text{Normal(location = 0, sd = 2.5)} \\
+\end{align*}
+$$
+df = degrees of freedom
+
+ncp = non-centrality parameter
+
+
+[Link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192819)
+
+
 
 
 ##

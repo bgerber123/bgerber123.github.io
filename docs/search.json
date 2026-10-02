@@ -20088,5 +20088,12 @@
     "title": "Brian D. Gerber",
     "section": "",
     "text": "Readings for next class:\n\nBackground Reading (not required):\n\nNathan et al 2008 - Foundational bit of science\nNathan et al. 2022 - Big data science\nSigner et al 2018 - amt R package \nCalabrese et al. 2016 - ctmm R packageguide\nSilva et al. 2021 - autocorrelated kernel density (AKDE) home range review\nMcClintock et al. 2018 - momentuHMM R package\n\n\n\nBackground Videos (not required):\n\n\nMovement Ecology Théo Michelot. February 7, 2022; Code\n\nIntro. Animal Movement Ecology - Josh Cullen\n\n\n\nBackground Resources (not required):\n\nAnimove Resources\nContinuous-time movement modeling\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"amt\",\"tidygraph\",\"ctmm\",\"ggraph\"))\n\n\n\nReadings for next class:\n\n Smith et al. 2022.pdf\nNorthrup et al. 2022 (Intro through ‘How are selection functions fit?’)"
+  },
+  {
+    "objectID": "FW670/bayesian.html#the-prior-11",
+    "href": "FW670/bayesian.html#the-prior-11",
+    "title": "Bayes the way",
+    "section": "The Prior",
+    "text": "The Prior\nThere are intermediate solutions\n\\[\n\\begin{align*}\n\\beta_0 \\sim& \\text{t(df = 7.763, ncp = 1.566)} \\\\\n\\beta_0 \\sim& \\text{Cauchy(location = 0, scale = 2.5)} \\\\\n\\beta_0 \\sim& \\text{Normal(location = 0, sd = 2.5)} \\\\\n\\end{align*}\n\\] df = degrees of freedom\nncp = non-centrality parameter\nLink"
   }
 ]
