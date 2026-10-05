@@ -12,6 +12,8 @@ title: ""
 
 -   Board work for statistical notation and JAGS syntax for Bayesian generalized linear models
 
+- Code example of fitting this model in [brms](./classfiles/hbayes/brms.fit.glm.r)
+
 #### [Assigned]{style="color:red;"}
  
  
