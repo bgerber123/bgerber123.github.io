@@ -12,6 +12,17 @@ title: ""
 
 -   Board work for statistical notation and JAGS syntax for Bayesian generalized linear models
 
+<!-- Note for Brian- today plan on writing the statistical notation for the Annamite rabbit model as a Bayesian GLM. Help wRite the 
+the JAGS notation to fit this model and ask the students to write the code and fit this model. Examine convergence. Do this model in JAGS
+and brms -->
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("brms","bayesplot"))
+```
+
 #### [Assigned]{style="color:red;"}
  
  
@@ -31,14 +42,17 @@ title: ""
 
 -   Downloads: <a href="/classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
 
+<!-- Notes for today. Expand on the Bayesian GLM model. First, write the syntax with the same model but with extra variance. Write out syntax for the hierarchical Bayesian GLM with fixed intercept and random slope. Then do the syntax for random intercept and random slope. Ask students to fit each of these models. They need to turn them into JAGS syntax. 
+-->
 
--   Install R packages:
+-   Lab: Submit a markdown report that describes the model and results for the model with a fixed intercept and random slopes for dist.human by protected area. The report should inlcude,
+    - statistical notation and JAGS syntax notation 
+    - traceplots with text visually assessing posterior convergence. 
+    - plots showing the posterior distributions (histograms or density plots) for each parameter. 
+    - a table of estimates of the difference between the slope for each protected area and the overall mean slope across protected areas; 
+      include a point estimate (mean/median/mode) and measures of uncertainty, e.g., Bayesian credible intervals, for each.
 
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("brms","bayesplot"))
-```
-
+- Download: [Annamite Rabbit Data](/classfiles/hbayes/rabbit.occ.data.csv)
 
 #### [Assigned]{style="color:red;"}
 

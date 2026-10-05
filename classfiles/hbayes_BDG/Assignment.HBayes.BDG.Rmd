@@ -1,0 +1,470 @@
+---
+title: "Hierarchical Bayesian GLM Assignment"
+author: "Brian D. Gerber"
+date: "2026-10-05"
+output: html_document
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+code.r{
+  font-size: 12px;
+}
+pre{
+  font-size: 14px; 
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### **Objective**
+Submit a markdown report that describes the model and results for the model with a fixed intercept and random slopes for dist.human by protected area. The report should inlcude,
+
+  - statistical notation and JAGS syntax notation 
+  - traceplots with text visually assessing posterior convergence. 
+  - plots showing the posterior distributions (histograms or density plots) for each parameter. 
+  - a table of estimates of the difference between the slope for each protected area and the overall mean slope across protected areas; include a point estimate (mean/median/mode) and measures of uncertainty, e.g., Bayesian credible intervals, for each.
+      
+### **Background**
+
+This is not real data. However, the basic premise has been adopted from the paper, [Getting the big picture: Landscape-scale occupancy patterns of two Annamite endemics among multiple protected areas](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.620).
+
+
+### **Overview**
+The Annamite striped rabbit is a forest-dwelling lagomorph that was discovered by science in the mid-1990s. Little is known about this species. What has been done indicates that hunting pressure is a primary driver of its distribution. As such, protected areas are paramount to their conservation. However, protected areas vary in their effectiveness in limiting hunting and some protected areas are founded on multi-use, such that hunting is still allowed. 
+
+
+<p align="center">
+<img src="Annamite striped rabbit.png" width="750"/>
+</p>
+
+
+
+
+A camera trap study was conducted in the Annamite mountain range of Vietnam to better understand the distribution of the unique mammal fauna. A central focus was to learn about the effects of anthropogenic activity on the distribution of the Annamite striped rabbit. A total of 50 camera traps were deployed at 5 different protected areas. The cameras were placed systematically with a random starting point to capture variation in the Euclidean distance between a camera and the nearest center of human activity (i.e., village/town). A colleague organized the data, such that for each camera site, the presence (1) or assumed absence (0) of the rabbit was recorded (`occur`); we will assume there are no false-positives or false-negatives in these data. The main variables of interest are the protected areas (`PA`) and the distance to human activity (`dist.human`) in meters.
+
+Working with your colleagues, they outline their hypothesis that the main driver of rabbit occurrence is hunting within the protected areas. However, there is no spatial variable or direct measure of hunting pressure throughout the park. Rather, they predict that increasing distance away from human activity will lead to higher rabbit occupancy because people will only travel so far in difficult mountainous terrain. They also hypothesize that this effect will vary by protected area because there is different levels of patrolling and enforcement. But, regardless of protected area, they hypothesize that occurrence at the edge of the protected areas nearest to human activity will be the same because of the similar density of people and that occurrence will be very low.
+
+<br>
+
+### Model Notation (effect difference)
+
+We fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \alpha_{0} + (\beta_1 + \beta_{2,j}) \times \text{dist.human}_{i,j}\\
+\beta_{2,j} &\sim \text{Normal}(0, \sigma^{\beta})
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\alpha_{0} \sim& \text{Logistic}(0, 1)\\
+\beta_{1} \sim& \text{Normal}(0, 3)\\
+\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\end{align*}
+
+
+### JAGS Syntax (effect difference)
+
+````{verbatim}
+model {
+
+# Priors
+  b0 ~ dlogis(0,1)
+  b1 ~ dlogis(0,1)
+  sigma.b1 ~ dunif(0,5)
+  tau.b1 <- 1/sigma.b1^2
+  
+# Likelihood
+  for (i in 1:N) {
+     y[i] ~ dbern(p[i])
+     logit(p[i]) <- b0 + (b1 + b2[PA[i]])*dist.human[i]
+  } #End loop
+  
+# Random Slope
+  for(j in 1:N.PA){
+    b2[j] ~ dnorm(0,tau.b1)
+  } #End loop
+  
+} #End Model
+````
+
+
+---
+---
+
+<br>
+<br>
+
+
+### Model Fitting in brms (effect difference)
+
+```{r echo=TRUE, eval=TRUE, warnings=FALSE,message = FALSE, results = 'hide'}
+
+#Setup the workspace
+  rm(list=ls())
+  library(brms)
+  library(bayesplot)
+  library(rjags)
+  library(coda)
+
+# Rabbit Occurrence Data
+  dat = read.csv("rabbit.occ.data.csv")
+
+  head(dat)
+
+  dat$dist.human=dat$dist.human/1000
+```
+
+
+```{r echo=TRUE, eval=FALSE}
+# Fit the model using STAN via the brms R package
+  brm.fit = brm(formula = occur ~ 1 + dist.human + (0 + dist.human|PA),  
+                data = dat, 
+                family = bernoulli(link = "logit"),
+                warmup = 1000, 
+                iter = 5000, 
+                chains = 3, 
+                cores = 3,
+                sample_prior = TRUE
+                )
+```
+
+```{r echo=FALSE, eval=TRUE}
+ load("brm.fit")
+```
+
+If we want to look at the stan model code and priors, we would do this (not printed):
+
+```{r echo=TRUE, eval=FALSE}
+# See underlying model
+  brm.fit$model
+
+# See default priors
+  get_prior(brm.fit)
+```
+
+Visually Examine the traceplots
+
+```{r echo=TRUE, eval=TRUE}
+#Trace Plots
+  mcmc_plot(brm.fit, 
+         type = "trace")
+```
+
+
+Let's get our estimates
+
+```{r echo=TRUE, eval=TRUE}
+# Note: The b_Intercept parameter is this mean-centered intercept back-transformed to the original scale of the predictors. Thus, "intercept' can be ignored
+  brm.fit$fit
+  summary(brm.fit)
+```
+
+Note that the Gelman-Rubin diagnostics (Rhat) are all near 1 indicating posterior convergence by assessing variation across chains. 
+
+Extract the 'random effects' or the effect differences from the typical slope across protected areas for distance to human covariate.
+
+```{r echo=TRUE, eval=TRUE}
+  knitr::kable(ranef(brm.fit))
+```
+
+Extract the 'fixed effects' or the the typical slope across protected areas for distance to human covariate and the intercept, which does not vary by protected area.
+
+```{r echo=TRUE, eval=TRUE}
+  knitr::kable(fixef(brm.fit))
+```
+
+
+Get the posterior distributions of interest
+
+```{r echo=TRUE, eval=TRUE}
+  mcmc_areas(as.matrix(brm.fit),
+           pars = names(brm.fit$fit)[c(1:3,5:9)],
+           prob = 0.95)
+```
+
+
+
+### Model Fitting in JAGS (effect difference)
+
+```{r echo=TRUE, eval=TRUE}
+# JAGS data list
+  data = list(
+              y = dat$occur,
+              N = length(dat$occur),
+              dist.human = dat$dist.human,
+              PA = sub('..', '', dat$PA),
+              N.PA = length(unique(dat$PA))
+              )
+  
+  # MCMC inputs  
+  n.chains=3
+  n.adapt=1000
+  n.iter=5000
+  thin=2
+  burn=1000
+  
+# Model Parameters to save values of
+  parms=c("b0","b1","b2","sigma.b1")	
+```
+
+Here, we will use the logistic prior, which is not the same as used by stan. Let's visualize it,
+  
+  
+```{r echo=TRUE, eval=TRUE} 
+  samps = rlogis(100000, location = 0, scale = 1)
+  plot(density(samps),lwd=3)
+```
+
+```{r echo=TRUE, eval=TRUE} 
+# Look at logistic prior on probability scale
+  plot(density(plogis(samps)),lwd=3)
+```
+
+```{r echo=TRUE, eval=FALSE} 
+# Setup the Model
+  jm = jags.model(file="model.jags.version2.r", 
+                  data = data,
+                  n.chains = n.chains,
+                  n.adapt = n.adapt
+                  )
+  
+# Update the model with the burnin
+  update(jm, n.iter=burn)
+  
+# Fit the modedl  
+  post=coda.samples(jm, 
+                    variable.names = parms, 
+                    n.iter = n.iter, 
+                    thin = thin
+                    )
+  
+```
+
+```{r echo=FALSE, eval=TRUE} 
+load("post1")
+```
+
+Lets visually assess convergence
+
+```{r echo=TRUE, eval=TRUE} 
+# Look at chains
+# Plot all chains MCMC iterations
+  color_scheme_set("viridis")
+  mcmc_trace(post)
+```
+
+Let's calculate the gelman-rubin diagnostic (Rhat) to test convergence across chains:
+
+```{r echo=TRUE, eval=TRUE} 
+coda::gelman.diag(post)
+```
+
+Notice that the point estimates and credible intervals are higher than we would like them to be. How would we fix this? I'll push on using these results, but generally we need to do something about these values which are greater than we would like, which is <1.1.
+
+Let's visualize our posterior distributions: 
+
+```{r echo=TRUE, eval=TRUE} 
+# Fancy plot of posterior
+  mcmc_areas(as.matrix(post))
+```
+
+```{r echo=TRUE, eval=TRUE} 
+# Posterior mean and median
+  apply(as.matrix(post),2,mean)
+  apply(as.matrix(post),2,median)
+```
+
+```{r echo=TRUE, eval=TRUE} 
+# 95% Credible Intervals
+  apply(as.matrix(post),2,quantile, probs=c(0.025,0.5,0.975))
+```
+
+
+
+
+
+Compare these fixed effects of brms with JAGS estimates:
+
+```{r echo=TRUE, eval=TRUE} 
+  knitr::kable(t(apply(as.matrix(post)[,1:2],2,quantile, probs=c(0.025,0.5,0.975))))
+  knitr::kable(fixef(brm.fit))
+```
+
+
+Compare the 'random effects' of brms with JAGS estimates:
+
+```{r echo=TRUE, eval=TRUE} 
+  knitr::kable(t(apply(as.matrix(post)[,3:7],2,quantile, probs=c(0.025,0.5,0.975))))
+knitr::kable(ranef(brm.fit))
+```
+
+### Model Fitting in JAGS (mean parameterization)
+
+Another way we could fit the same model would be with a slightly different parameterization. 
+
+### Model Notation (mean parameterization)
+
+We fit a model to our data, where the occurence of the species ($y_{i,j}$) for site $i$ in projected area $j$ is modeled as,
+
+
+\begin{align*}
+y_{i,j}\sim& \text{Bernoulli}(p_{i,j})\\
+\text{logit}(p_{i,j}) &= \alpha_{0} + \beta_{j}\times \text{dist.human}_{i,j}\\
+\beta_{j} &\sim \text{Normal}(\mu^{\beta}, \sigma^{\beta})
+\end{align*}
+
+\subsubsection{Priors}
+
+\begin{align*}
+\alpha_{0} \sim& \text{Logistic}(0, 1)\\
+\mu^{\beta} \sim& \text{Logistic}(0, 1)\\
+\sigma^{\beta} \sim& \text{Uniform}(0, 5)\\
+\end{align*}
+
+
+### JAGS Syntax (mean parameterization)
+
+````{verbatim}
+# Priors
+  b0 ~ dlogis(0,1)
+  mu.b1 ~ dnorm(0, 3)
+  sigma.b1 ~ dunif(0,5)
+  tau.b1 <- 1/sigma.b1^2
+  
+# Likelihood
+  for (i in 1:N) {
+     y[i] ~ dbern(p[i])        
+     logit(p[i]) <- b0 + b1[PA[i]]*dist.human[i]
+  } #End loop
+  
+# Random Slope
+  for(j in 1:N.PA){
+    b1[j] ~ dnorm(mu.b1,tau.b1)
+  } #End loop
+  
+} #End Model
+````
+
+
+
+### Model Fitting in JAGS (mean parameterization)
+
+
+```{r echo=TRUE, eval=TRUE}
+# JAGS data list
+  data = list(
+              y = dat$occur,
+              N = length(dat$occur),
+              dist.human = dat$dist.human,
+              PA = sub('..', '', dat$PA),
+              N.PA = length(unique(dat$PA))
+              )
+  
+  # MCMC inputs  
+  n.chains=3
+  n.adapt=1000
+  n.iter=5000
+  thin=2
+  burn=1000
+  
+# Model Parameters to save values of
+  parms = c("b0","b1","mu.b1","sigma.b1")	
+```
+
+Reminder, we are not using the same priors as in brms.
+  
+```{r echo=TRUE, eval=FALSE} 
+# Setup the Model
+  jm = jags.model(file="model.jags.version1.r", 
+                  data = data,
+                  n.chains = n.chains,
+                  n.adapt = n.adapt
+                  )
+# Update the model with the burnin
+  update(jm, n.iter=burn)
+  
+# Fit the modedl  
+  post=coda.samples(jm, 
+                    variable.names = parms, 
+                    n.iter = n.iter, 
+                    thin = thin
+                    )
+```
+
+```{r echo=FALSE, eval=TRUE} 
+load("post2")
+```
+
+Lets visually assess convergence
+
+```{r echo=TRUE, eval=TRUE} 
+# Look at chains
+# Plot all chains MCMC iterations
+  color_scheme_set("viridis")
+  mcmc_trace(post)
+```
+
+Let's calculate the gelman-rubin diagnostic (Rhat) to test convergence across chains:
+
+```{r echo=TRUE, eval=TRUE} 
+coda::gelman.diag(post)
+```
+
+How do the values look? Would you trust this model?
+
+Let's visualize our posterior distributions: 
+
+```{r echo=TRUE, eval=TRUE} 
+# Fancy plot of posterior
+  mcmc_areas(as.matrix(post))
+```
+
+```{r echo=TRUE, eval=TRUE} 
+# Posterior mean and median
+  apply(as.matrix(post),2,mean)
+  apply(as.matrix(post),2,median)
+```
+
+```{r echo=TRUE, eval=TRUE} 
+# 95% Credible Intervals
+  apply(as.matrix(post),2,quantile, probs=c(0.025,0.5,0.975))
+```
+
+Let's plot the posterior distribution of the typical slope for dist.human from this model and compare it to the one from JAGS using the effect difference parameterization.
+
+```{r echo=FALSE, eval=TRUE} 
+load("post2")
+plot(density(as.matrix(post)[,7]),type="l",lwd=3,main="Posteriors of the typical slope across protected areas")
+
+load("post1")
+lines(density(as.matrix(post)[,2]),type="l",lwd=3,col=2)
+legend("topleft",lwd=3, col=c(1,2),legend=c("JAGS Mean Model","JAGS diff Model"))
+#draws_df <- as_draws_df(brm.fit)
+#lines(density(draws_df$b_dist.human),col=2,lwd=3)
+```
+
+
+Let's add in the same slope from brms .. .
+
+```{r echo=FALSE, eval=TRUE} 
+load("post2")
+plot(density(as.matrix(post)[,7]),type="l",lwd=3,main="Posteriors of the typical slope across protected areas")
+
+load("post1")
+lines(density(as.matrix(post)[,2]),type="l",lwd=3,col=2)
+draws_df <- as_draws_df(brm.fit)
+lines(density(draws_df$b_dist.human),col=3,lwd=3)
+legend("topleft",lwd=3, col=c(1,2,3),legend=c("JAGS Mean Model","JAGS diff Model","brms diff model"))
+
+```
+
+

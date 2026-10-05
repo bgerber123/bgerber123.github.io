@@ -192,7 +192,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>Please bring your laptop today</p></li>
 <li><p>Board work for statistical notation and JAGS syntax for Bayesian generalized linear models</p></li>
-</ul></section><section id="assigned" class="level4"><h4 class="anchored" data-anchor-id="assigned"><span style="color:red;">Assigned</span></h4>
+</ul>
+<!-- Note for Brian- today plan on writing the statistical notation for the Annamite rabbit model as a Bayesian GLM. Help wRite the 
+the JAGS notation to fit this model and ask the students to write the code and fit this model. Examine convergence. Do this model in JAGS
+and brms --><ul>
+<li>Install R packages:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># CRAN packages</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"brms"</span>,<span class="st">"bayesplot"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="assigned" class="level4"><h4 class="anchored" data-anchor-id="assigned"><span style="color:red;">Assigned</span></h4>
 </section></section><section id="day-2-lab" class="level3"><h3 class="anchored" data-anchor-id="day-2-lab">Day 2 (lab)</h3>
 <section id="today-1" class="level4"><h4 class="anchored" data-anchor-id="today-1"><span style="color:red;">Today</span></h4>
 <ul>
@@ -203,14 +213,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Fit models specified in the previous class</p></li>
 </ul>
 <!-- -   No lab to turn in next week. --><ul>
-<li><p>Downloads: <a href="../classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a></p></li>
-<li><p>Install R packages:</p></li>
+<li>Downloads: <a href="../classfiles/hbayes/Bayesian.Hierarchical.Model.zip">Bayesian Hierarchical Model Files</a>
+</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># CRAN packages</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"brms"</span>,<span class="st">"bayesplot"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section><section id="assigned-1" class="level4"><h4 class="anchored" data-anchor-id="assigned-1"><span style="color:red;">Assigned</span></h4>
+<!-- Notes for today. Expand on the Bayesian GLM model. First, write the syntax with the same model but with extra variance. Write out syntax for the hierarchical Bayesian GLM with fixed intercept and random slope. Then do the syntax for random intercept and random slope. Ask students to fit each of these models. They need to turn them into JAGS syntax. 
+--><ul>
+<li>Lab: Submit a markdown report that describes the model and results for the model with a fixed intercept and random slopes for dist.human by protected area. The report should inlcude,
+<ul>
+<li>statistical notation and JAGS syntax notation</li>
+<li>traceplots with text visually assessing posterior convergence.</li>
+<li>plots showing the posterior distributions (histograms or density plots) for each parameter.</li>
+<li>a table of estimates of the difference between the slope for each protected area and the overall mean slope across protected areas; include a point estimate (mean/median/mode) and measures of uncertainty, e.g., Bayesian credible intervals, for each.</li>
+</ul>
+</li>
+<li>Download: <a href="../classfiles/hbayes/rabbit.occ.data.csv">Annamite Rabbit Data</a>
+</li>
+</ul></section><section id="assigned-1" class="level4"><h4 class="anchored" data-anchor-id="assigned-1"><span style="color:red;">Assigned</span></h4>
 <ul>
 <li>Readings for next class:
 <ul>
