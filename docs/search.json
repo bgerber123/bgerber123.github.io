@@ -18750,28 +18750,28 @@
     "href": "FW670/week10.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a data set?\nWhat is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Student Assigned"
+    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a data set?\nWhat is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\nProchazka et al. 2023"
   },
   {
     "objectID": "FW670/week10.html#week-10",
     "href": "FW670/week10.html#week-10",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a data set?\nWhat is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\n Student Assigned"
+    "text": "What is a SDM?\nWhat are they used for?\nWhat are the types of data used and how does that change the inference/predictions?\nWhat are the three joint probabilities that determine whether a site is recorded as a detection in a data set?\nWhat is the difference/importance of being able to estimate occurrence probability and occurrence relative likelihood?\nWhat are some specific model types or algorithms commonly used for fitting a SDM?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))\n\n\n\nReadings for next class:\n\nProchazka et al. 2023"
   },
   {
     "objectID": "FW670/week11.html",
     "href": "FW670/week11.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Brian is absent. Please carry on without me.\n\n\n\n\n\nReadings for next class:\n\nKery and Schaub Ch7/a&gt;\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\n Student Assigned\nStudent Assigned"
+    "text": "Brian is absent. Please carry on without me.\n\n\n\n\nProchazka et al. 2023\n\n\nReadings for next class:\n\nKery and Schaub Ch7\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\n Student Assigned\nStudent Assigned"
   },
   {
     "objectID": "FW670/week11.html#week-11",
     "href": "FW670/week11.html#week-11",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Brian is absent. Please carry on without me.\n\n\n\n\n\nReadings for next class:\n\nKery and Schaub Ch7/a&gt;\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\n Student Assigned\nStudent Assigned"
+    "text": "Brian is absent. Please carry on without me.\n\n\n\n\nProchazka et al. 2023\n\n\nReadings for next class:\n\nKery and Schaub Ch7\n\n\n\n\n\nGroups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"stringr\",\"coda\",\"runjags\"))\n\n\n\nReadings for next class:\n\n Student Assigned\nStudent Assigned"
   },
   {
     "objectID": "FW670/week12.html",
