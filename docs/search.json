@@ -18708,14 +18708,14 @@
     "href": "FW670/week7.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nStatistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\n\n\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nBurn et al. 2011"
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\n\n\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\n\n\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nBurn et al. 2011"
   },
   {
     "objectID": "FW670/week7.html#week-7",
     "href": "FW670/week7.html#week-7",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\nStatistical Notation for Bayesian Logistic Regression Model for Annamite Rabbits\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\n\n\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nBurn et al. 2011"
+    "text": "Please bring your laptop today\nBoard work for statistical notation and JAGS syntax for Bayesian generalized linear models\n\n\n\n\nDiscuss Project\n\n\nBoard work for statistical notation and JAGS syntax for hierarchical Bayesian generalized linear models\nFit models specified in the previous class\n\n\nDownloads: Bayesian Hierarchical Model Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"brms\",\"bayesplot\"))\n\n\n\nReadings for next class:\n\nBurn et al. 2011"
   },
   {
     "objectID": "FW670/week8.html",
