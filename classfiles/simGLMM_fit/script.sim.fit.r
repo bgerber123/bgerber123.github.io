@@ -91,3 +91,40 @@ mcmc_areas(as.matrix(brm.fit),
            pars = names(brm.fit$fit)[c(1,2)],
            prob = 0.95)
 
+#####################
+# simpler model
+
+brm.fit.simple = brm(formula = y ~ x1 + x2,  
+              data = sim_data, 
+              family = bernoulli(link = "logit"),
+              warmup = 1000, 
+              iter = 5000, 
+              chains = 3, 
+              cores = 3,
+              #              threads = threading(3),
+              sample_prior = TRUE,
+              #              backend = "cmdstanr"
+)
+
+
+#####################
+# fixed effect
+
+brm.fit.fixed = brm(formula = y ~ x1 + x2 + group,  
+                     data = sim_data, 
+                     family = bernoulli(link = "logit"),
+                     warmup = 1000, 
+                     iter = 5000, 
+                     chains = 3, 
+                     cores = 3,
+                     #              threads = threading(3),
+                     sample_prior = TRUE,
+                     #              backend = "cmdstanr"
+)
+
+
+
+library(loo)
+
+loo_results <- loo(brm.fit, brm.fit.simple,brm.fit.fixed)
+print(loo_results)
