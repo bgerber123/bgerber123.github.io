@@ -16,9 +16,11 @@ title: ""
 
 - Code example of fitting this model in <a href="/classfiles/hbayes/brms.fit.glm.r"> brms.fit.glm.r</a>
 
-<!-- Note for Brian- today plan on writing the statistical notation for the Annamite rabbit model as a Bayesian GLM. Help wRite the 
+<!-- Note for Brian- today plan on writing the statistical notation for the Annamite rabbit model as a Bayesian GLM. Help write the 
 the JAGS notation to fit this model and ask the students to write the code and fit this model. Examine convergence. Do this model in JAGS
 and brms. JAGS they develop. brms run through the code -->
+
+<!-- What  I did. 10/6/2026 - I started with the GLMM lab and explained the difference in notation with random intercept, random slope, and both. We talked about convergence issues of both and which one represented the hypothesis the most -->
 
 -   Install R packages:
 

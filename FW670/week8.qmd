@@ -12,6 +12,31 @@ title: ""
 
 ##### **In Class Discussion  led by Maddie and Camilla** [(Link)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0024165)
 
+**Overview of paper’s goals and questions:**
+
+- How would you describe what the models are actually predicting for each site? And what is it NOT?
+
+- What are the different hierarchies in this approach/models? 
+
+- The authors mentioned a few times that their data was non-random - how come? 
+
+- What are some potential biases in the PIKE data collection that were mentioned?
+
+- Can the data tell us anything - not true random sample, uneven effort, heterogeneous resources? Or does Bayes account for all that uncertainty (as the authors expect)?
+
+- Does this adequately address the question with important conservation implications on the line/is it appropriate? 
+
+
+**Bonus Questions:**
+
+- (Fun question) What’s one term/phrase the paper used that Brian has mentioned personally disliking?
+
+- What were the main takeaways regarding poaching trends and factors influencing poaching the authors felt comfortable inferring from their model results? 
+
+- How did they handle baseline differences in countries and sites within countries? 
+
+- African / Asian data: Should the authors split out the analysis?
+
   <br>
  
 ##### **In Class: Simulating and fitting a Bayesian GLMM**
