@@ -132,6 +132,11 @@ Install the software program [JAGS](https://sourceforge.net/projects/mcmc-jags/f
 <a href="/classfiles/glmlab/glmlab.BDG.zip">Zip</a>.
 
 
+- **Non-Hierarchical Model (specified in class; Annamite rabbit data)**: <a href="/classfiles/hbayes/Bayesian non hierarchical model.pdf">Model Statement and JAGS syntax</a>.
+
+- **Hierarchical Model (specified in class; Annamite rabbit data)**: <a href="/classfiles/hbayes/Bayesian Hierarchical Model.pdf">Model Statement and JAGS syntax</a>.
+
+
 <!-- - **Brian's GLMM lab**: <a href="/classfiles/glmmlab/Assignment.GLMM.BDG.html">html</a> and -->
 <!-- <a href="/classfiles/glmmlab/glmm.BDG.zip">Zip</a>. -->
 
