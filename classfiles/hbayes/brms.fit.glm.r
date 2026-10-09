@@ -12,7 +12,18 @@ dat$dist.human=dat$dist.human/1000
 
 
 # Fit the model using STAN via the brms R package
-brm.fit = brm(formula = occur ~ 1 + dist.human,  
+brm.fit = brm(formula=occur ~ 1 + dist.human,  
+              data = dat, 
+              family = bernoulli(link = "logit"),
+              warmup = 1000, 
+              iter = 5000, 
+              chains = 3, 
+              cores = 3,
+              sample_prior = TRUE
+)
+# Note, brm() function automatically mean centers your predictors.
+# This turns it off
+brm.fit = brm(bf(occur ~ 1 + dist.human, center = FALSE),  
               data = dat, 
               family = bernoulli(link = "logit"),
               warmup = 1000, 
@@ -36,6 +47,20 @@ brm.fit = brm(formula = occur ~ 1 + dist.human,
   head(draws)
   plot(density(draws[,1]),lwd=4)
 
+  
+# posterior predictive check  
+  pp_check(brm.fit,ndraws=100, type = "bars")
+  pp_check(brm.fit,ndraws=100, type = "stat", stat = "mean")
+  
+# values>0.7 are not good
+  plot(loo::loo(brm.fit))
+
+# waic values...to be compared with other model. 
+# works well for hierarhical models
+  loo::waic(brm.fit)
+########  
+
+  
 # Note
 # The b_Intercept parameter is this mean-centered intercept back-transformed to the original scale of the predictors
 # Thus. "intercept' can be ignored
