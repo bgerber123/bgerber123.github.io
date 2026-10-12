@@ -43,8 +43,8 @@ title: ""
 
 #### [Assigned]{style="color:red;"}
  -   Readings for next class:
-     - <a href="/readings/Betts et al. 2022.pdf">Betts et al. 2022</a>
-     - <a href="/readings/Betts et al. 2020.pdf">Betts et al. 2020</a>
+     <!-- - <a href="/readings/Betts et al. 2022.pdf">Betts et al. 2022</a> -->
+     <!-- - <a href="/readings/Betts et al. 2020.pdf">Betts et al. 2020</a> -->
      - <a href="/readings/Latif et al. 2024.pdf">Latif et al. 2024</a>
 
  
@@ -68,19 +68,19 @@ title: ""
 - What influences one's choice of 'population metric'? For example, how should researchers choose between abundance, density, occupancy, or occupancy dynamics as the primary population metric for a study?
 - How can poor sampling design affect the validity of a hierarchical model, even when the statistical model appropriately accounts for imperfect detection?
 
-##### **In Class Discussion:** Dr. Mattew Betts, Professor from Oregon State University [Department of Forest Ecosystems & Society](https://directory.forestry.oregonstate.edu/people/betts-matthew), will be visiting (11:45am-12:45am) to lead a discussion on his papers <a href="/readings/Betts et al. 2022.pdf">When are hypotheses useful in ecology and evolution?</a> and <a href="/readings/Betts et al. 2020.pdf">Squeezed by a habitat split</a>.
+<!-- ##### **In Class Discussion:** Dr. Mattew Betts, Professor from Oregon State University [Department of Forest Ecosystems & Society](https://directory.forestry.oregonstate.edu/people/betts-matthew), will be visiting (11:45am-12:45am) to lead a discussion on his papers <a href="/readings/Betts et al. 2022.pdf">When are hypotheses useful in ecology and evolution?</a> and <a href="/readings/Betts et al. 2020.pdf">Squeezed by a habitat split</a>. -->
 
-**Some questions to think about**:
+<!-- **Some questions to think about**: -->
 
-- What is a dynamic occupancy model? Specifically what is 'settlement' and 'vacancy' in terms of the model and ecological meaning and why is this fundamentally different than modeling occupancy?
+<!-- - What is a dynamic occupancy model? Specifically what is 'settlement' and 'vacancy' in terms of the model and ecological meaning and why is this fundamentally different than modeling occupancy? -->
 
-- How did the authors test whether ocean conditions and old-forest loss worked together to affect murrelet occupancy?
+<!-- - How did the authors test whether ocean conditions and old-forest loss worked together to affect murrelet occupancy? -->
 
-- How could murrelet movement between sites affect the model’s estimates of colonization and vacancy?
+<!-- - How could murrelet movement between sites affect the model’s estimates of colonization and vacancy? -->
 
-- What are the advantages and disadvantages of using AICc to compare the different models in this study?
+<!-- - What are the advantages and disadvantages of using AICc to compare the different models in this study? -->
 
-- How did the authors ensure paramters converged?
+<!-- - How did the authors ensure paramters converged? -->
 
 #### [Assigned]{style="color:red;"}
 -   Following the discussion, post on the discussion board on  [canvas](https://colostate.instructure.com/courses/228738/discussion_topics/2507933).
