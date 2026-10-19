@@ -10,7 +10,25 @@ title: ""
 
 ##### **In Class Discussion ofled by James and Mairin** <a href="/readings/Darrah et al. 2018.pdf">(link)</a>
 
--   Board work defining the occupancy model hierarchically
+1. Why is it important to account for different causes of nest failure rather than simply modeling nest success?
+
+2. What is the benefit to using a hierarchical multinomial model rather than more traditional nest-survival approaches?
+
+3. How did you feel about the simulation procedures the authors conducted? Overall, did they make sense?
+
+4. Do you think the simulations prove the model works well under realistic field conditions?
+
+5. What happens when heterogeneity among sites is left unmodeled? Of these consequences what is the one you would be most worried about and why?
+
+6. What are the pitfalls to calculating daily nest survival with the assumption that nest survival is constant in between checks? What is an example of this assumption being violated?
+
+7. How might management recommendations regarding predator exclosures have changed if the authors had only modeled nest-survival rather than cause-specific nest-failure?
+
+8. Do you think the authors did a convincing job of their reasoning for using a Bayesian structure instead of a frequentist framework? Why or why not?
+
+9. Besides cause-specific nest-survival, what other questions/data could this modeling framework be applied to in your field of interest?
+
+#####    **Board work defining the occupancy model hierarchically**
 
 <!-- -   Install R packages: -->
 
