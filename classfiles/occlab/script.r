@@ -134,7 +134,7 @@
   # Check out a summary
   summary(M3)
 
- # Evaluate whether there is statistical support fot the effect of Veg on psi and p
+ # Evaluate whether there is statistical support for the effect of Veg on psi and p
   head(M3[[1]])
 
 # alpha 1  - slope of Veg on detection probability
@@ -237,7 +237,7 @@ summary(model3.likelihood)
 # Do this in JAGS or the brm R package
   
 # The data we will use is the same as a above 'bunny.data', but we will combine the two columns
-# This was common practice prior to the developement of the occupancy modeling approach
+# This was common practice prior to the development of the occupancy modeling approach
   
 bunny.ignore.det = apply(bunny.data,1,sum)
 bunny.ignore.det[which(bunny.ignore.det==2)]=1
