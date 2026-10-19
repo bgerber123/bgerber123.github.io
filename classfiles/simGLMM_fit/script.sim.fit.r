@@ -1,130 +1,93 @@
+
+# Objective: simulate data from a mixed-effects model
+
+
+library(lme4)
+library(glmmTMB)
 source("sim.data.logistic.mixed.model.r")
 
-# sim.data.logistic.mixed.model = function(n_groups,
-#                                          n_per_group,
-#                                          beta_0,
-#                                          beta_1,
-#                                          beta_2,
-#                                          sigma_u)
-
-n_groups =10
-n_per_group = 20
-
-beta_0 <- -0.5       # Baseline log-odds
-beta_1 <-  0.8       # Effect of continuous covariate X1
-beta_2 <- -0.4       # Effect of continuous covariate X2
-
-sigma_u = 1.2
-
- y = sim.data.logistic.mixed.model(n_groups,
-                                   n_per_group,
-                                   beta_0,
-                                   beta_1,
-                                   beta_2,
-                                   sigma_u)
+# Define attributes of thr grouping variable
+  n_groups =20
+  n_per_group = 40
+  
+  beta_0 <- -1       # Fixed Intercept
+  beta_1 <-  1       # Effect of continuous covariate X1
+  
+  sd_slope = 1
 
 
- library(lme4)
- glmm_fit <- glmer(y ~ x1 + x2 + (1 | group), 
-                   data = sim_data, 
+# single data set simulation
+sim.data = sim.data.logistic.mixed.model(n_groups,
+                                         n_per_group,
+                                         beta_0,
+                                         beta_1,
+                                         sd_slope
+                                         )
+
+
+#Fit model 
+ glmm_fit <- glmer(y ~ x + (0+x | group), 
+                   data = sim.data, 
+                   family = binomial(link = "logit"))
+ 
+ glmm_fit <- glmmTMB(y ~ x + (0+x | group), 
+                   data = sim.data, 
                    family = binomial(link = "logit"))
  
 
-summary(glmm_fit)
-
-
-################
-# Fit he model in brms
-
-install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
-
-library(cmdstanr)
-check_cmdstan_toolchain(fix = TRUE) #requires Rtools being installed
-install_cmdstan(cores = parallel::detectCores())
-
-set_cmdstan_path(path = NULL)
-
-brm.fit = brm(formula = y ~ x1 + x2 + (1 | group),  
-              data = sim_data, 
+# Could also fit in brms
+brm.fit = brm(formula = y ~ x + (0+x | group),  
+              data = sim.data, 
               family = bernoulli(link = "logit"),
               warmup = 1000, 
               iter = 5000, 
-              chains = 3, 
-              cores = 3,
-#              threads = threading(3),
-              sample_prior = TRUE,
-#              backend = "cmdstanr"
+              chains = 1, 
+              cores = 1
 )
-
-# save(brm.fit,file="brm.fit.glm")
-# load("brm.fit.glm")
-
-# See underlying model
-brm.fit$model
-
-# See default priors
-get_prior(brm.fit)
-
-# Get values of prior distributions
-draws = prior_draws(brm.fit)
-head(draws)
-plot(density(draws[,1]),lwd=4)
-
-# Note
-# The b_Intercept parameter is this mean-centered intercept back-transformed to the original scale of the predictors
-# Thus. "intercept' can be ignored
-brm.fit$fit
-summary(brm.fit)
-
-#Extract 'fixed' and 'random effects'
-fixef(brm.fit)
-
-#Trace Plots
-mcmc_plot(brm.fit, 
-          type = "trace")
-
-#All parameters and stuff
-names(brm.fit$fit)
-
-#Posterior Distributions
-mcmc_areas(as.matrix(brm.fit),
-           pars = names(brm.fit$fit)[c(1,2)],
-           prob = 0.95)
-
-#####################
-# simpler model
-
-brm.fit.simple = brm(formula = y ~ x1 + x2,  
-              data = sim_data, 
-              family = bernoulli(link = "logit"),
-              warmup = 1000, 
-              iter = 5000, 
-              chains = 3, 
-              cores = 3,
-              #              threads = threading(3),
-              sample_prior = TRUE,
-              #              backend = "cmdstanr"
+##############################
+# Simulate lots of datasets
+n.sim=200
+sim.data.reps = replicate(n.sim,
+                          sim.data.logistic.mixed.model(n_groups,
+                                                   n_per_group,
+                                                   beta_0,
+                                                   beta_1,
+                                                   sd_slope
+                          )
 )
 
 
-#####################
-# fixed effect
+length(sim.data.reps)
+dim(sim.data.reps)
+head(sim.data.reps)
 
-brm.fit.fixed = brm(formula = y ~ x1 + x2 + group,  
-                     data = sim_data, 
-                     family = bernoulli(link = "logit"),
-                     warmup = 1000, 
-                     iter = 5000, 
-                     chains = 3, 
-                     cores = 3,
-                     #              threads = threading(3),
-                     sample_prior = TRUE,
-                     #              backend = "cmdstanr"
-)
+# in order, row1 = group, row2 = x, row3 = y, row 4 = parms
+save.parms=matrix(NA, nrow=n.sim, ncol=3)
+for( i in 1:n.sim){
+  #i=1
+  sim.data = data.frame(group = sim.data.reps[1,i]$group,
+                         x = sim.data.reps[2,i]$x,
+                         y = sim.data.reps[3,i]$y
+                        )
+  
+  glmm_fit <- glmmTMB(y ~ x + (0+x | group), 
+                    data = sim.data, 
+                    family = binomial(link = "logit"))
+  
+  vc <- VarCorr(glmm_fit)
+  
+  save.parms[i,] = c(fixef(glmm_fit)[[1]],vc$cond$group[1])
+  
+  #save.parms[i,]=c(glmm_fit@beta,glmm_fit@theta)
+print(i)  
+}
 
 
+hist(save.parms[,1],main="beta0")
+abline(v=beta_0,lwd=3,col=1)
 
-library(loo)
+hist(save.parms[,2],main="beta1")
+abline(v=beta_1,lwd=3,col=1)
 
-loo_results <- loo(brm.fit, brm.fit.simple,brm.fit.fixed)
-print(loo_results)
+hist(save.parms[,3],main="sd")
+abline(v=sd_slope,lwd=3,col=1)

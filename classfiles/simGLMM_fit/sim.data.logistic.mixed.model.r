@@ -1,60 +1,52 @@
-sim.data.logistic.mixed.model = function(n_groups,n_per_group,
+sim.data.logistic.mixed.model = function(n_groups,
+                                         n_per_group,
                                          beta_0,
                                          beta_1,
-                                         beta_2,
-                                         sigma_u){
+                                         sd_slope){
   
 
-# --- 1. Simulation Setup ---
-  n_groups <- 20       # Number of groups (e.g., sites, subjects)
-  n_per_group <- 25    # Number of observations per group
-  N <- sum(n_groups * n_per_group)  
+  #n_groups <- 50          # number of groups
+  #n_per_group <- 20       # observations per group
   
-# Fixed effects (intercept and slopes)
-  # beta_0 <- -0.5       # Baseline log-odds
-  # beta_1 <-  0.8       # Effect of continuous covariate X1
-  # beta_2 <- -0.4       # Effect of continuous covariate X2
+  # beta_0 <- -1            # fixed intercept
+  # beta_1 <- 2             # fixed average slope
   # 
-# Random effects variance
-#  sigma_u <- 1.2       # Standard deviation of random intercepts
+  # sd_slope <- 0.75        # standard deviation of random slope
   
-# --- 2. Generate Data Structure ---
-# Group identifiers
-  group_id <- factor(rep(1:n_groups, each = n_per_group))
+  # -----------------------------
+  # Create group-level random slopes
+  # -----------------------------
+  group_id <- rep(1:n_groups, each = n_per_group)
   
-# Continuous covariates
-  # X1: standard normal covariate
-  x1 <- rnorm(N, mean = 0, sd = 1)
+  random_slope <- rnorm(n_groups, mean = 0, sd = sd_slope)
+  slope_i <- beta_1 + random_slope[group_id]
   
-  # X2: continuous covariate with a mean of 5 and sd of 2
-  x2 <- rnorm(N, mean = 5, sd = 2)
+  # -----------------------------
+  # Predictor variable
+  # -----------------------------
+  x <- rnorm(n_groups * n_per_group)
   
-# --- 3. Simulate Random Effects & Linear Predictor ---
-  # Generate one random intercept per group: u_j ~ N(0, sigma_u^2)
-  u_j <- rnorm(n_groups, mean = 0, sd = sigma_u)
+  # -----------------------------
+  # Linear predictor and probability
+  # -----------------------------
+  lt <- beta_0 + slope_i * x
+  p <- plogis(lt)
   
-# Assign group-level random intercepts to individual observations
-  u_i <- u_j[group_id]
-
-# Linear predictor (eta)
-  lt <- beta_0 + beta_1 * x1 + beta_2 * x2 + u_i
+  # -----------------------------
+  # Simulate binary outcome
+  # -----------------------------
+  y <- rbinom(n_groups * n_per_group, size = 1, prob = p)
   
-  # --- 4. Apply Inverse-Link & Simulate Outcome ---
-  # Inverse logit function to get probabilities
-  p <- 1 / (1 + exp(-lt)) # equivalent to plogis(eta)
-  
-# Simulate binary outcome Y ~ Bernoulli(p)
-  y <- rbinom(N, size = 1, prob = p)
-  
-# Combine into a data frame
+  # -----------------------------
+  # Assemble data frame
+  # -----------------------------
   sim_data <- data.frame(
-    group = group_id,
-    x1 = x1,
-    x2 = x2,
-    p = p,
-    y = y
+    group = factor(group_id),
+    x = x,
+    y = y,
+    parms = list(beta_0, beta_1,sd_slope)
   )
-  
-  sim_data
+
+  return(sim_data)
   
 }
