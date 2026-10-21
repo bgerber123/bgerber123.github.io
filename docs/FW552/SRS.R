@@ -6,7 +6,6 @@ library(knitr)
 
 
 ## ----echo=FALSE---------------------------------------------------------------
-
 ponds = data.frame(matrix(nrow=6,ncol=2))
 colnames(ponds)=c("Pond","egg.mass")
 
@@ -61,7 +60,7 @@ sample(LETTERS[1:6],2)
 #library(tidyr)
 ponds.all$Sample.Mean = apply(matrix(ponds$egg.mass[ponds.numbers],ncol=2,byrow = TRUE),1,mean)
 
-ponds.all$Absolute.Deviation = abs(ponds.all$Sample.Mean-8)
+ponds.all$Sample.Error = (ponds.all$Sample.Mean-8)
 
 #knitr::kable(ponds.all)
 
@@ -75,7 +74,7 @@ ponds.all %>%
 ## ----echo=FALSE---------------------------------------------------------------
 ponds.simple = data.frame(Sample.Number = ponds.all$Sample.Number,
                           Sample.Mean = ponds.all$Sample.Mean,
-                          Deviance.Truth = ponds.all$Sample.Mean-8
+                          Sample.Error = ponds.all$Sample.Mean-8
                           )
 ponds.simple %>% 
   kable(table.attr = 'data-quarto-disable-processing="true"') %>% 
@@ -94,7 +93,6 @@ sum(ponds.simple$Deviance.Truth)
 
 
 ## ----echo=FALSE---------------------------------------------------------------
-
 temp=data.frame(table(ponds.simple$Sample.Mean))
 colnames(temp)=c("Sample.Mean","Frequency")
 temp$Relative.Freq= temp$Frequency/sum(temp$Frequency)
@@ -109,7 +107,6 @@ temp %>%
   kable(table.attr = 'data-quarto-disable-processing="true"',
         digits = 3) %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"), full_width = FALSE,font_size = 30)
-
 
 # temp2=data.frame("SUM",sum(as.numeric(temp$Frequency[1:8])),sum(as.numeric(temp$Relative.Freq[1:8])),sum(as.numeric(temp$Mean.times.Rel.Freq[1:8])))
 # colnames(temp2)=NULL
@@ -170,7 +167,7 @@ var.per.sample = apply(
 
 
 ## ----echo=FALSE---------------------------------------------------------------
- hist(var.per.sample,xlab="Sample Variance")
+ hist(var.per.sample,xlab="Sample Variance", main="")
  abline(v=mean(var.per.sample),lwd=3)
 
 
@@ -178,10 +175,10 @@ var.per.sample = apply(
 par(mfrow=c(2,1))
 hist(ponds$egg.mass,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Units (egg masses)")
+     xlab="Sample Units (egg masses)",ylim=c(0,3),xlim=c(0,12))
 hist(ponds.simple$Sample.Mean,freq=TRUE,breaks=10,
      main="",
-     xlab="Sample Mean")
+     xlab="Sample Mean",ylim=c(0,3),xlim=c(0,12))
 
 
 ## ----fig.width=15-------------------------------------------------------------
