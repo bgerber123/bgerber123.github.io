@@ -24,29 +24,18 @@ title: ""
 
 5. Would you use this model to make management decisions? What additional evidence would you want before acting on its predictions?
 
-##### **In Class Discussion led by Ashish	and Jonathan**
+##### **In Class Discussion led by Ashish	and Jonathan** [link](/readings/Prochazka et al. 2023.pdf)
 
-  - <a href="/readings/Prochazka et al. 2023.pdf">Prochazka et al. 2023</a>
 
 #### [Assigned]{style="color:red;"}
--   Readings for next class:
-    - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch7</a>
 
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
--   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
+- We will create code to simulate occupancy model data to test *something*
 
--   Downloads: <a href="/classfiles/cjslab/cjslabfiles.zip">Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("stringr","coda","runjags"))
-```
-
+- LAB: 
 
 #### [Assigned]{style="color:red;"}
 -   Readings for next class: 

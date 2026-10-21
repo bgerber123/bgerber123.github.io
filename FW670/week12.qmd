@@ -10,49 +10,67 @@ title: ""
 
 ##### Discussion led by Galen and Cristina
 
-##### Discussion led by Ryan and Lindsay
+##### Discussion led by Emma and DiDi
 
 #### [Assigned]{style="color:red;"}
--   Readings for next class: 
-    - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a>
-
+ -   Readings for next class:
+     - <a href="/readings/Kery and Kellner ch20.pdf">Kery and Kellner ch20</a>
+     - <a href="/readings/Manica  et al. 2019.pdf">Manica  et al. 2019</a>
 - Background Reading (not required):
-  - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a>
-  - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a>
+  - <a href="/readings/Madsen and Royle 2023.pdf">Madsen and Royle 2023</a>
+  - <a href="/readings/Kery et al 2018.pdf">Kery 2018</a>
+  - <a href="/readings/Link et al 2018.pdf">Link et al 2018</a>
+  - <a href="/readings/Barker et al 2018.pdf">Barker et al 2018</a>
+
+<!-- -   Readings for next class:  -->
+<!--     - <a href="/readings/Royle et al 2018.pdf">Royle et al. 2018</a> -->
+
+<!-- - Background Reading (not required): -->
+<!--   - <a href="/readings/Borchers and Marques 2017.pdf">Borchers and Marques 2017</a> -->
+<!--   - <a href="/readings/Royle et al 2011.pdf">Royle et al 2011</a> -->
 
  
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
-##### **In Class Discussion of Royle et al. 2018**
+<!-- ##### **In Class Discussion of Royle et al. 2018** -->
 
-- How are SCR data different than a typical capture-recapture study?
+<!-- - How are SCR data different than a typical capture-recapture study? -->
 
-- What is an 'activity center'?
+<!-- - What is an 'activity center'? -->
 
-- What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume?
+<!-- - What makes this model 'spatial'? Think about this assumption. When will it be appropriate or not to assume? -->
 
-- What are the two components that control 'detection probability'?
+<!-- - What are the two components that control 'detection probability'? -->
 
-- If using a SCR model, how might your sampling strategy change?
+<!-- - If using a SCR model, how might your sampling strategy change? -->
 
-- What is the exact meaning of abundance in this type of model?
+<!-- - What is the exact meaning of abundance in this type of model? -->
 
 #####
 
--   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Lab Files</a>
-
+-   Downloads: <a href="/classfiles/IMlab/IMLab.files.zip">Files</a>
 
 -   Install R packages:
 
 ```{r, eval=FALSE, echo=TRUE}
 # CRAN packages
-install.packages(c("secr","sf"))
+install.packages(c("VGAM"))
 ```
 
-#### [Assigned]{style="color:red;"}
-<!-- - <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a> -->
+
+<!-- -   Downloads: <a href="/classfiles/scrlab/scrlabfiles.zip">Lab Files</a> -->
+
+<!-- -   Install R packages: -->
+
+<!-- ```{r, eval=FALSE, echo=TRUE} -->
+<!-- # CRAN packages -->
+<!-- install.packages(c("secr","sf")) -->
+<!-- ``` -->
+
+<!-- #### [Assigned]{style="color:red;"} -->
+<!-- <!-- - <a href="/readings/Wright et al 2020.pdf">Wright et al 2020</a> --> -->
 
 
 

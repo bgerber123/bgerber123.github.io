@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>Brian D. Gerber – Modeling for Monitoring </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -163,19 +166,19 @@ Explanation/Inference vs Prediction
 <section id="case-study" class="slide level2">
 <h2>Case Study</h2>
 
-<img data-src="..\img//wolverine.image.png" class="r-stretch"></section>
+<img data-src="../img//wolverine.image.png" class="r-stretch"></section>
 <section id="section" class="slide level2">
 <h2></h2>
 
-<img data-src="..\img//wafwa.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
+<img data-src="../img//wafwa.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="sampling-frame" class="slide level2">
 <h2>Sampling Frame</h2>
 
-<img data-src="..\img//wafwa_sampling.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
+<img data-src="../img//wafwa_sampling.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"></section>
 <section id="station-setup" class="slide level2">
 <h2>Station Setup</h2>
 
-<img data-src="..\img//wafwa_station.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="../img//wafwa_station.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="project-goals" class="slide level2">
 <h2>Project Goals</h2>
 <ul>
@@ -210,7 +213,7 @@ z_i \sim&amp; \text{Bernoulli}(\psi_i)\\
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="..\img//wolverine_covs.png" class="quarto-figure quarto-figure-center" style="width:120.0%"></p>
+<p><img data-src="../img//wolverine_covs.png" class="quarto-figure quarto-figure-center" style="width:120.0%"></p>
 </figure>
 </div>
 </div>
@@ -220,7 +223,7 @@ z_i \sim&amp; \text{Bernoulli}(\psi_i)\\
 <p><span style="color:orange"><strong>Predict occupancy only at sampled sites</strong></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="..\img//wafwa_2017_dets.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="../img//wafwa_2017_dets.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
@@ -284,7 +287,7 @@ z_i \sim&amp; \text{Bernoulli}(\psi_i)\\
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="..\img//spatial_occ_map.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="../img//spatial_occ_map.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
 </div>

@@ -25,29 +25,13 @@ title: ""
 - What are some specific model types or algorithms commonly used for fitting a SDM?
 
 #### [Assigned]{style="color:red;"}
- -   Readings for next class:
-     - <a href="/readings/Kery and Kellner ch20.pdf">Kery and Kellner ch20</a>
-     - <a href="/readings/Manica  et al. 2019.pdf">Manica  et al. 2019</a>
-- Background Reading (not required):
-  - <a href="/readings/Madsen and Royle 2023.pdf">Madsen and Royle 2023</a>
-  - <a href="/readings/Kery et al 2018.pdf">Kery 2018</a>
-  - <a href="/readings/Link et al 2018.pdf">Link et al 2018</a>
-  - <a href="/readings/Barker et al 2018.pdf">Barker et al 2018</a>
 
  
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
--   Downloads: <a href="/classfiles/IMlab/IMLab.files.zip">Files</a>
-
--   Install R packages:
-
-```{r, eval=FALSE, echo=TRUE}
-# CRAN packages
-install.packages(c("VGAM"))
-```
-
+- Hierarchical Model Simulation Coding
 
 
 #### [Assigned]{style="color:red;"}

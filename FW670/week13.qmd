@@ -8,28 +8,27 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-##### Discuss XXX co-led by XXX, and XXX
+-   In class Exercise: <a href="/FW670/monitoring.qmd">Modeling for Monitoring</a> (<a href="/FW670/monitoring.pdf">PDF</a>)
 
-##### Hierarchical Community Occupancy Model
 
--   [Statistcal Model](/classfiles/community/Community Occ Model.pdf)
 
--   [Bayesian Community Occupancy Model via Stan](https://mc-stan.org/users/documentation/case-studies/dorazio-royle-occupancy.html)
 
--   For details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.
-
-##### Community Ecology Modeling
-
--   Species Richness vs Species Diversity?
-
--   The [vegan R package](https://github.com/vegandevs/vegan?tab=readme-ov-file) has a number of common [community metrics](https://vegandevs.r-universe.dev/vegan/doc/diversity-vegan.pdf).
+#### [Assigned]{style="color:red;"}
+-   Readings for next class:
+    - <a href="/readings/Kery and Schaub Ch7.pdf">Kery and Schaub Ch7</a>
 
 
 ### Day 2 (lab)
 
 #### [Today]{style="color:red;"}
 
-##### ~~Multivariate Community Analyses~~
+-   Groups work on defining the CJS model using constant parameters and then with sex effect on survival, but not detection. From the reading, what is so important about the initial values in this type of model?
 
-**No class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project.**
+-   Downloads: <a href="/classfiles/cjslab/cjslabfiles.zip">Files</a>
 
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("stringr","coda","runjags"))
+```

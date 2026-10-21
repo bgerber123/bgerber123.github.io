@@ -17,3 +17,5 @@ quarto::quarto_render("./FW670/glm2.qmd", output_format = "pdf")
 quarto::quarto_render("./FW670/hierarchical.qmd", output_format = "pdf")
 
 quarto::quarto_render("./FW670/bayesian.qmd", output_format = "pdf")
+
+quarto::quarto_render("./FW670/monitoring.qmd", output_format = "pdf")
