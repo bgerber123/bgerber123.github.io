@@ -33,7 +33,8 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-- We will create code to simulate occupancy model data to test *something*.
+- We will create code to simulate occupancy model data to test *something*. 
+  - Maybe consider the effect of multi-collinearity on parameter estimation
 
 - LAB: TBD
 
