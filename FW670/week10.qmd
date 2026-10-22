@@ -10,6 +10,22 @@ title: ""
 
 ##### **In Class Discussion led by Ryan and Lindsay**: [link](/readings/Stanton et al. 2024.pdf)
 
+  1) What were the goals of the study and why are they relevant to the conservation issue?
+      a. Was there one outcome for the goals of the study that was more valuable than another?
+
+  2) Movement varied across pools with lower movement in upstream areas. The authors stated that this may have been a function of removal 
+  upstream. What else may have led to this variation?
+
+  3) What other information regarding receivers would have been important to account for when assessing their efficacy?
+      a. What do you think about the fact that they pulled receiver information from other projects? Do you think the results would have showed something different if placed strategically for this study specifically?
+
+  4) Why did this choose Dirchlet priors for their Bayesian analysis?
+    a. The authors use some of the same data from a previous study (Coulter et al., 2018) and vague priors. When should a study incorporate previous data or assign informed priors?
+
+5) What, if any, was the model selection approach in this study?
+    a. How did they justify using the model if not?
+
+
 ##### **In Class Discussion of Guillera-Arroita et al. 2015**
 
 - What is a SDM?
