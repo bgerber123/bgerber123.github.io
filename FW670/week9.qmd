@@ -56,6 +56,9 @@ title: ""
 install.packages(c("ubms","unmarked"))
 ```
 
+
+<!-- Note for this class. I walked through what p* and asked questions of when detection probability matter and when it does not (p*=1), design your way out of the problem. Then I turned to the bunny example and set it up. Then gave them three models to setup in JAGS (one at a time). First model- use Binomial likelihood dbinom(p,N). Second model has a detection probabilty per occasions. Third is have 800 detection probabilities that come from a 'random effect' to accomodate heterogeneity across time and space. -->
+
 -   Readings for next class:
     -   <a href="/readings/Stanton et al. 2024.pdf">Student led discussion paper</a>
     -   <a href="/readings/Guillera‐Arroita et al. 2015.pdf">Guillera‐Arroita et al. 2015</a>
