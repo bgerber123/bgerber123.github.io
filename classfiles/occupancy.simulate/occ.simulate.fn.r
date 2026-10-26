@@ -9,12 +9,12 @@ occ.simulate.fn <- function(N = 200, #number of sites
                                alpha_psi = -0.5, # occ intercept
                                beta_psi = 1.0,   # occ slope
                                alpha_p = -1.0,   # dec intercept
-                               beta_p = 1.0,     # dec slope
+                               beta_p = -1.0,     # dec slope
                                seed = NULL) {
   
   if (!is.null(seed)) set.seed(seed)
   
-  # Site-level covariate for occupancy (only varies by site)
+  # Site-level covariate for occupancy and detection (only varies by site)
   X <- rnorm(N, mean = 0, sd = 1)
   
   # Occupancy model
@@ -22,26 +22,22 @@ occ.simulate.fn <- function(N = 200, #number of sites
   psi <- plogis(lt_psi)
   z <- rbinom(N, size = 1, prob = psi)
   
-  # Detection covariate - that varies by site and occasion (weather, maybe)
-  W <- matrix(rnorm(N * J, mean = 0, sd = 1), nrow = N, ncol = J)
-  
   # Detection model
-  lt_p <- alpha_p + beta_p * W
+  lt_p <- alpha_p + beta_p * X
   p <- plogis(lt_p)
   
   # Detection histories
   y <- matrix(0, nrow = N, ncol = J)
   for (i in seq_len(N)) {
     for (j in seq_len(J)) {
-      y[i, j] <- rbinom(1, size = 1, prob = z[i] * p[i, j])
+      y[i, j] <- rbinom(1, size = 1, prob = z[i] * p[i])
     }
   }
   
   list(
     N = N,
     J = J,
-    X = data.frame(site.cov=X),
-    W = W,
+    X = X,
     z = z,
     psi = psi,
     y = y
