@@ -53,10 +53,17 @@ title: ""
 
 #### [Today]{style="color:red;"}
 
-- We will create code to simulate occupancy model data to test *something*. 
-  - Maybe consider the effect of multi-collinearity on parameter estimation
+##### **In Class Discussion of Northrup et al. 2022**
 
-- LAB: TBD
+-   Downloads: <a href="/classfiles/habsel/habsel.lab.zip">Files</a>
+
+-   Install R packages:
+
+```{r, eval=FALSE, echo=TRUE}
+# CRAN packages
+install.packages(c("terra","raster","amt","MASS","sp"))
+```
+
 
 #### [Assigned]{style="color:red;"}
 -   Readings for next class: 
