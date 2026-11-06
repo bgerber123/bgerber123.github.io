@@ -10,6 +10,17 @@ title: ""
 
 ##### Discussion led by Galen and Cristina [(link)](/readings/Grider-etal_2025_Pathogen-Estimation-Multiple-Scales.pdf)
 
+
+1. Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?
+
+2. Traditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?
+
+3. Why is the re-incorporation of low-level detections important for early disease detection?
+
+4. In terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?
+
+5. How did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?
+
 ##### Discussion led by Emma and DiDi [(link)](/readings/Badger et al. 2025.pdf)
 
 1. What features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?
@@ -17,6 +28,7 @@ title: ""
 2. What sources of bias did the authors seek to address, and how did they address them?
 
 3. Which individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?
+
 4. What was the purpose of using simulation?
 
 5. How did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?

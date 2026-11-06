@@ -26,7 +26,7 @@ set.seed(123)
 # ---------------------------------------------------
 # Run 500 simulation iterations in parallel
 # ---------------------------------------------------
-n_sims <- 50
+n_sims <- 500
 
 sim_results <- foreach(i = 1:n_sims, .combine = "list", .multicombine = TRUE,
                        .packages = c()) %dorng% {
@@ -44,21 +44,3 @@ sim_results <- foreach(i = 1:n_sims, .combine = "list", .multicombine = TRUE,
 # ---------------------------------------------------
 stopCluster(cl)
 
-# ---------------------------------------------------
-# Example summary calculations
-# ---------------------------------------------------
-# Mean occupancy rate across simulations
-mean_occupancy <- sapply(sim_results, function(sim) mean(sim$z))
-
-# Mean detection rate across simulations
-mean_detection <- sapply(sim_results, function(sim) mean(sim$y))
-
-summary_df <- data.frame(
-  sim_id = 1:n_sims,
-  mean_occupancy = mean_occupancy,
-  mean_detection = mean_detection
-)
-
-# Print a quick summary
-print(head(summary_df))
-print(summary(summary_df))
