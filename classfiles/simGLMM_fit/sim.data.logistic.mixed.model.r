@@ -6,7 +6,7 @@ sim.data.logistic.mixed.model = function(n_groups,
 
    #n_groups <- 50 ; n_per_group <- 20  ; beta_0 <- -1  ; beta_1 <- 2 ; sd_slope <- 0.75   
   
-    
+  # Fixed intercept and random slopes    
 
   # n_groups <- 50          # number of groups
   # n_per_group <- 20       # observations per group
