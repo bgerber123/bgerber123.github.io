@@ -1,5 +1,6 @@
-source("sim.data.logistic.model.r")
+# Objective: simulate data from a fixed effects model
 
+source("sim.data.logistic.model.r")
 
 # Example
 sim = sim.data.logistic.model(n <- 50,  
@@ -29,7 +30,7 @@ for(i in 1:n.sim){
   coef.mat[i,] = c(coef(fit))
 }
 
-
+# plot sampling distribution with the true parameter
 plot(density(coef.mat[,1]),lwd=3)
 abline(v=sim$parms[[1]])
 

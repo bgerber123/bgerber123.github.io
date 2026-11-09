@@ -1,6 +1,6 @@
 
 # Objective: simulate data from a mixed-effects model
-# Fixed intercept and randoms slopes
+# Fixed intercept and random slopes
 
 library(lme4)
 library(glmmTMB)
@@ -83,12 +83,12 @@ for( i in 1:n.sim){
 print(i)  
 }
 
-
-hist(save.parms[,1],main="beta0")
-abline(v=beta_0,lwd=3,col=1)
-
-hist(save.parms[,2],main="beta1")
-abline(v=beta_1,lwd=3,col=1)
-
-hist(save.parms[,3],main="sd")
-abline(v=sd_slope,lwd=3,col=1)
+# Plot the sampling distribution for parameters
+  hist(save.parms[,1],main="beta0")
+  abline(v=beta_0,lwd=3,col=1)
+  
+  hist(save.parms[,2],main="beta1")
+  abline(v=beta_1,lwd=3,col=1)
+  
+  hist(save.parms[,3],main="sd")
+  abline(v=sd_slope,lwd=3,col=1)

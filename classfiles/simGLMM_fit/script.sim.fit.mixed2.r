@@ -84,8 +84,8 @@ for( i in 1:n.sim){
 print(i)  
 }
 
-
-hist(save.parms[,1],main="beta0")
+# Plot the sampling distribution for parameters
+hist(save.parms[,1],main="beta0 (mean)")
 abline(v=beta_0,lwd=3,col=1)
 
 hist(save.parms[,2],main="beta1")
