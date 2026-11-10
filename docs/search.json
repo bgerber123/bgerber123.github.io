@@ -18778,14 +18778,14 @@
     "href": "FW670/week12.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\n\n7.Bonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
+    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
   },
   {
     "objectID": "FW670/week12.html#week-12",
     "href": "FW670/week12.html#week-12",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\n\n7.Bonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
+    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
   },
   {
     "objectID": "FW670/week13.html",
@@ -20144,5 +20144,40 @@
     "title": "Brian D. Gerber",
     "section": "",
     "text": "Statistcal Model\nBayesian Community Occupancy Model via Stan\nFor details, see the books Applied Hierarchical Modeling in Ecology, Chapter 11 and Hierarchical Modeling and Inference in Ecology, Chapter 12.\n\n\n\n\n\nSpecies Richness vs Species Diversity?\nThe vegan R package has a number of common community metrics.\n\n\n\n\n\n\n\n\n\n\nNo class or lab assignment today due to the issues with coming to campus today (11/15) and generally to reduce overall workload and provide more time for you to focus on your class project."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#objectives",
+    "href": "FW670/N.mixture.more.html#objectives",
+    "title": "N-Mixture Model and More",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nN-mixture model\nOccurrence Probability and Abundance\nIntegrated Data Modeling"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#a-new-model",
+    "href": "FW670/N.mixture.more.html#a-new-model",
+    "title": "N-Mixture Model and More",
+    "section": "A new model",
+    "text": "A new model\n\nRoyle 2004\n\nBayesian Analysis of Spatially Structured Population Dynamics\n\nAnother way to estimate abundance with imperfect detection\n\nmark recapture\nremoval sampling\ndistance sampling\ndouble observer"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#n-mixture-model",
+    "href": "FW670/N.mixture.more.html#n-mixture-model",
+    "title": "N-Mixture Model and More",
+    "section": "N-mixture model",
+    "text": "N-mixture model\n\nFundamentally a ‘count model’ that corrects for detection probability\n“Capture–recapture studies can be difficult to implement” (Royle, 2004)\n\nMaybe more useful for sparse data (few sites, few occasions, small detection probability, some zeros)\n\nData Inputs: Replicated spatial counts\nAbundance: follows a Poisson distribution\nDetection: follows a Binomial distribution"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#n-mixture-model-1",
+    "href": "FW670/N.mixture.more.html#n-mixture-model-1",
+    "title": "N-Mixture Model and More",
+    "section": "N-mixture model",
+    "text": "N-mixture model\n\\(y_{i,t}\\) = number of individuals observed at site \\(i=1...R\\) during \\(t=1...T\\) sampling occasions.\n\\[\n\\begin{align*}\ny_{i,t} \\sim& \\text{Binomial}(N_i, p) \\\\\nN_i \\sim& \\text{Poisson}(\\lambda)\n\\end{align*}\n\\]\n\n\\(N_i\\) = size of population at site \\(i\\)\n\\(\\sum_{i=1}^R N_i\\) = total population size\n\n\nPriors::\n\n\\(\\text{log}(\\lambda) \\sim \\text{Normal}(0,10)\\)\n\\(\\text{logit}(p) \\sim \\text{Logistic}(0,1)\\)"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#data",
+    "href": "FW670/N.mixture.more.html#data",
+    "title": "N-Mixture Model and More",
+    "section": "Data",
+    "text": "Data"
   }
 ]
