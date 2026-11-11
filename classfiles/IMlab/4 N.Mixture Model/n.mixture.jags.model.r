@@ -1,8 +1,8 @@
 model {
   
   # Priors
-  lambda ~ dgamma(0.001,0.001)
-  p ~ dunif(0,1)
+  lambda ~ dgamma(0.01,0.01)
+  p ~ dbeta(1,1)
   
   # Likelihood portion for data set 1: counts
   for (i in 1:nsites1){

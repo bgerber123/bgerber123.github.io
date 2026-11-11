@@ -46,13 +46,13 @@
 # If we ignore detection and just take the second set of counts
   model.Counts.ignore.det <- glm(count.rep[,2] ~ selev1, family = poisson(link = "log"))
   coef(model.Counts.ignore.det)
-# notice the change in the intercept, but not the slope. This is because of assuming constatnt detection probability 
+# notice the change in the intercept, but not the slope. This is because of assuming constant detection probability 
   
 
 
 ##############################################
 ##############################################
-# N-mixture model - constant parameters (just a first step to ultiamtely get what we want- a model with covariates)
+# N-mixture model - constant parameters (just a first step to ultimately get what we want- a model with covariates)
 # Bayesian - model fitting 
 
 

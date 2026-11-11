@@ -26,7 +26,7 @@
 
 # Counts with elevation covariate and scaled elevation covariate at a mean of 1000 and 
 # standard deviation of 1000
-  head(C2)
+  head(C1)
 
 # Zero truncated Counts with elevation covariate and scaled elevation covariate at a mean of 1000 and 
 # standard deviation of 1000
@@ -64,6 +64,13 @@
 
 ##############################################
 ##############################################
+# load objects if not fitting models
+# load("post.count1")
+# load("post.count2")
+# load("post.PA3")
+  
+  
+  
 # Bayesian - model fitting separately
 
 # Count Data 1
@@ -72,16 +79,16 @@
   inits <- function(){list(beta0 = runif(1), beta1 = rnorm(1))}
 
 # Bundle data
-  data.list <- list(C1 = C1, 
-                    nsites1 = length(C1),
-                    selev1 = data[[1]]$selev1
+  data.list <- list(C1 = C1$Counts, 
+                    nsites1 = length(C1$Counts),
+                    selev1 = C1$selev1
   )
 
 # Parameters monitored
   params <- c("beta0", "beta1")
 
 # MCMC settings
-  na <- 2000; ni <- 10000; nb <- 4000; nc <- 4; nt <- 4
+  na <- 2000; ni <- 5000; nb <- 2000; nc <- 4; nt <- 4
 
 # Setup the Model
   jm=jags.model(file="./2. Separate Models/count1.jags.model.r", 
@@ -107,16 +114,16 @@
   inits <- function(){list(beta0 = runif(1), beta1 = rnorm(1))}
 
 # Bundle data
-  data.list <- list(C2 = C2, 
-                    nsites2 = length(C2),
-                    selev2 = data[[2]]$selev2
+  data.list <- list(C2 = C2$ZTCounts, 
+                    nsites2 = length(C2$ZTCounts),
+                    selev2 = C2$selev2
   )
 
 # Parameters monitored
   params <- c("beta0", "beta1")
 
 # MCMC settings
-  na <- 2000; ni <- 10000; nb <- 4000; nc <- 4; nt <- 4
+  na <- 2000; ni <- 2000; nb <- 2000; nc <- 4; nt <- 4
 
 # Setup the Model
   jm=jags.model(file="./2. Separate Models/ZTcount2.jags.model.r", 
@@ -143,9 +150,9 @@
   inits <- function(){list(beta0 = runif(1), beta1 = rnorm(1))}
 
 # Bundle data
-  data.list <- list(y = y, 
-                    nsites3 = length(y),
-                    selev3 = data[[3]]$selev3
+  data.list <- list(y = y$y, 
+                    nsites3 = length(y$y),
+                    selev3 = y$selev3
   )
 
 # Parameters monitored
@@ -163,7 +170,7 @@
 # Update the model with the burnin
   update(jm, n.iter=nb)
 
-#Fit the modedl  
+#Fit the model  
   post3=coda.samples(jm, variable.names=params, n.iter=ni, thin=nt)
   save(post3,file="post.PA3")
 

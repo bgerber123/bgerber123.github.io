@@ -19,3 +19,5 @@ quarto::quarto_render("./FW670/hierarchical.qmd", output_format = "pdf")
 quarto::quarto_render("./FW670/bayesian.qmd", output_format = "pdf")
 
 quarto::quarto_render("./FW670/monitoring.qmd", output_format = "pdf")
+
+quarto::quarto_render("./FW670/N.mixture.more.qmd", output_format = "pdf")

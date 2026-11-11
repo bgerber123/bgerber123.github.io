@@ -18778,14 +18778,14 @@
     "href": "FW670/week12.html",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
+    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: N Mixture and More (PDF)\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
   },
   {
     "objectID": "FW670/week12.html#week-12",
     "href": "FW670/week12.html#week-12",
     "title": "Brian D. Gerber",
     "section": "",
-    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN-Mixture models\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
+    "text": "Compared to more traditional models, how does a MS-DOHM perform with regards to disease occupancy? What about disease prevalence and load?\nTraditional qPCR methods often treat low level detections in early disease stages as inconclusive and exclude them from analysis. How does the MS-DOHM framework re-incorporate these detections?\nWhy is the re-incorporation of low-level detections important for early disease detection?\nIn terms of occupancy modeling, what is the value of running qPCR on multiple swabs from one bat?\nHow did the authors model annual changes in occupancy, prevalence, and load? For modeling changes in load, what benefits and drawbacks could be associated with their approach compared to using covariates each year?\n\n\nWhat features of this population (species, system, etc.) make it challenging to estimate population size and trends? Why are conventional mark-recapture methods inadequate?\nWhat sources of bias did the authors seek to address, and how did they address them?\nWhich individuals can be “marked” through photo-ID? Why were the authors interested in the proportion of distinctive individuals?\nWhat was the purpose of using simulation?\nHow did the pseudospatial model compare with the conventional model? What evidence from the real data and the simulations supports this?\nWhy estimate abundance and trends for each cluster? Were these estimates reliable? How does this reliability compare with the full-population estimates?\nBonus: What next steps are needed for researchers to investigate drivers of the observed trends? Alternatively, is more work needed to verify these trends?\n\n\nReadings for next class:\n\nKery and Kellner ch20\nManica et al. 2019\n\n\nBackground Reading (not required):\n\nMadsen and Royle 2023\nKery 2018\nLink et al 2018\nBarker et al 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLecture: N Mixture and More (PDF)\nDownloads: Files\nInstall R packages:\n\n\n# CRAN packages\ninstall.packages(c(\"VGAM\"))"
   },
   {
     "objectID": "FW670/week13.html",
@@ -20164,14 +20164,14 @@
     "href": "FW670/N.mixture.more.html#n-mixture-model",
     "title": "N-Mixture Model and More",
     "section": "N-mixture model",
-    "text": "N-mixture model\n\nFundamentally a ‘count model’ that corrects for detection probability\n“Capture–recapture studies can be difficult to implement” (Royle, 2004)\n\nMaybe more useful for sparse data (few sites, few occasions, small detection probability, some zeros)\n\nData Inputs: Replicated spatial counts\nAbundance: follows a Poisson distribution\nDetection: follows a Binomial distribution"
+    "text": "N-mixture model\n\nFundamentally a ‘count model’ that corrects for detection probability\n\n\n“Capture–recapture studies can be difficult to implement” (Royle, 2004)\n\nMaybe more useful for sparse data (few sites, few occasions, small detection probability, some zeros)\n\nData Inputs: Replicated spatial counts\nAbundance: State process is a Poisson distribution\nDetection: Observation process is a Binomial distribution"
   },
   {
     "objectID": "FW670/N.mixture.more.html#n-mixture-model-1",
     "href": "FW670/N.mixture.more.html#n-mixture-model-1",
     "title": "N-Mixture Model and More",
     "section": "N-mixture model",
-    "text": "N-mixture model\n\\(y_{i,t}\\) = number of individuals observed at site \\(i=1...R\\) during \\(t=1...T\\) sampling occasions.\n\\[\n\\begin{align*}\ny_{i,t} \\sim& \\text{Binomial}(N_i, p) \\\\\nN_i \\sim& \\text{Poisson}(\\lambda)\n\\end{align*}\n\\]\n\n\\(N_i\\) = size of population at site \\(i\\)\n\\(\\sum_{i=1}^R N_i\\) = total population size\n\n\nPriors::\n\n\\(\\text{log}(\\lambda) \\sim \\text{Normal}(0,10)\\)\n\\(\\text{logit}(p) \\sim \\text{Logistic}(0,1)\\)"
+    "text": "N-mixture model\n\\(y_{i,t}\\) = number of individuals observed at site \\(i=1...R\\) during \\(t=1...T\\) sampling occasions.\n\n\\[\n\\begin{align*}\ny_{i,t} \\sim& \\text{Binomial}(N_i, p) \\\\\nN_i \\sim& \\text{Poisson}(\\lambda)\n\\end{align*}\n\\]\n\n\n\n\\(N_i\\) = size of population at site \\(i\\)\n\\(\\sum_{i=1}^R N_i\\) = total population size\n\n\n\nPriors:\n\n\\(\\text{log}(\\lambda) \\sim \\text{Normal}(0,3)\\)\nOR, \\(\\lambda \\sim \\text{Gamma}(0.01,0.01)\\)\n\\(\\text{logit}(p) \\sim \\text{Logistic}(0,1)\\)\nOR, \\(p \\sim \\text{Beta}(1,1)\\)"
   },
   {
     "objectID": "FW670/N.mixture.more.html#data",
@@ -20179,5 +20179,166 @@
     "title": "N-Mixture Model and More",
     "section": "Data",
     "text": "Data"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#n-mixture-extensions",
+    "href": "FW670/N.mixture.more.html#n-mixture-extensions",
+    "title": "N-Mixture Model and More",
+    "section": "N-mixture extensions",
+    "text": "N-mixture extensions\n\\(y_{i,t}\\) = number of individuals observed at site \\(i=1...R\\) during \\(t=1...T\\) sampling occasions.\n\\[\n\\begin{align*}\ny_{i,t} \\sim& \\text{Binomial}(N_i, p_{i,t}) \\\\\nN_i \\sim& \\text{Poisson}(\\lambda_i)\n\\end{align*}\n\\]\n\n\\[\n\\begin{align*}\n\\text{logit}(p_{i,t}) =& \\beta_0 + \\beta_1 \\times x_{i,t} \\\\\n\\text{log}(\\lambda_{i}) =& \\alpha_0 + \\alpha_1 \\times w_{i} + \\epsilon_{i} \\\\\n\\epsilon_{i} \\sim& \\text{Normal}(0,\\sigma^2)\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#more-extensions",
+    "href": "FW670/N.mixture.more.html#more-extensions",
+    "title": "N-Mixture Model and More",
+    "section": "More extensions",
+    "text": "More extensions\n\nOther distributions\n\nNegative-binomial\nZero-inflated Poisson\nMultinomial\n\nIntegrate known date or distance information\nMultiple states, ages, or sexes\nSpatial movement, e.g., temporary emigration"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#implementation",
+    "href": "FW670/N.mixture.more.html#implementation",
+    "title": "N-Mixture Model and More",
+    "section": "Implementation",
+    "text": "Implementation\n\nMaximum likelihood\n\nUnmarked pacakge; pcount function\n\nBayesian\n\nubms package\nJAGS, nimble, INLA, stan"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#concerns",
+    "href": "FW670/N.mixture.more.html#concerns",
+    "title": "N-Mixture Model and More",
+    "section": "Concerns",
+    "text": "Concerns\nParameter Identifiability: “A model is identifiable if there is only one set of parameter values that result in a single model output”. (Cole book)\n\nData Identifiability: a condition of the unique dataset that does not allow the model to estimate a unique set of parameters to be output"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#concerns-1",
+    "href": "FW670/N.mixture.more.html#concerns-1",
+    "title": "N-Mixture Model and More",
+    "section": "Concerns",
+    "text": "Concerns\nLink et al. 2018\nBarker et al. 2017\n\n2% double counting can lead to ~20% bias\n\n\nsmall unmodelled heterogenity in \\(p\\) can lead to 20% bias\nsmall distributional assumption violation leads to CI coverage of 17%"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#concerns-2",
+    "href": "FW670/N.mixture.more.html#concerns-2",
+    "title": "N-Mixture Model and More",
+    "section": "Concerns",
+    "text": "Concerns\nLink et al. 2018\nBarker et al. 2017\n\n“fundamentally count data under imperfect detection can only be reliably used as indices.” (i.e., relative abundance, not absolute abundance)\n\n\n… this is because without auxiliary information about \\(p\\), count data cannot distinguish between an N-mixture model and other possible models (GLM)."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#occurrence-probability-and-abundance",
+    "href": "FW670/N.mixture.more.html#occurrence-probability-and-abundance",
+    "title": "N-Mixture Model and More",
+    "section": "Occurrence Probability and Abundance",
+    "text": "Occurrence Probability and Abundance\n\\(\\psi\\) = probability of occurrence\n\\(\\lambda\\) = mean count/abundance\n\n\\[\n\\psi = P(Y=1)\n\\]\n\n\n\\[\n\\psi = P(Y=1) = P(N&gt;0)\n\\]\n\n\n\\[\n\\psi = P(Y=1) = P(N&gt;0) = 1 - e^{-\\lambda}\n\\]\n\n\n\nlambda = 2\npsi = 1 - exp(-lambda)\npsi\n\n[1] 0.8646647\n\n\n\n\nThe Probability of observing &gt; 0 counts, given lambda = 2\n\nppois(0,lambda=2,lower.tail = FALSE)\n\n[1] 0.8646647"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#more-to-the-idea",
+    "href": "FW670/N.mixture.more.html#more-to-the-idea",
+    "title": "N-Mixture Model and More",
+    "section": "More to the idea",
+    "text": "More to the idea\nStarting with:\n\\[\n\\psi = 1 - e^{-\\lambda}\n\\]\n\nLets rearrange:\n\\[\ne^{-\\lambda} = 1 - \\psi\n\\]\n\n\n\\[\n\\text{log}(e^{-\\lambda}) = \\text{log}(1 - \\psi)\n\\]\n\n\n\\[\n-\\lambda = \\text{log}(1 - \\psi)\n\\]\n\n\n\\[\n\\lambda = -\\text{log}(1 - \\psi)\n\\]\n\n\n\\[\n\\text{log}(\\lambda) = \\text{log}(-\\text{log}(1 - \\psi))\n\\]\n\n\nThe right side is called the ‘complimentary log-log link function’."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#the-end-result",
+    "href": "FW670/N.mixture.more.html#the-end-result",
+    "title": "N-Mixture Model and More",
+    "section": "The end result",
+    "text": "The end result\n\\[\n\\text{log}(\\lambda) = \\text{log}(-\\text{log}(1 - \\psi))\n\\]\nOR\n\\[\n\\text{log}(-\\text{log}(1 - \\psi)) = \\text{log}(\\lambda)\n\\]\n\nOR\n\\[\n\\text{cloglog}(\\psi) = \\text{log}(\\lambda)\n\\]\n\n\nOR\n\\[\n\\text{cloglog}(\\psi) = \\text{log}(\\beta_0 + \\beta_1 \\times x_1)\n\\]"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#occurrence-probability-and-expected-abundance",
+    "href": "FW670/N.mixture.more.html#occurrence-probability-and-expected-abundance",
+    "title": "N-Mixture Model and More",
+    "section": "Occurrence Probability and Expected Abundance",
+    "text": "Occurrence Probability and Expected Abundance\n\\(\\psi\\) = probability of occurrence\n\\(\\lambda\\) = mean count/abundance\n\n\\[\n\\psi = P(Y=1)\n\\]\n\n\n\\[\n\\psi = P(Y=1) = P(N&gt;0)\n\\]\n\n\n\\[\n\\psi = P(Y=1) = P(N&gt;0) = 1 - e^{-\\lambda}\n\\]\n\n\n\nlambda = 2\npsi = 1 - exp(-lambda)\npsi\n\n[1] 0.8646647\n\n\n\n\nThe Probability of observing &gt; 0 counts, given lambda = 2\n\nppois(0,lambda=2,lower.tail = FALSE)\n\n[1] 0.8646647"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model",
+    "href": "FW670/N.mixture.more.html#integrated-data-model",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\n\na hierarchical model\n\n\nseparate response variables where at least one parameter is shared among at least 2 response variables\n“It just makes sense to use all the information that is available in some estimation task” (Kery and Kellner, 2024)"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#n-mixture-model-2",
+    "href": "FW670/N.mixture.more.html#n-mixture-model-2",
+    "title": "N-Mixture Model and More",
+    "section": "N Mixture Model",
+    "text": "N Mixture Model\nAssumptions:\n\nPoisson and binomial distributions are true descriptions of state and observation processes; i.e., variation in abundance can be described by the assumed distribution (e.g., Poisson).\n\n\nAbundance at each site \\(i\\) is random and independent of abundance at all other sites;\nPopulation is closed among surveys\nObservers do not double count individuals\nAll individuals have the same detection probability or otherwise modeled"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#the-model-all-together",
+    "href": "FW670/N.mixture.more.html#the-model-all-together",
+    "title": "N-Mixture Model and More",
+    "section": "The model all together",
+    "text": "The model all together\n\\(y_i\\) are the presence and absences of the species at site \\(i\\)…\n\\[\ny_i \\sim \\text{Bernoulli}(\\psi_i) \\\\\n\\text{cloglog}(\\psi_i) = \\beta_0 + \\beta_1 \\times x_i\n\\]"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#n-mixture-model-3",
+    "href": "FW670/N.mixture.more.html#n-mixture-model-3",
+    "title": "N-Mixture Model and More",
+    "section": "N-mixture model",
+    "text": "N-mixture model\nGo to code…."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#presenceabsence-model",
+    "href": "FW670/N.mixture.more.html#presenceabsence-model",
+    "title": "N-Mixture Model and More",
+    "section": "Presence/Absence Model",
+    "text": "Presence/Absence Model\nGo to code…."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#concerns-3",
+    "href": "FW670/N.mixture.more.html#concerns-3",
+    "title": "N-Mixture Model and More",
+    "section": "Concerns",
+    "text": "Concerns\nKery, 2017\n\nTesting concern with 137 bird datasets\nSmall sample size caused issues (&lt;267 sites)\nCovariates did not affect identifiabiltiy\nNo identifiability issues for Poisson and ZIP distributional assumptions\n25% of datasets had issues with Negative Binomial distribution"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model-1",
+    "href": "FW670/N.mixture.more.html#integrated-data-model-1",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\n\nNames: integrated model, data fusion, data assimilation\nspecific types:\n\nintegrated population models\nintegrated species distribution models\nintegrated community model\nintegrate dynamic N-mixture model"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-species-distribution-model",
+    "href": "FW670/N.mixture.more.html#integrated-species-distribution-model",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Species Distribution Model",
+    "text": "Integrated Species Distribution Model\nIn chapter 20 of Kery and Kellner, 2024 they introduce three data sets.\n\nCounts of swifts (\\(y_1\\))\nCounts of swifts, but the “lazy” birdwatchers didn’t record the zero counts (\\(y_2\\))\nObservers recorded whether swifts were present (1) or not (0) (\\(y_3\\))"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model-2",
+    "href": "FW670/N.mixture.more.html#integrated-data-model-2",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\n“datastream specific observation submodels that inform a common ecological model” Gilbert et al. 2021"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model-3",
+    "href": "FW670/N.mixture.more.html#integrated-data-model-3",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\nSub model 1\n\\[\n\\begin{align*}\ny_{1,i} \\sim \\text{Poisson}(\\lambda)\n\\end{align*}\n\\]\nSub model 2\n\\[\n\\begin{align*}\ny_{2,i} \\sim \\text{ZT Poisson}(\\lambda)\n\\end{align*}\n\\]\nSub model 3\n\\[\n\\begin{align*}\ny_{3,i} \\sim \\text{Binomial}(\\psi)\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model-4",
+    "href": "FW670/N.mixture.more.html#integrated-data-model-4",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\nSub model 1\n\\[\n\\begin{align*}\ny_{1,i} \\sim& \\text{Poisson}(\\lambda_{i}) \\\\\n\\text{log}(\\lambda_{i}) =& \\beta_0 + \\beta_1 \\times x_i\n\\end{align*}\n\\]\n\nSub model 2\n\\[\n\\begin{align*}\ny_{2,i} \\sim& \\text{ZT Poisson}(\\lambda_i)\\\\\n\\text{log}(\\lambda_{i}) =& \\beta_0 + \\beta_1 \\times x_i\n\\end{align*}\n\\]\n\n\nSub model 3\n\\[\n\\begin{align*}\ny_{3,i} \\sim& \\text{Binomial}(\\psi_{i})\\\\\n\\text{cloglog}(\\psi) =& \\beta_0 + \\beta_1 \\times x_i\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-species-distribution-model-1",
+    "href": "FW670/N.mixture.more.html#integrated-species-distribution-model-1",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Species Distribution Model",
+    "text": "Integrated Species Distribution Model\nWe could fit each separately, but…\n\nOr, could fit a model that leverages all three data sets, each with their own observation model but a single joint ‘process/state’ model."
+  },
+  {
+    "objectID": "FW670/N.mixture.more.html#integrated-data-model-5",
+    "href": "FW670/N.mixture.more.html#integrated-data-model-5",
+    "title": "N-Mixture Model and More",
+    "section": "Integrated Data Model",
+    "text": "Integrated Data Model\nGo to code…"
   }
 ]

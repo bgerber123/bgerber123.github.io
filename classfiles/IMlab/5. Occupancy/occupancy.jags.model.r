@@ -2,7 +2,7 @@ model {
   
   # Priors
   beta0 ~ dunif(-10, 10)   
-  beta1 ~ dnorm(0, 1/10^2)  
+  beta1 ~ dnorm(0, 1/5^2)
   p ~ dbeta(1,1)
   
   # Likelihood portion for data set 3: detection/nondetection

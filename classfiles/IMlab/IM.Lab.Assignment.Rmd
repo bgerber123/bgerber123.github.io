@@ -38,7 +38,7 @@ Following this, we reconsidered `Counts (Dataset 1)`, where instead we had repli
 
 I would like you to fit an integrated data model that combines three datasets, one or two of which are the replicated counts (file `count.rep`) and/or the replicated detection non-detections (file `det.nondet`). The options are to combine data and fit a single model to one of these combinations: 
 
-- Counts (Dataset 1), Zero-truncated Counts (Dataset 2), and det.nondet (Dataset 3b)
+- counts (Dataset 1), Zero-truncated Counts (Dataset 2), and det.nondet (Dataset 3b)
 - count.rep (Dataset 1b), Zero-truncated Counts (Dataset 2), and Presence Absences (Dataset 3)
 - count.rep (Dataset 1b), Zero-truncated Counts (Dataset 2), and det.nondet (Dataset 3b)
 

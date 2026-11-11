@@ -2,7 +2,7 @@ model {
   
   # Priors and linear models: shared for models of all three data sets
   beta0 ~ dunif(-10, 10)                                 # Abundance intercept on log scale
-  beta1 ~ dnorm(0, 1/10^2)                                # Slope on elevation
+  beta1 ~ dnorm(0, 1/5^2)                                # Slope on elevation
   
   # Joint likelihood: Note identical alpha and beta for all data sets
   # Likelihood portion for data set 1: regular counts
