@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # The Setup
 
 We will estimate the annual survival probability of European Dipper using capture-recapture data 
-via a hierarchical Bayesian version of the cormack-jolly-seber model.
+via a hierarchical Bayesian version of the Cormack-Jolly-Seber model.
 
 Load the necessary packages.
 
@@ -32,7 +32,7 @@ Load the necessary packages.
   library(stringr)
   library(rjags)
   library(coda)
-  library(runjags)
+  #library(runjags)
 ```
 
 Next, read in the data. The first column is the capture-history. The second column indicates males (0) and females (1). The third column indicate females (1) and males (0). The fourth column are just semi-colons...it's MARK thing. 
@@ -79,6 +79,44 @@ Next, we need to setup two specialized functions. 'get.first' will identify the 
 
 Fit a CJS survival model that includes a sex effect on survival probability.
 Adapt the jags model code in the other file and implementation code that is above.
+
+```{r,echo=TRUE,eval=FALSE,results = 'asis'}
+# JAGS model
+
+model {
+  
+  # Priors
+  beta0 ~ dlogis(0,1)
+  beta1 ~ dlogis(0,1)
+  p ~ dbeta(1, 1)
+  
+  # Likelihood 
+  for (i in 1:nind){
+    # Define latent state at first capture
+    # Known to be alive on first occasion
+    z[i,f[i]] <- 1
+    
+    logit(phi[i]) <- beta0 + beta1*sex[i]
+    
+    for (t in (f[i]+1):n.occasions){
+      # State process
+      z[i,t] ~ dbern(phi[i] * z[i,t-1])
+      
+      
+      # Observation process
+      y[i,t] ~ dbern(p * z[i,t])
+    } #end loop t
+    
+    
+  } #end loop i
+  
+# Derive probability of survival for male and female
+# This is done outside of the loops as we are not using the indices
+  male.phi   <- phi[1]
+  female.phi <- phi[2] 
+
+}
+```
 
 ```{r echo=TRUE,eval=TRUE, cache=TRUE}
 
@@ -158,7 +196,7 @@ Since we setup derived parameters in our JAGS model, we simply need to grab thes
 
 # Step 3b
 
-Alternativel, if we didn't specify the derived parameters in JAGS, we can use the estimated posterior parameters of survival ($\beta_{0}$ and $\beta_{1}$) to derive the posterior distributions for the probability of survival for males and females. These are exactly equivalent to the posteriors from above.
+Alternatively, if we didn't specify the derived parameters in JAGS, we can use the estimated posterior parameters of survival ($\beta_{0}$ and $\beta_{1}$) to derive the posterior distributions for the probability of survival for males and females. These are exactly equivalent to the posteriors from above.
 
 ```{r echo=TRUE,eval=TRUE}
 
